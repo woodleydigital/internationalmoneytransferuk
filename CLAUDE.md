@@ -12,6 +12,9 @@ this project — build spec, editorial standard, and pre-publish gate. It synthe
 source documents supplied by the client. Read it before writing routes, templates,
 components, or content.
 
+**[`docs/build-spec.md`](docs/build-spec.md)** implements it: the FX Margin Checker
+(the centerpiece), the DOM contract, and the structured data. Read it before writing code.
+
 ## Non-negotiables
 
 1. **Server-render or statically generate every indexable route.** Title, canonical, meta

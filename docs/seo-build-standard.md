@@ -449,6 +449,12 @@ This satisfies §2.1 (a real function, not an implied one), §2.4 commercialisat
 information-gain requirement, because most competitors either hide the mid-market
 comparison or bury it. It works regardless of how open decision #1 resolves.
 
+**Decided.** This is the site's centerpiece. Full functional specification — inputs,
+computation, edge cases, tone constraints and rendering contract — is in
+[`build-spec.md`](build-spec.md) §1. Note the property that makes it safe: the provider's
+numbers are supplied by the *user*, so we assert only arithmetic against a dated,
+attributed reference rate, and never claim anyone's rate.
+
 ### 6.4 Implementation rules
 
 - **Fetch server-side.** Rates render into the static HTML per §1 rule 1. Never client-fetch the
@@ -550,8 +556,8 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 | 2 | FCA status, FRN, legal entity, company number | Every regulated claim |
 | 3 | ~~Mid-market rate data source~~ — **resolved: Frankfurter (§6)** | — |
 | 3b | **Provider fee/rate data** — do we have a licensed source for what providers actually charge? Frankfurter cannot supply this (§6.2) | Any true provider comparison |
-| 4 | Tech stack — recommendation: Next.js (App Router) with SSG/ISR | Everything technical |
-| 5 | Corridor scope — which currencies/countries we genuinely serve | Page-creation gate inputs |
+| 4 | ~~Tech stack~~ — **resolved: Next.js (App Router) on Vercel, Tailwind, SSG + daily revalidation** | — |
+| 5 | Corridor scope — which currencies/countries we genuinely serve. **See build-spec §6 question A: is the AU/US/EU focus deliberate?** | Page-creation gate inputs |
 | 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
 | 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
 | 8 | Brand-signal assets: Google Business Profile, social profiles, directory citations (§4.1) | Whether the EMD functions as a brand — load-bearing, needs owner and start date |
