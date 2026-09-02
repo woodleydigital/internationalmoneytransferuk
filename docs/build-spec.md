@@ -105,9 +105,20 @@ Rules:
 - **Do not state "typical" or "average" margins** without a cited, dated source. If we later
   publish our own research on observed spreads, that becomes genuine information gain
   (standard §1 rule 6) — but it must be our data, sourced and dated.
-- **Always render the reference rate's provenance adjacent to the result**: provider name,
-  rate type, and date. Bank of England (spot rate, GBP pivot) is the natural default for a
-  UK site; ECB (reference rate) is the alternative.
+- **Always render the reference rate's provenance adjacent to the result**: source, rate
+  type, and date.
+
+  **Use the blended rate, not a single provider.** This corrects an earlier assumption that
+  Bank of England was the natural default for a UK site. Verified against the live API on
+  2026-09-02: BOE's latest observation was **2026-08-28 while the blend was 2026-09-02** —
+  five days stale — and BOE covers only 27 currencies, excluding AED, one of our own
+  corridors (standard §4.2). Presenting a five-day-old rate as the benchmark for a quote
+  taken today is exactly the staleness this spec forbids elsewhere.
+
+  The blend is fresher, covers all 165 currencies, and is *more* transparent rather than
+  less: `?expand=providers` returns each contributing central bank's own date and rate, so
+  we can show the contributor count and spread. Attribute it honestly as a blended
+  reference across N central bank sources, with the date the API actually returned.
 - **State the timing caveat once, visibly:** the reference rate is a daily published figure,
   so a quote taken at a different moment will not match exactly.
 - **Do not transmit the user's figures anywhere** without saying so. Calculation is local or

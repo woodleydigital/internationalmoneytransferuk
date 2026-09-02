@@ -1,0 +1,11 @@
+import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/site";
+
+// Canonical, indexable URLs only. Parameterised checker results are noindex and
+// never listed here (build-spec §1.6.4).
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: SITE.url, priority: 1 },
+    { url: `${SITE.url}/how-we-calculate`, priority: 0.8 },
+  ];
+}

@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0f172a;
+  --color-body: #334155;
+  --color-line: #cbd5e1;
+  --color-wash: #f8fafc;
+  --color-accent: #1d4ed8;
+}
+
+/* Reserve the result block so a rate refresh cannot shift layout (build-spec §1.6.5). */
+.result-slot {
+  min-height: 13rem;
+}
