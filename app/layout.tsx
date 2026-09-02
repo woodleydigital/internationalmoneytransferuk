@@ -109,7 +109,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="mt-4 max-w-prose">
               This tool reports the difference between a rate you were quoted and a published
               mid-market reference rate. It is information, not advice, and it is not a quote.
+              We are not a bank, a broker or a payment provider.
             </p>
+            <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+              <Link href="/about" className="underline">
+                About
+              </Link>
+              <Link href="/about/matt-boyd" className="underline">
+                Matt Boyd
+              </Link>
+              <Link href="/how-we-calculate" className="underline">
+                How we calculate this
+              </Link>
+            </nav>
           </div>
         </footer>
       </body>

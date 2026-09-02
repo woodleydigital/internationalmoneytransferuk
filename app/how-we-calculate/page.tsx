@@ -1,5 +1,42 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Byline } from "@/components/Byline";
+import { MATT_BOYD, personSchema, personId, type ReviewMeta } from "@/lib/people";
+import { SITE, ID } from "@/lib/site";
+
+// Methodology and arithmetic sit squarely inside Matt's review scope.
+const review: ReviewMeta = {
+  reviewer: MATT_BOYD,
+  published: "2026-09-02",
+  reviewed: "2026-09-02",
+  reviewIntervalMonths: 6,
+};
+
+const graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${SITE.url}/how-we-calculate#article`,
+      headline: "How we calculate the exchange rate margin",
+      datePublished: review.published,
+      dateModified: review.reviewed,
+      author: { "@id": ID.organization },
+      reviewedBy: { "@id": personId(MATT_BOYD) },
+      publisher: { "@id": ID.organization },
+      isPartOf: { "@id": ID.website },
+      mainEntityOfPage: `${SITE.url}/how-we-calculate`,
+    },
+    personSchema(MATT_BOYD),
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "How we calculate this" },
+      ],
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "How we calculate the exchange rate margin",
@@ -11,9 +48,23 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main" className="mx-auto max-w-3xl px-5 py-10">
-      <h1 className="text-3xl font-bold tracking-tight text-ink">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+      />
+
+      <nav aria-label="Breadcrumb" className="text-sm text-muted">
+        <Link href="/" className="underline">
+          Home
+        </Link>
+        {" / How we calculate this"}
+      </nav>
+
+      <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink">
         How we calculate the exchange rate margin
       </h1>
+
+      <Byline meta={review} />
 
       <p className="mt-5 max-w-prose">
         The checker compares a transfer you were quoted against a published mid-market

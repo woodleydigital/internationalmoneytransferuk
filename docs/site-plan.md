@@ -307,7 +307,43 @@ source-of-funds process, the arithmetic of margins. This is most of Phase 1.
 
 **Never:** any implication that we arrange, quote or execute a transfer.
 
-**Reviewer.** Identified. Needed next: full name, role, credentials, and profile copy, so
-the author/reviewer entity records and `ProfilePage` schema can be built and every Phase 1
-page can carry a real byline and review date. Until those records exist, Phase 1 content can
-be drafted but not published.
+### 8.1 Reviewer and the limits of that review
+
+**Matt Boyd, Founder.** BCom, Finance and Economics, University of Auckland. Records are in
+`lib/people.ts`; the profile with `ProfilePage` and `Person` schema is at `/about/matt-boyd`.
+
+His review covers the parts of Phase 1 that turn on finance and market structure — which is
+most of it:
+
+| Route | Reviewer |
+|---|---|
+| `/how-we-calculate` | Matt — **live** |
+| `/exchange-rate-margin` | Matt |
+| `/mid-market-rate` | Matt |
+| `/fee-free-transfers` | Matt |
+| `/currency-broker-vs-bank` | Matt |
+| `/transfer-timing-cost` | Matt |
+| `/how-we-make-money` | Matt |
+| `/transferring-large-sums` | Matt, provided AML and source-of-funds content stays a sourced summary of primary material rather than interpretation |
+| `/is-my-provider-authorised` | Matt, for the procedural content — how to search the FCA Register and read a result |
+| **`/safeguarding-vs-fscs`** | **Not Matt.** Needs separate qualified review — see below |
+| **`/forward-contracts`** | **Not Matt.** Also blocked on the MiFID question in standard §5.3 |
+
+**Why two pages sit outside it.** A degree in finance and economics is a real and relevant
+credential, and it comfortably covers spreads, pricing models, market structure and our own
+arithmetic. It is not, on its own, evidence of competence in *UK financial regulation* — and
+those two pages turn entirely on that: what safeguarding covers in an insolvency, how it
+differs from FSCS eligibility, and whether a currency forward is a spot contract or a MiFID
+instrument.
+
+Getting either wrong would be a critical failure under §8, and this is the same discipline
+we apply to everything else on the site. Two acceptable routes:
+
+1. A reviewer qualified in UK financial regulation signs those pages, or
+2. They are written strictly as a sourced summary of primary material — FCA Handbook, PSR
+   2017, FSCS's own publications — with each source named and dated, no interpretation, and
+   no advice. This is publishable, but it caps how far the flagship page can go, which is a
+   real cost given `/safeguarding-vs-fscs` is our strongest information-gain opportunity.
+
+**The profile states these limits publicly.** Declaring what a review does not cover is a
+trust signal for a YMYL audience; implying competence we cannot evidence is the opposite.
