@@ -148,6 +148,70 @@ The extended formula from S2:
 ((Historical click data × Topical coverage) ÷ Cost of retrieval) × Right visual annotations
 ```
 
+### 2.8 Classification, then click data — the ranking latency model
+
+This is the frame the rest of §2 sits inside, and it governs how we sequence the build and
+how we read early performance data.
+
+The author's fuller account of the AudioToText.com project: a **single-page** exact-match
+domain, **zero backlinks**, total project cost **under $200**, outranking enterprises valued
+at $40–60 million. He names two causes, and the EMD is not one of them.
+
+**1. Visual semantics.** It lets Google classify the site into the correct context, recognise
+genuine human effort, and — critically — *evaluate click signals with greater confidence*.
+Classification is upstream of everything else.
+
+**2. Click data, accumulated over time.**
+
+> "The content and design remained exactly the same whether the site was receiving two
+> clicks or 8,000 clicks per day. The difference is that, over time, Google tested the
+> website and developed greater confidence in its click signals."
+
+The site that earned 8,000 clicks/day was byte-for-byte the site that earned two. Nothing
+about the page improved. What changed was Google's accumulated confidence.
+
+#### The two distinct failure modes
+
+> "Many SEO projects fail to rank not because they lack quality, but because Google has not
+> classified the website correctly through its visual semantics. Alternatively, the site may
+> not yet have accumulated enough click data or undergone sufficient testing."
+
+These demand opposite responses, and confusing them is expensive:
+
+| Failure mode | Symptom | Correct response |
+|---|---|---|
+| **Misclassified** | Google has the wrong idea of what this site *is* | Fix layout, centerpiece, page function. Design work. |
+| **Untested** | Classification is right; confidence hasn't accumulated yet | **Change nothing.** Wait, and accelerate testing. |
+
+**Operational rule for IMT UK:** get classification right *before* launch, then hold the
+design stable through the testing window. Churning layout while waiting for click data
+destroys the very signal we are waiting to accumulate, and resets the test. Flat early
+performance is the expected shape of this curve, not evidence of a design failure.
+
+The corollary for the pre-launch phase is the opposite and equally strong: because the
+design is what gets tested and then held, **the centerpiece and page function must be
+correct at launch**, not iterated toward afterwards. There is no cheap second attempt.
+
+#### Where backlinks fit
+
+> "Backlinks and PageRank can accelerate this process by helping a website earn earlier
+> testing and collect historical click data more quickly."
+
+Links are an **accelerant on the testing timeline**, not a substitute for classification —
+AudioToText.com reached its position with zero. They buy earlier entry into testing and
+faster accumulation of historical click data, and act as an additional trust signal. For a
+YMYL financial site with no history, that acceleration is worth more than it would be
+elsewhere, but it cannot rescue a site Google has classified wrongly.
+
+#### Recovery is not symmetric
+
+> "If your site loses rankings after a Broad Core Algorithm Update, those rankings may not
+> return in the same form — or for quite some time."
+
+Accumulated confidence is expensive to build and is not automatically restored by reverting
+a change. This is the strongest argument in this document for the pre-publish gate in §7:
+**it is far cheaper to withhold a weak page than to recover from having published it.**
+
 ---
 
 ## 3. The one real tension between the sources — and how we resolve it
@@ -210,10 +274,10 @@ profiles:    TBC          # authoritative social/business profiles
 ```
 
 **Domain note.** `internationalmoneytransfer.uk` is effectively an exact-match domain on a
-`.uk` ccTLD. S2's AudioToText.com example attributes part of that site's performance to
-EMD relevance reinforcement combined with strong visual semantics and fast first clicks.
-This is a genuine asset — but only in combination with real function. An EMD attached to a
-thin content site is a liability, not an advantage.
+`.uk` ccTLD. Treat this as mild reinforcement, not a driver. The author's fuller account of
+the AudioToText.com project (see §2.8) attributes its performance to **visual semantics and
+click data** — the EMD is not named as one of the two causes. An EMD attached to a site
+Google has classified as a thin content source is a liability, not an advantage.
 
 ---
 
@@ -324,6 +388,7 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 | 4 | Tech stack — recommendation: Next.js (App Router) with SSG/ISR | Everything technical |
 | 5 | Corridor scope — which currencies/countries we genuinely serve | Page-creation gate inputs |
 | 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
+| 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
 
 ---
 
@@ -338,3 +403,8 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 - Do not respond to a ranking decline by adding text, FAQs, schema or links
   indiscriminately. Diagnose crawl/indexing, intent mismatch, information deficit, source
   quality, competition, UX and commercial fit separately.
+- **Hold the design stable through the testing window (§2.8).** Before changing layout in
+  response to flat performance, establish which failure mode we are in: *misclassified*
+  (fix the design) or *untested* (change nothing and wait). Redesigning an untested site
+  resets the click-data accumulation we are waiting on. Record the diagnosis and the date
+  before acting.

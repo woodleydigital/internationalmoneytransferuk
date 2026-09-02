@@ -32,6 +32,12 @@ components, or content.
    authorship or credentials.
 7. **URLs and media URLs are permanent.** Changing image or media URLs measurably costs
    rankings. Do not rename or move published assets without a documented migration.
+8. **Get the design right at launch, then hold it stable.** Classification comes from
+   layout; confidence in click signals then accumulates over time against that fixed
+   design. Churning layout while waiting for rankings resets the accumulation. Before
+   changing anything in response to flat performance, diagnose whether the site is
+   *misclassified* (fix the design) or merely *untested* (change nothing) —
+   `docs/seo-build-standard.md` §2.8.
 
 ## Pre-publish gate
 
