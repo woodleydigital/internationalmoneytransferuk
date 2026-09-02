@@ -4,7 +4,7 @@
 **Owner:** matthew@woodley.digital
 **Last substantive update:** 2026-09-02
 
-This document consolidates four source documents into a single operating standard for
+This document consolidates five source documents into a single operating standard for
 building **International Money Transfer UK (IMT UK)** at `https://internationalmoneytransfer.uk`.
 It is the build specification, the editorial standard, and the pre-publish gate.
 
@@ -16,6 +16,7 @@ It is the build specification, the editorial standard, and the pre-publish gate.
 | **S2** | *Visual Semantics: The Missing Piece of Topical Authority* — Koray Tuğberk Gübür, Search Engine Land (14 Jul 2026) | Layout, centerpiece annotation, page **function** as a ranking input |
 | **S3** | *Query Templates: Expanding the Scope of Topical Authority* — same author (12 Aug 2026) | Topical map shape: core/outer sections, Query Deserves a Page, microsemantics |
 | **S4** | *JavaScript Best Practices for SEO* — Joe Hall (11 Mar 2025) | Rendering, indexing signals, discovery, performance QA |
+| **S5** | *Exact Match Domain SEO Research Study* — Holistic SEO & Digital | EMD mechanism, brand-identity requirement, failure modes (§4.1) |
 
 **Evidence hierarchy (from S1).** Current Google Search documentation is the operational
 baseline. Patents and the case studies in S2/S3 are *design evidence* — durable
@@ -209,7 +210,7 @@ elsewhere, but it cannot rescue a site Google has classified wrongly.
 > return in the same form — or for quite some time."
 
 Accumulated confidence is expensive to build and is not automatically restored by reverting
-a change. This is the strongest argument in this document for the pre-publish gate in §7:
+a change. This is the strongest argument in this document for the pre-publish gate in §8:
 **it is far cheaper to withhold a weak page than to recover from having published it.**
 
 ---
@@ -273,11 +274,79 @@ email:       TBC
 profiles:    TBC          # authoritative social/business profiles
 ```
 
-**Domain note.** `internationalmoneytransfer.uk` is effectively an exact-match domain on a
-`.uk` ccTLD. Treat this as mild reinforcement, not a driver. The author's fuller account of
-the AudioToText.com project (see §2.8) attributes its performance to **visual semantics and
-click data** — the EMD is not named as one of the two causes. An EMD attached to a site
-Google has classified as a thin content source is a liability, not an advantage.
+### 4.1 The exact-match domain
+
+`internationalmoneytransfer.uk` is an exact-match domain (EMD) on a `.uk` ccTLD. This is a
+strategic fact about the project, not a footnote, so it gets its own treatment.
+
+**S5:** *Exact Match Domain SEO Research Study* — Holistic SEO & Digital
+(`holisticseo.digital/seo-research-study/exact-matching-domain`).
+
+#### The mechanism is real, but multiplicative
+
+The 2012 EMD update reduced the advantage rather than removing it. Google's Gary Illyes:
+*"People were exploiting the exact match domains, and we decreased their advantage for
+rankings."* S5's argument is that the relevance threshold was raised, not that EMDs stopped
+working — and that the mechanism is a **query-classification effect**:
+
+> "Exact Match Domains bend the query search needs, and change the query context with
+> navigational query classifications."
+
+An EMD can convert a generic query into a branded, navigational one. That is a genuine and
+valuable effect for us — but S5 is blunt that **99% of EMDs fail**, and that the effect only
+fires in the presence of brand identity and topical authority.
+
+**Reconciling S5 with §2.8.** These are not in conflict once the EMD is read as a
+*multiplier* rather than an additive advantage. AudioToText.com's two named causes were
+visual semantics and click data; the EMD amplified them once they were in place. A
+multiplier applied to zero classification and zero click history is still zero. So:
+
+> The domain amplifies brand and topical authority. It does not substitute for them, and it
+> confers nothing on its own.
+
+#### What S5's case study actually did
+
+A Turkish EMD outranked competitors with 8.1M backlinks and 7.5M monthly traffic while
+holding **96 referring domains and 453 backlinks** (Ahrefs DR 4.1, Semrush AS 23): 80+ pages
+indexed by day 3, 100+ daily clicks by day 7, 5,000+ organic clicks in month one, 377
+top-3 queries within six months.
+
+What it invested in was **brand identity resolution across channels**, not links:
+
+- Social profiles (LinkedIn, Facebook, Instagram, YouTube)
+- Google Business Profile
+- Structured data explicitly defining the brand entity
+- Citations in 50+ business directories
+- **Interactive web applications** — which is §2.1's page-function requirement arriving from
+  a second, independent direction
+
+Alignment matters too: rankings improve faster when *"the central entity in the brand name
+and central entity in the semantic content network align."* Site-wide n-grams from the
+domain and brand help identify the macro-context.
+
+#### Our specific exposure
+
+Our brand name is a maximally generic phrase, which puts us squarely in S5's named
+disadvantage: **brand identity resolution** — multiple entities sharing a name create
+confusion — and consequently **higher marketing cost to differentiate**. Two consequences:
+
+1. **The brand-signal work is load-bearing, not garnish.** Consistent NAP, a Google Business
+   Profile against the real Cheltenham address, `Organization` schema with a stable `@id`,
+   and directory citations are what let the domain function as a brand rather than a
+   keyword string. This moves up the build order, not down.
+2. **Bing is a live risk.** S5 reports Bing *removing* the case-study domain from results
+   entirely rather than demoting it — a harsher posture than Google's. Monitor Bing
+   Webmaster Tools separately from GSC from day one; do not assume GSC health implies Bing
+   health.
+
+#### The line we must not cross
+
+S5 distinguishes an EMD from a **"misleading exact match domain"** — one that cannot rank
+because it fails to satisfy the user need its name promises. A domain called
+*international money transfer* that does not let a visitor actually resolve an international
+money transfer question is exactly that failure, and it converges with §2.1's misleading
+functionality and §6.2's mid-market boundary. Three independent sources point at the same
+requirement: **the site must genuinely do the thing its name claims.**
 
 ---
 
@@ -308,7 +377,99 @@ without a verified first-party source and a named reviewer.
 
 ---
 
-## 6. Rendering and technical baseline (S1 §4.3, S4)
+## 6. Exchange rate data — Frankfurter API
+
+**Source:** `https://api.frankfurter.dev/v2` — Frankfurter v2.1.1, MIT licensed, open source,
+no API key. Verified against the live API on 2026-09-02.
+
+### 6.1 What it provides
+
+| | |
+|---|---|
+| Providers | **84** central banks and monetary authorities, blended |
+| Currencies | **165** (active; `?scope=all` adds legacy) |
+| History | Full daily history, in some cases back to the 1980s–90s |
+| Cadence | Daily. Observed `cache-control: public, max-age=69365, stale-if-error=86400` |
+| UK-relevant | **BOE** — Bank of England, *spot rate*, GBP pivot. **ECB** — *reference rate*, EUR pivot |
+
+Endpoints:
+
+| Endpoint | Use |
+|---|---|
+| `GET /rates` | Latest or historical, `date` or `from`/`to`, `base`, `quotes`, `providers`, `group=week\|month`, `expand=providers` |
+| `GET /rate/{base}/{quote}` | Single pair, optional `date`, `providers` |
+| `GET /currencies` | Currency list with names, symbols, date ranges |
+| `GET /currency/{code}` | One currency, incl. provider info / peg metadata |
+| `GET /providers` | Provider list: key, name, country, `rate_type`, pivot, cadence, coverage, terms URL |
+
+Corridor coverage is good. Of the currencies that matter for UK remittance, all of
+INR, PKR, NGN, PHP, PLN, RON, EUR, USD, AUD, ZAR, KES, GHS, BDT, LKR, NPR, TRY, THB,
+VND, UGX, TZS, ZMW, JMD, CAD, NZD, AED, HUF, CZK, MAD, EGP, SOS, ETB, ALL and UAH are
+present. **BGN is absent** — handle Bulgaria explicitly rather than failing silently.
+
+Constraint to design around: requests using `providers` or `expand=providers` recompute the
+blend per date and return **422 for daily ranges longer than 5 years**. For long history,
+use `group=week`/`group=month`, name providers, or split the range.
+
+### 6.2 The boundary that matters — mid-market is not the customer rate
+
+**These are central bank reference, spot and mid rates.** The `rate_type` values across the
+84 providers are "reference rate," "official rate," "indicative rate," "spot rate," "middle
+rate," "FIX," and similar. **No consumer receives these rates.**
+
+The gap between the mid-market rate and the rate a provider actually gives a customer *is
+the provider's margin* — and it is the single most important consumer-protection fact in
+this market, routinely larger than the advertised transfer fee.
+
+This makes Frankfurter both our best asset and our sharpest risk. Under §2.1 and Google's
+**misleading functionality** spam policy, and under §8's critical-failure list for
+unsupported financial claims:
+
+| Frankfurter **can** legitimately power | Frankfurter **must never** power |
+|---|---|
+| The mid-market benchmark — "the real exchange rate," sourced and dated | "The rate you will get" |
+| Historical rate charts and trend analysis | A quote, or anything transactable |
+| A margin/markup calculator: user enters a provider's quote, we show the hidden spread | A comparison of what providers actually charge |
+| Currency reference and corridor context | Any implied provider rate |
+
+A centerpiece calculator that renders "send £1,000 → receive ₹128,750" from BOE/ECB rates
+is a **critical failure under our own gate**, because nobody receives that amount. It is a
+misleading functional claim, not a rounding error.
+
+### 6.3 Recommended centerpiece function
+
+The honest, differentiated function this data genuinely supports — and which needs no
+provider-rate licensing and no FCA permission to compute:
+
+> **A mid-market rate reference and margin calculator.** Show the true mid-market rate,
+> live and dated. Let the user enter the rate or total a provider quoted them, and show the
+> spread in pounds and as a percentage — the cost that provider's marketing does not name.
+
+This satisfies §2.1 (a real function, not an implied one), §2.4 commercialisation, and the
+information-gain requirement, because most competitors either hide the mid-market
+comparison or bury it. It works regardless of how open decision #1 resolves.
+
+### 6.4 Implementation rules
+
+- **Fetch server-side.** Rates render into the static HTML per §1 rule 1. Never client-fetch the
+  centerpiece's numbers.
+- **Revalidate daily**, aligned to the ~19h cache TTL. Rate data is volatile; the *page* is
+  not — do not let a rate refresh rewrite the visible "last updated" date (§1 rule 7).
+- **Always render source and timestamp adjacent to the number**: which provider, which
+  rate type, which date. S1 §6.6 requires publication/effective dates for volatile facts.
+- **Verbalise every chart** (§2.4) — a rate chart carries an adjacent sentence stating the
+  actual movement, not just an axis.
+- **Attribute the data.** Frankfurter is MIT, but the underlying data carries the providers'
+  own terms — BOE (`bankofengland.co.uk/legal`) and ECB both publish terms; `/providers`
+  exposes a `terms_url` per provider. Review before launch.
+- **Degrade honestly.** On a 422/503 or stale data, show the last known rate *with its real
+  date*. Never interpolate, never show a stale figure as current.
+- **Never expose an unbounded date range** to a user-controllable parameter — it is both a
+  422 risk and a crawl trap. Range pages, if any, must clear §3's four tests.
+
+---
+
+## 7. Rendering and technical baseline (S1 §4.3, S4)
 
 - **SSR or SSG** for every indexable route. Title, canonical, meta robots, H1, body,
   primary image, JSON-LD and internal links present in the raw document response.
@@ -339,7 +500,7 @@ without a verified first-party source and a named reviewer.
 
 ---
 
-## 7. Pre-publish gate
+## 8. Pre-publish gate
 
 From S1 §9. **Threshold: 85/100, and no critical failure.**
 
@@ -370,6 +531,9 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 - **Centerpiece check.** Is the functional component the first substantive block in DOM
   order, above the fold, and does it render without JavaScript?
 - **Misleading functionality check.** Does every function the page implies actually work?
+- **Mid-market boundary check (§6.2).** Is every rate on the page labelled for what it is —
+  a central bank mid/reference rate — with its provider and date adjacent? Does the page
+  anywhere imply a customer would receive it?
 - **Verbalisation check.** Does every chart, table, and rate display have adjacent text
   stating the actual finding?
 - **Anchor diversity.** No anchor text repeated more than three times within main content
@@ -378,21 +542,23 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 
 ---
 
-## 8. Open decisions
+## 9. Open decisions
 
 | # | Decision | Blocks |
 |---|---|---|
 | 1 | Business model: comparison/introducer vs. authorised provider (§5) | Topical map, all money content, schema |
 | 2 | FCA status, FRN, legal entity, company number | Every regulated claim |
-| 3 | Rate/fee data source, licence, refresh frequency | Core function, review intervals |
+| 3 | ~~Mid-market rate data source~~ — **resolved: Frankfurter (§6)** | — |
+| 3b | **Provider fee/rate data** — do we have a licensed source for what providers actually charge? Frankfurter cannot supply this (§6.2) | Any true provider comparison |
 | 4 | Tech stack — recommendation: Next.js (App Router) with SSG/ISR | Everything technical |
 | 5 | Corridor scope — which currencies/countries we genuinely serve | Page-creation gate inputs |
 | 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
 | 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
+| 8 | Brand-signal assets: Google Business Profile, social profiles, directory citations (§4.1) | Whether the EMD functions as a brand — load-bearing, needs owner and start date |
 
 ---
 
-## 9. Governance
+## 10. Governance
 
 - Page brief approved before drafting; information-gain statement recorded before writing.
 - Source log with dates mapped to individual claims.
