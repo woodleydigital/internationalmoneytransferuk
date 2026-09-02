@@ -1,0 +1,340 @@
+# IMT UK — SEO & Content Build Standard
+
+**Status:** v0.1 — source synthesis. Awaiting business-model and stack confirmation.
+**Owner:** matthew@woodley.digital
+**Last substantive update:** 2026-09-02
+
+This document consolidates four source documents into a single operating standard for
+building **International Money Transfer UK (IMT UK)** at `https://internationalmoneytransfer.uk`.
+It is the build specification, the editorial standard, and the pre-publish gate.
+
+## Source documents
+
+| Ref | Document | Role |
+|---|---|---|
+| **S1** | *Patent-Informed SEO Website + Content Playbook* (24 Jul 2026) | Master build spec: architecture, templates, scorecard, governance |
+| **S2** | *Visual Semantics: The Missing Piece of Topical Authority* — Koray Tuğberk Gübür, Search Engine Land (14 Jul 2026) | Layout, centerpiece annotation, page **function** as a ranking input |
+| **S3** | *Query Templates: Expanding the Scope of Topical Authority* — same author (12 Aug 2026) | Topical map shape: core/outer sections, Query Deserves a Page, microsemantics |
+| **S4** | *JavaScript Best Practices for SEO* — Joe Hall (11 Mar 2025) | Rendering, indexing signals, discovery, performance QA |
+
+**Evidence hierarchy (from S1).** Current Google Search documentation is the operational
+baseline. Patents and the case studies in S2/S3 are *design evidence* — durable
+information-retrieval principles — not confirmed ranking factors. First-party business
+evidence decides what the site actually says. Nothing in this standard may conflict with
+current Google Search Essentials or spam policies.
+
+---
+
+## 1. Where the four sources agree
+
+These are settled and non-negotiable. They form the build's foundation.
+
+1. **Primary content must exist in the initial HTML response.** S1 Rule 01, S4 §1.1–1.2.
+   Title, meta robots, canonical, H1, body copy, primary image, JSON-LD and internal
+   `<a href>` links are server-rendered or statically generated. JavaScript enhances; it
+   never supplies the only copy. This is a critical failure if breached — the page does not
+   publish.
+2. **One route, one purpose, one canonical.** S1 Rule 02, S4 §2.3. Self-referencing
+   canonical in static HTML, never rewritten client-side.
+3. **Semantic, ordered blocks.** One H1, ordered H2/H3, correct landmarks, DOM order
+   matching reading order. Every block has exactly one dominant function: answer,
+   evidence, comparison, instruction, navigation, conversion, or disclosure. (S1 §4.5, S2)
+4. **Structured data must be static, truthful, and visible.** JSON-LD in the initial HTML
+   (S4 §2.2), describing only entities and properties actually rendered on the page (S1
+   Rule 07). Inventing ratings, reviews, prices, authorship, or credentials is a critical failure.
+5. **Contextual internal links in the main content**, with descriptive anchors, placed next to
+   the explanation that creates the need for the destination — not in sitewide keyword blocks.
+6. **Information gain is mandatory**, not decorative. Every important page must make a
+   defensible contribution beyond the commodity result set (S1 §6.2). Scores below 14/20
+   on this dimension block publication.
+7. **Real freshness controls.** Store publish date, last *substantive* update, reviewer, owner,
+   review interval, change note. Never touch a visible date without a substantive revision.
+
+---
+
+## 2. What S2 and S3 add beyond the playbook
+
+S1 tells you how to build a correct site. S2 and S3 explain why a *correct* site can still
+lose to competitors with identical facts — and that gap matters enormously for money
+transfer, where every competitor quotes the same mid-market rate.
+
+### 2.1 Page function is a classification signal (S2)
+
+Google appears to classify a source by **what its layout lets a user do** before it weighs
+what the text says. The helpful content system is described in S2 as closer to
+*functional* than *helpful*: a page that lets a user compare, calculate, filter, quote or
+transact is classified differently from a page that merely describes those things.
+
+> "What a page can do, or can't do, is largely determined by its layout and page components."
+
+The corollary is a spam risk, not just an opportunity: Google added **misleading
+functionality** to its spam policies. A page that *implies* it can compare or calculate but
+does not genuinely do so is worse than one that never claimed it. **We build real
+functions or we make no functional claim.**
+
+### 2.2 Centerpiece annotation (S2)
+
+The centerpiece annotation is the primary content block Google extracts to decide what a
+page is for — roughly 400 characters, extracted from HTML, and easily corrupted by
+boilerplate (share buttons, nav, promo strips) interleaved into the main content flow.
+
+The S2 case study's largest single win across 19 changes was **moving a calculator
+component from the bottom of the page to the top**, making it the centerpiece.
+
+**IMT UK translation:** the functional component — the live comparison / quote / cost
+calculator — sits above the fold, in the main content, first in DOM order after the H1.
+Not a hero image. Not three paragraphs of prose. Not a component that requires
+JavaScript to render its shell (S3's QR-code project explicitly ensured its centerpiece
+served without JS rendering).
+
+**Build rule:** no boilerplate DOM between the H1 and the first substantive content block.
+Share buttons, breadcrumb chrome, promo bars and newsletter modules must not interrupt
+the main content stream.
+
+### 2.3 Macro-context and micro-context (S2)
+
+- **Above the fold = macro-context = main content.** Relevance, accuracy, completeness,
+  and the primary conversion function.
+- **Below the fold = micro-context = supplementary content.** Secondary attributes and
+  the majority of internal links.
+
+### 2.4 Four semantic techniques (S2/S3)
+
+Apply all four to every important page:
+
+| Technique | Meaning | IMT UK example |
+|---|---|---|
+| **Visualisation** | Present content with the right semantic component for the attribute | Rate history as a chart; fee structures as a comparison table, not prose |
+| **Verbalisation** | Convert visually-encoded information into text crawlers and LLMs can read | Every chart/table gets an adjacent text summary stating the actual finding |
+| **Commercialisation** | Give informational documents genuine conversion function at the top | A guide to sending money to India carries a live corridor comparison, not just links |
+| **Contextualisation** | Keep heading order and page segments flowing context toward the target topic | A "cost" page flows toward providers and quotes; a "how-to" page flows toward steps |
+
+### 2.5 Query templates and the topical map's two sections (S3)
+
+A topical map has a **core section** (mostly commercial, holds the central entities) and an
+**outer section** (mostly informational, bridges the central entity to adjacent entities).
+Internal links flow **outer → core** to transfer ranking signals. Every informational page
+that earns clicks strengthens the commercial pages it links to.
+
+Two routes to topical authority, and the hybrid is strongest:
+- **Entity–attribute:** cover every entity in a class across the same shared attribute set.
+- **Query template:** cover every variation of a query pattern (authority attaches to the
+  *format*, e.g. WikiHow and "how to").
+
+### 2.6 Microsemantics (S3)
+
+Sentence-level structure changes relevance. Word order and dependency-tree position
+matter: if the query's subject is "international money transfer," that phrase belongs in
+the subject position of our declarative sentences — not buried as an object.
+
+> "Financial independence is achieved by families with the help of financial advisors."
+> vs. "Financial advisors help families achieve financial independence."
+
+Same fact, materially different relevance depending on the query network targeted. This is
+a marginal gain per sentence, multiplied across every variation of a query template.
+
+### 2.7 Cost of retrieval (S2/S3)
+
+> "The cost of ranking a site can't exceed the cost of not ranking a site."
+
+Lower our retrieval cost by: pruning pages that fail Query Deserves a Page, fixing technical
+issues that dilute signal per document, keeping HTML lean and DOM small, keeping response
+times fast, and **never changing image or media URLs** once published (S3 documents
+measurable image-ranking loss from partial image redirects during a migration).
+
+The extended formula from S2:
+
+```
+((Historical click data × Topical coverage) ÷ Cost of retrieval) × Right visual annotations
+```
+
+---
+
+## 3. The one real tension between the sources — and how we resolve it
+
+**S1 prohibits** "mass-produced pages that differ only in headings, names or a small data
+field," "repetitive city/product substitutions," and city-name-swapped location pages.
+It calls this a critical failure.
+
+**S3 advocates** covering thousands of query-template variations, and describes
+programmatic builds running to 100,000+ URLs.
+
+These are not actually contradictory, but the gap between them is exactly where a money
+transfer site goes wrong. "Send money to [country]" × 200 is the single most tempting and
+most dangerous pattern available to us.
+
+### Resolution — the IMT UK page-creation gate
+
+A templated page may be created **only** when it clears all four tests:
+
+1. **Demand threshold.** Real, evidenced search demand for that specific variation.
+2. **Semantic distinctness (S3's Query Deserves a Page).** The variation involves a
+   *different entity*, or a *different predicate set* with low semantic similarity to
+   existing pages. If the predicates are the same and the entity is the same, it is a
+   section, not a page. If predicates differ, or the entity differs, it earns a page.
+3. **Genuine differential data (S1 Rule 09).** The page carries information that is
+   materially different for *that* variation, not the same paragraph with a swapped noun —
+   e.g. real corridor-specific transfer costs, delivery times, payout methods, receiving-
+   country regulations, currency controls, provider availability.
+4. **Genuine function (S2).** The page performs a real action for that variation — a live
+   comparison or calculation for that corridor — not a described one.
+
+**If a variation fails any test, it becomes a section on a parent page, or it is pruned.**
+S3 is explicit that a full topical map can legitimately be a *single page*, and that pruning
+increases PageRank concentration and relevance per document. Fewer, denser, genuinely
+differentiated pages beat a corridor matrix.
+
+---
+
+## 4. IMT UK entity record (source of truth)
+
+Reused verbatim by the footer, contact page, about page, and `Organization` JSON-LD.
+Nothing on the site may state these facts differently.
+
+```yaml
+name:        International Money Transfer UK
+alternate:   IMT UK
+url:         https://internationalmoneytransfer.uk
+address:
+  street:    Harley House, 29 Cambray Pl
+  locality:  Cheltenham
+  region:    Gloucestershire
+  postcode:  GL50 1JN
+  country:   GB
+legal_name:  TBC          # confirm registered company name + number
+company_no:  TBC
+fca_status:  TBC          # see §5 — blocking for content
+telephone:   TBC
+email:       TBC
+profiles:    TBC          # authoritative social/business profiles
+```
+
+**Domain note.** `internationalmoneytransfer.uk` is effectively an exact-match domain on a
+`.uk` ccTLD. S2's AudioToText.com example attributes part of that site's performance to
+EMD relevance reinforcement combined with strong visual semantics and fast first clicks.
+This is a genuine asset — but only in combination with real function. An EMD attached to a
+thin content site is a liability, not an advantage.
+
+---
+
+## 5. Regulatory constraint — blocking, must be resolved before content
+
+International money transfer is a **regulated activity in the UK** under the Payment
+Services Regulations 2017, supervised by the FCA. This is squarely YMYL territory, and S1
+makes "unsupported financial claims" an **automatic no-publish critical failure**.
+
+Two possible business models produce completely different sites, and we cannot write the
+topical map until this is settled:
+
+| | **A. Comparison / introducer** | **B. Authorised provider** |
+|---|---|---|
+| Core function | Compare providers, rates, fees | Quote, register, send |
+| Core pages | Corridor comparisons, provider reviews | Service pages, corridor send pages |
+| Regulatory | FCA financial promotions rules; commercial relationships must be disclosed (S1 §5.4) | Full PSR 2017 authorisation, consumer duty, safeguarding disclosures |
+| Schema | `Organization` + comparison content | `FinancialService` / `Organization` + `Service` |
+
+**Required before any money-related page is drafted:**
+- FCA authorisation or registration status, and firm reference number if held
+- If A: how commercial relationships are structured and disclosed
+- Rate/fee data source, its licence, and its update frequency (this determines review
+  intervals — S1 requires short intervals for volatile financial facts)
+
+Nothing that states or implies a rate, fee, delivery time, or regulatory status ships
+without a verified first-party source and a named reviewer.
+
+---
+
+## 6. Rendering and technical baseline (S1 §4.3, S4)
+
+- **SSR or SSG** for every indexable route. Title, canonical, meta robots, H1, body,
+  primary image, JSON-LD and internal links present in the raw document response.
+- **History-based routing**, never hash routing. Every route returns a real 200.
+- **Real `<a href>` anchors** for all navigation and discovery. No `onclick`-only paths.
+- **Never block** `/js/`, `/css/`, `/images/` in robots.txt. Robots.txt controls crawling;
+  meta robots / `X-Robots-Tag` control indexing.
+- **Tabs and accordions** ship their content in the initial HTML, hidden with CSS — never
+  injected on interaction.
+- **Pagination** exists as real URLs alongside any lazy loading. `loading="lazy"` on
+  below-fold media only; never on the LCP image.
+- **Hashed asset filenames** with long-lived immutable cache headers. Content URLs
+  (pages, images) stay stable forever.
+- **Core Web Vitals targets:** LCP ≤ 2.5s, INP < 200ms, CLS ≤ 0.1 at the 75th percentile,
+  field data.
+- **Keep HTML lean.** S2 notes Google reduced its HTML file size limit to 2MB and
+  deindexed at scale after the December 2025 core update. Small DOM, few third-party
+  scripts.
+
+### Rendering QA — run on every indexable template
+
+1. `view-source:` contains the H1, the primary copy, the canonical, the meta robots, the
+   JSON-LD, and the main internal links.
+2. Page renders its core content and navigation with JavaScript disabled.
+3. Rendered DOM has not rewritten the canonical or robots directive.
+4. GSC URL Inspection → View Crawled Page → HTML matches the visible page.
+5. Automated per-template test asserting 1–3 in CI.
+
+---
+
+## 7. Pre-publish gate
+
+From S1 §9. **Threshold: 85/100, and no critical failure.**
+
+| Category | Points | Minimum |
+|---|---:|---|
+| Technical accessibility | 20 | |
+| Architecture and internal links | 15 | |
+| Intent completion | 15 | |
+| **Information gain** | **20** | **must score ≥ 14** |
+| Answer and passage quality | 10 | |
+| Entities and structured data | 8 | |
+| Visual and image semantics | 5 | |
+| Trust, sources and freshness | 7 | |
+
+### Critical failures — automatic no-publish
+
+- Main content, H1, or priority links absent from rendered HTML
+- Incorrect canonical, accidental noindex, blocked rendering resources, soft 404
+- Substantial duplication, or a corridor/location permutation with no distinct value
+- Structured data contradicting visible content, or inventing facts
+- **Unsupported financial claims** — rates, fees, delivery times, regulatory status
+- Fabricated author, reviewer, credentials, testing, reviews, or first-hand experience
+- Information gain below 14/20
+- No meaningful internal path to the page
+
+### IMT UK additions to the gate
+
+- **Centerpiece check.** Is the functional component the first substantive block in DOM
+  order, above the fold, and does it render without JavaScript?
+- **Misleading functionality check.** Does every function the page implies actually work?
+- **Verbalisation check.** Does every chart, table, and rate display have adjacent text
+  stating the actual finding?
+- **Anchor diversity.** No anchor text repeated more than three times within main content
+  across the site (S3).
+- **Media URL stability.** No image or media URL changes without a documented migration.
+
+---
+
+## 8. Open decisions
+
+| # | Decision | Blocks |
+|---|---|---|
+| 1 | Business model: comparison/introducer vs. authorised provider (§5) | Topical map, all money content, schema |
+| 2 | FCA status, FRN, legal entity, company number | Every regulated claim |
+| 3 | Rate/fee data source, licence, refresh frequency | Core function, review intervals |
+| 4 | Tech stack — recommendation: Next.js (App Router) with SSG/ISR | Everything technical |
+| 5 | Corridor scope — which currencies/countries we genuinely serve | Page-creation gate inputs |
+| 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
+
+---
+
+## 9. Governance
+
+- Page brief approved before drafting; information-gain statement recorded before writing.
+- Source log with dates mapped to individual claims.
+- Writer, subject reviewer, final editor named per page.
+- Scorecard completed pre-publish; review interval and owner assigned at publish.
+- Volatile financial facts get short review intervals.
+- Quarterly cannibalisation review; consolidate pages competing for the same purpose.
+- Do not respond to a ranking decline by adding text, FAQs, schema or links
+  indiscriminately. Diagnose crawl/indexing, intent mismatch, information deficit, source
+  quality, competition, UX and commercial fit separately.
