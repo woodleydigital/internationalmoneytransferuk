@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Check the exchange rate margin on a large money transfer",
+    default: "Check the margin on your international money transfer",
     template: `%s | ${SITE.name}`,
   },
   description:

@@ -37,7 +37,12 @@ export async function generateMetadata({
   const params = await searchParams;
   const hasQuery = Object.keys(params).length > 0;
   return {
-    title: "Check the exchange rate margin on a large money transfer",
+    // Absolute so the brand suffix is present on the core page too: for an EMD the
+    // brand-to-query association is the mechanism (standard §4.1).
+    title: {
+      absolute:
+        "Check the margin on your international money transfer | International Money Transfer UK",
+    },
     alternates: { canonical: "/" },
     robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -77,7 +82,7 @@ export default async function Page({
   return (
     <main id="main" className="mx-auto max-w-3xl px-5 py-10">
       <h1 className="text-3xl font-bold tracking-tight text-[color:var(--color-ink)]">
-        Check the exchange rate margin on a large money transfer
+        Check the margin on your international money transfer
       </h1>
 
       <section aria-labelledby="checker" className="mt-6">
@@ -179,7 +184,7 @@ export default async function Page({
 
       <section aria-labelledby="why" className="mt-14 border-t border-[color:var(--color-line)] pt-8">
         <h2 id="why" className="text-xl font-semibold text-[color:var(--color-ink)]">
-          Why the margin matters more than the fee
+          International money transfer costs more than the fee you were quoted
         </h2>
         <p className="mt-3 max-w-prose">
           {`On a large transfer the exchange rate margin is almost always the larger cost, and ` +
