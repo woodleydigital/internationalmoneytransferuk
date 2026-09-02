@@ -15,6 +15,10 @@ components, or content.
 **[`docs/site-plan.md`](docs/site-plan.md)** is the topical map, route map and build
 sequence. The head term is fed by the outer section, never targeted directly.
 
+**[`docs/brand-guidelines.md`](docs/brand-guidelines.md)** is the identity: logo, palette
+(with verified contrast), typography and voice. Brand signals are load-bearing for the EMD,
+not decoration. Asset URLs at `/brand/` are permanent.
+
 **[`docs/build-spec.md`](docs/build-spec.md)** implements it: the FX Margin Checker
 (the centerpiece), the DOM contract, and the structured data. Read it before writing code.
 

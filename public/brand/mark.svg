@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="t">
+  <title id="t">IMT UK</title>
+  <rect width="48" height="48" rx="11" fill="#062626"/>
+  <!-- Upper bar: the mid-market reference, at full length. -->
+  <rect x="10" y="15.5" width="28" height="5" rx="2.5" fill="#F0F7F7"/>
+  <!-- Lower bar: what the customer actually receives... -->
+  <rect x="10" y="27.5" width="19" height="5" rx="2.5" fill="#6FA8A9"/>
+  <!-- ...and the margin that made up the difference. -->
+  <rect x="30" y="27.5" width="8" height="5" rx="2.5" fill="#B8811F"/>
+</svg>

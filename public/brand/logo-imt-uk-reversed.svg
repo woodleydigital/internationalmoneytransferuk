@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 48" width="194" height="48" role="img" aria-labelledby="lt">
+  <title id="lt">IMT UK — International Money Transfer UK</title>
+  
+  <rect x="10" y="15.5" width="28" height="5" rx="2.5" fill="#F0F7F7"/>
+  <rect x="10" y="27.5" width="19" height="5" rx="2.5" fill="#6FA8A9"/>
+  <rect x="30" y="27.5" width="8" height="5" rx="2.5" fill="#B8811F"/>
+  <g transform="translate(64 12)" fill="none" stroke="#F0F7F7" stroke-width="4.5"
+     stroke-linecap="square" stroke-linejoin="round">
+    <path d="M2.25 2.25V21.75"/>
+    <path d="M11.75 21.75V2.25L20.75 17.5L29.75 2.25V21.75"/>
+    <path d="M39.25 2.25H55.25"/>
+    <path d="M47.25 2.25V21.75"/>
+    <path d="M71.75 2.25V21.75H87.75V2.25"/>
+    <path d="M97.25 2.25V21.75"/>
+    <path d="M112.25 2.25L98.25 12L112.25 21.75"/>
+  </g>
+</svg>

@@ -1,14 +1,51 @@
 @import "tailwindcss";
 
+/* Palette — docs/brand-guidelines.md §3. Contrast ratios there are computed,
+   not assumed. Do not introduce a colour that is not in this list. */
 @theme {
-  --color-ink: #0f172a;
-  --color-body: #334155;
-  --color-line: #cbd5e1;
-  --color-wash: #f8fafc;
-  --color-accent: #1d4ed8;
+  --color-brand-900: #062626;
+  --color-brand-800: #0A3234;
+  --color-brand-700: #0F3D3E;
+  --color-brand-600: #165052;
+  --color-brand-500: #1E6A6C;
+  --color-brand-300: #6FA8A9;
+  --color-brand-100: #D8E8E8;
+  --color-brand-50:  #F0F7F7;
+
+  /* Reserved for the margin — the cost the user was not shown. Not a general
+     highlight. Deliberately not red: we report, we do not accuse (§1.5). */
+  --color-accent-700: #7A5210;
+  --color-accent-600: #96661A;
+  --color-accent-500: #B8811F;
+  --color-accent-100: #F5E9D0;
+
+  --color-ink:   #101D1E;
+  --color-body:  #3D4B4B;
+  --color-muted: #677878;
+  --color-wash:  #F6F9F9;
+
+  /* line is decorative only and fails 3:1 by design. Form control borders must
+     use line-strong — under WCAG 1.4.11 the border is the only thing marking
+     the control. */
+  --color-line: #D3DDDD;
+  --color-line-strong: #768C8C;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Reserve the result block so a rate refresh cannot shift layout (build-spec §1.6.5). */
 .result-slot {
   min-height: 13rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+/* Controls follow the palette rather than the browser default. */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--color-brand-600);
 }

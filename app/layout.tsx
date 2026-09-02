@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   },
   description:
     "Enter the rate or payout you were quoted on an international transfer and see the exchange rate margin built into it, separated from any stated fee.",
+  icons: { icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }] },
 };
 
 /**
@@ -31,6 +32,9 @@ const graph = {
       alternateName: SITE.alternateName,
       url: SITE.url,
       address: { "@type": "PostalAddress", ...SITE.address },
+      // Permanent URL. Search engines associate this with the entity over time —
+      // see docs/brand-guidelines.md §7 before ever changing it.
+      logo: `${SITE.url}/brand/logo-imt-uk.svg`,
     },
     {
       "@type": "WebSite",
@@ -61,11 +65,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
         />
       </head>
-      <body className="bg-white text-[color:var(--color-body)] antialiased">
-        <header className="border-b border-[color:var(--color-line)]">
+      <body className="bg-white font-sans text-body antialiased">
+        <header className="border-b border-line">
           <div className="mx-auto flex max-w-3xl items-baseline justify-between px-5 py-4">
-            <Link href="/" className="text-sm font-semibold text-[color:var(--color-ink)]">
-              {SITE.name}
+            <Link href="/" className="flex items-center gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/logo-imt-uk.svg"
+                alt=""
+                width={129}
+                height={32}
+                className="h-8 w-auto"
+              />
+              <span className="sr-only sm:not-sr-only sm:text-sm sm:font-medium sm:text-ink">
+                {SITE.name}
+              </span>
             </Link>
             <nav>
               <Link href="/how-we-calculate" className="text-sm underline">
@@ -77,9 +91,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        <footer className="mt-16 border-t border-[color:var(--color-line)]">
-          <div className="mx-auto max-w-3xl px-5 py-8 text-sm">
-            <p className="font-semibold text-[color:var(--color-ink)]">{SITE.name}</p>
+        <footer className="mt-16 bg-brand-900 text-brand-100">
+          <div className="mx-auto max-w-3xl px-5 py-10 text-sm">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/logo-imt-uk-reversed.svg"
+              alt=""
+              width={129}
+              height={32}
+              className="h-8 w-auto"
+            />
+            <p className="mt-4 font-semibold text-white">{SITE.name}</p>
             <address className="not-italic">
               {SITE.address.streetAddress}, {SITE.address.addressLocality},{" "}
               {SITE.address.postalCode}, United Kingdom

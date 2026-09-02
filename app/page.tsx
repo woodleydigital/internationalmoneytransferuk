@@ -81,7 +81,7 @@ export default async function Page({
 
   return (
     <main id="main" className="mx-auto max-w-3xl px-5 py-10">
-      <h1 className="text-3xl font-bold tracking-tight text-[color:var(--color-ink)]">
+      <h1 className="text-3xl font-bold tracking-tight text-ink">
         Check the margin on your international money transfer
       </h1>
 
@@ -91,16 +91,14 @@ export default async function Page({
         </h2>
 
         <p className="max-w-prose text-base">
-          Enter what you were quoted on a transfer. This compares it with the mid-market
-          reference rate published for that day and shows the margin built into the rate,
-          separately from any fee you were told about. Most currency brokers charge no fee at
-          all and take their entire margin through the rate.
+          Enter what you were quoted. This shows the margin built into the exchange rate,
+          separately from any fee — the cost most providers never itemise.
         </p>
 
         {mid ? (
           <p className="mt-3 text-sm">
             {`Mid-market reference for ${base}/${quote} is `}
-            <strong className="text-[color:var(--color-ink)]">{fmtRate(mid.rate)}</strong>
+            <strong className="text-ink">{fmtRate(mid.rate)}</strong>
             {`, published ${longDate(mid.date)}${
               mid.providerCount ? `, blended from ${mid.providerCount} central bank sources` : ""
             }.`}
@@ -112,7 +110,7 @@ export default async function Page({
           </p>
         )}
 
-        <form method="get" action="/" className="mt-6 rounded-lg border border-[color:var(--color-line)] bg-[color:var(--color-wash)] p-5">
+        <form method="get" action="/" className="mt-6 rounded-lg border border-line bg-wash p-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <Field label="You send" name="send" defaultValue={String(sendAmount)} inputMode="decimal" />
             <Select label="From" name="from" value={base} />
@@ -141,7 +139,7 @@ export default async function Page({
           </div>
 
           <fieldset className="mt-4">
-            <legend className="text-sm font-medium text-[color:var(--color-ink)]">
+            <legend className="text-sm font-medium text-ink">
               If there was a fee, was it
             </legend>
             <label className="mr-4 text-sm">
@@ -156,7 +154,7 @@ export default async function Page({
 
           <button
             type="submit"
-            className="mt-5 rounded-md bg-[color:var(--color-accent)] px-5 py-2.5 font-medium text-white"
+            className="mt-5 rounded-md bg-brand-700 px-5 py-2.5 font-medium text-white"
           >
             Check the margin
           </button>
@@ -182,8 +180,8 @@ export default async function Page({
         )}
       </section>
 
-      <section aria-labelledby="why" className="mt-14 border-t border-[color:var(--color-line)] pt-8">
-        <h2 id="why" className="text-xl font-semibold text-[color:var(--color-ink)]">
+      <section aria-labelledby="why" className="mt-14 border-t border-line pt-8">
+        <h2 id="why" className="text-xl font-semibold text-ink">
           International money transfer costs more than the fee you were quoted
         </h2>
         <p className="mt-3 max-w-prose">
@@ -208,8 +206,8 @@ function WorkedExample() {
   // centerpiece annotation no text to extract (build-spec §1.6.2). Illustrative
   // figures only — never a claim about a named provider.
   return (
-    <div className="rounded-lg border border-[color:var(--color-line)] p-5">
-      <h3 className="font-semibold text-[color:var(--color-ink)]">
+    <div className="rounded-lg border border-line p-5">
+      <h3 className="font-semibold text-ink">
         {`Example: a ${money(50_000, "GBP")} transfer to euros`}
       </h3>
       <p className="mt-2 max-w-prose">
@@ -238,7 +236,7 @@ function Result({
 }) {
   if (result.status !== "ok" && result.status !== "beats-reference") {
     return (
-      <div className="rounded-lg border border-[color:var(--color-line)] p-5">
+      <div className="rounded-lg border border-line p-5">
         <p>{result.note}</p>
       </div>
     );
@@ -247,17 +245,17 @@ function Result({
   const beats = result.status === "beats-reference";
 
   return (
-    <div className="rounded-lg border border-[color:var(--color-line)] p-5">
+    <div className="rounded-lg border border-line p-5">
       {beats ? (
         <>
-          <h3 className="font-semibold text-[color:var(--color-ink)]">
+          <h3 className="font-semibold text-ink">
             That quote beats the reference rate
           </h3>
           <p className="mt-2 max-w-prose">{result.note}</p>
         </>
       ) : (
         <>
-          <h3 className="text-2xl font-bold text-[color:var(--color-ink)]">
+          <h3 className="text-4xl font-bold tracking-tight text-ink">
             {money(result.totalCost, base)}
           </h3>
           <p className="mt-1">
@@ -269,6 +267,7 @@ function Result({
             <Stat
               label="Exchange rate margin"
               value={money(result.fxMargin, base)}
+              accent
               note={
                 result.statedFee === 0
                   ? "No fee was stated, so the whole cost is in the rate."
@@ -295,12 +294,24 @@ function Result({
   );
 }
 
-function Stat({ label, value, note }: { label: string; value: string; note?: string }) {
+function Stat({
+  label,
+  value,
+  note,
+  accent,
+}: {
+  label: string;
+  value: string;
+  note?: string;
+  accent?: boolean;
+}) {
   return (
     <div>
       <dt className="text-sm">{label}</dt>
-      <dd className="font-semibold text-[color:var(--color-ink)]">{value}</dd>
-      {note && <p className="text-xs">{note}</p>}
+      <dd className={accent ? "font-semibold text-accent-700" : "font-semibold text-ink"}>
+        {value}
+      </dd>
+      {note && <p className="text-xs text-muted">{note}</p>}
     </div>
   );
 }
@@ -321,7 +332,7 @@ function Field({
   const id = `f-${name}`;
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-[color:var(--color-ink)]">
+      <label htmlFor={id} className="block text-sm font-medium text-ink">
         {label}
       </label>
       <input
@@ -330,7 +341,7 @@ function Field({
         defaultValue={defaultValue}
         inputMode={inputMode}
         autoComplete="off"
-        className="mt-1 w-full rounded-md border border-[color:var(--color-line)] bg-white px-3 py-2"
+        className="mt-1 w-full rounded-md border border-line-strong bg-white px-3 py-2"
       />
       {hint && <p className="mt-1 text-xs">{hint}</p>}
     </div>
@@ -341,14 +352,14 @@ function Select({ label, name, value }: { label: string; name: string; value: st
   const id = `f-${name}`;
   return (
     <div>
-      <label htmlFor={id} className="block text-sm font-medium text-[color:var(--color-ink)]">
+      <label htmlFor={id} className="block text-sm font-medium text-ink">
         {label}
       </label>
       <select
         id={id}
         name={name}
         defaultValue={value}
-        className="mt-1 w-full rounded-md border border-[color:var(--color-line)] bg-white px-3 py-2"
+        className="mt-1 w-full rounded-md border border-line-strong bg-white px-3 py-2"
       >
         {CORRIDOR_CURRENCIES.map((c) => (
           <option key={c.code} value={c.code}>

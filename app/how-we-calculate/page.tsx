@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main id="main" className="mx-auto max-w-3xl px-5 py-10">
-      <h1 className="text-3xl font-bold tracking-tight text-[color:var(--color-ink)]">
+      <h1 className="text-3xl font-bold tracking-tight text-ink">
         How we calculate the exchange rate margin
       </h1>
 
@@ -21,7 +21,7 @@ export default function Page() {
         does not compare providers. Every figure it uses about your transfer comes from you.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-[color:var(--color-ink)]">
+      <h2 className="mt-10 text-xl font-semibold text-ink">
         Where the reference rate comes from
       </h2>
       <p className="mt-3 max-w-prose">
@@ -35,7 +35,7 @@ export default function Page() {
       </p>
       <p className="mt-3 max-w-prose">
         These are reference, spot and mid rates published by monetary authorities.{" "}
-        <strong className="text-[color:var(--color-ink)]">
+        <strong className="text-ink">
           They are not rates available to consumers, and no provider will give you one.
         </strong>{" "}
         They are the benchmark against which a provider&rsquo;s margin is measured — which is
@@ -48,13 +48,13 @@ export default function Page() {
         today&rsquo;s date, and we never estimate a rate when the source is unavailable.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-[color:var(--color-ink)]">The formulas</h2>
+      <h2 className="mt-10 text-xl font-semibold text-ink">The formulas</h2>
       <p className="mt-3 max-w-prose">
         Where <em>S</em> is the amount you send, <em>T</em> is what your recipient receives,{" "}
         <em>R</em> is the mid-market reference rate and <em>F</em> is any fee you were told
         about:
       </p>
-      <pre className="mt-4 overflow-x-auto rounded-md bg-[color:var(--color-ink)] p-4 text-sm text-white">
+      <pre className="mt-4 overflow-x-auto rounded-md bg-brand-900 p-4 text-sm text-white">
         <code>{`mid-market payout   = S × R
 shortfall           = (S × R) − T          in the receiving currency
 total cost          = shortfall ÷ R        in the sending currency
@@ -69,7 +69,7 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
         assuming one silently is a common way for these calculations to go wrong.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-[color:var(--color-ink)]">
+      <h2 className="mt-10 text-xl font-semibold text-ink">
         Worked example
       </h2>
       <p className="mt-3 max-w-prose">
@@ -79,7 +79,7 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
         margin built into the rate.
       </p>
 
-      <h2 className="mt-10 text-xl font-semibold text-[color:var(--color-ink)]">Limitations</h2>
+      <h2 className="mt-10 text-xl font-semibold text-ink">Limitations</h2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
         <li>
           The reference rate is a once-daily published figure. Your provider priced at a
@@ -105,7 +105,7 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
         </li>
       </ul>
 
-      <h2 className="mt-10 text-xl font-semibold text-[color:var(--color-ink)]">
+      <h2 className="mt-10 text-xl font-semibold text-ink">
         What we do with your figures
       </h2>
       <p className="mt-3 max-w-prose">
