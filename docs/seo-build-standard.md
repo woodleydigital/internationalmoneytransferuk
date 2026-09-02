@@ -232,7 +232,8 @@ most dangerous pattern available to us.
 
 A templated page may be created **only** when it clears all four tests:
 
-1. **Demand threshold.** Real, evidenced search demand for that specific variation.
+1. **Demand threshold.** Real, evidenced search demand for that specific variation —
+   read as **demand × transaction value**, not raw volume (§4.2.2).
 2. **Semantic distinctness (S3's Query Deserves a Page).** The variation involves a
    *different entity*, or a *different predicate set* with low semantic similarity to
    existing pages. If the predicates are the same and the entity is the same, it is a
@@ -347,6 +348,70 @@ because it fails to satisfy the user need its name promises. A domain called
 money transfer question is exactly that failure, and it converges with §2.1's misleading
 functionality and §6.2's mid-market boundary. Three independent sources point at the same
 requirement: **the site must genuinely do the thing its name claims.**
+
+### 4.2 Positioning — large-value transfers, not remittance
+
+**Decided 2026-09-02.** IMT UK targets **large-value international transfers**, not
+remittance. Working threshold: **£10,000+**, with the archetypal transfer in the
+**£50,000–£500,000** range.
+
+Archetypal use cases: overseas property purchase (deposit and completion), emigration and
+moving savings, inheritance and probate distribution, repatriating the proceeds of an
+overseas property sale, business and supplier payments, school and university fees, pension
+transfers, and divorce settlements crossing borders.
+
+Corridors follow the use cases, not remittance flows: **EUR** (France, Spain, Portugal,
+Ireland, Italy, Greece, Cyprus), **AUD**, **NZD**, **CAD**, **USD**, **AED**, **CHF**,
+**ZAR**, **SGD**, **HKD** — plus **inbound to GBP**, which is a real and often-ignored
+segment (overseas buyers of UK property, returning expatriates).
+
+This decision propagates. Four consequences, each of which changes a rule elsewhere in this
+document:
+
+#### 4.2.1 The competitive set is not who you would assume
+
+We are not competing with the Wise/Remitly remittance content machine. The competitors are
+**FCA-authorised currency brokers** — Currencies Direct, TorFX, OFX, Smart Currency
+Exchange, Key Currency, Lumon, Clear Currency, Halo Financial and similar.
+
+Their pricing model matters enormously to us: **they typically charge no explicit fee and
+take their entire revenue from the spread.** For a zero-fee broker, total cost *is* the
+margin. Our checker's fee-versus-margin decomposition (build-spec §1.3) is therefore aimed
+precisely at the dominant pricing model in this market — and it makes the point vividly,
+because the tool resolves a "free transfer" into a real number.
+
+#### 4.2.2 The demand threshold in §3 is value-weighted, not volume-weighted
+
+§3 test 1 asks for evidenced search demand. **Read it as demand × value, not raw volume.**
+A query with a hundred searches a month can comfortably deserve a page when the transaction
+behind it is £250,000. Applying a remittance-scale volume threshold here would prune exactly
+the pages worth having. The other three tests are unchanged and still bind.
+
+#### 4.2.3 YMYL intensity goes up, not down
+
+Property completions, emigration and life savings. The consequence of getting a fact wrong
+is materially worse than in remittance, so the named-reviewer requirement (decision #6)
+becomes more important, not less. No regulatory or cost claim ships without one.
+
+#### 4.2.4 Safeguarding is not FSCS — our strongest information-gain opportunity
+
+Authorised payment institutions **safeguard** customer funds under the Payment Services
+Regulations 2017. They are **not** covered by the Financial Services Compensation Scheme.
+These are different protections with different consequences in an insolvency.
+
+Someone moving £300,000 through a currency broker very often assumes FSCS protection
+applies. It does not. This is poorly explained across the entire competitive set, it is
+precisely the fact our audience most needs before committing a life-changing sum, and it is
+the clearest information-gain opportunity available to us (§1 rule 6).
+
+It is also a regulatory claim about a regulatory regime, so it ships only with primary
+sourcing (FCA Handbook, PSR 2017, FSCS's own material) and a named reviewer. **Verify before
+writing — do not draft this from memory.**
+
+Adjacent opportunities with the same profile: **forward contracts and limit orders** (which
+brokers offer for property completions, and which are genuinely complex and badly
+explained), **source-of-funds documentation** requirements for large sums, and **exchange
+rate risk against a fixed completion date**.
 
 ---
 
@@ -557,7 +622,7 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 | 3 | ~~Mid-market rate data source~~ — **resolved: Frankfurter (§6)** | — |
 | 3b | **Provider fee/rate data** — do we have a licensed source for what providers actually charge? Frankfurter cannot supply this (§6.2) | Any true provider comparison |
 | 4 | ~~Tech stack~~ — **resolved: Next.js (App Router) on Vercel, Tailwind, SSG + daily revalidation** | — |
-| 5 | Corridor scope — which currencies/countries we genuinely serve. **See build-spec §6 question A: is the AU/US/EU focus deliberate?** | Page-creation gate inputs |
+| 5 | ~~Corridor scope~~ — **resolved: large-value transfers, corridors per §4.2** | — |
 | 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
 | 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
 | 8 | Brand-signal assets: Google Business Profile, social profiles, directory citations (§4.1) | Whether the EMD functions as a brand — load-bearing, needs owner and start date |

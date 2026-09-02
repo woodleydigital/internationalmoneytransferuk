@@ -127,9 +127,17 @@ JS rendering):
 
    Use a clearly-labelled illustration, never a claim about a named provider:
 
-   > *Example: a £10,000 transfer quoted at 1.1200 when the mid-market rate is 1.1500 gives
-   > the recipient €11,200 instead of €11,500 — £260.87 of exchange rate margin, on top of
+   > *Example: a £50,000 transfer quoted at 1.1200 when the mid-market rate is 1.1500 gives
+   > the recipient €56,000 instead of €57,500 — £1,304.35 of exchange rate margin, on top of
    > any stated fee.*
+
+   **Defaults are set for the large-transfer audience** (standard §4.2): default amount
+   **£50,000**, default pair **GBP → EUR**. Lead the result with the **absolute cost in
+   pounds**, not the percentage — £1,304 is the number that lands; 2.61% is not. Show both.
+
+   This also lands the §4.2.1 point: most currency brokers in this market charge no explicit
+   fee, so for them the total cost *is* the margin. The tool resolves a "fee-free" transfer
+   into a real figure.
 
 3. **It works without JavaScript.** The form submits as a `GET` to the same route; the
    server renders the result. JavaScript upgrades this to instant recalculation without a
@@ -326,7 +334,7 @@ costs nothing in discoverability.
 
 | # | Question | Status |
 |---|---|---|
-| A | **Is the AU/US/EU corridor focus deliberate?** It implies expat and large-sum positioning rather than remittance — less competition, higher value per transfer, and the margin angle bites hardest where a 3% spread is £3,000 on £100k. If deliberate it should drive corridor scope (standard decision #5); if incidental it should be made deliberate. | **Unanswered** |
+| A | ~~Corridor focus~~ | **Resolved: large-value transfers, £10,000+, archetype £50k–£500k. See standard §4.2.** |
 | B | Licensed provider fee/rate data (standard decision #3b) | Open — blocks any true comparison matrix |
 | C | Business model and FCA status (standard §5) | Blocked |
 | D | Named reviewer with real financial credentials (standard decision #6) | Open — required before YMYL content |
