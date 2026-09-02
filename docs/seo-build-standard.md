@@ -1,6 +1,6 @@
 # IMT UK — SEO & Content Build Standard
 
-**Status:** v0.1 — source synthesis. Awaiting business-model and stack confirmation.
+**Status:** v0.2 — business model, stack, positioning and rate source all resolved.
 **Owner:** matthew@woodley.digital
 **Last substantive update:** 2026-09-02
 
@@ -415,27 +415,54 @@ rate risk against a fixed completion date**.
 
 ---
 
-## 5. Regulatory constraint — blocking, must be resolved before content
+## 5. Business model and regulatory constraint
+
+**Decided 2026-09-02: introducer model.** IMT UK is an independent tool and information
+site that introduces users to FCA-authorised currency brokers, earning commission per
+funded client. We do not execute transfers and we are not a provider.
 
 International money transfer is a **regulated activity in the UK** under the Payment
 Services Regulations 2017, supervised by the FCA. This is squarely YMYL territory, and S1
 makes "unsupported financial claims" an **automatic no-publish critical failure**.
 
-Two possible business models produce completely different sites, and we cannot write the
-topical map until this is settled:
+### 5.1 What the decision settles
 
-| | **A. Comparison / introducer** | **B. Authorised provider** |
-|---|---|---|
-| Core function | Compare providers, rates, fees | Quote, register, send |
-| Core pages | Corridor comparisons, provider reviews | Service pages, corridor send pages |
-| Regulatory | FCA financial promotions rules; commercial relationships must be disclosed (S1 §5.4) | Full PSR 2017 authorisation, consumer duty, safeguarding disclosures |
-| Schema | `Organization` + comparison content | `FinancialService` / `Organization` + `Service` |
+- The **core section is commercial**: the margin checker leads to a broker introduction.
+  This matters beyond revenue — S2's affiliate-to-ecommerce case shows identical content
+  ranking better once the surrounding source type became functional and commercial. A site
+  with no conversion function is at a *classification* disadvantage, not only a business one.
+- Schema stays `Organization` + `WebApplication`. **Not** `FinancialService`, and not
+  `FinancialProduct` — we provide neither.
+- Commercial relationships **must be disclosed** (S1 §5.4). `/how-we-make-money` is a
+  required page, not an optional one.
 
-**Required before any money-related page is drafted:**
-- FCA authorisation or registration status, and firm reference number if held
-- If A: how commercial relationships are structured and disclosed
-- Rate/fee data source, its licence, and its update frequency (this determines review
-  intervals — S1 requires short intervals for volatile financial facts)
+### 5.2 The independence rule — non-negotiable
+
+**The margin checker's output must never be influenced by a commercial relationship.**
+The tool computes arithmetic against a public reference rate; that computation is identical
+whether or not a broker pays us, and no partner may alter, suppress or weight a result.
+
+This is not only ethics. The tool's entire value — and the reason anyone links to or trusts
+it — is that it is independent. A checker suspected of being a sales funnel is worth nothing
+to a user and nothing to us. Any feature request that would make the result depend on a
+commercial arrangement is refused.
+
+### 5.3 Still open — needs compliance advice, not our inference
+
+The introducer model raises specific questions we must not answer from first principles.
+Flagged for a qualified compliance or legal review:
+
+- **Whether introducing to payment service providers is itself regulated**, and on what
+  terms. Money remittance sits under the PSRs rather than the RAO, so the analysis differs
+  from an investment introducer — but that is a question for advice, not an assumption.
+- **FX forward contracts are the sharp edge.** A currency forward can be a MiFID financial
+  instrument rather than a spot contract, depending on settlement period and commercial
+  purpose. Content and introductions touching forwards may fall under a different regime
+  than those touching spot transfers. `/forward-contracts` is planned, so this needs
+  resolving before it publishes.
+- **Financial promotion status** of the site's copy and of any introduction journey.
+- **Appointed representative or introducer agreement terms** with each broker.
+- ASA/CAP advertising rules apply to all of it regardless of FCA status.
 
 Nothing that states or implies a rate, fee, delivery time, or regulatory status ships
 without a verified first-party source and a named reviewer.
@@ -617,13 +644,13 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 
 | # | Decision | Blocks |
 |---|---|---|
-| 1 | Business model: comparison/introducer vs. authorised provider (§5) | Topical map, all money content, schema |
-| 2 | FCA status, FRN, legal entity, company number | Every regulated claim |
+| 1 | ~~Business model~~ — **resolved: introducer to FCA-authorised brokers (§5)** | — |
+| 2 | Legal entity, company number, and compliance advice on the §5.3 questions — introducer status, FX forwards as MiFID instruments, financial promotion status | `/forward-contracts`, any introduction journey |
 | 3 | ~~Mid-market rate data source~~ — **resolved: Frankfurter (§6)** | — |
 | 3b | **Provider fee/rate data** — do we have a licensed source for what providers actually charge? Frankfurter cannot supply this (§6.2) | Any true provider comparison |
 | 4 | ~~Tech stack~~ — **resolved: Next.js (App Router) on Vercel, Tailwind, SSG + daily revalidation** | — |
 | 5 | ~~Corridor scope~~ — **resolved: large-value transfers, corridors per §4.2** | — |
-| 6 | Named author/reviewer with real financial credentials | Author pages, `ProfilePage` schema, YMYL trust |
+| 6 | Named reviewer — **identified; needs name, credentials and profile copy** | Author/reviewer records, `ProfilePage` schema, Phase 1 publication |
 | 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
 | 8 | Brand-signal assets: Google Business Profile, social profiles, directory citations (§4.1) | Whether the EMD functions as a brand — load-bearing, needs owner and start date |
 

@@ -64,8 +64,17 @@ not decoration. Asset URLs at `/brand/` are permanent.
 85/100 on the scorecard in `docs/seo-build-standard.md` §8, information gain ≥ 14/20, and
 zero critical failures. No page publishes otherwise.
 
+## Business model
+
+**Introducer to FCA-authorised currency brokers.** We do not execute transfers and are not a
+provider — see `docs/seo-build-standard.md` §5.
+
+**The independence rule is absolute:** no commercial relationship may alter, weight or
+suppress a margin checker result. The tool's credibility is the entire asset. Refuse any
+request that would make the output depend on a commercial arrangement.
+
 ## Blocked
 
-The business model (comparison/introducer vs. FCA-authorised provider) and FCA status are
-unresolved — see `docs/seo-build-standard.md` §5 and §9. Do not draft money-related content
-until these are settled.
+Pending compliance advice (`docs/seo-build-standard.md` §5.3): the introduction journey,
+anything constituting a financial promotion, and `/forward-contracts` — a currency forward
+may be a MiFID instrument rather than a spot contract. Do not resolve these by inference.

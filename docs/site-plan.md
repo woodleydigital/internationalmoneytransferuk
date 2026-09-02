@@ -1,6 +1,6 @@
 # IMT UK — Site Plan
 
-**Status:** v0.1
+**Status:** v0.2 — business model resolved; topical map built on entity-attribute and page-function axes.
 **Last substantive update:** 2026-09-02
 **Goal:** rank for *international money transfer* and *international money transfer uk*.
 **Governed by:** [`seo-build-standard.md`](seo-build-standard.md) (the gate) and
@@ -76,6 +76,69 @@ life events. That is the entity-attribute axis. The query templates in §3 are t
 query-template axis. Covering both is S3's hybrid method, which it identifies as the
 strongest of the three approaches.
 
+### 2.1 The entity-attribute matrix
+
+Clusters are not a topical map. S3: *"Processing an entire entity class through its shared
+attributes signals comprehensive coverage of the topic to the search engine."* The map is
+the cross-product below, filtered by Query Deserves a Page (§4.4 and standard §3).
+
+| Entity class | Members | Shared attributes to cover for every member |
+|---|---|---|
+| **Corridors** | GBP→EUR, AUD, USD, NZD, CAD, AED, CHF, ZAR, SGD, HKD; inbound→GBP | mid-market rate, margin range, speed, receiving-country rules, tax/reporting, payment methods, cut-offs and holidays |
+| **Provider types** | high-street bank, currency broker, fintech/neobank, private bank | pricing model, typical margin, regulatory status, **protection regime**, min/max, service model, speed |
+| **Instruments** | spot, forward, limit order, stop-loss, regular payment plan | what it is, when used, cost, risk, who offers it, commitment and margin calls |
+| **Life events** | property purchase, emigration, inheritance, business payment, school fees, pension transfer | typical amount, timing risk, documentation, tax, step sequence, common mistakes |
+| **Protection regimes** | safeguarding (PSR 2017), FSCS, FOS, client money | what it covers, what it does not, who it applies to, insolvency outcome |
+
+Two things this makes visible that the cluster list hid:
+
+1. **The attribute set is the page outline.** A corridor page that does not cover all seven
+   corridor attributes is incomplete; one that covers them with real receiving-country
+   content clears standard §3 test 3 automatically.
+2. **Provider types, not named providers.** We hold no licensed provider pricing data
+   (decision #3b). Covering the *class* — how a currency broker's pricing model differs
+   structurally from a bank's — is both defensible and more useful than a rate table we
+   cannot source.
+
+### 2.2 Page function per query type — the half that is usually missed
+
+S2's air-conditioner example: each query type demands a different **layout and function**,
+not one template with different words. A topical map "should also define the page type and
+functional layout needed to satisfy both relevance and responsiveness."
+
+So the answer to "we need more than a calculator" is **more functions**, not merely more
+pages. One tool classifies one route.
+
+| Query type | Required function | Status |
+|---|---|---|
+| cost / margin | Tool over live data | **Built** — FX Margin Checker |
+| "is X safe" / verification | **FCA Register lookup** — real authorisation check | To build |
+| protection comparison | **Protection comparator** — safeguarding vs FSCS vs FOS by provider type, as a structured information card | To build |
+| timing / rate risk | **Timing-cost tool** — what a slipped completion date costs (§5) | To build |
+| which instrument | **Decision tool** — spot vs forward vs limit for a given situation | To build |
+| documentation | **Requirements checklist** by amount, corridor and use case | To build |
+| corridor data | Live rate, history and corridor specifics, verbalised | To build |
+| instructional | Guide layout, minimal commercial furniture | Content |
+
+Seven functional components. Each widens what the site *is* to a classifier, and each is
+buildable from data we already hold or public sources — none requires licensed provider
+pricing.
+
+### 2.3 The commercial core (introducer model)
+
+Standard §5 settles this: the checker leads to an introduction to FCA-authorised brokers.
+
+- **The conversion is the natural next step from the tool's own output.** A user who has
+  just seen £6,941 of undisclosed margin has the problem; the introduction is the resolution.
+  This is S3's commercialisation technique applied to a tool rather than an article.
+- **`/how-we-make-money` is a required page** (S1 §5.4), not a footer link. Disclosed
+  plainly, it is also information gain — most comparison sites bury this, and saying it
+  first is a trust signal for a YMYL audience moving life savings.
+- **The independence rule (standard §5.2) binds the build:** no commercial relationship may
+  alter a checker result. The tool's credibility is the entire asset.
+- Every outer-section page carries the conversion element near the top, per S3 Example 4 —
+  informational documents are commercialised rather than left as pure content.
+
 ---
 
 ## 3. Query templates (S3)
@@ -129,6 +192,7 @@ being classified as a content farm before any of them earn a click.
 | `/transferring-large-sums` | Instructional | Source-of-funds documentation, AML checks, timing, what changes above £100k. | T2 |
 | `/is-my-provider-authorised` | Verification | How to check the FCA Register, what permissions mean, what to look for. | T3 |
 | `/transfer-timing-cost` | **Tool** | Second functional component — see §5. | T1 |
+| `/how-we-make-money` | Trust / disclosure | **Required** by S1 §5.4 under the introducer model. Stated plainly and early, it is itself information gain — competitors bury it. | — |
 | `/about` + `/contact` | Trust | NAP, entity, real address. Load-bearing for the EMD (standard §4.1). | — |
 
 ### 4.3 Phase 2 — use cases (commercialised informational)
@@ -223,21 +287,27 @@ untested before touching the layout.
 
 ## 8. What is blocked, and what is not
 
-Standard §5 blocks money-related content pending the business model and FCA status. That
-blocks less of this plan than it appears to.
+The business model is now settled (standard §5: introducer to FCA-authorised brokers) and a
+reviewer has been identified. What remains blocked is narrower than before.
 
 **Not blocked** — factual explanation of a regulatory regime, sourced primarily and reviewed:
 safeguarding vs FSCS, how to check the FCA Register, what forward contracts are, AML and
 source-of-funds process, the arithmetic of margins. This is most of Phase 1.
 
-**Blocked until §5 resolves:**
-- Anything promoting, ranking or recommending a named provider
-- Any implication that we can arrange, quote or execute a transfer
-- Commercial comparison tables of provider pricing (also blocked on decision #3b — we hold
-  no licensed provider data)
+**Blocked pending the compliance advice in standard §5.3:**
+- The introduction journey itself, and any copy that constitutes a financial promotion
+- `/forward-contracts` — a currency forward may be a MiFID financial instrument rather than
+  a spot contract, which changes the regime. Resolve before publishing.
 - Any statement of our own regulatory status
 
-**Required before Phase 1 publishes** (standard decision #6): a named reviewer with real
-financial credentials. Every page in §4.2 makes regulatory or cost claims. Without a
-reviewer they fail the gate on trust and on YMYL grounds — this is the binding constraint
-on Phase 1, more than the FCA question is.
+**Blocked on data (decision #3b):**
+- Commercial comparison tables of named provider pricing. Cover *provider types* and their
+  structural pricing models instead (§2.1) — defensible, and more useful than a rate table
+  we cannot source.
+
+**Never:** any implication that we arrange, quote or execute a transfer.
+
+**Reviewer.** Identified. Needed next: full name, role, credentials, and profile copy, so
+the author/reviewer entity records and `ProfilePage` schema can be built and every Phase 1
+page can carry a real byline and review date. Until those records exist, Phase 1 content can
+be drafted but not published.
