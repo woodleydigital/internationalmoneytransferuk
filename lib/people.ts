@@ -28,11 +28,17 @@ export interface Person {
   reviewScope: string[];
   /** What they are explicitly *not* signing off, and why. Rendered on the profile. */
   outOfScope: string[];
+  /**
+   * Verified profiles for the *same* person elsewhere. This is the entity-consistency
+   * fix (S1 Rule 06): one individual, one identity across our properties. Only add a
+   * URL that has been checked to resolve.
+   */
+  sameAs: string[];
 }
 
-export const MATT_BOYD: Person = {
-  slug: "matt-boyd",
-  name: "Matt Boyd",
+export const MATT_WOODLEY: Person = {
+  slug: "matt-woodley",
+  name: "Matt Woodley",
   jobTitle: "Founder",
   credentials: [
     {
@@ -53,9 +59,11 @@ export const MATT_BOYD: Person = {
     "Whether a currency forward is a spot contract or a MiFID financial instrument",
     "Any statement that would constitute regulated financial advice",
   ],
+  // Same person, our sister property. Verified 200 on 2026-09-02.
+  sameAs: ["https://www.internationalmoneytransfer.com/about/matt-woodley"],
 };
 
-export const PEOPLE: Person[] = [MATT_BOYD];
+export const PEOPLE: Person[] = [MATT_WOODLEY];
 
 export const personId = (p: Person) => `${SITE.url}/about/${p.slug}#person`;
 export const personUrl = (p: Person) => `/about/${p.slug}`;
@@ -68,6 +76,7 @@ export function personSchema(p: Person) {
     name: p.name,
     jobTitle: p.jobTitle,
     url: `${SITE.url}${personUrl(p)}`,
+    ...(p.sameAs.length ? { sameAs: p.sameAs } : {}),
     worksFor: { "@id": ID.organization },
     alumniOf: p.credentials.map((c) => ({
       "@type": c.institutionType,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MATT_BOYD, personUrl } from "@/lib/people";
+import { MATT_WOODLEY, personUrl } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -81,10 +81,10 @@ export default function Page() {
 
       <h2 className="mt-10 text-xl font-semibold text-ink">Who we are</h2>
       <p className="mt-3 max-w-prose">
-        <Link href={personUrl(MATT_BOYD)} className="text-brand-600 underline">
-          {MATT_BOYD.name}
+        <Link href={personUrl(MATT_WOODLEY)} className="text-brand-600 underline">
+          {MATT_WOODLEY.name}
         </Link>
-        {`, ${MATT_BOYD.jobTitle}. ${MATT_BOYD.credentials
+        {`, ${MATT_WOODLEY.jobTitle}. ${MATT_WOODLEY.credentials
           .map((c) => `${c.name}, ${c.institution}`)
           .join("; ")}. His profile sets out which pages he reviews and, just as importantly, which he does not.`}
       </p>

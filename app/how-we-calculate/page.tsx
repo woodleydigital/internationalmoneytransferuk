@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Byline } from "@/components/Byline";
-import { MATT_BOYD, personSchema, personId, type ReviewMeta } from "@/lib/people";
+import { MATT_WOODLEY, personSchema, personId, type ReviewMeta } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
 
 // Methodology and arithmetic sit squarely inside Matt's review scope.
 const review: ReviewMeta = {
-  reviewer: MATT_BOYD,
+  reviewer: MATT_WOODLEY,
   published: "2026-09-02",
   reviewed: "2026-09-02",
   reviewIntervalMonths: 6,
@@ -22,12 +22,12 @@ const graph = {
       datePublished: review.published,
       dateModified: review.reviewed,
       author: { "@id": ID.organization },
-      reviewedBy: { "@id": personId(MATT_BOYD) },
+      reviewedBy: { "@id": personId(MATT_WOODLEY) },
       publisher: { "@id": ID.organization },
       isPartOf: { "@id": ID.website },
       mainEntityOfPage: `${SITE.url}/how-we-calculate`,
     },
-    personSchema(MATT_BOYD),
+    personSchema(MATT_WOODLEY),
     {
       "@type": "BreadcrumbList",
       itemListElement: [

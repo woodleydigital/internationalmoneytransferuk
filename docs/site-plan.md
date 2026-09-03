@@ -117,20 +117,19 @@ noun. Test 1 still binds: only list firms with real UK large-transfer relevance.
 **Route shape:** `/providers/` hub with `ItemList`, `/providers/[firm]` per provider.
 Provider nodes carry only sourced, dated facts. No ratings.
 
-### 1.3 One identity, one name — blocking
+### 1.3 One identity, one name — resolved
 
-The same individual is published as **Matt Woodley** on internationalmoneytransfer.com and
-was recorded here as **Matt Boyd**. Confirmed as one person.
+**Matt Woodley**, used consistently across all properties. Resolved before launch, when the
+URL change was still free.
 
-This must be resolved to a single real name used consistently across all properties before
-Phase 1 publishes. S1 Rule 06 makes entity consistency a build rule; "fabricated author,
-reviewer or credentials" is an automatic no-publish under §8; and §4.1 makes brand-entity
-resolution the thing the EMD depends on. Two surnames for one founder across two YMYL
-financial sites is precisely the signal that, once connected, destroys more trust than it
-could ever protect.
+The `Person` node carries `sameAs` pointing at his profile on the sister property
+(`internationalmoneytransfer.com/about/matt-woodley`, verified 200 on 2026-09-02). That link
+is the entity-consistency mechanism, not decoration: it tells search systems these are one
+individual rather than two similar people, which is exactly the resolution problem §4.1
+identifies as the EMD's dependency.
 
-`lib/people.ts` currently holds "Matt Boyd" and it is published in `Person` schema. Awaiting
-the correct surname.
+**Rule going forward:** one real name, one set of credentials, one identity, everywhere. Any
+new property adds to `sameAs` rather than introducing a variant.
 
 ---
 
@@ -393,8 +392,8 @@ source-of-funds process, the arithmetic of margins. This is most of Phase 1.
 
 ### 8.1 Reviewer and the limits of that review
 
-**Matt Boyd, Founder.** BCom, Finance and Economics, University of Auckland. Records are in
-`lib/people.ts`; the profile with `ProfilePage` and `Person` schema is at `/about/matt-boyd`.
+**Matt Woodley, Founder.** BCom, Finance and Economics, University of Auckland. Records are in
+`lib/people.ts`; the profile with `ProfilePage` and `Person` schema is at `/about/matt-woodley`.
 
 His review covers the parts of Phase 1 that turn on finance and market structure — which is
 most of it:

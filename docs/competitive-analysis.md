@@ -44,7 +44,7 @@ That site carries **"Matt Woodley, Founder & Editor — University of Auckland, 
 Economics"**, with the bio *"I started InternationalMoneyTransfer.com in 2016 after losing
 thousands to hidden bank fees on my own transfers."*
 
-Our reviewer was given as **Matt Boyd, Founder, BCom Finance & Economics, University of
+Our reviewer was given as **Matt Woodley, Founder, BCom Finance & Economics, University of
 Auckland**. Same role, same institution, same discipline, different surname — and the
 project owner's address is `matthew@woodley.digital`.
 
@@ -168,7 +168,7 @@ property in Spain". Our §4.2 positioning is genuinely unoccupied.
 | # | Action | Where |
 |---|---|---|
 | 1 | **Decide the three-domain relationship** (§0.1) — one brand two markets, or distinct positions | **Blocks Phase 1** |
-| 1b | Confirm the Matt Woodley / Matt Boyd identity question (§0.2) | Blocks reviewer records |
+| 1b | Confirm the Matt Woodley / Matt Woodley identity question (§0.2) | Blocks reviewer records |
 | 1c | Ingest GSC query and page data for both owned sites — replaces assumed demand with real (§5) | Blocks route selection |
 | 2 | Add a glossary with `DefinedTermSet` schema, built from the entity-attribute matrix | Phase 2 |
 | 3 | Promote methodology into primary navigation | Now |

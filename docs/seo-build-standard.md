@@ -650,7 +650,7 @@ From S1 §9. **Threshold: 85/100, and no critical failure.**
 | 3b | **Provider fee/rate data** — do we have a licensed source for what providers actually charge? Frankfurter cannot supply this (§6.2) | Any true provider comparison |
 | 4 | ~~Tech stack~~ — **resolved: Next.js (App Router) on Vercel, Tailwind, SSG + daily revalidation** | — |
 | 5 | ~~Corridor scope~~ — **resolved: large-value transfers, corridors per §4.2** | — |
-| 6 | ~~Named reviewer~~ — **resolved: Matt Boyd, Founder, BCom Finance & Economics (Auckland). Records and `ProfilePage` built.** Scope limits at site-plan §8.1 | — |
+| 6 | ~~Named reviewer~~ — **resolved: Matt Woodley, Founder, BCom Finance & Economics (Auckland). Records and `ProfilePage` built.** Scope limits at site-plan §8.1 | — |
 | 7 | Whether to invest in earning links to accelerate click testing (§2.8) | Launch timeline expectations, not the build |
 | 8 | Brand-signal assets: Google Business Profile, social profiles, directory citations (§4.1) | Whether the EMD functions as a brand — load-bearing, needs owner and start date |
 

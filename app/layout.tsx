@@ -115,8 +115,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/about" className="underline">
                 About
               </Link>
-              <Link href="/about/matt-boyd" className="underline">
-                Matt Boyd
+              <Link href="/about/matt-woodley" className="underline">
+                Matt Woodley
               </Link>
               <Link href="/how-we-calculate" className="underline">
                 How we calculate this

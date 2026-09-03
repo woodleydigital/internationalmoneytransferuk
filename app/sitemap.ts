@@ -8,6 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE.url, priority: 1 },
     { url: `${SITE.url}/how-we-calculate`, priority: 0.8 },
     { url: `${SITE.url}/about`, priority: 0.6 },
-    { url: `${SITE.url}/about/matt-boyd`, priority: 0.5 },
+    { url: `${SITE.url}/about/matt-woodley`, priority: 0.5 },
   ];
 }

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MATT_BOYD, personSchema, personId } from "@/lib/people";
+import { MATT_WOODLEY, personSchema, personId } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
 
-const p = MATT_BOYD;
+const p = MATT_WOODLEY;
 
 export const metadata: Metadata = {
   title: `${p.name} — ${p.jobTitle}`,
