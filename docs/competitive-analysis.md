@@ -1,13 +1,44 @@
-# Competitive analysis — three comparison sites
+# Portfolio and competitive analysis
 
 **Reviewed:** 2026-09-02. Live fetch plus raw-HTML inspection.
-**Sites:** currencybrokers.uk · internationalmoneytransfer.com · topmoneycompare.co.uk
+
+| Site | Ownership |
+|---|---|
+| **internationalmoneytransfer.com** | **Ours** — confirmed |
+| **currencybrokers.uk** | **Ours** — implied by GSC access; confirm |
+| topmoneycompare.co.uk | Third party — the only true competitor of the three |
+
+Two of the three are our own properties, so most of what follows is portfolio analysis, not
+competitive analysis. That is a more useful position to be in and a more dangerous one: the
+overlap risk is now internal.
 
 ---
 
-## 0. internationalmoneytransfer.com appears to be ours — needs confirming
+## 0. The portfolio problem — now the most important open question
 
-Flagged first because it changes how the other findings should be read.
+**Confirmed: internationalmoneytransfer.com is ours.** GSC access to currencybrokers.uk
+implies that is ours too. We are therefore building a **third** site into a niche where we
+already hold two — and the overlaps are severe.
+
+### 0.1 Two specific collisions
+
+**Brand collision.** `internationalmoneytransfer.com` and `internationalmoneytransfer.uk`
+are the same brand name on two TLDs. S5 makes brand-identity resolution the thing an EMD
+lives or dies by, and two sites presenting the same brand name is the worst case for it.
+This is workable only if they are explicitly one brand serving two markets — shared
+`Organization` identity, `sameAs`, hreflang, cross-linked — and unworkable if they present
+as independent brands competing for the same queries.
+
+**Positioning collision.** currencybrokers.uk already occupies what we chose in §4.2. Its
+H1 is *"Compare the Best Currency Brokers in the UK"*, it segments margin by transfer size
+including £100k+, and its guides cover forward contracts, hedging and large transfers. That
+is the large-value broker-introduction position, already built and already ranking.
+
+**Until the relationship is decided, Phase 1 should not publish.** Building a third site
+that competes with our own two for the same query network splits signal three ways and is
+the most expensive mistake available here.
+
+### 0.2 The identity question, still open
 
 That site carries **"Matt Woodley, Founder & Editor — University of Auckland, Finance,
 Economics"**, with the bio *"I started InternationalMoneyTransfer.com in 2016 after losing
@@ -17,7 +48,7 @@ Our reviewer was given as **Matt Boyd, Founder, BCom Finance & Economics, Univer
 Auckland**. Same role, same institution, same discipline, different surname — and the
 project owner's address is `matthew@woodley.digital`.
 
-**Two things must be settled before Phase 1 publishes.**
+**Still to confirm.**
 
 1. **Is this the same person?** If so, `lib/people.ts` currently records a name that
    conflicts with the one already published in this niche. Entity consistency is a build
@@ -25,10 +56,7 @@ project owner's address is `matthew@woodley.digital`.
    same individual appearing under two surnames across two money-transfer sites undermines
    exactly the signal we are trying to build. If they are different people, no issue — but
    it needs saying explicitly.
-2. **What is the relationship between the .com and the .uk?** This is not a competitor to
-   learn from; it is prior art we may own. S3's *extension domain* pattern makes a sister
-   domain legitimate, but only with genuinely different positioning — otherwise the two
-   compete for the same queries and split the signal.
+2. See §0.1 for the domain relationship, which is now the larger question.
 
 **Our centerpiece already exists there.** Under the H2 *"Check your quote for hidden fees"*:
 *"Enter what your bank or broker quoted you. We'll compare it to the real mid-market rate to
@@ -136,9 +164,44 @@ property in Spain". Our §4.2 positioning is genuinely unoccupied.
 
 | # | Action | Where |
 |---|---|---|
-| 1 | **Confirm the Matt Woodley / Matt Boyd identity question** and the .com relationship | Blocks Phase 1 |
+| 1 | **Decide the three-domain relationship** (§0.1) — one brand two markets, or distinct positions | **Blocks Phase 1** |
+| 1b | Confirm the Matt Woodley / Matt Boyd identity question (§0.2) | Blocks reviewer records |
+| 1c | Ingest GSC query and page data for both owned sites — replaces assumed demand with real (§5) | Blocks route selection |
 | 2 | Add a glossary with `DefinedTermSet` schema, built from the entity-attribute matrix | Phase 2 |
 | 3 | Promote methodology into primary navigation | Now |
 | 4 | Keep `/safeguarding-vs-fscs` as the flagship — confirmed unserved | Phase 1 |
 | 5 | Plan first-party observed-spread research to replace unsourceable margin bands | Phase 3 |
 | 6 | Homepage needs more substantive sectioned coverage — competitors run 5–6k words against our ~700. Add real sections, not padding | Phase 1 |
+
+
+---
+
+## 5. GSC data — what to export and what it settles
+
+Offered for both owned sites. This replaces the weakest part of the site plan: every demand
+judgement in §4 is currently an assumption.
+
+**Export from Search Console, last 12 months, CSV:**
+
+1. **Queries** — clicks, impressions, CTR, position. Both sites.
+2. **Pages** — same metrics, so we can see which *page types* actually earn clicks. This
+   settles empirically whether corridor pages work for us, which §4.4 currently defers on.
+3. **Queries filtered to contain "international money transfer"** — what the .com already
+   owns on the head term. Directly answers the cannibalisation question in §0.1.
+4. **Countries** — the UK share of .com traffic, which tells us how much of the .uk's target
+   market the .com already serves.
+5. **Crawl stats**, if available — S3's crawl-versus-clicks comparison shows where crawl
+   budget is being spent on URLs that earn nothing.
+
+**What it changes:**
+
+- The **value-weighted demand threshold** (§4.2.2) becomes measurable rather than asserted.
+- **Query templates** (§3) can be validated against templates already earning clicks, rather
+  than proposed from first principles.
+- **Route selection** for Phase 1 can be evidenced.
+- Any query the .com already ranks well for becomes a **cannibalisation candidate**, not an
+  opportunity.
+
+**Caveat worth knowing:** S3 notes Search Console loses roughly 40% of query-level click and
+impression data to k-anonymisation. If a BigQuery bulk export exists for either property, it
+is materially better than the UI export.
