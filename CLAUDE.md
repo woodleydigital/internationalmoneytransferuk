@@ -66,11 +66,14 @@ zero critical failures. No page publishes otherwise.
 
 ## What this site is
 
-**A tool property, not a comparison site.** We own internationalmoneytransfer.com (global
-comparison) and currencybrokers.uk (UK broker directory). IMT UK carries the tools —
-margin checker, timing-cost, FCA lookup, protection comparator — and deliberately carries
-**no provider directory, reviews or listings**. Duplicating the sister sites would put three
-of our own properties in competition. `docs/site-plan.md` §1.2.
+**Tools plus an FCA-verified provider directory**, targeting the head terms directly. We
+also own internationalmoneytransfer.com and currencybrokers.uk; siblings competing for the
+same queries is accepted and is a documented strategy (S3's extension-domain pattern).
+
+The directory publishes only what we can evidence — FCA firm reference number, permissions,
+safeguarding method, corridors, minimums — and **never** rates, margins or ratings. That
+constraint is the differentiator: an FCA-verified directory, not a rate table.
+`docs/site-plan.md` §1.2.
 
 ## Business model
 

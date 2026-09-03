@@ -1,6 +1,6 @@
 # IMT UK — Site Plan
 
-**Status:** v0.2 — business model resolved; topical map built on entity-attribute and page-function axes.
+**Status:** v0.3 — tool plus FCA-verified directory; sibling competition accepted.
 **Last substantive update:** 2026-09-02
 **Goal:** rank for *international money transfer* and *international money transfer uk*.
 **Governed by:** [`seo-build-standard.md`](seo-build-standard.md) (the gate) and
@@ -50,42 +50,87 @@ the brand suffix, so the EMD reinforces it without the H1 opening on a brand tok
 
 ---
 
-## 1.2 What this site is — decided 2026-09-02
+## 1.2 What this site is — revised 2026-09-02
 
-We own three properties in this niche. Their roles are now separated:
+We own three properties. The owner's decision is that **they may compete for the same
+queries**, and that IMT UK targets the head terms directly as its primary goal.
 
 | Property | Role |
 |---|---|
 | internationalmoneytransfer.com | Global provider comparison and reviews |
 | currencybrokers.uk | UK currency broker comparison and directory |
-| **internationalmoneytransfer.uk** | **The tool site.** Diagnosis, not directory. |
+| **internationalmoneytransfer.uk** | **Tool + FCA-verified provider directory**, UK large transfers |
 
-**IMT UK is a tool property, not a comparison site.** It carries the margin checker, the
-timing-cost tool, the FCA Register lookup and the protection comparator. It does **not**
-carry a provider directory, provider reviews, or listings — those live on the sister sites
-and duplicating them would put three of our own properties in competition (portfolio
-analysis §0.1).
+### Why competing siblings is a supported strategy
 
-This is the AudioToText model the build has been pointing at since standard §2.8: a
-single-purpose, exact-match-domain tool site that is classified by what it *does*.
+S3 documents the **extension domain** pattern directly: MoreThanPanel and StreamingMafia,
+and the rehab main-plus-extension project, run sibling domains against the *same* query
+templates with the same semantic content network. This is presented as working. An earlier
+draft of this plan treated overlap as a mistake; that was overstated.
 
-**Three consequences.**
+The part that genuinely differs from S3's pattern is narrower: **those siblings had distinct
+brand names.** Ours share one. Competing domains are fine; a competing *identity* is not —
+see §1.3.
 
-1. **The conversion is a quote request, not a comparison table.** The tool identifies the
-   problem; the introduction resolves it. Users who want to compare providers are linked to
-   the sister sites, which is a genuine service rather than a leak.
-2. **Fewer words, not more.** S3 on the single-page case study: part of its advantage came
-   from *"the higher relevance weight that comes from having fewer words on the page."* A
-   tool site is not judged by the word counts of comparison sites — see the correction in
-   portfolio analysis §4 action 6.
-3. **Corridor pages face a higher bar.** On a tool site a corridor page must offer a
-   corridor-specific *function*, not just corridor content. Most candidates in §4.4 will
-   fail that and should become presets of the existing tools instead of routes.
+One practical consequence to plan around rather than argue with: Google applies result-type
+and source diversity constraints (S2, on `max_total` and cluster limits), so in practice one
+of our properties takes a given SERP slot. The portfolio still wins more total surface, but
+the head term will go to whichever site is **best classified for that query's page type**.
 
-**Entity relationship.** One organisation operates all three, so the `Organization` node
-should carry `sameAs` for the sister properties once the legal entity is confirmed
-(standard decision #2). Cross-linking is deliberate: it is what makes the shared brand name
-resolve as one entity rather than two competing ones (S5, standard §4.1).
+### Why the directory, and why it strengthens the head-term case
+
+An earlier revision positioned IMT UK as tool-only. That was probably wrong for the stated
+goal. Per S2, Google applies **result-type constraints**: if a query's SERP is populated by
+comparison and directory pages, a pure tool site is the wrong *page type* for it however
+good the tool is. *International money transfer* is a comparison-shaped SERP.
+
+So IMT UK carries both:
+
+1. **The tools** — margin checker (built), timing-cost, FCA lookup, protection comparator.
+   These are what no sibling has, and they are the classification asset.
+2. **An FCA-verified provider directory** — the page type the head-term SERP actually wants.
+
+### The directory's shape is set by what we can evidence
+
+| We publish | Source |
+|---|---|
+| Firm reference number, authorisation status, permissions | FCA Financial Services Register |
+| Safeguarding method and what it means for the customer | FCA Register + PSR 2017 |
+| Corridors served, minimum transfer, service model, year authorised | Provider's own published material, dated |
+
+| We do not publish | Why |
+|---|---|
+| Live rates or per-provider margins | No licensed pricing data — decision #3b |
+| Ratings or review scores | No first-party review data. `AggregateRating` without it is a critical failure (§8) |
+| "Typical savings" figures | Unsourced superlative (S1 §6.7) |
+
+**This constraint is the differentiator.** It forces an *FCA-verified* directory rather than
+a rate table: provider by provider, what they are authorised to do and what happens to your
+money if they fail. Portfolio analysis §3.2 confirmed FSCS appears **zero times** across all
+three sites reviewed. Applying the protection angle at provider level is a directory nobody
+currently offers, and it merges with the FCA Register lookup already planned in §2.2.
+
+Each provider page clears standard §3 on test 3 by construction — permissions, safeguarding
+arrangements and corridors genuinely differ per firm, which is the opposite of a swapped
+noun. Test 1 still binds: only list firms with real UK large-transfer relevance.
+
+**Route shape:** `/providers/` hub with `ItemList`, `/providers/[firm]` per provider.
+Provider nodes carry only sourced, dated facts. No ratings.
+
+### 1.3 One identity, one name — blocking
+
+The same individual is published as **Matt Woodley** on internationalmoneytransfer.com and
+was recorded here as **Matt Boyd**. Confirmed as one person.
+
+This must be resolved to a single real name used consistently across all properties before
+Phase 1 publishes. S1 Rule 06 makes entity consistency a build rule; "fabricated author,
+reviewer or credentials" is an automatic no-publish under §8; and §4.1 makes brand-entity
+resolution the thing the EMD depends on. Two surnames for one founder across two YMYL
+financial sites is precisely the signal that, once connected, destroys more trust than it
+could ever protect.
+
+`lib/people.ts` currently holds "Matt Boyd" and it is published in `Person` schema. Awaiting
+the correct surname.
 
 ---
 
