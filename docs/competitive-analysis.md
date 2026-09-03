@@ -103,6 +103,9 @@ topmoneycompare is the weakest on every axis, and its H1 contains a **version nu
    `/how-we-make-money` as a Phase 1 requirement rather than a footer link.
 6. **Historical rate charts.** Validates the timing-cost tool — though ours goes further by
    pricing a slipped completion date rather than just plotting a line.
+   *Note:* items 1, 4 and 5 are comparison-site features. Under the tool positioning
+   (site-plan §1.2) they belong on the sister properties, not here. What transfers to IMT UK
+   is the glossary, the methodology placement, and the disclosure page.
 7. **Three-layer rate presentation** — mid-market, typical bank, typical broker. Good
    pedagogy, and it is how we already frame the checker's output.
 
@@ -171,7 +174,7 @@ property in Spain". Our §4.2 positioning is genuinely unoccupied.
 | 3 | Promote methodology into primary navigation | Now |
 | 4 | Keep `/safeguarding-vs-fscs` as the flagship — confirmed unserved | Phase 1 |
 | 5 | Plan first-party observed-spread research to replace unsourceable margin bands | Phase 3 |
-| 6 | Homepage needs more substantive sectioned coverage — competitors run 5–6k words against our ~700. Add real sections, not padding | Phase 1 |
+| 6 | ~~Homepage needs more words~~ — **withdrawn.** That benchmark came from comparison sites. IMT UK is a tool property (site-plan §1.2), and S3 attributes part of its single-page case study's advantage to *fewer* words on the page. Add sections only where they carry a function or real evidence | — |
 
 
 ---

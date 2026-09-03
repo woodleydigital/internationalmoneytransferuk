@@ -50,6 +50,45 @@ the brand suffix, so the EMD reinforces it without the H1 opening on a brand tok
 
 ---
 
+## 1.2 What this site is — decided 2026-09-02
+
+We own three properties in this niche. Their roles are now separated:
+
+| Property | Role |
+|---|---|
+| internationalmoneytransfer.com | Global provider comparison and reviews |
+| currencybrokers.uk | UK currency broker comparison and directory |
+| **internationalmoneytransfer.uk** | **The tool site.** Diagnosis, not directory. |
+
+**IMT UK is a tool property, not a comparison site.** It carries the margin checker, the
+timing-cost tool, the FCA Register lookup and the protection comparator. It does **not**
+carry a provider directory, provider reviews, or listings — those live on the sister sites
+and duplicating them would put three of our own properties in competition (portfolio
+analysis §0.1).
+
+This is the AudioToText model the build has been pointing at since standard §2.8: a
+single-purpose, exact-match-domain tool site that is classified by what it *does*.
+
+**Three consequences.**
+
+1. **The conversion is a quote request, not a comparison table.** The tool identifies the
+   problem; the introduction resolves it. Users who want to compare providers are linked to
+   the sister sites, which is a genuine service rather than a leak.
+2. **Fewer words, not more.** S3 on the single-page case study: part of its advantage came
+   from *"the higher relevance weight that comes from having fewer words on the page."* A
+   tool site is not judged by the word counts of comparison sites — see the correction in
+   portfolio analysis §4 action 6.
+3. **Corridor pages face a higher bar.** On a tool site a corridor page must offer a
+   corridor-specific *function*, not just corridor content. Most candidates in §4.4 will
+   fail that and should become presets of the existing tools instead of routes.
+
+**Entity relationship.** One organisation operates all three, so the `Organization` node
+should carry `sameAs` for the sister properties once the legal entity is confirmed
+(standard decision #2). Cross-linking is deliberate: it is what makes the shared brand name
+resolve as one entity rather than two competing ones (S5, standard §4.1).
+
+---
+
 ## 2. Topical map
 
 Per S3, two sections. **Core** is commercial and holds the central entity. **Outer** is
