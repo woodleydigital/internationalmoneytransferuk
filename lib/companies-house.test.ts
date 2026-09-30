@@ -63,3 +63,46 @@ test("records older than 14 days are not shown", () => {
   assert.ok(!isFresh("2026-09-01T00:00:00Z", now));
   assert.ok(!isFresh("2026-10-20T00:00:00Z", now));
 });
+
+const P = (n: string, name: string): CompanyProfile => ({ company_name: name, company_number: n });
+
+test("stated company: the trading name plus a suffix wins over a sister company", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "Barclays Investment Solutions Limited ... company 02752982", frns: [], companyNumbers: ["02752982"], url: "u" },
+    { text: "Barclays Bank UK PLC ... FRN 759676 ... 09740322", frns: ["759676"], companyNumbers: ["09740322"], url: "u" },
+  ];
+  const profiles = new Map([
+    ["02752982", P("02752982", "BARCLAYS INVESTMENT SOLUTIONS LIMITED")],
+    ["09740322", P("09740322", "BARCLAYS BANK UK PLC")],
+  ]);
+  assert.equal(chooseStatedCompany("Barclays", statements, profiles)?.profile.company_number, "09740322");
+});
+
+test("stated company: a sister firm is rejected when the homepage FRN differs", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "Wise is authorised by the FCA, Firm Reference 900507", frns: ["900507"], companyNumbers: [] },
+    { text: "Wise Assets UK LTD ... company number 11905382", frns: [], companyNumbers: ["11905382"], url: "u" },
+  ];
+  const profiles = new Map([["11905382", P("11905382", "WISE ASSETS UK LTD")]]);
+  assert.equal(chooseStatedCompany("Wise", statements, profiles), null);
+});
+
+test("stated company: the homepage FRN links a differently named company", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "UKForex Limited (trading as OFX) ... Company No. 04631395 ... Firm Ref. No. 902028", frns: ["902028"], companyNumbers: ["04631395"] },
+  ];
+  const profiles = new Map([["04631395", P("04631395", "UKFOREX LIMITED")]]);
+  assert.equal(chooseStatedCompany("OFX", statements, profiles)?.profile.company_number, "04631395");
+});
+
+test("stated company: a named company is accepted only when the homepage gives no FRN", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "National Westminster Bank Plc. Registered in England and Wales No. 929027.", frns: [], companyNumbers: ["00929027"], url: "u" },
+  ];
+  const profiles = new Map([["00929027", P("00929027", "NATIONAL WESTMINSTER BANK PLC")]]);
+  assert.equal(chooseStatedCompany("NatWest", statements, profiles)?.profile.company_number, "00929027");
+});

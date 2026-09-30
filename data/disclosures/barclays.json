@@ -1,7 +1,26 @@
 {
   "slug": "barclays",
   "url": "https://www.barclays.co.uk/",
-  "fetchedAt": "2026-09-30T03:24:39.784Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-09-30T07:13:31.684Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Barclays Investment Solutions Limited provides wealth and investment products and services (including the Direct Investing investment services) and is authorised and regulated by the Financial Conduct Authority and is a member of the London Stock Exchange and Aquis. Registered in England. Registered No. 2752982. Registered Office: 1 Churchill Place, London E14 5HP.",
+      "frns": [],
+      "companyNumbers": [
+        "02752982"
+      ],
+      "url": "https://www.barclays.co.uk/smart-investor/important-information/"
+    },
+    {
+      "text": "Barclays Bank UK PLC provides banking services to its customers and is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Financial Services Register No. 759676). Registered in England. Registered No. 9740322. Registered Office: 1 Churchill Place, London E14 5HP.",
+      "frns": [
+        "759676"
+      ],
+      "companyNumbers": [
+        "09740322"
+      ],
+      "url": "https://www.barclays.co.uk/smart-investor/important-information/"
+    }
+  ]
 }

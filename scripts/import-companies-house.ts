@@ -17,18 +17,16 @@ import { PROVIDERS } from "../lib/providers.ts";
 import {
   AuthError,
   MATCH_RULE,
-  STATED_RULE,
+  chooseStatedCompany,
   client,
   companySummary,
   minimisePsc,
   nameCandidates,
-  nameMatches,
-  normaliseName,
   pickCompany,
   type CompanyProfile,
   type CompanyRecord,
 } from "../lib/companies-house.ts";
-import { statedCompanyNumber, type DisclosureRecord } from "../lib/disclosures.ts";
+import { statedCompanyNumbers, type DisclosureRecord } from "../lib/disclosures.ts";
 
 function readDisclosure(slug: string): DisclosureRecord | null {
   const f = join(process.cwd(), "data", "disclosures", `${slug}.json`);
@@ -63,21 +61,25 @@ for (const p of PROVIDERS) {
     match: { query: p.name, rule: MATCH_RULE, candidates: [], outcome: "" },
   };
   try {
-    // 1. The company number the provider states on its own website, accepted
-    //    only if that company's registered name also appears in the statement
-    //    (or is the trading name plus a legal suffix).
+    // 1. A company number the provider states on its own website, chosen by
+    //    chooseStatedCompany (see lib/companies-house.ts).
     const disclosure = readDisclosure(p.slug);
-    const stated = statedCompanyNumber(disclosure);
-    if (stated) {
-      const prof = await ch.profile(stated);
-      await pause();
-      const quoted = normaliseName(disclosure!.statements.map((s) => s.text).join(" "));
-      if (prof && (quoted.includes(normaliseName(prof.company_name)) || nameMatches(p.name, prof.company_name))) {
+    const stated = statedCompanyNumbers(disclosure).slice(0, 6);
+    if (stated.length) {
+      const profiles = new Map<string, CompanyProfile>();
+      for (const n of stated) {
+        const prof = await ch.profile(n);
+        await pause();
+        if (prof) profiles.set(n, prof);
+      }
+      const chosen = chooseStatedCompany(p.name, disclosure!.statements, profiles);
+      if (chosen) {
+        const prof = chosen.profile;
         record.status = "matched";
         record.match = {
           query: disclosure!.url,
-          rule: STATED_RULE,
-          candidates: [{ company_number: prof.company_number, title: prof.company_name }],
+          rule: chosen.rule,
+          candidates: [...profiles.values()].map((x) => ({ company_number: x.company_number, title: x.company_name })),
           outcome: `Matched ${prof.company_number} from the provider's website`,
         };
         record.company = companySummary(prof);

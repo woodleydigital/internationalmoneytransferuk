@@ -13,6 +13,41 @@ export interface Statement {
   text: string;
   frns: string[];
   companyNumbers: string[];
+  /** The page the sentence was quoted from, when it is not the homepage. */
+  url?: string;
+}
+
+/** Link text or paths that usually lead to a firm's legal or regulatory details. */
+const LEGAL_LINK =
+  /\b(legal|regulat\w*|about[- ]us|who we are|company information|important information|terms|disclaimer|our company|corporate)\b/i;
+
+/**
+ * Same-site links from a page whose text or path suggests legal or regulatory
+ * information, most specific first. Only the provider's own site is followed.
+ */
+export function findLegalLinks(html: string, base: string, max = 4): string[] {
+  const origin = new URL(base);
+  const scored: { url: string; score: number }[] = [];
+  const seen = new Set<string>();
+  for (const m of html.matchAll(/<a\b[^>]*href=["']([^"'#]+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    let url: URL;
+    try {
+      url = new URL(m[1].replace(/&amp;/g, "&"), base);
+    } catch {
+      continue;
+    }
+    if (!/^https?:$/.test(url.protocol) || url.hostname !== origin.hostname) continue;
+    url.hash = "";
+    const key = url.toString();
+    if (seen.has(key) || key === origin.toString()) continue;
+    const text = m[2].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const hay = `${text} ${decodeURIComponent(url.pathname).replace(/[-_/]/g, " ")}`;
+    if (!LEGAL_LINK.test(hay) || /\.(pdf|jpg|png|zip)$/i.test(url.pathname)) continue;
+    seen.add(key);
+    const score = /regulat|legal|important information|company information/i.test(hay) ? 2 : 1;
+    scored.push({ url: key, score });
+  }
+  return scored.sort((a, b) => b.score - a.score).slice(0, max).map((s) => s.url);
 }
 
 export interface DisclosureRecord {
@@ -106,11 +141,10 @@ export function findStatements(text: string): Statement[] {
   return out;
 }
 
-/** The single company number a page states, or null if none or several. */
-export function statedCompanyNumber(rec: DisclosureRecord | null): string | null {
-  if (!rec || rec.status !== "found") return null;
-  const all = new Set(rec.statements.flatMap((s) => s.companyNumbers));
-  return all.size === 1 ? [...all][0] : null;
+/** The distinct company numbers a provider's statements give. */
+export function statedCompanyNumbers(rec: DisclosureRecord | null): string[] {
+  if (!rec || rec.status !== "found") return [];
+  return [...new Set(rec.statements.flatMap((s) => s.companyNumbers))];
 }
 
 /** Minimal robots.txt check for our user agent against a path. */

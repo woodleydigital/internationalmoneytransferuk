@@ -70,9 +70,13 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   reads each provider's homepage weekly (robots.txt respected, identified user agent) and
   keeps the paragraphs that state an FRN or company number, verbatim, in
   `data/disclosures/`. Shown as "What {provider} says about its regulation", labelled as the
-  provider's own statement, never as verified, with a Register search link. A stated company
-  number (exactly one, confirmed against the registered name) drives the Companies House
-  match. Plain pattern matching — no AI.
+  provider's own statement, never as verified, with a Register search link. If the homepage
+  gives no company number, up to four of its own legal/regulatory links are followed;
+  sub-page statements carrying only a different FRN are dropped (sister firms). Stated
+  company numbers drive the Companies House match via `chooseStatedCompany` (tier 1:
+  trading name + legal suffix, or the homepage FRN in the same statement; tier 2, only when
+  the homepage has no FRN: the statement names the company; exactly one must qualify).
+  Plain pattern matching — no AI.
 - **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
   must not be used "to provide a data feed to any comparison table or any other website
   without our written permission", and the Register API is "designed for individual

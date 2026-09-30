@@ -5,7 +5,7 @@ import {
   htmlToText,
   normaliseCompanyNumber,
   robotsAllows,
-  statedCompanyNumber,
+  statedCompanyNumbers,
   type DisclosureRecord,
 } from "./disclosures.ts";
 
@@ -60,10 +60,9 @@ const rec = (numbers: string[][]): DisclosureRecord => ({
   statements: numbers.map((companyNumbers) => ({ text: "t", frns: [], companyNumbers })),
 });
 
-test("a company number is used only when the page states exactly one", () => {
-  assert.equal(statedCompanyNumber(rec([["00000001"], ["00000001"]])), "00000001");
-  assert.equal(statedCompanyNumber(rec([["00000001"], ["00000002"]])), null);
-  assert.equal(statedCompanyNumber(rec([[]])), null);
+test("stated company numbers are de-duplicated", () => {
+  assert.deepEqual(statedCompanyNumbers(rec([["00000001"], ["00000001"], ["00000002"]])), ["00000001", "00000002"]);
+  assert.deepEqual(statedCompanyNumbers(rec([[]])), []);
 });
 
 test("robots.txt wildcards and anchors are honoured", () => {
@@ -75,4 +74,21 @@ test("robots.txt wildcards and anchors are honoured", () => {
   assert.ok(robotsAllows(r, "/search/x"));
   assert.ok(!robotsAllows("User-agent: *\nDisallow: /\n", "/"));
   assert.ok(robotsAllows("User-agent: Googlebot\nDisallow: /\n", "/"));
+});
+
+test("follows only same-site links that look legal or regulatory", async () => {
+  const { findLegalLinks } = await import("./disclosures.ts");
+  const html = `
+    <a href="/legal/">Legal</a>
+    <a href="/about-us">About us</a>
+    <a href="https://other.example/legal">Partner legal</a>
+    <a href="/mortgages">Mortgages</a>
+    <a href="/docs/terms.pdf">Terms (PDF)</a>
+    <a href="/regulatory-information">Important information</a>`;
+  const links = findLegalLinks(html, "https://bank.example/");
+  assert.deepEqual(links, [
+    "https://bank.example/legal/",
+    "https://bank.example/regulatory-information",
+    "https://bank.example/about-us",
+  ]);
 });

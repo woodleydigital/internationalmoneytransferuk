@@ -38,6 +38,8 @@ const SUFFIXES = [
   "bank limited",
   "uk bank limited",
   "uk bank plc",
+  "bank uk plc",
+  "bank uk limited",
   "payments limited",
   "payments uk limited",
   "international limited",
@@ -164,7 +166,43 @@ export const MATCH_RULE =
   "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.";
 
 export const STATED_RULE =
-  "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.";
+  "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.";
+
+export const STATED_NAMED_RULE =
+  "Company number taken from the regulatory statement on the provider's own website, where it was the only stated company and the statement names it.";
+
+/**
+ * Pick the provider's own company from the company numbers its website states.
+ * Tier 1: the registered name is the trading name plus a legal-form suffix, or
+ * the statement giving the number also gives an FRN from the homepage. Tier 2,
+ * only when the homepage states no FRN: the statement names the company.
+ * Exactly one candidate must qualify at the first tier that has any.
+ */
+export function chooseStatedCompany(
+  tradingName: string,
+  statements: { text: string; frns: string[]; companyNumbers: string[]; url?: string }[],
+  profiles: Map<string, CompanyProfile>,
+): { profile: CompanyProfile; rule: string } | null {
+  const homeFrns = new Set(statements.filter((s) => !s.url).flatMap((s) => s.frns));
+  const tier1: CompanyProfile[] = [];
+  const tier2: CompanyProfile[] = [];
+  for (const [number, prof] of profiles) {
+    const own = statements.filter((s) => s.companyNumbers.includes(number));
+    if (
+      nameMatches(tradingName, prof.company_name) ||
+      own.some((s) => s.frns.some((f) => homeFrns.has(f)))
+    ) {
+      tier1.push(prof);
+    } else if (
+      homeFrns.size === 0 &&
+      own.some((s) => normaliseName(s.text).includes(normaliseName(prof.company_name)))
+    ) {
+      tier2.push(prof);
+    }
+  }
+  if (tier1.length) return tier1.length === 1 ? { profile: tier1[0], rule: STATED_RULE } : null;
+  return tier2.length === 1 ? { profile: tier2[0], rule: STATED_NAMED_RULE } : null;
+}
 
 export function formatAddress(a: Record<string, string | undefined> = {}): string {
   return [a.address_line_1, a.address_line_2, a.locality, a.region, a.postal_code, a.country]

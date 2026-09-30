@@ -1,7 +1,18 @@
 {
   "slug": "paypal",
   "url": "https://www.paypal.com/uk/home",
-  "fetchedAt": "2026-09-30T03:24:38.731Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-09-30T07:13:27.111Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "PayPal UK Ltd is authorised and regulated by the Financial Conduct Authority (FCA) as an electronic money institution (firm reference number 994790); in relation to its regulated consumer credit activities (firm reference number 996405); and for the provision of cryptocurrency services (firm reference number 1000741). Some products and services, such as PayPal Working Capital, are not regulated by the FCA and may offer a lower level of protection. Please read product terms for further details. PayPal UK Ltd's company number is 14741686. Its registered office is 5 Fleet Place, London, United Kingdom, EC4M 7RD.",
+      "frns": [
+        "994790",
+        "996405",
+        "1000741"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.paypal.com/uk/legalhub/paypal/ppplus-tnc"
+    }
+  ]
 }

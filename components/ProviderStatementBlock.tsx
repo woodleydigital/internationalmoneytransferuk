@@ -22,8 +22,20 @@ export function ProviderStatementBlock({ name, record }: { name: string; record:
       </p>
       <div className="mt-4 space-y-3">
         {record.statements.map((s) => (
-          <blockquote key={s.text} className="border-l-4 border-line-strong bg-wash px-4 py-3">
+          <blockquote
+            key={s.text}
+            cite={s.url ?? record.url}
+            className="border-l-4 border-line-strong bg-wash px-4 py-3"
+          >
             <p>{s.text}</p>
+            {s.url && (
+              <p className="mt-1 text-sm text-muted">
+                {"From "}
+                <a href={s.url} rel="noopener nofollow">
+                  {new URL(s.url).pathname}
+                </a>
+              </p>
+            )}
           </blockquote>
         ))}
       </div>

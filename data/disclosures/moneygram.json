@@ -1,7 +1,24 @@
 {
   "slug": "moneygram",
   "url": "https://www.moneygram.com/gb/en",
-  "fetchedAt": "2026-09-30T03:24:45.190Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-09-30T07:13:41.712Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "1.1 The MoneyGram® online money transfer service (“Service”) is provided by MoneyGram International Limited (“we” or “us” or “MoneyGram”). MoneyGram is a limited liability company established in the United Kingdom with registered office at Third Floor, 30 Churchill Place, Canary Wharf, London, E14 5RE, United Kingdom (company registration no. 03287157).",
+      "frns": [],
+      "companyNumbers": [
+        "03287157"
+      ],
+      "url": "https://www.moneygram.com/gb/en/help-center/terms-and-conditions"
+    },
+    {
+      "text": "1.2 MoneyGram is a payment institution authorised and regulated by the Financial Conduct Authority (\"FCA\") in the United Kingdom (Reference no. 502639 – see www.fca.org.uk/register) for the provision of money remittance services. Further, MoneyGram is licensed and regulated by HMRC as a money services business (MSB) under license Number 12552533.",
+      "frns": [
+        "502639"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.moneygram.com/gb/en/help-center/terms-and-conditions"
+    }
+  ]
 }

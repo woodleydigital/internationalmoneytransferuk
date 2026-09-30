@@ -1,7 +1,71 @@
 {
   "slug": "virgin-money",
   "url": "https://uk.virginmoney.com/",
-  "fetchedAt": "2026-09-30T03:24:37.428Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-09-30T07:13:24.850Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Mortgages, Personal Loans, most savings accounts (including most ISAs) and Current Accounts are provided by Nationwide Building Society (trading as Virgin Money). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 106078. Head Office: Nationwide House, Pipers Way, Swindon, Wiltshire, SN38 1NW.",
+      "frns": [
+        "106078"
+      ],
+      "companyNumbers": [],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "Virgin Money Cash ISAs are provided by Nationwide Building Society (trading as Virgin Money). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 106078. Head Office: Nationwide House, Pipers Way, Swindon, Wiltshire, SN38 1NW.",
+      "frns": [
+        "106078"
+      ],
+      "companyNumbers": [],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "Virgin Money Home Insurance is promoted by CYB Intermediaries Ltd, registered at Jubilee House, Gosforth, NE3 4PL (Company No: 04056283) who is authorised and regulated by the Financial Conduct Authority (Financial Services Register No. 305065) and provided by Uinsure Limited. Uinsure Limited is registered in England and Wales with company number 06046870 with a registered office at XYZ Building, Hardman Boulevard, Manchester M3 3AQ. Uinsure Limited is authorised and regulated by the Financial Conduct Authority and is registered on the Financial Services Register under number 463689. You can check a firm’s registration on the FCA website at https://www.fca.org.uk/consumers/fca-firm-checker/ Link opens in a new window or by calling 0800 111 6768.",
+      "frns": [
+        "305065",
+        "463689"
+      ],
+      "companyNumbers": [
+        "04056283",
+        "06046870"
+      ],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "Virgin Money Home Insurance is promoted by CYB Intermediaries Ltd, registered at Jubilee House, Gosforth, NE3 4PL (Company No: 04056283) who is authorised and regulated by the Financial Conduct Authority under Financial Services Register No. 305065 and administered and underwritten by Royal & Sun Alliance Insurance Ltd. (RSA) (Company No. 93792). RSA is registered in England & Wales at St Mark's Court, Chart Way, Horsham, West Sussex, RH12 1XL and is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under Financial Services Register No. 202323.",
+      "frns": [
+        "305065",
+        "202323"
+      ],
+      "companyNumbers": [
+        "04056283"
+      ],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "The Virgin Atlantic Credit Card is issued by Nationwide Building Society (trading as Virgin Money). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 106078. Head Office: Nationwide House, Pipers Way, Swindon, Wiltshire, SN38 1NW.",
+      "frns": [
+        "106078"
+      ],
+      "companyNumbers": [],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "The Virgin Money Credit Card is issued by Nationwide Building Society (trading as Virgin Money). Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 106078. Head Office: Nationwide House, Pipers Way, Swindon, Wiltshire, SN38 1NW.",
+      "frns": [
+        "106078"
+      ],
+      "companyNumbers": [],
+      "url": "https://uk.virginmoney.com/legals/"
+    },
+    {
+      "text": "The Virgin Prepaid Mastercard® card is issued by PrePay Technologies Ltd pursuant to license by Mastercard International Incorporated. This card is an electronic money product. PrePay Technologies Ltd is authorised and regulated by the Financial Conduct Authority for the issuance of electronic money (FRN: 900010). Mastercard and the Mastercard Brand Mark are registered trademarks of Mastercard International Incorporated.",
+      "frns": [
+        "900010"
+      ],
+      "companyNumbers": [],
+      "url": "https://uk.virginmoney.com/legals/"
+    }
+  ]
 }
