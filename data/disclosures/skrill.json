@@ -1,16 +1,7 @@
 {
   "slug": "skrill",
   "url": "https://www.skrill.com/en/",
-  "fetchedAt": "2026-09-30T07:17:13.517Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "1.1. Skrill® is a trading name of Paysafe Financial Services Limited, a company incorporated under the laws of England and Wales with registration number 04478861. We are authorised by the Financial Conduct Authority (FCA) under the Electronic Money Regulations 2011 for the issuance of electronic money. Our FCA e-money register number is 900015.",
-      "frns": [
-        "900015"
-      ],
-      "companyNumbers": [],
-      "url": "https://www.skrill.com/en/footer/terms-conditions/skrillaccounttermsofuse/pfsl-feb2027/"
-    }
-  ]
+  "fetchedAt": "2026-09-30T07:21:50.917Z",
+  "status": "none",
+  "statements": []
 }
