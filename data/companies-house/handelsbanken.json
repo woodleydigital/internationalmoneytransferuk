@@ -1,55 +1,45 @@
 {
-  "slug": "tsb",
-  "fetchedAt": "2026-09-30T08:17:57.516Z",
+  "slug": "handelsbanken",
+  "fetchedAt": "2026-09-30T08:19:34.220Z",
   "status": "matched",
   "match": {
-    "query": "https://www.tsb.co.uk/",
+    "query": "https://www.handelsbanken.co.uk/en/",
     "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
       {
-        "company_number": "SC095237",
-        "title": "TSB BANK PLC"
+        "company_number": "11305395",
+        "title": "HANDELSBANKEN PLC"
       }
     ],
-    "outcome": "Matched SC095237 from the provider's website"
+    "outcome": "Matched 11305395 from the provider's website"
   },
   "company": {
-    "name": "TSB BANK PLC",
-    "number": "SC095237",
+    "name": "HANDELSBANKEN PLC",
+    "number": "11305395",
     "status": "active",
     "type": "plc",
-    "incorporated": "1985-09-24",
+    "incorporated": "2018-04-11",
     "sicCodes": [
       "64191"
     ],
-    "registeredOffice": "Henry Duncan House, 120 George Street, Edinburgh, EH2 4LH",
+    "registeredOffice": "25 Basinghall Street, London, EC2V 5HA, England",
     "lastAccountsMadeUpTo": "2025-12-31",
     "accountsNextDue": "2027-06-30",
     "accountsOverdue": false,
     "confirmationStatementOverdue": false,
     "hasInsolvencyHistory": false,
-    "url": "https://find-and-update.company-information.service.gov.uk/company/SC095237"
+    "url": "https://find-and-update.company-information.service.gov.uk/company/11305395"
   },
   "psc": [
     {
-      "name": "Santander Uk Plc",
+      "name": "Svenska Handelsbanken Ab (Publ)",
       "kind": "corporate-entity-person-with-significant-control",
       "natures_of_control": [
         "ownership-of-shares-75-to-100-percent",
         "voting-rights-75-to-100-percent",
         "right-to-appoint-and-remove-directors"
       ],
-      "notified_on": "2026-06-25"
-    },
-    {
-      "name": "Tsb Banking Group Plc",
-      "kind": "corporate-entity-person-with-significant-control",
-      "natures_of_control": [
-        "ownership-of-shares-75-to-100-percent",
-        "voting-rights-75-to-100-percent",
-        "right-to-appoint-and-remove-directors"
-      ],
-      "notified_on": "2016-04-06"
+      "notified_on": "2018-04-11"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "currencies-direct",
   "url": "https://www.currenciesdirect.com/",
-  "fetchedAt": "2026-09-30T08:10:35.966Z",
+  "fetchedAt": "2026-09-30T08:15:28.401Z",
   "status": "error",
   "statements": [],
   "error": "HTTP 403"

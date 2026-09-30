@@ -1,9 +1,9 @@
 {
-  "slug": "tesco-bank",
-  "fetchedAt": "2026-09-30T08:18:42.591Z",
+  "slug": "hamilton-court-fx",
+  "fetchedAt": "2026-09-30T08:19:26.324Z",
   "status": "unmatched",
   "match": {
-    "query": "Tesco Bank",
+    "query": "Hamilton Court FX",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [],
     "outcome": "No name match"

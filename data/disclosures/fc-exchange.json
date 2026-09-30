@@ -1,8 +1,8 @@
 {
   "slug": "fc-exchange",
   "url": "https://www.fcexchange.co.uk/",
-  "fetchedAt": "2026-09-30T08:11:36.727Z",
+  "fetchedAt": "2026-09-30T08:16:41.172Z",
   "status": "error",
   "statements": [],
-  "error": "The operation was aborted due to timeout"
+  "error": "HTTP 522"
 }
