@@ -89,6 +89,17 @@ for (const p of PROVIDERS) {
         summary.push(`${record.status.padEnd(9)} ${p.slug.padEnd(22)} ${record.match.outcome}`);
         continue;
       }
+      // The provider's own site names companies but none is clearly its own:
+      // that is better evidence than a name coincidence, so do not fall back.
+      record.match = {
+        query: disclosure!.url,
+        rule: MATCH_RULE,
+        candidates: [...profiles.values()].map((x) => ({ company_number: x.company_number, title: x.company_name })),
+        outcome: "Provider's website states other companies; no name fallback",
+      };
+      writeFileSync(join(OUT, `${p.slug}.json`), JSON.stringify(record, null, 2) + "\n");
+      summary.push(`${record.status.padEnd(9)} ${p.slug.padEnd(22)} ${record.match.outcome}`);
+      continue;
     }
 
     // 2. Otherwise the strict name rule. Search the name and its "UK" variant: groups often run a separate UK
