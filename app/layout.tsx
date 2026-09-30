@@ -108,20 +108,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <header className="bg-white">
           <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-5">
-            <Link href="/" className="flex items-center gap-4 no-underline">
+            <Link href="/" className="block max-w-full no-underline">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/brand/logo-imt-uk.svg"
-                alt=""
-                width={155}
-                height={38}
-                className="h-10 w-auto"
+                alt={SITE.name}
+                width={506}
+                height={56}
+                className="h-auto w-full max-w-[22rem] sm:w-auto sm:max-w-none sm:h-11"
               />
-              <span className="hidden border-l border-line pl-4 sm:block">
-                <span className="block text-lg font-bold leading-tight text-ink">{SITE.name}</span>
-                <span className="block text-sm leading-tight text-muted">
-                  Independent directory of UK money transfer providers
-                </span>
+              <span className="mt-1.5 block text-sm text-muted sm:pl-[3.55rem]">
+                Independent directory of UK money transfer providers
               </span>
             </Link>
             <form method="get" action="/" role="search" className="flex w-full sm:w-auto">
@@ -196,10 +193,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/brand/logo-imt-uk-reversed.svg"
-                alt=""
-                width={129}
-                height={32}
-                className="h-8 w-auto"
+                alt={SITE.name}
+                width={506}
+                height={56}
+                className="h-9 w-auto max-w-full"
               />
               <p className="mt-4 max-w-3xl">
                 {`${SITE.name} is an independent, privately run website. It is not a government body and is not affiliated with or endorsed by the Financial Conduct Authority, Companies House or the Financial Ombudsman Service. We are not a bank, a broker or a payment provider, and nothing on this site is financial advice.`}
