@@ -1,16 +1,63 @@
 {
   "slug": "moneycorp",
-  "fetchedAt": "2026-09-30T08:26:28.761Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:50:13.569Z",
+  "status": "matched",
   "match": {
     "query": "https://www.moneycorp.com/en-gb/about-us",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "rule": "The provider's own website names this company as the one behind the brand (for example \"a trading name of\" or \"provided by\"), and it is the only active company with that exact name.",
     "candidates": [
       {
         "company_number": "00738837",
         "title": "TTT MONEYCORP LIMITED"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
-  }
+    "outcome": "Matched 00738837 from the provider's website"
+  },
+  "company": {
+    "name": "TTT MONEYCORP LIMITED",
+    "number": "00738837",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "1962-10-25",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Floor 5, Zig Zag Building, 70 Victoria Street, London, SW1E 6SQ, England",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/00738837"
+  },
+  "psc": [
+    {
+      "name": "Bridgepoint Advisers Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "right-to-appoint-and-remove-directors-as-firm"
+      ],
+      "notified_on": "2017-08-04"
+    },
+    {
+      "name": "Bridgepoint Europe (Sgp) Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2017-08-04"
+    },
+    {
+      "name": "Bridgepoint Europe Iv (Nominees) Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2017-08-04"
+    }
+  ]
 }

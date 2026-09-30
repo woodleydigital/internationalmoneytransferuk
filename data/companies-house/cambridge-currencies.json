@@ -1,10 +1,10 @@
 {
   "slug": "cambridge-currencies",
-  "fetchedAt": "2026-09-30T08:26:33.283Z",
-  "status": "matched",
+  "fetchedAt": "2026-09-30T08:50:19.623Z",
+  "status": "unmatched",
   "match": {
     "query": "https://cambridgecurrencies.com/",
-    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
         "company_number": "15402338",
@@ -15,35 +15,6 @@
         "title": "THE CURRENCY CLOUD LIMITED"
       }
     ],
-    "outcome": "Matched 15402338 from the provider's website"
-  },
-  "company": {
-    "name": "CAMBRIDGE CURRENCIES LTD",
-    "number": "15402338",
-    "status": "active",
-    "type": "ltd",
-    "incorporated": "2024-01-10",
-    "sicCodes": [
-      "64999"
-    ],
-    "registeredOffice": "124 City Road, London, EC1V 2NX, England",
-    "lastAccountsMadeUpTo": "2025-01-31",
-    "accountsNextDue": "2026-10-31",
-    "accountsOverdue": false,
-    "confirmationStatementOverdue": false,
-    "hasInsolvencyHistory": false,
-    "url": "https://find-and-update.company-information.service.gov.uk/company/15402338"
-  },
-  "psc": [
-    {
-      "name": "Mr Anthony Bull",
-      "kind": "individual-person-with-significant-control",
-      "natures_of_control": [
-        "ownership-of-shares-75-to-100-percent",
-        "voting-rights-75-to-100-percent",
-        "right-to-appoint-and-remove-directors"
-      ],
-      "notified_on": "2024-01-10"
-    }
-  ]
+    "outcome": "Provider's website states other companies; no name fallback"
+  }
 }

@@ -1,11 +1,73 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-09-30T08:26:08.059Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:49:51.161Z",
+  "status": "matched",
   "match": {
-    "query": "Instarem",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
-  }
+    "query": "https://www.instarem.com/en-gb/",
+    "rule": "The provider's own website names this company as the one behind the brand (for example \"a trading name of\" or \"provided by\"), and it is the only active company with that exact name.",
+    "candidates": [
+      {
+        "company_number": "09039850",
+        "title": "NIUM FINTECH LIMITED"
+      }
+    ],
+    "outcome": "Matched 09039850 from the provider's website"
+  },
+  "company": {
+    "name": "NIUM FINTECH LIMITED",
+    "number": "09039850",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2014-05-14",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Ground Floor, 52-54 Gracechurch Street, London, EC3V 0EH, United Kingdom",
+    "lastAccountsMadeUpTo": "2024-12-31",
+    "accountsNextDue": "2026-12-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": true,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09039850"
+  },
+  "psc": [
+    {
+      "name": "Nium Pte Ltd",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2023-09-15",
+      "ceased_on": "2024-09-15"
+    },
+    {
+      "name": "Mr Pratik Gandhi",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2022-12-01",
+      "ceased_on": "2023-09-15"
+    },
+    {
+      "name": "Punathil Prajit Nanu",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2023-09-15"
+    },
+    {
+      "name": "Instarem Pte Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent-as-firm",
+        "voting-rights-75-to-100-percent-as-firm"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2020-01-23"
+    }
+  ]
 }

@@ -1,16 +1,82 @@
 {
   "slug": "clear-currency",
-  "fetchedAt": "2026-09-30T08:26:32.548Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:50:18.131Z",
+  "status": "matched",
   "match": {
     "query": "https://www.clearcurrency.co.uk/",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "rule": "The provider's own website names this company as the one behind the brand (for example \"a trading name of\" or \"provided by\"), and it is the only active company with that exact name.",
     "candidates": [
       {
         "company_number": "09549792",
         "title": "CLEAR TREASURY (UK TRADING) LIMITED"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
-  }
+    "outcome": "Matched 09549792 from the provider's website"
+  },
+  "company": {
+    "name": "CLEAR TREASURY (UK TRADING) LIMITED",
+    "number": "09549792",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2015-04-20",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "8 Devonshire Square, London, EC2M 4YJ, England",
+    "lastAccountsMadeUpTo": "2024-12-31",
+    "accountsNextDue": "2026-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09549792"
+  },
+  "psc": [
+    {
+      "name": "Mr Peter John O'Flanagan",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2020-10-02",
+      "ceased_on": "2025-08-31"
+    },
+    {
+      "name": "Mr Jordan Matthew Tilley",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2020-10-02",
+      "ceased_on": "2025-08-31"
+    },
+    {
+      "name": "Mr Paul Michael Reilly",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2020-10-02",
+      "ceased_on": "2025-08-31"
+    },
+    {
+      "name": "Mr Barry Martin O'Neill",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-50-to-75-percent",
+        "voting-rights-50-to-75-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2019-12-19"
+    },
+    {
+      "name": "Clear Treasury Group Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
 }

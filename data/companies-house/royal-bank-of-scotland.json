@@ -1,16 +1,54 @@
 {
   "slug": "royal-bank-of-scotland",
-  "fetchedAt": "2026-09-30T08:26:55.824Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:50:42.254Z",
+  "status": "matched",
   "match": {
     "query": "https://www.rbs.co.uk/",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
       {
         "company_number": "SC083026",
         "title": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
-  }
+    "outcome": "Matched SC083026 from the provider's website"
+  },
+  "company": {
+    "name": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
+    "number": "SC083026",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "1983-05-09",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "36 St. Andrew Square, Edinburgh, EH2 2YB, Scotland",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC083026"
+  },
+  "psc": [
+    {
+      "name": "Natwest Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2017-10-01"
+    },
+    {
+      "name": "Adam & Company Group Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2017-10-01"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "revolut",
   "url": "https://www.revolut.com/en-GB/",
-  "fetchedAt": "2026-09-30T08:36:25.417Z",
+  "fetchedAt": "2026-09-30T08:42:41.773Z",
   "status": "error",
   "statements": [],
   "error": "HTTP 403"

@@ -1,11 +1,43 @@
 {
   "slug": "danske-bank",
-  "fetchedAt": "2026-09-30T08:27:07.378Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:50:56.067Z",
+  "status": "matched",
   "match": {
-    "query": "Danske Bank",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
-  }
+    "query": "https://danskebank.co.uk/personal",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "R0000568",
+        "title": "NORTHERN BANK LIMITED"
+      }
+    ],
+    "outcome": "Matched R0000568 from the provider's website"
+  },
+  "company": {
+    "name": "NORTHERN BANK LIMITED",
+    "number": "R0000568",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "1883-09-01",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "Donegall Square West, Belfast, BT1 6JS",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/R0000568"
+  },
+  "psc": [
+    {
+      "name": "Danske Bank A/S",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
 }
