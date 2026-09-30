@@ -1,21 +1,17 @@
 {
   "slug": "tsb",
-  "fetchedAt": "2026-09-30T03:09:46.758Z",
+  "fetchedAt": "2026-09-30T03:26:13.055Z",
   "status": "matched",
   "match": {
-    "query": "TSB",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://www.tsb.co.uk/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
     "candidates": [
-      {
-        "company_number": "11105966",
-        "title": "TSB LIMITED"
-      },
       {
         "company_number": "SC095237",
         "title": "TSB BANK PLC"
       }
     ],
-    "outcome": "Matched SC095237"
+    "outcome": "Matched SC095237 from the provider's website"
   },
   "company": {
     "name": "TSB BANK PLC",

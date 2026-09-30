@@ -1,17 +1,17 @@
 {
   "slug": "santander",
-  "fetchedAt": "2026-09-30T03:09:54.822Z",
+  "fetchedAt": "2026-09-30T03:26:18.012Z",
   "status": "matched",
   "match": {
-    "query": "Santander",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://www.santander.co.uk/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
     "candidates": [
       {
         "company_number": "02294747",
         "title": "SANTANDER UK PLC"
       }
     ],
-    "outcome": "Matched 02294747"
+    "outcome": "Matched 02294747 from the provider's website"
   },
   "company": {
     "name": "SANTANDER UK PLC",

@@ -1,17 +1,17 @@
 {
   "slug": "worldremit",
-  "fetchedAt": "2026-09-30T03:10:43.810Z",
+  "fetchedAt": "2026-09-30T03:27:00.373Z",
   "status": "matched",
   "match": {
-    "query": "WorldRemit",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://www.worldremit.com/en-gb",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
     "candidates": [
       {
         "company_number": "07110878",
         "title": "WORLDREMIT LTD."
       }
     ],
-    "outcome": "Matched 07110878"
+    "outcome": "Matched 07110878 from the provider's website"
   },
   "company": {
     "name": "WORLDREMIT LTD.",

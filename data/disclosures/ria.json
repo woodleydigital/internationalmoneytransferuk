@@ -1,7 +1,8 @@
 {
   "slug": "ria",
   "url": "https://www.riamoneytransfer.com/en-gb/",
-  "fetchedAt": "2026-09-30T03:22:26.624Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-09-30T03:25:44.951Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

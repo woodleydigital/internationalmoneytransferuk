@@ -1,17 +1,17 @@
 {
   "slug": "bank-of-ireland-uk",
-  "fetchedAt": "2026-09-30T03:10:11.878Z",
+  "fetchedAt": "2026-09-30T03:26:31.606Z",
   "status": "matched",
   "match": {
-    "query": "Bank of Ireland UK",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://www.bankofirelanduk.com/personal/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
     "candidates": [
       {
         "company_number": "07022885",
         "title": "BANK OF IRELAND (UK) PLC"
       }
     ],
-    "outcome": "Matched 07022885"
+    "outcome": "Matched 07022885 from the provider's website"
   },
   "company": {
     "name": "BANK OF IRELAND (UK) PLC",

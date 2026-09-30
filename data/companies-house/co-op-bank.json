@@ -1,11 +1,55 @@
 {
   "slug": "co-op-bank",
-  "fetchedAt": "2026-09-30T03:09:40.797Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T03:26:07.303Z",
+  "status": "matched",
   "match": {
-    "query": "Co-operative Bank",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
-  }
+    "query": "https://www.co-operativebank.co.uk/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
+    "candidates": [
+      {
+        "company_number": "00990937",
+        "title": "THE CO-OPERATIVE BANK P.L.C."
+      }
+    ],
+    "outcome": "Matched 00990937 from the provider's website"
+  },
+  "company": {
+    "name": "THE CO-OPERATIVE BANK P.L.C.",
+    "number": "00990937",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "1970-10-05",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "1 Balloon Street, Manchester, M4 4BE, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/00990937"
+  },
+  "psc": [
+    {
+      "name": "The Co-Operative Bank Finance P.L.C",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2019-02-11"
+    },
+    {
+      "name": "The Co-Operative Bank Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-25-to-50-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2017-09-01",
+      "ceased_on": "2019-02-11"
+    }
+  ]
 }
