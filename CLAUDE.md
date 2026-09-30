@@ -1,91 +1,64 @@
-# International Money Transfer UK (IMT UK)
+# International Money Transfer UK (internationalmoneytransfer.uk)
 
-Website for the brand **International Money Transfer UK**, also known as **IMT UK**.
+Sister site to Currency Brokers UK (https://www.currencybrokers.uk, "CBUK").
+IMT UK is a **directory of every FCA-authorised money transfer provider**, with an
+information-gain-heavy entity profile for each. CBUK remains the advisory/comparison
+site for brokers, large transfers and business FX.
 
-- **Domain:** https://internationalmoneytransfer.uk
-- **Address:** Harley House, 29 Cambray Pl, Cheltenham GL50 1JN, United Kingdom
+## Reference files
+- `docs/IMT_UK_topical_map.xlsx` — topical map with QDP verdicts, removed/merged pages,
+  full keyword→page map (1,903 keywords, Ahrefs GB export 2026-09-25), profile schema.
+- CBUK is built on Next.js (inferred from its `/_next/image` URLs). Match its conventions
+  unless told otherwise.
 
-## Read this first
+## Split with CBUK (intent-based) — never create a page CBUK already owns
+| Topic | Owner |
+|---|---|
+| Head term "international money transfer", A–Z directory, provider profiles | IMT |
+| Apps, cash pickup, tracking/missing transfers, Nigeria corridor | IMT |
+| Transfer times, limits & tax, receiving money, regulations guide | CBUK (IMT links to it) |
+| Corridors: Spain, Australia, USA, India | CBUK `/send-money/{country}` |
+| Large/purpose transfers (property, investment), forwards, hedging | CBUK |
+| Broker reviews (OFX, XE, TorFX, etc.) | CBUK — IMT shows data profile only + link to CBUK review |
 
-**[`docs/seo-build-standard.md`](docs/seo-build-standard.md)** is the operating standard for
-this project — build spec, editorial standard, and pre-publish gate. It synthesises the five
-source documents supplied by the client. Read it before writing routes, templates,
-components, or content.
+Pending decisions (need SERP overlap check, 4+ shared top-10 URLs = same page):
+`/compare/` vs homepage; `/business/` vs CBUK `/business-fx`; `/banks/` vs CBUK
+best-uk-banks post; `/guides/how-it-works/` vs homepage.
 
-**[`docs/site-plan.md`](docs/site-plan.md)** is the topical map, route map and build
-sequence. The head term is fed by the outer section, never targeted directly.
+## Query-deserves-a-page rules
+1. One URL per SERP, across **both** sites.
+2. Provider variants (fees, limits, rates, forms, time) stay on the single profile URL. Never create provider sub-pages.
+3. Country filters and zero-demand profiles exist as entities but are `noindex` until they have Tier 2 data and confirmed brand demand.
+4. Tools, the Transfer Tracker and register-change feed are justified by function/links, not volume.
 
-**[`docs/brand-guidelines.md`](docs/brand-guidelines.md)** is the identity: logo, palette
-(with verified contrast), typography and voice. Brand signals are load-bearing for the EMD,
-not decoration. Asset URLs at `/brand/` are permanent.
+## Site structure (phase 1 first)
+- `/` — homepage = searchable A–Z directory
+- `/providers/{slug}/` — entity profiles
+- `/compare/`, `/apps/` (phase 1); `/business/`, `/banks/`, `/cash-pickup/`, `/send-to/nigeria/`, `/guides/how-it-works/`, `/guides/track-a-transfer/` (phase 2)
+- `/check-a-provider/` (FCA status tool), `/tracker/`, `/register-changes/`
+- Trust: `/methodology/`, `/how-we-get-paid/`, `/code-of-ethics/`, `/corrections/`, `/about/`, `/for-providers/`, `/entitymap.html` + `/entitymap.json` (EntityMap v1.0, as on CBUK)
 
-**[`docs/build-spec.md`](docs/build-spec.md)** implements it: the FX Margin Checker
-(the centerpiece), the DOM contract, and the structured data. Read it before writing code.
+## Profile tiers
+- **Tier 1 – Tested:** real test transfers, mystery shopping (CBUK methodology). Top ~30 providers.
+- **Tier 2 – Verified:** FCA Register + Companies House + FOS data complete, product data extracted with source quotes.
+- **Tier 3 – Register-only:** `noindex`.
 
-## Non-negotiables
+## Data pipeline rules (critical — YMYL and defamation risk)
+- Facts (FRN, status, permissions, company number, dates) flow from the **FCA Register API** and **Companies House API** into the database via plain code. The LLM never generates or "remembers" these values.
+- LLM extraction from provider websites returns JSON against a fixed schema **plus the exact source snippet**; validate before saving, reject on failure.
+- Anything negative or status-related (cancellation, restriction, complaint spike) goes to a human review queue — never auto-published.
+- Every data block shows a "last verified" date; changes are logged to the profile timeline.
+- Model tiers: Haiku for bulk classification/extraction, Sonnet for drafting, Opus for review of sensitive changes and methodology. Use batch processing for bulk jobs.
 
-1. **Server-render or statically generate every indexable route.** Title, canonical, meta
-   robots, H1, body copy, primary image, JSON-LD and internal `<a href>` links must be in
-   the raw HTML response. JavaScript enhances; it never supplies the only copy.
-2. **The functional component is the centerpiece.** The comparison/quote/calculator sits
-   above the fold, first in DOM order after the H1, and renders without JavaScript. No
-   boilerplate DOM between the H1 and the first substantive content block.
-3. **Build real functions, never implied ones.** "Misleading functionality" is a Google spam
-   policy. If the page suggests it can compare, calculate or quote, it must actually do so.
-4. **Every page must earn its existence.** Before creating a templated page, clear all four
-   tests in `docs/seo-build-standard.md` §3. Corridor/country pages that differ only by a
-   swapped noun are a critical failure, not a strategy.
-5. **Financial claims are YMYL.** No rate, fee, delivery time, or regulatory statement ships
-   without a verified first-party source and a named reviewer. Never invent one.
-6. **Mid-market is not the customer rate.** Exchange rates come from the Frankfurter API
-   (`api.frankfurter.dev/v2`) — central bank reference, spot and mid rates. Nobody receives
-   these. Never render one as "the rate you'll get" or use it to quote a payout amount;
-   always label the provider, rate type and date beside the number.
-   `docs/seo-build-standard.md` §6.
-7. **The domain is a multiplier, not an advantage.** `internationalmoneytransfer.uk` is an
-   exact-match domain: it amplifies brand and topical authority and confers nothing on its
-   own — 99% of EMDs fail. Brand-signal work (consistent NAP, Google Business Profile,
-   `Organization` `@id`, citations) is load-bearing. The site must genuinely do what its
-   name claims. `docs/seo-build-standard.md` §4.1.
-8. **Structured data must be static, truthful and visible.** JSON-LD in the initial HTML,
-   describing only what the page actually renders. Never invent ratings, reviews, prices,
-   authorship or credentials.
-9. **URLs and media URLs are permanent.** Changing image or media URLs measurably costs
-   rankings. Do not rename or move published assets without a documented migration.
-10. **Get the design right at launch, then hold it stable.** Classification comes from
-   layout; confidence in click signals then accumulates over time against that fixed
-   design. Churning layout while waiting for rankings resets the accumulation. Before
-   changing anything in response to flat performance, diagnose whether the site is
-   *misclassified* (fix the design) or merely *untested* (change nothing) —
-   `docs/seo-build-standard.md` §2.8.
+## Editorial & brand (inherit from CBUK)
+- British English, plain English, data-driven claims, no jargon without explanation.
+- Named authors; methodology and affiliate disclosure linked from every profile.
+- Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
+- Disclose the CBUK relationship on `/about/`. Cross-links between sites are contextual only (no sitewide footer links).
 
-## Pre-publish gate
-
-85/100 on the scorecard in `docs/seo-build-standard.md` §8, information gain ≥ 14/20, and
-zero critical failures. No page publishes otherwise.
-
-## What this site is
-
-**Tools plus an FCA-verified provider directory**, targeting the head terms directly. We
-also own internationalmoneytransfer.com and currencybrokers.uk; siblings competing for the
-same queries is accepted and is a documented strategy (S3's extension-domain pattern).
-
-The directory publishes only what we can evidence — FCA firm reference number, permissions,
-safeguarding method, corridors, minimums — and **never** rates, margins or ratings. That
-constraint is the differentiator: an FCA-verified directory, not a rate table.
-`docs/site-plan.md` §1.2.
-
-## Business model
-
-**Introducer to FCA-authorised currency brokers.** We do not execute transfers and are not a
-provider — see `docs/seo-build-standard.md` §5.
-
-**The independence rule is absolute:** no commercial relationship may alter, weight or
-suppress a margin checker result. The tool's credibility is the entire asset. Refuse any
-request that would make the output depend on a commercial arrangement.
-
-## Blocked
-
-Pending compliance advice (`docs/seo-build-standard.md` §5.3): the introduction journey,
-anything constituting a financial promotion, and `/forward-contracts` — a currency forward
-may be a MiFID instrument rather than a spot contract. Do not resolve these by inference.
+## First tasks
+1. Scaffold the Next.js project and page routes above (phase 1 only).
+2. Define the database schema from the "Profile schema" tab of the workbook.
+3. Build the FCA Register ingestion job: filter to firms offering consumer money remittance; store raw responses.
+4. Build the Companies House enrichment job keyed on company number.
+5. Generate Tier 3 entity pages (noindex) for all ingested firms, then upgrade the 14 phase-1 profiles.
