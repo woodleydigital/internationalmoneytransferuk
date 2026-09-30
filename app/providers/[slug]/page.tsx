@@ -12,6 +12,8 @@ import {
 import { registerSearchUrl } from "@/lib/fca";
 import { loadCompanyRecord } from "@/lib/company-records";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
+import { loadDisclosure } from "@/lib/disclosure-records";
+import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
 import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 type Params = Promise<{ slug: string }>;
@@ -41,6 +43,7 @@ export default async function Page({ params }: { params: Params }) {
   if (!p) notFound();
   const verified = isVerified(p);
   const company = loadCompanyRecord(p.slug);
+  const statement = loadDisclosure(p.slug);
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
 
   return (
@@ -70,6 +73,7 @@ export default async function Page({ params }: { params: Params }) {
       </section>
 
 
+      {statement && <ProviderStatementBlock name={p.name} record={statement} />}
       {company && <CompaniesHouseBlock record={company} />}
 
       <H2 id="blocks">What this profile will show</H2>

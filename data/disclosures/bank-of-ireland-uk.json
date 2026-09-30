@@ -1,0 +1,17 @@
+{
+  "slug": "bank-of-ireland-uk",
+  "url": "https://www.bankofirelanduk.com/personal/",
+  "fetchedAt": "2026-09-30T03:22:11.067Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Bank of Ireland UK is a trading name of Bank of Ireland (UK) plc which is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 512956. You can confirm our registration on the FCA's website . Registered in England & Wales (No. 7022885), 45 Gresham Street, London, EC2V 7EH.",
+      "frns": [
+        "512956"
+      ],
+      "companyNumbers": [
+        "07022885"
+      ]
+    }
+  ]
+}

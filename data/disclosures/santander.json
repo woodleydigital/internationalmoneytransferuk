@@ -1,0 +1,17 @@
+{
+  "slug": "santander",
+  "url": "https://www.santander.co.uk/",
+  "fetchedAt": "2026-09-30T03:22:03.907Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Santander UK plc. Registered Office: 2 Triton Square, Regent's Place, London, NW1 3AN, United Kingdom. Registered Number 2294747. Registered in England and Wales. www.santander.co.uk . Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Our Financial Services Register number is 106054. You can check this on the Financial Services Register by visiting the FCA’s website www.fca.org.uk/register . Santander and the flame logo are registered trademarks.",
+      "frns": [
+        "106054"
+      ],
+      "companyNumbers": [
+        "02294747"
+      ]
+    }
+  ]
+}

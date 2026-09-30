@@ -1,0 +1,15 @@
+{
+  "slug": "nationwide",
+  "url": "https://www.nationwide.co.uk/",
+  "fetchedAt": "2026-09-30T03:22:16.900Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Nationwide Building Society is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority (FCA) and the Prudential Regulation Authority under registration number 106078.",
+      "frns": [
+        "106078"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

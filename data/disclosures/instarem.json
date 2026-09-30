@@ -1,0 +1,15 @@
+{
+  "slug": "instarem",
+  "url": "https://www.instarem.com/en-gb/",
+  "fetchedAt": "2026-09-30T03:22:21.214Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Instarem is a brand operated by Nium Pte. Ltd. and its subsidiaries globally. In the United Kingdom, Nium Fintech Limited is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 (Reference Number 901024) to issue electronic money and provide payment services. This does not constitute or form part of an offer, solicitation, or advertisement of the Instarem services to any person outside the United Kingdom.",
+      "frns": [
+        "901024"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "co-op-bank",
+  "url": "https://www.co-operativebank.co.uk/",
+  "fetchedAt": "2026-09-30T03:21:56.380Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "The Co-operative Bank p.l.c. is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Financial Services Register No: 121885). Registered office: 1 Balloon Street, Manchester, M4 4BE. Registered in England and Wales (Company No: 990937).",
+      "frns": [
+        "121885"
+      ],
+      "companyNumbers": [
+        "00990937"
+      ]
+    }
+  ]
+}

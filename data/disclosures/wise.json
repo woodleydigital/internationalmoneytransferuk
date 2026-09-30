@@ -1,0 +1,15 @@
+{
+  "slug": "wise",
+  "url": "https://wise.com/gb/",
+  "fetchedAt": "2026-09-30T03:22:04.748Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Wise is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011, Firm Reference 900507 , for the issuing of electronic money.",
+      "frns": [
+        "900507"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

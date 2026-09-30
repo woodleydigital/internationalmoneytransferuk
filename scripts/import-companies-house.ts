@@ -11,20 +11,34 @@
  *
  * Git history of data/ is the audit trail of every change.
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PROVIDERS } from "../lib/providers.ts";
 import {
   AuthError,
   MATCH_RULE,
+  STATED_RULE,
   client,
   companySummary,
   minimisePsc,
   nameCandidates,
+  nameMatches,
+  normaliseName,
   pickCompany,
   type CompanyProfile,
   type CompanyRecord,
 } from "../lib/companies-house.ts";
+import { statedCompanyNumber, type DisclosureRecord } from "../lib/disclosures.ts";
+
+function readDisclosure(slug: string): DisclosureRecord | null {
+  const f = join(process.cwd(), "data", "disclosures", `${slug}.json`);
+  if (!existsSync(f)) return null;
+  try {
+    return JSON.parse(readFileSync(f, "utf8")) as DisclosureRecord;
+  } catch {
+    return null;
+  }
+}
 
 const key = process.env.COMPANIES_HOUSE_API_KEY;
 if (!key) {
@@ -49,7 +63,33 @@ for (const p of PROVIDERS) {
     match: { query: p.name, rule: MATCH_RULE, candidates: [], outcome: "" },
   };
   try {
-    // Search the name and its "UK" variant: groups often run a separate UK
+    // 1. The company number the provider states on its own website, accepted
+    //    only if that company's registered name also appears in the statement
+    //    (or is the trading name plus a legal suffix).
+    const disclosure = readDisclosure(p.slug);
+    const stated = statedCompanyNumber(disclosure);
+    if (stated) {
+      const prof = await ch.profile(stated);
+      await pause();
+      const quoted = normaliseName(disclosure!.statements.map((s) => s.text).join(" "));
+      if (prof && (quoted.includes(normaliseName(prof.company_name)) || nameMatches(p.name, prof.company_name))) {
+        record.status = "matched";
+        record.match = {
+          query: disclosure!.url,
+          rule: STATED_RULE,
+          candidates: [{ company_number: prof.company_number, title: prof.company_name }],
+          outcome: `Matched ${prof.company_number} from the provider's website`,
+        };
+        record.company = companySummary(prof);
+        record.psc = minimisePsc(await ch.psc(prof.company_number));
+        await pause();
+        writeFileSync(join(OUT, `${p.slug}.json`), JSON.stringify(record, null, 2) + "\n");
+        summary.push(`${record.status.padEnd(9)} ${p.slug.padEnd(22)} ${record.match.outcome}`);
+        continue;
+      }
+    }
+
+    // 2. Otherwise the strict name rule. Search the name and its "UK" variant: groups often run a separate UK
     // company (e.g. a ring-fenced "UK Bank plc") that a plain search can miss,
     // and finding both must make the match ambiguous, not pick the wrong one.
     const seen = new Map<string, { title: string; company_number: string; company_status?: string }>();

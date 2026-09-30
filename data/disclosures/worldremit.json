@@ -1,0 +1,22 @@
+{
+  "slug": "worldremit",
+  "url": "https://www.worldremit.com/en-gb",
+  "fetchedAt": "2026-09-30T03:22:31.503Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "WorldRemit Ltd is Authorised and Regulated by the Financial Conduct Authority (FCA) under the Payment Service Regulations 2017 and Electronic Money Regulations 2011. Registration number: 900891.",
+      "frns": [
+        "900891"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom. Company registration number: 07110878",
+      "frns": [],
+      "companyNumbers": [
+        "07110878"
+      ]
+    }
+  ]
+}

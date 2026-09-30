@@ -66,6 +66,13 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   `lib/companies-house.ts` (exactly one active, name + legal suffix, payments SIC code) —
   never guessed. Records older than 14 days are not shown. PSC names only; the privacy
   notice is at `/privacy/`.
+- **Provider statements (in place of FCA data for now):** `scripts/import-disclosures.ts`
+  reads each provider's homepage weekly (robots.txt respected, identified user agent) and
+  keeps the paragraphs that state an FRN or company number, verbatim, in
+  `data/disclosures/`. Shown as "What {provider} says about its regulation", labelled as the
+  provider's own statement, never as verified, with a Register search link. A stated company
+  number (exactly one, confirmed against the registered name) drives the Companies House
+  match. Plain pattern matching — no AI.
 - **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
   must not be used "to provide a data feed to any comparison table or any other website
   without our written permission", and the Register API is "designed for individual

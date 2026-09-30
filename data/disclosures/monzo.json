@@ -1,0 +1,17 @@
+{
+  "slug": "monzo",
+  "url": "https://monzo.com/",
+  "fetchedAt": "2026-09-30T03:22:08.484Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Monzo Bank Limited is a company registered in England and Wales (No.09446231). Monzo Bank Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Our financial Services Register number is 730427. Our address is Broadwalk House, 5 Appold St, London EC2A 2AG.",
+      "frns": [
+        "730427"
+      ],
+      "companyNumbers": [
+        "09446231"
+      ]
+    }
+  ]
+}

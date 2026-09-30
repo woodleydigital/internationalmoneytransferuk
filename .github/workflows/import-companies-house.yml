@@ -1,7 +1,8 @@
-# Weekly Companies House import. Writes data/companies-house/*.json and commits
+# Weekly public-record import. Reads each provider's own regulatory statement
+# (data/disclosures/), then Companies House (data/companies-house/), and commits
 # any change to the production branch, which triggers a Vercel deploy. The git
 # history of data/ is the public-record audit trail.
-name: Import Companies House data
+name: Import public records
 
 on:
   schedule:
@@ -27,7 +28,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
-      - name: Import
+      - name: Read provider regulatory statements
+        run: npm run import:disclosures
+      - name: Import Companies House
         env:
           COMPANIES_HOUSE_API_KEY: ${{ secrets.COMPANIES_HOUSE_API_KEY }}
         run: npm run import:companies-house
@@ -35,10 +38,10 @@ jobs:
         run: |
           git config user.name "imt-uk-data-bot"
           git config user.email "imt-uk-data-bot@users.noreply.github.com"
-          git add data/companies-house
+          git add data/disclosures data/companies-house
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "Companies House import $(date -u +%Y-%m-%d)"
+            git commit -m "Public records import $(date -u +%Y-%m-%d)"
             git push
           fi

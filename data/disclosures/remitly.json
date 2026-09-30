@@ -1,0 +1,17 @@
+{
+  "slug": "remitly",
+  "url": "https://www.remitly.com/gb/en",
+  "fetchedAt": "2026-09-30T03:22:17.850Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Remitly U.K., Ltd, trading as Remitly, is a company registered in England and Wales (registration number 09896841). Remitly U.K., Ltd is authorised as an Electronic Money Institution by the Financial Conduct Authority, FCA Register No. 1047222. Registered address: 78 Cannon Street, London EC4N 6AF, United Kingdom.",
+      "frns": [
+        "1047222"
+      ],
+      "companyNumbers": [
+        "09896841"
+      ]
+    }
+  ]
+}

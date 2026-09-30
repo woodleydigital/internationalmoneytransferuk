@@ -1,0 +1,17 @@
+{
+  "slug": "ofx",
+  "url": "https://www.ofx.com/en-gb/",
+  "fetchedAt": "2026-09-30T03:22:02.782Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "© 2026 UKForex Limited (trading as “OFX”) is registered in England and Wales (Company No. 04631395). Our registered office is at 4th Floor, The White Chapel Building, 10 Whitechapel High St, London E1 8QS. We are authorised by the Financial Conduct Authority as an Electronic Money Institution (Firm Ref. No. 902028).",
+      "frns": [
+        "902028"
+      ],
+      "companyNumbers": [
+        "04631395"
+      ]
+    }
+  ]
+}

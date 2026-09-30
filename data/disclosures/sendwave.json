@@ -1,0 +1,15 @@
+{
+  "slug": "sendwave",
+  "url": "https://www.sendwave.com/en-gb",
+  "fetchedAt": "2026-09-30T03:22:27.505Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Company registration number: 07110878",
+      "frns": [],
+      "companyNumbers": [
+        "07110878"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "tsb",
+  "url": "https://www.tsb.co.uk/",
+  "fetchedAt": "2026-09-30T03:22:00.927Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "TSB Bank plc. Registered office: Henry Duncan House, 120 George Street, Edinburgh EH2 4LH. Registered in Scotland, no. SC95237.",
+      "frns": [],
+      "companyNumbers": [
+        "SC095237"
+      ]
+    },
+    {
+      "text": "Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 191240.",
+      "frns": [
+        "191240"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

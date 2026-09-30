@@ -9,6 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "node --test --experimental-strip-types lib/*.test.ts",
+    "import:disclosures": "node --experimental-strip-types scripts/import-disclosures.ts",
     "import:companies-house": "node --experimental-strip-types scripts/import-companies-house.ts"
   },
   "dependencies": {

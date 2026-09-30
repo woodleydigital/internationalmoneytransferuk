@@ -52,6 +52,13 @@ export default function Page() {
           and uphold rates, where the Ombudsman publishes them for a firm.
         </li>
         <li>
+          <strong className="text-ink">The provider’s own regulatory statement.</strong> The
+          sentence on a provider’s website saying who regulates it, usually with its FCA
+          reference number and company number. We quote it word for word, label it as the
+          provider’s own claim, and link to the FCA Register so you can check it. Where the
+          statement gives a company number, that is how we find the company at Companies House.
+        </li>
+        <li>
           <strong className="text-ink">The provider’s own website and terms.</strong> Countries
           served, payout methods, fees, limits, ID requirements and how customer money is
           safeguarded.

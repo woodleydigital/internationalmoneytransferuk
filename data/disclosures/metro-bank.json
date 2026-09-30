@@ -1,0 +1,15 @@
+{
+  "slug": "metro-bank",
+  "url": "https://www.metrobankonline.co.uk/",
+  "fetchedAt": "2026-09-30T03:22:25.295Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Metro Bank PLC. Registered in England and Wales. Company number: 6419578. Registered office: One Southampton Row, London, WC1B 5HA. We are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and Prudential Regulation Authority. Metro Bank PLC is an independent UK Bank - it is not affiliated with any other bank or organisation (including the METRO newspaper or its publishers) anywhere in the world. \"Metrobank\" is the registered trademark of Metro Bank PLC.",
+      "frns": [],
+      "companyNumbers": [
+        "06419578"
+      ]
+    }
+  ]
+}

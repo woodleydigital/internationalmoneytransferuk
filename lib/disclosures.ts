@@ -1,0 +1,153 @@
+/**
+ * Regulatory statements published by providers on their own websites.
+ *
+ * UK payment firms and banks state on their websites that they are authorised,
+ * usually with their FCA firm reference number (FRN) and company number. We keep
+ * those sentences word for word, with the page and date, and label them as the
+ * provider's own statement — they are not FCA Register data and are never shown
+ * as verified. Extraction is plain pattern matching; no AI is involved.
+ */
+
+export interface Statement {
+  /** The sentence exactly as it appears on the page (whitespace collapsed). */
+  text: string;
+  frns: string[];
+  companyNumbers: string[];
+}
+
+export interface DisclosureRecord {
+  slug: string;
+  url: string;
+  fetchedAt: string;
+  status: "found" | "none" | "error" | "blocked";
+  statements: Statement[];
+  error?: string;
+}
+
+const ENTITIES: Record<string, string> = {
+  amp: "&", nbsp: " ", quot: '"', apos: "'", lt: "<", gt: ">", copy: "©", reg: "®",
+  rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", ndash: "–", mdash: "—", pound: "£",
+};
+
+/** Visible text of an HTML page: scripts, styles and tags removed, entities decoded. */
+export function htmlToText(html: string): string {
+  return html
+    .replace(/<(script|style|noscript|template|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<(br|p|div|li|tr|h[1-6]|footer|section|address)\b[^>]*>/gi, "\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&([a-z]+);/gi, (m, n) => ENTITIES[n.toLowerCase()] ?? m)
+    // Markup that was escaped inside embedded data is now literal: strip it too.
+    .replace(/<\/?(?:br|p|div|span|a|strong|b|em|i|li|ul)\b[^>]*>/gi, "\n")
+    .replace(/\\[rnt]/g, " ")
+    .replace(/[ \t\r\f\v ]+/g, " ")
+    .replace(/ *\n[\n ]*/g, "\n")
+    .trim();
+}
+
+// FRNs are quoted only from paragraphs that mention the FCA or PRA.
+const FRN_PATTERNS = [
+  /\bFirm Reference(?: Number)?(?: \(FRN\))?\s*(?:is|:|no\.?|number)?\s*(\d{6,7})\b/gi,
+  /\bFirm Ref\.?(?: No\.?| Number)?\s*:?\s*(\d{6,7})\b/gi,
+  /\bFRN\s*(?:no\.?|number|is|:)?\s*(\d{6,7})\b/gi,
+  /\bFinancial Services Register (?:under )?(?:number|no\.?|reference)(?: is)?\s*:?\s*(\d{6,7})\b/gi,
+  /(?<!company )(?<!company )\b(?:FCA )?(?:registration|register|reference) (?:number|no\.?)(?: is)?\s*:?\s*(\d{6,7})\b/gi,
+];
+
+// Companies House numbers: 8 digits, or 2 letters + 6 digits (SC, NI, OC, ...).
+const CO = "([A-Z]{2}\\d{5,6}|\\d{6,8})";
+const COMPANY_PATTERNS = [
+  new RegExp(`\\bcompany (?:registration )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
+  new RegExp(`\\bregistered (?:company )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
+  new RegExp(`\\bregistered in (?:England(?: and|&) Wales|England|Scotland|Northern Ireland)[^.\\n]{0,40}?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
+];
+
+const REGULATOR = /Financial Conduct Authority|\bFCA\b|Prudential Regulation Authority|\bPRA\b/;
+
+/** Normalise a company number to Companies House's 8-character form. */
+export function normaliseCompanyNumber(n: string): string {
+  const s = n.toUpperCase();
+  if (/^\d+$/.test(s)) return s.padStart(8, "0");
+  return s.slice(0, 2) + s.slice(2).padStart(6, "0");
+}
+
+function matchesOf(patterns: RegExp[], text: string): string[] {
+  const out = new Set<string>();
+  for (const re of patterns) {
+    re.lastIndex = 0;
+    for (const m of text.matchAll(re)) out.add(m[1]);
+  }
+  return [...out];
+}
+
+/**
+ * Paragraphs of the page's text that state an FRN (next to a mention of the FCA
+ * or PRA) or a company number (in, or right beside, such a paragraph). Each is
+ * kept whole, word for word, so it can be quoted; marketing copy never matches.
+ */
+export function findStatements(text: string): Statement[] {
+  const lines = text.split("\n").map((l) => l.trim());
+  const regulatorAt = lines.map((l) => REGULATOR.test(l));
+  const seen = new Set<string>();
+  const out: Statement[] = [];
+  lines.forEach((line, i) => {
+    const key = line.replace(/[.\s]+$/, "").toLowerCase();
+    if (line.length < 20 || line.length > 800 || seen.has(key)) return;
+    const frns = regulatorAt[i] ? matchesOf(FRN_PATTERNS, line) : [];
+    const companyNumbers = matchesOf(COMPANY_PATTERNS, line).map(normaliseCompanyNumber);
+    const nearRegulator = regulatorAt.slice(Math.max(0, i - 2), i + 3).some(Boolean);
+    if (frns.length || (companyNumbers.length && nearRegulator)) {
+      seen.add(key);
+      out.push({ text: line, frns, companyNumbers });
+    }
+  });
+  return out;
+}
+
+/** The single company number a page states, or null if none or several. */
+export function statedCompanyNumber(rec: DisclosureRecord | null): string | null {
+  if (!rec || rec.status !== "found") return null;
+  const all = new Set(rec.statements.flatMap((s) => s.companyNumbers));
+  return all.size === 1 ? [...all][0] : null;
+}
+
+/** Minimal robots.txt check for our user agent against a path. */
+export function robotsAllows(robotsTxt: string, path: string, agent = "IMTUKDirectoryBot"): boolean {
+  let applies = false;
+  let anyMatched = false;
+  const rules: { allow: boolean; path: string }[] = [];
+  const specific: { allow: boolean; path: string }[] = [];
+  let current: "star" | "us" | null = null;
+  for (const raw of robotsTxt.split(/\r?\n/)) {
+    const line = raw.replace(/#.*/, "").trim();
+    const m = line.match(/^(user-agent|allow|disallow)\s*:\s*(.*)$/i);
+    if (!m) continue;
+    const [, key, value] = m;
+    if (key.toLowerCase() === "user-agent") {
+      const v = value.toLowerCase();
+      current = v === "*" ? "star" : agent.toLowerCase().includes(v) ? "us" : null;
+      if (current === "us") anyMatched = true;
+      applies = current !== null;
+      continue;
+    }
+    if (!applies || value === "") continue;
+    const rule = { allow: key.toLowerCase() === "allow", path: value };
+    (current === "us" ? specific : rules).push(rule);
+  }
+  const set = anyMatched ? specific : rules;
+  // Robots paths are prefixes with "*" wildcards and an optional "$" end anchor.
+  const toRe = (p: string) =>
+    new RegExp(
+      "^" +
+        p
+          .replace(/[.+?^{}()|[\]\\]/g, "\\$&")
+          .replace(/\*/g, ".*")
+          .replace(/\\\$$|\$$/, "$"),
+    );
+  const hits = set.filter((r) => toRe(r.path).test(path));
+  if (!hits.length) return true;
+  const longest = hits.reduce((a, b) => (b.path.length > a.path.length ? b : a));
+  return longest.allow;
+}
