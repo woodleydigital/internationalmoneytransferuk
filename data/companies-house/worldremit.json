@@ -1,10 +1,10 @@
 {
   "slug": "worldremit",
-  "fetchedAt": "2026-09-30T03:07:48.159Z",
+  "fetchedAt": "2026-09-30T03:10:43.810Z",
   "status": "matched",
   "match": {
     "query": "WorldRemit",
-    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
         "company_number": "07110878",
