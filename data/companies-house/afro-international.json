@@ -1,0 +1,12 @@
+{
+  "slug": "afro-international",
+  "fetchedAt": "2026-09-30T03:04:05.285Z",
+  "status": "error",
+  "match": {
+    "query": "Afro International",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [],
+    "outcome": ""
+  },
+  "error": "Companies House returned 401 for /search/companies?q=Afro%20International&items_per_page=50"
+}

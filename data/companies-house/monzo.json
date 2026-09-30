@@ -1,0 +1,12 @@
+{
+  "slug": "monzo",
+  "fetchedAt": "2026-09-30T03:04:06.619Z",
+  "status": "error",
+  "match": {
+    "query": "Monzo",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [],
+    "outcome": ""
+  },
+  "error": "Companies House returned 401 for /search/companies?q=Monzo&items_per_page=50"
+}
