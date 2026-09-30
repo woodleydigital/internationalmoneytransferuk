@@ -60,6 +60,12 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   the Open Government Licence v3.0", source Companies House). Officer and PSC names are
   personal data under UK GDPR: publish a privacy notice (lawful basis: legitimate
   interests) before showing them, never show dates of birth, and honour objections.
+- Companies House pipeline: `scripts/import-companies-house.ts` (weekly GitHub Action,
+  secret `COMPANIES_HOUSE_API_KEY`) writes `data/companies-house/{slug}.json`; git history
+  is the audit trail. A company is matched only by the strict rule in
+  `lib/companies-house.ts` (exactly one active, name + legal suffix, payments SIC code) —
+  never guessed. Records older than 14 days are not shown. PSC names only; the privacy
+  notice is at `/privacy/`.
 - **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
   must not be used "to provide a data feed to any comparison table or any other website
   without our written permission", and the Register API is "designed for individual

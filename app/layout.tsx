@@ -77,6 +77,7 @@ const FOOTER: { heading: string; links: { href: string; label: string }[] }[] = 
     links: [
       { href: "/corrections/", label: "Report an error" },
       { href: "/for-providers/", label: "For providers" },
+      { href: "/privacy/", label: "Privacy notice" },
       { href: "/entitymap.html", label: "Entity map" },
     ],
   },

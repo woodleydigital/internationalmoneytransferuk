@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about/",
     "/about/matt-woodley/",
     "/for-providers/",
+    "/privacy/",
     "/entitymap.html",
   ];
   const profiles = PROVIDERS.filter(isIndexable).map(providerUrl);

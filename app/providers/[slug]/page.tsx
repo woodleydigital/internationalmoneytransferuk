@@ -10,11 +10,15 @@ import {
   isVerified,
 } from "@/lib/providers";
 import { registerSearchUrl } from "@/lib/fca";
+import { loadCompanyRecord } from "@/lib/company-records";
+import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 type Params = Promise<{ slug: string }>;
 
 export const dynamicParams = false;
+// Re-render daily so records older than the freshness limit drop off the page.
+export const revalidate = 86_400;
 
 export function generateStaticParams() {
   return PROVIDERS.map((p) => ({ slug: p.slug }));
@@ -36,6 +40,7 @@ export default async function Page({ params }: { params: Params }) {
   const p = getProvider((await params).slug);
   if (!p) notFound();
   const verified = isVerified(p);
+  const company = loadCompanyRecord(p.slug);
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
 
   return (
@@ -47,7 +52,7 @@ export default async function Page({ params }: { params: Params }) {
           {verified ? "Verified" : "Register data pending"}
         </h2>
         <p className="mt-2 max-w-prose">
-          {`We have not yet fetched ${p.name}'s record from the FCA Register or Companies House, ` +
+          {`We have not yet fetched ${p.name}'s record from the FCA Register${company ? "" : " or Companies House"}, ` +
             `so this profile does not state its FCA reference number, permissions or status. ` +
             `We do not fill these in from memory or from the provider's own website.`}
         </p>
@@ -64,6 +69,8 @@ export default async function Page({ params }: { params: Params }) {
         </p>
       </section>
 
+
+      {company && <CompaniesHouseBlock record={company} />}
 
       <H2 id="blocks">What this profile will show</H2>
       <P>
