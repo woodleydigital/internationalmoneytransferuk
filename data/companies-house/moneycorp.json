@@ -1,11 +1,16 @@
 {
   "slug": "moneycorp",
-  "fetchedAt": "2026-09-30T07:55:49.292Z",
+  "fetchedAt": "2026-09-30T08:01:50.229Z",
   "status": "unmatched",
   "match": {
-    "query": "Moneycorp",
+    "query": "https://www.moneycorp.com/en-gb/about-us",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
+    "candidates": [
+      {
+        "company_number": "00738837",
+        "title": "TTT MONEYCORP LIMITED"
+      }
+    ],
+    "outcome": "Provider's website states other companies; no name fallback"
   }
 }

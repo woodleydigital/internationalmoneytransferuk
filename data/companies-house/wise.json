@@ -1,16 +1,16 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-09-30T07:54:58.487Z",
+  "fetchedAt": "2026-09-30T08:01:05.685Z",
   "status": "unmatched",
   "match": {
-    "query": "Wise",
+    "query": "https://wise.com/gb/",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
-        "company_number": "13211214",
-        "title": "WISE LIMITED"
+        "company_number": "11905382",
+        "title": "WISE ASSETS UK LTD"
       }
     ],
-    "outcome": "No candidate with a payments SIC code"
+    "outcome": "Provider's website states other companies; no name fallback"
   }
 }

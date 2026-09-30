@@ -1,11 +1,16 @@
 {
   "slug": "royal-bank-of-scotland",
-  "fetchedAt": "2026-09-30T07:56:18.469Z",
+  "fetchedAt": "2026-09-30T08:02:15.607Z",
   "status": "unmatched",
   "match": {
-    "query": "Royal Bank of Scotland",
+    "query": "https://www.rbs.co.uk/",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
+    "candidates": [
+      {
+        "company_number": "SC083026",
+        "title": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY"
+      }
+    ],
+    "outcome": "Provider's website states other companies; no name fallback"
   }
 }

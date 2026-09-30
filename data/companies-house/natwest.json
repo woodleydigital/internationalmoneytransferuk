@@ -1,11 +1,16 @@
 {
   "slug": "natwest",
-  "fetchedAt": "2026-09-30T07:55:01.425Z",
+  "fetchedAt": "2026-09-30T08:01:06.373Z",
   "status": "unmatched",
   "match": {
-    "query": "NatWest",
+    "query": "https://www.natwest.com/",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
+    "candidates": [
+      {
+        "company_number": "00929027",
+        "title": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY"
+      }
+    ],
+    "outcome": "Provider's website states other companies; no name fallback"
   }
 }
