@@ -6,11 +6,13 @@ Google Fonts.
 
     pip install fonttools uharfbuzz
     python3 scripts/make-logo.py FONT.ttf OUT_PREFIX [--size 21] [--track 0.08] [--upper] [--rule]
+                                 [--mark exchange|pound|bars]
 
 Writes OUT_PREFIX.svg and OUT_PREFIX-reversed.svg. The /brand/ URLs are permanent:
 regenerate in place, never rename.
 """
 import argparse
+import math
 import uharfbuzz as hb
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
@@ -48,7 +50,46 @@ def shape(tt, blob_path, text, size, track):
     return " ".join(c for c in d if c), x, cap * s
 
 
-def build(font_path, size, track, upper, rule, reversed_):
+def mark_bars():
+    return (f'<rect x="10" y="15.5" width="28" height="5" rx="2.5" fill="{BARS[0]}"/>'
+            f'<rect x="10" y="27.5" width="19" height="5" rx="2.5" fill="{BARS[1]}"/>'
+            f'<rect x="30" y="27.5" width="8" height="5" rx="2.5" fill="{BARS[2]}"/>')
+
+
+def mark_exchange():
+    """Two opposed arrows: money going out and coming in."""
+    return ('<g fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">'
+            f'<path d="M11 17.5H36M29.5 11L36 17.5L29.5 24" stroke="{BARS[0]}"/>'
+            f'<path d="M37 30.5H12M18.5 24L12 30.5L18.5 37" stroke="{GOLD}"/></g>')
+
+
+def mark_pound(tt, font_path):
+    """A pound sign inside two circling arrows."""
+    cx = cy = 24
+    r = 15.5
+
+    def pt(a):
+        return cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))
+
+    def arc(a0, a1, colour):
+        (x0, y0), (x1, y1) = pt(a0), pt(a1)
+        # arrowhead at the end of the arc, pointing along the clockwise tangent
+        t = math.radians(a1 + 90)
+        tx, ty = math.cos(t), math.sin(t)
+        nx, ny = -ty, tx
+        h = 4.2
+        hx1, hy1 = x1 - tx * h + nx * h, y1 - ty * h + ny * h
+        hx2, hy2 = x1 - tx * h - nx * h, y1 - ty * h - ny * h
+        return (f'<path d="M{ntos(x0)} {ntos(y0)}A{r} {r} 0 0 1 {ntos(x1)} {ntos(y1)}'
+                f'M{ntos(hx1)} {ntos(hy1)}L{ntos(x1)} {ntos(y1)}L{ntos(hx2)} {ntos(hy2)}" stroke="{colour}"/>')
+
+    d, w, cap = shape(tt, font_path, "£", 21, 0)
+    glyph = f'<path transform="translate({ntos(cx - w / 2)} {ntos(cy + cap / 2)})" d="{d}" fill="{BARS[0]}"/>'
+    return ('<g fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">'
+            + arc(200, 335, BARS[1]) + arc(20, 155, GOLD) + '</g>' + glyph)
+
+
+def build(font_path, size, track, upper, rule, reversed_, mark_kind="bars"):
     tt = TTFont(font_path)
     lines = [l.upper() for l in LINES] if upper else LINES
     shaped = [shape(tt, font_path, l, size, track) for l in lines]
@@ -69,10 +110,9 @@ def build(font_path, size, track, upper, rule, reversed_):
 
     k = MARK / 48
     mark = ("" if reversed_ else f'<rect width="{MARK}" height="{MARK}" rx="{ntos(11 * k)}" fill="#062626"/>')
-    mark += (f'<g transform="scale({k:.4f})">'
-             f'<rect x="10" y="15.5" width="28" height="5" rx="2.5" fill="{BARS[0]}"/>'
-             f'<rect x="10" y="27.5" width="19" height="5" rx="2.5" fill="{BARS[1]}"/>'
-             f'<rect x="30" y="27.5" width="8" height="5" rx="2.5" fill="{BARS[2]}"/></g>')
+    inner = {"bars": mark_bars, "exchange": mark_exchange}.get(mark_kind)
+    inner = inner() if inner else mark_pound(tt, font_path)
+    mark += f'<g transform="scale({k:.4f})">{inner}</g>'
     W = ntos(tx + width + 1)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {MARK}" width="{W}" '
             f'height="{MARK}" role="img" aria-labelledby="lt">\n'
@@ -87,7 +127,8 @@ if __name__ == "__main__":
     a.add_argument("--track", type=float, default=0)
     a.add_argument("--upper", action="store_true")
     a.add_argument("--rule", action="store_true")
+    a.add_argument("--mark", choices=["bars", "exchange", "pound"], default="exchange")
     o = a.parse_args()
     for rev, suffix in ((False, ""), (True, "-reversed")):
         with open(f"{o.out}{suffix}.svg", "w") as f:
-            f.write(build(o.font, o.size, o.track, o.upper, o.rule, rev))
+            f.write(build(o.font, o.size, o.track, o.upper, o.rule, rev, o.mark))
