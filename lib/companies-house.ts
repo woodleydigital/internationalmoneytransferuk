@@ -174,8 +174,10 @@ export const STATED_NAMED_RULE =
 /**
  * Pick the provider's own company from the company numbers its website states.
  * Tier 1: the registered name is the trading name plus a legal-form suffix, or
- * the statement giving the number also gives an FRN from the homepage. Tier 2,
- * only when the homepage states no FRN: the statement names the company.
+ * the statement giving the number also gives the homepage's FRN (only when the
+ * homepage gives exactly one). Tier 2,
+ * only when the homepage states no FRN and the site states one company number:
+ * an FRN-free statement names the company.
  * Exactly one candidate must qualify at the first tier that has any.
  */
 export function chooseStatedCompany(
@@ -188,14 +190,18 @@ export function chooseStatedCompany(
   const tier2: CompanyProfile[] = [];
   for (const [number, prof] of profiles) {
     const own = statements.filter((s) => s.companyNumbers.includes(number));
-    if (
-      nameMatches(tradingName, prof.company_name) ||
-      own.some((s) => s.frns.some((f) => homeFrns.has(f)))
-    ) {
+    // The homepage FRN identifies the provider only when the homepage names a
+    // single firm; footers that list several (insurers, card issuers) do not.
+    const frnLinked = homeFrns.size === 1 && own.some((s) => s.frns.some((f) => homeFrns.has(f)));
+    if (nameMatches(tradingName, prof.company_name) || frnLinked) {
       tier1.push(prof);
     } else if (
+      // Tier 2 is a weak link, so it needs a plain company-identity sentence
+      // (no FRN, which would mark a product or partner firm) and a site that
+      // states no other company number.
       homeFrns.size === 0 &&
-      own.some((s) => normaliseName(s.text).includes(normaliseName(prof.company_name)))
+      profiles.size === 1 &&
+      own.some((s) => !s.frns.length && normaliseName(s.text).includes(normaliseName(prof.company_name)))
     ) {
       tier2.push(prof);
     }

@@ -106,3 +106,26 @@ test("stated company: a named company is accepted only when the homepage gives n
   const profiles = new Map([["00929027", P("00929027", "NATIONAL WESTMINSTER BANK PLC")]]);
   assert.equal(chooseStatedCompany("NatWest", statements, profiles)?.profile.company_number, "00929027");
 });
+
+test("stated company: a footer listing several firms' FRNs links none of them", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "Current accounts by Nationwide Building Society, FRN 106078.", frns: ["106078"], companyNumbers: [] },
+    { text: "Home insurance by Uinsure Limited (Company No 06046870), FRN 463689.", frns: ["463689"], companyNumbers: ["06046870"] },
+  ];
+  const profiles = new Map([["06046870", P("06046870", "UINSURE LIMITED")]]);
+  assert.equal(chooseStatedCompany("Virgin Money", statements, profiles), null);
+});
+
+test("stated company: a partner firm named in a product statement is not the provider", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [
+    { text: "Virgin Money Home Insurance is arranged by Uinsure Limited (Company No 06046870), FRN 463689.", frns: ["463689"], companyNumbers: ["06046870"], url: "u" },
+    { text: "Promoted by CYB Intermediaries Ltd (Company No: 04056283), FRN 305065.", frns: ["305065"], companyNumbers: ["04056283"], url: "u" },
+  ];
+  const profiles = new Map([
+    ["06046870", P("06046870", "UINSURE LIMITED")],
+    ["04056283", P("04056283", "CYB INTERMEDIARIES LIMITED")],
+  ]);
+  assert.equal(chooseStatedCompany("Virgin Money", statements, profiles), null);
+});
