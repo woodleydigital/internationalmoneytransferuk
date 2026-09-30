@@ -1,0 +1,17 @@
+{
+  "slug": "paysend",
+  "url": "https://paysend.com/en-gb",
+  "fetchedAt": "2026-09-30T07:50:23.627Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Paysend Plc is a company incorporated and registered in Scotland with company number SC376020. Our registered office is at Suite 2, Ground Floor, Orchard Brae House, 30 Queensferry Road, Edinburgh, EH4 2HS. Paysend Plc is authorised and regulated by the Financial Conduct Authority (Firm Reference Number: 900004) as an electronic money institution permitted to issue e-money and provide payment services.",
+      "frns": [
+        "900004"
+      ],
+      "companyNumbers": [
+        "SC376020"
+      ]
+    }
+  ]
+}

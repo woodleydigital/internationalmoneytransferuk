@@ -92,3 +92,11 @@ test("follows only same-site links that look legal or regulatory", async () => {
     "https://bank.example/about-us",
   ]);
 });
+
+test("a company number read twice is not also taken as an FRN", () => {
+  const [s] = findStatements(
+    "Moneycorp is regulated by the Financial Conduct Authority. Registered in England, company number 738837; registration number 738837.",
+  );
+  assert.deepEqual(s.companyNumbers, ["00738837"]);
+  assert.deepEqual(s.frns, []);
+});

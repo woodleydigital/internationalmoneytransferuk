@@ -1,0 +1,17 @@
+{
+  "slug": "starling-bank",
+  "url": "https://www.starlingbank.com/",
+  "fetchedAt": "2026-09-30T07:50:26.750Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Starling Bank Limited (trading as Starling) is registered in England and Wales (No. 09092149), 5th Floor London Fruit And Wool Exchange, 1 Duval Square, London, United Kingdom, E1 6PW. We are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 730166.",
+      "frns": [
+        "730166"
+      ],
+      "companyNumbers": [
+        "09092149"
+      ]
+    }
+  ]
+}

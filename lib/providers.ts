@@ -57,7 +57,7 @@ export const PROVIDERS: Provider[] = [
   { slug: "xoom-paypal", name: "Xoom", phase: 2, indexWhenVerified: false, website: "https://www.xoom.com/" },
   { slug: "first-direct", name: "first direct", phase: 2, indexWhenVerified: false, website: "https://www.firstdirect.com/" },
   { slug: "instarem", name: "Instarem", phase: 2, indexWhenVerified: false, website: "https://www.instarem.com/en-gb/" },
-  { slug: "lemfi", name: "LemFi", phase: 2, indexWhenVerified: false, website: "https://lemfi.com/gb" },
+  { slug: "lemfi", name: "LemFi", phase: 2, indexWhenVerified: false, website: "https://lemfi.com/" },
   { slug: "metro-bank", name: "Metro Bank", phase: 2, indexWhenVerified: false, website: "https://www.metrobankonline.co.uk/" },
   { slug: "ria", name: "Ria", phase: 2, indexWhenVerified: false, website: "https://www.riamoneytransfer.com/en-gb/" },
   { slug: "sendwave", name: "Sendwave", phase: 2, indexWhenVerified: false, website: "https://www.sendwave.com/en-gb" },
@@ -65,6 +65,29 @@ export const PROVIDERS: Provider[] = [
   { slug: "tesco-bank", name: "Tesco Bank", phase: 2, indexWhenVerified: false, website: "https://www.tescobank.com/" },
   { slug: "worldremit", name: "WorldRemit", phase: 2, indexWhenVerified: false, website: "https://www.worldremit.com/en-gb/" },
   { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false, website: "https://www.xe.com/" },
+  // Added beyond the topical map: established UK banks, apps and currency brokers
+  // that send money abroad. No search demand measured yet, so never indexed until
+  // the topical map is revisited.
+  { slug: "torfx", name: "TorFX", phase: 2, indexWhenVerified: false, website: "https://www.torfx.com/" },
+  { slug: "currencies-direct", name: "Currencies Direct", phase: 2, indexWhenVerified: false, website: "https://www.currenciesdirect.com/" },
+  { slug: "moneycorp", name: "Moneycorp", phase: 2, indexWhenVerified: false, website: "https://www.moneycorp.com/en-gb/" },
+  { slug: "key-currency", name: "Key Currency", phase: 2, indexWhenVerified: false, website: "https://www.keycurrency.co.uk/" },
+  { slug: "clear-currency", name: "Clear Currency", phase: 2, indexWhenVerified: false, website: "https://www.clearcurrency.co.uk/" },
+  { slug: "cambridge-currencies", name: "Cambridge Currencies", phase: 2, indexWhenVerified: false, website: "https://www.cambridgecurrencies.com/" },
+  { slug: "global-reach", name: "Global Reach", phase: 2, indexWhenVerified: false, website: "https://www.globalreachpartners.com/" },
+  { slug: "smart-currency-exchange", name: "Smart Currency Exchange", phase: 2, indexWhenVerified: false, website: "https://www.smartcurrencyexchange.com/" },
+  { slug: "halo-financial", name: "Halo Financial", phase: 2, indexWhenVerified: false, website: "https://www.halofinancial.com/" },
+  { slug: "equals-money", name: "Equals Money", phase: 2, indexWhenVerified: false, website: "https://equalsmoney.com/" },
+  { slug: "currency-solutions", name: "Currency Solutions", phase: 2, indexWhenVerified: false, website: "https://www.currencysolutions.co.uk/" },
+  { slug: "transfergo", name: "TransferGo", phase: 2, indexWhenVerified: false, website: "https://www.transfergo.com/" },
+  { slug: "paysend", name: "Paysend", phase: 2, indexWhenVerified: false, website: "https://paysend.com/en-gb" },
+  { slug: "taptap-send", name: "Taptap Send", phase: 2, indexWhenVerified: false, website: "https://www.taptapsend.com/" },
+  { slug: "starling-bank", name: "Starling Bank", phase: 2, indexWhenVerified: false, website: "https://www.starlingbank.com/" },
+  { slug: "chase-uk", name: "Chase UK", phase: 2, indexWhenVerified: false, website: "https://www.chase.co.uk/" },
+  { slug: "royal-bank-of-scotland", name: "Royal Bank of Scotland", phase: 2, indexWhenVerified: false, website: "https://www.rbs.co.uk/" },
+  { slug: "bank-of-scotland", name: "Bank of Scotland", phase: 2, indexWhenVerified: false, website: "https://www.bankofscotland.co.uk/" },
+  { slug: "ulster-bank", name: "Ulster Bank", phase: 2, indexWhenVerified: false, website: "https://www.ulsterbank.co.uk/" },
+  { slug: "ms-bank", name: "M&S Bank", phase: 2, indexWhenVerified: false, website: "https://bank.marksandspencer.com/" },
 ];
 
 /**

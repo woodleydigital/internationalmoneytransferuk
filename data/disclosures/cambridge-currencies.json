@@ -1,0 +1,49 @@
+{
+  "slug": "cambridge-currencies",
+  "url": "https://cambridgecurrencies.com/",
+  "fetchedAt": "2026-09-30T07:49:16.193Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Cambridge Currencies works with FCA-authorised payment partners — Currencycloud (FRN 900199) and ScioPay (FRN 927951) . All transfers are processed through their regulated infrastructure, with client funds safeguarded under UK regulations.",
+      "frns": [
+        "900199",
+        "927951"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "All transfers completed by phone with a dedicated specialist · FCA-authorised payment partners (Currencycloud FRN 900199, ScioPay FRN 927951) · Funds safeguarded",
+      "frns": [
+        "900199",
+        "927951"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "© Copyright 2023–2026 Cambridge Currencies Ltd. All Rights Reserved. Registered in England & Wales Number: 15402338 . Payments secured via FCA-regulated partners (FRN: 927951 / 900199) and DNB-regulated entities.",
+      "frns": [
+        "927951"
+      ],
+      "companyNumbers": [
+        "15402338"
+      ]
+    },
+    {
+      "text": "United Kingdom & Rest of World: Payment and e-money services are provided by The Currency Cloud Limited. Registered in England No. 06323311. Registered Office: 1 Sheldon Square, London, W2 6TT, United Kingdom. The Currency Cloud Limited is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money (FRN: 900199).",
+      "frns": [
+        "900199"
+      ],
+      "companyNumbers": [
+        "06323311"
+      ]
+    },
+    {
+      "text": "Payment services for Cambridge Currencies Ltd are also provided by sciopay Ltd. Sciopay Ltd is a company incorporated in England & Wales. Registration No: 12352935. Sciopay Ltd is licensed and regulated by HMRC as a Money Service Business (MSB). License No: XCML00000151326. Sciopay Ltd is authorised by the Financial Conduct Authority as an Authorised Payment Institution. Firm Reference Number: 927951.",
+      "frns": [
+        "927951"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

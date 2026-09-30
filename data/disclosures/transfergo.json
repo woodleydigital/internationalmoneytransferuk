@@ -1,0 +1,17 @@
+{
+  "slug": "transfergo",
+  "url": "https://www.transfergo.com/",
+  "fetchedAt": "2026-09-30T07:50:22.764Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "TransferGo Ltd is registered in England & Wales (No. 07914165). TransferGo is an authorised electronic money institution (EMI) authorised by the Financial Conduct Authority (FCA) under the Electronic Money Regulations 2011 (EMRs) and the Payment Services Regulations 2017 (PSRs) (FRN: 991295) to issue electronic money and provide payment services. Registered address: The Bower, 207 Old Street, London, EC1V 9NR, United Kingdom.",
+      "frns": [
+        "991295"
+      ],
+      "companyNumbers": [
+        "07914165"
+      ]
+    }
+  ]
+}

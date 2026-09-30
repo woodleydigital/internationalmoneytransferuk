@@ -1,0 +1,24 @@
+{
+  "slug": "chase-uk",
+  "url": "https://www.chase.co.uk/gb/en/",
+  "fetchedAt": "2026-09-30T07:50:28.610Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "J.P. Morgan Europe Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Our Financial Services Register number is 124579. Registered in England & Wales with company number 938937. Our registered office is 25 Bank Street, Canary Wharf, London, E14 5JP, United Kingdom.",
+      "frns": [
+        "124579"
+      ],
+      "companyNumbers": [
+        "00938937"
+      ]
+    },
+    {
+      "text": "J.P. Morgan Personal Investing is a J.P. Morgan company which offers investment products. Investments not guaranteed by Chase or JPMorgan Chase Bank, N.A. J.P. Morgan Personal Investing is a trading name of J.P. Morgan Personal Investing Limited, authorised and regulated by the Financial Conduct Authority in relation to certain investment services and restricted advice only. Financial Services Register: 552016. Registered in England & Wales with company number 07503666. Registered office: 25 Bank St, Canary Wharf, London E14 5JP.",
+      "frns": [],
+      "companyNumbers": [
+        "07503666"
+      ]
+    }
+  ]
+}

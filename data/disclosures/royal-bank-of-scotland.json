@@ -1,0 +1,16 @@
+{
+  "slug": "royal-bank-of-scotland",
+  "url": "https://www.rbs.co.uk/",
+  "fetchedAt": "2026-09-30T07:50:30.203Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "The Royal Bank of Scotland plc, Registered in Scotland No. SC083026. Registered Office: 36 St Andrew Square, Edinburgh, EH2 2YB. Financial Services Firm Reference Number 114724..",
+      "frns": [],
+      "companyNumbers": [
+        "SC083026"
+      ],
+      "url": "https://www.rbs.co.uk/myrewards/terms-and-exclusions.html"
+    }
+  ]
+}

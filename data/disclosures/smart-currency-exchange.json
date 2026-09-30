@@ -1,0 +1,22 @@
+{
+  "slug": "smart-currency-exchange",
+  "url": "https://www.smartcurrencyexchange.com/",
+  "fetchedAt": "2026-09-30T07:49:48.242Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Smart Currency Exchange Limited is authorised by the Financial Conduct Authority under the Payment Services Regulations 2017 (FRN 504509) for the provision of payment services.",
+      "frns": [
+        "504509"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "Registered in England No. 5282305. Smart® is a registered trademark of Smart Currency Exchange Limited.",
+      "frns": [],
+      "companyNumbers": [
+        "05282305"
+      ]
+    }
+  ]
+}

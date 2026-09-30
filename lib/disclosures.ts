@@ -130,8 +130,13 @@ export function findStatements(text: string): Statement[] {
   lines.forEach((line, i) => {
     const key = line.replace(/[.\s]+$/, "").toLowerCase();
     if (line.length < 20 || line.length > 800 || seen.has(key)) return;
-    const frns = regulatorAt[i] ? matchesOf(FRN_PATTERNS, line) : [];
     const companyNumbers = matchesOf(COMPANY_PATTERNS, line).map(normaliseCompanyNumber);
+    // "Registration number" can precede either; a number that is the company
+    // number (leading zeros aside) is not an FRN.
+    const asCompany = new Set(companyNumbers.map((c) => c.replace(/^0+/, "")));
+    const frns = (regulatorAt[i] ? matchesOf(FRN_PATTERNS, line) : []).filter(
+      (f) => !asCompany.has(f.replace(/^0+/, "")),
+    );
     const nearRegulator = regulatorAt.slice(Math.max(0, i - 2), i + 3).some(Boolean);
     if (frns.length || (companyNumbers.length && nearRegulator)) {
       seen.add(key);

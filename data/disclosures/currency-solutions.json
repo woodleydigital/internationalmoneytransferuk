@@ -1,0 +1,27 @@
+{
+  "slug": "currency-solutions",
+  "url": "https://www.currencysolutions.com/",
+  "fetchedAt": "2026-09-30T07:50:21.547Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Currency Solutions is the registered trademarks and trading names for Currency Solutions Ltd (Company Registration Number: 04864491 ) with registered office address at Hobbs Court, 2 Jacob Street, London, SE1 2BG, United Kingdom. Currency Solutions Ltd is authorised by the Financial Conduct Authority to provide regulated investment products and services including currency options (FCA Registration Number: 602082 ) and for the provision of payment services (FCA Registration Number: 512130 ). Currency Solutions Limited segregates and safeguards customer funds related to payment services as per regulation 23 of the Payments Services Regulations 2017. Currency Solutions Ltd is not covered by the Financial Service Compensation Scheme (FSCS).",
+      "frns": [
+        "602082",
+        "512130"
+      ],
+      "companyNumbers": [
+        "04864491"
+      ]
+    },
+    {
+      "text": "For clients based in the United Kingdom, payment and e-money services (Non MIFID related products) are provided by The Currency Cloud Limited. Registered in England No. 06323311. Registered Office: Registered Office: 1 Sheldon Square, London, W2 6TT, United Kingdom. The Currency Cloud Limited is authorized by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money (FRN: 900199)",
+      "frns": [
+        "900199"
+      ],
+      "companyNumbers": [
+        "06323311"
+      ]
+    }
+  ]
+}

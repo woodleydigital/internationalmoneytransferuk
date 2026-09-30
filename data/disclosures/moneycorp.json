@@ -1,0 +1,24 @@
+{
+  "slug": "moneycorp",
+  "url": "https://www.moneycorp.com/en-gb/about-us",
+  "fetchedAt": "2026-09-30T07:49:09.124Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "None of the information contained in this website constitutes, nor should be construed as financial advice. Indicative rates are displayed on our website. We use interbank rates as a reference, and these rates should only be used as a guide. Moneycorp is a trading name of TTT Moneycorp Limited, a company registered in England under registration number 738837. Its registered office address is at Floor 5, Zig Zag Building, 70 Victoria Street, London SW1E 6SQ and it is VAT registration number is 897 3934 54. TTT Moneycorp Limited is authorised by the Financial Conduct Authority under the Payment Service Regulation 2017 (firm reference number 308919) for the provision of payment services.",
+      "frns": [
+        "308919"
+      ],
+      "companyNumbers": [
+        "00738837"
+      ]
+    },
+    {
+      "text": "Moneycorp FRM is a trading name of Moneycorp Financial Risk Management Limited which is authorised and regulated by the Financial Conduct Authority for the provision of designated investment business (firm reference number 452443).",
+      "frns": [
+        "452443"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}
