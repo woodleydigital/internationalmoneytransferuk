@@ -1,10 +1,10 @@
 {
   "slug": "remitly",
-  "fetchedAt": "2026-09-30T03:26:40.971Z",
+  "fetchedAt": "2026-09-30T07:19:31.288Z",
   "status": "matched",
   "match": {
     "query": "https://www.remitly.com/gb/en",
-    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
       {
         "company_number": "09896841",

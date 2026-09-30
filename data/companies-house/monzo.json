@@ -1,10 +1,10 @@
 {
   "slug": "monzo",
-  "fetchedAt": "2026-09-30T03:26:25.894Z",
+  "fetchedAt": "2026-09-30T07:19:15.071Z",
   "status": "matched",
   "match": {
     "query": "https://monzo.com/",
-    "rule": "Company number taken from the regulatory statement on the provider's own website, and confirmed against the company's registered name.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
       {
         "company_number": "09446231",

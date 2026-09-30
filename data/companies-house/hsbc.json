@@ -1,20 +1,66 @@
 {
   "slug": "hsbc",
-  "fetchedAt": "2026-09-30T03:25:50.244Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T07:18:39.145Z",
+  "status": "matched",
   "match": {
-    "query": "HSBC",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://www.hsbc.co.uk/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
-      {
-        "company_number": "00014259",
-        "title": "HSBC BANK PLC"
-      },
       {
         "company_number": "09928412",
         "title": "HSBC UK BANK PLC"
       }
     ],
-    "outcome": "Ambiguous: 00014259, 09928412"
-  }
+    "outcome": "Matched 09928412 from the provider's website"
+  },
+  "company": {
+    "name": "HSBC UK BANK PLC",
+    "number": "09928412",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "2015-12-23",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "1 Centenary Square, Birmingham, B1 1HQ, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09928412"
+  },
+  "psc": [
+    {
+      "name": "Hsbc Holdings Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2021-06-21"
+    },
+    {
+      "name": "Hsbc Uk Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2017-03-21",
+      "ceased_on": "2021-06-21"
+    },
+    {
+      "name": "Hsbc Holdings Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-10-26",
+      "ceased_on": "2017-03-21"
+    }
+  ]
 }

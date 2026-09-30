@@ -1,20 +1,72 @@
 {
   "slug": "virgin-money",
-  "fetchedAt": "2026-09-30T03:25:56.483Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T07:18:44.386Z",
+  "status": "matched",
   "match": {
-    "query": "Virgin Money",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://uk.virginmoney.com/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, where it was the only stated company and the statement names it.",
     "candidates": [
       {
-        "company_number": "06952311",
-        "title": "VIRGIN MONEY LIMITED"
+        "company_number": "04056283",
+        "title": "CYB INTERMEDIARIES LIMITED"
       },
       {
-        "company_number": "09595911",
-        "title": "VIRGIN MONEY UK LIMITED"
+        "company_number": "06046870",
+        "title": "UINSURE LIMITED"
       }
     ],
-    "outcome": "No candidate with a payments SIC code"
-  }
+    "outcome": "Matched 06046870 from the provider's website"
+  },
+  "company": {
+    "name": "UINSURE LIMITED",
+    "number": "06046870",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2007-01-10",
+    "sicCodes": [
+      "62012",
+      "65120",
+      "65202",
+      "82200"
+    ],
+    "registeredOffice": "1st Floor, Xyz Building, 2 Hardman Boulevard, Manchester, M3 3AQ, England",
+    "lastAccountsMadeUpTo": "2026-01-31",
+    "accountsNextDue": "2027-10-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/06046870"
+  },
+  "psc": [
+    {
+      "name": "Holdings 2018 Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2018-03-15"
+    },
+    {
+      "name": "Mr Simon Julian Taylor",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent",
+        "voting-rights-50-to-75-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-06-30",
+      "ceased_on": "2018-03-15"
+    },
+    {
+      "name": "Mr Simon Stevens",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2018-05-01"
+    }
+  ]
 }
