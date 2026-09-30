@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { CompanyRecord } from "@/lib/companies-house";
-import { longDate } from "@/lib/site";
+import { longDate, PRIVACY_NOTICE_COMPLETE } from "@/lib/site";
 
 /** Values from Companies House, copied as returned, with the date and source beside them. */
 export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
@@ -19,7 +19,10 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
     ["Next accounts due", c.accountsNextDue ? longDate(c.accountsNextDue) : "Not stated"],
     ["Accounts overdue (as recorded by Companies House)", c.accountsOverdue ? "Yes" : "No"],
   ];
-  const psc = (record.psc ?? []).filter((p) => !p.ceased_on);
+  const current = (record.psc ?? []).filter((p) => !p.ceased_on);
+  const isPerson = (k?: string) => (k ?? "").startsWith("individual");
+  const psc = PRIVACY_NOTICE_COMPLETE ? current : current.filter((p) => !isPerson(p.kind));
+  const hiddenPeople = current.length - psc.length;
 
   return (
     <section aria-labelledby="companies-house" className="mt-8">
@@ -43,8 +46,17 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
       </dl>
 
       <h3 className="mt-6 font-semibold text-ink">Persons with significant control</h3>
+      {hiddenPeople > 0 && (
+        <p className="mt-2 text-sm">
+          {`${hiddenPeople} ${hiddenPeople === 1 ? "individual is" : "individuals are"} listed at Companies House. We do not show individuals' names yet; see the company's `}
+          <a href={`${c.url}/persons-with-significant-control`} rel="noopener">
+            Companies House record
+          </a>
+          .
+        </p>
+      )}
       {psc.length === 0 ? (
-        <p className="mt-2">None listed at Companies House.</p>
+        hiddenPeople === 0 && <p className="mt-2">None listed at Companies House.</p>
       ) : (
         <ul className="mt-2 space-y-2">
           {psc.map((p) => (

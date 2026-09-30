@@ -21,6 +21,12 @@ export const SITE = {
   },
 } as const;
 
+/**
+ * Individuals' names from public registers are shown only once the privacy
+ * notice names the legal entity, a contact email and the ICO registration.
+ */
+export const PRIVACY_NOTICE_COMPLETE = false;
+
 export const ID = {
   organization: `${SITE.url}/#organization`,
   website: `${SITE.url}/#website`,
