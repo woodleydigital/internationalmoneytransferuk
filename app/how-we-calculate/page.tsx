@@ -17,7 +17,7 @@ const graph = {
   "@graph": [
     {
       "@type": "Article",
-      "@id": `${SITE.url}/how-we-calculate#article`,
+      "@id": `${SITE.url}/how-we-calculate/#article`,
       headline: "How we calculate the exchange rate margin",
       datePublished: review.published,
       dateModified: review.reviewed,
@@ -25,7 +25,7 @@ const graph = {
       reviewedBy: { "@id": personId(MATT_WOODLEY) },
       publisher: { "@id": ID.organization },
       isPartOf: { "@id": ID.website },
-      mainEntityOfPage: `${SITE.url}/how-we-calculate`,
+      mainEntityOfPage: `${SITE.url}/how-we-calculate/`,
     },
     personSchema(MATT_WOODLEY),
     {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   title: "How we calculate the exchange rate margin",
   description:
     "The formulas, data source and limitations behind the FX margin checker: how total transfer cost is separated into a stated fee and the margin built into the exchange rate.",
-  alternates: { canonical: "/how-we-calculate" },
+  alternates: { canonical: "/how-we-calculate/" },
 };
 
 export default function Page() {
@@ -166,8 +166,8 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
       </p>
 
       <p className="mt-10">
-        <Link href="/" className="underline">
-          Back to the margin checker
+        <Link href="/compare/" className="underline">
+          Back to the cost comparison tool
         </Link>
       </p>
     </main>

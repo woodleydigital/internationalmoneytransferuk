@@ -1,9 +1,9 @@
 /**
  * FX margin computation.
  *
- * Implements docs/build-spec.md §1.3 and §1.4. Pure functions — no I/O, no
+ * Pure functions — no I/O, no
  * formatting, no framework. The provider's figures always arrive from the user;
- * we assert only arithmetic against a dated reference rate (build-spec §1.1).
+ * we assert only arithmetic against a dated reference rate.
  */
 
 /** Above this, treat the inputs as mistyped rather than render an absurd figure. */
@@ -88,7 +88,7 @@ function empty(status: MarginStatus, note: string): MarginResult {
 
 /**
  * Derive the payout in "rate" mode. The fee treatment genuinely changes the
- * answer, which is why build-spec §1.2 requires asking rather than assuming.
+ * answer, which is why we ask rather than assuming.
  */
 export function derivePayout(
   sendAmount: number,
@@ -156,7 +156,7 @@ export function computeMargin(input: MarginInput): MarginResult {
   };
 
   // A quote can legitimately beat the daily reference — timing, or a different
-  // reference source. Never present this as a profit (build-spec §1.4).
+  // reference source. Never present this as a profit.
   if (shortfall < 0) {
     return {
       ...result,

@@ -1,13 +1,24 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
+import { PROVIDERS, isIndexable, providerUrl } from "@/lib/providers";
 
-// Canonical, indexable URLs only. Parameterised checker results are noindex and
-// never listed here (build-spec §1.6.4).
+// Canonical, indexable URLs only. Noindex pages (Tier 3 profiles, pages awaiting
+// data) and parameterised results are never listed.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    { url: SITE.url, priority: 1 },
-    { url: `${SITE.url}/how-we-calculate`, priority: 0.8 },
-    { url: `${SITE.url}/about`, priority: 0.6 },
-    { url: `${SITE.url}/about/matt-woodley`, priority: 0.5 },
+  const pages = [
+    "/",
+    "/compare/",
+    "/check-a-provider/",
+    "/how-we-calculate/",
+    "/methodology/",
+    "/how-we-get-paid/",
+    "/code-of-ethics/",
+    "/corrections/",
+    "/about/",
+    "/about/matt-woodley/",
+    "/for-providers/",
+    "/entitymap.html",
   ];
+  const profiles = PROVIDERS.filter(isIndexable).map(providerUrl);
+  return [...pages, ...profiles].map((path) => ({ url: `${SITE.url}${path}` }));
 }

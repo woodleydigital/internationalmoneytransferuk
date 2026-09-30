@@ -1,11 +1,10 @@
 /**
  * Author and reviewer records — source of truth.
  *
- * Standard §1 rule 4 and S1 §6.5: identify people by their *actual* contribution.
+ * Identify people by their *actual* contribution.
  * Every field here is something we have been told. Nothing is inferred, rounded
- * up, or filled in to look better. Fabricated credentials are a critical failure
- * (standard §8), and a decorative expert profile is the specific anti-pattern
- * S1 §5.7 names.
+ * up, or filled in to look better. Fabricated credentials are a critical failure,
+ * and a decorative expert profile undermines trust.
  *
  * Do not add years of experience, employers, photographs, professional
  * memberships or profile links until they are supplied and verifiable.
@@ -24,7 +23,7 @@ export interface Person {
   name: string;
   jobTitle: string;
   credentials: Credential[];
-  /** What this person is actually competent to sign off — see §competence below. */
+  /** What this person is actually competent to sign off. */
   reviewScope: string[];
   /** What they are explicitly *not* signing off, and why. Rendered on the profile. */
   outOfScope: string[];
@@ -65,8 +64,8 @@ export const MATT_WOODLEY: Person = {
 
 export const PEOPLE: Person[] = [MATT_WOODLEY];
 
-export const personId = (p: Person) => `${SITE.url}/about/${p.slug}#person`;
-export const personUrl = (p: Person) => `/about/${p.slug}`;
+export const personId = (p: Person) => `${SITE.url}/about/${p.slug}/#person`;
+export const personUrl = (p: Person) => `/about/${p.slug}/`;
 
 /** Person node for JSON-LD. Only properties we can evidence. */
 export function personSchema(p: Person) {
@@ -93,12 +92,12 @@ export function personSchema(p: Person) {
 
 /**
  * Review metadata carried by a content page. Dates are the *substantive* review
- * dates — never bumped without a real review (standard §1 rule 7).
+ * dates — never bumped without a real review.
  */
 export interface ReviewMeta {
   reviewer: Person;
   published: string;
   reviewed: string;
-  /** Shorter for volatile financial facts (S1 §4.10). */
+  /** Shorter for volatile financial facts. */
   reviewIntervalMonths: number;
 }

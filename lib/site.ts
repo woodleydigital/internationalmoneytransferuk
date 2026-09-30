@@ -1,17 +1,19 @@
 /**
- * Entity source of truth — docs/seo-build-standard.md §4.
+ * Entity source of truth.
  *
  * Every visible mention and every JSON-LD node reads from here. Nothing on the
  * site may state these facts differently.
  *
- * legalName and the FCA fields are deliberately absent: they are unconfirmed
- * (standard §4, §5) and inventing them would be a critical failure.
+ * legalName and company fields are deliberately absent: they are unconfirmed,
+ * and inventing them would be a critical failure.
  */
 
 export const SITE = {
   name: "International Money Transfer UK",
   alternateName: "IMT UK",
   url: "https://internationalmoneytransfer.uk",
+  /** Sister site. Disclosed on /about/; cross-links are contextual only. */
+  sister: { name: "Currency Brokers UK", url: "https://www.currencybrokers.uk" },
   address: {
     streetAddress: "Harley House, 29 Cambray Pl",
     addressLocality: "Cheltenham",
@@ -24,7 +26,7 @@ export const SITE = {
 export const ID = {
   organization: `${SITE.url}/#organization`,
   website: `${SITE.url}/#website`,
-  marginChecker: `${SITE.url}/#margin-checker`,
+  marginChecker: `${SITE.url}/compare/#margin-checker`,
 } as const;
 
 /** Formatting helpers — kept with the entity record so money renders consistently. */

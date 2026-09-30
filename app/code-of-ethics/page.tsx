@@ -1,0 +1,41 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Breadcrumbs, H1, JsonLd, P, webPage } from "@/components/Page";
+
+export const metadata: Metadata = {
+  title: "Code of ethics",
+  description: "The editorial standards International Money Transfer UK works to.",
+  alternates: { canonical: "/code-of-ethics/" },
+};
+
+const RULES: [string, string][] = [
+  ["Facts come from source.", "Regulatory and company facts are taken from the FCA Register, Companies House and the Financial Ombudsman Service, and each shows when it was last verified."],
+  ["We say what we don't know.", "Where we have not verified something, the page says so. We do not estimate, round up or fill gaps."],
+  ["Negative findings get a second look.", "Anything that reflects badly on a firm is checked by a person before it is published, and the firm can respond."],
+  ["Money does not buy position.", "No provider can pay to be listed, ranked or described differently."],
+  ["Commercial links are labelled.", "Anything we are paid for is marked and kept separate from the facts."],
+  ["Mistakes are corrected in public.", "Corrections are made promptly and recorded in our corrections log."],
+  ["Plain English.", "We explain any technical term we use, and write in British English."],
+];
+
+export default function Page() {
+  return (
+    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+      <JsonLd data={webPage("/code-of-ethics/", "Code of ethics")} />
+      <Breadcrumbs trail={[{ name: "Code of ethics" }]} />
+      <H1>Code of ethics</H1>
+      <ol className="mt-6 max-w-prose list-decimal space-y-3 pl-5">
+        {RULES.map(([title, body]) => (
+          <li key={title}>
+            <strong className="text-ink">{title}</strong> {body}
+          </li>
+        ))}
+      </ol>
+      <P>
+        <Link href="/corrections/" className="underline">Corrections log</Link>
+        {" · "}
+        <Link href="/how-we-get-paid/" className="underline">How we get paid</Link>
+      </P>
+    </main>
+  );
+}

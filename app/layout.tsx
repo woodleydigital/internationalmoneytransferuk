@@ -6,22 +6,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Check the margin on your international money transfer",
+    default: "International money transfer providers: A–Z directory",
     template: `%s | ${SITE.name}`,
   },
   description:
-    "Enter the rate or payout you were quoted on an international transfer and see the exchange rate margin built into it, separated from any stated fee.",
+    "A directory of UK international money transfer providers, built from the FCA Register, Companies House and Financial Ombudsman data.",
   icons: { icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }] },
 };
 
-/**
- * Site-wide entity graph. Static, server-rendered, and describing only what the
- * pages actually render (standard §1 rule 4).
- *
- * The tool is a WebApplication, not a FinancialProduct: we do not provide
- * financial products, and asserting otherwise while FCA status is unresolved
- * would be a critical failure (build-spec §4).
- */
+/** Site-wide entity graph: static, and describing only what the pages render. */
 const graph = {
   "@context": "https://schema.org",
   "@graph": [
@@ -32,8 +25,7 @@ const graph = {
       alternateName: SITE.alternateName,
       url: SITE.url,
       address: { "@type": "PostalAddress", ...SITE.address },
-      // Permanent URL. Search engines associate this with the entity over time —
-      // see docs/brand-guidelines.md §7 before ever changing it.
+      // Permanent URL: search engines associate it with the entity over time.
       logo: `${SITE.url}/brand/logo-imt-uk.svg`,
     },
     {
@@ -43,23 +35,29 @@ const graph = {
       name: SITE.name,
       publisher: { "@id": ID.organization },
     },
-    {
-      "@type": "WebApplication",
-      "@id": ID.marginChecker,
-      name: "FX Margin Checker",
-      applicationCategory: "FinanceApplication",
-      description:
-        "Compares a quoted international transfer against the mid-market reference rate and shows the exchange rate margin applied.",
-      isAccessibleForFree: true,
-      publisher: { "@id": ID.organization },
-    },
   ],
 };
+
+const NAV = [
+  { href: "/", label: "Directory" },
+  { href: "/compare/", label: "Compare" },
+  { href: "/check-a-provider/", label: "Check a provider" },
+];
+
+const FOOTER = [
+  { href: "/about/", label: "About" },
+  { href: "/methodology/", label: "Methodology" },
+  { href: "/how-we-get-paid/", label: "How we get paid" },
+  { href: "/code-of-ethics/", label: "Code of ethics" },
+  { href: "/corrections/", label: "Corrections" },
+  { href: "/for-providers/", label: "For providers" },
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB">
       <head>
+        <link rel="entitymap" type="application/json" href={`${SITE.url}/entitymap.json`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
@@ -67,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-white font-sans text-body antialiased">
         <header className="border-b border-line">
-          <div className="mx-auto flex max-w-3xl items-baseline justify-between px-5 py-4">
+          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 px-5 py-4">
             <Link href="/" className="flex items-center gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -81,10 +79,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {SITE.name}
               </span>
             </Link>
-            <nav>
-              <Link href="/how-we-calculate" className="text-sm underline">
-                How we calculate this
-              </Link>
+            <nav className="flex gap-4 text-sm">
+              {NAV.map((n) => (
+                <Link key={n.href} href={n.href} className="underline">
+                  {n.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </header>
@@ -107,20 +107,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {SITE.address.postalCode}, United Kingdom
             </address>
             <p className="mt-4 max-w-prose">
-              This tool reports the difference between a rate you were quoted and a published
-              mid-market reference rate. It is information, not advice, and it is not a quote.
-              We are not a bank, a broker or a payment provider.
+              A directory of money transfer providers built from the FCA Register, Companies
+              House and the Financial Ombudsman Service. We are not a bank, a broker or a
+              payment provider, and nothing here is financial advice.
             </p>
             <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-              <Link href="/about" className="underline">
-                About
-              </Link>
-              <Link href="/about/matt-woodley" className="underline">
-                Matt Woodley
-              </Link>
-              <Link href="/how-we-calculate" className="underline">
-                How we calculate this
-              </Link>
+              {FOOTER.map((n) => (
+                <Link key={n.href} href={n.href} className="underline">
+                  {n.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </footer>

@@ -5,7 +5,7 @@ import { computeMargin, derivePayout, IMPLAUSIBLE_TOTAL_PCT } from "./margin.ts"
 const close = (a: number, b: number, tol = 1e-6) =>
   assert.ok(Math.abs(a - b) < tol, `expected ${a} ≈ ${b}`);
 
-test("worked example from build-spec §1.6 (£50,000 @ 1.1200 vs 1.1500)", () => {
+test("worked example (£50,000 @ 1.1200 vs 1.1500)", () => {
   const r = computeMargin({ sendAmount: 50_000, midRate: 1.15, quotedRate: 1.12 });
   assert.equal(r.status, "ok");
   close(r.receiveAmount, 56_000);
@@ -88,7 +88,7 @@ test("invalid input is rejected without throwing", () => {
   );
 });
 
-test("a zero-fee broker's cost is entirely margin (standard §4.2.1)", () => {
+test("a zero-fee broker's cost is entirely margin", () => {
   const r = computeMargin({
     sendAmount: 250_000,
     midRate: 1.15,

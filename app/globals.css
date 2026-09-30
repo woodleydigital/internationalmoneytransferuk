@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-/* Palette — docs/brand-guidelines.md §3. Contrast ratios there are computed,
-   not assumed. Do not introduce a colour that is not in this list. */
+/* Palette. Contrast ratios were computed, not assumed. Do not introduce a
+   colour that is not in this list. */
 @theme {
   --color-brand-900: #062626;
   --color-brand-800: #0A3234;
@@ -13,7 +13,7 @@
   --color-brand-50:  #F0F7F7;
 
   /* Reserved for the margin — the cost the user was not shown. Not a general
-     highlight. Deliberately not red: we report, we do not accuse (§1.5). */
+     highlight. Deliberately not red: we report, we do not accuse. */
   --color-accent-700: #7A5210;
   --color-accent-600: #96661A;
   --color-accent-500: #B8811F;
@@ -34,7 +34,7 @@
                "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Reserve the result block so a rate refresh cannot shift layout (build-spec §1.6.5). */
+/* Reserve the result block so a rate refresh cannot shift layout. */
 .result-slot {
   min-height: 13rem;
 }

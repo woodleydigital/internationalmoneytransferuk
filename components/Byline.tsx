@@ -4,7 +4,7 @@ import { personUrl } from "@/lib/people";
 import { longDate } from "@/lib/site";
 
 /**
- * Visible authorship and review dates. Standard §1 rule 7 and §8: schema may
+ * Visible authorship and review dates. Schema may
  * never assert a reviewer the page does not show, and a date is only bumped by a
  * real review.
  */

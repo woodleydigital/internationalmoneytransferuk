@@ -8,7 +8,7 @@ const p = MATT_WOODLEY;
 export const metadata: Metadata = {
   title: `${p.name} — ${p.jobTitle}`,
   description: `${p.name} is ${p.jobTitle} of ${SITE.name}. What he reviews on this site, his background, and the limits of that review.`,
-  alternates: { canonical: `/about/${p.slug}` },
+  alternates: { canonical: `/about/${p.slug}/` },
 };
 
 /**
@@ -51,7 +51,7 @@ export default function Page() {
           Home
         </Link>
         {" / "}
-        <Link href="/about" className="underline">
+        <Link href="/about/" className="underline">
           About
         </Link>
         {` / ${p.name}`}
@@ -102,7 +102,7 @@ export default function Page() {
       </p>
 
       <p className="mt-10">
-        <Link href="/about" className="text-brand-600 underline">
+        <Link href="/about/" className="text-brand-600 underline">
           About {SITE.name}
         </Link>
       </p>

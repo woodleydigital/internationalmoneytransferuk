@@ -1,13 +1,13 @@
 /**
  * Mid-market reference rates from the Frankfurter API.
  *
- * See docs/seo-build-standard.md §6. These are central bank reference, spot and
+ * These are central bank reference, spot and
  * mid rates. No consumer receives them. Nothing here may be presented as a rate
  * anyone will be given.
  *
  * We use the blended rate rather than a single provider: verified 2026-09-02,
  * Bank of England lagged the blend by five days and covers only 27 currencies,
- * excluding AED. See docs/build-spec.md §1.5.
+ * excluding AED.
  */
 
 const API = "https://api.frankfurter.dev/v2";
@@ -40,7 +40,7 @@ interface ExpandedRecord extends RateResponse {
 /**
  * Fetch the blended mid-market rate. Returns null on any failure so the caller
  * can degrade honestly rather than render a fabricated or stale-as-current
- * figure (build-spec §1.4).
+ * figure.
  */
 export async function getMidRate(base: string, quote: string): Promise<MidRate | null> {
   if (base === quote) {
@@ -71,7 +71,7 @@ export async function getMidRate(base: string, quote: string): Promise<MidRate |
 }
 
 /**
- * Corridors for large-value transfers (standard §4.2). Deliberately not the full
+ * Corridors for large-value transfers. Deliberately not the full
  * 165-currency list: these follow our use cases, and a short list is a better
  * control for the audience than an exhaustive one.
  */
