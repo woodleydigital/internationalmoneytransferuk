@@ -129,3 +129,9 @@ test("stated company: a partner firm named in a product statement is not the pro
   ]);
   assert.equal(chooseStatedCompany("Virgin Money", statements, profiles), null);
 });
+
+test("currency-firm and partnership-style legal names are recognised", () => {
+  assert.ok(nameMatches("Caxton", "CAXTON FX LIMITED"));
+  assert.ok(nameMatches("Coutts", "COUTTS & COMPANY"));
+  assert.ok(!nameMatches("Caxton", "CAXTON PROPERTY LIMITED"));
+});

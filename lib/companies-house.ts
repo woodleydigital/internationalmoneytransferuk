@@ -46,6 +46,10 @@ const SUFFIXES = [
   "financial services limited",
   "money transfer limited",
   "europe limited",
+  "fx limited",
+  "fx ltd",
+  "and company",
+  "and co limited",
 ];
 
 export interface SearchItem {
