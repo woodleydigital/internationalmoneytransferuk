@@ -7,7 +7,7 @@ import { H2, JsonLd, P, PageFrame } from "@/components/Page";
 export const metadata: Metadata = {
   title: `About ${SITE.name}`,
   description:
-    "Who runs International Money Transfer UK, how the directory is built, and our relationship with Currency Brokers UK.",
+    "Who runs International Money Transfer UK, how the directory is built, and who owns it.",
   alternates: { canonical: "/about/" },
 };
 
