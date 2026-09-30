@@ -54,6 +54,20 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 - **Register data pending:** anything less. `noindex`.
 The workbook's "Testing" rows and the "Human review?" column no longer apply.
 
+## Data licensing (checked 2026-09-30)
+- **Companies House:** Open Government Licence v3.0 — commercial reuse allowed. Attribute
+  it on every page that shows its data ("Contains public sector information licensed under
+  the Open Government Licence v3.0", source Companies House). Officer and PSC names are
+  personal data under UK GDPR: publish a privacy notice (lawful basis: legitimate
+  interests) before showing them, never show dates of birth, and honour objections.
+- **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
+  must not be used "to provide a data feed to any comparison table or any other website
+  without our written permission", and the Register API is "designed for individual
+  look-ups rather than bulk data access". The paid Register Extract Service
+  (£6,012–£9,445 a year plus SDM fees, ex VAT) prohibits sharing on its own-business
+  licence. Do not build FCA ingestion or switch on `/check-a-provider/` live results until
+  the FCA has confirmed in writing what may be displayed. Never imply FCA endorsement.
+
 ## Data pipeline rules (critical — YMYL and defamation risk)
 - Facts (FRN, status, permissions, company number, dates) flow from the **FCA Register API** and **Companies House API** into the database via plain code. The LLM never generates or "remembers" these values.
 - LLM extraction from provider websites returns JSON against a fixed schema **plus the exact source snippet**; validate before saving, reject on failure.
