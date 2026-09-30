@@ -187,12 +187,17 @@ export function companySummary(p: CompanyProfile): NonNullable<CompanyRecord["co
   };
 }
 
+/** Raised when Companies House rejects the key: the whole run is invalid. */
+export class AuthError extends Error {}
+
 /** Minimal client. Throws on HTTP errors so the caller can record them. */
 export function client(apiKey: string, fetchImpl: typeof fetch = fetch) {
   const auth = `Basic ${Buffer.from(`${apiKey}:`).toString("base64")}`;
   async function get<T>(path: string): Promise<T | null> {
     const res = await fetchImpl(`${CH_API}${path}`, { headers: { Authorization: auth } });
     if (res.status === 404) return null;
+    if (res.status === 401 || res.status === 403)
+      throw new AuthError(`Companies House rejected the API key (${res.status}).`);
     if (!res.ok) throw new Error(`Companies House returned ${res.status} for ${path}`);
     return (await res.json()) as T;
   }

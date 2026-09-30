@@ -15,6 +15,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PROVIDERS } from "../lib/providers.ts";
 import {
+  AuthError,
   MATCH_RULE,
   client,
   companySummary,
@@ -72,6 +73,11 @@ for (const p of PROVIDERS) {
       record.match.outcome = hits.length ? "No candidate with a payments SIC code" : "No name match";
     }
   } catch (e) {
+    // A rejected key invalidates the run: stop without touching any record.
+    if (e instanceof AuthError) {
+      console.error(`${e.message} Check the COMPANIES_HOUSE_API_KEY secret. No records were changed.`);
+      process.exit(1);
+    }
     record.status = "error";
     record.error = e instanceof Error ? e.message : String(e);
     delete record.company;
