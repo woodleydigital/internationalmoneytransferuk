@@ -1,0 +1,39 @@
+{
+  "slug": "coutts",
+  "url": "https://www.coutts.com/",
+  "fetchedAt": "2026-09-30T08:12:28.780Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "© Copyright Coutts & Co 2026. Registered in England and Wales No. 36695. Registered office: 440 Strand, London WC2R 0QS. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Financial Services Firm Reference Number 122287.",
+      "frns": [
+        "122287"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "Coutts & Co is registered in England and Wales No. 36695. Registered office: 440 Strand, London WC2R 0QS. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Financial Services Firm Reference Number 122287. Calls may be recorded",
+      "frns": [
+        "122287"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.coutts.com/important-information.html"
+    },
+    {
+      "text": "Coutts & Co is registered in England and Wales No. 36695. Registered office 440 Strand, London WC2R 0QS. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Financial Services Firm Reference Number 122287. Registered VAT number: GB 243852752.",
+      "frns": [
+        "122287"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.coutts.com/important-information.html"
+    },
+    {
+      "text": "Coutts & Co is registered in England and Wales No. 36695. Registered office: 440 Strand, London WC2R 0QS. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Financial Services Firm Reference Number 122287.",
+      "frns": [
+        "122287"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.coutts.com/important-information.html"
+    }
+  ]
+}

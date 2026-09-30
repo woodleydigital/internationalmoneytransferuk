@@ -1,0 +1,15 @@
+{
+  "slug": "danske-bank",
+  "url": "https://danskebank.co.uk/personal",
+  "fetchedAt": "2026-09-30T08:12:18.728Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Danske Bank is a trading name of Northern Bank Limited. Registered in Northern Ireland R568. Registered office: Donegall Square West, Belfast BT1 6JS. Northern Bank Limited is a member of the Danske Bank Group. Northern Bank Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and Prudential Regulation Authority. Complaints should be addressed to our Legal Department. Northern Bank Limited is entered in the Register maintained by the Financial Conduct Authority, Financial Services Register registration number 122261. VAT number GB853 7590 92.",
+      "frns": [
+        "122261"
+      ],
+      "companyNumbers": []
+    }
+  ]
+}

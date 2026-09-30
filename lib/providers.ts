@@ -88,6 +88,14 @@ export const PROVIDERS: Provider[] = [
   { slug: "bank-of-scotland", name: "Bank of Scotland", phase: 2, indexWhenVerified: false, website: "https://www.bankofscotland.co.uk/" },
   { slug: "ulster-bank", name: "Ulster Bank", phase: 2, indexWhenVerified: false, website: "https://www.ulsterbank.co.uk/" },
   { slug: "ms-bank", name: "M&S Bank", phase: 2, indexWhenVerified: false, website: "https://bank.marksandspencer.com/" },
+  { slug: "caxton", name: "Caxton", phase: 2, indexWhenVerified: false, website: "https://www.caxton.co.uk/" },
+  { slug: "hamilton-court-fx", name: "Hamilton Court FX", phase: 2, indexWhenVerified: false, website: "https://www.hamiltoncourtfx.com/" },
+  { slug: "fc-exchange", name: "FC Exchange", phase: 2, indexWhenVerified: false, website: "https://www.fcexchange.co.uk/" },
+  { slug: "pure-fx", name: "Pure FX", phase: 2, indexWhenVerified: false, website: "https://www.purefx.co.uk/" },
+  { slug: "danske-bank", name: "Danske Bank", phase: 2, indexWhenVerified: false, website: "https://danskebank.co.uk/" },
+  { slug: "aib-ni", name: "AIB (NI)", phase: 2, indexWhenVerified: false, website: "https://aibni.co.uk/" },
+  { slug: "handelsbanken", name: "Handelsbanken", phase: 2, indexWhenVerified: false, website: "https://www.handelsbanken.co.uk/" },
+  { slug: "coutts", name: "Coutts", phase: 2, indexWhenVerified: false, website: "https://www.coutts.com/" },
 ];
 
 /**
