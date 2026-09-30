@@ -6,7 +6,8 @@ Google Fonts.
 
     pip install fonttools uharfbuzz
     python3 scripts/make-logo.py FONT.ttf OUT_PREFIX [--size 21] [--track 0.08] [--upper] [--rule]
-                                 [--mark exchange|pound|bars]
+                                 [--mark pound-fine|pound-open|pound|exchange|bars]
+                                 [--pound-font FONT.ttf]
 
 Writes OUT_PREFIX.svg and OUT_PREFIX-reversed.svg. The /brand/ URLs are permanent:
 regenerate in place, never rename.
@@ -63,33 +64,49 @@ def mark_exchange():
             f'<path d="M37 30.5H12M18.5 24L12 30.5L18.5 37" stroke="{GOLD}"/></g>')
 
 
-def mark_pound(tt, font_path):
-    """A pound sign inside two circling arrows."""
+# Styles for the pound mark: tile behind it, arc stroke, arrowhead size, radius,
+# pound size, and colours (arcs, arrowheads, pound) on light and dark grounds.
+POUND_STYLES = {
+    "pound": dict(tile=True, stroke=3.2, head=4.2, r=15.5, size=21,
+                  light=(BARS[1], GOLD, BARS[0]), dark=(BARS[1], GOLD, BARS[0])),
+    # Fine white rings on the tile, a gold pound: quieter and more refined.
+    "pound-fine": dict(tile=True, stroke=2.2, head=3.0, r=15.5, size=19,
+                       light=(BARS[0], BARS[0], GOLD), dark=(BARS[0], BARS[0], GOLD)),
+    # No tile: a single-colour ring around a gold pound.
+    "pound-open": dict(tile=False, stroke=2.6, head=3.4, r=20, size=24,
+                       light=(INK, INK, GOLD), dark=(INK_REV, INK_REV, GOLD)),
+}
+
+
+def mark_pound(style, pound_font, reversed_):
+    """A pound sign inside two arrows circling it: money changing hands and currency."""
+    st = POUND_STYLES[style]
+    arc_c, head_c, pound_c = st["dark" if reversed_ else "light"]
     cx = cy = 24
-    r = 15.5
+    r, h = st["r"], st["head"]
 
     def pt(a):
         return cx + r * math.cos(math.radians(a)), cy + r * math.sin(math.radians(a))
 
-    def arc(a0, a1, colour):
+    def arc(a0, a1):
         (x0, y0), (x1, y1) = pt(a0), pt(a1)
-        # arrowhead at the end of the arc, pointing along the clockwise tangent
+        # Open chevron at the end of the arc, pointing along the clockwise tangent.
         t = math.radians(a1 + 90)
         tx, ty = math.cos(t), math.sin(t)
         nx, ny = -ty, tx
-        h = 4.2
         hx1, hy1 = x1 - tx * h + nx * h, y1 - ty * h + ny * h
         hx2, hy2 = x1 - tx * h - nx * h, y1 - ty * h - ny * h
-        return (f'<path d="M{ntos(x0)} {ntos(y0)}A{r} {r} 0 0 1 {ntos(x1)} {ntos(y1)}'
-                f'M{ntos(hx1)} {ntos(hy1)}L{ntos(x1)} {ntos(y1)}L{ntos(hx2)} {ntos(hy2)}" stroke="{colour}"/>')
+        return (f'<path d="M{ntos(x0)} {ntos(y0)}A{r} {r} 0 0 1 {ntos(x1)} {ntos(y1)}" stroke="{arc_c}"/>'
+                f'<path d="M{ntos(hx1)} {ntos(hy1)}L{ntos(x1)} {ntos(y1)}L{ntos(hx2)} {ntos(hy2)}" stroke="{head_c}"/>')
 
-    d, w, cap = shape(tt, font_path, "£", 21, 0)
-    glyph = f'<path transform="translate({ntos(cx - w / 2)} {ntos(cy + cap / 2)})" d="{d}" fill="{BARS[0]}"/>'
-    return ('<g fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">'
-            + arc(200, 335, BARS[1]) + arc(20, 155, GOLD) + '</g>' + glyph)
+    tt = TTFont(pound_font)
+    d, w, cap = shape(tt, pound_font, "£", st["size"], 0)
+    glyph = f'<path transform="translate({ntos(cx - w / 2)} {ntos(cy + cap / 2)})" d="{d}" fill="{pound_c}"/>'
+    return (f'<g fill="none" stroke-width="{st["stroke"]}" stroke-linecap="round" stroke-linejoin="round">'
+            + arc(205, 330) + arc(25, 150) + '</g>' + glyph), st["tile"]
 
 
-def build(font_path, size, track, upper, rule, reversed_, mark_kind="bars"):
+def build(font_path, size, track, upper, rule, reversed_, mark_kind="bars", pound_font=None):
     tt = TTFont(font_path)
     lines = [l.upper() for l in LINES] if upper else LINES
     shaped = [shape(tt, font_path, l, size, track) for l in lines]
@@ -109,9 +126,12 @@ def build(font_path, size, track, upper, rule, reversed_, mark_kind="bars"):
         parts.append(f'<rect x="{tx}" y="{ntos(y - 0.6)}" width="{ntos(width)}" height="1.2" fill="{GOLD}"/>')
 
     k = MARK / 48
-    mark = ("" if reversed_ else f'<rect width="{MARK}" height="{MARK}" rx="{ntos(11 * k)}" fill="#062626"/>')
-    inner = {"bars": mark_bars, "exchange": mark_exchange}.get(mark_kind)
-    inner = inner() if inner else mark_pound(tt, font_path)
+    if mark_kind in POUND_STYLES:
+        inner, tile = mark_pound(mark_kind, pound_font or font_path, reversed_)
+    else:
+        inner, tile = {"bars": mark_bars, "exchange": mark_exchange}[mark_kind](), True
+    mark = (f'<rect width="{MARK}" height="{MARK}" rx="{ntos(11 * k)}" fill="#062626"/>'
+            if tile and not reversed_ else "")
     mark += f'<g transform="scale({k:.4f})">{inner}</g>'
     W = ntos(tx + width + 1)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {MARK}" width="{W}" '
@@ -127,8 +147,9 @@ if __name__ == "__main__":
     a.add_argument("--track", type=float, default=0)
     a.add_argument("--upper", action="store_true")
     a.add_argument("--rule", action="store_true")
-    a.add_argument("--mark", choices=["bars", "exchange", "pound"], default="exchange")
+    a.add_argument("--mark", choices=["bars", "exchange", *POUND_STYLES], default="pound-fine")
+    a.add_argument("--pound-font", help="font for the £ in the mark (defaults to FONT)")
     o = a.parse_args()
     for rev, suffix in ((False, ""), (True, "-reversed")):
         with open(f"{o.out}{suffix}.svg", "w") as f:
-            f.write(build(o.font, o.size, o.track, o.upper, o.rule, rev, o.mark))
+            f.write(build(o.font, o.size, o.track, o.upper, o.rule, rev, o.mark, o.pound_font))
