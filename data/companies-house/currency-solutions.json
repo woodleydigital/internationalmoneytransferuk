@@ -1,0 +1,67 @@
+{
+  "slug": "currency-solutions",
+  "fetchedAt": "2026-09-30T07:56:08.283Z",
+  "status": "matched",
+  "match": {
+    "query": "https://www.currencysolutions.com/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "04864491",
+        "title": "CURRENCY SOLUTIONS LIMITED"
+      },
+      {
+        "company_number": "06323311",
+        "title": "THE CURRENCY CLOUD LIMITED"
+      }
+    ],
+    "outcome": "Matched 04864491 from the provider's website"
+  },
+  "company": {
+    "name": "CURRENCY SOLUTIONS LIMITED",
+    "number": "04864491",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2003-08-13",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Unit A, 4th Floor Hobbs Court, 2 Jacob Street, London, SE1 2BG, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-07-31",
+    "accountsNextDue": "2027-04-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/04864491"
+  },
+  "psc": [
+    {
+      "name": "Currency Solutions Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2019-06-12"
+    },
+    {
+      "name": "Dr. Tien Tran",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-07-01",
+      "ceased_on": "2019-06-12"
+    },
+    {
+      "name": "Mr Robert Lee Griffith",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent"
+      ],
+      "notified_on": "2016-07-01",
+      "ceased_on": "2019-06-12"
+    }
+  ]
+}

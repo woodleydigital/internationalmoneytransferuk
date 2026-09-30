@@ -1,0 +1,16 @@
+{
+  "slug": "torfx",
+  "fetchedAt": "2026-09-30T07:55:44.885Z",
+  "status": "unmatched",
+  "match": {
+    "query": "TorFX",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "08502656",
+        "title": "TORFX LTD"
+      }
+    ],
+    "outcome": "No candidate with a payments SIC code"
+  }
+}

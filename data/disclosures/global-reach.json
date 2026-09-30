@@ -1,8 +1,8 @@
 {
   "slug": "global-reach",
   "url": "https://www.globalreachpartners.com/",
-  "fetchedAt": "2026-09-30T07:49:17.386Z",
+  "fetchedAt": "2026-09-30T07:53:29.874Z",
   "status": "error",
   "statements": [],
-  "error": "HTTP 503"
+  "error": "fetch failed"
 }

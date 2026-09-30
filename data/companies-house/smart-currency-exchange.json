@@ -1,0 +1,45 @@
+{
+  "slug": "smart-currency-exchange",
+  "fetchedAt": "2026-09-30T07:56:01.707Z",
+  "status": "matched",
+  "match": {
+    "query": "https://www.smartcurrencyexchange.com/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "05282305",
+        "title": "SMART CURRENCY EXCHANGE LIMITED"
+      }
+    ],
+    "outcome": "Matched 05282305 from the provider's website"
+  },
+  "company": {
+    "name": "SMART CURRENCY EXCHANGE LIMITED",
+    "number": "05282305",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2004-11-10",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "9th Floor 1 Lyric Square, London, Greater London, W6 0NB, England",
+    "lastAccountsMadeUpTo": "2025-09-28",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/05282305"
+  },
+  "psc": [
+    {
+      "name": "Sce Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "chase-uk",
+  "fetchedAt": "2026-09-30T07:56:16.332Z",
+  "status": "matched",
+  "match": {
+    "query": "https://www.chase.co.uk/gb/en/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "00938937",
+        "title": "J.P. MORGAN EUROPE LIMITED"
+      },
+      {
+        "company_number": "07503666",
+        "title": "J.P. MORGAN PERSONAL INVESTING LIMITED"
+      }
+    ],
+    "outcome": "Matched 00938937 from the provider's website"
+  },
+  "company": {
+    "name": "J.P. MORGAN EUROPE LIMITED",
+    "number": "00938937",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "1968-09-18",
+    "sicCodes": [
+      "82990"
+    ],
+    "registeredOffice": "25 Bank Street, Canary Wharf, London, E14 5JP",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/00938937"
+  },
+  "psc": [
+    {
+      "name": "J.P. Morgan Capital Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2019-11-11"
+    },
+    {
+      "name": "J.P. Morgan Securities Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2019-11-11"
+    }
+  ]
+}

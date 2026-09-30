@@ -1,0 +1,20 @@
+{
+  "slug": "global-reach",
+  "fetchedAt": "2026-09-30T07:55:58.776Z",
+  "status": "unmatched",
+  "match": {
+    "query": "Global Reach",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "07448256",
+        "title": "GLOBAL REACH LIMITED"
+      },
+      {
+        "company_number": "06511723",
+        "title": "GLOBAL REACH INTERNATIONAL LIMITED"
+      }
+    ],
+    "outcome": "No candidate with a payments SIC code"
+  }
+}

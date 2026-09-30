@@ -1,0 +1,24 @@
+{
+  "slug": "equals-money",
+  "fetchedAt": "2026-09-30T07:56:04.670Z",
+  "status": "unmatched",
+  "match": {
+    "query": "Equals Money",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "05539698",
+        "title": "EQUALS MONEY PLC"
+      },
+      {
+        "company_number": "09558664",
+        "title": "EQUALS MONEY INTERNATIONAL LIMITED"
+      },
+      {
+        "company_number": "06268340",
+        "title": "EQUALS MONEY UK LIMITED"
+      }
+    ],
+    "outcome": "Ambiguous: 05539698, 09558664, 06268340"
+  }
+}

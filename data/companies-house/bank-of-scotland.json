@@ -1,0 +1,45 @@
+{
+  "slug": "bank-of-scotland",
+  "fetchedAt": "2026-09-30T07:56:20.720Z",
+  "status": "matched",
+  "match": {
+    "query": "Bank of Scotland",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "SC327000",
+        "title": "BANK OF SCOTLAND PLC"
+      }
+    ],
+    "outcome": "Matched SC327000"
+  },
+  "company": {
+    "name": "BANK OF SCOTLAND PLC",
+    "number": "SC327000",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "2007-09-17",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "The Mound, Edinburgh, EH1 1YZ",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000"
+  },
+  "psc": [
+    {
+      "name": "Hbos Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}

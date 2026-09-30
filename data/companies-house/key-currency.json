@@ -1,0 +1,78 @@
+{
+  "slug": "key-currency",
+  "fetchedAt": "2026-09-30T07:55:51.487Z",
+  "status": "matched",
+  "match": {
+    "query": "Key Currency",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "09603083",
+        "title": "KEY CURRENCY LIMITED"
+      }
+    ],
+    "outcome": "Matched 09603083"
+  },
+  "company": {
+    "name": "KEY CURRENCY LIMITED",
+    "number": "09603083",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2015-05-21",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "42 Lytton Road, Barnet, EN5 5BY, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09603083"
+  },
+  "psc": [
+    {
+      "name": "Key Currency Trustee Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-05-01"
+    },
+    {
+      "name": "Mr Andrew John Gibson",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent",
+        "voting-rights-25-to-50-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-10-01",
+      "ceased_on": "2024-05-01"
+    },
+    {
+      "name": "Mr James Stuart Pinkney",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent",
+        "voting-rights-25-to-50-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-10-01",
+      "ceased_on": "2024-05-01"
+    },
+    {
+      "name": "Mr Jonathan Christopher Pinkney",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent",
+        "voting-rights-25-to-50-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-10-01",
+      "ceased_on": "2024-05-01"
+    }
+  ]
+}

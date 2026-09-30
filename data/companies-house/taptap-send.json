@@ -1,0 +1,34 @@
+{
+  "slug": "taptap-send",
+  "fetchedAt": "2026-09-30T07:56:13.285Z",
+  "status": "matched",
+  "match": {
+    "query": "https://www.taptapsend.com/en-gb",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "10416468",
+        "title": "TAPTAP SEND UK LIMITED"
+      }
+    ],
+    "outcome": "Matched 10416468 from the provider's website"
+  },
+  "company": {
+    "name": "TAPTAP SEND UK LIMITED",
+    "number": "10416468",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2016-10-07",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Epworth House, 25 City Road, London, EC1Y 1AA, England",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/10416468"
+  },
+  "psc": []
+}

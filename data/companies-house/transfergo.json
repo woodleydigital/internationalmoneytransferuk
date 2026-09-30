@@ -1,0 +1,55 @@
+{
+  "slug": "transfergo",
+  "fetchedAt": "2026-09-30T07:56:10.416Z",
+  "status": "matched",
+  "match": {
+    "query": "https://www.transfergo.com/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "07914165",
+        "title": "TRANSFERGO LTD"
+      }
+    ],
+    "outcome": "Matched 07914165 from the provider's website"
+  },
+  "company": {
+    "name": "TRANSFERGO LTD",
+    "number": "07914165",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2012-01-18",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "The Bower, 207 Old Street, London, EC1V 9NR, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/07914165"
+  },
+  "psc": [
+    {
+      "name": "Uab \"Gosystems\"",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2016-04-06"
+    },
+    {
+      "name": "Transfergo Holdings Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}
