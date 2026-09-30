@@ -161,7 +161,7 @@ export interface CompanyRecord {
 }
 
 export const MATCH_RULE =
-  "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.";
+  "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.";
 
 export function formatAddress(a: Record<string, string | undefined> = {}): string {
   return [a.address_line_1, a.address_line_2, a.locality, a.region, a.postal_code, a.country]

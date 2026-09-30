@@ -49,12 +49,19 @@ for (const p of PROVIDERS) {
     match: { query: p.name, rule: MATCH_RULE, candidates: [], outcome: "" },
   };
   try {
-    const hits = nameCandidates(p.name, await ch.search(p.name));
-    await pause();
+    // Search the name and its "UK" variant: groups often run a separate UK
+    // company (e.g. a ring-fenced "UK Bank plc") that a plain search can miss,
+    // and finding both must make the match ambiguous, not pick the wrong one.
+    const seen = new Map<string, { title: string; company_number: string; company_status?: string }>();
+    for (const q of [p.name, `${p.name} UK`]) {
+      for (const item of await ch.search(q)) seen.set(item.company_number, item);
+      await pause();
+    }
+    const hits = nameCandidates(p.name, [...seen.values()]);
     record.match.candidates = hits.map((h) => ({ company_number: h.company_number, title: h.title }));
 
     const profiles: CompanyProfile[] = [];
-    for (const h of hits.slice(0, 5)) {
+    for (const h of hits.slice(0, 8)) {
       const prof = await ch.profile(h.company_number);
       await pause();
       if (prof) profiles.push(prof);
