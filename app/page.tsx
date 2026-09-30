@@ -5,7 +5,7 @@ import {
   groupByInitial,
   providerUrl,
   searchProviders,
-  tierOf,
+  isVerified,
 } from "@/lib/providers";
 import { SITE, ID } from "@/lib/site";
 import { JsonLd } from "@/components/Page";
@@ -26,7 +26,7 @@ export async function generateMetadata({
       absolute: `International money transfer providers: A–Z directory | ${SITE.name}`,
     },
     description:
-      "A searchable A–Z directory of UK international money transfer providers, with every regulatory fact checked against the FCA Register and Companies House before it is published.",
+      "A searchable A–Z directory of UK international money transfer providers, with every regulatory fact taken directly from the FCA Register and Companies House.",
     alternates: { canonical: "/" },
     robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -36,7 +36,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const q = one((await searchParams).q).trim().slice(0, 80);
   const results = searchProviders(q);
   const groups = groupByInitial(results);
-  const verified = PROVIDERS.filter((p) => tierOf(p) <= 2).length;
+  const verified = PROVIDERS.filter(isVerified).length;
   const letters = groupByInitial(searchProviders("")).map(([k]) => k);
 
   return (
@@ -102,8 +102,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
             {q ? "Search results" : "All providers, A to Z"}
           </h2>
           <p className="mt-2 max-w-prose">
-            A provider is marked verified only when its FCA and Companies House record has been
-            fetched from source and checked. Until then its profile says so.{" "}
+            A provider is marked verified only when its FCA Register, Companies House and
+            Ombudsman records have been fetched from source. Until then its profile says so.{" "}
             <Link href="/methodology/">How we verify providers</Link>.
           </p>
 
@@ -150,7 +150,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
                           {p.name}
                         </Link>
                         <span className="shrink-0 text-sm text-muted">
-                          {tierOf(p) <= 2 ? "Verified" : "Verification pending"}
+                          {isVerified(p) ? "Verified" : "Register data pending"}
                         </span>
                       </li>
                     ))}

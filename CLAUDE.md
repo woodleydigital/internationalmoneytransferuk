@@ -7,6 +7,15 @@ site in its own right**: its own brand, no cross-links to Currency Brokers UK
 is stated once, factually, on `/about/` — claiming independence while hiding it would be
 misleading. The CBUK split below is an internal keyword plan only.
 
+## Fully automated — no human testing or review
+The entire site is built and maintained by AI and code. Nobody tests providers, makes
+transfers, mystery-shops, or reviews pages or profiles by hand. Consequences:
+- No test-transfer data, no Transfer Tracker, no "tested" tier, no ratings or rankings.
+- No named authors or "reviewed by" lines, and no copy implying a person checked anything.
+  The site says plainly that it is compiled by software.
+- Where the plan called for human review, the rule is now: publish only what the source
+  says, verbatim, with link and date — or publish nothing.
+
 ## Reference files
 - `docs/IMT_UK_topical_map.xlsx` — topical map with QDP verdicts, removed/merged pages,
   full keyword→page map (1,903 keywords, Ahrefs GB export 2026-09-25), profile schema.
@@ -30,24 +39,29 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 1. One URL per SERP, across **both** sites.
 2. Provider variants (fees, limits, rates, forms, time) stay on the single profile URL. Never create provider sub-pages.
 3. Country filters and zero-demand profiles exist as entities but are `noindex` until they have Tier 2 data and confirmed brand demand.
-4. Tools, the Transfer Tracker and register-change feed are justified by function/links, not volume.
+4. Tools and the register-change feed are justified by function/links, not volume.
 
 ## Site structure (phase 1 first)
 - `/` — homepage = searchable A–Z directory
 - `/providers/{slug}/` — entity profiles
 - `/compare/`, `/apps/` (phase 1); `/business/`, `/banks/`, `/cash-pickup/`, `/send-to/nigeria/`, `/guides/how-it-works/`, `/guides/track-a-transfer/` (phase 2)
-- `/check-a-provider/` (FCA status tool), `/tracker/`, `/register-changes/`
+- `/check-a-provider/` (FCA status tool), `/register-changes/` (`/tracker/` removed; it 301s to `/methodology/`)
 - Trust: `/methodology/`, `/how-we-get-paid/`, `/code-of-ethics/`, `/corrections/`, `/about/`, `/for-providers/`, `/entitymap.html` + `/entitymap.json` (EntityMap v1.0)
 
-## Profile tiers
-- **Tier 1 – Tested:** real test transfers, mystery shopping (CBUK methodology). Top ~30 providers.
-- **Tier 2 – Verified:** FCA Register + Companies House + FOS data complete, product data extracted with source quotes.
-- **Tier 3 – Register-only:** `noindex`.
+## Profile status
+- **Verified:** FCA Register + Companies House + FOS data complete, product data extracted
+  with source quotes. Indexable if the topical map says so.
+- **Register data pending:** anything less. `noindex`.
+The workbook's "Testing" rows and the "Human review?" column no longer apply.
 
 ## Data pipeline rules (critical — YMYL and defamation risk)
 - Facts (FRN, status, permissions, company number, dates) flow from the **FCA Register API** and **Companies House API** into the database via plain code. The LLM never generates or "remembers" these values.
 - LLM extraction from provider websites returns JSON against a fixed schema **plus the exact source snippet**; validate before saving, reject on failure.
-- Anything negative or status-related (cancellation, restriction, complaint spike) goes to a human review queue — never auto-published.
+- Anything negative or status-related (cancellation, restriction, requirement, complaints) is
+  published only as the source's own wording, verbatim, with a link and date. The AI never
+  describes, summarises, characterises or draws conclusions from it.
+- If a source is unreachable or a validation fails, show nothing for that block — never a
+  stale or estimated value.
 - Every data block shows a "last verified" date; changes are logged to the profile timeline.
 - Model tiers: Haiku for bulk classification/extraction, Sonnet for drafting, Opus for review of sensitive changes and methodology. Use batch processing for bulk jobs.
 
@@ -62,7 +76,8 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 
 ## Editorial
 - British English, plain English, data-driven claims, no jargon without explanation.
-- Named authors; methodology and affiliate disclosure linked from every profile.
+- No named authors or reviewers (see "Fully automated"); methodology and affiliate
+  disclosure linked from every profile. Matt Woodley appears as owner only.
 - Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
 - No links to CBUK. Common ownership is disclosed on `/about/` only.
 

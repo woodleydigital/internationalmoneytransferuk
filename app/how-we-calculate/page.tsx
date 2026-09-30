@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageFrame } from "@/components/Page";
-import { Byline } from "@/components/Byline";
-import { MATT_WOODLEY, personSchema, personId, type ReviewMeta } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
 
-// Methodology and arithmetic sit squarely inside Matt's review scope.
-const review: ReviewMeta = {
-  reviewer: MATT_WOODLEY,
-  published: "2026-09-02",
-  reviewed: "2026-09-02",
-  reviewIntervalMonths: 6,
-};
+const PUBLISHED = "2026-09-02";
 
 const graph = {
   "@context": "https://schema.org",
@@ -20,15 +12,12 @@ const graph = {
       "@type": "Article",
       "@id": `${SITE.url}/how-we-calculate/#article`,
       headline: "How we calculate the exchange rate margin",
-      datePublished: review.published,
-      dateModified: review.reviewed,
+      datePublished: PUBLISHED,
       author: { "@id": ID.organization },
-      reviewedBy: { "@id": personId(MATT_WOODLEY) },
       publisher: { "@id": ID.organization },
       isPartOf: { "@id": ID.website },
       mainEntityOfPage: `${SITE.url}/how-we-calculate/`,
     },
-    personSchema(MATT_WOODLEY),
   ],
 };
 
@@ -46,8 +35,6 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
       />
-
-      <Byline meta={review} />
 
       <p className="mt-5 max-w-prose">
         The checker compares a transfer you were quoted against a published mid-market

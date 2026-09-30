@@ -3,7 +3,7 @@ import Link from "next/link";
 import { computeMargin, type FeeTreatment, type MarginResult } from "@/lib/margin";
 import { getMidRate, CORRIDOR_CURRENCIES, isSupportedCurrency } from "@/lib/rates";
 import { money, percent, rate as fmtRate, longDate, ID } from "@/lib/site";
-import { JsonLd, NotYetPublished, PageFrame } from "@/components/Page";
+import { JsonLd, PageFrame } from "@/components/Page";
 
 const checkerSchema = {
   "@context": "https://schema.org",
@@ -207,20 +207,6 @@ export default async function Page({
         </p>
       </section>
 
-      <section aria-labelledby="tested" className="mt-10">
-        <h2 id="tested" className="text-xl font-semibold text-ink">
-          Our own test transfers
-        </h2>
-        <NotYetPublished>
-          We will publish the total cost of real test transfers at £250, £1,000 and £5,000,
-          measured the same way as this tool. No results are shown until those transfers have
-          been made and reviewed — we do not estimate them.{" "}
-          <Link href="/methodology/" className="underline">
-            Our methodology
-          </Link>
-          .
-        </NotYetPublished>
-      </section>
     </PageFrame>
   );
 }

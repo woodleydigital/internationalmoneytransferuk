@@ -1,5 +1,5 @@
 /**
- * Author and reviewer records — source of truth.
+ * People records — source of truth.
  *
  * Identify people by their *actual* contribution.
  * Every field here is something we have been told. Nothing is inferred, rounded
@@ -23,10 +23,6 @@ export interface Person {
   name: string;
   jobTitle: string;
   credentials: Credential[];
-  /** What this person is actually competent to sign off. */
-  reviewScope: string[];
-  /** What they are explicitly *not* signing off, and why. Rendered on the profile. */
-  outOfScope: string[];
   /**
    * Verified profiles for the *same* person elsewhere. This is the entity-consistency
    * fix (S1 Rule 06): one individual, one identity across our properties. Only add a
@@ -45,18 +41,6 @@ export const MATT_WOODLEY: Person = {
       institution: "University of Auckland",
       institutionType: "CollegeOrUniversity",
     },
-  ],
-  reviewScope: [
-    "The margin and cost calculations behind our tools, and the methodology we publish for them",
-    "How exchange rate spreads and provider pricing models work",
-    "Mid-market reference rates, what they are and how they are published",
-    "Market structure: how currency brokers, banks and payment firms differ in how they charge",
-    "How IMT UK itself is funded, and our commercial relationships",
-  ],
-  outOfScope: [
-    "Interpretation of UK financial regulation, including how safeguarding under the Payment Services Regulations 2017 differs from FSCS cover",
-    "Whether a currency forward is a spot contract or a MiFID financial instrument",
-    "Any statement that would constitute regulated financial advice",
   ],
   // Same person on another of our properties. Verified 200 on 2026-09-02.
   sameAs: ["https://www.internationalmoneytransfer.com/about/matt-woodley"],
@@ -88,16 +72,4 @@ export function personSchema(p: Person) {
       recognizedBy: { "@type": c.institutionType, name: c.institution },
     })),
   };
-}
-
-/**
- * Review metadata carried by a content page. Dates are the *substantive* review
- * dates — never bumped without a real review.
- */
-export interface ReviewMeta {
-  reviewer: Person;
-  published: string;
-  reviewed: string;
-  /** Shorter for volatile financial facts. */
-  reviewIntervalMonths: number;
 }

@@ -32,6 +32,12 @@ export default function Page() {
         <Link href="/methodology/" className="underline">How we build each profile</Link>.
       </P>
 
+      <H2>How this site is made</H2>
+      <P>
+        {"The directory is compiled entirely by software, including AI that reads providers’ own websites. Nobody tests providers or reviews profiles by hand, so we never claim that anyone has. "}
+        <Link href="/methodology/" className="underline">The rules the software follows</Link>.
+      </P>
+
       <H2>What we are not</H2>
       <P>
         We are not a bank, a money transfer provider or a currency broker. We do not hold money,

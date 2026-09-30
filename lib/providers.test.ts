@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { PROVIDERS, groupByInitial, isIndexable, searchProviders, tierOf } from "./providers.ts";
+import { PROVIDERS, groupByInitial, isIndexable, isVerified, searchProviders } from "./providers.ts";
 
 test("slugs are unique and URL-safe", () => {
   const slugs = PROVIDERS.map((p) => p.slug);
@@ -14,7 +14,7 @@ test("14 phase-1 profiles, as in the topical map", () => {
 
 test("nothing is indexable before register data exists", () => {
   for (const p of PROVIDERS) {
-    assert.equal(tierOf(p), 3);
+    assert.equal(isVerified(p), false);
     assert.equal(isIndexable(p), false);
   }
 });

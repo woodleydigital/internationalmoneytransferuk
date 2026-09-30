@@ -25,7 +25,7 @@ export default function Page() {
       <P>
         Product details — corridors, payout methods, fees, limits and safeguarding — come from
         your own website and terms. If we have misread them, send us the page and the exact
-        wording and we will check it.
+        wording and it will be checked against that page.
       </P>
 
       <H2>Contact</H2>

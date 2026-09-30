@@ -7,10 +7,10 @@ import {
   getProvider,
   isIndexable,
   providerUrl,
-  tierOf,
+  isVerified,
 } from "@/lib/providers";
 import { registerSearchUrl } from "@/lib/fca";
-import { H2, JsonLd, NotYetPublished, P, PageFrame, webPage } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 type Params = Promise<{ slug: string }>;
 
@@ -27,21 +27,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: `${p.name} international money transfer: FCA and company profile`,
     description: `${p.name}'s regulatory profile: FCA Register status and permissions, Companies House record, and complaints data, each with the date it was last verified.`,
     alternates: { canonical: providerUrl(p) },
-    // Tier 3 profiles exist as entities but are noindex until verified.
+    // Unverified profiles exist as entities but are noindex until verified.
     robots: isIndexable(p) ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 
-const TIER_LABEL = {
-  1: "Tier 1 — tested",
-  2: "Tier 2 — verified",
-  3: "Tier 3 — register data pending",
-} as const;
-
 export default async function Page({ params }: { params: Params }) {
   const p = getProvider((await params).slug);
   if (!p) notFound();
-  const tier = tierOf(p);
+  const verified = isVerified(p);
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
 
   return (
@@ -50,7 +44,7 @@ export default async function Page({ params }: { params: Params }) {
 
       <section aria-labelledby="status" className="mt-6 rounded-lg border border-line bg-wash p-5">
         <h2 id="status" className="font-semibold text-ink">
-          {TIER_LABEL[tier]}
+          {verified ? "Verified" : "Register data pending"}
         </h2>
         <p className="mt-2 max-w-prose">
           {`We have not yet fetched ${p.name}'s record from the FCA Register or Companies House, ` +
@@ -73,8 +67,8 @@ export default async function Page({ params }: { params: Params }) {
 
       <H2 id="blocks">What this profile will show</H2>
       <P>
-        Each block below is published only once it has been collected from the stated source
-        and, where marked, checked by a person. Every block carries its own last-verified date.
+        This profile is compiled automatically. Each block below appears only once it has been
+        collected from the stated source, and carries the date it was last fetched.
       </P>
 
       {blocks.map((block) => (
@@ -84,9 +78,9 @@ export default async function Page({ params }: { params: Params }) {
             {PROFILE_SCHEMA.filter((f) => f.block === block).map((f) => (
               <div key={f.field} className="grid gap-1 py-2 sm:grid-cols-[1fr_auto]">
                 <dt className="text-ink">{f.field}</dt>
-                <dd className="text-muted">
-                  Not yet verified · source: {f.source}
-                  {f.humanReview !== "No" ? ` · human review: ${f.humanReview.toLowerCase()}` : ""}
+                <dd className="text-muted sm:text-right">
+                  Not yet collected · {f.source}
+                  <span className="block text-xs">{f.method}</span>
                 </dd>
               </div>
             ))}
@@ -94,10 +88,9 @@ export default async function Page({ params }: { params: Params }) {
         </section>
       ))}
 
-      <NotYetPublished>
-        {`No test transfer has been made with ${p.name}, so this profile shows no costs, rates ` +
-          `or delivery times.`}
-      </NotYetPublished>
+      <P>
+        {`We do not test providers or rate them. This profile shows no exchange rates, and says nothing about ${p.name} that its public records and its own website do not.`}
+      </P>
 
       <H2>About this profile</H2>
       <P>

@@ -10,8 +10,9 @@ export const metadata: Metadata = {
 
 const RULES: [string, string][] = [
   ["Facts come from source.", "Regulatory and company facts are taken from the FCA Register, Companies House and the Financial Ombudsman Service, and each shows when it was last verified."],
-  ["We say what we don't know.", "Where we have not verified something, the page says so. We do not estimate, round up or fill gaps."],
-  ["Negative findings get a second look.", "Anything that reflects badly on a firm is checked by a person before it is published, and the firm can respond."],
+  ["We say what we don't know.", "Where data has not been collected, the page says so. We do not estimate, round up or fill gaps."],
+  ["Bad news is quoted, not described.", "Anything that reflects badly on a firm is shown exactly as the official source records it, with a link and a date. We add no comment of our own."],
+  ["Automation is disclosed.", "This site is compiled by software. We never imply that a person has tested a provider or reviewed a page."],
   ["Money does not buy position.", "No provider can pay to be listed, ranked or described differently."],
   ["Commercial links are labelled.", "Anything we are paid for is marked and kept separate from the facts."],
   ["Mistakes are corrected in public.", "Corrections are made promptly and recorded in our corrections log."],

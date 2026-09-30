@@ -61,7 +61,6 @@ const FOOTER: { heading: string; links: { href: string; label: string }[] }[] = 
       { href: "/", label: "Provider directory" },
       { href: "/check-a-provider/", label: "Check a provider" },
       { href: "/compare/", label: "Compare costs" },
-      { href: "/tracker/", label: "Transfer Tracker" },
     ],
   },
   {

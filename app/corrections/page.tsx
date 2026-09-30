@@ -18,9 +18,14 @@ export default function Page() {
 
       <H2>Report an error</H2>
       <P>
-        Tell us the page, what is wrong, and where the correct information can be found. We
-        check every report against the original source and, if we were wrong, correct the
-        page and record it below.
+        Tell us the page, what is wrong, and where the correct information can be found. Each
+        report is checked against the original source record; if the site was wrong, the page
+        is corrected and the correction is recorded below.
+      </P>
+      <P>
+        Register and company facts are copied from the FCA Register and Companies House. If one
+        of those records is itself wrong, it needs correcting there; this site updates at its
+        next weekly refresh.
       </P>
       <address className="mt-3 not-italic">
         {SITE.name}

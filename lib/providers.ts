@@ -7,10 +7,9 @@
  * Regulatory facts (FRN, status, permissions, company number, dates) are NOT
  * stored here and must never be typed in by hand: they arrive from the FCA
  * Register and Companies House ingestion jobs (CLAUDE.md, "Data pipeline
- * rules"). Until a provider has that data it is Tier 3 and `noindex`.
+ * rules"). Until a provider has that data it is "register data pending" and
+ * `noindex`.
  */
-
-export type Tier = 1 | 2 | 3;
 
 export interface Provider {
   slug: string;
@@ -19,7 +18,7 @@ export interface Provider {
   phase: 1 | 2;
   /**
    * The topical map's verdict: phase-1 profiles are intended to be indexed once
-   * they reach Tier 2; phase-2 profiles also need confirmed brand demand.
+   * verified; phase-2 profiles also need confirmed brand demand.
    */
   indexWhenVerified: boolean;
 }
@@ -64,16 +63,16 @@ export const PROVIDERS: Provider[] = [
 ];
 
 /**
- * A profile's tier follows from the data it holds (Profile schema, "Meta").
- * No verified data has been ingested yet, so every profile is Tier 3.
+ * Verified means the FCA Register, Companies House and Ombudsman data are all
+ * present (Profile schema, "Meta"). Nothing has been ingested yet.
  */
-export function tierOf(_p: Provider): Tier {
-  return 3;
+export function isVerified(_p: Provider): boolean {
+  return false;
 }
 
-/** Only Tier 1–2 profiles the topical map marks for indexing are indexable. */
+/** Only verified profiles the topical map marks for indexing are indexable. */
 export function isIndexable(p: Provider): boolean {
-  return tierOf(p) <= 2 && p.indexWhenVerified;
+  return isVerified(p) && p.indexWhenVerified;
 }
 
 export function getProvider(slug: string): Provider | undefined {
@@ -108,33 +107,37 @@ export function groupByInitial(list: Provider[]): [string, Provider[]][] {
 }
 
 /**
- * The profile blocks, from the "Profile schema" tab. Rendered on every profile
- * so readers can see what will be published, where it comes from, and what is
- * not yet verified.
+ * The profile blocks, from the "Profile schema" tab, adapted for a fully
+ * automated site: nothing is tested by hand, and nothing is characterised.
+ * Register and company data are copied by code; anything read from a provider's
+ * own website is shown with the exact wording and link it came from.
  */
 export interface ProfileField {
   block: string;
   field: string;
   source: string;
-  humanReview: string;
+  /** How the value reaches the page. */
+  method: string;
 }
 
+const COPIED = "Copied from the source by software";
+const QUOTED = "Quoted word for word, with a link to the source";
+const EXTRACTED = "Extracted by software, shown with the exact wording it came from";
+
 export const PROFILE_SCHEMA: ProfileField[] = [
-  { block: "Identity", field: "Legal name, trading names", source: "FCA Register", humanReview: "No" },
-  { block: "Identity", field: "FCA firm reference number (FRN)", source: "FCA Register", humanReview: "No" },
-  { block: "Identity", field: "Company number, incorporation date, registered office", source: "Companies House", humanReview: "No" },
-  { block: "Identity", field: "Parent company / ultimate owner", source: "Companies House PSC and filings", humanReview: "Yes" },
-  { block: "Regulation", field: "Permission type (API / EMI / small PI / bank)", source: "FCA Register", humanReview: "No" },
-  { block: "Regulation", field: "Status changes, restrictions, requirements", source: "FCA Register", humanReview: "Yes, before publishing" },
-  { block: "Regulation", field: "Safeguarding method (as stated by provider)", source: "Provider terms and conditions", humanReview: "Yes" },
-  { block: "Regulation", field: "Registered agents (count)", source: "FCA Register", humanReview: "No" },
-  { block: "Financial health", field: "Latest accounts date, overdue accounts flag", source: "Companies House", humanReview: "No" },
-  { block: "Financial health", field: "Revenue / profit (where filed)", source: "Companies House filings", humanReview: "Yes" },
-  { block: "Complaints", field: "FOS complaint volumes and uphold rate (where published)", source: "Financial Ombudsman Service data", humanReview: "No" },
-  { block: "Product", field: "Corridors / currencies served", source: "Provider website", humanReview: "Spot check" },
-  { block: "Product", field: "Payout methods (bank, cash pickup, mobile wallet)", source: "Provider website", humanReview: "Spot check" },
-  { block: "Product", field: "Fees, limits, minimums", source: "Provider website", humanReview: "Yes, on change" },
-  { block: "Product", field: "ID documents required, verification time", source: "Own testing / provider FAQ", humanReview: "Yes" },
-  { block: "Testing", field: "Test transfer: total cost vs mid-market, promised vs actual time", source: "Own test transfers", humanReview: "Yes" },
-  { block: "Testing", field: "Support response times", source: "Mystery shopping", humanReview: "Yes" },
+  { block: "Identity", field: "Legal name, trading names", source: "FCA Register", method: COPIED },
+  { block: "Identity", field: "FCA firm reference number (FRN)", source: "FCA Register", method: COPIED },
+  { block: "Identity", field: "Company number, incorporation date, registered office", source: "Companies House", method: COPIED },
+  { block: "Identity", field: "Persons with significant control", source: "Companies House", method: COPIED },
+  { block: "Regulation", field: "Permission type (API / EMI / small PI / bank)", source: "FCA Register", method: COPIED },
+  { block: "Regulation", field: "Status, restrictions and requirements", source: "FCA Register", method: QUOTED },
+  { block: "Regulation", field: "Registered agents (count)", source: "FCA Register", method: COPIED },
+  { block: "Regulation", field: "How customer money is safeguarded", source: "Provider terms and conditions", method: QUOTED },
+  { block: "Financial health", field: "Latest accounts date, overdue accounts flag", source: "Companies House", method: COPIED },
+  { block: "Financial health", field: "Revenue and profit (where filed)", source: "Filed accounts at Companies House", method: COPIED },
+  { block: "Complaints", field: "Complaint volumes and uphold rate (where published)", source: "Financial Ombudsman Service", method: COPIED },
+  { block: "Product", field: "Countries and currencies served", source: "Provider website", method: EXTRACTED },
+  { block: "Product", field: "Payout methods (bank, cash pickup, mobile wallet)", source: "Provider website", method: EXTRACTED },
+  { block: "Product", field: "Fees, limits, minimums", source: "Provider website", method: EXTRACTED },
+  { block: "Product", field: "ID documents required", source: "Provider website", method: EXTRACTED },
 ];

@@ -17,8 +17,8 @@ export default function Page() {
       <NotYetPublished>
         This feed will list, each week, money transfer firms that have been newly authorised
         or registered, had restrictions added, or had their permission cancelled. It starts
-        once our FCA Register import is running. Changes that reflect badly on a firm are
-        checked by a person before they appear.
+        once our FCA Register import is running. Each change is shown exactly as the Register
+        records it, with the date and a link to the firm’s Register entry — we add no comment.
       </NotYetPublished>
       <H2>Check a firm today</H2>
       <P>

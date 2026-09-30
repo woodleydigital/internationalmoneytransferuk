@@ -8,7 +8,7 @@ const p = MATT_WOODLEY;
 
 export const metadata: Metadata = {
   title: `${p.name} — ${p.jobTitle}`,
-  description: `${p.name} is ${p.jobTitle} of ${SITE.name}. What he reviews on this site, his background, and the limits of that review.`,
+  description: `${p.name} is ${p.jobTitle} and owner of ${SITE.name}.`,
   alternates: { canonical: `/about/${p.slug}/` },
 };
 
@@ -48,34 +48,13 @@ export default function Page() {
         ))}
       </ul>
 
-      <h2 className="mt-10 text-xl font-semibold text-ink">What Matt reviews on this site</h2>
+      <h2 className="mt-10 text-xl font-semibold text-ink">Role</h2>
       <p className="mt-3 max-w-prose">
-        Pages carrying his name have been checked by him for accuracy in the following areas:
-      </p>
-      <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
-        {p.reviewScope.map((s) => (
-          <li key={s}>{s}</li>
-        ))}
-      </ul>
-
-      <h2 className="mt-10 text-xl font-semibold text-ink">
-        What this review does not cover
-      </h2>
-      <p className="mt-3 max-w-prose">
-        We would rather state the limits of a review than imply expertise we cannot evidence.
-        Matt&rsquo;s review does not extend to:
-      </p>
-      <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
-        {p.outOfScope.map((s) => (
-          <li key={s}>{s}</li>
-        ))}
-      </ul>
-      <p className="mt-3 max-w-prose">
-        Where a page depends on the interpretation of UK financial regulation, it either
-        reports the position taken by a primary source — the FCA, the Payment Services
-        Regulations 2017, or the Financial Services Compensation Scheme — with that source
-        named and dated, or it is reviewed separately by someone qualified in UK financial
-        regulation. Nothing on this site is financial advice.
+        {`Matt owns ${SITE.name} and is responsible for it. Matt does not test providers or review individual pages: the directory is compiled automatically from public records, as set out in `}
+        <Link href="/methodology/" className="text-brand-600 underline">
+          our methodology
+        </Link>
+        . Nothing on this site is financial advice.
       </p>
 
       <p className="mt-10">
