@@ -10,7 +10,7 @@ import {
   tierOf,
 } from "@/lib/providers";
 import { registerSearchUrl } from "@/lib/fca";
-import { Breadcrumbs, H1, H2, JsonLd, NotYetPublished, P, webPage } from "@/components/Page";
+import { H2, JsonLd, NotYetPublished, P, PageFrame, webPage } from "@/components/Page";
 
 type Params = Promise<{ slug: string }>;
 
@@ -45,10 +45,8 @@ export default async function Page({ params }: { params: Params }) {
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
 
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: p.name }]} title={<>{p.name} international money transfer profile</>}>
       <JsonLd data={webPage(providerUrl(p), `${p.name} profile`, "ProfilePage")} />
-      <Breadcrumbs trail={[{ name: p.name }]} />
-      <H1>{p.name} international money transfer profile</H1>
 
       <section aria-labelledby="status" className="mt-6 rounded-lg border border-line bg-wash p-5">
         <h2 id="status" className="font-semibold text-ink">
@@ -72,15 +70,6 @@ export default async function Page({ params }: { params: Params }) {
         </p>
       </section>
 
-      {p.cbukReview && (
-        <P>
-          {`For a review of ${p.name}, see `}
-          <a href={p.cbukReview} className="underline">
-            {`our sister site's ${p.name} review`}
-          </a>
-          . This profile covers its regulatory and company record only.
-        </P>
-      )}
 
       <H2 id="blocks">What this profile will show</H2>
       <P>
@@ -129,6 +118,6 @@ export default async function Page({ params }: { params: Params }) {
           {`Are you ${p.name}?`}
         </Link>
       </P>
-    </main>
+    </PageFrame>
   );
 }

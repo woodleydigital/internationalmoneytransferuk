@@ -58,7 +58,7 @@ export const MATT_WOODLEY: Person = {
     "Whether a currency forward is a spot contract or a MiFID financial instrument",
     "Any statement that would constitute regulated financial advice",
   ],
-  // Same person, our sister property. Verified 200 on 2026-09-02.
+  // Same person on another of our properties. Verified 200 on 2026-09-02.
   sameAs: ["https://www.internationalmoneytransfer.com/about/matt-woodley"],
 };
 

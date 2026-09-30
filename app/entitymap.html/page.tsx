@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { entityMap } from "@/lib/entitymap";
-import { Breadcrumbs, H1, H2, P } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Entity map",
@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   const map = entityMap();
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
-      <Breadcrumbs trail={[{ name: "Entity map" }]} />
-      <H1>Entity map</H1>
+    <PageFrame trail={[{ name: "Entity map" }]} title={<>Entity map</>}>
       <P>
         {"A human-readable view of our "}
         <a href="/entitymap.json" className="underline">machine-readable entity map</a>
@@ -35,6 +33,6 @@ export default function Page() {
           </ul>
         </section>
       ))}
-    </main>
+    </PageFrame>
   );
 }

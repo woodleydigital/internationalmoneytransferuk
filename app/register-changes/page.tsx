@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, H1, H2, JsonLd, NotYetPublished, P, webPage } from "@/components/Page";
+import { H2, JsonLd, NotYetPublished, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "FCA register changes for money transfer firms",
@@ -12,10 +12,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Register changes" }]} title={<>FCA register changes for money transfer firms</>}>
       <JsonLd data={webPage("/register-changes/", "FCA register changes")} />
-      <Breadcrumbs trail={[{ name: "Register changes" }]} />
-      <H1>FCA register changes for money transfer firms</H1>
       <NotYetPublished>
         This feed will list, each week, money transfer firms that have been newly authorised
         or registered, had restrictions added, or had their permission cancelled. It starts
@@ -27,6 +25,6 @@ export default function Page() {
         {"You can look up any firm's current status with our "}
         <Link href="/check-a-provider/" className="underline">provider check</Link>.
       </P>
-    </main>
+    </PageFrame>
   );
 }

@@ -22,11 +22,7 @@ export interface Provider {
    * they reach Tier 2; phase-2 profiles also need confirmed brand demand.
    */
   indexWhenVerified: boolean;
-  /** Our sister site's review, where CBUK owns the review (CLAUDE.md split table). */
-  cbukReview?: string;
 }
-
-const CBUK = "https://www.currencybrokers.uk";
 
 export const PROVIDERS: Provider[] = [
   { slug: "hsbc", name: "HSBC", phase: 1, indexWhenVerified: true },
@@ -40,7 +36,7 @@ export const PROVIDERS: Provider[] = [
   { slug: "lloyds-bank", name: "Lloyds Bank", phase: 1, indexWhenVerified: true },
   { slug: "tsb", name: "TSB", phase: 1, indexWhenVerified: true },
   { slug: "moneygram", name: "MoneyGram", phase: 1, indexWhenVerified: true },
-  { slug: "ofx", name: "OFX", phase: 1, indexWhenVerified: true, cbukReview: `${CBUK}/reviews/ofx` },
+  { slug: "ofx", name: "OFX", phase: 1, indexWhenVerified: true },
   { slug: "santander", name: "Santander", phase: 1, indexWhenVerified: true },
   { slug: "wise", name: "Wise", phase: 1, indexWhenVerified: true },
   { slug: "natwest", name: "NatWest", phase: 2, indexWhenVerified: false },
@@ -64,7 +60,7 @@ export const PROVIDERS: Provider[] = [
   { slug: "small-world", name: "Small World", phase: 2, indexWhenVerified: false },
   { slug: "tesco-bank", name: "Tesco Bank", phase: 2, indexWhenVerified: false },
   { slug: "worldremit", name: "WorldRemit", phase: 2, indexWhenVerified: false },
-  { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false, cbukReview: `${CBUK}/reviews/xe` },
+  { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false },
 ];
 
 /**

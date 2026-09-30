@@ -30,19 +30,21 @@ export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
           })),
         }}
       />
-      <nav aria-label="Breadcrumb" className="text-sm text-muted">
-        {all.map((c, i) => (
-          <span key={c.name}>
-            {i > 0 && " / "}
-            {c.href && i < all.length - 1 ? (
-              <Link href={c.href} className="underline">
-                {c.name}
-              </Link>
-            ) : (
-              c.name
-            )}
-          </span>
-        ))}
+      <nav aria-label="Breadcrumb" className="text-sm">
+        <ol className="flex flex-wrap items-center gap-x-2">
+          {all.map((c, i) => (
+            <li key={c.name} className="flex items-center gap-x-2">
+              {i > 0 && <span aria-hidden="true" className="text-muted">›</span>}
+              {c.href && i < all.length - 1 ? (
+                <Link href={c.href} className="link">
+                  {c.name}
+                </Link>
+              ) : (
+                <span aria-current="page">{c.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
       </nav>
     </>
   );
@@ -61,38 +63,68 @@ export function webPage(path: string, name: string, type = "WebPage") {
   };
 }
 
-export function H1({ children }: { children: React.ReactNode }) {
-  return <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink">{children}</h1>;
+/**
+ * Standard page frame: a tinted header band carrying the breadcrumb, H1 and
+ * lead, then the content column. Every inner page uses it so the site reads as
+ * one consistent publication.
+ */
+export function PageFrame({
+  trail,
+  title,
+  lead,
+  children,
+}: {
+  trail: Crumb[];
+  title: React.ReactNode;
+  lead?: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <main id="main">
+      <div className="border-b border-line bg-wash">
+        <div className="mx-auto max-w-5xl px-5 pb-8 pt-5">
+          <Breadcrumbs trail={trail} />
+          <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+            {title}
+          </h1>
+          {lead && <p className="mt-4 max-w-2xl text-lg text-body sm:text-xl">{lead}</p>}
+        </div>
+      </div>
+      <div className="prose-links mx-auto max-w-5xl px-5 pb-12 pt-2">
+        <div className="max-w-3xl">{children}</div>
+      </div>
+    </main>
+  );
 }
 
 export function H2({ children, id }: { children: React.ReactNode; id?: string }) {
   return (
-    <h2 id={id} className="mt-10 text-xl font-semibold text-ink">
+    <h2 id={id} className="mt-10 text-2xl font-bold tracking-tight text-ink">
       {children}
     </h2>
   );
 }
 
 export function P({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  return <p className={`mt-3 max-w-prose ${className}`}>{children}</p>;
+  return <p className={`mt-4 max-w-prose ${className}`}>{children}</p>;
 }
 
 /** Plain statement that a section has no verified data yet. Never a placeholder figure. */
 export function NotYetPublished({ children }: { children: React.ReactNode }) {
   return (
-    <aside className="mt-6 rounded-lg border border-line-strong bg-wash p-4 text-sm">
-      <p>
-        <strong className="text-ink">Not yet published. </strong>
-        {children}
-      </p>
+    <aside className="mt-6 border-l-4 border-accent-500 bg-accent-100/40 p-4">
+      <p className="font-semibold text-ink">Not yet published</p>
+      <p className="mt-1 max-w-prose">{children}</p>
     </aside>
   );
 }
 
-export function Main({ children }: { children: React.ReactNode }) {
+/** Highlighted panel for key facts or next steps. */
+export function Callout({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
-      {children}
-    </main>
+    <aside className="mt-6 border-l-4 border-brand-600 bg-brand-50 p-4">
+      <p className="font-semibold text-ink">{title}</p>
+      <div className="mt-1 max-w-prose">{children}</div>
+    </aside>
   );
 }

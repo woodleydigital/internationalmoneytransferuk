@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { registerSearchUrl, searchFirms, type FirmSearch } from "@/lib/fca";
 import { SITE } from "@/lib/site";
-import { Breadcrumbs, H1, H2, JsonLd, P } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame } from "@/components/Page";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -28,7 +28,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const search: FirmSearch | null = q.length >= 2 ? await searchFirms(q) : null;
 
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Check a provider" }]} title={<>Check a money transfer provider on the FCA Register</>}>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -41,8 +41,6 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           publisher: { "@id": `${SITE.url}/#organization` },
         }}
       />
-      <Breadcrumbs trail={[{ name: "Check a provider" }]} />
-      <H1>Check a money transfer provider on the FCA Register</H1>
 
       <section aria-labelledby="lookup" className="mt-6">
         <h2 id="lookup" className="sr-only">
@@ -83,14 +81,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
         authorised firm, so compare the website address and phone number with the ones on the
         Register entry.
       </P>
-      <P>
-        {"For how UK money transfer regulation works, see our sister site's "}
-        <a href={`${SITE.sister.url}/money-transfer-regulations`} className="underline">
-          guide to money transfer regulations
-        </a>
-        .
-      </P>
-    </main>
+    </PageFrame>
   );
 }
 

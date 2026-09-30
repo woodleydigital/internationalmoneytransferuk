@@ -40,7 +40,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const letters = groupByInitial(searchProviders("")).map(([k]) => k);
 
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <main id="main">
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -53,129 +53,165 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
         }}
       />
 
-      <h1 className="text-3xl font-bold tracking-tight text-ink">
-        International money transfer providers: the A–Z directory
-      </h1>
-
-      <section aria-labelledby="directory" className="mt-6">
-        <h2 id="directory" className="sr-only">
-          Search the directory
-        </h2>
-
-        <form method="get" action="/" role="search" className="rounded-lg border border-line bg-wash p-5">
-          <label htmlFor="q" className="block text-sm font-medium text-ink">
-            Find a provider
-          </label>
-          <div className="mt-1 flex gap-2">
-            <input
-              id="q"
-              name="q"
-              type="search"
-              defaultValue={q}
-              autoComplete="off"
-              placeholder="e.g. Wise, HSBC, Western Union"
-              className="w-full rounded-md border border-line-strong bg-white px-3 py-2"
-            />
-            <button type="submit" className="rounded-md bg-brand-700 px-5 py-2 font-medium text-white">
-              Search
-            </button>
-          </div>
-        </form>
-
-        <p className="mt-4 text-sm">
-          {`${PROVIDERS.length} providers listed. ${verified} verified against the FCA Register so far. `}
-          A provider is marked verified only when its FCA and Companies House record has been
-          fetched from source and checked — until then its profile says so.{" "}
-          <Link href="/methodology/" className="underline">
-            How we verify providers
-          </Link>
-          .
-        </p>
-
-        {!q && (
-          <nav aria-label="Jump to letter" className="mt-4 flex flex-wrap gap-2 text-sm">
-            {letters.map((l) => (
-              <a key={l} href={`#letter-${l}`} className="rounded border border-line px-2 py-0.5 underline">
-                {l}
-              </a>
-            ))}
-          </nav>
-        )}
-
-        {q && (
-          <p className="mt-4 text-sm">
-            {`${results.length} ${results.length === 1 ? "provider matches" : "providers match"} “${q}”. `}
-            <Link href="/" className="underline">
-              Show all
-            </Link>
+      <div className="border-b border-line bg-brand-50">
+        <div className="mx-auto max-w-5xl px-5 py-10 sm:py-12">
+          <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-5xl">
+            International money transfer providers: the A–Z directory
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg sm:text-xl">
+            Find a UK money transfer provider and see what the public record says about it,
+            from the FCA Register, Companies House and the Financial Ombudsman Service.
           </p>
-        )}
 
-        {results.length === 0 ? (
-          <p className="mt-6">
-            {"We do not list that provider yet. You can check any firm directly on the "}
-            <Link href={`/check-a-provider/?q=${encodeURIComponent(q)}`} className="underline">
-              FCA Register with our provider check
-            </Link>
-            .
+          <form method="get" action="/" role="search" className="mt-6 max-w-2xl">
+            <label htmlFor="q" className="block font-semibold text-ink">
+              Search for a provider
+            </label>
+            <div className="mt-2 flex">
+              <input
+                id="q"
+                name="q"
+                type="search"
+                defaultValue={q}
+                autoComplete="off"
+                placeholder="For example, Wise, HSBC or Western Union"
+                className="w-full min-w-0 border-2 border-ink bg-white px-3 py-3 text-lg"
+              />
+              <button type="submit" className="bg-brand-700 px-6 py-3 text-lg font-semibold text-white">
+                Search
+              </button>
+            </div>
+          </form>
+
+          <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
+            <div>
+              <dt className="text-sm text-muted">Providers listed</dt>
+              <dd className="text-3xl font-bold text-ink">{PROVIDERS.length}</dd>
+            </div>
+            <div>
+              <dt className="text-sm text-muted">Verified against the FCA Register</dt>
+              <dd className="text-3xl font-bold text-ink">{verified}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div className="prose-links mx-auto max-w-5xl px-5 pb-12">
+        <section aria-labelledby="directory" className="mt-10">
+          <h2 id="directory" className="text-2xl font-bold tracking-tight text-ink">
+            {q ? "Search results" : "All providers, A to Z"}
+          </h2>
+          <p className="mt-2 max-w-prose">
+            A provider is marked verified only when its FCA and Companies House record has been
+            fetched from source and checked. Until then its profile says so.{" "}
+            <Link href="/methodology/">How we verify providers</Link>.
           </p>
-        ) : (
-          <div className="mt-6">
-            {groups.map(([letter, list]) => (
-              <section key={letter} id={`letter-${letter}`} aria-label={letter} className="border-t border-line py-3">
-                <h3 className="text-lg font-semibold text-ink">{letter}</h3>
-                <ul className="mt-1 grid gap-x-6 sm:grid-cols-2">
-                  {list.map((p) => (
-                    <li key={p.slug} className="flex items-baseline justify-between gap-3 py-1">
-                      <Link href={providerUrl(p)} className="text-brand-600 underline">
-                        {p.name}
-                      </Link>
-                      <span className="text-xs text-muted">
-                        {tierOf(p) <= 2 ? "Verified" : "Verification pending"}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        )}
-      </section>
 
-      <section aria-labelledby="what" className="mt-12 border-t border-line pt-8">
-        <h2 id="what" className="text-xl font-semibold text-ink">
-          What each international money transfer profile covers
-        </h2>
-        <p className="mt-3 max-w-prose">
-          Every profile is built from the public record rather than from the provider’s
-          marketing: the firm’s FCA reference number, permissions and status from the FCA
-          Register; its company number, filings and ownership from Companies House; and
-          complaint figures from the Financial Ombudsman Service where they are published. Each
-          block shows the date it was last verified.
-        </p>
-        <p className="mt-3 max-w-prose">
-          Listing is free and no provider can pay to appear, to be ranked, or to change what
-          its profile says.{" "}
-          <Link href="/how-we-get-paid/" className="underline">
-            How we get paid
-          </Link>
-          .
-        </p>
-        <ul className="mt-4 list-disc space-y-1 pl-5">
-          <li>
-            <Link href="/check-a-provider/" className="underline">
-              Check a provider
-            </Link>{" "}
-            — look up any firm’s status on the FCA Register.
-          </li>
-          <li>
-            <Link href="/compare/" className="underline">
-              Compare the cost of a transfer
-            </Link>{" "}
-            — see the fee and exchange rate margin in a quote you were given.
-          </li>
-        </ul>
-      </section>
+          {!q && (
+            <nav aria-label="Jump to letter" className="mt-5 flex flex-wrap gap-1.5">
+              {letters.map((l) => (
+                <a
+                  key={l}
+                  href={`#letter-${l}`}
+                  className="flex h-9 w-9 items-center justify-center border border-line-strong font-semibold no-underline hover:bg-brand-50"
+                >
+                  {l}
+                </a>
+              ))}
+            </nav>
+          )}
+
+          {q && (
+            <p className="mt-4">
+              {`${results.length} ${results.length === 1 ? "provider matches" : "providers match"} “${q}”. `}
+              <Link href="/">Show all providers</Link>
+            </p>
+          )}
+
+          {results.length === 0 ? (
+            <p className="mt-6">
+              {"We do not list that provider yet. You can check any firm directly with our "}
+              <Link href={`/check-a-provider/?q=${encodeURIComponent(q)}`}>FCA provider check</Link>.
+            </p>
+          ) : (
+            <div className="mt-6 border-t-2 border-ink">
+              {groups.map(([letter, list]) => (
+                <section
+                  key={letter}
+                  id={`letter-${letter}`}
+                  aria-label={letter}
+                  className="grid gap-2 border-b border-line py-4 sm:grid-cols-[4rem_1fr]"
+                >
+                  <h3 className="text-2xl font-bold text-ink">{letter}</h3>
+                  <ul className="grid gap-x-8 gap-y-1 sm:grid-cols-2">
+                    {list.map((p) => (
+                      <li key={p.slug} className="flex items-baseline justify-between gap-3 py-1">
+                        <Link href={providerUrl(p)} className="font-semibold">
+                          {p.name}
+                        </Link>
+                        <span className="shrink-0 text-sm text-muted">
+                          {tierOf(p) <= 2 ? "Verified" : "Verification pending"}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section aria-labelledby="services" className="mt-14">
+          <h2 id="services" className="text-2xl font-bold tracking-tight text-ink">
+            Other services
+          </h2>
+          <ul className="mt-5 grid gap-5 sm:grid-cols-3">
+            {SERVICES.map((sv) => (
+              <li key={sv.href} className="border-t-4 border-brand-600 bg-wash p-5">
+                <h3 className="text-lg font-bold">
+                  <Link href={sv.href}>{sv.title}</Link>
+                </h3>
+                <p className="mt-2 text-base">{sv.body}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section aria-labelledby="what" className="mt-14">
+          <h2 id="what" className="text-2xl font-bold tracking-tight text-ink">
+            What each international money transfer profile covers
+          </h2>
+          <p className="mt-3 max-w-prose">
+            Every profile is built from the public record rather than from the provider’s
+            marketing: the firm’s FCA reference number, permissions and status from the FCA
+            Register; its company number, filings and ownership from Companies House; and
+            complaint figures from the Financial Ombudsman Service where they are published.
+            Each block shows the date it was last verified.
+          </p>
+          <p className="mt-3 max-w-prose">
+            Listing is free and no provider can pay to appear, to be ranked, or to change what
+            its profile says. <Link href="/how-we-get-paid/">How we get paid</Link>.
+          </p>
+        </section>
+      </div>
     </main>
   );
 }
+
+const SERVICES = [
+  {
+    href: "/check-a-provider/",
+    title: "Check a provider",
+    body: "Look up any firm’s status on the FCA Register before you send money.",
+  },
+  {
+    href: "/compare/",
+    title: "Compare costs",
+    body: "See the fee and the exchange rate margin hidden in a quote you were given.",
+  },
+  {
+    href: "/register-changes/",
+    title: "Register changes",
+    body: "Coming soon: a weekly feed of money transfer firms newly authorised, restricted or cancelled by the FCA.",
+  },
+];

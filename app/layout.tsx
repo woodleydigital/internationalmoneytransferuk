@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Source_Sans_3 } from "next/font/google";
 import { SITE, ID } from "@/lib/site";
 import "./globals.css";
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-source-sans",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -39,23 +46,46 @@ const graph = {
 };
 
 const NAV = [
-  { href: "/", label: "Directory" },
-  { href: "/compare/", label: "Compare" },
+  { href: "/", label: "Provider directory" },
   { href: "/check-a-provider/", label: "Check a provider" },
+  { href: "/compare/", label: "Compare costs" },
+  { href: "/register-changes/", label: "Register changes" },
+  { href: "/methodology/", label: "Methodology" },
+  { href: "/about/", label: "About us" },
 ];
 
-const FOOTER = [
-  { href: "/about/", label: "About" },
-  { href: "/methodology/", label: "Methodology" },
-  { href: "/how-we-get-paid/", label: "How we get paid" },
-  { href: "/code-of-ethics/", label: "Code of ethics" },
-  { href: "/corrections/", label: "Corrections" },
-  { href: "/for-providers/", label: "For providers" },
+const FOOTER: { heading: string; links: { href: string; label: string }[] }[] = [
+  {
+    heading: "Services",
+    links: [
+      { href: "/", label: "Provider directory" },
+      { href: "/check-a-provider/", label: "Check a provider" },
+      { href: "/compare/", label: "Compare costs" },
+      { href: "/tracker/", label: "Transfer Tracker" },
+    ],
+  },
+  {
+    heading: "About us",
+    links: [
+      { href: "/about/", label: "About IMT UK" },
+      { href: "/methodology/", label: "Methodology" },
+      { href: "/how-we-get-paid/", label: "How we get paid" },
+      { href: "/code-of-ethics/", label: "Code of ethics" },
+    ],
+  },
+  {
+    heading: "Help",
+    links: [
+      { href: "/corrections/", label: "Report an error" },
+      { href: "/for-providers/", label: "For providers" },
+      { href: "/entitymap.html", label: "Entity map" },
+    ],
+  },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={sourceSans.variable}>
       <head>
         <link rel="entitymap" type="application/json" href={`${SITE.url}/entitymap.json`} />
         <script
@@ -63,61 +93,118 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
         />
       </head>
-      <body className="bg-white font-sans text-body antialiased">
-        <header className="border-b border-line">
-          <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-3 px-5 py-4">
-            <Link href="/" className="flex items-center gap-3">
+      <body className="bg-white font-sans text-[1.0625rem] leading-relaxed text-body antialiased">
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
+
+        {/* Stated plainly on every page: an independent site, not an official one. */}
+        <div className="bg-brand-900 text-brand-100">
+          <p className="mx-auto max-w-5xl px-5 py-1.5 text-xs sm:text-sm">
+            An independent consumer information service. Not a government website, and not
+            part of the FCA.
+          </p>
+        </div>
+
+        <header className="bg-white">
+          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+            <Link href="/" className="flex items-center gap-4 no-underline">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/brand/logo-imt-uk.svg"
+                alt=""
+                width={155}
+                height={38}
+                className="h-10 w-auto"
+              />
+              <span className="hidden border-l border-line pl-4 sm:block">
+                <span className="block text-lg font-bold leading-tight text-ink">{SITE.name}</span>
+                <span className="block text-sm leading-tight text-muted">
+                  Independent directory of UK money transfer providers
+                </span>
+              </span>
+            </Link>
+            <form method="get" action="/" role="search" className="flex w-full sm:w-auto">
+              <label htmlFor="site-q" className="sr-only">
+                Search providers
+              </label>
+              <input
+                id="site-q"
+                name="q"
+                type="search"
+                placeholder="Search providers"
+                autoComplete="off"
+                className="w-full min-w-0 border-2 border-ink px-3 py-2 sm:w-64"
+              />
+              <button type="submit" className="bg-brand-700 px-4 py-2 font-semibold text-white">
+                Search
+              </button>
+            </form>
+          </div>
+          <nav aria-label="Main" className="border-b-4 border-accent-500 bg-brand-700">
+            <ul className="mx-auto flex max-w-5xl flex-wrap px-2 sm:px-3">
+              {NAV.map((n) => (
+                <li key={n.href}>
+                  <Link
+                    href={n.href}
+                    className="block px-3 py-3 text-sm font-semibold text-white hover:bg-brand-800 sm:text-base"
+                  >
+                    {n.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+
+        {children}
+
+        <footer className="bg-brand-900 text-brand-100">
+          <div className="mx-auto max-w-5xl px-5 py-12">
+            <div className="grid gap-8 sm:grid-cols-4">
+              {FOOTER.map((col) => (
+                <nav key={col.heading} aria-label={col.heading}>
+                  <h2 className="text-sm font-bold uppercase tracking-wider text-white">
+                    {col.heading}
+                  </h2>
+                  <ul className="mt-3 space-y-2 text-sm">
+                    {col.links.map((l) => (
+                      <li key={l.href}>
+                        <Link href={l.href} className="underline underline-offset-2">
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              ))}
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-wider text-white">Contact</h2>
+                <address className="mt-3 text-sm not-italic">
+                  {SITE.name}
+                  <br />
+                  {SITE.address.streetAddress}
+                  <br />
+                  {SITE.address.addressLocality} {SITE.address.postalCode}
+                  <br />
+                  United Kingdom
+                </address>
+              </div>
+            </div>
+
+            <div className="mt-10 border-t border-brand-700 pt-6 text-sm">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/logo-imt-uk-reversed.svg"
                 alt=""
                 width={129}
                 height={32}
                 className="h-8 w-auto"
               />
-              <span className="sr-only sm:not-sr-only sm:text-sm sm:font-medium sm:text-ink">
-                {SITE.name}
-              </span>
-            </Link>
-            <nav className="flex gap-4 text-sm">
-              {NAV.map((n) => (
-                <Link key={n.href} href={n.href} className="underline">
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </header>
-
-        {children}
-
-        <footer className="mt-16 bg-brand-900 text-brand-100">
-          <div className="mx-auto max-w-3xl px-5 py-10 text-sm">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/brand/logo-imt-uk-reversed.svg"
-              alt=""
-              width={129}
-              height={32}
-              className="h-8 w-auto"
-            />
-            <p className="mt-4 font-semibold text-white">{SITE.name}</p>
-            <address className="not-italic">
-              {SITE.address.streetAddress}, {SITE.address.addressLocality},{" "}
-              {SITE.address.postalCode}, United Kingdom
-            </address>
-            <p className="mt-4 max-w-prose">
-              A directory of money transfer providers built from the FCA Register, Companies
-              House and the Financial Ombudsman Service. We are not a bank, a broker or a
-              payment provider, and nothing here is financial advice.
-            </p>
-            <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-              {FOOTER.map((n) => (
-                <Link key={n.href} href={n.href} className="underline">
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
+              <p className="mt-4 max-w-3xl">
+                {`${SITE.name} is an independent, privately run website. It is not a government body and is not affiliated with or endorsed by the Financial Conduct Authority, Companies House or the Financial Ombudsman Service. We are not a bank, a broker or a payment provider, and nothing on this site is financial advice.`}
+              </p>
+            </div>
           </div>
         </footer>
       </body>

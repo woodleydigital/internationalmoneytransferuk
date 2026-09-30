@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { Breadcrumbs, H1, H2, JsonLd, P, webPage } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "For providers: claim or correct your profile",
@@ -12,15 +12,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "For providers" }]} title={<>For providers: claim or correct your profile</>} lead={<>Listing is free, and every provider we can verify is listed. You cannot pay to be
+        listed, to be ranked, or to change what your profile says.</>}>
       <JsonLd data={webPage("/for-providers/", "For providers")} />
-      <Breadcrumbs trail={[{ name: "For providers" }]} />
-      <H1>For providers: claim or correct your profile</H1>
-
-      <P className="text-lg">
-        Listing is free, and every provider we can verify is listed. You cannot pay to be
-        listed, to be ranked, or to change what your profile says.
-      </P>
 
       <H2>What you can change</H2>
       <P>
@@ -49,6 +43,6 @@ export default function Page() {
         {" · "}
         <Link href="/how-we-get-paid/" className="underline">How we get paid</Link>
       </P>
-    </main>
+    </PageFrame>
   );
 }

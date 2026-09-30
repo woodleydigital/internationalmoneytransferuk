@@ -3,7 +3,7 @@ import Link from "next/link";
 import { computeMargin, type FeeTreatment, type MarginResult } from "@/lib/margin";
 import { getMidRate, CORRIDOR_CURRENCIES, isSupportedCurrency } from "@/lib/rates";
 import { money, percent, rate as fmtRate, longDate, ID } from "@/lib/site";
-import { Breadcrumbs, H1, JsonLd, NotYetPublished } from "@/components/Page";
+import { JsonLd, NotYetPublished, PageFrame } from "@/components/Page";
 
 const checkerSchema = {
   "@context": "https://schema.org",
@@ -90,10 +90,8 @@ export default async function Page({
       : null;
 
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Compare" }]} title={<>Compare the cost of an international money transfer</>}>
       <JsonLd data={checkerSchema} />
-      <Breadcrumbs trail={[{ name: "Compare" }]} />
-      <H1>Compare the cost of an international money transfer</H1>
 
       <section aria-labelledby="checker" className="mt-6">
         <h2 id="checker" className="sr-only">
@@ -223,7 +221,7 @@ export default async function Page({
           .
         </NotYetPublished>
       </section>
-    </main>
+    </PageFrame>
   );
 }
 

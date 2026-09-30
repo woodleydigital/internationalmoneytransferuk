@@ -19,10 +19,10 @@
   --color-accent-500: #B8811F;
   --color-accent-100: #F5E9D0;
 
-  --color-ink:   #101D1E;
-  --color-body:  #3D4B4B;
-  --color-muted: #677878;
-  --color-wash:  #F6F9F9;
+  --color-ink:   #0E1B1C;
+  --color-body:  #2F3D3E;
+  --color-muted: #5C6D6D;
+  --color-wash:  #F2F6F6;
 
   /* line is decorative only and fails 3:1 by design. Form control borders must
      use line-strong — under WCAG 1.4.11 the border is the only thing marking
@@ -30,8 +30,8 @@
   --color-line: #D3DDDD;
   --color-line-strong: #768C8C;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-source-sans), -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Reserve the result block so a rate refresh cannot shift layout. */
@@ -48,4 +48,30 @@
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: var(--color-brand-600);
+}
+
+/* Institutional link style: always underlined, thicker on hover. */
+.prose-links a,
+a.link {
+  color: var(--color-brand-600);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Skip link: visible only on keyboard focus. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  background: #fff;
+  color: var(--color-ink);
+  padding: 0.5rem 1rem;
+  outline: 3px solid var(--color-accent-500);
 }

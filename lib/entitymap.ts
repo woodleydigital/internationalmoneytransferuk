@@ -40,7 +40,6 @@ export function entityMap() {
           ),
         ],
         relations: [
-          { predicate: "SISTER_OF", targetName: SITE.sister.name, targetUri: SITE.sister.url },
           { predicate: "USES_SOURCE", targetName: "FCA Financial Services Register", targetId: "e_fca_register" },
         ],
       },

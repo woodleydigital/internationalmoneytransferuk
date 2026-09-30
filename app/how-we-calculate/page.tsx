@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageFrame } from "@/components/Page";
 import { Byline } from "@/components/Byline";
 import { MATT_WOODLEY, personSchema, personId, type ReviewMeta } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
@@ -28,13 +29,6 @@ const graph = {
       mainEntityOfPage: `${SITE.url}/how-we-calculate/`,
     },
     personSchema(MATT_WOODLEY),
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
-        { "@type": "ListItem", position: 2, name: "How we calculate this" },
-      ],
-    },
   ],
 };
 
@@ -47,22 +41,11 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Compare costs", href: "/compare/" }, { name: "How we calculate this" }]} title={<>How we calculate the exchange rate margin</>}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
       />
-
-      <nav aria-label="Breadcrumb" className="text-sm text-muted">
-        <Link href="/" className="underline">
-          Home
-        </Link>
-        {" / How we calculate this"}
-      </nav>
-
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink">
-        How we calculate the exchange rate margin
-      </h1>
 
       <Byline meta={review} />
 
@@ -170,6 +153,6 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
           Back to the cost comparison tool
         </Link>
       </p>
-    </main>
+    </PageFrame>
   );
 }

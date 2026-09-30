@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
-import { Breadcrumbs, H1, H2, JsonLd, P, webPage } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Corrections",
@@ -13,10 +13,8 @@ const LOG: { date: string; page: string; change: string }[] = [];
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Corrections" }]} title={<>Corrections</>}>
       <JsonLd data={webPage("/corrections/", "Corrections")} />
-      <Breadcrumbs trail={[{ name: "Corrections" }]} />
-      <H1>Corrections</H1>
 
       <H2>Report an error</H2>
       <P>
@@ -46,6 +44,6 @@ export default function Page() {
           ))}
         </ul>
       )}
-    </main>
+    </PageFrame>
   );
 }

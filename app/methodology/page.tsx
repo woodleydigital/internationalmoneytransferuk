@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, H1, H2, JsonLd, P, webPage } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Methodology: how we build and verify provider profiles",
@@ -11,15 +11,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Methodology" }]} title={<>Methodology: how we build and verify provider profiles</>} lead={<>Every regulatory fact in this directory comes from the public record, is fetched by
+        software rather than typed in, and shows the date it was last checked.</>}>
       <JsonLd data={webPage("/methodology/", "Methodology")} />
-      <Breadcrumbs trail={[{ name: "Methodology" }]} />
-      <H1>Methodology: how we build and verify provider profiles</H1>
-
-      <P className="text-lg">
-        Every regulatory fact in this directory comes from the public record, is fetched by
-        software rather than typed in, and shows the date it was last checked.
-      </P>
       <P>
         Our import from the FCA Register and Companies House is being set up. Until it has run
         for a provider, that provider’s profile is Tier 3 and says so.
@@ -96,6 +90,6 @@ export default function Page() {
         <Link href="/corrections/" className="underline">tell us</Link>
         {"; corrections are logged publicly."}
       </P>
-    </main>
+    </PageFrame>
   );
 }

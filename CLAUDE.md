@@ -1,25 +1,26 @@
 # International Money Transfer UK (internationalmoneytransfer.uk)
 
-Sister site to Currency Brokers UK (https://www.currencybrokers.uk, "CBUK").
 IMT UK is a **directory of every FCA-authorised money transfer provider**, with an
-information-gain-heavy entity profile for each. CBUK remains the advisory/comparison
-site for brokers, large transfers and business FX.
+information-gain-heavy entity profile for each. It is presented as an **independent
+site in its own right**: its own brand, no cross-links to Currency Brokers UK
+(https://www.currencybrokers.uk, "CBUK"), and no "sister site" framing. Common ownership
+is stated once, factually, on `/about/` — claiming independence while hiding it would be
+misleading. The CBUK split below is an internal keyword plan only.
 
 ## Reference files
 - `docs/IMT_UK_topical_map.xlsx` — topical map with QDP verdicts, removed/merged pages,
   full keyword→page map (1,903 keywords, Ahrefs GB export 2026-09-25), profile schema.
-- CBUK is built on Next.js (inferred from its `/_next/image` URLs). Match its conventions
-  unless told otherwise.
+- Next.js App Router, server-rendered; trailing-slash URLs.
 
-## Split with CBUK (intent-based) — never create a page CBUK already owns
+## Keyword split with CBUK (internal) — never create a page CBUK already owns
 | Topic | Owner |
 |---|---|
 | Head term "international money transfer", A–Z directory, provider profiles | IMT |
 | Apps, cash pickup, tracking/missing transfers, Nigeria corridor | IMT |
-| Transfer times, limits & tax, receiving money, regulations guide | CBUK (IMT links to it) |
+| Transfer times, limits & tax, receiving money, regulations guide | CBUK |
 | Corridors: Spain, Australia, USA, India | CBUK `/send-money/{country}` |
 | Large/purpose transfers (property, investment), forwards, hedging | CBUK |
-| Broker reviews (OFX, XE, TorFX, etc.) | CBUK — IMT shows data profile only + link to CBUK review |
+| Broker reviews (OFX, XE, TorFX, etc.) | CBUK — IMT shows the data profile only |
 
 Pending decisions (need SERP overlap check, 4+ shared top-10 URLs = same page):
 `/compare/` vs homepage; `/business/` vs CBUK `/business-fx`; `/banks/` vs CBUK
@@ -36,7 +37,7 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 - `/providers/{slug}/` — entity profiles
 - `/compare/`, `/apps/` (phase 1); `/business/`, `/banks/`, `/cash-pickup/`, `/send-to/nigeria/`, `/guides/how-it-works/`, `/guides/track-a-transfer/` (phase 2)
 - `/check-a-provider/` (FCA status tool), `/tracker/`, `/register-changes/`
-- Trust: `/methodology/`, `/how-we-get-paid/`, `/code-of-ethics/`, `/corrections/`, `/about/`, `/for-providers/`, `/entitymap.html` + `/entitymap.json` (EntityMap v1.0, as on CBUK)
+- Trust: `/methodology/`, `/how-we-get-paid/`, `/code-of-ethics/`, `/corrections/`, `/about/`, `/for-providers/`, `/entitymap.html` + `/entitymap.json` (EntityMap v1.0)
 
 ## Profile tiers
 - **Tier 1 – Tested:** real test transfers, mystery shopping (CBUK methodology). Top ~30 providers.
@@ -50,11 +51,20 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 - Every data block shows a "last verified" date; changes are logged to the profile timeline.
 - Model tiers: Haiku for bulk classification/extraction, Sonnet for drafting, Opus for review of sensitive changes and methodology. Use batch processing for bulk jobs.
 
-## Editorial & brand (inherit from CBUK)
+## Design — independent public-interest agency
+- Sober, institutional, accessibility-first: utility strip, white header with logo and
+  tagline, dark-teal nav band with gold rule, tinted page-header bands, square controls,
+  Source Sans 3, the IMT UK palette in `app/globals.css`. Every page uses `PageFrame`.
+- It may look like a public-interest body; it must **never** pass for an official one.
+  No crowns, crests or coats of arms, no GOV.UK or FCA styling, fonts or colours, no
+  "official" wording. Keep the "Not a government website, and not part of the FCA"
+  strip and the footer disclaimer on every page.
+
+## Editorial
 - British English, plain English, data-driven claims, no jargon without explanation.
 - Named authors; methodology and affiliate disclosure linked from every profile.
 - Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
-- Disclose the CBUK relationship on `/about/`. Cross-links between sites are contextual only (no sitewide footer links).
+- No links to CBUK. Common ownership is disclosed on `/about/` only.
 
 ## First tasks
 1. Scaffold the Next.js project and page routes above (phase 1 only).

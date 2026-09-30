@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageFrame } from "@/components/Page";
 import { MATT_WOODLEY, personSchema, personId } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
 
@@ -27,40 +28,16 @@ const graph = {
       isPartOf: { "@id": ID.website },
     },
     personSchema(p),
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
-        { "@type": "ListItem", position: 2, name: "About", item: `${SITE.url}/about` },
-        { "@type": "ListItem", position: 3, name: p.name },
-      ],
-    },
   ],
 };
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "About us", href: "/about/" }, { name: p.name }]} title={<>{p.name}</>} lead={<>{`${p.jobTitle}, ${SITE.name}`}</>}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
       />
-
-      <nav aria-label="Breadcrumb" className="text-sm text-muted">
-        <Link href="/" className="underline">
-          Home
-        </Link>
-        {" / "}
-        <Link href="/about/" className="underline">
-          About
-        </Link>
-        {` / ${p.name}`}
-      </nav>
-
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink">{p.name}</h1>
-      <p className="mt-2 text-lg text-body">
-        {`${p.jobTitle}, ${SITE.name}`}
-      </p>
 
       <h2 className="mt-10 text-xl font-semibold text-ink">Background</h2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
@@ -106,6 +83,6 @@ export default function Page() {
           About {SITE.name}
         </Link>
       </p>
-    </main>
+    </PageFrame>
   );
 }

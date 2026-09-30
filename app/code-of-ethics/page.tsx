@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, H1, JsonLd, P, webPage } from "@/components/Page";
+import { JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Code of ethics",
@@ -20,10 +20,8 @@ const RULES: [string, string][] = [
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "Code of ethics" }]} title={<>Code of ethics</>}>
       <JsonLd data={webPage("/code-of-ethics/", "Code of ethics")} />
-      <Breadcrumbs trail={[{ name: "Code of ethics" }]} />
-      <H1>Code of ethics</H1>
       <ol className="mt-6 max-w-prose list-decimal space-y-3 pl-5">
         {RULES.map(([title, body]) => (
           <li key={title}>
@@ -36,6 +34,6 @@ export default function Page() {
         {" · "}
         <Link href="/how-we-get-paid/" className="underline">How we get paid</Link>
       </P>
-    </main>
+    </PageFrame>
   );
 }

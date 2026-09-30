@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MATT_WOODLEY, personUrl } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
-import { Breadcrumbs, H1, H2, JsonLd, P } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: `About ${SITE.name}`,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "About" }]} title={<>About {SITE.name}</>} lead={<>{`${SITE.name} (${SITE.alternateName}) is a directory of the firms that send money abroad from the UK, built from the public record.`}</>}>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -25,12 +25,6 @@ export default function Page() {
           isPartOf: { "@id": ID.website },
         }}
       />
-      <Breadcrumbs trail={[{ name: "About" }]} />
-      <H1>About {SITE.name}</H1>
-
-      <P className="text-lg">
-        {`${SITE.name} (${SITE.alternateName}) is a directory of the firms that send money abroad from the UK, built from the public record.`}
-      </P>
 
       <H2>What we do</H2>
       <P>
@@ -45,13 +39,9 @@ export default function Page() {
         financial advice.
       </P>
 
-      <H2>Our sister site</H2>
+      <H2>Ownership</H2>
       <P>
-        {`${SITE.name} is a sister site of `}
-        <a href={SITE.sister.url} className="underline">
-          {SITE.sister.name}
-        </a>
-        {", which is owned by the same business. Currency Brokers UK covers currency brokers, large transfers and business payments, including its own reviews of brokers. Where it already covers a subject, we link to it rather than repeat it."}
+        {`${SITE.name} is privately owned and is not a government body. Its owner also operates other personal finance websites, including currencybrokers.uk. No provider has any say in what this directory publishes.`}
       </P>
 
       <H2>Who we are</H2>
@@ -82,6 +72,6 @@ export default function Page() {
         <br />
         United Kingdom
       </address>
-    </main>
+    </PageFrame>
   );
 }

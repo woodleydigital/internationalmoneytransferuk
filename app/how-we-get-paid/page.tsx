@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, H1, H2, JsonLd, P, webPage } from "@/components/Page";
+import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "How we get paid",
@@ -11,15 +11,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main id="main" className="mx-auto max-w-3xl px-5 py-10">
+    <PageFrame trail={[{ name: "How we get paid" }]} title={<>How we get paid</>} lead={<>We may earn a commission from a provider when a reader signs up with it through a link
+        on this site. Right now, no link on this site earns us anything.</>}>
       <JsonLd data={webPage("/how-we-get-paid/", "How we get paid")} />
-      <Breadcrumbs trail={[{ name: "How we get paid" }]} />
-      <H1>How we get paid</H1>
-
-      <P className="text-lg">
-        We may earn a commission from a provider when a reader signs up with it through a link
-        on this site. Right now, no link on this site earns us anything.
-      </P>
 
       <H2>The rules</H2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
@@ -46,6 +40,6 @@ export default function Page() {
         {" · "}
         <Link href="/methodology/" className="underline">Methodology</Link>
       </P>
-    </main>
+    </PageFrame>
   );
 }

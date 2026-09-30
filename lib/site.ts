@@ -12,8 +12,6 @@ export const SITE = {
   name: "International Money Transfer UK",
   alternateName: "IMT UK",
   url: "https://internationalmoneytransfer.uk",
-  /** Sister site. Disclosed on /about/; cross-links are contextual only. */
-  sister: { name: "Currency Brokers UK", url: "https://www.currencybrokers.uk" },
   address: {
     streetAddress: "Harley House, 29 Cambray Pl",
     addressLocality: "Cheltenham",
