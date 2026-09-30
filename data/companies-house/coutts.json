@@ -1,11 +1,42 @@
 {
   "slug": "coutts",
-  "fetchedAt": "2026-09-30T08:19:35.724Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-09-30T08:27:11.963Z",
+  "status": "matched",
   "match": {
     "query": "Coutts",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
-  }
+    "candidates": [
+      {
+        "company_number": "00036695",
+        "title": "COUTTS & COMPANY"
+      }
+    ],
+    "outcome": "Matched 00036695"
+  },
+  "company": {
+    "name": "COUTTS & COMPANY",
+    "number": "00036695",
+    "status": "active",
+    "type": "private-unlimited",
+    "incorporated": "1892-06-24",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "440 Strand, London, WC2R 0QS",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/00036695"
+  },
+  "psc": [
+    {
+      "name": "National Westminster Bank Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
 }

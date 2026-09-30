@@ -1,7 +1,7 @@
 {
   "slug": "key-currency",
   "url": "https://www.keycurrency.co.uk/",
-  "fetchedAt": "2026-09-30T08:15:30.656Z",
+  "fetchedAt": "2026-09-30T08:23:08.016Z",
   "status": "error",
   "statements": [],
   "error": "HTTP 403"
