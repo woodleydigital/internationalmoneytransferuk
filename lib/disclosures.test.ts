@@ -100,3 +100,23 @@ test("a company number read twice is not also taken as an FRN", () => {
   assert.deepEqual(s.companyNumbers, ["00738837"]);
   assert.deepEqual(s.frns, []);
 });
+
+test("reads which company is behind a brand from the provider's own words", async () => {
+  const { linkedEntities } = await import("./disclosures.ts");
+  const st = (text: string, frns: string[] = []) => ({ text, frns, companyNumbers: [] });
+  assert.deepEqual(linkedEntities([st("Tesco Bank is a trading name of Barclays Bank UK PLC. Barclays is authorised by the PRA.")], "Tesco Bank"), ["Barclays Bank UK PLC"]);
+  assert.deepEqual(linkedEntities([st("M&S Bank is a division of HSBC UK Bank plc.")], "M&S Bank"), ["HSBC UK Bank plc"]);
+  assert.deepEqual(linkedEntities([st("Part of Danske Bank Group. Danske Bank is a trading name of Northern Bank Limited.")], "Danske Bank"), ["Northern Bank Limited"]);
+  assert.deepEqual(linkedEntities([st("In respect of United Kingdom residents, the Service is provided by PayPal UK Ltd.")], "Xoom"), ["PayPal UK Ltd"]);
+  assert.deepEqual(
+    linkedEntities([st("In the United Kingdom, Nium Fintech Limited is authorised by the Financial Conduct Authority (Reference Number 901024).", ["901024"])], "Instarem"),
+    ["Nium Fintech Limited"],
+  );
+  // A partner firm named without a brand link is not linked.
+  assert.deepEqual(linkedEntities([st("Home insurance is arranged by Uinsure Limited.")], "Virgin Money"), []);
+});
+
+test("Northern Ireland company numbers are recognised", () => {
+  const [s] = findStatements("Danske Bank is regulated by the Financial Conduct Authority. Registered in Northern Ireland R568.");
+  assert.deepEqual(s.companyNumbers, ["R0000568"]);
+});

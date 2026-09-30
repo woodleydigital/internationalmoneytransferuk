@@ -88,7 +88,9 @@ export function normaliseName(s: string): string {
   return s
     .toLowerCase()
     .replace(/&/g, " and ")
+    .replace(/\bp\.\s?l\.\s?c\.?/g, "plc")
     .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\bpublic limited company\b/g, "plc")
     .replace(/\b(the)\b/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -184,21 +186,36 @@ export const STATED_NAMED_RULE =
  * an FRN-free statement names the company.
  * Exactly one candidate must qualify at the first tier that has any.
  */
+/** Registered names compared without their legal-form ending ("Ltd" = "Limited"). */
+export function sameCompanyName(a: string, b: string): boolean {
+  const core = (s: string) =>
+    normaliseName(s)
+      .replace(/\b(limited|ltd|plc|llp)$/, "")
+      .trim();
+  return core(a) === core(b) && core(a).length > 0;
+}
+
+export const LINKED_RULE =
+  "The provider's own website names this company as the one behind the brand (for example \"a trading name of\" or \"provided by\"), and it is the only active company with that exact name.";
+
 export function chooseStatedCompany(
   tradingName: string,
   statements: { text: string; frns: string[]; companyNumbers: string[]; url?: string }[],
   profiles: Map<string, CompanyProfile>,
+  /** Legal entities the provider's statements say are behind the brand. */
+  linked: string[] = [],
 ): { profile: CompanyProfile; rule: string } | null {
   const homeFrns = new Set(statements.filter((s) => !s.url).flatMap((s) => s.frns));
-  const tier1: CompanyProfile[] = [];
+  const tier1: { profile: CompanyProfile; rule: string }[] = [];
   const tier2: CompanyProfile[] = [];
   for (const [number, prof] of profiles) {
     const own = statements.filter((s) => s.companyNumbers.includes(number));
     // The homepage FRN identifies the provider only when the homepage names a
     // single firm; footers that list several (insurers, card issuers) do not.
     const frnLinked = homeFrns.size === 1 && own.some((s) => s.frns.some((f) => homeFrns.has(f)));
-    if (nameMatches(tradingName, prof.company_name) || frnLinked) {
-      tier1.push(prof);
+    const brandLinked = linked.some((n) => sameCompanyName(n, prof.company_name));
+    if (nameMatches(tradingName, prof.company_name) || frnLinked || brandLinked) {
+      tier1.push({ profile: prof, rule: brandLinked && !frnLinked && !nameMatches(tradingName, prof.company_name) ? LINKED_RULE : STATED_RULE });
     } else if (
       // Tier 2 is a weak link, so it needs a plain company-identity sentence
       // (no FRN, which would mark a product or partner firm) and a site that
@@ -210,7 +227,7 @@ export function chooseStatedCompany(
       tier2.push(prof);
     }
   }
-  if (tier1.length) return tier1.length === 1 ? { profile: tier1[0], rule: STATED_RULE } : null;
+  if (tier1.length) return tier1.length === 1 ? tier1[0] : null;
   return tier2.length === 1 ? { profile: tier2[0], rule: STATED_NAMED_RULE } : null;
 }
 

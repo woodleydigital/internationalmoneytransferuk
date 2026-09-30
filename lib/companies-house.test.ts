@@ -11,7 +11,7 @@ import {
 import { isFresh } from "./company-records.ts";
 
 test("normalises punctuation, case and ampersands", () => {
-  assert.equal(normaliseName("Co-operative Bank P.L.C."), "co operative bank p l c");
+  assert.equal(normaliseName("Co-operative Bank P.L.C."), "co operative bank plc");
   assert.equal(normaliseName("Marks & Spencer"), "marks and spencer");
 });
 
@@ -134,4 +134,20 @@ test("currency-firm and partnership-style legal names are recognised", () => {
   assert.ok(nameMatches("Caxton", "CAXTON FX LIMITED"));
   assert.ok(nameMatches("Coutts", "COUTTS & COMPANY"));
   assert.ok(!nameMatches("Caxton", "CAXTON PROPERTY LIMITED"));
+});
+
+test("a company the provider names as behind its brand is accepted", async () => {
+  const { chooseStatedCompany, LINKED_RULE } = await import("./companies-house.ts");
+  const statements = [{ text: "Tesco Bank is a trading name of Barclays Bank UK PLC.", frns: ["759676"], companyNumbers: [] }];
+  const profiles = new Map([["09740322", P("09740322", "BARCLAYS BANK UK PLC")]]);
+  const got = chooseStatedCompany("Tesco Bank", statements, profiles, ["Barclays Bank UK PLC"]);
+  assert.equal(got?.profile.company_number, "09740322");
+  assert.equal(got?.rule, LINKED_RULE);
+});
+
+test("company names match across legal-form spellings", async () => {
+  const { sameCompanyName } = await import("./companies-house.ts");
+  assert.ok(sameCompanyName("The Royal Bank of Scotland plc", "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY"));
+  assert.ok(sameCompanyName("Nium Fintech Limited", "NIUM FINTECH LTD"));
+  assert.ok(!sameCompanyName("Nium Fintech Limited", "NIUM LIMITED"));
 });

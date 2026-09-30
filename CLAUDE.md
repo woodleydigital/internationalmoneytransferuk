@@ -77,6 +77,11 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   trading name + legal suffix, or the homepage FRN in the same statement; tier 2, only when
   the homepage has no FRN: the statement names the company; exactly one must qualify).
   If the site states company numbers but none qualifies, there is no name-rule fallback.
+  Brand links in the provider's own words ("a trading name of", "a division of", "provided
+  by", "(trading as …)", or "{company} is authorised" beside the homepage's only FRN) name
+  the company behind a brand; one without a stated number is found by exact-name search
+  (exactly one active). Pages whose footer is drawn by JavaScript are read in headless
+  Chromium (installed in the workflow). Building societies have no Companies House record.
   Plain pattern matching — no AI.
 - **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
   must not be used "to provide a data feed to any comparison table or any other website

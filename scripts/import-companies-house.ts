@@ -18,6 +18,7 @@ import {
   AuthError,
   MATCH_RULE,
   chooseStatedCompany,
+  sameCompanyName,
   client,
   companySummary,
   minimisePsc,
@@ -26,7 +27,7 @@ import {
   type CompanyProfile,
   type CompanyRecord,
 } from "../lib/companies-house.ts";
-import { statedCompanyNumbers, type DisclosureRecord } from "../lib/disclosures.ts";
+import { linkedEntities, statedCompanyNumbers, type DisclosureRecord } from "../lib/disclosures.ts";
 
 function readDisclosure(slug: string): DisclosureRecord | null {
   const f = join(process.cwd(), "data", "disclosures", `${slug}.json`);
@@ -65,14 +66,28 @@ for (const p of PROVIDERS) {
     //    chooseStatedCompany (see lib/companies-house.ts).
     const disclosure = readDisclosure(p.slug);
     const stated = statedCompanyNumbers(disclosure).slice(0, 6);
-    if (stated.length) {
+    const linked = disclosure?.status === "found" ? linkedEntities(disclosure.statements, p.name).slice(0, 4) : [];
+    if (stated.length || linked.length) {
       const profiles = new Map<string, CompanyProfile>();
       for (const n of stated) {
         const prof = await ch.profile(n);
         await pause();
         if (prof) profiles.set(n, prof);
       }
-      const chosen = chooseStatedCompany(p.name, disclosure!.statements, profiles);
+      // A company the statements name without a number: exact-name search,
+      // accepted only if exactly one active company has that name.
+      for (const name of linked) {
+        if ([...profiles.values()].some((x) => sameCompanyName(name, x.company_name))) continue;
+        const exact = (await ch.search(name)).filter(
+          (i) => i.company_status === "active" && sameCompanyName(name, i.title),
+        );
+        await pause();
+        if (exact.length !== 1) continue;
+        const prof = await ch.profile(exact[0].company_number);
+        await pause();
+        if (prof) profiles.set(prof.company_number, prof);
+      }
+      const chosen = chooseStatedCompany(p.name, disclosure!.statements, profiles, linked);
       if (chosen) {
         const prof = chosen.profile;
         record.status = "matched";

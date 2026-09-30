@@ -7,7 +7,11 @@
  * and keeps any paragraph that states an FRN or, beside a mention of the FCA or
  * PRA, a company number. If the homepage gives no company number, it follows up
  * to four of the homepage's own links to legal, regulatory or "about us" pages
- * on the same site. Writes data/disclosures/{slug}.json. Nothing is paraphrased.
+ * on the same site. If the plain HTML yields nothing (footers drawn by
+ * JavaScript), it renders the same pages in headless Chromium and reads the
+ * visible text. Writes data/disclosures/{slug}.json. Nothing is paraphrased.
+ *
+ *   CHROMIUM_PATH — optional path to a Chromium binary for the renderer
  */
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -55,6 +59,46 @@ function merge(into: Statement[], found: Statement[], url?: string) {
     into.push(url ? { ...s, url } : s);
     have.add(s.text.toLowerCase());
   }
+}
+
+// Headless browser, started only if a site needs it.
+type Browser = import("playwright").Browser;
+let browser: Browser | null = null;
+async function rendered(url: string): Promise<{ html: string; text: string; url: string } | null> {
+  try {
+    if (!browser) {
+      const { chromium } = await import("playwright");
+      browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
+    }
+    const page = await browser.newPage({ userAgent: `${UA} HeadlessChrome`, locale: "en-GB" });
+    try {
+      const res = await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
+      if (!res || !res.ok()) return null;
+      await page.waitForTimeout(3_000);
+      return { html: await page.content(), text: await page.innerText("body"), url: page.url() };
+    } finally {
+      await page.close();
+    }
+  } catch {
+    return null;
+  }
+}
+
+/** Read a page and its legal links through the renderer. */
+async function renderedStatements(start: string): Promise<Statement[]> {
+  const out: Statement[] = [];
+  const home = await rendered(start);
+  if (!home) return out;
+  merge(out, findStatements(home.text));
+  if (!out.some((s) => s.companyNumbers.length)) {
+    for (const link of findLegalLinks(home.html, home.url)) {
+      if (!(await allowed(link))) continue;
+      const sub = await rendered(link);
+      if (sub) merge(out, findStatements(sub.text), sub.url);
+      if (out.some((s) => s.companyNumbers.length)) break;
+    }
+  }
+  return out;
 }
 
 const summary: string[] = [];
@@ -108,9 +152,19 @@ for (const p of PROVIDERS) {
     rec.status = "error";
     rec.error = e instanceof Error ? e.message : String(e);
   }
+  // Nothing in the plain HTML (or it could not be fetched): try the rendered page.
+  if ((rec.status === "none" || rec.status === "error") && (await allowed(p.website).catch(() => false))) {
+    const found = await renderedStatements(p.website);
+    if (found.length) {
+      rec.statements = found;
+      rec.status = "found";
+      delete rec.error;
+    }
+  }
   writeFileSync(join(OUT, `${p.slug}.json`), JSON.stringify(rec, null, 2) + "\n");
   const nums = rec.statements.flatMap((s) => [...s.frns.map((f) => `FRN ${f}`), ...s.companyNumbers.map((c) => `Co ${c}`)]);
   summary.push(`${rec.status.padEnd(8)} ${p.slug.padEnd(22)} ${[...new Set(nums)].join(", ") || rec.error || ""}`);
   await pause();
 }
+await (browser as Browser | null)?.close();
 console.log(summary.join("\n"));

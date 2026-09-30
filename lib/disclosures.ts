@@ -94,6 +94,8 @@ const FRN_PATTERNS = [
 // Companies House numbers: 8 digits, or 2 letters + 6 digits (SC, NI, OC, ...).
 const CO = "([A-Z]{2}\\d{5,6}|\\d{6,8})";
 const COMPANY_PATTERNS = [
+  // Northern Ireland: "Registered in Northern Ireland R568" or "NI012345".
+  /\bregistered in Northern Ireland[^.\n]{0,30}?\b(R\d{1,7}|NI\d{6})\b/gi,
   new RegExp(`\\bcompany (?:registration )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
   new RegExp(`\\bregistered (?:company )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
   new RegExp(`\\bregistered in (?:England(?: and|&) Wales|England|Scotland|Northern Ireland)[^.\\n]{0,40}?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
@@ -105,6 +107,7 @@ const REGULATOR = /Financial Conduct Authority|\bFCA\b|Prudential Regulation Aut
 export function normaliseCompanyNumber(n: string): string {
   const s = n.toUpperCase();
   if (/^\d+$/.test(s)) return s.padStart(8, "0");
+  if (/^R\d+$/.test(s)) return "R" + s.slice(1).padStart(7, "0");
   return s.slice(0, 2) + s.slice(2).padStart(6, "0");
 }
 
@@ -144,6 +147,44 @@ export function findStatements(text: string): Statement[] {
     }
   });
   return out;
+}
+
+// A registered company name: capitalised words ending in a legal form.
+const ENTITY = String.raw`((?:The )?[A-Z0-9][\w&'.()\-]*(?: (?:[A-Z0-9(&][\w&'.()\-]*|of|and|for)){0,7}? (?:Limited|Ltd\.?|plc|PLC|p\.l\.c\.|P\.L\.C\.|Public Limited Company|LLP))`;
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/**
+ * Legal entities a provider's own statements say are behind its brand:
+ * "{brand} is a trading name / business name / division of {E}", "{E} (trading
+ * as {brand})", "the Service is provided by {E}", and — in a statement giving
+ * the homepage's only FRN — "{E} is authorised/regulated".
+ */
+export function linkedEntities(statements: Statement[], brand: string): string[] {
+  const b = esc(brand).replace(/\\ /g, "\\s+");
+  const homeFrns = new Set(statements.filter((s) => !s.url).flatMap((s) => s.frns));
+  const out = new Set<string>();
+  const add = (re: RegExp, text: string) => {
+    for (const m of text.matchAll(re)) {
+      // Keep only the name itself: drop a preceding sentence or "© 2026".
+      const name = m[1]
+        .split(/\.\s+/)
+        .pop()!
+        .replace(/^(?:©\s*)?\d{4}\s+/, "")
+        .replace(/[.,]$/, "")
+        .trim();
+      if (name) out.add(name);
+    }
+  };
+  for (const s of statements) {
+    add(new RegExp(`${b}(?:\\s+Bank)?,?\\s+(?:is\\s+)?an?\\s+(?:trading|business|brand)\\s+name\\s+of\\s+${ENTITY}`, "gi"), s.text);
+    add(new RegExp(`${b}(?:\\s+Bank)?\\s+is\\s+a\\s+division\\s+of\\s+${ENTITY}`, "gi"), s.text);
+    add(new RegExp(`${ENTITY}\\s*\\(\\s*(?:trading|t\\/a)\\s+as\\s+[“"]?${b}`, "gi"), s.text);
+    add(new RegExp(`(?:service|services)\\s+(?:is|are)\\s+provided\\s+by\\s+${ENTITY}`, "gi"), s.text);
+    if (homeFrns.size === 1 && s.frns.some((f) => homeFrns.has(f))) {
+      add(new RegExp(`${ENTITY}\\s+(?:is|are)\\s+(?:authorised|regulated)`, "g"), s.text);
+    }
+  }
+  return [...out];
 }
 
 /** The distinct company numbers a provider's statements give. */

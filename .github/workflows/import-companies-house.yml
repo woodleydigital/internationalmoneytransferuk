@@ -28,6 +28,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - name: Install Chromium for JavaScript-rendered provider pages
+        run: npx playwright install --with-deps chromium
       - name: Read provider regulatory statements
         run: npm run import:disclosures
       - name: Import Companies House
