@@ -1,0 +1,44 @@
+{
+  "slug": "metro-bank",
+  "fetchedAt": "2026-09-30T03:07:40.450Z",
+  "status": "matched",
+  "match": {
+    "query": "Metro Bank",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "06419578",
+        "title": "METRO BANK PLC"
+      }
+    ],
+    "outcome": "Matched 06419578"
+  },
+  "company": {
+    "name": "METRO BANK PLC",
+    "number": "06419578",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "2007-11-06",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "One, Southampton Row, London, WC1B 5HA, England",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/06419578"
+  },
+  "psc": [
+    {
+      "name": "Metro Bank Holdings Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2023-05-19"
+    }
+  ]
+}

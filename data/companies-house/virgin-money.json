@@ -1,0 +1,20 @@
+{
+  "slug": "virgin-money",
+  "fetchedAt": "2026-09-30T03:07:01.149Z",
+  "status": "unmatched",
+  "match": {
+    "query": "Virgin Money",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "06952311",
+        "title": "VIRGIN MONEY LIMITED"
+      },
+      {
+        "company_number": "09595911",
+        "title": "VIRGIN MONEY UK LIMITED"
+      }
+    ],
+    "outcome": "No candidate with a payments SIC code"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "john-lewis-finance",
+  "fetchedAt": "2026-09-30T03:07:32.022Z",
+  "status": "matched",
+  "match": {
+    "query": "John Lewis Finance",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "15785347",
+        "title": "JOHN LEWIS FINANCE LIMITED"
+      }
+    ],
+    "outcome": "Matched 15785347"
+  },
+  "company": {
+    "name": "JOHN LEWIS FINANCE LIMITED",
+    "number": "15785347",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2024-06-18",
+    "sicCodes": [
+      "64999",
+      "66190",
+      "66220",
+      "66290"
+    ],
+    "registeredOffice": "1 Drummond Gate, Pimlico, London, SW1V 2QQ, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-01-25",
+    "accountsNextDue": "2026-10-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/15785347"
+  },
+  "psc": [
+    {
+      "name": "John Lewis Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2024-06-18"
+    }
+  ]
+}

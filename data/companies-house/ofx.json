@@ -1,0 +1,16 @@
+{
+  "slug": "ofx",
+  "fetchedAt": "2026-09-30T03:07:16.595Z",
+  "status": "unmatched",
+  "match": {
+    "query": "OFX",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "16405744",
+        "title": "OFX LTD"
+      }
+    ],
+    "outcome": "No candidate with a payments SIC code"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "post-office",
+  "fetchedAt": "2026-09-30T03:06:59.044Z",
+  "status": "matched",
+  "match": {
+    "query": "Post Office",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "02154540",
+        "title": "POST OFFICE LIMITED"
+      }
+    ],
+    "outcome": "Matched 02154540"
+  },
+  "company": {
+    "name": "POST OFFICE LIMITED",
+    "number": "02154540",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "1987-08-13",
+    "sicCodes": [
+      "47190",
+      "53100",
+      "61900",
+      "64999"
+    ],
+    "registeredOffice": "100 Wood Street, London, EC2V 7ER, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-03-30",
+    "accountsNextDue": "2026-12-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/02154540"
+  },
+  "psc": [
+    {
+      "name": "Postal Services Holding Company Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2017-06-12"
+    },
+    {
+      "name": "Secretary Of State For Business And Trade",
+      "kind": "legal-person-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}

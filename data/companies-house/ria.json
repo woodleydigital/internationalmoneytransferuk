@@ -1,0 +1,44 @@
+{
+  "slug": "ria",
+  "fetchedAt": "2026-09-30T03:07:42.553Z",
+  "status": "matched",
+  "match": {
+    "query": "Ria",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "04263192",
+        "title": "RIA FINANCIAL SERVICES LIMITED"
+      }
+    ],
+    "outcome": "Matched 04263192"
+  },
+  "company": {
+    "name": "RIA FINANCIAL SERVICES LIMITED",
+    "number": "04263192",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2001-08-01",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Part 7th Floor, North Block, 55 Baker Street, London, W1U 7EU, United Kingdom",
+    "lastAccountsMadeUpTo": "2024-12-31",
+    "accountsNextDue": "2026-12-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/04263192"
+  },
+  "psc": [
+    {
+      "name": "Euronet Worldwide, Inc.",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}

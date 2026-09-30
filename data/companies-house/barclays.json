@@ -1,0 +1,20 @@
+{
+  "slug": "barclays",
+  "fetchedAt": "2026-09-30T03:07:06.079Z",
+  "status": "unmatched",
+  "match": {
+    "query": "Barclays",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "00048839",
+        "title": "BARCLAYS PLC"
+      },
+      {
+        "company_number": "01026167",
+        "title": "BARCLAYS BANK PLC"
+      }
+    ],
+    "outcome": "Ambiguous: 00048839, 01026167"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "xoom-paypal",
+  "fetchedAt": "2026-09-30T03:07:36.241Z",
+  "status": "unmatched",
+  "match": {
+    "query": "Xoom",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "03997742",
+        "title": "XOOM LTD"
+      }
+    ],
+    "outcome": "No candidate with a payments SIC code"
+  }
+}

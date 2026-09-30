@@ -1,0 +1,59 @@
+{
+  "slug": "tsb",
+  "fetchedAt": "2026-09-30T03:07:12.397Z",
+  "status": "matched",
+  "match": {
+    "query": "TSB",
+    "rule": "Exactly one active company whose registered name is the trading name plus a legal-form suffix, with a banking or payments SIC code.",
+    "candidates": [
+      {
+        "company_number": "11105966",
+        "title": "TSB LIMITED"
+      },
+      {
+        "company_number": "SC095237",
+        "title": "TSB BANK PLC"
+      }
+    ],
+    "outcome": "Matched SC095237"
+  },
+  "company": {
+    "name": "TSB BANK PLC",
+    "number": "SC095237",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "1985-09-24",
+    "sicCodes": [
+      "64191"
+    ],
+    "registeredOffice": "Henry Duncan House, 120 George Street, Edinburgh, EH2 4LH",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-06-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC095237"
+  },
+  "psc": [
+    {
+      "name": "Santander Uk Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2026-06-25"
+    },
+    {
+      "name": "Tsb Banking Group Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06"
+    }
+  ]
+}
