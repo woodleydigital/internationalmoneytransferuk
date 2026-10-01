@@ -222,6 +222,9 @@ export function chooseStatedCompany(
       // states no other company number.
       homeFrns.size === 0 &&
       profiles.size === 1 &&
+      // A parent is often named beside the provider ("part of X Group"); the
+      // weak link never accepts one.
+      !/\b(group|holdings?)\b/.test(normaliseName(prof.company_name)) &&
       own.some((s) => !s.frns.length && normaliseName(s.text).includes(normaliseName(prof.company_name)))
     ) {
       tier2.push(prof);

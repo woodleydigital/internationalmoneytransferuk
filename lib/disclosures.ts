@@ -97,6 +97,7 @@ const COMPANY_PATTERNS = [
   // Northern Ireland: "Registered in Northern Ireland R568" or "NI012345".
   /\bregistered in Northern Ireland[^.\n]{0,30}?\b(R\d{1,7}|NI\d{6})\b/gi,
   new RegExp(`\\bcompany (?:registration )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
+  new RegExp(`\\bcompany reg(?:istration|\\.)?\\s*(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
   new RegExp(`\\bregistered (?:company )?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
   new RegExp(`\\bregistered in (?:England(?: and|&) Wales|England|Scotland|Northern Ireland)[^.\\n]{0,40}?(?:number|no\\.?)\\s*:?\\s*${CO}\\b`, "gi"),
 ];

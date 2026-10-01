@@ -151,3 +151,10 @@ test("company names match across legal-form spellings", async () => {
   assert.ok(sameCompanyName("Nium Fintech Limited", "NIUM FINTECH LTD"));
   assert.ok(!sameCompanyName("Nium Fintech Limited", "NIUM LIMITED"));
 });
+
+test("the weak naming link never accepts a group or holding company", async () => {
+  const { chooseStatedCompany } = await import("./companies-house.ts");
+  const statements = [{ text: "Brand is part of Equals Group Limited (No. 08922461).", frns: [], companyNumbers: ["08922461"], url: "u" }];
+  const profiles = new Map([["08922461", P("08922461", "EQUALS GROUP LIMITED")]]);
+  assert.equal(chooseStatedCompany("Equals Money", statements, profiles), null);
+});

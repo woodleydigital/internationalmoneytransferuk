@@ -138,3 +138,10 @@ test("one firm with two FRNs in one homepage sentence still links its company", 
   );
   assert.deepEqual(none, []);
 });
+
+test("'Company Reg. No.' is read, so a parent company is not the only number", () => {
+  const [s] = findStatements(
+    "Equals Money PLC is registered in England & Wales, Company Reg. No. 05539698. Equals Money PLC is part of Equals Group Limited (Registered in England & Wales No. 08922461). Regulated by the Financial Conduct Authority.",
+  );
+  assert.deepEqual(s.companyNumbers.sort(), ["05539698", "08922461"]);
+});
