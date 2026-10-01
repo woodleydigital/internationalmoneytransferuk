@@ -1,7 +1,7 @@
 /**
  * Weekly read of each provider's own website for its regulatory statement.
  *
- *   node --experimental-strip-types scripts/import-disclosures.ts
+ *   node --experimental-strip-types scripts/import-disclosures.ts [slug ...]
  *
  * Fetches the provider's homepage (respecting robots.txt, identifying ourselves)
  * and keeps any paragraph that states an FRN or, beside a mention of the FCA or
@@ -101,9 +101,23 @@ async function renderedStatements(start: string): Promise<Statement[]> {
   return out;
 }
 
+/** Paths where UK firms usually publish their regulatory and company details. */
+const COMMON_LEGAL_PATHS = [
+  "/legal/",
+  "/legal",
+  "/legal-information/",
+  "/important-information/",
+  "/regulatory-information/",
+  "/about-us/",
+  "/terms-and-conditions/",
+  "/terms/",
+];
+
 const summary: string[] = [];
+// Optional slugs on the command line limit the run to those providers.
+const only = new Set(process.argv.slice(2));
 for (const p of PROVIDERS) {
-  if (!p.website) continue;
+  if (!p.website || (only.size && !only.has(p.slug))) continue;
   const rec: DisclosureRecord = {
     slug: p.slug,
     url: p.website,
@@ -111,6 +125,8 @@ for (const p of PROVIDERS) {
     status: "none",
     statements: [],
   };
+  const hasNumber = () => rec.statements.some((s) => s.companyNumbers.length);
+  let homeHtml = "";
   try {
     if (!(await allowed(p.website))) {
       rec.status = "blocked";
@@ -119,38 +135,52 @@ for (const p of PROVIDERS) {
       const res = await get(p.website);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       rec.url = res.url || p.website;
-      const html = await res.text();
-      merge(rec.statements, findStatements(htmlToText(html)));
-
-      // No company number on the homepage: try its own legal/regulatory links.
-      if (!rec.statements.some((s) => s.companyNumbers.length)) {
-        for (const link of findLegalLinks(html, rec.url)) {
-          await pause();
-          if (!(await allowed(link))) continue;
-          try {
-            const sub = await get(link);
-            if (!sub.ok) continue;
-            merge(rec.statements, findStatements(htmlToText(await sub.text())), sub.url || link);
-          } catch {
-            // One unreachable legal page does not invalidate the homepage result.
-          }
-          if (rec.statements.some((s) => s.companyNumbers.length)) break;
-        }
-      }
-      // Legal pages often cover sister companies too (e.g. an investment arm).
-      // If the homepage names the firm's FRN, drop sub-page statements that
-      // carry only other FRNs: they describe a different regulated firm.
-      const homeFrns = new Set(rec.statements.filter((s) => !s.url).flatMap((s) => s.frns));
-      if (homeFrns.size) {
-        rec.statements = rec.statements.filter(
-          (s) => !s.url || !s.frns.length || s.frns.some((f) => homeFrns.has(f)),
-        );
-      }
-      rec.status = rec.statements.length ? "found" : "none";
+      homeHtml = await res.text();
+      merge(rec.statements, findStatements(htmlToText(homeHtml)));
     }
   } catch (e) {
     rec.status = "error";
     rec.error = e instanceof Error ? e.message : String(e);
+  }
+
+  // No company number yet: try configured statement pages, the homepage's own
+  // legal links, then the usual legal paths on the same site.
+  if (!hasNumber() && rec.status !== "blocked") {
+    const origin = new URL(rec.url).origin;
+    const candidates = [
+      ...(p.statementPages ?? []),
+      ...(homeHtml ? findLegalLinks(homeHtml, rec.url) : []),
+      ...COMMON_LEGAL_PATHS.map((path) => origin + path),
+    ].filter((u, i, all) => all.indexOf(u) === i && new URL(u).hostname.endsWith(new URL(p.website!).hostname.replace(/^www\./, "")));
+    for (const link of candidates.slice(0, 10)) {
+      await pause();
+      if (!(await allowed(link))) continue;
+      try {
+        const sub = await get(link);
+        if (!sub.ok || !(sub.headers.get("content-type") ?? "").includes("html")) continue;
+        merge(rec.statements, findStatements(htmlToText(await sub.text())), sub.url || link);
+      } catch {
+        // One unreachable page does not invalidate the others.
+      }
+      if (hasNumber()) break;
+    }
+    if (rec.statements.length) {
+      rec.status = "found";
+      delete rec.error;
+    }
+  }
+
+  // Legal pages often cover sister companies too (e.g. an investment arm).
+  // If the homepage names the firm's FRN, drop sub-page statements that
+  // carry only other FRNs: they describe a different regulated firm.
+  const homeFrns = new Set(rec.statements.filter((s) => !s.url).flatMap((s) => s.frns));
+  if (homeFrns.size) {
+    rec.statements = rec.statements.filter(
+      (s) => !s.url || !s.frns.length || s.frns.some((f) => homeFrns.has(f)),
+    );
+  }
+  if (rec.status !== "blocked" && rec.status !== "error") {
+    rec.status = rec.statements.length ? "found" : "none";
   }
   // Nothing in the plain HTML (or it could not be fetched): try the rendered page.
   if ((rec.status === "none" || rec.status === "error") && (await allowed(p.website).catch(() => false))) {

@@ -162,6 +162,11 @@ const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function linkedEntities(statements: Statement[], brand: string): string[] {
   const b = esc(brand).replace(/\\ /g, "\\s+");
   const homeFrns = new Set(statements.filter((s) => !s.url).flatMap((s) => s.frns));
+  // One firm on the homepage: a single FRN, or several FRNs all in one sentence
+  // (one firm holding more than one permission).
+  const oneFirmOnHomepage =
+    homeFrns.size === 1 ||
+    (homeFrns.size > 1 && statements.some((s) => !s.url && [...homeFrns].every((f) => s.frns.includes(f))));
   const out = new Set<string>();
   const add = (re: RegExp, text: string) => {
     for (const m of text.matchAll(re)) {
@@ -180,7 +185,7 @@ export function linkedEntities(statements: Statement[], brand: string): string[]
     add(new RegExp(`${b}(?:\\s+Bank)?\\s+is\\s+a\\s+division\\s+of\\s+${ENTITY}`, "gi"), s.text);
     add(new RegExp(`${ENTITY}\\s*\\(\\s*(?:trading|t\\/a)\\s+as\\s+[“"]?${b}`, "gi"), s.text);
     add(new RegExp(`(?:service|services)\\s+(?:is|are)\\s+provided\\s+by\\s+${ENTITY}`, "gi"), s.text);
-    if (homeFrns.size === 1 && s.frns.some((f) => homeFrns.has(f))) {
+    if (oneFirmOnHomepage && s.frns.some((f) => homeFrns.has(f))) {
       add(new RegExp(`${ENTITY}\\s+(?:is|are)\\s+(?:authorised|regulated)`, "g"), s.text);
     }
   }

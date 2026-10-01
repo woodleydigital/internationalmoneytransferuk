@@ -120,3 +120,21 @@ test("Northern Ireland company numbers are recognised", () => {
   const [s] = findStatements("Danske Bank is regulated by the Financial Conduct Authority. Registered in Northern Ireland R568.");
   assert.deepEqual(s.companyNumbers, ["R0000568"]);
 });
+
+test("one firm with two FRNs in one homepage sentence still links its company", async () => {
+  const { linkedEntities } = await import("./disclosures.ts");
+  const got = linkedEntities(
+    [{ text: "Caxton Payments Limited is authorised and regulated by the Financial Conduct Authority (FRN: 431844) and for e-money (FRN: 900663).", frns: ["431844", "900663"], companyNumbers: [] }],
+    "Caxton",
+  );
+  assert.deepEqual(got, ["Caxton Payments Limited"]);
+  // Two firms' FRNs in separate homepage sentences: no link.
+  const none = linkedEntities(
+    [
+      { text: "Accounts are provided by Alpha Bank Limited, which is authorised (FRN 111111).", frns: ["111111"], companyNumbers: [] },
+      { text: "Insurance by Beta Cover Limited, which is regulated (FRN 222222).", frns: ["222222"], companyNumbers: [] },
+    ],
+    "Brand",
+  );
+  assert.deepEqual(none, []);
+});

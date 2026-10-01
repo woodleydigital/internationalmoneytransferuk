@@ -26,6 +26,12 @@ export interface Provider {
    * Configuration, not a fact we publish; omitted where we are not sure of it.
    */
   website?: string;
+  /**
+   * Extra pages on the provider's own site that carry its regulatory statement,
+   * for sites whose homepage does not. Configuration only: the scanner still
+   * quotes whatever the page says, word for word.
+   */
+  statementPages?: string[];
 }
 
 export const PROVIDERS: Provider[] = [
@@ -42,29 +48,29 @@ export const PROVIDERS: Provider[] = [
   { slug: "moneygram", name: "MoneyGram", phase: 1, indexWhenVerified: true, website: "https://www.moneygram.com/gb/en" },
   { slug: "ofx", name: "OFX", phase: 1, indexWhenVerified: true, website: "https://www.ofx.com/en-gb/" },
   { slug: "santander", name: "Santander", phase: 1, indexWhenVerified: true, website: "https://www.santander.co.uk/" },
-  { slug: "wise", name: "Wise", phase: 1, indexWhenVerified: true, website: "https://wise.com/gb/" },
+  { slug: "wise", name: "Wise", phase: 1, indexWhenVerified: true, website: "https://wise.com/gb/", statementPages: ["https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country-and-region"] },
   { slug: "natwest", name: "NatWest", phase: 2, indexWhenVerified: false, website: "https://www.natwest.com/" },
   { slug: "skrill", name: "Skrill", phase: 2, indexWhenVerified: false, website: "https://www.skrill.com/en/" },
   { slug: "monzo", name: "Monzo", phase: 2, indexWhenVerified: false, website: "https://monzo.com/" },
   { slug: "ramsdens", name: "Ramsdens", phase: 2, indexWhenVerified: false, website: "https://www.ramsdensforcash.co.uk/" },
   { slug: "revolut", name: "Revolut", phase: 2, indexWhenVerified: false, website: "https://www.revolut.com/en-GB/" },
   { slug: "bank-of-ireland-uk", name: "Bank of Ireland UK", phase: 2, indexWhenVerified: false, website: "https://www.bankofirelanduk.com/" },
-  { slug: "halifax", name: "Halifax", phase: 2, indexWhenVerified: false, website: "https://www.halifax.co.uk/" },
+  { slug: "halifax", name: "Halifax", phase: 2, indexWhenVerified: false, website: "https://www.halifax.co.uk/", statementPages: ["https://www.halifax.co.uk/helpcentre/legal-information/legal-entities.html"] },
   { slug: "john-lewis-finance", name: "John Lewis Finance", phase: 2, indexWhenVerified: false, website: "https://www.johnlewisfinance.com/" },
   { slug: "mukuru", name: "Mukuru", phase: 2, indexWhenVerified: false, website: "https://www.mukuru.com/uk/" },
   { slug: "nationwide", name: "Nationwide", phase: 2, indexWhenVerified: false, website: "https://www.nationwide.co.uk/" },
   { slug: "remitly", name: "Remitly", phase: 2, indexWhenVerified: false, website: "https://www.remitly.com/gb/en" },
   { slug: "xoom-paypal", name: "Xoom", phase: 2, indexWhenVerified: false, website: "https://www.xoom.com/" },
-  { slug: "first-direct", name: "first direct", phase: 2, indexWhenVerified: false, website: "https://www.firstdirect.com/" },
+  { slug: "first-direct", name: "first direct", phase: 2, indexWhenVerified: false, website: "https://www.firstdirect.com/", statementPages: ["https://www.firstdirect.com/legals/"] },
   { slug: "instarem", name: "Instarem", phase: 2, indexWhenVerified: false, website: "https://www.instarem.com/en-gb/" },
-  { slug: "lemfi", name: "LemFi", phase: 2, indexWhenVerified: false, website: "https://lemfi.com/" },
+  { slug: "lemfi", name: "LemFi", phase: 2, indexWhenVerified: false, website: "https://lemfi.com/", statementPages: ["https://support.lemfi.com/hc/en-us/articles/4420272430481-Who-We-Are"] },
   { slug: "metro-bank", name: "Metro Bank", phase: 2, indexWhenVerified: false, website: "https://www.metrobankonline.co.uk/" },
   { slug: "ria", name: "Ria", phase: 2, indexWhenVerified: false, website: "https://www.riamoneytransfer.com/en-gb/" },
   { slug: "sendwave", name: "Sendwave", phase: 2, indexWhenVerified: false, website: "https://www.sendwave.com/en-gb" },
   { slug: "small-world", name: "Small World", phase: 2, indexWhenVerified: false, website: "https://www.smallworldfs.com/en/" },
   { slug: "tesco-bank", name: "Tesco Bank", phase: 2, indexWhenVerified: false, website: "https://www.tescobank.com/" },
   { slug: "worldremit", name: "WorldRemit", phase: 2, indexWhenVerified: false, website: "https://www.worldremit.com/en-gb/" },
-  { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false, website: "https://www.xe.com/" },
+  { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false, website: "https://www.xe.com/", statementPages: ["https://help.xe.com/hc/en-gb/articles/360020447038-United-Kingdom-UK-Corporate-Terms"] },
   // Added beyond the topical map: established UK banks, apps and currency brokers
   // that send money abroad. No search demand measured yet, so never indexed until
   // the topical map is revisited.
@@ -88,7 +94,7 @@ export const PROVIDERS: Provider[] = [
   { slug: "bank-of-scotland", name: "Bank of Scotland", phase: 2, indexWhenVerified: false, website: "https://www.bankofscotland.co.uk/" },
   { slug: "ulster-bank", name: "Ulster Bank", phase: 2, indexWhenVerified: false, website: "https://www.ulsterbank.co.uk/" },
   { slug: "ms-bank", name: "M&S Bank", phase: 2, indexWhenVerified: false, website: "https://bank.marksandspencer.com/" },
-  { slug: "caxton", name: "Caxton", phase: 2, indexWhenVerified: false, website: "https://www.caxton.co.uk/" },
+  { slug: "caxton", name: "Caxton", phase: 2, indexWhenVerified: false, website: "https://caxton.io/", statementPages: ["https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"] },
   { slug: "hamilton-court-fx", name: "Hamilton Court FX", phase: 2, indexWhenVerified: false, website: "https://www.hamiltoncourtfx.com/" },
   { slug: "fc-exchange", name: "FC Exchange", phase: 2, indexWhenVerified: false, website: "https://www.fcexchange.co.uk/" },
   { slug: "pure-fx", name: "Pure FX", phase: 2, indexWhenVerified: false, website: "https://www.purefx.co.uk/" },
