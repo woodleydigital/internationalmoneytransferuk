@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
     return [
       // The Transfer Tracker relied on human test transfers; the site is fully automated.
       { source: "/tracker/", destination: "/methodology/", permanent: true },
+      // Removed from the directory; send visitors to the A–Z list.
+      { source: "/providers/small-world/", destination: "/", permanent: false },
     ];
   },
 };

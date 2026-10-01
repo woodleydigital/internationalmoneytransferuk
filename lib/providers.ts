@@ -34,6 +34,8 @@ export interface Provider {
   statementPages?: string[];
 }
 
+// Removed: small-world (2026-10-01) — reported to have stopped processing
+// transfers; not listed while that cannot be confirmed from a source we publish.
 export const PROVIDERS: Provider[] = [
   { slug: "hsbc", name: "HSBC", phase: 1, indexWhenVerified: true, website: "https://www.hsbc.co.uk/" },
   { slug: "post-office", name: "Post Office", phase: 1, indexWhenVerified: true, website: "https://www.postoffice.co.uk/" },
@@ -67,7 +69,6 @@ export const PROVIDERS: Provider[] = [
   { slug: "metro-bank", name: "Metro Bank", phase: 2, indexWhenVerified: false, website: "https://www.metrobankonline.co.uk/" },
   { slug: "ria", name: "Ria", phase: 2, indexWhenVerified: false, website: "https://www.riamoneytransfer.com/en-gb/" },
   { slug: "sendwave", name: "Sendwave", phase: 2, indexWhenVerified: false, website: "https://www.sendwave.com/en-gb" },
-  { slug: "small-world", name: "Small World", phase: 2, indexWhenVerified: false, website: "https://www.smallworldfs.com/en/" },
   { slug: "tesco-bank", name: "Tesco Bank", phase: 2, indexWhenVerified: false, website: "https://www.tescobank.com/" },
   { slug: "worldremit", name: "WorldRemit", phase: 2, indexWhenVerified: false, website: "https://www.worldremit.com/en-gb/" },
   { slug: "xe", name: "XE", phase: 2, indexWhenVerified: false, website: "https://www.xe.com/", statementPages: ["https://help.xe.com/hc/en-gb/articles/360020447038-United-Kingdom-UK-Corporate-Terms"] },
