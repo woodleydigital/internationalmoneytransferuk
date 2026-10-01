@@ -1,16 +1,49 @@
 {
   "slug": "equals-money",
-  "fetchedAt": "2026-10-01T21:49:09.448Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-10-01T22:12:43.334Z",
+  "status": "matched",
   "match": {
     "query": "https://equalsmoney.com/en-us/coming-soon",
-    "rule": "Company number taken from the regulatory statement on the provider's own website, where it was the only stated company and the statement names it.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
+      {
+        "company_number": "05539698",
+        "title": "EQUALS MONEY PLC"
+      },
       {
         "company_number": "08922461",
         "title": "EQUALS GROUP LIMITED"
       }
     ],
-    "outcome": "Withdrawn: the parent company (Equals Group Limited) was matched in error; re-import pending"
-  }
+    "outcome": "Matched 05539698 from the provider's website"
+  },
+  "company": {
+    "name": "EQUALS MONEY PLC",
+    "number": "05539698",
+    "status": "active",
+    "type": "plc",
+    "incorporated": "2005-08-18",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "3rd Floor, Vintners Place, 68 Upper Thames Street, London, EC4V 3BJ",
+    "lastAccountsMadeUpTo": "2024-12-31",
+    "accountsNextDue": "2026-09-30",
+    "accountsOverdue": true,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/05539698"
+  },
+  "psc": [
+    {
+      "name": "Equals Group Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-06-23"
+    }
+  ]
 }
