@@ -1,7 +1,16 @@
 {
   "slug": "first-direct",
   "url": "https://www.firstdirect.com/",
-  "fetchedAt": "2026-09-30T08:43:45.271Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-10-01T21:35:02.780Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "first direct is a division of HSBC UK Bank plc, HSBC UK Bank plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under reference number 765112. In the UK, HSBC UK Bank plc is also authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority for the conduct of deposit taking, investments and general insurance business under reference number 765112 and for credit business under Interim Permission Number 6343.",
+      "frns": [
+        "765112"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.firstdirect.com/legals/"
+    }
+  ]
 }

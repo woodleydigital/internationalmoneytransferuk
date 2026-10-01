@@ -1,16 +1,18 @@
 {
   "slug": "royal-bank-of-scotland",
   "url": "https://www.rbs.co.uk/",
-  "fetchedAt": "2026-09-30T08:47:15.607Z",
+  "fetchedAt": "2026-10-01T21:42:40.957Z",
   "status": "found",
   "statements": [
     {
-      "text": "The Royal Bank of Scotland plc, Registered in Scotland No. SC083026. Registered Office: 36 St Andrew Square, Edinburgh, EH2 2YB. Financial Services Firm Reference Number 114724..",
-      "frns": [],
+      "text": "14 The Royal Bank of Scotland plc, Registered in Scotland No SC083026. Registered Office: 36 St Andrew Square, Edinburgh EH2 2YB. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. RBS is entered on the Financial Services Register and its Register number is 114724. The Financial Services Register can be accessed at www.fca.org.uk/register. The Bank's registered VAT number is GB 243852752.",
+      "frns": [
+        "114724"
+      ],
       "companyNumbers": [
         "SC083026"
       ],
-      "url": "https://www.rbs.co.uk/myrewards/terms-and-exclusions.html"
+      "url": "https://www.rbs.co.uk/website-terms-and-conditions.html"
     }
   ]
 }

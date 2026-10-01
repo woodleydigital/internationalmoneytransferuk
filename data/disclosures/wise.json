@@ -1,7 +1,7 @@
 {
   "slug": "wise",
   "url": "https://wise.com/gb/",
-  "fetchedAt": "2026-09-30T08:42:30.641Z",
+  "fetchedAt": "2026-10-01T21:30:11.854Z",
   "status": "found",
   "statements": [
     {
@@ -10,6 +10,14 @@
         "900507"
       ],
       "companyNumbers": []
+    },
+    {
+      "text": "Wise Payments Limited is authorised as an Electronic Money Institution (EMI) by the UK Financial Conduct Authority (FCA) with registration number 900507.",
+      "frns": [
+        "900507"
+      ],
+      "companyNumbers": [],
+      "url": "https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country-and-region"
     },
     {
       "text": "Wise Assets UK LTD is a company incorporated under the laws of England and Wales with company number 11905382. Wise Assets UK LTD is authorised and regulated by the FCA under FSMA for the provision of investment services. The FCA reference number of Wise Assets UK LTD is 839689. Wise Assets UK LTD is included on the Financial Services Register maintained by the FCA.",

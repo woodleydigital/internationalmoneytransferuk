@@ -1,7 +1,24 @@
 {
   "slug": "caxton",
-  "url": "https://www.caxton.co.uk/",
-  "fetchedAt": "2026-09-30T08:47:32.712Z",
-  "status": "none",
-  "statements": []
+  "url": "https://caxton.io/",
+  "fetchedAt": "2026-10-01T21:43:08.484Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Caxton Payments Limited is authorised and regulated by the Financial Conduct Authority for FSMA authorised business (FRN: 431844) and for the issuing of electronic money and payment services (FRN: 900663). Registered office: 2 Leman Street, London, E18FA, UK. We are also registered as a data controller with the Information Commissioner’s Office, registration number Z7413780.",
+      "frns": [
+        "431844",
+        "900663"
+      ],
+      "companyNumbers": []
+    },
+    {
+      "text": "1.1 Caxton Payments Ltd, (\"Caxton\") enters into contracts for the purchase and sale of currency for trade, commercial or other non-speculative purposes. Caxton does not offer or provide any advice of any nature. As an integral part of its foreign currency service, Caxton provides a money transmission service. Caxton is authorised to provide this payment service by the Financial Conduct Authority (Registration number 900663) under the Payment Services Regulations 2017. Caxton is also supervised for anti-money laundering purposes by the HMRC (registration number 12149429).",
+      "frns": [
+        "900663"
+      ],
+      "companyNumbers": [],
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"
+    }
+  ]
 }

@@ -1,11 +1,63 @@
 {
   "slug": "caxton",
-  "fetchedAt": "2026-09-30T08:50:49.826Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-10-01T21:49:29.416Z",
+  "status": "matched",
   "match": {
-    "query": "Caxton",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
-    "candidates": [],
-    "outcome": "No name match"
-  }
+    "query": "https://caxton.io/",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "candidates": [
+      {
+        "company_number": "04610337",
+        "title": "CAXTON PAYMENTS LIMITED"
+      }
+    ],
+    "outcome": "Matched 04610337 from the provider's website"
+  },
+  "company": {
+    "name": "CAXTON PAYMENTS LIMITED",
+    "number": "04610337",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2002-12-05",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "2 Leman Street, London, E1 8FA, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-02-28",
+    "accountsNextDue": "2026-11-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/04610337"
+  },
+  "psc": [
+    {
+      "name": "The Caxton Holding Company Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2022-05-05",
+      "ceased_on": "2026-02-28"
+    },
+    {
+      "name": "Mr Rupert Allan Lee-Browne",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2021-02-22"
+    },
+    {
+      "name": "Rupert Allan Lee-Browne",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2021-02-22"
+    }
+  ]
 }

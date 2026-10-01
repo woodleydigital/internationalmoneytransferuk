@@ -1,6 +1,6 @@
 {
   "slug": "remitly",
-  "fetchedAt": "2026-09-30T08:49:45.041Z",
+  "fetchedAt": "2026-10-01T21:48:26.764Z",
   "status": "matched",
   "match": {
     "query": "https://www.remitly.com/gb/en",
@@ -23,8 +23,8 @@
       "64999"
     ],
     "registeredOffice": "Cannon Place, 78 Cannon Street, London, EC4N 6AF, United Kingdom",
-    "lastAccountsMadeUpTo": "2024-12-31",
-    "accountsNextDue": "2026-09-30",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
     "accountsOverdue": false,
     "confirmationStatementOverdue": false,
     "hasInsolvencyHistory": false,

@@ -1,6 +1,6 @@
 {
   "slug": "cambridge-currencies",
-  "fetchedAt": "2026-09-30T08:50:19.623Z",
+  "fetchedAt": "2026-10-01T21:49:00.492Z",
   "status": "unmatched",
   "match": {
     "query": "https://cambridgecurrencies.com/",
@@ -13,6 +13,10 @@
       {
         "company_number": "06323311",
         "title": "THE CURRENCY CLOUD LIMITED"
+      },
+      {
+        "company_number": "12352935",
+        "title": "SCIOPAY LTD"
       }
     ],
     "outcome": "Provider's website states other companies; no name fallback"

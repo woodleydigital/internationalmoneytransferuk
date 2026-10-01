@@ -1,16 +1,106 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-09-30T08:49:23.724Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-10-01T21:48:04.263Z",
+  "status": "matched",
   "match": {
     "query": "https://wise.com/gb/",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
       {
         "company_number": "11905382",
         "title": "WISE ASSETS UK LTD"
+      },
+      {
+        "company_number": "07209813",
+        "title": "WISE PAYMENTS LIMITED"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
-  }
+    "outcome": "Matched 07209813 from the provider's website"
+  },
+  "company": {
+    "name": "WISE PAYMENTS LIMITED",
+    "number": "07209813",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2010-03-31",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "1st Floor Worship Square, 65 Clifton Street, London, EC2A 4JE, England",
+    "lastAccountsMadeUpTo": "2026-03-31",
+    "accountsNextDue": "2027-12-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/07209813"
+  },
+  "psc": [
+    {
+      "name": "Wise Plc",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2021-06-22",
+      "ceased_on": "2021-06-22"
+    },
+    {
+      "name": "Wise Financial Holdings Ltd",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2021-06-22"
+    },
+    {
+      "name": "Mr Alastair Michael Rampell",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2018-01-11",
+      "ceased_on": "2021-06-22"
+    },
+    {
+      "name": "Roger Ehrenberg",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2021-06-22"
+    },
+    {
+      "name": "Taavet Hinrikus",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2021-06-22"
+    },
+    {
+      "name": "Kristo Kaarmann",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-25-to-50-percent",
+        "voting-rights-25-to-50-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2021-06-22"
+    },
+    {
+      "name": "Benjamin Abraham Horowitz",
+      "kind": "individual-person-with-significant-control",
+      "natures_of_control": [
+        "significant-influence-or-control"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2018-01-11"
+    }
+  ]
 }

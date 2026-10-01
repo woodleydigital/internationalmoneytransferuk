@@ -1,7 +1,16 @@
 {
   "slug": "equals-money",
   "url": "https://equalsmoney.com/en-us/coming-soon",
-  "fetchedAt": "2026-09-30T08:47:04.163Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-10-01T21:42:16.717Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Equals Money PLC is registered in England & Wales, Company Reg. No. 05539698. Equals Money PLC is part of Equals Group Limited (Registered in England & Wales No. 08922461). Registered Office: 3rd Floor, Vintners' Place, 68 Upper Thames St, London, EC4V 3BJ. Equals Money PLC is authorised by the Financial Conduct Authority to provide payment services (FCA No. 488396). Equals Money Cards are issued by Equals Money International Limited pursuant to license by Mastercard International Inc. Equals Money International Limited is authorised by the Financial Conduct Authority to conduct electronic money service activities under the Electronic Money Regulations 2011 (Ref: 900493). Mastercard is a registered trademark, and the circles design is a trademark of Mastercard International Incorporated.",
+      "frns": [],
+      "companyNumbers": [
+        "08922461"
+      ],
+      "url": "https://equalsmoney.com/terms-and-conditions"
+    }
+  ]
 }

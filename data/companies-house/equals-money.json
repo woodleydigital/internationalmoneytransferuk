@@ -1,24 +1,45 @@
 {
   "slug": "equals-money",
-  "fetchedAt": "2026-09-30T08:50:27.268Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-10-01T21:49:09.448Z",
+  "status": "matched",
   "match": {
-    "query": "Equals Money",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "query": "https://equalsmoney.com/en-us/coming-soon",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, where it was the only stated company and the statement names it.",
     "candidates": [
       {
-        "company_number": "05539698",
-        "title": "EQUALS MONEY PLC"
-      },
-      {
-        "company_number": "09558664",
-        "title": "EQUALS MONEY INTERNATIONAL LIMITED"
-      },
-      {
-        "company_number": "06268340",
-        "title": "EQUALS MONEY UK LIMITED"
+        "company_number": "08922461",
+        "title": "EQUALS GROUP LIMITED"
       }
     ],
-    "outcome": "Ambiguous: 05539698, 09558664, 06268340"
-  }
+    "outcome": "Matched 08922461 from the provider's website"
+  },
+  "company": {
+    "name": "EQUALS GROUP LIMITED",
+    "number": "08922461",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2014-03-04",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "Third Floor Thames House Vintners Place, 68 Upper Thames Street, London, EC4V 3BJ",
+    "lastAccountsMadeUpTo": "2024-12-31",
+    "accountsNextDue": "2026-12-31",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/08922461"
+  },
+  "psc": [
+    {
+      "name": "Alakazam Holdings Bidco Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent",
+        "voting-rights-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
+      ],
+      "notified_on": "2025-04-14"
+    }
+  ]
 }
