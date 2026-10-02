@@ -13,14 +13,11 @@ test("a different company is our re-match, not a change", () => {
   assert.deepEqual(diffRecords("companies-house", ch({}), ch({ number: "2" }), "d"), []);
 });
 
-test("first imports and unchanged records record nothing", () => {
-  assert.deepEqual(diffRecords("disclosures", null, { status: "found", statements: [] }, "d"), []);
-  const s = { status: "found", quotes: [{ topic: "fees", text: "a" }] };
-  assert.deepEqual(diffRecords("services", s, s, "d"), []);
+test("first imports record nothing", () => {
+  assert.deepEqual(diffRecords("companies-house", null, ch({}), "d"), []);
 });
 
-test("wording and new Ombudsman periods are noted", () => {
-  assert.equal(diffRecords("services", { status: "found", quotes: [{ topic: "fees", text: "a" }] }, { status: "found", quotes: [{ topic: "fees", text: "b" }] }, "d")[0].field, "Fees: wording");
+test("new Ombudsman periods are noted", () => {
   const f = (label: string) => ({ periods: [{ period: { label }, figures: {} }] });
   assert.equal(diffRecords("fos", f("H2 2025"), f("H1 2026"), "d")[0].field, "Complaints data published for H1 2026");
 });

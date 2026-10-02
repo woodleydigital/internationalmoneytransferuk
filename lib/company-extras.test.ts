@@ -3,22 +3,26 @@ import assert from "node:assert/strict";
 import { formatFigure, latestAccounts, parseIxbrl, summariseFilings, ukCompanyNumber } from "./company-extras.ts";
 
 const ixbrl = `
+<xbrli:unit id="u1"><xbrli:measure>iso4217:GBP</xbrli:measure></xbrli:unit>
+<xbrli:unit id="u2"><xbrli:measure>xbrli:pure</xbrli:measure></xbrli:unit>
 <xbrli:context id="cy"><xbrli:entity><xbrli:identifier>1</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>2024-01-01</xbrli:startDate><xbrli:endDate>2024-12-31</xbrli:endDate></xbrli:period></xbrli:context>
 <xbrli:context id="py"><xbrli:entity><xbrli:identifier>1</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:startDate>2023-01-01</xbrli:startDate><xbrli:endDate>2023-12-31</xbrli:endDate></xbrli:period></xbrli:context>
 <xbrli:context id="cyi"><xbrli:entity><xbrli:identifier>1</xbrli:identifier></xbrli:entity><xbrli:period><xbrli:instant>2024-12-31</xbrli:instant></xbrli:period></xbrli:context>
 <xbrli:context id="seg"><xbrli:entity><xbrli:identifier>1</xbrli:identifier><xbrli:segment><xbrldi:explicitMember dimension="x">y</xbrldi:explicitMember></xbrli:segment></xbrli:entity><xbrli:period><xbrli:endDate>2024-12-31</xbrli:endDate></xbrli:period></xbrli:context>
-<ix:nonFraction name="core:TurnoverRevenue" contextRef="cy" unitRef="GBP" scale="3" decimals="-3" format="ixt:num-dot-decimal">12,345</ix:nonFraction>
+<ix:nonFraction name="core:TurnoverRevenue" contextRef="cy" unitRef="u1" scale="3" decimals="-3" format="ixt:num-dot-decimal">12,345</ix:nonFraction>
 <ix:nonFraction name="core:TurnoverRevenue" contextRef="py" unitRef="GBP" scale="3">9,000</ix:nonFraction>
 <ix:nonFraction name="core:TurnoverRevenue" contextRef="seg" unitRef="GBP" scale="3">1</ix:nonFraction>
 <ix:nonFraction name="core:ProfitLoss" contextRef="cy" unitRef="GBP" sign="-" format="ixt:num-dot-decimal">(1,500)</ix:nonFraction>
 <ix:nonFraction name="core:NetAssetsLiabilities" contextRef="cyi" unitRef="GBP"><span>250,000</span></ix:nonFraction>
-<ix:nonFraction name="core:AverageNumberEmployeesDuringPeriod" contextRef="cy" unitRef="pure" format="ixt:num-dot-decimal">42</ix:nonFraction>
+<ix:nonFraction name="core:AverageNumberEmployeesDuringPeriod" contextRef="cy" unitRef="u2" format="ixt:num-dot-decimal">42</ix:nonFraction>
+<ix:nonFraction name="core:AverageNumberEmployeesDuringPeriod" contextRef="cyi" unitRef="pure">0.13</ix:nonFraction>
 <ix:nonFraction name="core:CashBankOnHand" contextRef="cyi" unitRef="GBP" format="ixt:fixed-zero">-</ix:nonFraction>`;
 
 test("iXBRL headline figures: latest period, entity level, scale and sign honoured", () => {
   const f = Object.fromEntries(parseIxbrl(ixbrl).map((x) => [x.label, x]));
   assert.equal(f["Turnover"].value, 12_345_000);
   assert.equal(f["Turnover"].periodEnd, "2024-12-31");
+  assert.equal(formatFigure(f["Turnover"]), "£12,345,000");
   assert.equal(f["Profit or loss for the year"].value, -1_500);
   assert.equal(f["Net assets"].value, 250_000);
   assert.equal(f["Average number of employees"].unit, "pure");

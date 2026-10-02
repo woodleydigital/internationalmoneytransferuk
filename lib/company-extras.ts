@@ -22,7 +22,7 @@ export interface OwnerLink {
   number?: string;
   /** Where it is registered, as Companies House records it. */
   registeredIn?: string;
-  /** The nature of control, in Companies House's own words. */
+  /** The nature of control, in Companies House's wording. */
   control: string[];
   url?: string;
 }
@@ -123,6 +123,12 @@ export function parseIxbrl(html: string): AccountsFigure[] {
     const end = m[2].match(/<(?:\w+:)?(?:endDate|instant)>\s*([\d-]{10})\s*</i)?.[1];
     if (end) ends.set(m[1], end);
   }
+  // Units: id → measure (e.g. "u1" → "iso4217:GBP"); ids are arbitrary.
+  const units = new Map<string, string>();
+  for (const m of html.matchAll(/<(?:\w+:)?unit\b[^>]*\bid=["']([^"']+)["'][^>]*>([\s\S]*?)<\/(?:\w+:)?unit>/gi)) {
+    const measure = m[2].match(/<(?:\w+:)?measure>\s*([^<\s]+)\s*</i)?.[1];
+    if (measure) units.set(m[1], measure);
+  }
   const facts: AccountsFigure[] = [];
   for (const m of html.matchAll(/<ix:nonFraction\b([^>]*)>([\s\S]*?)<\/ix:nonFraction>/gi)) {
     const tag = m[1];
@@ -140,8 +146,12 @@ export function parseIxbrl(html: string): AccountsFigure[] {
     }
     value *= 10 ** Number(attr(tag, "scale") ?? 0);
     if (attr(tag, "sign") === "-") value = -value;
-    const unitRef = (attr(tag, "unitRef") ?? "").toUpperCase();
-    facts.push({ concept: name, label: "", value, unit: /GBP/.test(unitRef) ? "GBP" : /PURE|EMPLOYEE|NUMBER/.test(unitRef) ? "pure" : unitRef, periodEnd: ends.get(ctx)! });
+    const unitRef = attr(tag, "unitRef") ?? "";
+    const measure = (units.get(unitRef) ?? unitRef).toUpperCase();
+    const currency = measure.match(/ISO4217:([A-Z]{3})/)?.[1] ?? (/^(GBP|EUR|USD)$/.test(measure) ? measure : undefined);
+    // A count (such as employees) must be a whole number; anything else is a misread.
+    if (!currency && (!Number.isInteger(value) || value < 0)) continue;
+    facts.push({ concept: name, label: "", value, unit: currency ?? "pure", periodEnd: ends.get(ctx)! });
   }
   if (!facts.length) return [];
   const latest = facts.map((f) => f.periodEnd).sort().pop()!;
@@ -179,9 +189,9 @@ export function ukCompanyNumber(p: CorporatePsc): string | undefined {
 export const controlText = (natures: string[] = []) => natures.map((n) => n.replace(/-/g, " "));
 
 export function formatFigure(f: AccountsFigure): string {
-  if (f.unit === "GBP") {
+  if (/^[A-Z]{3}$/.test(f.unit)) {
     const abs = Math.abs(f.value);
-    const s = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 }).format(abs);
+    const s = new Intl.NumberFormat("en-GB", { style: "currency", currency: f.unit, maximumFractionDigits: 0 }).format(abs);
     return f.value < 0 ? `−${s}` : s;
   }
   return new Intl.NumberFormat("en-GB").format(f.value);

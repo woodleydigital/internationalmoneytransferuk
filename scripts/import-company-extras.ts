@@ -13,6 +13,7 @@ import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "
 import { join } from "node:path";
 import { PROVIDERS } from "../lib/providers.ts";
 import { AuthError } from "../lib/companies-house.ts";
+import { normaliseBusiness } from "../lib/fos.ts";
 import {
   controlText,
   latestAccounts,
@@ -60,11 +61,16 @@ async function ownerChain(number: string): Promise<OwnerLink[]> {
       break;
     }
     const owner = corporate[0];
-    chain.push(link(owner));
     const next = ukCompanyNumber(owner);
-    if (!next || seen.has(next)) break;
-    seen.add(next);
-    current = next;
+    // Circular ownership (e.g. an employee trust): stop before repeating a company.
+    if (next && seen.has(next)) break;
+    // Follow the number only if Companies House's name for it is the owner's name.
+    const profile = next ? await get<{ company_name?: string }>(`${API}/company/${next}`) : null;
+    const verified = Boolean(next && profile?.company_name && normaliseBusiness(profile.company_name) === normaliseBusiness(owner.name));
+    chain.push(verified ? link(owner) : { ...link(owner), number: undefined, url: undefined });
+    if (!verified) break;
+    seen.add(next!);
+    current = next!;
   }
   return chain;
 }

@@ -243,13 +243,6 @@
         "value": 166245,
         "unit": "GBP",
         "periodEnd": "2025-12-31"
-      },
-      {
-        "concept": "AverageNumberEmployeesDuringPeriod",
-        "label": "Average number of employees",
-        "value": 0.13,
-        "unit": "pure",
-        "periodEnd": "2025-12-31"
       }
     ]
   }

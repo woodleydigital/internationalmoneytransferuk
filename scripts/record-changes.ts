@@ -15,7 +15,7 @@ import { diffRecords, type Change } from "../lib/changes.ts";
 
 const OUT = join(process.cwd(), "data", "changes");
 mkdirSync(OUT, { recursive: true });
-const KINDS = ["companies-house", "disclosures", "services", "fos"] as const;
+const KINDS = ["companies-house", "fos"] as const;
 const today = new Date().toISOString().slice(0, 10);
 
 const committed = (path: string) => {

@@ -78,8 +78,9 @@ export default function Page() {
         </li>
         <li>
           <strong className="text-ink">Change log.</strong> Each week software compares every
-          record with the previous week’s and logs what changed on the profile, such as a new
-          registered office, new accounts or new wording on the provider’s website.
+          Companies House record with the previous week’s and logs what changed on the profile,
+          such as a new registered name, status, registered office or accounts date, and notes
+          when the Ombudsman publishes new complaints figures.
         </li>
         <li>
           <strong className="text-ink">What providers say about their service.</strong> Software

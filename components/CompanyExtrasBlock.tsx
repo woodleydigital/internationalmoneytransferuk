@@ -24,7 +24,13 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
 
       <h3 className="mt-5 font-semibold text-ink">Who owns the company</h3>
       {extras.owners.length === 0 ? (
-        <p className="mt-2">No corporate owner is listed at Companies House.</p>
+        <p className="mt-2">
+          {"No current corporate owner was returned from the company’s persons with significant control. "}
+          <a href={`https://find-and-update.company-information.service.gov.uk/company/${extras.number}/persons-with-significant-control`} rel="noopener">
+            Check the register at Companies House
+          </a>
+          .
+        </p>
       ) : (
         <ol className="mt-2 space-y-2">
           {extras.owners.map((o, i) => (
@@ -41,13 +47,21 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
                 {o.registeredIn ? <span className="font-normal text-muted">{` · registered in ${o.registeredIn}`}</span> : null}
               </span>
               {o.control.length > 0 && <span className="block text-sm text-muted">{o.control.join("; ")}</span>}
+              <a
+                href={`https://find-and-update.company-information.service.gov.uk/company/${i === 0 ? extras.number : extras.owners[i - 1].number}/persons-with-significant-control`}
+                rel="noopener"
+                className="text-xs"
+              >
+                As recorded at Companies House
+              </a>
             </li>
           ))}
         </ol>
       )}
       <p className="mt-2 text-xs text-muted">
-        Corporate owners recorded as <Term slug="psc">persons with significant control</Term>, followed up the chain only while
-        each is a single owner registered at Companies House. Individuals are not shown.
+        Corporate owners recorded as <Term slug="psc">persons with significant control</Term>, copied as Companies House records
+        them and followed up the chain only while each is a single owner registered there under the same name. Individuals are
+        not shown.
       </p>
 
       {extras.accounts && (

@@ -76,12 +76,14 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 - Companies House extras: `scripts/import-company-extras.ts` (weekly, after the main import)
   writes `data/company-extras/{slug}.json`: previous names, a filing timeline (no officer
   filings), charges summary, corporate owner chain (single UK-registered owner per level, up
-  to four; individuals never stored), and headline iXBRL accounts figures for the latest
+  to four, followed only when CH's name for the number matches, stops before a repeat;
+  individuals never stored), and headline iXBRL accounts figures for the latest
   period (`parseIxbrl`, entity-level contexts only, scale/sign honoured). Shown only when the
   company number still matches and the record is fresh.
 - Change log: `scripts/record-changes.ts` runs before the workflow commit, diffs each record
-  against `HEAD` (`lib/changes.ts`) and appends to `data/changes/{slug}.json` (max 50). Values
-  copied, never described; a re-match to a different company is not logged as a change.
+  against `HEAD` (`lib/changes.ts`) and appends to `data/changes/{slug}.json` (max 50).
+  Companies House fields and new FOS periods only — website wording is too noisy to log.
+  Values copied, never described; a re-match to a different company is not a change.
 - **Provider statements (in place of FCA data for now):** `scripts/import-disclosures.ts`
   reads each provider's homepage weekly (robots.txt respected, identified user agent) and
   keeps the paragraphs that state an FRN or company number, verbatim, in
