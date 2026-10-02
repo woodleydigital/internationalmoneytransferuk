@@ -51,7 +51,14 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 ## Profile status
 - **Verified:** FCA Register + Companies House + FOS data complete, product data extracted
   with source quotes. Indexable if the topical map says so.
-- **Register data pending:** anything less. `noindex`.
+- **Register data pending:** anything less. Shown with that label. Indexable only when the
+  topical map marks the profile for indexing **and** it holds at least two of three fresh
+  public-record blocks (Companies House record, provider's regulatory statement, service
+  quotes) — `isIndexableEntry` in `lib/directory.ts`. Everything else stays `noindex`.
+  (Changed 2026-10-02 to launch without FCA data.)
+- Indexing aids: sitemap with record dates; `GOOGLE_SITE_VERIFICATION` /
+  `BING_SITE_VERIFICATION` env vars render the ownership meta tags; IndexNow key file in
+  `public/`, `npm run indexnow` (also run by the weekly workflow after deploy).
 The workbook's "Testing" rows and the "Human review?" column no longer apply.
 
 ## Data licensing (checked 2026-09-30)

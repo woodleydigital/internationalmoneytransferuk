@@ -1,6 +1,11 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
-import { PROVIDERS, isIndexable, providerUrl } from "@/lib/providers";
+import { isIndexable, providerUrl } from "@/lib/providers";
+import { loadEntries } from "@/lib/directory-data";
+import { checkedAt, isIndexableEntry } from "@/lib/directory";
+
+// Re-read daily so new and refreshed profiles appear with their record dates.
+export const revalidate = 86_400;
 
 // Canonical, indexable URLs only. Noindex pages (Tier 3 profiles, pages awaiting
 // data) and parameterised results are never listed.
@@ -23,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/glossary/",
     "/status/",
   ];
-  const profiles = PROVIDERS.filter(isIndexable).map(providerUrl);
-  return [...pages, ...profiles].map((path) => ({ url: `${SITE.url}${path}` }));
+  const profiles = loadEntries()
+    .filter((e) => isIndexable(e.provider) || isIndexableEntry(e))
+    .map((e) => ({ url: `${SITE.url}${providerUrl(e.provider)}`, lastModified: checkedAt(e) }));
+  return [...pages.map((path) => ({ url: `${SITE.url}${path}` })), ...profiles];
 }

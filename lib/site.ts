@@ -64,3 +64,6 @@ export function longDate(iso: string): string {
     timeZone: "UTC",
   }).format(d);
 }
+
+/** IndexNow key, published at /{key}.txt so search engines can confirm our submissions. */
+export const INDEXNOW_KEY = "fbee74b4ea12847d807b7ebaea171d6e";

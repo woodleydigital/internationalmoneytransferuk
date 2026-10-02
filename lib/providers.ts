@@ -132,7 +132,11 @@ export function isVerified(_p: Provider): boolean {
   return false;
 }
 
-/** Only verified profiles the topical map marks for indexing are indexable. */
+/**
+ * Fully verified (FCA data included) and marked for indexing. Profiles with
+ * enough public-record data are also indexable: see isIndexableEntry in
+ * lib/directory.ts, which the profile pages and sitemap use.
+ */
 export function isIndexable(p: Provider): boolean {
   return isVerified(p) && p.indexWhenVerified;
 }

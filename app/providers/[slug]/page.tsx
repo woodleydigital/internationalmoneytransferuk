@@ -15,13 +15,12 @@ import { registerSearchUrl } from "@/lib/fca";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
 import { ServiceQuotesBlock } from "@/components/ServiceQuotesBlock";
-import { loadServiceRecord } from "@/lib/service-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
-import { latest, providerId, providerNode } from "@/lib/schema";
+import { providerId, providerNode } from "@/lib/schema";
 import { loadLogo } from "@/lib/logo-records";
 import { KindBadge, Monogram } from "@/components/Directory";
-import { loadEntries } from "@/lib/directory-data";
-import { checkedAt, similar } from "@/lib/directory";
+import { loadEntries, loadEntry } from "@/lib/directory-data";
+import { checkedAt, isIndexableEntry, similar } from "@/lib/directory";
 import { longDate } from "@/lib/site";
 
 type Params = Promise<{ slug: string }>;
@@ -40,12 +39,13 @@ const describe = (name: string) =>
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const p = getProvider((await params).slug);
   if (!p) return {};
+  const entry = loadEntry(p.slug);
   return {
     title: `${p.name}: company and regulatory profile`,
     description: describe(p.name),
     alternates: { canonical: providerUrl(p) },
-    // Unverified profiles exist as entities but are noindex until verified.
-    robots: isIndexable(p) ? { index: true, follow: true } : { index: false, follow: true },
+    // Thin profiles exist as entities but stay noindex until they hold enough public-record data.
+    robots: entry && (isIndexable(p) || isIndexableEntry(entry)) ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 
@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: Params }) {
   const checked = checkedAt(entry);
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
-  const service = loadServiceRecord(p.slug);
+  const service = entry.service;
   const hasTopic = (...ts: string[]) => Boolean(service?.quotes.some((q) => ts.includes(q.topic)));
   const SERVICE_FIELDS: Record<string, string[]> = {
     "How customer money is safeguarded": ["safeguarding"],
@@ -89,7 +89,7 @@ export default async function Page({ params }: { params: Params }) {
         type: "ProfilePage",
         mainEntity: { "@id": providerId(p.slug) },
         about: { "@id": providerId(p.slug) },
-        dateModified: latest([company?.fetchedAt, statement?.fetchedAt]),
+        dateModified: checkedAt(entry),
         ...(logo ? { primaryImage: logo.file } : {}),
         nodes: [providerNode(entry, logo?.file)],
       }}

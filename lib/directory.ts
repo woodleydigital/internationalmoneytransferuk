@@ -8,12 +8,15 @@
  */
 import type { CompanyRecord } from "./companies-house";
 import type { DisclosureRecord } from "./disclosures";
+import type { ServiceRecord } from "./service-facts";
 import { PROVIDERS, initialOf, type Provider, type ProviderKind } from "./providers.ts";
 
 export interface Entry {
   provider: Provider;
   company: CompanyRecord | null;
   statement: DisclosureRecord | null;
+  /** What the provider says about its service, quoted. */
+  service: ServiceRecord | null;
   /** FRNs the provider states on its own site (unverified). */
   statedFrns: string[];
 }
@@ -22,9 +25,21 @@ export function makeEntry(
   provider: Provider,
   company: CompanyRecord | null,
   statement: DisclosureRecord | null,
+  service: ServiceRecord | null = null,
 ): Entry {
   const statedFrns = [...new Set((statement?.statements ?? []).flatMap((s) => s.frns))];
-  return { provider, company, statement, statedFrns };
+  return { provider, company, statement, service, statedFrns };
+}
+
+/**
+ * A profile is indexable when the topical map marks it for indexing and it
+ * holds at least two of the three fresh public-record blocks: a Companies
+ * House record, the provider's regulatory statement, and what it says about
+ * its service. Anything thinner stays noindex until it has more.
+ */
+export function isIndexableEntry(e: Entry): boolean {
+  const blocks = [Boolean(e.company?.company), Boolean(e.statement), Boolean(e.service?.quotes.length)];
+  return e.provider.indexWhenVerified && blocks.filter(Boolean).length >= 2;
 }
 
 export type Sort = "az" | "za" | "oldest" | "newest";
@@ -113,7 +128,7 @@ function countBy(entries: Entry[], key: (e: Entry) => string | undefined): [stri
 
 /** When we last fetched any public record for this provider (ISO), if ever. */
 export function checkedAt(e: Entry): string | undefined {
-  const d = [e.company?.fetchedAt, e.statement?.fetchedAt].filter((x): x is string => Boolean(x)).sort();
+  const d = [e.company?.fetchedAt, e.statement?.fetchedAt, e.service?.fetchedAt].filter((x): x is string => Boolean(x)).sort();
   return d[d.length - 1];
 }
 

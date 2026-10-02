@@ -51,3 +51,9 @@ jobs:
             git commit -m "Public records import $(date -u +%Y-%m-%d)"
             git push
           fi
+      - name: Notify IndexNow search engines
+        # Give the deploy a few minutes to go live first; a failure here never fails the import.
+        continue-on-error: true
+        run: |
+          sleep 300
+          npm run indexnow

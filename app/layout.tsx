@@ -20,6 +20,18 @@ export const metadata: Metadata = {
   },
   description:
     "A directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.",
+  // Search engine ownership checks, set in the hosting environment (no code change needed).
+  verification: {
+    ...(process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : {}),
+    ...(process.env.BING_SITE_VERIFICATION ? { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } } : {}),
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    locale: "en_GB",
+    images: [{ url: "/brand/logo-512.png", width: 512, height: 512, alt: SITE.name }],
+  },
+  twitter: { card: "summary" },
   icons: {
     icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/brand/logo-512.png", sizes: "512x512", type: "image/png" }],

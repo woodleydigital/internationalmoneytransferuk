@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { applyFilters, checkedAt, facetCounts, makeEntry, monogram, parseFilters, type Entry } from "./directory.ts";
+import { applyFilters, checkedAt, facetCounts, isIndexableEntry, makeEntry, monogram, parseFilters, type Entry } from "./directory.ts";
 import type { DisclosureRecord } from "./disclosures.ts";
 import type { Provider } from "./providers.ts";
 import type { CompanyRecord } from "./companies-house.ts";
@@ -60,4 +60,14 @@ test("checked date is the latest record fetch", () => {
   const s = { slug: "a", url: "", fetchedAt: "2026-10-02T05:00:00Z", status: "found", statements: [] } as unknown as DisclosureRecord;
   assert.equal(checkedAt(makeEntry(prov("a", "A", "bank"), c, s)), "2026-10-02T05:00:00Z");
   assert.equal(checkedAt(makeEntry(prov("a", "A", "bank"), null, null)), undefined);
+});
+
+test("a profile is indexable with two of three record blocks and a map verdict to index", () => {
+  const p = { ...prov("wise", "Wise", "transfer"), indexWhenVerified: true };
+  const st = { slug: "wise", url: "", fetchedAt: "", status: "found", statements: [{ text: "x", frns: [], companyNumbers: [] }] } as unknown as DisclosureRecord;
+  const sv = { slug: "wise", fetchedAt: "", status: "found", pages: [], quotes: [{ topic: "fees", text: "x", url: "" }] } as never;
+  assert.equal(isIndexableEntry(makeEntry(p, co("2010-01-01"), null)), false);
+  assert.equal(isIndexableEntry(makeEntry(p, co("2010-01-01"), st)), true);
+  assert.equal(isIndexableEntry(makeEntry(p, null, st, sv)), true);
+  assert.equal(isIndexableEntry(makeEntry({ ...p, indexWhenVerified: false }, co("2010-01-01"), st, sv)), false);
 });
