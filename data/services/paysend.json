@@ -1,0 +1,41 @@
+{
+  "slug": "paysend",
+  "fetchedAt": "2026-10-02T03:59:37.212Z",
+  "status": "found",
+  "pages": [
+    "https://paysend.com/en-gb",
+    "https://paysend.com/send",
+    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia",
+    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-azerbaijan",
+    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-bangladesh",
+    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-brazil",
+    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-china"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send to 170+ countries straight from your phone",
+      "url": "https://paysend.com/en-gb"
+    },
+    {
+      "topic": "countries",
+      "text": "Reaching 25+ billions digital endpoints across 170+ countries — interoperable across currencies and rails.",
+      "url": "https://paysend.com/en-gb"
+    },
+    {
+      "topic": "countries",
+      "text": "Transfer money online to over 100+ countries around the world.",
+      "url": "https://paysend.com/send"
+    },
+    {
+      "topic": "speed",
+      "text": "Enter a few details, tap send, and see the money arrive to your recipient in minutes and without them having to set up an account with Paysend.",
+      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia"
+    },
+    {
+      "topic": "speed",
+      "text": "Enjoy international money transfers certified by Mastercard, Visa, UnionPay where money arrives in minutes in over 95% cases.",
+      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia"
+    }
+  ]
+}

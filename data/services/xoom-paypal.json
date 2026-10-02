@@ -1,0 +1,18 @@
+{
+  "slug": "xoom-paypal",
+  "fetchedAt": "2026-10-02T03:56:42.825Z",
+  "status": "found",
+  "pages": [
+    "https://www.xoom.com/",
+    "https://www.xoom.com/money-transfer",
+    "https://www.xoom.com/en-us/usd/send-money/transfer/select-country",
+    "https://www.xoom.com/protect-your-money"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "Send to mobile wallets, UPI, and PIX Send to Wallets",
+      "url": "https://www.xoom.com/"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "tsb",
+  "fetchedAt": "2026-10-02T03:54:55.982Z",
+  "status": "found",
+  "pages": [
+    "https://www.tsb.co.uk/",
+    "https://www.tsb.co.uk/business/payment-services/international-payments.html",
+    "https://www.tsb.co.uk/current-accounts/faqs.html",
+    "https://www.tsb.co.uk/personal-loans/personal-loans-faqs.html",
+    "https://www.tsb.co.uk/help-and-support.html",
+    "https://www.tsb.co.uk/help-and-support/mobile-banking.html",
+    "https://www.tsb.co.uk/business/loans-and-finance/lending.html"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "This service allows you to make payments in over 20 currencies to recipients in the UK and abroad - straight from your sterling business account.",
+      "url": "https://www.tsb.co.uk/business/payment-services/international-payments.html"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments in other currencies (including sterling) to countries in the EEA will arrive at the beneficiary's bank at the latest, four business days after the business day on which we receive your instruction, but usually in two to three business days following the business day on which we receive your instructions.",
+      "url": "https://www.tsb.co.uk/business/payment-services/international-payments.html"
+    }
+  ]
+}

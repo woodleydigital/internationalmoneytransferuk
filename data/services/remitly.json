@@ -1,0 +1,55 @@
+{
+  "slug": "remitly",
+  "fetchedAt": "2026-10-02T03:56:31.433Z",
+  "status": "found",
+  "pages": [
+    "https://www.remitly.com/gb/en",
+    "https://www.remitly.com/gb/en/money-transfer",
+    "https://www.remitly.com/gb/en/money-transfer/send-money-to-albania",
+    "https://www.remitly.com/gb/en/money-transfer/send-money-to-algeria",
+    "https://www.remitly.com/gb/en/money-transfer/send-money-to-andorra",
+    "https://www.remitly.com/gb/en/money-transfer/send-money-to-angola"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "Get fast, secure transfers to your bank account, mobile wallet or a cash pickup location.",
+      "url": "https://www.remitly.com/gb/en"
+    },
+    {
+      "topic": "countries",
+      "text": "Support for business customers and recipients located in 170+ countries",
+      "url": "https://www.remitly.com/gb/en"
+    },
+    {
+      "topic": "countries",
+      "text": "Remitly’s global footprint reaches over 175 countries around the world, including United Kingdom, and is trusted by millions of people worldwide.",
+      "url": "https://www.remitly.com/gb/en"
+    },
+    {
+      "topic": "countries",
+      "text": "Remitly serves 175+ countries around the world.",
+      "url": "https://www.remitly.com/gb/en/money-transfer"
+    },
+    {
+      "topic": "payout",
+      "text": "Simply create your account on the Remitly app or at Remitly.com ⁠ (opens in new window) , enter the amount you'd like to send, and choose your recipient's preferred delivery method — whether that's a bank deposit, cash pickup, or others, depending on availability in the receiving country you’ve selected.",
+      "url": "https://www.remitly.com/gb/en/money-transfer"
+    },
+    {
+      "topic": "payout",
+      "text": "With Remitly, you can send money online from the United Kingdom directly to a bank account, with great rates and no hidden fees — and you'll see the full cost before you send.",
+      "url": "https://www.remitly.com/gb/en/money-transfer"
+    },
+    {
+      "topic": "speed",
+      "text": "Some eligible transfers may arrive within minutes, while others can take a few business days.",
+      "url": "https://www.remitly.com/gb/en/money-transfer"
+    },
+    {
+      "topic": "fees",
+      "text": "With Remitly, you get great rates, no hidden fees, and real-time transfer tracking—so you can know where your money is and when it will arrive.",
+      "url": "https://www.remitly.com/gb/en/money-transfer/send-money-to-albania"
+    }
+  ]
+}

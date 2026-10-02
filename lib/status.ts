@@ -43,15 +43,15 @@ function readLogos(): Map<string, Raw> {
 export const OUTCOME: Record<string, string> = {
   matched: "Company identified",
   unmatched: "No certain match",
-  found: "Statement found",
-  none: "No statement found",
+  found: "Found",
+  none: "Nothing found",
   blocked: "Site did not allow access",
   error: "Could not be read",
   saved: "Logo saved",
 };
 
 export interface Pipeline {
-  key: "companies-house" | "disclosures" | "logos";
+  key: "companies-house" | "disclosures" | "services" | "logos";
   name: string;
   what: string;
   lastRun?: string;
@@ -71,6 +71,7 @@ function count(rs: Raw[]): [string, number][] {
 export function pipelines(now = new Date()): Pipeline[] {
   const ch = readDir("companies-house");
   const ds = readDir("disclosures");
+  const sv = readDir("services");
   const lg = readLogos();
   const make = (key: Pipeline["key"], name: string, what: string, records: Map<string, Raw>): Pipeline => {
     const rs = [...records.values()];
@@ -87,6 +88,7 @@ export function pipelines(now = new Date()): Pipeline[] {
   return [
     make("companies-house", "Companies House records", "Looks up the company behind each provider and copies its public record.", ch),
     make("disclosures", "Provider statements", "Reads each provider’s own website for what it says about its regulation, quoted word for word.", ds),
+    make("services", "Service details", "Reads each provider’s own website for what it says about countries, payout methods, speed, fees, limits and safeguarding, quoted word for word.", sv),
     make("logos", "Provider logos", "Saves the icon each provider publishes on its own website.", lg),
   ];
 }

@@ -1,0 +1,61 @@
+{
+  "slug": "transfergo",
+  "fetchedAt": "2026-10-02T03:59:30.575Z",
+  "status": "found",
+  "pages": [
+    "https://www.transfergo.com/",
+    "https://www.transfergo.com/send-money-abroad",
+    "https://www.transfergo.com/gb/send-money-abroad",
+    "https://www.transfergo.com/business/international-business-payments",
+    "https://www.transfergo.com/send-money-to-albania",
+    "https://www.transfergo.com/send-money-to-algeria",
+    "https://www.transfergo.com/send-money-to-andorra"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "Send money home quickly, securely, and with no hidden fees.",
+      "url": "https://www.transfergo.com/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Should a transfer ever fail, there are special safeguarding measures in place to ensure that everyone gets their money back.",
+      "url": "https://www.transfergo.com/"
+    },
+    {
+      "topic": "payout",
+      "text": "Your recipient just needs to share their account details, and the funds land directly—no extra steps, no cash pickups needed.",
+      "url": "https://www.transfergo.com/send-money-abroad"
+    },
+    {
+      "topic": "limits",
+      "text": "You can pay up to 5 000 GBP (or equivalent in another currency) in a single transfer if you send money to a card.",
+      "url": "https://www.transfergo.com/send-money-abroad"
+    },
+    {
+      "topic": "limits",
+      "text": "You can send up to 5,000 GBP in a single transfer if you send money to a card, and up to 10,000 GBP if you send to a bank account.",
+      "url": "https://www.transfergo.com/gb/send-money-abroad"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Knowing your money will be safeguarded means you can rest easy when it comes to making international business transfers.",
+      "url": "https://www.transfergo.com/business/international-business-payments"
+    },
+    {
+      "topic": "payout",
+      "text": "If Apple Pay is enabled on your phone, you can use your mobile wallet to send business money transfers to certain countries.",
+      "url": "https://www.transfergo.com/business/international-business-payments"
+    },
+    {
+      "topic": "payout",
+      "text": "You can also send money to certain countries using Google Pay if mobile wallet is set up on your Android.",
+      "url": "https://www.transfergo.com/business/international-business-payments"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "As one of the leading money transfer providers with over 8 million customers, we use safeguarding measures with trusted financial institutions and our end-to-end encryption protects your money and data.",
+      "url": "https://www.transfergo.com/business/international-business-payments"
+    }
+  ]
+}

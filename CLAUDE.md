@@ -83,6 +83,14 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   (exactly one active). Pages whose footer is drawn by JavaScript are read in headless
   Chromium (installed in the workflow). Building societies have no Companies House record.
   Plain pattern matching — no AI.
+- **Provider service details:** `scripts/import-service-facts.ts` (weekly, same workflow)
+  reads each provider's homepage and up to six of its own fees/limits/safeguarding/payout/help
+  pages and keeps whole sentences on six topics (countries, payout, speed, fees, limits,
+  safeguarding), verbatim, with the page URL, in `data/services/`. Rules in
+  `lib/service-facts.ts`: must be about transfers; drops superlatives, promotions, other
+  products (cards, loans, savings), claims about other firms, US-only terms, fragments and
+  near-duplicates; `REJECTED_QUOTES` for context-wrong rows. Shown as "What {provider} says
+  about its service", always as the provider's own words. Plain pattern matching — no AI.
 - **Reference exchange rates:** Frankfurter API (`lib/rate-table.ts`, `lib/rates.ts`), a
   free blend of central bank publications, updated once per working day. Always labelled
   "mid-market reference rates, published {date}" with the source; never "live", never a

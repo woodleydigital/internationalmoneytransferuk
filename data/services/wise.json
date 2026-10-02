@@ -1,0 +1,66 @@
+{
+  "slug": "wise",
+  "fetchedAt": "2026-10-02T03:55:27.575Z",
+  "status": "found",
+  "pages": [
+    "https://wise.com/gb/",
+    "https://wise.com/gb/account/",
+    "https://wise.com/gb/send-money/",
+    "https://wise.com/gb/business/",
+    "https://wise.com/gb/business/send-payments",
+    "https://wise.com/register",
+    "https://wise.com/gb/send-money/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Get everything you need to pay, get paid, and manage your money in 40+ currencies — all in one place.",
+      "url": "https://wise.com/gb/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is held in a safeguarded, separate account.",
+      "url": "https://wise.com/gb/"
+    },
+    {
+      "topic": "countries",
+      "text": "Send, spend and manage your money across 150+ countries and earn a game-changing return.",
+      "url": "https://wise.com/gb/account/"
+    },
+    {
+      "topic": "speed",
+      "text": "74% of transfers arrive in under 20 seconds, 95% in a day.",
+      "url": "https://wise.com/gb/account/"
+    },
+    {
+      "topic": "fees",
+      "text": "Join over 18.9 million people sending money abroad — with fees as low as 0.1% .",
+      "url": "https://wise.com/gb/send-money/"
+    },
+    {
+      "topic": "fees",
+      "text": "Pay less when you send over 20,000 GBP or equivalent — fees from 0.1% .",
+      "url": "https://wise.com/gb/send-money/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
+      "url": "https://wise.com/gb/send-money/"
+    },
+    {
+      "topic": "speed",
+      "text": "Sending money with Wise is super fast: 74% of transfers arrive in under 20 seconds, and 95% in less than a day.",
+      "url": "https://wise.com/gb/send-money/"
+    },
+    {
+      "topic": "fees",
+      "text": "Accept payments — in USD, EUR, GBP and other major currencies with no hidden fees.",
+      "url": "https://wise.com/gb/business/"
+    },
+    {
+      "topic": "countries",
+      "text": "Pay teams and suppliers in 160+ countries with fast, scalable payments at the mid-market exchange rate.",
+      "url": "https://wise.com/gb/business/send-payments"
+    }
+  ]
+}

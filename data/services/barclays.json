@@ -1,0 +1,26 @@
+{
+  "slug": "barclays",
+  "fetchedAt": "2026-10-02T03:54:30.247Z",
+  "status": "found",
+  "pages": [
+    "https://www.barclays.co.uk/",
+    "https://www.barclays.co.uk/ways-to-bank/international-bank-transfers/",
+    "https://www.barclays.co.uk/travel/",
+    "https://www.barclays.co.uk/smart-investor/investments/investment-costs/",
+    "https://www.barclays.co.uk/planning-and-advice/costs/",
+    "https://www.barclays.co.uk/help/contact-us/",
+    "https://www.barclays.co.uk/help/"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "There’s an option to pay an overseas bank charge of between £4-12, which means the recipient won’t need to pay fees.",
+      "url": "https://www.barclays.co.uk/ways-to-bank/international-bank-transfers/"
+    },
+    {
+      "topic": "countries",
+      "text": "Send and receive money online to 130+ countries",
+      "url": "https://www.barclays.co.uk/ways-to-bank/international-bank-transfers/"
+    }
+  ]
+}

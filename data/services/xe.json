@@ -1,0 +1,71 @@
+{
+  "slug": "xe",
+  "fetchedAt": "2026-10-02T03:57:47.244Z",
+  "status": "found",
+  "pages": [
+    "https://www.xe.com/",
+    "https://www.xe.com/send-money/",
+    "https://www.xe.com/large-money-transfer/",
+    "https://www.xe.com/send-money/send-money-to-albania/",
+    "https://www.xe.com/send-money/send-money-to-algeria/",
+    "https://www.xe.com/send-money/send-money-to-antigua-and-barbuda/",
+    "https://www.xe.com/send-money/send-money-to-argentina/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "With just a few clicks, you can send money to over 190 countries worldwide.",
+      "url": "https://www.xe.com/"
+    },
+    {
+      "topic": "countries",
+      "text": "Compare 100+ currencies in real time & find the right moment to transfer funds",
+      "url": "https://www.xe.com/"
+    },
+    {
+      "topic": "fees",
+      "text": "It has everything you need for international money transfers — easy, secure, and low fees starting at $0.",
+      "url": "https://www.xe.com/"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to 190 countries across 130 currencies.",
+      "url": "https://www.xe.com/"
+    },
+    {
+      "topic": "speed",
+      "text": "Fast, reliable delivery — most transfers arrive in minutes",
+      "url": "https://www.xe.com/send-money/"
+    },
+    {
+      "topic": "payout",
+      "text": "Send to recipient's bank account, or if available, arrange cash pickup or send to a mobile wallet.",
+      "url": "https://www.xe.com/send-money/"
+    },
+    {
+      "topic": "speed",
+      "text": "Most transfers will arrive on the same day, but occasionally some recipient banks can take between 1-4 days to deposit the money in your account.",
+      "url": "https://www.xe.com/send-money/"
+    },
+    {
+      "topic": "payout",
+      "text": "Cash pickup lets Xe users in Canada, New Zealand, Europe, the UK, and the USA send money quickly in physical form.",
+      "url": "https://www.xe.com/send-money/"
+    },
+    {
+      "topic": "speed",
+      "text": "90% of transfers arrive in minutes, so your money reaches its destination on time.",
+      "url": "https://www.xe.com/large-money-transfer/"
+    },
+    {
+      "topic": "limits",
+      "text": "You can send up to $535,000 USD (or the currency equivalent) to Albania online.",
+      "url": "https://www.xe.com/send-money/send-money-to-albania/"
+    },
+    {
+      "topic": "payout",
+      "text": "Mobile wallets provide a fast, secure way to send, store, and receive money.",
+      "url": "https://www.xe.com/send-money/send-money-to-albania/"
+    }
+  ]
+}

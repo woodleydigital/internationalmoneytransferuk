@@ -1,0 +1,34 @@
+{
+  "slug": "sendwave",
+  "fetchedAt": "2026-10-02T03:57:26.652Z",
+  "status": "found",
+  "pages": [
+    "https://www.sendwave.com/en-gb",
+    "https://www.sendwave.com/en",
+    "https://www.sendwave.com/en-gb/countries",
+    "https://www.sendwave.com/en-gb/support",
+    "https://www.sendwave.com/en-gb/wallet-support"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "With the Sendwave app, you can quickly send funds from debit cards and prepaid cards to mobile wallets, bank accounts, and cash pick-up locations.",
+      "url": "https://www.sendwave.com/en-gb/support"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We always safeguard your funds while they're in transit to your recipients.",
+      "url": "https://www.sendwave.com/en-gb/support"
+    },
+    {
+      "topic": "payout",
+      "text": "Recipients will receive a text message for GCash and cash pickup.",
+      "url": "https://www.sendwave.com/en-gb/support"
+    },
+    {
+      "topic": "payout",
+      "text": "The cost of your transfer primarily depends on a few things: the currencies involved; how you pay for the transfer (bank transfer, debit card, wallet, etc.); how your recipient receives the transfer (bank deposit, mobile money, cash pickup, etc.); the amount you send.",
+      "url": "https://www.sendwave.com/en-gb/support"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "lemfi",
+  "fetchedAt": "2026-10-02T03:57:07.133Z",
+  "status": "found",
+  "pages": [
+    "https://lemfi.com/en-us/",
+    "https://lemfi.com/en-us/international-money-transfer",
+    "https://lemfi.com/en-us/request-money"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "International money transfer Send money internationally to more than 30+ countries.",
+      "url": "https://lemfi.com/en-us/"
+    },
+    {
+      "topic": "fees",
+      "text": "Send more money to anyone at a low cost or zero transfer fees.",
+      "url": "https://lemfi.com/en-us/"
+    },
+    {
+      "topic": "payout",
+      "text": "Choose how you want to send and receive: direct to bank accounts, mobile money, and more.",
+      "url": "https://lemfi.com/en-us/"
+    },
+    {
+      "topic": "speed",
+      "text": "Enjoy quick transfers, usually delivered in minutes, at competitive rates you can trust.",
+      "url": "https://lemfi.com/en-us/"
+    },
+    {
+      "topic": "countries",
+      "text": "Transfer to friends and family in over 30 countries",
+      "url": "https://lemfi.com/en-us/international-money-transfer"
+    }
+  ]
+}

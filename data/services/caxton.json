@@ -1,0 +1,42 @@
+{
+  "slug": "caxton",
+  "fetchedAt": "2026-10-02T04:00:36.375Z",
+  "status": "found",
+  "pages": [
+    "https://caxton.io/",
+    "https://caxton.io/solutions/personal-money-transfer",
+    "https://caxton.io/personal/international-payments"
+  ],
+  "quotes": [
+    {
+      "topic": "safeguarding",
+      "text": "Funds held in safeguarded accounts whether it's your working capital or client money .",
+      "url": "https://caxton.io/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money and data are protected with robust safeguards and strict compliance standards at every step.",
+      "url": "https://caxton.io/solutions/personal-money-transfer"
+    },
+    {
+      "topic": "countries",
+      "text": "Buy, hold and pay with over 30 currencies.",
+      "url": "https://caxton.io/personal/international-payments"
+    },
+    {
+      "topic": "countries",
+      "text": "Send from as little as £100 across 195 countries and territories across 30+ currencies.",
+      "url": "https://caxton.io/personal/international-payments"
+    },
+    {
+      "topic": "fees",
+      "text": "Enjoy competitive exchange rates and no fees.",
+      "url": "https://caxton.io/personal/international-payments"
+    },
+    {
+      "topic": "fees",
+      "text": "Pay a small, flat fee and percentage: When you send money abroad, you'll pay a small, flat fee of the amount converted, depending on the currency.",
+      "url": "https://caxton.io/personal/international-payments"
+    }
+  ]
+}

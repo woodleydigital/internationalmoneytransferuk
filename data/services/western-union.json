@@ -1,0 +1,46 @@
+{
+  "slug": "western-union",
+  "fetchedAt": "2026-10-02T03:54:47.806Z",
+  "status": "found",
+  "pages": [
+    "https://www.westernunion.com/gb/en/home.html",
+    "https://www.westernunion.com/gb/en/web/send-money/start",
+    "https://www.westernunion.com/gb/en/money-transfer-app.html",
+    "https://www.westernunion.com/web/global-service/track-transfer",
+    "https://www.westernunion.com/gb/en/send-money-abroad.html",
+    "https://www.westernunion.com/gb/en/transfer-money-online.html",
+    "https://www.westernunion.com/gb/en/send-money-in-person.html"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "Transfer money for cash pickup at hundreds of thousands of Western Union agent locations around the world.",
+      "url": "https://www.westernunion.com/gb/en/home.html"
+    },
+    {
+      "topic": "payout",
+      "text": "Transfer money for cash pickup at a Western Union ® agent location near your receiver, with thousands available.",
+      "url": "https://www.westernunion.com/gb/en/home.html"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money online to 200 countries and territories with hundreds of thousands of Western Union agent locations.",
+      "url": "https://www.westernunion.com/gb/en/home.html"
+    },
+    {
+      "topic": "payout",
+      "text": "Depending on which country your loved one is receiving their money, you can send money from the app directly to their mobile wallet 2 .",
+      "url": "https://www.westernunion.com/gb/en/money-transfer-app.html"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money internationally to more than 200 countries and territories online, on our app or at an agent location with Western Union ® for a quick service you can rely on.",
+      "url": "https://www.westernunion.com/gb/en/send-money-abroad.html"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money abroad quickly and reliably 24/7 to more than 200 countries and territories with the support of our app.",
+      "url": "https://www.westernunion.com/gb/en/send-money-abroad.html"
+    }
+  ]
+}

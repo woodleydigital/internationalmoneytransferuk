@@ -1,0 +1,21 @@
+{
+  "slug": "metro-bank",
+  "fetchedAt": "2026-10-02T03:57:11.375Z",
+  "status": "found",
+  "pages": [
+    "https://www.metrobankonline.co.uk/",
+    "https://www.metrobankonline.co.uk/bank-accounts/i-want-some-information-about/using-my-card-abroad/",
+    "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+    "https://www.metrobankonline.co.uk/mortgages/i-want-some-information-about/fee-assist/",
+    "https://www.metrobankonline.co.uk/cost-of-living/",
+    "https://www.metrobankonline.co.uk/borrowing/i-want-information-about/help-with-my-debt/",
+    "https://www.metrobankonline.co.uk/help-and-support/"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "The person or business sending the payment can select the 'pay all fees' option, which means they will pay a flat upfront fee for their bank charges for sending the payment and intermediatory bank fees and taxes.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/"
+    }
+  ]
+}

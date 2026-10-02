@@ -1,0 +1,41 @@
+{
+  "slug": "ofx",
+  "fetchedAt": "2026-10-02T03:55:14.031Z",
+  "status": "found",
+  "pages": [
+    "https://www.ofx.com/en-gb/",
+    "https://www.ofx.com/en-gb/business/international-payments/",
+    "https://www.ofx.com/en-gb/swift-codes/",
+    "https://www.ofx.com/en-gb/blog/currency-corridors-international-payment-costs/",
+    "https://www.ofx.com/en-gb/send-money/",
+    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/family/",
+    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/emigration/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Global Business Account Receive, hold and spend in 30+ currencies",
+      "url": "https://www.ofx.com/en-gb/"
+    },
+    {
+      "topic": "countries",
+      "text": "Payments & Transfer Manage global payments to 180+ countries",
+      "url": "https://www.ofx.com/en-gb/"
+    },
+    {
+      "topic": "countries",
+      "text": "Pay in 30+ currencies with total visibility and automated receipt capture.",
+      "url": "https://www.ofx.com/en-gb/"
+    },
+    {
+      "topic": "fees",
+      "text": "They also come with low or no transfer fees .",
+      "url": "https://www.ofx.com/en-gb/send-money/"
+    },
+    {
+      "topic": "fees",
+      "text": "With our global network of about 115 bank accounts, you can send money back home quickly, with great rates and minimal or zero fees.",
+      "url": "https://www.ofx.com/en-gb/send-money/"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "moneygram",
+  "fetchedAt": "2026-10-02T03:55:02.641Z",
+  "status": "found",
+  "pages": [
+    "https://www.moneygram.com/gb/en",
+    "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-app",
+    "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
+    "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person",
+    "https://www.moneygram.com/gb/en/corridor",
+    "https://www.moneygram.com/gb/en/help-center"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send internationally to 200+ countries and territories",
+      "url": "https://www.moneygram.com/gb/en"
+    },
+    {
+      "topic": "payout",
+      "text": "Your recipient can pick up cash at an agent location or receive funds straight to a bank account or mobile wallet.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person"
+    }
+  ]
+}

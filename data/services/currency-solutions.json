@@ -1,0 +1,43 @@
+{
+  "slug": "currency-solutions",
+  "fetchedAt": "2026-10-02T03:59:26.405Z",
+  "status": "found",
+  "pages": [
+    "https://www.currencysolutions.com/",
+    "https://www.currencysolutions.com/personal/",
+    "https://www.currencysolutions.com/legal/safeguarding-funds/",
+    "https://www.currencysolutions.com/help/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send, receive and hold in 40+ currencies",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your funds are safeguarded by our FCA-regulated e-money partners at a credit institution.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "countries",
+      "text": "We support over 30 currencies including EUR, USD, GBP, AED.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "In the unlikely event of insolvency, safeguarded funds ensure added protection.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Currency Solutions Limited segregates and safeguards customer funds related to payment services as per regulation 23 of the Payments Services Regulations 2017.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "fees",
+      "text": "Get competitive FX rates with no transfer fees or hidden charges.",
+      "url": "https://www.currencysolutions.com/personal/"
+    }
+  ]
+}

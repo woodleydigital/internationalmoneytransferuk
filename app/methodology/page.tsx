@@ -62,6 +62,15 @@ export default function Page() {
           statement gives a company number, that is how we find the company at Companies House.
         </li>
         <li>
+          <strong className="text-ink">What providers say about their service.</strong> Software
+          reads each provider’s homepage and up to six of its own pages about fees, limits,
+          safeguarding and payout methods, and keeps whole sentences on six topics (where it sends
+          money, how recipients are paid, how long transfers take, fees, limits, and how customer
+          money is protected), word for word, with the page each came from. It drops marketing
+          superlatives, promotions, other products (cards, loans, savings) and claims about other
+          firms. Nobody checks the sentences, and they are always shown as the provider’s own words.
+        </li>
+        <li>
           <strong className="text-ink">Logos.</strong> The icon each provider’s own website
           publishes, saved by software and refreshed weekly. Logos are trade marks of their
           owners and are shown only to identify each provider.

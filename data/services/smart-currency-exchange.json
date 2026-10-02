@@ -1,0 +1,26 @@
+{
+  "slug": "smart-currency-exchange",
+  "fetchedAt": "2026-10-02T03:58:47.040Z",
+  "status": "found",
+  "pages": [
+    "https://www.smartcurrencyexchange.com/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/buying-property-abroad/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/selling-property-abroad/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/emigration/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/regular-payments/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/large-transfers/"
+  ],
+  "quotes": [
+    {
+      "topic": "speed",
+      "text": "We aim to transfer your money onward the same day it is received to our account.",
+      "url": "https://www.smartcurrencyexchange.com/"
+    },
+    {
+      "topic": "speed",
+      "text": "In many cases the money reaches your recipient same-day or within 1-2 business days depending on the currencies and destinations involved.",
+      "url": "https://www.smartcurrencyexchange.com/"
+    }
+  ]
+}

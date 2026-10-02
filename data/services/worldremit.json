@@ -1,0 +1,36 @@
+{
+  "slug": "worldremit",
+  "fetchedAt": "2026-10-02T03:57:40.452Z",
+  "status": "found",
+  "pages": [
+    "https://www.worldremit.com/en-gb",
+    "https://www.worldremit.com/en-gb/download-our-app",
+    "https://www.worldremit.com/en-gb/zimbabwe",
+    "https://www.worldremit.com/en-gb/ghana",
+    "https://www.worldremit.com/en-gb/kenya",
+    "https://www.worldremit.com/en-gb/philippines",
+    "https://www.worldremit.com/en-gb/uganda"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "Instant transfer to your receiver's registered mobile money account number.",
+      "url": "https://www.worldremit.com/en-gb"
+    },
+    {
+      "topic": "payout",
+      "text": "Choose how you’d like to pay for your transfer: bank deposit, credit or debit card.",
+      "url": "https://www.worldremit.com/en-gb"
+    },
+    {
+      "topic": "speed",
+      "text": "In most cases, money transfers sent using WorldRemit will arrive within minutes.",
+      "url": "https://www.worldremit.com/en-gb"
+    },
+    {
+      "topic": "payout",
+      "text": "At which time, these funds are either ready for collection by the recipient (Cash Pickup) or to be added into their bank account or mobile money account.",
+      "url": "https://www.worldremit.com/en-gb/zimbabwe"
+    }
+  ]
+}

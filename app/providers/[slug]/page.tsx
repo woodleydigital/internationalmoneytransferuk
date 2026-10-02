@@ -14,6 +14,8 @@ import {
 import { registerSearchUrl } from "@/lib/fca";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
+import { ServiceQuotesBlock } from "@/components/ServiceQuotesBlock";
+import { loadServiceRecord } from "@/lib/service-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
 import { latest, providerId, providerNode } from "@/lib/schema";
 import { loadLogo } from "@/lib/logo-records";
@@ -58,10 +60,20 @@ export default async function Page({ params }: { params: Params }) {
   const checked = checkedAt(entry);
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
+  const service = loadServiceRecord(p.slug);
+  const hasTopic = (...ts: string[]) => Boolean(service?.quotes.some((q) => ts.includes(q.topic)));
+  const SERVICE_FIELDS: Record<string, string[]> = {
+    "How customer money is safeguarded": ["safeguarding"],
+    "Countries and currencies served": ["countries"],
+    "Payout methods (bank, cash pickup, mobile wallet)": ["payout"],
+    "Fees, limits, minimums": ["fees", "limits"],
+  };
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
-    Boolean(c) && f.source.startsWith("Companies House") && !f.field.startsWith("Revenue");
+    (Boolean(c) && f.source.startsWith("Companies House") && !f.field.startsWith("Revenue")) ||
+    (f.field in SERVICE_FIELDS && hasTopic(...SERVICE_FIELDS[f.field]));
   const sections: [string, string][] = [
     ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
+    ...(service ? ([["service", "What it says about its service"]] as [string, string][]) : []),
     ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
     ["coverage", "Data coverage"],
     ["about-profile", "About this profile"],
@@ -209,6 +221,11 @@ export default async function Page({ params }: { params: Params }) {
       {statement && (
         <div id="regulation">
           <ProviderStatementBlock name={p.name} record={statement} />
+        </div>
+      )}
+      {service && (
+        <div id="service-quotes">
+          <ServiceQuotesBlock name={p.name} record={service} />
         </div>
       )}
       {company && <CompaniesHouseBlock record={company} />}

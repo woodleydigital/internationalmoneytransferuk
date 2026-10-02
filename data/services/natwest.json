@@ -1,0 +1,26 @@
+{
+  "slug": "natwest",
+  "fetchedAt": "2026-10-02T03:55:40.502Z",
+  "status": "found",
+  "pages": [
+    "https://www.natwest.com/",
+    "https://www.natwest.com/life-moments/travel/spending-abroad/travel-account.html",
+    "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+    "https://www.natwest.com/life-moments/travel/spending-abroad.html",
+    "https://www.natwest.com/support-centre/help-with-your-card/going-abroad.html",
+    "https://www.natwest.com/investments/investment-fees.html",
+    "https://www.natwest.com/credit-cards/existing-customers/fees-and-charges.html"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "There is no fee for sending an international payment online, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html"
+    },
+    {
+      "topic": "limits",
+      "text": "If you have registered your biometrics with the Bank, you can use the mobile app or Online Banking to make an international payment to new and saved payees up to the daily limit of £20,000.00 GBP.",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html"
+    }
+  ]
+}

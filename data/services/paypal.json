@@ -1,0 +1,46 @@
+{
+  "slug": "paypal",
+  "fetchedAt": "2026-10-02T03:54:19.099Z",
+  "status": "found",
+  "pages": [
+    "https://www.paypal.com/uk/home",
+    "https://www.paypal.com/uk/digital-wallet/send-receive-money/send-money",
+    "https://www.paypal.com/uk/business/fees",
+    "https://www.paypal.com/uk/digital-wallet/paypal-consumer-fees",
+    "https://www.paypal.com/uk/legalhub/paypal/useragreement-full",
+    "https://www.paypal.com/uk/cshelp/personal",
+    "https://www.paypal.com/uk/cshelp/article/whats-paypal-package-tracking-help956"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send money fast to friends, family, buyers and sellers anywhere in 110+ countries.",
+      "url": "https://www.paypal.com/uk/digital-wallet/send-receive-money/send-money"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to friends and family abroad in over 110 countries—or get even more delivery options with Xoom.",
+      "url": "https://www.paypal.com/uk/digital-wallet/send-receive-money/send-money"
+    },
+    {
+      "topic": "fees",
+      "text": "No Fee (when no currency conversion is involved)",
+      "url": "https://www.paypal.com/uk/digital-wallet/paypal-consumer-fees"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "If we continue to hold the Relevant Funds at the end of the business day following the day on which we received the Relevant Funds, we will deposit these into a separate safeguarding bank account that are held with an authorised credit institution.",
+      "url": "https://www.paypal.com/uk/legalhub/paypal/useragreement-full"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "This process of protecting relevant funds is referred to as safeguarding.",
+      "url": "https://www.paypal.com/uk/legalhub/paypal/useragreement-full"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We keep safeguarding your Relevant Funds until you pay them out of your PayPal account.",
+      "url": "https://www.paypal.com/uk/legalhub/paypal/useragreement-full"
+    }
+  ]
+}

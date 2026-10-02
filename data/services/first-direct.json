@@ -1,0 +1,26 @@
+{
+  "slug": "first-direct",
+  "fetchedAt": "2026-10-02T03:56:46.541Z",
+  "status": "found",
+  "pages": [
+    "https://www.firstdirect.com/",
+    "https://www.firstdirect.com/travel-and-international/international-payments/",
+    "https://www.firstdirect.com/travel-and-international/travel-help-and-advice/using-your-cards-outside-the-uk/",
+    "https://www.firstdirect.com/travel-and-international/",
+    "https://www.firstdirect.com/travel-and-international/travel-money/",
+    "https://www.firstdirect.com/travel-and-international/international-payments/bic-and-iban/",
+    "https://www.firstdirect.com/mortgages/mortgage-fees/"
+  ],
+  "quotes": [
+    {
+      "topic": "limits",
+      "text": "Online : up to £50,000 (or currency equivalent) per day.",
+      "url": "https://www.firstdirect.com/travel-and-international/international-payments/"
+    },
+    {
+      "topic": "speed",
+      "text": "International payments will normally be received by the next working day for accounts in the EEA (European Economic Area).",
+      "url": "https://www.firstdirect.com/travel-and-international/international-payments/"
+    }
+  ]
+}

@@ -38,7 +38,7 @@ export default function Page() {
         {`The imports run automatically every week. The next run is scheduled for ${longDate(next.toISOString().slice(0, 10))} at ${next.toISOString().slice(11, 16)} UTC. A record not refreshed within ${MAX_AGE_DAYS} days is taken off the site rather than shown out of date.`}
       </P>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {ps.map((p) => (
           <section key={p.key} aria-labelledby={`p-${p.key}`} className="border border-line bg-white p-4">
             <h2 id={`p-${p.key}`} className="font-bold text-ink">
@@ -69,7 +69,7 @@ export default function Page() {
 
       <H2 id="providers">By provider</H2>
       <P>
-        What each import found for each provider. “No certain match” and “No statement found”
+        What each import found for each provider. “No certain match” and “Nothing found”
         describe our import, not the provider: they mean we could not link or read a record with
         certainty, so we show nothing rather than guess.
       </P>

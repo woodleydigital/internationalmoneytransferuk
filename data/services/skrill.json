@@ -1,0 +1,36 @@
+{
+  "slug": "skrill",
+  "fetchedAt": "2026-10-02T03:55:48.445Z",
+  "status": "found",
+  "pages": [
+    "https://www.skrill.com/en/",
+    "https://www.skrill.com/en/transfer-money/",
+    "https://www.skrill.com/en/transfer-money/international-money-transfers/",
+    "https://www.skrill.com/en/how-to-send-money/",
+    "https://www.skrill.com/en/siteinformation/fees/",
+    "https://www.skrill.com/en/crypto/live-cryptocurrency-prices/",
+    "https://www.skrill.com/en/skrill-news/crypto/what-is-cryptocurrency/"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "We are constantly expanding our payout choices and depending on the recipient’s country, you can direct your transfer to a bank account, Visa® card, Mastercard® or mobile wallet.",
+      "url": "https://www.skrill.com/en/transfer-money/"
+    },
+    {
+      "topic": "payout",
+      "text": "Choose from 40 different currencies and send money to a bank account, mobile wallet, email address or phone number.",
+      "url": "https://www.skrill.com/en/how-to-send-money/"
+    },
+    {
+      "topic": "fees",
+      "text": "We will also charge you a foreign exchange fee of up to 3.99%.",
+      "url": "https://www.skrill.com/en/siteinformation/fees/"
+    },
+    {
+      "topic": "fees",
+      "text": "In this case, we will apply foreign exchange fees of 1.5%.",
+      "url": "https://www.skrill.com/en/siteinformation/fees/"
+    }
+  ]
+}

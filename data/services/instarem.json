@@ -1,0 +1,36 @@
+{
+  "slug": "instarem",
+  "fetchedAt": "2026-10-02T03:56:58.045Z",
+  "status": "found",
+  "pages": [
+    "https://www.instarem.com/en-gb/",
+    "https://www.instarem.com/app/signup",
+    "https://www.instarem.com/en-gb/send-money-to-ghana/",
+    "https://www.instarem.com/en-gb/send-money-to-kenya/",
+    "https://www.instarem.com/en-gb/send-money-to-nigeria/",
+    "https://www.instarem.com/en-gb/send-money-to-uganda/",
+    "https://www.instarem.com/en-gb/send-money-to-australia/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send money confidently to 60+ countries in minutes.",
+      "url": "https://www.instarem.com/en-gb/"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to over 60 countries hassle-free and stay in the know with real-time tracking.",
+      "url": "https://www.instarem.com/en-gb/"
+    },
+    {
+      "topic": "countries",
+      "text": "You can send money online to your loved ones, pay for education fees, or transfer funds to your own account in over 60 countries.",
+      "url": "https://www.instarem.com/en-gb/"
+    },
+    {
+      "topic": "fees",
+      "text": "Sending money abroad with Instarem is simple and affordable, with no hidden fees or unfair FX margins.",
+      "url": "https://www.instarem.com/en-gb/"
+    }
+  ]
+}
