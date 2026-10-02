@@ -239,11 +239,6 @@
     "source": "https://www.handelsbanken.co.uk/sv/sepu//180x180.png",
     "fetchedAt": "2026-10-02T01:56:50.173Z"
   },
-  "coutts": {
-    "file": "/logos/coutts.ico",
-    "source": "https://www.coutts.com/apps/settings/wcm/designs/responsive_coutts/clientlibs/resources/favicon.ico",
-    "fetchedAt": "2026-10-02T01:56:51.237Z"
-  },
   "halifax": {
     "file": "/logos/halifax.png",
     "source": "inline image on https://www.halifax.co.uk/",

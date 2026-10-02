@@ -66,6 +66,15 @@ export function pngWidth(b: Uint8Array): number {
   return ((b[16] << 24) | (b[17] << 16) | (b[18] << 8) | b[19]) >>> 0;
 }
 
+/** Largest image in an ICO file (a stored width of 0 means 256); 0 if unreadable. */
+export function icoWidth(b: Uint8Array): number {
+  if (b.length < 6) return 0;
+  const count = b[4] | (b[5] << 8);
+  let max = 0;
+  for (let i = 0; i < count && 6 + i * 16 < b.length; i++) max = Math.max(max, b[6 + i * 16] || 256);
+  return max;
+}
+
 export interface LogoRecord {
   file: string;
   source: string;

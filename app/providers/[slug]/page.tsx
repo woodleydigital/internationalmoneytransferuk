@@ -65,7 +65,7 @@ export default async function Page({ params }: { params: Params }) {
     <PageFrame
       trail={[{ name: "Directory", href: "/" }, { name: p.name }]}
       icon={<Monogram name={p.name} kind={p.kind} slug={p.slug} size="lg" />}
-      title={<>{p.name} international money transfer profile</>}
+      title={<>{p.name}: company and regulatory profile</>}
       meta={
         <>
           <KindBadge kind={p.kind} />

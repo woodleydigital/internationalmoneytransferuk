@@ -11,7 +11,7 @@ import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "
 import { join } from "node:path";
 import { PROVIDERS } from "../lib/providers.ts";
 import { robotsAllows } from "../lib/disclosures.ts";
-import { findIconLinks, imageType, pngWidth, rankIcons, type LogoRecord } from "../lib/logos.ts";
+import { findIconLinks, icoWidth, imageType, pngWidth, rankIcons, type LogoRecord } from "../lib/logos.ts";
 
 const UA = "IMTUKDirectoryBot/1.0 (+https://internationalmoneytransfer.uk/methodology/)";
 const DIR = join(process.cwd(), "public", "logos");
@@ -48,7 +48,7 @@ async function manifestIcons(html: string, base: string) {
 }
 
 // Icons checked and rejected as not the provider's recognisable logo.
-const REJECTED = new Set(["danske-bank"]);
+const REJECTED = new Set(["danske-bank", "hamilton-court-fx"]);
 
 const only = new Set(process.argv.slice(2));
 const summary: string[] = [];
@@ -76,6 +76,7 @@ for (const p of PROVIDERS) {
       if (!ext) continue;
       // Tiny bitmaps look blurry at directory size; prefer the monogram.
       if (ext === "png" && pngWidth(bytes) < 48) continue;
+      if (ext === "ico" && icoWidth(bytes) < 48) continue;
       // Replace any earlier file for this provider with a different extension.
       for (const old of ["png", "jpg", "svg", "ico", "webp"]) {
         const f = join(DIR, `${p.slug}.${old}`);
