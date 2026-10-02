@@ -1,0 +1,109 @@
+{
+  "slug": "paypal",
+  "number": "14741686",
+  "fetchedAt": "2026-10-02T08:28:20.302Z",
+  "previousNames": [],
+  "timeline": [
+    {
+      "date": "2026-09-08",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzU0MjMyMzYzOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-24",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzUxMjI1NzQ0MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-12",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQ3Njc1OTEyMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-28",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQ2MDU3ODMyNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-11",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQ0Njk2MjU3NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-10-09",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQzNzc5MTYyNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-02",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQxNjg2Nzg1MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-12-13",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzQwMzc4Njc4N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-07",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzM5ODQ1OTM0OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-07",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/WUNGQlZYWk5hZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-10-19",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzM5NzE3Mzg1OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-09-21",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzM5Mzk3MDgyMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-03-20",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzM3MzA5Nzc5NWFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 0,
+    "satisfied": 0,
+    "outstanding": 0,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/charges"
+  },
+  "owners": [
+    {
+      "name": "Paypal Holdings, Inc.",
+      "registeredIn": "United States",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ]
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-09-08",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history",
+    "figures": []
+  }
+}

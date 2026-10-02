@@ -1,0 +1,228 @@
+{
+  "slug": "santander",
+  "number": "02294747",
+  "fetchedAt": "2026-10-02T08:28:43.812Z",
+  "previousNames": [
+    {
+      "name": "ABBEY NATIONAL PLC",
+      "from": "1988-09-12",
+      "to": "2010-01-11"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-05-06",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUYwMkNHWlNhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-04-27",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzUxODQ0MDYyOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-25",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzUxMTQ2MTkxNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-12",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzUwOTg1Nzg3OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-19",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQ4MTkxMjQ1MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-19",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQ4MTkxMjI5M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-19",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQ4MTkxMjMyOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-26",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUU5RlVZMlJhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-07-04",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/WUU1VjU0NTdhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-04-10",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQ2MTc3NTg3NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-11",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQ1ODAwMDExN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-14",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUQwU0JQS09hZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-02",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQxNjMwMjY4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-11",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzQxMzk5NDUxN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-05-19",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzM4MDE3MDM3OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-05-05",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUMyNjJJQzhhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-03-07",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzM3MTc1NzUzNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-04-21",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUIxWFpPNVVhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-24",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzMzMzQ1OTUxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-03",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzMzMTgwMDQxNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-04-03",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QUEwTkNDSDdhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-04-02",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2020-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzI5NjM3NzUxNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-03-10",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzI5MzkzOTYxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-07-16",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzI3MzI3NTUzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-05-07",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/QTkyWFZOUzhhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-03-26",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2019-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzI2MDE1MzcxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-03-06",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzI1OTE3NzMxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-06-19",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzIzNzc0MzYwMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-06-12",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzIzNjcwODYxMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-06-12",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history/MzIzNjcwMDE3N2FkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 24,
+    "satisfied": 6,
+    "outstanding": 18,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/charges"
+  },
+  "owners": [
+    {
+      "name": "Santander Uk Group Holdings Plc",
+      "number": "08700698",
+      "registeredIn": "United Kingdom (England & Wales)",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08700698"
+    },
+    {
+      "name": "Banco Santander, S.A",
+      "registeredIn": "Spain",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ]
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-03-25",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/02294747/filing-history",
+    "figures": []
+  }
+}

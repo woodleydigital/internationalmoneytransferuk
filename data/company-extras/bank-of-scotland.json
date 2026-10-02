@@ -1,0 +1,235 @@
+{
+  "slug": "bank-of-scotland",
+  "number": "SC327000",
+  "fetchedAt": "2026-10-02T08:30:13.345Z",
+  "previousNames": [],
+  "timeline": [
+    {
+      "date": "2026-05-19",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzUyMjU5MjA0NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzUxMDk3MTM2NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ3NjIyMjIxN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-05",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ3NjIyMjAwM2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-04",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ3NjExMjk2NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-08-04",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ3NjExNDc4MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-05-06",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ2NTE0ODUyOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-04-01",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQ2MDQ2MzkxNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-05-20",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQyMjM5NjIwNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-15",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNzI4ODY0NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2NzI5N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2NzEyNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2NzM2MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2NzQ0OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2ODM4MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA3MDE0NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA4MzA2MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA4MzcxMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-26",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzQxNjA2OTU1OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-09-04",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzM5MTcyMjk5M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-04-14",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzM3NTQ1ODI2M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-08-30",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzM1MDExMDQ3N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-04-05",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzMzNTAwMTQxNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-11",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/U0FaTDBEUkZhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-11",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzMzMjU4MTM5OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-08-31",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzMxMjI1NDkyOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-06-30",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/U0E3SDlaUVdhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-04-28",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2020-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzI5OTA5NzAwOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-12-02",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzI4NTAxNDc5M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-10-07",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history/MzI3OTk0ODk1NWFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 29,
+    "satisfied": 13,
+    "outstanding": 16,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/charges"
+  },
+  "owners": [
+    {
+      "name": "Hbos Plc",
+      "number": "SC218813",
+      "registeredIn": "Scotland",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC218813"
+    },
+    {
+      "name": "Lloyds Bank Plc",
+      "number": "00002065",
+      "registeredIn": "England And Wales",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00002065"
+    },
+    {
+      "name": "Lloyds Banking Group Plc",
+      "number": "SC095000",
+      "registeredIn": "Scotland",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC095000"
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-03-20",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC327000/filing-history",
+    "figures": []
+  }
+}

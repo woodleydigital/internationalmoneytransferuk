@@ -1,0 +1,225 @@
+{
+  "slug": "paysend",
+  "number": "SC376020",
+  "fetchedAt": "2026-10-02T08:29:56.890Z",
+  "previousNames": [
+    {
+      "name": "PAYWIZARD PUBLIC LIMITED COMPANY",
+      "from": "2010-12-20",
+      "to": "2016-11-10"
+    },
+    {
+      "name": "PAYWIZARD LIMITED",
+      "from": "2010-03-31",
+      "to": "2010-12-20"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-06-04",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzUyNDA1NTEwOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-09",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzUwOTAxODA4NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-10-14",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzQ4MzgzMDk1NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-10",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzQ1NzgxMTc5NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-09-27",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzQzNzQ3ODYzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-03-08",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzQxMzg0MTM0MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-01-16",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzQwNjg2MTE2OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-03-08",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzM3MTg3Njg4NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-02-07",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzM2ODQ2Nzg3NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-01-04",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzM2MzUwMzA2NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-06-20",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzM0MzAyMTQ3N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-18",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzMzMzI5OTc3NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-10-29",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2020-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzMxODU1NTM4MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-05-07",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzMwMDI3OTk0OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-05-04",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI5OTg4MjMwOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-10-15",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI4MTE5ODc2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-10-14",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2019-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI4MDI3NzExM2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-03-18",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI2MDE5Mzg5OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-01-14",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI1NDUyMDM4N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-07-30",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzI0MDUyMzkxN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-06-24",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2018-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIzNzU5ODY0MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-03-12",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIyOTE1MzU4NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-01-03",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIyMzU5ODgzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2018-07-16",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIwOTgxMTE5M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2018-05-23",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2017-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIwNTUwOTk4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2018-03-15",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzIwMDE1ODM3M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2017-10-17",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzE4Nzg0Nzk2MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2017-06-22",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2016-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzE3ODEzOTQ2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2017-03-15",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzE3MTE0NjAwOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2016-11-10",
+      "category": "change-of-name",
+      "label": "Company name changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history/MzE2MTY3MjQ2N2FkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 3,
+    "satisfied": 1,
+    "outstanding": 2,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/charges"
+  },
+  "owners": [
+    {
+      "name": "Paysend Group Limited",
+      "number": "SC562529",
+      "registeredIn": "Scotland",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors as firm",
+        "significant influence or control as firm"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/SC562529"
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-06-04",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/SC376020/filing-history",
+    "figures": []
+  }
+}

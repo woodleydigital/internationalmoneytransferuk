@@ -1,0 +1,147 @@
+{
+  "slug": "john-lewis-finance",
+  "number": "15785347",
+  "fetchedAt": "2026-10-02T08:29:00.549Z",
+  "previousNames": [],
+  "timeline": [
+    {
+      "date": "2026-06-19",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzUyNzIwOTU1OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-01-28",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzUwMTk4NDY1M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-22",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-01-25",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQ4MjE2MjU0N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-22",
+      "category": "accounts",
+      "label": "Accounts filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQ4MjE2MTg2NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-06-19",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQ3MDc2OTc1MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-05-20",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQ2NzE3Nzg1MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-01-30",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQ1MzE1NTcxNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-10-08",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQzODcwODUwNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-08-30",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQzMzk3OTAxMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-07-04",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-06-30",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQyNzY5NzE2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-07-01",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQyNzIzNDY5OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-07-01",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQyNzIxNjE5OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-07-01",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQyNzE5OTM1OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-06-18",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history/MzQyNTYwOTA2MmFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 0,
+    "satisfied": 0,
+    "outstanding": 0,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/charges"
+  },
+  "owners": [
+    {
+      "name": "John Lewis Plc",
+      "number": "00233462",
+      "registeredIn": "United Kingdom",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00233462"
+    },
+    {
+      "name": "John Lewis Partnership Plc",
+      "number": "00238937",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00238937"
+    },
+    {
+      "name": "John Lewis Partnership Trust Limited",
+      "number": "00481406",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00481406"
+    },
+    {
+      "name": "John Lewis Partnership Plc",
+      "number": "00238937",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00238937"
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-01-25",
+    "filedOn": "2025-09-22",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/15785347/filing-history",
+    "figures": []
+  }
+}

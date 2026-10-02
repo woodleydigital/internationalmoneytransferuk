@@ -1,9 +1,10 @@
 {
   "slug": "caxton",
-  "fetchedAt": "2026-10-02T04:36:01.392Z",
+  "fetchedAt": "2026-10-02T08:19:06.953Z",
   "status": "found",
   "pages": [
     "https://caxton.io/",
+    "https://caxton.io/services/international-payments",
     "https://caxton.io/solutions/personal-money-transfer",
     "https://caxton.io/personal/international-payments"
   ],
@@ -12,6 +13,16 @@
       "topic": "safeguarding",
       "text": "Funds held in safeguarded accounts whether it's your working capital or client money .",
       "url": "https://caxton.io/"
+    },
+    {
+      "topic": "countries",
+      "text": "Pay suppliers, receive third-party currencies and move funds between entities in 28+ currencies.",
+      "url": "https://caxton.io/services/international-payments"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Funds safeguarded in segregated accounts",
+      "url": "https://caxton.io/services/international-payments"
     },
     {
       "topic": "safeguarding",

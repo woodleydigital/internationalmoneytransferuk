@@ -1,0 +1,256 @@
+{
+  "slug": "clear-currency",
+  "number": "09549792",
+  "fetchedAt": "2026-10-02T08:29:37.020Z",
+  "previousNames": [],
+  "timeline": [
+    {
+      "date": "2026-09-30",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzU0ODU2NDI2OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-09-22",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzU0NjI0NTQyNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-06-25",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzUyODQ3MjM5NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-04-15",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzUxNjQ2ODU4N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-30",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzQ4MzE3MzcwOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-04-22",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzQ2MzQ5Mjg2OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-06-24",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzQyNjMzMzE4N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-24",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzQxOTU3MTE4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-07-27",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM4NzgyNTU4OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-04-21",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM3NzE1NzUwNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-04-21",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM3NzEzMzU4M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-02-23",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/QUJYVDNNU1lhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-02-23",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM3MDA4NzY2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-02-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM2OTg5NDM5MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-09-26",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM1Mjk3ODg4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-07-14",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzM0NTY5MDU4NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-04-13",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzMzNjEyNjUxM2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-09-30",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2020-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzMxNTYyMjYxOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-04-21",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI5ODQ3NTc4MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-04-20",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI5ODIzODg3NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-12-17",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI4NjI3MDQ0M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-11-25",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2019-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI4NDM1MTgzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-04-28",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI2MzQwOTY4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-04-17",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI2MjYyMTY1MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-01-04",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI1MzQ1Nzg2NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-01-03",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/QThLWUhJU0JhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-11-11",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2017-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI0ODc3OTY0OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-10-04",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2018-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzI0NTcwMjgyNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-04-29",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzIzMzEwMjA4OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2018-09-05",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2016-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history/MzIxMzY0OTkzOGFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 1,
+    "satisfied": 0,
+    "outstanding": 1,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/charges"
+  },
+  "owners": [
+    {
+      "name": "Clear Treasury Group Limited",
+      "number": "09536979",
+      "registeredIn": "United Kingdom",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09536979"
+    },
+    {
+      "name": "Clear Treasury Holdings Limited",
+      "number": "12848163",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/12848163"
+    },
+    {
+      "name": "Tofr Holdings Limited",
+      "number": "14545830",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14545830"
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-09-30",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09549792/filing-history",
+    "figures": [
+      {
+        "concept": "NetAssetsLiabilities",
+        "label": "Net assets",
+        "value": 986539,
+        "unit": "GBP",
+        "periodEnd": "2025-12-31"
+      },
+      {
+        "concept": "CashBankOnHand",
+        "label": "Cash at bank and in hand",
+        "value": 166245,
+        "unit": "GBP",
+        "periodEnd": "2025-12-31"
+      },
+      {
+        "concept": "AverageNumberEmployeesDuringPeriod",
+        "label": "Average number of employees",
+        "value": 0.13,
+        "unit": "pure",
+        "periodEnd": "2025-12-31"
+      }
+    ]
+  }
+}

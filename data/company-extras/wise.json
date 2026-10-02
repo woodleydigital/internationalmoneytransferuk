@@ -1,0 +1,243 @@
+{
+  "slug": "wise",
+  "number": "07209813",
+  "fetchedAt": "2026-10-02T08:28:47.170Z",
+  "previousNames": [
+    {
+      "name": "TRANSFERWISE LTD",
+      "from": "2012-08-03",
+      "to": "2021-06-25"
+    },
+    {
+      "name": "EXCHANGE SOLUTIONS LTD",
+      "from": "2010-03-31",
+      "to": "2012-08-03"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2026-09-25",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2026-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzU0NzM5OTUzOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-04-02",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzUxMzg4NDQyMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ4Njg3Nzg0M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-04-11",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ2MjIzNjk4M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ1NzA0ODUzMmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ1NzAzMzI2N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ0ODYwMDkzNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ0ODYwMTIzNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ0ODYwMTk2OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ0ODYwMjI2OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-12-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQ0ODYwMjUxN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-10-17",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQzOTgwMTcxMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-04-22",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzQxOTI1NzAyNmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-10-10",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzM5NTYwODkxMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-09-29",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/QUNDRklJVE5hZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-09-29",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzM5NDY1NDQxOWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-04-05",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzM3NTE4MDA1MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-09-07",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzM1MDgwODQ2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-08-18",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzM0OTA4NTUwNWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-04-07",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMzNTMwMDEyMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-11-30",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMyMTY5MjU2NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-27",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-03-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNzkyNjE1NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-19",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNzg4MDU3NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-16",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/WUE4M1oyOTdhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-16",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNjY4MTQ5NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-09",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNTg5MzE5MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-09",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNTg5MzE4OGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-05",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNTUzMjQyN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-05",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNTUyMjY4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-01",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history/MzMwNTUzMjQyNGFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 15,
+    "satisfied": 14,
+    "outstanding": 1,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/charges"
+  },
+  "owners": [
+    {
+      "name": "Wise Financial Holdings Ltd",
+      "number": "13214905",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13214905"
+    },
+    {
+      "name": "Wise Limited",
+      "number": "13211214",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13211214"
+    },
+    {
+      "name": "Wise Group Plc",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ]
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2026-03-31",
+    "filedOn": "2026-09-25",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/07209813/filing-history",
+    "figures": []
+  }
+}

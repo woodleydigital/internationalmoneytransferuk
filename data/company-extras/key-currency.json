@@ -1,0 +1,235 @@
+{
+  "slug": "key-currency",
+  "number": "09603083",
+  "fetchedAt": "2026-10-02T08:29:32.326Z",
+  "previousNames": [],
+  "timeline": [
+    {
+      "date": "2026-09-24",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzU0NzM3MjA1NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-07-16",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzUzMzExMzk2MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2026-03-10",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzUwODYzNzY5N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-09-30",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQ4MzE1ODY3M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-07-10",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQ3MzE0NzY4NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-03",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-05-30",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQ1NzAyMDQ4NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-02-25",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2024-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQ1NjMwMTE4M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-07-10",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQyODI1NDI2NWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-05-08",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQyMTA0MTY1MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-05-08",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQyMTA0MTY0OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-05-04",
+      "category": "incorporation",
+      "label": "Company incorporated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQyMDQ1MzExN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-05-04",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/WUQyODMzRkNhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2024-02-15",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2023-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQxMTI5ODIyN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-15",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzQwMDE1NjI2NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-09",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM5OTM5MTU1NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-09",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/QUNGTFZBWVRhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-11-09",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM5OTM5MDM3OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2023-07-11",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM4NTkxODk3N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-11-10",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM1Nzk4NTY0NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-10-28",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2022-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM1Njg0MzYzOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-09-07",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzM1MTA2NTIxOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2022-03-14",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2021-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzMzMjc0MjYzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-07-16",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzMwNzg4MTQ2MGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2021-01-19",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2020-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzI4ODk2NjYyNGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-07-17",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzI3MzMyMjk0NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2020-02-26",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2019-05-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzI1ODMyNTQ5NGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-07-25",
+      "category": "resolution",
+      "label": "Resolution filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/QTg5TjVaODFhZGlxemtjeA/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-07-25",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzIzOTYzMjAzMWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-07-25",
+      "category": "capital",
+      "label": "Share capital filing",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzIzOTYzMjAzMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-07-12",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history/MzIzOTIwNDIwOGFkaXF6a2N4/document?format=pdf&download=0"
+    }
+  ],
+  "charges": {
+    "total": 0,
+    "satisfied": 0,
+    "outstanding": 0,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/charges"
+  },
+  "owners": [
+    {
+      "name": "Key Currency Trustee Limited",
+      "number": "15354421",
+      "registeredIn": "England",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ],
+      "url": "https://find-and-update.company-information.service.gov.uk/company/15354421"
+    }
+  ],
+  "accounts": {
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-09-24",
+    "url": "https://find-and-update.company-information.service.gov.uk/company/09603083/filing-history",
+    "figures": [
+      {
+        "concept": "Equity",
+        "label": "Net assets",
+        "value": 1528886,
+        "unit": "GBP",
+        "periodEnd": "2025-12-31"
+      },
+      {
+        "concept": "CashBankOnHand",
+        "label": "Cash at bank and in hand",
+        "value": 18953383,
+        "unit": "GBP",
+        "periodEnd": "2025-12-31"
+      },
+      {
+        "concept": "AverageNumberEmployeesDuringPeriod",
+        "label": "Average number of employees",
+        "value": 58,
+        "unit": "pure",
+        "periodEnd": "2025-12-31"
+      }
+    ]
+  }
+}
