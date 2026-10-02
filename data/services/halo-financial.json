@@ -1,8 +1,8 @@
 {
   "slug": "halo-financial",
-  "fetchedAt": "2026-10-02T03:58:54.635Z",
+  "fetchedAt": "2026-10-02T04:32:44.580Z",
   "status": "error",
   "pages": [],
   "quotes": [],
-  "error": "HTTP 503"
+  "error": "fetch failed"
 }

@@ -1,8 +1,15 @@
 {
   "slug": "monzo",
-  "fetchedAt": "2026-10-02T03:55:55.425Z",
+  "fetchedAt": "2026-10-02T04:26:32.130Z",
   "status": "none",
   "pages": [
+    "https://monzo.com/",
+    "https://monzo.com/features/travel",
+    "https://monzo.com/current-account/under-16s",
+    "https://monzo.com/credit-cards/aura",
+    "https://monzo.com/business-banking",
+    "https://monzo.com/help",
+    "https://monzo.com/help/monzo-plus",
     "https://monzo.com/",
     "https://monzo.com/features/travel",
     "https://monzo.com/current-account/under-16s",

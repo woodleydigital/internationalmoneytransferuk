@@ -1,66 +1,8 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-10-02T03:57:19.438Z",
-  "status": "found",
-  "pages": [
-    "https://www.riamoneytransfer.com/en-gb/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-    "https://www.riamoneytransfer.com/en-gb/mobile-app/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-europe/"
-  ],
-  "quotes": [
-    {
-      "topic": "countries",
-      "text": "Send money in a few taps to 190+ countries with Ria.",
-      "url": "https://www.riamoneytransfer.com/en-gb/"
-    },
-    {
-      "topic": "payout",
-      "text": "Send money directly to a bank account, for cash pickup at a nearby location, or a mobile wallet (available in many countries).",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "limits",
-      "text": "Spain : €5,000 per transfer, up to maximum of €25,000 every 365 days",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "limits",
-      "text": "Chile : 3,500,000 CLP per transfer, up to 10,000 USD per month",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "speed",
-      "text": "While this payment option usually has a slightly higher fee, the recipient will typically receive the money often within minutes.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "payout",
-      "text": "Send a direct bank deposit or choose from other available delivery options, like cash pickup or digital wallet , depending on the destination.",
-      "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/"
-    },
-    {
-      "topic": "countries",
-      "text": "Our app makes it simple to send money to friends and family in 200+ countries.",
-      "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/"
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money to a mobile wallet in minutes for quick access.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-in-person/"
-    },
-    {
-      "topic": "countries",
-      "text": "Send money to 200+ countries, track transfers, save recipients, find nearby locations, and more.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/"
-    },
-    {
-      "topic": "speed",
-      "text": "It typically finalizes within the same day— usually within minutes —so your recipient could receive money almost immediately.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/"
-    }
-  ]
+  "fetchedAt": "2026-10-02T04:30:12.758Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "error": "HTTP 403"
 }
