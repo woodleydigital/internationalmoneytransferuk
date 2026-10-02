@@ -1,9 +1,8 @@
 {
   "slug": "hamilton-court-fx",
-  "fetchedAt": "2026-10-02T04:00:40.352Z",
-  "status": "none",
-  "pages": [
-    "https://www.hamiltoncourtfx.com/"
-  ],
-  "quotes": []
+  "fetchedAt": "2026-10-02T04:36:05.084Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "error": "HTTP 404"
 }

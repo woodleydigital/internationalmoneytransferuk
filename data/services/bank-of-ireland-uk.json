@@ -1,6 +1,6 @@
 {
   "slug": "bank-of-ireland-uk",
-  "fetchedAt": "2026-10-02T03:56:03.265Z",
+  "fetchedAt": "2026-10-02T04:27:11.769Z",
   "status": "none",
   "pages": [
     "https://www.bankofirelanduk.com/personal/",
@@ -9,7 +9,14 @@
     "https://www.bankofirelanduk.com/rates-and-fees/gb-rates-and-fees/savings-and-deposit-rates/",
     "https://www.bankofirelanduk.com/rates-and-fees/ni-rates-and-fees/personal-savings-and-deposit-rates/",
     "https://www.bankofirelanduk.com/rates-and-fees/",
-    "https://www.bankofirelanduk.com/help-and-support/faqs/general-queries/"
+    "https://www.bankofirelanduk.com/help-and-support/faqs/general-queries/",
+    "https://www.bankofirelanduk.com/personal/",
+    "https://www.bankofirelanduk.com/personal/travel-banking/",
+    "https://www.bankofirelanduk.com/personal/savings/limited-edition-fixed-term-deposits/",
+    "https://www.bankofirelanduk.com/rates-and-fees/gb-rates-and-fees/savings-and-deposit-rates/",
+    "https://www.bankofirelanduk.com/rates-and-fees/ni-rates-and-fees/personal-savings-and-deposit-rates/",
+    "https://www.bankofirelanduk.com/rates-and-fees/",
+    "https://www.bankofirelanduk.com/help-and-support/"
   ],
   "quotes": []
 }

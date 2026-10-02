@@ -1,8 +1,8 @@
 {
   "slug": "john-lewis-finance",
-  "fetchedAt": "2026-10-02T03:56:19.673Z",
+  "fetchedAt": "2026-10-02T04:28:06.007Z",
   "status": "error",
   "pages": [],
   "quotes": [],
-  "error": "HTTP 503"
+  "error": "The operation was aborted due to timeout"
 }
