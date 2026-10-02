@@ -1,0 +1,88 @@
+{
+  "slug": "bank-of-ireland-uk",
+  "fetchedAt": "2026-10-02T07:38:40.191Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Bank of Ireland (UK) Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            67
+          ],
+          [
+            "Mortgages & Home Finance",
+            54
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            1
+          ],
+          [
+            "Investments",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.3174603174603174
+          ]
+        ],
+        "group": "BANK OF IRELAND",
+        "newCases": 123,
+        "proactiveSettled": 5,
+        "upheld": 0.2526315789473684
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Bank of Ireland (UK) plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            57
+          ],
+          [
+            "Mortgages & Home Finance",
+            27
+          ],
+          [
+            "Investments",
+            1
+          ],
+          [
+            "Decumulation Life & Pensions",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.27906976744186046
+          ]
+        ],
+        "group": "BANK OF IRELAND",
+        "newCases": 86,
+        "proactiveSettled": 6,
+        "upheld": 0.22058823529411764
+      }
+    }
+  ],
+  "company": "BANK OF IRELAND (UK) PLC"
+}

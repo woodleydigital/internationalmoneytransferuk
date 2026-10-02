@@ -3,6 +3,8 @@ import Link from "next/link";
 import { KIND_LABEL, PROVIDERS, providerUrl } from "@/lib/providers";
 import { loadEntries } from "@/lib/directory-data";
 import { checkedAt, type Entry } from "@/lib/directory";
+import { loadFosRecord } from "@/lib/fos-records";
+import { percent, type FosFigures } from "@/lib/fos";
 import { longDate } from "@/lib/site";
 import { registerSearchUrl } from "@/lib/fca";
 import { P, PageFrame } from "@/components/Page";
@@ -33,6 +35,15 @@ export async function generateMetadata({
     alternates: { canonical: "/compare/providers/" },
     robots: chosen.length ? { index: false, follow: true } : { index: true, follow: true },
   };
+}
+
+/** An Ombudsman figure for the company behind a provider, with its period, or why there is none. */
+function fosCell(e: Entry, show: (f: FosFigures) => string): React.ReactNode {
+  const rec = loadFosRecord(e.provider.slug);
+  if (!rec) return "—";
+  const latest = rec.periods[0];
+  if (!latest.figures) return `Not in published data (${latest.period.label})`;
+  return `${show(latest.figures)} (${latest.period.label}, ${rec.company})`;
 }
 
 type Row = { label: string; source: string; value: (e: Entry) => React.ReactNode };
@@ -78,6 +89,16 @@ const ROWS: Row[] = [
             </span>
           ))
         : "—",
+  },
+  {
+    label: "Ombudsman: total new cases (latest half-year)",
+    source: "Financial Ombudsman Service",
+    value: (e) => fosCell(e, (f) => new Intl.NumberFormat("en-GB").format(f.newCases ?? 0)),
+  },
+  {
+    label: "Ombudsman: total % of cases upheld (latest half-year)",
+    source: "Financial Ombudsman Service",
+    value: (e) => fosCell(e, (f) => percent(f.upheld)),
   },
   {
     label: "Records last checked",
@@ -175,7 +196,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
             <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">
               Open Government Licence v3.0
             </a>
-            {". FCA numbers are as the providers state them on their own websites and have not been checked against the FCA Register."}
+            {". Ombudsman figures: contains public sector information licensed under the same licence, source Financial Ombudsman Service, and cover the whole company named. FCA numbers are as the providers state them on their own websites and have not been checked against the FCA Register."}
           </p>
         </div>
       )}

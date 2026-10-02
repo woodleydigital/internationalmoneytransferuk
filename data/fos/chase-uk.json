@@ -1,0 +1,70 @@
+{
+  "slug": "chase-uk",
+  "fetchedAt": "2026-10-02T07:38:40.193Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "J.P. Morgan Europe Limited",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            630
+          ],
+          [
+            "Investments",
+            2
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.286527514231499
+          ]
+        ],
+        "newCases": 632,
+        "proactiveSettled": 67,
+        "upheld": 0.2878787878787879
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "J.P. Morgan Europe Limited",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            374
+          ],
+          [
+            "Investments",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.2994652406417112
+          ]
+        ],
+        "newCases": 375,
+        "proactiveSettled": 51,
+        "upheld": 0.2994652406417112
+      }
+    }
+  ],
+  "company": "J.P. MORGAN EUROPE LIMITED"
+}

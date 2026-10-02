@@ -1,0 +1,62 @@
+{
+  "slug": "remitly",
+  "fetchedAt": "2026-10-02T07:38:40.191Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "REMITLY U.K., LTD",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            150
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.2868852459016393
+          ]
+        ],
+        "newCases": 150,
+        "proactiveSettled": 3,
+        "upheld": 0.2868852459016393
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Remitly U.K., Ltd.",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            76
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.1694915254237288
+          ]
+        ],
+        "newCases": 76,
+        "proactiveSettled": 5,
+        "upheld": 0.1694915254237288
+      }
+    }
+  ],
+  "company": "REMITLY U.K., LTD"
+}

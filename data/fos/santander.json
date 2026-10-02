@@ -1,0 +1,104 @@
+{
+  "slug": "santander",
+  "fetchedAt": "2026-10-02T07:38:40.190Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Santander UK Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            4825
+          ],
+          [
+            "Mortgages & Home Finance",
+            395
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            12
+          ],
+          [
+            "Investments",
+            27
+          ],
+          [
+            "Decumulation Life & Pensions",
+            2
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.2450095057034221
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.3190789473684211
+          ]
+        ],
+        "group": "SANTANDER UK",
+        "newCases": 5261,
+        "proactiveSettled": 239,
+        "upheld": 0.2505513895015439
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Santander UK Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            2579
+          ],
+          [
+            "Mortgages & Home Finance",
+            264
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            9
+          ],
+          [
+            "Investments",
+            15
+          ],
+          [
+            "Decumulation Life & Pensions",
+            2
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.3281183932346723
+          ],
+          [
+            "",
+            0.3173913043478261
+          ]
+        ],
+        "group": "SANTANDER UK",
+        "newCases": 2869,
+        "proactiveSettled": 220,
+        "upheld": 0.32570556826849734
+      }
+    }
+  ],
+  "company": "SANTANDER UK PLC"
+}

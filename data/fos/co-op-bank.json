@@ -1,0 +1,90 @@
+{
+  "slug": "co-op-bank",
+  "fetchedAt": "2026-10-02T07:38:40.189Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "THE CO-OPERATIVE BANK P.L.C.",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            437
+          ],
+          [
+            "Mortgages & Home Finance",
+            49
+          ],
+          [
+            "Investments",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.310880829015544
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.3043478260869565
+          ]
+        ],
+        "newCases": 487,
+        "proactiveSettled": 51,
+        "upheld": 0.3110599078341014
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "The Co-Operative Bank Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            302
+          ],
+          [
+            "Mortgages & Home Finance",
+            46
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            2
+          ],
+          [
+            "Investments",
+            3
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.3986013986013986
+          ],
+          [
+            "",
+            0.4125
+          ]
+        ],
+        "newCases": 353,
+        "proactiveSettled": 39,
+        "upheld": 0.3972972972972973
+      }
+    }
+  ],
+  "company": "THE CO-OPERATIVE BANK P.L.C."
+}

@@ -1,0 +1,104 @@
+{
+  "slug": "bank-of-scotland",
+  "fetchedAt": "2026-10-02T07:38:40.193Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Bank of Scotland plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            3727
+          ],
+          [
+            "Mortgages & Home Finance",
+            547
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            24
+          ],
+          [
+            "Investments",
+            32
+          ],
+          [
+            "Decumulation Life & Pensions",
+            6
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.26
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.22
+          ]
+        ],
+        "group": "LLOYDS",
+        "newCases": 4336,
+        "proactiveSettled": 166,
+        "upheld": 0.26
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Bank of Scotland Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            2518
+          ],
+          [
+            "Mortgages & Home Finance",
+            371
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            15
+          ],
+          [
+            "Investments",
+            23
+          ],
+          [
+            "Decumulation Life & Pensions",
+            5
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.30991337824831566
+          ],
+          [
+            "",
+            0.1950354609929078
+          ]
+        ],
+        "group": "LLOYDS",
+        "newCases": 2932,
+        "proactiveSettled": 151,
+        "upheld": 0.29557894736842105
+      }
+    }
+  ],
+  "company": "BANK OF SCOTLAND PLC"
+}

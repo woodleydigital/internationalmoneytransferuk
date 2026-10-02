@@ -1,0 +1,92 @@
+{
+  "slug": "royal-bank-of-scotland",
+  "fetchedAt": "2026-10-02T07:38:40.193Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            957
+          ],
+          [
+            "Mortgages & Home Finance",
+            58
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            5
+          ],
+          [
+            "Investments",
+            5
+          ],
+          [
+            "Decumulation Life & Pensions",
+            5
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.3041018387553041
+          ]
+        ],
+        "group": "NATWEST GROUP PLC",
+        "newCases": 1030,
+        "proactiveSettled": 73,
+        "upheld": 0.308411214953271
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "The Royal Bank of Scotland Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            618
+          ],
+          [
+            "Mortgages & Home Finance",
+            38
+          ],
+          [
+            "Decumulation Life & Pensions",
+            2
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.3438202247191011
+          ],
+          [
+            "",
+            0.2926829268292683
+          ]
+        ],
+        "group": "NATWEST GROUP PLC",
+        "newCases": 658,
+        "proactiveSettled": 46,
+        "upheld": 0.3353658536585366
+      }
+    }
+  ],
+  "company": "THE ROYAL BANK OF SCOTLAND PUBLIC LIMITED COMPANY"
+}

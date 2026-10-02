@@ -24,7 +24,7 @@ export const HOME_FAQ: Faq[] = [
   },
   {
     q: "Where does the information come from?",
-    a: "From Companies House, under the Open Government Licence, and from each provider’s own website, quoted word for word. Software collects both every week, and every block on a profile shows its source and the date it was fetched.",
+    a: "From Companies House and the Financial Ombudsman Service, under the Open Government Licence, and from each provider’s own website, quoted word for word. Software collects both every week, and every block on a profile shows its source and the date it was fetched.",
     link: { href: "/status/", label: "Data status" },
   },
   {

@@ -1,0 +1,62 @@
+{
+  "slug": "starling-bank",
+  "fetchedAt": "2026-10-02T07:38:40.193Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Starling Bank Limited",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            1142
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.2286821705426356
+          ]
+        ],
+        "newCases": 1142,
+        "proactiveSettled": 3,
+        "upheld": 0.2286821705426356
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Starling Bank Limited",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            689
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.21018062397372742
+          ]
+        ],
+        "newCases": 689,
+        "proactiveSettled": 1,
+        "upheld": 0.21018062397372742
+      }
+    }
+  ],
+  "company": "STARLING BANK LIMITED"
+}

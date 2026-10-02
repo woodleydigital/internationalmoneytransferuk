@@ -1,0 +1,104 @@
+{
+  "slug": "lloyds-bank",
+  "fetchedAt": "2026-10-02T07:38:40.189Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Lloyds Bank PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            4407
+          ],
+          [
+            "Mortgages & Home Finance",
+            136
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            26
+          ],
+          [
+            "Investments",
+            12
+          ],
+          [
+            "Decumulation Life & Pensions",
+            15
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.28
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.25
+          ]
+        ],
+        "group": "LLOYDS",
+        "newCases": 4596,
+        "proactiveSettled": 170,
+        "upheld": 0.28
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Lloyds Bank PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            2781
+          ],
+          [
+            "Mortgages & Home Finance",
+            106
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            27
+          ],
+          [
+            "Investments",
+            8
+          ],
+          [
+            "Decumulation Life & Pensions",
+            12
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.3018867924528302
+          ],
+          [
+            "",
+            0.16494845360824742
+          ]
+        ],
+        "group": "LLOYDS",
+        "newCases": 2934,
+        "proactiveSettled": 131,
+        "upheld": 0.29473684210526313
+      }
+    }
+  ],
+  "company": "LLOYDS BANK PLC"
+}

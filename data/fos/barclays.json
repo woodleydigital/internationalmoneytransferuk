@@ -1,0 +1,104 @@
+{
+  "slug": "barclays",
+  "fetchedAt": "2026-10-02T07:38:40.189Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Barclays Bank UK PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            6295
+          ],
+          [
+            "Mortgages & Home Finance",
+            470
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            41
+          ],
+          [
+            "Investments",
+            15
+          ],
+          [
+            "Decumulation Life & Pensions",
+            5
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.25
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.33
+          ]
+        ],
+        "group": "BARCLAYS (GS)",
+        "newCases": 6826,
+        "proactiveSettled": 461,
+        "upheld": 0.25
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Barclays Bank UK PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            4504
+          ],
+          [
+            "Mortgages & Home Finance",
+            339
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            43
+          ],
+          [
+            "Investments",
+            19
+          ],
+          [
+            "Decumulation Life & Pensions",
+            5
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.27612826603325413
+          ],
+          [
+            "",
+            0.3263473053892216
+          ]
+        ],
+        "group": "BARCLAYS (GS)",
+        "newCases": 4910,
+        "proactiveSettled": 338,
+        "upheld": 0.2804162219850587
+      }
+    }
+  ],
+  "company": "BARCLAYS BANK UK PLC"
+}

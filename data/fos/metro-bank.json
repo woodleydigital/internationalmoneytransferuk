@@ -1,0 +1,82 @@
+{
+  "slug": "metro-bank",
+  "fetchedAt": "2026-10-02T07:38:40.191Z",
+  "status": "listed",
+  "periods": [
+    {
+      "period": {
+        "label": "H2 2025",
+        "span": "1 July to 31 December 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h2-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324827/Business-complaints-data-H2-2025.xlsx",
+        "averageUpheld": "Average % of cases upheld = 29%"
+      },
+      "figures": {
+        "business": "Metro Bank PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            657
+          ],
+          [
+            "Mortgages & Home Finance",
+            15
+          ],
+          [
+            "Decumulation Life & Pensions",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.3021346469622332
+          ]
+        ],
+        "newCases": 673,
+        "proactiveSettled": 51,
+        "upheld": 0.2966507177033493
+      }
+    },
+    {
+      "period": {
+        "label": "H1 2025",
+        "span": "1 January to 30 June 2025",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
+        "averageUpheld": "0.5151515151515151"
+      },
+      "figures": {
+        "business": "Metro Bank PLC",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            430
+          ],
+          [
+            "Mortgages & Home Finance",
+            15
+          ],
+          [
+            "Investments",
+            2
+          ],
+          [
+            "Decumulation Life & Pensions",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "",
+            0.30517711171662126
+          ]
+        ],
+        "newCases": 448,
+        "proactiveSettled": 15,
+        "upheld": 0.2961038961038961
+      }
+    }
+  ],
+  "company": "METRO BANK PLC"
+}

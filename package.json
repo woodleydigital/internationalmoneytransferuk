@@ -12,10 +12,12 @@
     "import:disclosures": "node --experimental-strip-types scripts/import-disclosures.ts",
     "import:services": "node --experimental-strip-types scripts/import-service-facts.ts",
     "indexnow": "node --experimental-strip-types scripts/indexnow.ts",
+    "import:fos": "node --experimental-strip-types scripts/import-fos.ts",
     "import:logos": "node --experimental-strip-types scripts/import-logos.ts",
     "import:companies-house": "node --experimental-strip-types scripts/import-companies-house.ts"
   },
   "dependencies": {
+    "fflate": "^0.8.3",
     "next": "^16.3.4",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"

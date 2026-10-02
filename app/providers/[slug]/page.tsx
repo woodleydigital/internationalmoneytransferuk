@@ -15,6 +15,8 @@ import { registerSearchUrl } from "@/lib/fca";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
 import { ServiceQuotesBlock } from "@/components/ServiceQuotesBlock";
+import { FosBlock } from "@/components/FosBlock";
+import { loadFosRecord } from "@/lib/fos-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
 import { providerId, providerNode } from "@/lib/schema";
 import { loadLogo } from "@/lib/logo-records";
@@ -61,6 +63,12 @@ export default async function Page({ params }: { params: Params }) {
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
   const service = entry.service;
+  const fos = loadFosRecord(p.slug);
+  const sharedWith = c
+    ? entries
+        .filter((e) => e.provider.slug !== p.slug && e.company?.company?.number === c.number)
+        .map((e) => ({ name: e.provider.name, href: providerUrl(e.provider) }))
+    : [];
   const hasTopic = (...ts: string[]) => Boolean(service?.quotes.some((q) => ts.includes(q.topic)));
   const SERVICE_FIELDS: Record<string, string[]> = {
     "How customer money is safeguarded": ["safeguarding"],
@@ -68,13 +76,16 @@ export default async function Page({ params }: { params: Params }) {
     "Payout methods (bank, cash pickup, mobile wallet)": ["payout"],
     "Fees, limits, minimums": ["fees", "limits"],
   };
+  const FOS_FIELD = "Complaint volumes and uphold rate (where published)";
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
     (Boolean(c) && f.source.startsWith("Companies House") && !f.field.startsWith("Revenue")) ||
-    (f.field in SERVICE_FIELDS && hasTopic(...SERVICE_FIELDS[f.field]));
+    (f.field in SERVICE_FIELDS && hasTopic(...SERVICE_FIELDS[f.field])) ||
+    (f.field === FOS_FIELD && Boolean(fos));
   const sections: [string, string][] = [
     ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
     ...(service ? ([["service", "What it says about its service"]] as [string, string][]) : []),
     ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
+    ...(fos ? ([["complaints", "Ombudsman complaints"]] as [string, string][]) : []),
     ["coverage", "Data coverage"],
     ["about-profile", "About this profile"],
   ];
@@ -229,6 +240,7 @@ export default async function Page({ params }: { params: Params }) {
         </div>
       )}
       {company && <CompaniesHouseBlock record={company} />}
+      {fos && <FosBlock name={p.name} record={fos} sharedWith={sharedWith} />}
 
       <section aria-labelledby="coverage" className="mt-10">
         <H2 id="coverage">Data coverage</H2>

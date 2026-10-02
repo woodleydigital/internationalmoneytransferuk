@@ -51,8 +51,14 @@ export default function Page() {
           Refreshed weekly.
         </li>
         <li>
-          <strong className="text-ink">Financial Ombudsman Service.</strong> Complaint volumes
-          and uphold rates, where the Ombudsman publishes them for a firm.
+          <strong className="text-ink">Financial Ombudsman Service.</strong> The Ombudsman’s
+          half-yearly complaints data for the two latest periods: new cases, the share upheld
+          in the consumer’s favour and cases settled proactively, copied as published under its
+          own headings. A business is linked to a provider only when the Ombudsman publishes it
+          under exactly the registered company name we hold from Companies House. The figures
+          cover the whole company and all its products, and the Ombudsman publishes only
+          businesses with at least 30 new and 30 resolved complaints in the period. Contains
+          public sector information licensed under the Open Government Licence v3.0.
         </li>
         <li>
           <strong className="text-ink">The provider’s own regulatory statement.</strong> The

@@ -98,6 +98,17 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   products (cards, loans, savings), claims about other firms, US-only terms, fragments and
   near-duplicates; `REJECTED_QUOTES` for context-wrong rows. Shown as "What {provider} says
   about its service", always as the provider's own words. Plain pattern matching — no AI.
+- **Financial Ombudsman Service complaints:** `scripts/import-fos.ts` (weekly, after the
+  Companies House step) reads the two latest half-yearly "Business complaints data" workbooks
+  found via the FOS sitemap (`lib/xlsx.ts`, `lib/fos.ts`), and links a business only when its
+  published name normalises to exactly the Companies House name we hold. Figures are copied
+  under FOS's own headings (total new cases, total % upheld, proactive settled), with period,
+  workbook link and OGL attribution; never graded or characterised. Figures cover the whole
+  company and every brand sharing it (the block names those brands). Unlisted companies get
+  the FOS publication-threshold sentence. Licence: FOS publications state OGL v3.0; its
+  website legal policy is stricter ("must not reproduce our copyright material … without our
+  prior permission"). The owner chose to publish with full attribution (2026-10-02); if FOS
+  objects, remove `FosBlock` and the compare rows.
 - **Reference exchange rates:** Frankfurter API (`lib/rate-table.ts`, `lib/rates.ts`), a
   free blend of central bank publications, updated once per working day. Always labelled
   "mid-market reference rates, published {date}" with the source; never "live", never a
