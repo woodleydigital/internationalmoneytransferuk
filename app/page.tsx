@@ -30,7 +30,7 @@ export async function generateMetadata({
   const filtered = isFiltered(parseFilters(await searchParams));
   return {
     title: {
-      absolute: `International money transfer providers: A–Z directory | ${SITE.name}`,
+      absolute: `${SITE.name}: A–Z directory of money transfer providers`,
     },
     description: DESCRIPTION,
     alternates: { canonical: "/" },
