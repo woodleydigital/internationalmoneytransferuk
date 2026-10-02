@@ -114,11 +114,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img
                 src="/brand/logo-imt-uk.svg"
                 alt={SITE.name}
-                width={506}
+                width={272}
                 height={56}
-                className="h-auto w-full max-w-[22rem] sm:w-auto sm:max-w-none sm:h-11"
+                className="h-12 w-auto sm:h-14"
               />
-              <span className="mt-1.5 block text-sm text-muted sm:pl-[3.55rem]">
+              <span className="mt-2 block text-sm text-muted">
                 Independent directory of UK money transfer providers
               </span>
             </Link>
@@ -195,9 +195,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img
                 src="/brand/logo-imt-uk-reversed.svg"
                 alt={SITE.name}
-                width={506}
+                width={272}
                 height={56}
-                className="h-9 w-auto max-w-full"
+                className="h-11 w-auto max-w-full"
               />
               <p className="mt-4 max-w-3xl">
                 {`${SITE.name} is an independent, privately run website. It is not a government body and is not affiliated with or endorsed by the Financial Conduct Authority, Companies House or the Financial Ombudsman Service. We are not a bank, a broker or a payment provider, and nothing on this site is financial advice. Provider names and logos are trade marks of their owners, shown only to identify each provider; their use does not imply any endorsement or affiliation.`}

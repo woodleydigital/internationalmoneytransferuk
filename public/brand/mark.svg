@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="t">
-  <title id="t">IMT UK</title>
-  <rect width="48" height="48" rx="11" fill="#062626"/>
-  <!-- Upper bar: the mid-market reference, at full length. -->
-  <rect x="10" y="15.5" width="28" height="5" rx="2.5" fill="#F0F7F7"/>
-  <!-- Lower bar: what the customer actually receives... -->
-  <rect x="10" y="27.5" width="19" height="5" rx="2.5" fill="#6FA8A9"/>
-  <!-- ...and the margin that made up the difference. -->
-  <rect x="30" y="27.5" width="8" height="5" rx="2.5" fill="#B8811F"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="t"><title id="t">IMTUK</title><rect width="48" height="48" rx="6" fill="#062626"/><path fill="#F0F7F7" transform="translate(18.24 30.84)" d="M0.703 0.0V-2.28Q1.52 -3.249 1.8335 -3.971Q2.147 -4.693 2.147 -5.282Q2.147 -5.8709999999999996 1.9284999999999999 -6.365Q1.71 -6.859 1.4249999999999998 -7.3625Q1.14 -7.866 0.9215 -8.436Q0.703 -9.006 0.703 -9.747Q0.703 -10.963 1.3014999999999999 -11.8845Q1.9 -12.806 3.021 -13.338Q4.1419999999999995 -13.87 5.662 -13.87Q7.22 -13.87 8.3695 -13.328499999999998Q9.519 -12.786999999999999 10.1935 -11.8275Q10.868 -10.868 10.982 -9.613999999999999H8.208Q8.075 -10.621 7.504999999999999 -11.124500000000001Q6.935 -11.628 5.814 -11.628Q4.731 -11.628 4.199 -11.115Q3.667 -10.602 3.667 -9.766Q3.667 -9.234 3.8665 -8.74Q4.066 -8.246 4.3225 -7.7425Q4.579 -7.239 4.778499999999999 -6.688Q4.978 -6.137 4.978 -5.491Q4.978 -4.731 4.5885 -3.8Q4.199 -2.8689999999999998 3.154 -1.691L2.812 -2.432H10.469V0.0ZM0.19 -5.263V-7.694999999999999H9.006V-5.263Z"/><path d="M9.90 18.87A15 15 0 0 1 36.29 15.40" fill="none" stroke="#F0F7F7" stroke-width="3"/><path d="M38.70 18.84L38.87 13.59L33.71 17.20z" fill="#F0F7F7"/><path d="M38.10 29.13A15 15 0 0 1 11.71 32.60" fill="none" stroke="#B8811F" stroke-width="3"/><path d="M9.30 29.16L9.13 34.41L14.29 30.80z" fill="#B8811F"/></svg>
