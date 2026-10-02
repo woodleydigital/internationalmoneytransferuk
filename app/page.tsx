@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { KIND_LABEL, KIND_PLURAL, type ProviderKind } from "@/lib/providers";
 import { SITE } from "@/lib/site";
-import { latest, pageGraph, providerList } from "@/lib/schema";
+import { faqNode, latest, pageGraph, pageId, providerList } from "@/lib/schema";
+import { HOME_FAQ } from "@/lib/faq";
 import {
   applyFilters,
   facetCounts,
@@ -39,6 +40,7 @@ export async function generateMetadata({
 }
 
 const KINDS: ProviderKind[] = ["bank", "transfer", "broker"];
+const LETTERS = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ", "#"];
 
 const KIND_BLURB: Record<ProviderKind, string> = {
   bank: "High-street, digital and private banks and building societies that send money abroad.",
@@ -59,6 +61,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const results = applyFilters(entries, f);
   const counts = facetCounts(entries, f);
   const grouped = f.sort === "az" || f.sort === "za";
+  const letters = new Set(groupByLetter(results).map(([l]) => l));
 
   return (
     <main id="main">
@@ -70,6 +73,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           type: "CollectionPage",
           about: { "@type": "Thing", name: "International money transfer" },
           mainEntity: { "@id": LIST_ID },
+          hasPart: { "@id": `${SITE.url}/#faq` },
           dateModified: latest(entries.flatMap((e) => [e.company?.fetchedAt, e.statement?.fetchedAt])),
           nodes: [
             providerList(
@@ -78,6 +82,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
               "UK international money transfer providers",
               f.sort === "az" ? "Ascending" : f.sort === "za" ? "Descending" : "Unordered",
             ),
+            faqNode(HOME_FAQ, `${SITE.url}/#faq`, pageId("/")),
           ],
         })}
       />
@@ -189,6 +194,22 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
               </label>
             </fieldset>
 
+            {(counts.statuses.length > 1 || f.statuses.length > 0) && (
+              <fieldset className="mt-6">
+                <legend className="text-sm font-bold uppercase tracking-wide text-muted">
+                  Company status
+                </legend>
+                {counts.statuses.map(([st, n]) => (
+                  <label key={st} className="mt-2 flex items-center gap-2">
+                    <input type="checkbox" name="status" value={st} form="filters" defaultChecked={f.statuses.includes(st)} className="h-4 w-4" />
+                    <span className="flex-1">{st}</span>
+                    <span className="text-sm text-muted">{n}</span>
+                  </label>
+                ))}
+                <p className="mt-2 text-xs text-muted">As recorded by Companies House, in its own words.</p>
+              </fieldset>
+            )}
+
             <div className="mt-6">
               <label htmlFor="sort" className="text-sm font-bold uppercase tracking-wide text-muted">
                 Sort by
@@ -243,9 +264,31 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
               </p>
             ) : (
               <form method="get" action="/compare/providers/" className="mt-4">
+                {grouped && (
+                  <nav aria-label="Jump to letter" className="mt-2 border-y border-line py-2">
+                    <ul className="flex flex-wrap gap-0.5">
+                      {LETTERS.map((l) =>
+                        letters.has(l) ? (
+                          <li key={l}>
+                            <a
+                              href={`#letter-${l}`}
+                              className="flex h-8 w-7 items-center justify-center border border-line-strong font-semibold text-ink no-underline hover:bg-brand-50"
+                            >
+                              {l}
+                            </a>
+                          </li>
+                        ) : (
+                          <li key={l} aria-hidden="true" className="flex h-8 w-7 items-center justify-center text-line-strong">
+                            {l}
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </nav>
+                )}
                 {grouped ? (
                   groupByLetter(results).map(([letter, list]) => (
-                    <section key={letter} id={`letter-${letter}`} aria-label={letter} className="mt-6">
+                    <section key={letter} id={`letter-${letter}`} aria-label={letter} className="mt-6 scroll-mt-4">
                       <h3 className="border-b-2 border-ink pb-1 text-xl font-bold text-ink">{letter}</h3>
                       <div className="mt-3 space-y-3">
                         {list.map((e) => (
@@ -286,6 +329,36 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           <p className="mt-3 max-w-prose">
             Listing is free and no provider can pay to appear, to be ranked, or to change what its
             profile says. <Link href="/how-we-get-paid/">How we get paid</Link>.
+          </p>
+        </section>
+
+        <section aria-labelledby="faq" className="mt-14 max-w-3xl">
+          <h2 id="faq" className="text-2xl font-bold tracking-tight text-ink">
+            Questions people ask
+          </h2>
+          <div className="mt-4 divide-y divide-line border-y border-line">
+            {HOME_FAQ.map((item) => (
+              <details key={item.q} className="group py-3">
+                <summary className="cursor-pointer list-none font-semibold text-ink">
+                  <span className="mr-2 inline-block text-brand-600 group-open:rotate-90" aria-hidden="true">
+                    ›
+                  </span>
+                  {item.q}
+                </summary>
+                <p className="mt-2 max-w-prose pl-5">
+                  {item.a}
+                  {item.link && (
+                    <>
+                      {" "}
+                      <Link href={item.link.href}>{item.link.label}</Link>.
+                    </>
+                  )}
+                </p>
+              </details>
+            ))}
+          </div>
+          <p className="mt-4 text-sm">
+            New to the terms? <Link href="/glossary/">See the glossary</Link>.
           </p>
         </section>
       </div>

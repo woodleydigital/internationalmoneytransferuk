@@ -1,19 +1,20 @@
 import Link from "next/link";
 import type { CompanyRecord } from "@/lib/companies-house";
 import { longDate, PRIVACY_NOTICE_COMPLETE } from "@/lib/site";
+import { SourceLine, Term } from "@/components/Page";
 
 /** Values from Companies House, copied as returned, with the date and source beside them. */
 export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
   const c = record.company!;
-  const rows: [string, React.ReactNode][] = [
+  const rows: [React.ReactNode, React.ReactNode][] = [
     ["Registered name", c.name],
-    ["Company number", c.number],
-    ["Company status", c.status ?? "Not stated"],
+    [<Term key="t" slug="company-number">Company number</Term>, c.number],
+    [<Term key="t" slug="company-status">Company status</Term>, c.status ?? "Not stated"],
     ["Incorporated", c.incorporated ? longDate(c.incorporated) : "Not stated"],
-    ["Registered office", c.registeredOffice || "Not stated"],
-    ["SIC codes", c.sicCodes.join(", ") || "None filed"],
+    [<Term key="t" slug="registered-office">Registered office</Term>, c.registeredOffice || "Not stated"],
+    [<Term key="t" slug="sic-code">SIC codes</Term>, c.sicCodes.join(", ") || "None filed"],
     [
-      "Latest accounts made up to",
+      <Term key="t" slug="annual-accounts">Latest accounts made up to</Term>,
       c.lastAccountsMadeUpTo ? longDate(c.lastAccountsMadeUpTo) : "None filed",
     ],
     ["Next accounts due", c.accountsNextDue ? longDate(c.accountsNextDue) : "Not stated"],
@@ -29,23 +30,27 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
       <h2 id="companies-house" className="text-2xl font-bold tracking-tight text-ink">
         Companies House record
       </h2>
-      <p className="mt-2 text-sm text-muted">
-        {`Fetched ${longDate(record.fetchedAt.slice(0, 10))} from Companies House. `}
-        <a href={c.url} rel="noopener">
-          View this company on Companies House
-        </a>
-        .
-      </p>
+      <SourceLine
+        source={
+          <a href={c.url} rel="noopener">
+            Companies House
+          </a>
+        }
+        fetchedAt={record.fetchedAt}
+        note="values copied as returned"
+      />
       <dl className="mt-4 divide-y divide-line border-y border-line">
-        {rows.map(([k, v]) => (
-          <div key={k} className="grid gap-1 py-2 sm:grid-cols-[16rem_1fr]">
+        {rows.map(([k, v], i) => (
+          <div key={i} className="grid gap-1 py-2 sm:grid-cols-[16rem_1fr]">
             <dt className="font-semibold text-ink">{k}</dt>
             <dd>{v}</dd>
           </div>
         ))}
       </dl>
 
-      <h3 className="mt-6 font-semibold text-ink">Persons with significant control</h3>
+      <h3 className="mt-6 font-semibold text-ink">
+        <Term slug="psc">Persons with significant control</Term>
+      </h3>
       {hiddenPeople > 0 && (
         <p className="mt-2 text-sm">
           {`${hiddenPeople} ${hiddenPeople === 1 ? "individual is" : "individuals are"} listed at Companies House. We do not show individuals' names yet; see the company's `}

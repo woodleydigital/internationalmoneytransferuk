@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { KIND_LABEL, providerUrl, type ProviderKind } from "@/lib/providers";
-import { monogram, type Entry } from "@/lib/directory";
+import { checkedAt, monogram, type Entry } from "@/lib/directory";
+import { longDate } from "@/lib/site";
 import { loadLogo } from "@/lib/logo-records";
 
 const TILE: Record<ProviderKind, string> = {
@@ -59,6 +60,7 @@ const year = (d?: string) => (d ? d.slice(0, 4) : "");
 export function ProviderCard({ entry, compareName }: { entry: Entry; compareName?: string }) {
   const { provider: p, company, statement, statedFrns } = entry;
   const c = company?.company;
+  const checked = checkedAt(entry);
   return (
     <article className="flex flex-col gap-4 border border-line bg-white p-4 sm:flex-row sm:items-start sm:p-5">
       <Monogram name={p.name} kind={p.kind} slug={p.slug} />
@@ -92,6 +94,9 @@ export function ProviderCard({ entry, compareName }: { entry: Entry; compareName
             <dd className="font-semibold text-ink">{statement ? "Published on its website" : "Not found"}</dd>
           </div>
         </dl>
+        <p className="mt-3 text-xs text-muted">
+          {checked ? `Records checked ${longDate(checked.slice(0, 10))}` : "No public record fetched yet"}
+        </p>
       </div>
 
       <div className="flex shrink-0 flex-row items-center gap-4 sm:flex-col sm:items-end">
@@ -116,14 +121,24 @@ export function DirectoryStats({ entries }: { entries: Entry[] }) {
     ["With a Companies House record", entries.filter((e) => e.company?.company).length],
     ["With a published regulatory statement", entries.filter((e) => e.statement).length],
   ];
+  const last = entries.map(checkedAt).filter((d): d is string => Boolean(d)).sort().pop();
   return (
-    <dl className="grid grid-cols-3 gap-4 sm:max-w-2xl">
-      {stats.map(([k, v]) => (
-        <div key={k} className="border-l-4 border-accent-500 pl-3">
-          <dd className="text-3xl font-bold text-ink">{v}</dd>
-          <dt className="text-sm text-muted">{k}</dt>
-        </div>
-      ))}
-    </dl>
+    <div>
+      <dl className="grid grid-cols-3 gap-4 sm:max-w-2xl">
+        {stats.map(([k, v]) => (
+          <div key={k} className="border-l-4 border-accent-500 pl-3">
+            <dd className="text-3xl font-bold text-ink">{v}</dd>
+            <dt className="text-sm text-muted">{k}</dt>
+          </div>
+        ))}
+      </dl>
+      <p className="mt-4 text-sm text-muted">
+        {last ? `Last updated ${longDate(last.slice(0, 10))}. ` : ""}
+        {"Records are refreshed automatically every week. "}
+        <Link href="/status/" className="link">
+          Data status
+        </Link>
+      </p>
+    </div>
   );
 }

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { pageGraph, type Crumb, type PageSchema } from "@/lib/schema";
+import { glossaryUrl } from "@/lib/glossary";
+import { longDate } from "@/lib/site";
 
 export type { Crumb };
 
@@ -132,5 +134,40 @@ export function Callout({ title, children }: { title: string; children: React.Re
       <p className="font-semibold text-ink">{title}</p>
       <div className="mt-1 max-w-prose">{children}</div>
     </aside>
+  );
+}
+
+/**
+ * The standard attribution line under every data block: where the data came
+ * from, when we fetched it, and how we collect it.
+ */
+export function SourceLine({
+  source,
+  fetchedAt,
+  note,
+}: {
+  source: React.ReactNode;
+  /** ISO timestamp of the fetch. */
+  fetchedAt: string;
+  note?: React.ReactNode;
+}) {
+  return (
+    <p className="mt-2 text-sm text-muted">
+      <span className="font-semibold text-body">Source:</span> {source}
+      {" · "}
+      <span>{`Fetched ${longDate(fetchedAt.slice(0, 10))}`}</span>
+      {note && <>{" · "}{note}</>}
+      {" · "}
+      <Link href="/methodology/">How we collect this</Link>
+    </p>
+  );
+}
+
+/** A term linked to its plain-English definition in the glossary. */
+export function Term({ slug, children }: { slug: string; children: React.ReactNode }) {
+  return (
+    <Link href={glossaryUrl(slug)} className="text-inherit underline decoration-dotted underline-offset-4">
+      {children}
+    </Link>
   );
 }

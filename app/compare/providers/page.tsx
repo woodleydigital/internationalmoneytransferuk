@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { KIND_LABEL, PROVIDERS, providerUrl } from "@/lib/providers";
 import { loadEntries } from "@/lib/directory-data";
-import type { Entry } from "@/lib/directory";
+import { checkedAt, type Entry } from "@/lib/directory";
 import { longDate } from "@/lib/site";
 import { registerSearchUrl } from "@/lib/fca";
 import { P, PageFrame } from "@/components/Page";
@@ -78,6 +78,14 @@ const ROWS: Row[] = [
             </span>
           ))
         : "—",
+  },
+  {
+    label: "Records last checked",
+    source: "IMTUK",
+    value: (e) => {
+      const d = checkedAt(e);
+      return d ? longDate(d.slice(0, 10)) : "—";
+    },
   },
   {
     label: "Regulatory statement",

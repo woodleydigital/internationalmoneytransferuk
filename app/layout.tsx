@@ -59,6 +59,8 @@ const FOOTER: { heading: string; links: { href: string; label: string }[] }[] = 
   {
     heading: "Help",
     links: [
+      { href: "/glossary/", label: "Glossary" },
+      { href: "/status/", label: "Data status" },
       { href: "/corrections/", label: "Report an error" },
       { href: "/for-providers/", label: "For providers" },
       { href: "/privacy/", label: "Privacy notice" },

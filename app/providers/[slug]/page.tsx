@@ -14,12 +14,12 @@ import {
 import { registerSearchUrl } from "@/lib/fca";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
-import { H2, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame, Term } from "@/components/Page";
 import { latest, providerId, providerNode } from "@/lib/schema";
 import { loadLogo } from "@/lib/logo-records";
 import { KindBadge, Monogram } from "@/components/Directory";
 import { loadEntries } from "@/lib/directory-data";
-import { similar } from "@/lib/directory";
+import { checkedAt, similar } from "@/lib/directory";
 import { longDate } from "@/lib/site";
 
 type Params = Promise<{ slug: string }>;
@@ -55,6 +55,7 @@ export default async function Page({ params }: { params: Params }) {
   const entry = entries.find((e) => e.provider.slug === p.slug)!;
   const { company, statement, statedFrns } = entry;
   const logo = loadLogo(p.slug);
+  const checked = checkedAt(entry);
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
@@ -121,16 +122,14 @@ export default async function Page({ params }: { params: Params }) {
                 </div>
               )}
               <div>
-                <dt className="text-muted">FCA number, as stated by the provider</dt>
+                <dt className="text-muted">
+                  <Term slug="frn">FCA number</Term>, as stated by the provider
+                </dt>
                 <dd className="font-semibold text-ink">{statedFrns.length ? statedFrns.join(", ") : "—"}</dd>
               </div>
               <div>
-                <dt className="text-muted">Last fetched</dt>
-                <dd className="font-semibold text-ink">
-                  {[company?.fetchedAt, statement?.fetchedAt].filter(Boolean).sort().pop()?.slice(0, 10)
-                    ? longDate([company?.fetchedAt, statement?.fetchedAt].filter(Boolean).sort().pop()!.slice(0, 10))
-                    : "—"}
-                </dd>
+                <dt className="text-muted">Records last checked</dt>
+                <dd className="font-semibold text-ink">{checked ? longDate(checked.slice(0, 10)) : "—"}</dd>
               </div>
             </dl>
           </section>

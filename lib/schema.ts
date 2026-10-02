@@ -117,6 +117,7 @@ export interface PageSchema {
   /** WebPage subtype: AboutPage, ProfilePage, CollectionPage, ContactPage… */
   type?: string;
   mainEntity?: object;
+  hasPart?: object;
   about?: object;
   /** ISO date the page's data last changed (only when we genuinely know it). */
   dateModified?: string;
@@ -142,6 +143,7 @@ export function pageGraph(s: PageSchema, trail?: Crumb[]) {
     publisher: ref(ID.organization),
     ...(trail ? { breadcrumb: ref(`${url}#breadcrumb`) } : {}),
     ...(s.mainEntity ? { mainEntity: s.mainEntity } : {}),
+    ...(s.hasPart ? { hasPart: s.hasPart } : {}),
     ...(s.about ? { about: s.about } : {}),
     ...(s.datePublished ? { datePublished: s.datePublished } : {}),
     ...(s.dateModified ? { dateModified: s.dateModified } : {}),
@@ -216,6 +218,24 @@ export function providerList(
       position: i + 1,
       url: abs(providerUrl(e.provider)),
       name: e.provider.name,
+    })),
+  };
+}
+
+/**
+ * The questions answered visibly on a page, as an FAQPage that is part of that
+ * page (the page keeps its own type and main entity).
+ */
+export function faqNode(items: { q: string; a: string }[], id: string, partOf: string) {
+  return {
+    "@type": "FAQPage",
+    "@id": id,
+    inLanguage: LANG,
+    isPartOf: ref(partOf),
+    mainEntity: items.map((i) => ({
+      "@type": "Question",
+      name: i.q,
+      acceptedAnswer: { "@type": "Answer", text: i.a },
     })),
   };
 }

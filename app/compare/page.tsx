@@ -3,7 +3,7 @@ import Link from "next/link";
 import { computeMargin, type FeeTreatment, type MarginResult } from "@/lib/margin";
 import { getMidRate, CORRIDOR_CURRENCIES, isSupportedCurrency } from "@/lib/rates";
 import { money, percent, rate as fmtRate, longDate, ID } from "@/lib/site";
-import { PageFrame } from "@/components/Page";
+import { PageFrame, Term } from "@/components/Page";
 import { abs, LANG } from "@/lib/schema";
 
 const TITLE = "Compare the cost of an international money transfer";
@@ -124,8 +124,10 @@ export default async function Page({
         </h2>
 
         <p className="max-w-prose text-base">
-          Enter what you were quoted. This shows the margin built into the exchange rate,
-          separately from any fee — the cost most providers never itemise.
+          Enter what you were quoted. This shows the{" "}
+          <Term slug="exchange-rate-margin">margin built into the exchange rate</Term>, separately
+          from any fee — the cost most providers never itemise. It is measured against the{" "}
+          <Term slug="mid-market-rate">mid-market rate</Term>.
         </p>
 
         {mid ? (

@@ -34,6 +34,8 @@ export interface Filters {
   kinds: ProviderKind[];
   hasCompany: boolean;
   hasStatement: boolean;
+  /** Company statuses, in Companies House's own wording (e.g. "active"). */
+  statuses: string[];
   sort: Sort;
 }
 
@@ -51,12 +53,13 @@ export function parseFilters(params: Params): Filters {
     kinds: all(params.kind).filter((k): k is ProviderKind => KINDS.includes(k as ProviderKind)),
     hasCompany: first(params.company) === "1",
     hasStatement: first(params.statement) === "1",
+    statuses: all(params.status).map((x) => x.toLowerCase().replace(/[^a-z-]/g, "")).filter(Boolean).slice(0, 10),
     sort: SORTS.includes(sort) ? sort : "az",
   };
 }
 
 export function isFiltered(f: Filters): boolean {
-  return Boolean(f.q || f.kinds.length || f.hasCompany || f.hasStatement || f.sort !== "az");
+  return Boolean(f.q || f.kinds.length || f.hasCompany || f.hasStatement || f.statuses.length || f.sort !== "az");
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -74,7 +77,8 @@ export function applyFilters(entries: Entry[], f: Filters, ignore?: keyof Filter
       (ignore === "q" || matchesQuery(e, f.q)) &&
       (ignore === "kinds" || !f.kinds.length || f.kinds.includes(e.provider.kind)) &&
       (ignore === "hasCompany" || !f.hasCompany || Boolean(e.company?.company)) &&
-      (ignore === "hasStatement" || !f.hasStatement || Boolean(e.statement)),
+      (ignore === "hasStatement" || !f.hasStatement || Boolean(e.statement)) &&
+      (ignore === "statuses" || !f.statuses.length || f.statuses.includes(e.company?.company?.status ?? "")),
   );
   const byName = (a: Entry, b: Entry) =>
     a.provider.name.localeCompare(b.provider.name, "en-GB", { sensitivity: "base" });
@@ -97,6 +101,22 @@ export function applyFilters(entries: Entry[], f: Filters, ignore?: keyof Filter
   }
 }
 
+/** Counts of each non-empty key, sorted by key. */
+function countBy(entries: Entry[], key: (e: Entry) => string | undefined): [string, number][] {
+  const m = new Map<string, number>();
+  for (const e of entries) {
+    const k = key(e);
+    if (k) m.set(k, (m.get(k) ?? 0) + 1);
+  }
+  return [...m.entries()].sort(([a], [b]) => a.localeCompare(b));
+}
+
+/** When we last fetched any public record for this provider (ISO), if ever. */
+export function checkedAt(e: Entry): string | undefined {
+  const d = [e.company?.fetchedAt, e.statement?.fetchedAt].filter((x): x is string => Boolean(x)).sort();
+  return d[d.length - 1];
+}
+
 /** How many entries each facet option would show, given the other filters. */
 export function facetCounts(entries: Entry[], f: Filters) {
   const kindBase = applyFilters(entries, f, "kinds");
@@ -104,6 +124,7 @@ export function facetCounts(entries: Entry[], f: Filters) {
     kinds: Object.fromEntries(KINDS.map((k) => [k, kindBase.filter((e) => e.provider.kind === k).length])) as Record<ProviderKind, number>,
     hasCompany: applyFilters(entries, f, "hasCompany").filter((e) => e.company?.company).length,
     hasStatement: applyFilters(entries, f, "hasStatement").filter((e) => e.statement).length,
+    statuses: countBy(applyFilters(entries, f, "statuses"), (e) => e.company?.company?.status),
   };
 }
 

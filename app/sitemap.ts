@@ -20,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/for-providers/",
     "/privacy/",
     "/entitymap.html",
+    "/glossary/",
+    "/status/",
   ];
   const profiles = PROVIDERS.filter(isIndexable).map(providerUrl);
   return [...pages, ...profiles].map((path) => ({ url: `${SITE.url}${path}` }));
