@@ -6,7 +6,7 @@ import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 export const metadata: Metadata = {
   title: "Privacy notice",
   description:
-    "What personal data International Money Transfer UK publishes from public registers, why, and how to object.",
+    "What personal data IMTUK publishes from public registers, why, and how to object.",
   alternates: { canonical: "/privacy/" },
 };
 

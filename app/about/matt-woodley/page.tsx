@@ -8,7 +8,7 @@ const p = MATT_WOODLEY;
 
 export const metadata: Metadata = {
   title: `${p.name} — ${p.jobTitle}`,
-  description: `${p.name} is ${p.jobTitle} and owner of ${SITE.name}.`,
+  description: `${p.name} is ${p.jobTitle} and owner of ${SITE.alternateName}.`,
   alternates: { canonical: `/about/${p.slug}/` },
 };
 

@@ -5,7 +5,7 @@ import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 export const metadata: Metadata = {
   title: "Methodology: how the directory is built",
   description:
-    "How the IMT UK directory is compiled automatically from the FCA Register, Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.",
+    "How the IMTUK directory is compiled automatically from the FCA Register, Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.",
   alternates: { canonical: "/methodology/" },
 };
 
@@ -30,7 +30,7 @@ export default function Page() {
 
       <H2>Built by software, not by reviewers</H2>
       <P>
-        Nobody at IMT UK tests providers, makes transfers, or reviews profiles by hand. We
+        Nobody at IMTUK tests providers, makes transfers, or reviews profiles by hand. We
         say this plainly because it shapes what the site can and cannot tell you: it reports
         what the public record and a provider’s own website say, and nothing else. It does not
         rate, rank or recommend providers.

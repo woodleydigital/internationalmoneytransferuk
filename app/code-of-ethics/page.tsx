@@ -4,7 +4,7 @@ import { JsonLd, P, PageFrame, webPage } from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Code of ethics",
-  description: "The editorial standards International Money Transfer UK works to.",
+  description: "The editorial standards IMTUK works to.",
   alternates: { canonical: "/code-of-ethics/" },
 };
 

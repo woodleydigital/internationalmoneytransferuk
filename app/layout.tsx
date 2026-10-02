@@ -13,8 +13,9 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "International money transfer providers: A–Z directory",
-    template: `%s | ${SITE.name}`,
+    default: `Page not found | ${SITE.alternateName}`,
+    // Only the homepage title carries the full name; every other page uses IMTUK.
+    template: `%s | ${SITE.alternateName}`,
   },
   description:
     "A directory of UK international money transfer providers, built from the FCA Register, Companies House and Financial Ombudsman data.",
@@ -66,7 +67,7 @@ const FOOTER: { heading: string; links: { href: string; label: string }[] }[] = 
   {
     heading: "About us",
     links: [
-      { href: "/about/", label: "About IMT UK" },
+      { href: "/about/", label: "About IMTUK" },
       { href: "/methodology/", label: "Methodology" },
       { href: "/how-we-get-paid/", label: "How we get paid" },
       { href: "/code-of-ethics/", label: "Code of ethics" },

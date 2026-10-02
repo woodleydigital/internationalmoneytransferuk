@@ -26,7 +26,7 @@ export async function generateMetadata({
       absolute: `International money transfer providers: A–Z directory | ${SITE.name}`,
     },
     description:
-      "A searchable A–Z directory of UK international money transfer providers, with every regulatory fact taken directly from the FCA Register and Companies House.",
+      "A searchable A–Z directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.",
     alternates: { canonical: "/" },
     robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
   };

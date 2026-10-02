@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const p = getProvider((await params).slug);
   if (!p) return {};
   return {
-    title: `${p.name} international money transfer: FCA and company profile`,
-    description: `${p.name}'s regulatory profile: FCA Register status and permissions, Companies House record, and complaints data, each with the date it was last verified.`,
+    title: `${p.name}: company and regulatory profile`,
+    description: `${p.name}'s company and regulatory profile: its Companies House record and its own published regulatory statement, each shown with the date it was fetched.`,
     alternates: { canonical: providerUrl(p) },
     // Unverified profiles exist as entities but are noindex until verified.
     robots: isIndexable(p) ? { index: true, follow: true } : { index: false, follow: true },

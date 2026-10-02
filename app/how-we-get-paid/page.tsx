@@ -5,7 +5,7 @@ import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 export const metadata: Metadata = {
   title: "How we get paid",
   description:
-    "How International Money Transfer UK makes money, and the rules that stop that from affecting what the directory says.",
+    "How IMTUK makes money, and the rules that stop that from affecting what the directory says.",
   alternates: { canonical: "/how-we-get-paid/" },
 };
 

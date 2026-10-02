@@ -6,7 +6,7 @@ import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
 export const metadata: Metadata = {
   title: "For providers: claim or correct your profile",
   description:
-    "How money transfer providers can correct their profile in the IMT UK directory. Listing is free and cannot be paid for.",
+    "How money transfer providers can correct their profile in the IMTUK directory. Listing is free and cannot be paid for.",
   alternates: { canonical: "/for-providers/" },
 };
 

@@ -10,7 +10,8 @@
 
 export const SITE = {
   name: "International Money Transfer UK",
-  alternateName: "IMT UK",
+  /** Short brand used in page titles and copy everywhere except the homepage title. */
+  alternateName: "IMTUK",
   url: "https://internationalmoneytransfer.uk",
   address: {
     streetAddress: "Harley House, 29 Cambray Pl",
