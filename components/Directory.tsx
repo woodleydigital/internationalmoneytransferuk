@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { KIND_LABEL, providerUrl, type ProviderKind } from "@/lib/providers";
 import { monogram, type Entry } from "@/lib/directory";
+import { loadLogo } from "@/lib/logo-records";
 
 const TILE: Record<ProviderKind, string> = {
   bank: "bg-brand-700 text-white",
@@ -8,9 +9,32 @@ const TILE: Record<ProviderKind, string> = {
   broker: "bg-ink text-white",
 };
 
-/** Initials tile used in place of logos, which we have no right to reproduce. */
-export function Monogram({ name, kind, size = "md" }: { name: string; kind: ProviderKind; size?: "md" | "lg" }) {
+/**
+ * The provider's logo, as published on its own website, or an initials tile
+ * when we have none. Logos are trade marks of their owners, shown only to
+ * identify each provider.
+ */
+export function Monogram({
+  name,
+  kind,
+  slug,
+  size = "md",
+}: {
+  name: string;
+  kind: ProviderKind;
+  slug?: string;
+  size?: "md" | "lg";
+}) {
   const dim = size === "lg" ? "h-16 w-16 text-xl" : "h-12 w-12 text-base";
+  const logo = slug ? loadLogo(slug) : null;
+  if (logo) {
+    return (
+      <span className={`flex shrink-0 items-center justify-center border border-line bg-white p-1 ${dim}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logo.file} alt={`${name} logo`} className="max-h-full max-w-full object-contain" loading="lazy" />
+      </span>
+    );
+  }
   return (
     <span
       aria-hidden="true"
@@ -37,7 +61,7 @@ export function ProviderCard({ entry, compareName }: { entry: Entry; compareName
   const c = company?.company;
   return (
     <article className="flex flex-col gap-4 border border-line bg-white p-4 sm:flex-row sm:items-start sm:p-5">
-      <Monogram name={p.name} kind={p.kind} />
+      <Monogram name={p.name} kind={p.kind} slug={p.slug} />
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <h3 className="text-lg font-bold">

@@ -32,6 +32,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Read provider regulatory statements
         run: npm run import:disclosures
+      - name: Refresh provider logos
+        run: npm run import:logos
       - name: Import Companies House
         env:
           COMPANIES_HOUSE_API_KEY: ${{ secrets.COMPANIES_HOUSE_API_KEY }}
@@ -40,7 +42,7 @@ jobs:
         run: |
           git config user.name "imt-uk-data-bot"
           git config user.email "imt-uk-data-bot@users.noreply.github.com"
-          git add data/disclosures data/companies-house
+          git add data/disclosures data/companies-house data/logos.json public/logos
           if git diff --cached --quiet; then
             echo "No changes."
           else

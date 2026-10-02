@@ -59,6 +59,11 @@ export default function Page() {
           statement gives a company number, that is how we find the company at Companies House.
         </li>
         <li>
+          <strong className="text-ink">Logos.</strong> The icon each provider’s own website
+          publishes, saved by software and refreshed weekly. Logos are trade marks of their
+          owners and are shown only to identify each provider.
+        </li>
+        <li>
           <strong className="text-ink">The provider’s own website and terms.</strong> Countries
           served, payout methods, fees, limits, ID requirements and how customer money is
           safeguarded.

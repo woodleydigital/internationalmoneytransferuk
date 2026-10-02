@@ -28,6 +28,13 @@ export default function Page() {
         wording and it will be checked against that page.
       </P>
 
+      <H2>Your logo</H2>
+      <P>
+        We show the logo your own website publishes as its icon, only to identify you in the
+        directory. If you would rather we did not, write to us and we will replace it with your
+        initials.
+      </P>
+
       <H2>Contact</H2>
       <address className="mt-3 not-italic">
         {SITE.name}

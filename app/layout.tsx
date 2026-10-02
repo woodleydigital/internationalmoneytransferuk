@@ -200,7 +200,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className="h-9 w-auto max-w-full"
               />
               <p className="mt-4 max-w-3xl">
-                {`${SITE.name} is an independent, privately run website. It is not a government body and is not affiliated with or endorsed by the Financial Conduct Authority, Companies House or the Financial Ombudsman Service. We are not a bank, a broker or a payment provider, and nothing on this site is financial advice.`}
+                {`${SITE.name} is an independent, privately run website. It is not a government body and is not affiliated with or endorsed by the Financial Conduct Authority, Companies House or the Financial Ombudsman Service. We are not a bank, a broker or a payment provider, and nothing on this site is financial advice. Provider names and logos are trade marks of their owners, shown only to identify each provider; their use does not imply any endorsement or affiliation.`}
               </p>
             </div>
           </div>

@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <PageFrame
       trail={[{ name: "Directory", href: "/" }, { name: p.name }]}
-      icon={<Monogram name={p.name} kind={p.kind} size="lg" />}
+      icon={<Monogram name={p.name} kind={p.kind} slug={p.slug} size="lg" />}
       title={<>{p.name} international money transfer profile</>}
       meta={
         <>
@@ -161,7 +161,7 @@ export default async function Page({ params }: { params: Params }) {
               <ul className="mt-2 space-y-2">
                 {others.map((o) => (
                   <li key={o.provider.slug} className="flex items-center gap-3">
-                    <Monogram name={o.provider.name} kind={o.provider.kind} />
+                    <Monogram name={o.provider.name} kind={o.provider.kind} slug={o.provider.slug} />
                     <Link href={providerUrl(o.provider)} className="font-semibold">
                       {o.provider.name}
                     </Link>

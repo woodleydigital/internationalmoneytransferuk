@@ -108,11 +108,15 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   Source Sans 3, the IMT UK palette in `app/globals.css`. Every page uses `PageFrame`.
 - Directory features borrowed from Capterra/Clutch, minus anything that ranks: category
   browsing (`kind`: bank / transfer / broker, assigned from how each provider describes
-  itself), faceted filters with counts, provider cards with monogram tiles (never logos),
+  itself), faceted filters with counts, provider cards with logos (or monogram tiles where there is none),
   side-by-side comparison at `/compare/providers/` (facts only, each row names its source),
   profile pages with a key-facts panel, "On this page" and similar providers. Sorts are
   alphabetical or by a recorded date only. **No stars, reviews, "top"/"best"/"leader"
   badges, scores or paid placement.** Filtered views are `noindex`.
+- Logos: `scripts/import-logos.ts` saves the icon each provider's own site publishes to
+  `public/logos/{slug}.*` (permanent per-slug URLs), weekly; tiny or wrong icons are rejected
+  (`REJECTED`). Shown only to identify; the footer notes trade marks; removal on request via
+  `/for-providers/`.
 - It may look like a public-interest body; it must **never** pass for an official one.
   No crowns, crests or coats of arms, no GOV.UK or FCA styling, fonts or colours, no
   "official" wording. Keep the "Not a government website, and not part of the FCA"

@@ -1,0 +1,252 @@
+{
+  "hsbc": {
+    "file": "/logos/hsbc.png",
+    "source": "https://www.hsbc.co.uk/etc.clientlibs/dpws/clientlibs-public/clientlib-site/resources/favicons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:51:55.803Z"
+  },
+  "virgin-money": {
+    "file": "/logos/virgin-money.ico",
+    "source": "https://uk.virginmoney.com/assets/favicons/vm/favicon.ico",
+    "fetchedAt": "2026-10-02T01:51:59.368Z"
+  },
+  "paypal": {
+    "file": "/logos/paypal.png",
+    "source": "https://www.paypalobjects.com/marketing/web/icons/monogram/pp258.png",
+    "fetchedAt": "2026-10-02T01:52:01.062Z"
+  },
+  "barclays": {
+    "file": "/logos/barclays.png",
+    "source": "https://www.barclays.co.uk/content/dam/icons/favicons/barclays/apple-touch-icon-180x180.png",
+    "fetchedAt": "2026-10-02T01:52:01.847Z"
+  },
+  "co-op-bank": {
+    "file": "/logos/co-op-bank.png",
+    "source": "https://www.co-operativebank.co.uk/application/themes/co-operativebank/img/favicon.ico",
+    "fetchedAt": "2026-10-02T01:52:03.872Z"
+  },
+  "western-union": {
+    "file": "/logos/western-union.ico",
+    "source": "https://www.westernunion.com/content/dam/wu/logo/favicon-48x48.ico",
+    "fetchedAt": "2026-10-02T01:52:05.335Z"
+  },
+  "tsb": {
+    "file": "/logos/tsb.ico",
+    "source": "https://www.tsb.co.uk/etc.clientlibs/tsb-public/clientlibs/clientlib-site/resources/apple-touch-icon-180x180.png",
+    "fetchedAt": "2026-10-02T01:52:07.988Z"
+  },
+  "moneygram": {
+    "file": "/logos/moneygram.svg",
+    "source": "https://www.moneygram.com/assets/favicon.svg",
+    "fetchedAt": "2026-10-02T01:52:08.984Z"
+  },
+  "ofx": {
+    "file": "/logos/ofx.png",
+    "source": "https://www.ofx.com/wp-content/uploads/2024/12/favicon.png",
+    "fetchedAt": "2026-10-02T01:52:09.891Z"
+  },
+  "santander": {
+    "file": "/logos/santander.ico",
+    "source": "https://www.santander.co.uk/favicon.ico",
+    "fetchedAt": "2026-10-02T01:52:12.100Z"
+  },
+  "wise": {
+    "file": "/logos/wise.png",
+    "source": "https://wise.com/public-resources/assets/icons/wise-personal/apple_touch_icon.png",
+    "fetchedAt": "2026-10-02T01:52:13.788Z"
+  },
+  "natwest": {
+    "file": "/logos/natwest.png",
+    "source": "https://www.natwest.com/content/dam/championlogos/nw-champ-smartbanner.png",
+    "fetchedAt": "2026-10-02T01:52:14.875Z"
+  },
+  "skrill": {
+    "file": "/logos/skrill.png",
+    "source": "https://www.skrill.com/typo3conf/ext/sitepackage/Resources/Public/images/icons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:52:16.851Z"
+  },
+  "monzo": {
+    "file": "/logos/monzo.png",
+    "source": "https://monzo.com/images/icons/icon-x1024.png",
+    "fetchedAt": "2026-10-02T01:52:18.071Z"
+  },
+  "revolut": {
+    "file": "/logos/revolut.png",
+    "source": "https://assets.revolut.com/assets/favicons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:52:20.702Z"
+  },
+  "bank-of-ireland-uk": {
+    "file": "/logos/bank-of-ireland-uk.png",
+    "source": "https://boi-public-assets.s3-eu-west-1.amazonaws.com/images/icons/apple-touch-icon-180x180.png",
+    "fetchedAt": "2026-10-02T01:52:23.790Z"
+  },
+  "mukuru": {
+    "file": "/logos/mukuru.png",
+    "source": "https://www.mukuru.com/wp-content/uploads/2023/08/mukuru_logo@2x.png",
+    "fetchedAt": "2026-10-02T01:52:30.005Z"
+  },
+  "nationwide": {
+    "file": "/logos/nationwide.png",
+    "source": "https://www.nationwide.co.uk/_next/static/images/apple-touch-icon-152x152-4252f8a5a352803fb56a9346b7763060.png",
+    "fetchedAt": "2026-10-02T01:52:30.867Z"
+  },
+  "remitly": {
+    "file": "/logos/remitly.png",
+    "source": "https://media.remitly.io/apple_touch_icon.bD56TI2smTyVsGd5.png",
+    "fetchedAt": "2026-10-02T01:52:32.054Z"
+  },
+  "xoom-paypal": {
+    "file": "/logos/xoom-paypal.png",
+    "source": "https://www.paypalobjects.com/marketing/web/icons/monogram/pp258.png",
+    "fetchedAt": "2026-10-02T01:52:34.057Z"
+  },
+  "first-direct": {
+    "file": "/logos/first-direct.png",
+    "source": "https://www.firstdirect.com/etc.clientlibs/hsbc/fsdt/clientlibs/clientlib-site/resources/favicons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:52:35.418Z"
+  },
+  "instarem": {
+    "file": "/logos/instarem.png",
+    "source": "https://www.instarem.com/wp-content/uploads/2022/12/favicon-32x32-1.png",
+    "fetchedAt": "2026-10-02T01:52:36.778Z"
+  },
+  "lemfi": {
+    "file": "/logos/lemfi.png",
+    "source": "https://lemfi.com/favicon.png",
+    "fetchedAt": "2026-10-02T01:52:38.490Z"
+  },
+  "metro-bank": {
+    "file": "/logos/metro-bank.png",
+    "source": "https://www.metrobankonline.co.uk/static/images/apple-icon-180x180.png",
+    "fetchedAt": "2026-10-02T01:52:39.598Z"
+  },
+  "ria": {
+    "file": "/logos/ria.png",
+    "source": "https://www.riamoneytransfer.com/apple-icon.png?7ca76dc9cdd08944",
+    "fetchedAt": "2026-10-02T01:52:40.782Z"
+  },
+  "sendwave": {
+    "file": "/logos/sendwave.png",
+    "source": "https://www.sendwave.com/web-cms-sw-assets/next-assets/icons/icon-256x256.png",
+    "fetchedAt": "2026-10-02T01:52:41.939Z"
+  },
+  "tesco-bank": {
+    "file": "/logos/tesco-bank.png",
+    "source": "https://www.tescobank.com/favicons/apple-icon-180x180.png",
+    "fetchedAt": "2026-10-02T01:52:43.271Z"
+  },
+  "worldremit": {
+    "file": "/logos/worldremit.png",
+    "source": "https://www.worldremit.com/web-cms-assets/next-assets/icons/icon-512x512.png",
+    "fetchedAt": "2026-10-02T01:52:44.338Z"
+  },
+  "xe": {
+    "file": "/logos/xe.png",
+    "source": "https://www.xe.com/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:52:45.176Z"
+  },
+  "torfx": {
+    "file": "/logos/torfx.png",
+    "source": "https://www.torfx.com/favicon.ico",
+    "fetchedAt": "2026-10-02T01:52:47.848Z"
+  },
+  "currencies-direct": {
+    "file": "/logos/currencies-direct.ico",
+    "source": "https://www.currenciesdirect.com/favicon.ico",
+    "fetchedAt": "2026-10-02T01:52:51.777Z"
+  },
+  "moneycorp": {
+    "file": "/logos/moneycorp.ico",
+    "source": "https://www.moneycorp.com/favicon.ico?favicon.0pv19-jjwezvu.ico",
+    "fetchedAt": "2026-10-02T01:52:53.266Z"
+  },
+  "clear-currency": {
+    "file": "/logos/clear-currency.png",
+    "source": "https://www.clearcurrency.co.uk/favicon.png",
+    "fetchedAt": "2026-10-02T01:52:57.139Z"
+  },
+  "cambridge-currencies": {
+    "file": "/logos/cambridge-currencies.png",
+    "source": "https://i0.wp.com/cambridgecurrencies.com/wp-content/uploads/2024/07/CC-Icon-Only-no-BG.png?fit=180%2C180&#038;ssl=1",
+    "fetchedAt": "2026-10-02T01:52:58.350Z"
+  },
+  "smart-currency-exchange": {
+    "file": "/logos/smart-currency-exchange.png",
+    "source": "https://www.smartcurrencyexchange.com/favicon.ico",
+    "fetchedAt": "2026-10-02T01:54:00.941Z"
+  },
+  "equals-money": {
+    "file": "/logos/equals-money.png",
+    "source": "https://equalsmoney.com/apple-icon.png?apple-icon.06nx_uhzkhyzb.png",
+    "fetchedAt": "2026-10-02T01:55:03.717Z"
+  },
+  "currency-solutions": {
+    "file": "/logos/currency-solutions.png",
+    "source": "https://www.currencysolutions.com/favicons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:55:05.394Z"
+  },
+  "transfergo": {
+    "file": "/logos/transfergo.png",
+    "source": "https://www.transfergo.com/wp-content/uploads/2023/07/cropped-Favicon_512x512.png?resize=300,300",
+    "fetchedAt": "2026-10-02T01:55:06.205Z"
+  },
+  "paysend": {
+    "file": "/logos/paysend.svg",
+    "source": "https://paysend-design.vercel.app/favicon.svg",
+    "fetchedAt": "2026-10-02T01:55:07.842Z"
+  },
+  "taptap-send": {
+    "file": "/logos/taptap-send.png",
+    "source": "https://cdn.prod.website-files.com/5ae897b18423ad8b62ceba7c/5af08aa0eaeb742d74a920d8_256w.png",
+    "fetchedAt": "2026-10-02T01:55:08.978Z"
+  },
+  "starling-bank": {
+    "file": "/logos/starling-bank.png",
+    "source": "https://www.starlingbank.com/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:55:11.256Z"
+  },
+  "chase-uk": {
+    "file": "/logos/chase-uk.png",
+    "source": "https://www.chase.co.uk/gb/en/apple-icon.png?96b93b8910318692",
+    "fetchedAt": "2026-10-02T01:55:12.939Z"
+  },
+  "royal-bank-of-scotland": {
+    "file": "/logos/royal-bank-of-scotland.png",
+    "source": "https://www.rbs.co.uk/content/dam/championlogos/rbs-ub-champ-smartbanner.png",
+    "fetchedAt": "2026-10-02T01:55:14.146Z"
+  },
+  "ulster-bank": {
+    "file": "/logos/ulster-bank.png",
+    "source": "https://www.ulsterbank.co.uk/content/dam/championlogos/rbs-ub-champ-smartbanner.png",
+    "fetchedAt": "2026-10-02T01:55:17.388Z"
+  },
+  "ms-bank": {
+    "file": "/logos/ms-bank.png",
+    "source": "https://bank.marksandspencer.com/etc.clientlibs/dpws/clientlibs-public/clientlib-marksandspencer/resources/favicons/apple-touch-icon.png",
+    "fetchedAt": "2026-10-02T01:55:18.961Z"
+  },
+  "caxton": {
+    "file": "/logos/caxton.png",
+    "source": "https://caxton.io/hubfs/Caxton%20Logo%20-%20Individual%20Letters%20-%20C.png",
+    "fetchedAt": "2026-10-02T01:55:20.013Z"
+  },
+  "pure-fx": {
+    "file": "/logos/pure-fx.png",
+    "source": "https://www.purefx.co.uk/wp-content/themes/purefx/images/favicon.png",
+    "fetchedAt": "2026-10-02T01:56:43.784Z"
+  },
+  "handelsbanken": {
+    "file": "/logos/handelsbanken.png",
+    "source": "https://www.handelsbanken.co.uk/sv/sepu//180x180.png",
+    "fetchedAt": "2026-10-02T01:56:50.173Z"
+  },
+  "coutts": {
+    "file": "/logos/coutts.ico",
+    "source": "https://www.coutts.com/apps/settings/wcm/designs/responsive_coutts/clientlibs/resources/favicon.ico",
+    "fetchedAt": "2026-10-02T01:56:51.237Z"
+  },
+  "halifax": {
+    "file": "/logos/halifax.png",
+    "source": "inline image on https://www.halifax.co.uk/",
+    "fetchedAt": "2026-10-02T01:57:19.846Z"
+  }
+}

@@ -134,7 +134,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
                 {cols.map((e) => (
                   <th key={e.provider.slug} scope="col" className="border-b-2 border-ink px-3 py-3 align-bottom">
                     <div className="flex items-center gap-3">
-                      <Monogram name={e.provider.name} kind={e.provider.kind} />
+                      <Monogram name={e.provider.name} kind={e.provider.kind} slug={e.provider.slug} />
                       <Link href={providerUrl(e.provider)} className="text-base font-bold text-ink">
                         {e.provider.name}
                       </Link>
