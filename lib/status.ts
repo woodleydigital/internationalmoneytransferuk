@@ -51,10 +51,11 @@ export const OUTCOME: Record<string, string> = {
   listed: "In published data",
   "not-listed": "Below publication threshold",
   "no-company": "No company identified",
+  "saved-extras": "Collected",
 };
 
 export interface Pipeline {
-  key: "companies-house" | "disclosures" | "services" | "fos" | "logos";
+  key: "companies-house" | "extras" | "disclosures" | "services" | "fos" | "logos";
   name: string;
   what: string;
   lastRun?: string;
@@ -76,6 +77,8 @@ export function pipelines(now = new Date()): Pipeline[] {
   const ds = readDir("disclosures");
   const sv = readDir("services");
   const fo = readDir("fos");
+  const ex = readDir("company-extras");
+  for (const r of ex.values()) r.status = "saved-extras";
   const lg = readLogos();
   const make = (key: Pipeline["key"], name: string, what: string, records: Map<string, Raw>): Pipeline => {
     const rs = [...records.values()];
@@ -91,6 +94,7 @@ export function pipelines(now = new Date()): Pipeline[] {
   };
   return [
     make("companies-house", "Companies House records", "Looks up the company behind each provider and copies its public record.", ch),
+    make("extras", "Ownership, accounts and filings", "Follows each matched company's corporate owners, filing history, charges and machine-readable accounts at Companies House.", ex),
     make("disclosures", "Provider statements", "Reads each provider’s own website for what it says about its regulation, quoted word for word.", ds),
     make("services", "Service details", "Reads each provider’s own website for what it says about countries, payout methods, speed, fees, limits and safeguarding, quoted word for word.", sv),
     make("fos", "Ombudsman complaints", "Matches each provider’s registered company to the Financial Ombudsman Service’s half-yearly complaints data.", fo),

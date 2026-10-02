@@ -16,6 +16,9 @@ import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
 import { ServiceQuotesBlock } from "@/components/ServiceQuotesBlock";
 import { FosBlock } from "@/components/FosBlock";
+import { CompanyExtrasBlock } from "@/components/CompanyExtrasBlock";
+import { ChangesBlock } from "@/components/ChangesBlock";
+import { loadChanges, loadCompanyExtras } from "@/lib/extras-records";
 import { loadFosRecord } from "@/lib/fos-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
 import { providerId, providerNode } from "@/lib/schema";
@@ -64,6 +67,8 @@ export default async function Page({ params }: { params: Params }) {
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
   const service = entry.service;
   const fos = loadFosRecord(p.slug);
+  const extras = loadCompanyExtras(p.slug, c?.number);
+  const changes = loadChanges(p.slug);
   const sharedWith = c
     ? entries
         .filter((e) => e.provider.slug !== p.slug && e.company?.company?.number === c.number)
@@ -78,14 +83,17 @@ export default async function Page({ params }: { params: Params }) {
   };
   const FOS_FIELD = "Complaint volumes and uphold rate (where published)";
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
-    (Boolean(c) && f.source.startsWith("Companies House") && !f.field.startsWith("Revenue")) ||
+    (Boolean(c) && f.source === "Companies House") ||
     (f.field in SERVICE_FIELDS && hasTopic(...SERVICE_FIELDS[f.field])) ||
-    (f.field === FOS_FIELD && Boolean(fos));
+    (f.field === FOS_FIELD && Boolean(fos)) ||
+    (f.field.startsWith("Revenue") && Boolean(extras?.accounts?.figures.length));
   const sections: [string, string][] = [
     ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
     ...(service ? ([["service", "What it says about its service"]] as [string, string][]) : []),
     ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
+    ...(extras ? ([["company-more", "Ownership, accounts and filings"]] as [string, string][]) : []),
     ...(fos ? ([["complaints", "Ombudsman complaints"]] as [string, string][]) : []),
+    ...(changes.length ? ([["changes", "Changes we have recorded"]] as [string, string][]) : []),
     ["coverage", "Data coverage"],
     ["about-profile", "About this profile"],
   ];
@@ -240,7 +248,9 @@ export default async function Page({ params }: { params: Params }) {
         </div>
       )}
       {company && <CompaniesHouseBlock record={company} />}
+      {extras && <CompanyExtrasBlock name={p.name} extras={extras} />}
       {fos && <FosBlock name={p.name} record={fos} sharedWith={sharedWith} />}
+      {changes.length > 0 && <ChangesBlock changes={changes} />}
 
       <section aria-labelledby="coverage" className="mt-10">
         <H2 id="coverage">Data coverage</H2>

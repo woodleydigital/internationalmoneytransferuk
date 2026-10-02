@@ -68,6 +68,20 @@ export default function Page() {
           statement gives a company number, that is how we find the company at Companies House.
         </li>
         <li>
+          <strong className="text-ink">Ownership, accounts and filings.</strong> For each matched
+          company: its corporate owners, followed up the chain only while there is a single owner
+          registered at Companies House; previous names; registered charges; recent filings; and
+          headline figures (turnover, profit or loss, net assets, cash, average employees) read
+          from the latest accounts when they were filed in tagged, machine-readable form. Figures
+          are copied as filed, for the latest period in the accounts, and never estimated.
+          Individuals are not shown.
+        </li>
+        <li>
+          <strong className="text-ink">Change log.</strong> Each week software compares every
+          record with the previous week’s and logs what changed on the profile, such as a new
+          registered office, new accounts or new wording on the provider’s website.
+        </li>
+        <li>
           <strong className="text-ink">What providers say about their service.</strong> Software
           reads each provider’s homepage and up to six of its own pages about fees, limits,
           safeguarding and payout methods, and keeps whole sentences on six topics (where it sends
