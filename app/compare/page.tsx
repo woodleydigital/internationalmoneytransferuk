@@ -4,7 +4,9 @@ import { computeMargin, type FeeTreatment, type MarginResult } from "@/lib/margi
 import { getMidRate, CORRIDOR_CURRENCIES, isSupportedCurrency } from "@/lib/rates";
 import { money, percent, rate as fmtRate, longDate, ID } from "@/lib/site";
 import { PageFrame, Term } from "@/components/Page";
-import { abs, LANG } from "@/lib/schema";
+import { abs, LANG, rateDatasetNode } from "@/lib/schema";
+import { getRateTable } from "@/lib/rate-table";
+import { RateTableBlock } from "@/components/Rates";
 
 const TITLE = "Compare the cost of an international money transfer";
 const DESCRIPTION =
@@ -98,6 +100,8 @@ export default async function Page({
         })
       : null;
 
+  const table = await getRateTable();
+
   return (
     <PageFrame
       trail={[{ name: "Compare" }]}
@@ -107,7 +111,7 @@ export default async function Page({
         name: TITLE,
         description: DESCRIPTION,
         mainEntity: { "@id": ID.marginChecker },
-        nodes: [checkerSchema],
+        nodes: [checkerSchema, ...(table ? [rateDatasetNode(table, "/compare/")] : [])],
       }}
     >
       <p className="mt-6 border-l-4 border-brand-600 bg-brand-50 p-4">
@@ -214,6 +218,8 @@ export default async function Page({
           </p>
         )}
       </section>
+
+      <RateTableBlock table={table} />
 
       <section aria-labelledby="why" className="mt-14 border-t border-line pt-8">
         <h2 id="why" className="text-xl font-semibold text-ink">

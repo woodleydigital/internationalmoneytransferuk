@@ -67,6 +67,13 @@ export default function Page() {
           owners and are shown only to identify each provider.
         </li>
         <li>
+          <strong className="text-ink">Reference exchange rates.</strong> Daily mid-market rates
+          against the pound from the Frankfurter API, which blends central bank publications. A
+          currency is shown only when at least three central banks contribute, and the table is
+          withdrawn if the latest publication is more than five days old. They are reference
+          rates, not rates any provider offers.
+        </li>
+        <li>
           <strong className="text-ink">The provider’s own website and terms.</strong> Countries
           served, payout methods, fees, limits, ID requirements and how customer money is
           safeguarded.

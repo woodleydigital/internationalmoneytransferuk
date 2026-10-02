@@ -15,6 +15,8 @@ import {
 import { loadEntries } from "@/lib/directory-data";
 import { JsonLd } from "@/components/Page";
 import { DirectoryStats, ProviderCard } from "@/components/Directory";
+import { RateStrip } from "@/components/Rates";
+import { getRateTable } from "@/lib/rate-table";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -61,6 +63,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const results = applyFilters(entries, f);
   const counts = facetCounts(entries, f);
   const grouped = f.sort === "az" || f.sort === "za";
+  const rates = await getRateTable();
   const letters = new Set(groupByLetter(results).map(([l]) => l));
 
   return (
@@ -130,6 +133,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           </div>
         </div>
       </div>
+
+      <RateStrip table={rates} />
 
       <div className="prose-links mx-auto max-w-6xl px-5 pb-12">
         {!isFiltered(f) && (

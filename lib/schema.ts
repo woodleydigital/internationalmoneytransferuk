@@ -239,3 +239,22 @@ export function faqNode(items: { q: string; a: string }[], id: string, partOf: s
     })),
   };
 }
+
+/** The daily reference-rate table, as a Dataset that names its source and date. */
+export function rateDatasetNode(table: { date: string; rows: { code: string }[] }, path: string) {
+  return {
+    "@type": "Dataset",
+    "@id": `${abs(path)}#reference-rates`,
+    name: "Mid-market reference rates against the pound",
+    description: `Daily mid-market reference rates for the British pound against ${table.rows.length} currencies, blended from central bank publications by the Frankfurter API, with 7-day and 30-day changes. Reference rates only: not rates any provider offers.`,
+    url: `${abs(path)}#rates`,
+    inLanguage: LANG,
+    temporalCoverage: table.date,
+    dateModified: table.date,
+    variableMeasured: table.rows.map((r) => `GBP/${r.code} exchange rate`),
+    isAccessibleForFree: true,
+    publisher: ref(ID.organization),
+    isBasedOn: "https://frankfurter.dev/",
+    creditText: "Frankfurter (frankfurter.dev), blending central bank reference rates",
+  };
+}

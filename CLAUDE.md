@@ -83,6 +83,13 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   (exactly one active). Pages whose footer is drawn by JavaScript are read in headless
   Chromium (installed in the workflow). Building societies have no Companies House record.
   Plain pattern matching — no AI.
+- **Reference exchange rates:** Frankfurter API (`lib/rate-table.ts`, `lib/rates.ts`), a
+  free blend of central bank publications, updated once per working day. Always labelled
+  "mid-market reference rates, published {date}" with the source; never "live", never a
+  rate a provider offers, never beside a provider's name. Shown on `/compare/#rates` (GBP
+  table, 7/30-day change, `Dataset` markup) and as one line on the homepage. A currency
+  needs ≥3 contributing central banks; the table is withdrawn if the latest publication is
+  over 5 days old or the API fails. No currency-pair or corridor pages (CBUK owns those).
 - **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
   must not be used "to provide a data feed to any comparison table or any other website
   without our written permission", and the Register API is "designed for individual

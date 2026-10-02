@@ -145,17 +145,19 @@ export function SourceLine({
   source,
   fetchedAt,
   note,
+  dateLabel = "Fetched",
 }: {
   source: React.ReactNode;
-  /** ISO timestamp of the fetch. */
+  /** ISO timestamp of the fetch (or publication, with dateLabel). */
   fetchedAt: string;
   note?: React.ReactNode;
+  dateLabel?: string;
 }) {
   return (
     <p className="mt-2 text-sm text-muted">
       <span className="font-semibold text-body">Source:</span> {source}
       {" · "}
-      <span>{`Fetched ${longDate(fetchedAt.slice(0, 10))}`}</span>
+      <span>{`${dateLabel} ${longDate(fetchedAt.slice(0, 10))}`}</span>
       {note && <>{" · "}{note}</>}
       {" · "}
       <Link href="/methodology/">How we collect this</Link>
