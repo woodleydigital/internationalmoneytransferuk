@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { P, PageFrame } from "@/components/Page";
+
+const TITLE = "Code of ethics";
+const DESCRIPTION =
+  "The editorial standards IMTUK works to.";
 
 export const metadata: Metadata = {
-  title: "Code of ethics",
-  description: "The editorial standards IMTUK works to.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/code-of-ethics/" },
 };
 
@@ -21,9 +25,9 @@ const RULES: [string, string][] = [
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "Code of ethics" }]} title={<>Code of ethics</>}>
-      <JsonLd data={webPage("/code-of-ethics/", "Code of ethics")} />
-      <ol className="mt-6 max-w-prose list-decimal space-y-3 pl-5">
+    <PageFrame
+      schema={{ path: "/code-of-ethics/", name: TITLE, description: DESCRIPTION }} trail={[{ name: "Code of ethics" }]} title={<>Code of ethics</>}>
+            <ol className="mt-6 max-w-prose list-decimal space-y-3 pl-5">
         {RULES.map(([title, body]) => (
           <li key={title}>
             <strong className="text-ink">{title}</strong> {body}

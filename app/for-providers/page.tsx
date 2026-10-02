@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const TITLE = "For providers: claim or correct your profile";
+const DESCRIPTION =
+  "How money transfer providers can correct their profile in the IMTUK directory. Listing is free and cannot be paid for.";
 
 export const metadata: Metadata = {
-  title: "For providers: claim or correct your profile",
-  description:
-    "How money transfer providers can correct their profile in the IMTUK directory. Listing is free and cannot be paid for.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/for-providers/" },
 };
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "For providers" }]} title={<>For providers: claim or correct your profile</>} lead={<>Listing is free, and every provider we can verify is listed. You cannot pay to be
+    <PageFrame
+      schema={{ path: "/for-providers/", name: TITLE, description: DESCRIPTION }} trail={[{ name: "For providers" }]} title={<>For providers: claim or correct your profile</>} lead={<>Listing is free, and every provider we can verify is listed. You cannot pay to be
         listed, to be ranked, or to change what your profile says.</>}>
-      <JsonLd data={webPage("/for-providers/", "For providers")} />
-
+      
       <H2>What you can change</H2>
       <P>
         Regulatory and company facts come directly from the FCA Register and Companies House.

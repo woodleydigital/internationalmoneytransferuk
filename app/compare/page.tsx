@@ -3,17 +3,27 @@ import Link from "next/link";
 import { computeMargin, type FeeTreatment, type MarginResult } from "@/lib/margin";
 import { getMidRate, CORRIDOR_CURRENCIES, isSupportedCurrency } from "@/lib/rates";
 import { money, percent, rate as fmtRate, longDate, ID } from "@/lib/site";
-import { JsonLd, PageFrame } from "@/components/Page";
+import { PageFrame } from "@/components/Page";
+import { abs, LANG } from "@/lib/schema";
 
+const TITLE = "Compare the cost of an international money transfer";
+const DESCRIPTION =
+  "Enter what a provider quoted you and see the total cost of the transfer against the mid-market reference rate, split into the stated fee and the exchange rate margin.";
+
+/** The calculator itself, as the page's main entity. */
 const checkerSchema = {
-  "@context": "https://schema.org",
   "@type": "WebApplication",
   "@id": ID.marginChecker,
   name: "FX Margin Checker",
+  url: abs("/compare/"),
   applicationCategory: "FinanceApplication",
+  operatingSystem: "Any",
+  browserRequirements: "Requires a web browser.",
   description:
     "Compares a quoted international transfer against the mid-market reference rate and shows the exchange rate margin applied.",
   isAccessibleForFree: true,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
+  inLanguage: LANG,
   publisher: { "@id": ID.organization },
 };
 
@@ -50,9 +60,8 @@ export async function generateMetadata({
   const params = await searchParams;
   const hasQuery = Object.keys(params).length > 0;
   return {
-    title: "Compare the cost of an international money transfer",
-    description:
-      "Enter what a provider quoted you and see the total cost of the transfer against the mid-market reference rate, split into the stated fee and the exchange rate margin.",
+    title: TITLE,
+    description: DESCRIPTION,
     alternates: { canonical: "/compare/" },
     robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -90,8 +99,17 @@ export default async function Page({
       : null;
 
   return (
-    <PageFrame trail={[{ name: "Compare" }]} title={<>Compare the cost of an international money transfer</>}>
-      <JsonLd data={checkerSchema} />
+    <PageFrame
+      trail={[{ name: "Compare" }]}
+      title={<>{TITLE}</>}
+      schema={{
+        path: "/compare/",
+        name: TITLE,
+        description: DESCRIPTION,
+        mainEntity: { "@id": ID.marginChecker },
+        nodes: [checkerSchema],
+      }}
+    >
       <p className="mt-6 border-l-4 border-brand-600 bg-brand-50 p-4">
         {"Looking to compare the providers themselves? "}
         <Link href="/compare/providers/" className="font-semibold">

@@ -2,30 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MATT_WOODLEY, personUrl } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
-import { H2, JsonLd, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const DESCRIPTION = "Who runs IMTUK, how the directory is built, and who owns it.";
 
 export const metadata: Metadata = {
   title: "About us",
-  description:
-    "Who runs IMTUK, how the directory is built, and who owns it.",
+  description: DESCRIPTION,
   alternates: { canonical: "/about/" },
 };
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "About" }]} title={<>About {SITE.name}</>} lead={<>{`${SITE.name} (${SITE.alternateName}) is a directory of the firms that send money abroad from the UK, built from the public record.`}</>}>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          "@id": `${SITE.url}/about/#page`,
-          url: `${SITE.url}/about/`,
-          name: `About ${SITE.name}`,
-          mainEntity: { "@id": ID.organization },
-          isPartOf: { "@id": ID.website },
-        }}
-      />
-
+    <PageFrame
+      schema={{
+        path: "/about/",
+        name: `About ${SITE.name}`,
+        description: DESCRIPTION,
+        type: "AboutPage",
+        mainEntity: { "@id": ID.organization },
+      }}
+      trail={[{ name: "About" }]} title={<>About {SITE.name}</>} lead={<>{`${SITE.name} (${SITE.alternateName}) is a directory of the firms that send money abroad from the UK, built from the public record.`}</>}>
       <H2>What we do</H2>
       <P>
         {"For each provider we collect what the FCA Register, Companies House and the Financial Ombudsman Service say about it, and show when each fact was last checked. "}

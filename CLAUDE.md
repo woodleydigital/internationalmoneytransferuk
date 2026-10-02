@@ -122,6 +122,21 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   "official" wording. Keep the "Not a government website, and not part of the FCA"
   strip and the footer disclaimer on every page.
 
+## Structured data (schema.org)
+- All JSON-LD is built in `lib/schema.ts`. The root layout emits the site graph
+  (`Organization` with logo, founder and policy links, `WebSite` with `SearchAction`); every
+  page passes `schema` to `PageFrame`, which emits one connected graph: the `WebPage` (or
+  `ProfilePage`, `AboutPage`, `CollectionPage`), its `BreadcrumbList` built from the same
+  trail as the visible breadcrumb, and any main-entity nodes. Stable `@id`s; absolute,
+  trailing-slash URLs; `inLanguage: en-GB`; description = the meta description.
+- Provider profiles: `ProfilePage` whose `mainEntity` is the provider `Organization`.
+  Companies House facts (legal name, company number, incorporation date, registered office,
+  CH page in `sameAs`) appear only when the strict match passed and the record is fresh.
+  FCA numbers a provider states about itself are never asserted.
+- Never mark up ratings, reviews, rankings, `dateModified` we do not genuinely know, or
+  anything the page does not visibly show. The 404 carries no structured data.
+  `lib/schema.test.ts` checks that every `@id` reference resolves.
+
 ## Editorial
 - British English, plain English, data-driven claims, no jargon without explanation.
 - No named authors or reviewers (see "Fully automated"); methodology and affiliate

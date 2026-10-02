@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const TITLE = "Corrections";
+const DESCRIPTION =
+  "How to report an error in the directory, and the public log of corrections we have made.";
 
 export const metadata: Metadata = {
-  title: "Corrections",
-  description: "How to report an error in the directory, and the public log of corrections we have made.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/corrections/" },
 };
 
@@ -13,9 +17,9 @@ const LOG: { date: string; page: string; change: string }[] = [];
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "Corrections" }]} title={<>Corrections</>}>
-      <JsonLd data={webPage("/corrections/", "Corrections")} />
-
+    <PageFrame
+      schema={{ path: "/corrections/", name: TITLE, description: DESCRIPTION }} trail={[{ name: "Corrections" }]} title={<>Corrections</>}>
+      
       <H2>Report an error</H2>
       <P>
         Tell us the page, what is wrong, and where the correct information can be found. Each

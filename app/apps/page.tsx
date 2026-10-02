@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { H2, JsonLd, NotYetPublished, P, PageFrame, webPage } from "@/components/Page";
+import { H2, NotYetPublished, P, PageFrame } from "@/components/Page";
 
 // Stays out of the index until provider data has been collected.
+const TITLE = "International money transfer apps";
+const DESCRIPTION =
+  "Money transfer apps available in the UK: which countries each sends to, how recipients are paid, and the fees and limits each app publishes.";
+
 export const metadata: Metadata = {
-  title: "International money transfer apps",
-  description:
-    "Money transfer apps available in the UK: which countries each sends to, how recipients are paid, and the fees and limits each app publishes.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/apps/" },
   robots: { index: false, follow: true },
 };
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "Apps" }]} title={<>International money transfer apps</>}>
-      <JsonLd data={webPage("/apps/", "International money transfer apps")} />
-      <NotYetPublished>
+    <PageFrame
+      schema={{ path: "/apps/", name: TITLE, description: DESCRIPTION }} trail={[{ name: "Apps" }]} title={<>International money transfer apps</>}>
+            <NotYetPublished>
         This page will list money transfer apps with the countries each one sends to, how
         recipients can be paid, and the fees and limits each app publishes — every detail
         quoted from the provider’s own website with a link. That data has not been collected

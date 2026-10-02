@@ -1,35 +1,27 @@
 import Link from "next/link";
-import { SITE, ID } from "@/lib/site";
+import { pageGraph, type Crumb, type PageSchema } from "@/lib/schema";
 
-export interface Crumb {
-  name: string;
-  href?: string;
-}
+export type { Crumb };
 
 /** Static JSON-LD in the initial HTML, describing only what the page renders. */
 export function JsonLd({ data }: { data: object }) {
+  // Escape "<" so a value can never close the script element.
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+    />
   );
 }
 
-/** Visible breadcrumb plus its BreadcrumbList, so the two can never disagree. */
+/**
+ * Visible breadcrumb. Its BreadcrumbList is built from the same trail by
+ * PageFrame's page graph, so the two can never disagree.
+ */
 export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
   const all: Crumb[] = [{ name: "Home", href: "/" }, ...trail];
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: all.map((c, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            name: c.name,
-            ...(c.href ? { item: `${SITE.url}${c.href}` } : {}),
-          })),
-        }}
-      />
       <nav aria-label="Breadcrumb" className="text-sm">
         <ol className="flex flex-wrap items-center gap-x-2">
           {all.map((c, i) => (
@@ -50,19 +42,6 @@ export function Breadcrumbs({ trail }: { trail: Crumb[] }) {
   );
 }
 
-/** A WebPage node tied to the site graph. */
-export function webPage(path: string, name: string, type = "WebPage") {
-  return {
-    "@context": "https://schema.org",
-    "@type": type,
-    "@id": `${SITE.url}${path}#page`,
-    url: `${SITE.url}${path}`,
-    name,
-    isPartOf: { "@id": ID.website },
-    publisher: { "@id": ID.organization },
-  };
-}
-
 /**
  * Standard page frame: a tinted header band carrying the breadcrumb, H1 and
  * lead, then the content column. Every inner page uses it so the site reads as
@@ -75,9 +54,15 @@ export function PageFrame({
   icon,
   meta,
   aside,
+  schema,
   children,
 }: {
   trail: Crumb[];
+  /**
+   * The page's structured data: one graph with WebPage, BreadcrumbList and any
+   * further nodes. Omitted only on pages that should carry none (the 404).
+   */
+  schema?: PageSchema;
   title: React.ReactNode;
   lead?: React.ReactNode;
   /** Shown before the title, e.g. a provider's monogram. */
@@ -90,6 +75,7 @@ export function PageFrame({
 }) {
   return (
     <main id="main">
+      {schema && <JsonLd data={pageGraph(schema, trail)} />}
       <div className="border-b border-line bg-wash">
         <div className="mx-auto max-w-6xl px-5 pb-8 pt-5">
           <Breadcrumbs trail={trail} />

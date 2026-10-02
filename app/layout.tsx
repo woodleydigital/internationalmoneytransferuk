@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Source_Sans_3 } from "next/font/google";
-import { SITE, ID } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import { siteGraph } from "@/lib/schema";
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -18,33 +19,15 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.alternateName}`,
   },
   description:
-    "A directory of UK international money transfer providers, built from the FCA Register, Companies House and Financial Ombudsman data.",
-  icons: { icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }] },
+    "A directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.",
+  icons: {
+    icon: [{ url: "/brand/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/brand/logo-512.png", sizes: "512x512", type: "image/png" }],
+  },
 };
 
-/** Site-wide entity graph: static, and describing only what the pages render. */
-const graph = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": ID.organization,
-      name: SITE.name,
-      alternateName: SITE.alternateName,
-      url: SITE.url,
-      address: { "@type": "PostalAddress", ...SITE.address },
-      // Permanent URL: search engines associate it with the entity over time.
-      logo: `${SITE.url}/brand/logo-imt-uk.svg`,
-    },
-    {
-      "@type": "WebSite",
-      "@id": ID.website,
-      url: SITE.url,
-      name: SITE.name,
-      publisher: { "@id": ID.organization },
-    },
-  ],
-};
+/** Site-wide entity graph: the publisher and the website, referenced by every page graph. */
+const graph = siteGraph();
 
 const NAV = [
   { href: "/", label: "Provider directory" },
@@ -91,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="entitymap" type="application/json" href={`${SITE.url}/entitymap.json`} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }}
         />
       </head>
       <body className="bg-white font-sans text-[1.0625rem] leading-relaxed text-body antialiased">

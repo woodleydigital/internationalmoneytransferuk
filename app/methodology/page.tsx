@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const TITLE = "Methodology: how the directory is built";
+const DESCRIPTION =
+  "How the IMTUK directory is compiled automatically from the FCA Register, Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.";
 
 export const metadata: Metadata = {
-  title: "Methodology: how the directory is built",
-  description:
-    "How the IMTUK directory is compiled automatically from the FCA Register, Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/methodology/" },
 };
 
 export default function Page() {
   return (
     <PageFrame
+      schema={{ path: "/methodology/", name: TITLE, description: DESCRIPTION }}
       trail={[{ name: "Methodology" }]}
       title={<>Methodology: how the directory is built</>}
       lead={
@@ -21,8 +25,7 @@ export default function Page() {
         </>
       }
     >
-      <JsonLd data={webPage("/methodology/", "Methodology")} />
-      <P>
+            <P>
         Our import from the FCA Register and Companies House is being set up. Until it has run
         for a provider, that provider’s profile says “register data pending” and is hidden from
         search engines.

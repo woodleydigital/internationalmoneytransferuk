@@ -10,7 +10,7 @@
  * memberships or profile links until they are supplied and verifiable.
  */
 
-import { SITE, ID } from "./site";
+import { SITE, ID } from "./site.ts";
 
 export interface Credential {
   name: string;

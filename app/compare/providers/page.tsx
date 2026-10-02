@@ -5,7 +5,7 @@ import { loadEntries } from "@/lib/directory-data";
 import type { Entry } from "@/lib/directory";
 import { longDate } from "@/lib/site";
 import { registerSearchUrl } from "@/lib/fca";
-import { JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { P, PageFrame } from "@/components/Page";
 import { Monogram } from "@/components/Directory";
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -17,6 +17,10 @@ const pick = (params: SearchParams): string[] => {
   return [...new Set(slugs)].slice(0, MAX);
 };
 
+const TITLE = "Compare money transfer providers side by side";
+const DESCRIPTION =
+  "Put up to three money transfer providers side by side: the company behind each brand, its Companies House record and its own regulatory statement.";
+
 export async function generateMetadata({
   searchParams,
 }: {
@@ -24,9 +28,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const chosen = pick(await searchParams);
   return {
-    title: "Compare money transfer providers side by side",
-    description:
-      "Put up to three money transfer providers side by side: the company behind each brand, its Companies House record and its own regulatory statement.",
+    title: TITLE,
+    description: DESCRIPTION,
     alternates: { canonical: "/compare/providers/" },
     robots: chosen.length ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -91,12 +94,12 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
 
   return (
     <PageFrame
+      schema={{ path: "/compare/providers/", name: TITLE, description: DESCRIPTION }}
       trail={[{ name: "Compare costs", href: "/compare/" }, { name: "Compare providers" }]}
       title={<>Compare money transfer providers side by side</>}
       lead={<>Choose up to three providers. Every row shows where the fact comes from; nothing here is a rating or a ranking.</>}
     >
-      <JsonLd data={webPage("/compare/providers/", "Compare money transfer providers")} />
-
+      
       <form method="get" action="/compare/providers/" className="mt-6 grid gap-3 border border-line bg-wash p-5 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
         {Array.from({ length: MAX }).map((_, i) => (
           <div key={i}>

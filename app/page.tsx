@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { KIND_LABEL, KIND_PLURAL, type ProviderKind } from "@/lib/providers";
-import { SITE, ID } from "@/lib/site";
+import { SITE } from "@/lib/site";
+import { latest, pageGraph, providerList } from "@/lib/schema";
 import {
   applyFilters,
   facetCounts,
@@ -16,6 +17,10 @@ import { DirectoryStats, ProviderCard } from "@/components/Directory";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
+const DESCRIPTION =
+  "A searchable A–Z directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.";
+const LIST_ID = `${SITE.url}/#providers`;
+
 /** Filtered or searched views are noindex with a canonical to the clean directory. */
 export async function generateMetadata({
   searchParams,
@@ -27,8 +32,7 @@ export async function generateMetadata({
     title: {
       absolute: `International money transfer providers: A–Z directory | ${SITE.name}`,
     },
-    description:
-      "A searchable A–Z directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.",
+    description: DESCRIPTION,
     alternates: { canonical: "/" },
     robots: filtered ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -59,15 +63,23 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   return (
     <main id="main">
       <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "@id": `${SITE.url}/#page`,
-          url: SITE.url,
+        data={pageGraph({
+          path: "/",
           name: "International money transfer providers: A–Z directory",
-          isPartOf: { "@id": ID.website },
-          publisher: { "@id": ID.organization },
-        }}
+          description: DESCRIPTION,
+          type: "CollectionPage",
+          about: { "@type": "Thing", name: "International money transfer" },
+          mainEntity: { "@id": LIST_ID },
+          dateModified: latest(entries.flatMap((e) => [e.company?.fetchedAt, e.statement?.fetchedAt])),
+          nodes: [
+            providerList(
+              results,
+              LIST_ID,
+              "UK international money transfer providers",
+              f.sort === "az" ? "Ascending" : f.sort === "za" ? "Descending" : "Unordered",
+            ),
+          ],
+        })}
       />
       {/* One GET form; its fields sit in the hero and the sidebar via form="filters". */}
       <form id="filters" method="get" action="/" />

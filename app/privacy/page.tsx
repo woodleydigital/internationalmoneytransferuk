@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const TITLE = "Privacy notice";
+const DESCRIPTION =
+  "What personal data IMTUK publishes from public registers, why, and how to object.";
 
 export const metadata: Metadata = {
-  title: "Privacy notice",
-  description:
-    "What personal data IMTUK publishes from public registers, why, and how to object.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/privacy/" },
 };
 
 export default function Page() {
   return (
     <PageFrame
+      schema={{ path: "/privacy/", name: TITLE, description: DESCRIPTION }}
       trail={[{ name: "Privacy notice" }]}
       title={<>Privacy notice</>}
       lead={<>What personal data this site shows, where it comes from, and how to ask us to remove it.</>}
     >
-      <JsonLd data={webPage("/privacy/", "Privacy notice")} />
-
+      
       <H2>Who is responsible</H2>
       <P>
         {`${SITE.name} is responsible for the personal data described here. You can contact us at the address below.`}

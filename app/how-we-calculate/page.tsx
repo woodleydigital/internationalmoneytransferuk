@@ -2,39 +2,51 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageFrame } from "@/components/Page";
 import { SITE, ID } from "@/lib/site";
+import { abs, LANG, pageId } from "@/lib/schema";
 
 const PUBLISHED = "2026-09-02";
 
-const graph = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": `${SITE.url}/how-we-calculate/#article`,
-      headline: "How we calculate the exchange rate margin",
-      datePublished: PUBLISHED,
-      author: { "@id": ID.organization },
-      publisher: { "@id": ID.organization },
-      isPartOf: { "@id": ID.website },
-      mainEntityOfPage: `${SITE.url}/how-we-calculate/`,
-    },
-  ],
+const TITLE = "How we calculate the exchange rate margin";
+const DESCRIPTION =
+  "The formulas, data source and limitations behind the FX margin checker: how total transfer cost is separated into a stated fee and the margin built into the exchange rate.";
+const ARTICLE_ID = `${SITE.url}/how-we-calculate/#article`;
+
+const article = {
+  "@type": "Article",
+  "@id": ARTICLE_ID,
+  headline: TITLE,
+  description: DESCRIPTION,
+  datePublished: PUBLISHED,
+  inLanguage: LANG,
+  // No named author: the site is compiled by software (see /methodology/).
+  author: { "@id": ID.organization },
+  publisher: { "@id": ID.organization },
+  isPartOf: { "@id": ID.website },
+  about: { "@type": "WebApplication", "@id": ID.marginChecker, name: "FX Margin Checker", url: abs("/compare/") },
+  image: abs("/brand/logo-512.png"),
+  mainEntityOfPage: { "@id": pageId("/how-we-calculate/") },
 };
 
 export const metadata: Metadata = {
-  title: "How we calculate the exchange rate margin",
-  description:
-    "The formulas, data source and limitations behind the FX margin checker: how total transfer cost is separated into a stated fee and the margin built into the exchange rate.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/how-we-calculate/" },
 };
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "Compare costs", href: "/compare/" }, { name: "How we calculate this" }]} title={<>How we calculate the exchange rate margin</>}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
-      />
+    <PageFrame
+      trail={[{ name: "Compare costs", href: "/compare/" }, { name: "How we calculate this" }]}
+      title={<>{TITLE}</>}
+      schema={{
+        path: "/how-we-calculate/",
+        name: TITLE,
+        description: DESCRIPTION,
+        datePublished: PUBLISHED,
+        mainEntity: { "@id": ARTICLE_ID },
+        nodes: [article],
+      }}
+    >
 
       <p className="mt-5 max-w-prose">
         The checker compares a transfer you were quoted against a published mid-market

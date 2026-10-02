@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+
+const TITLE = "How we get paid";
+const DESCRIPTION =
+  "How IMTUK makes money, and the rules that stop that from affecting what the directory says.";
 
 export const metadata: Metadata = {
-  title: "How we get paid",
-  description:
-    "How IMTUK makes money, and the rules that stop that from affecting what the directory says.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/how-we-get-paid/" },
 };
 
 export default function Page() {
   return (
-    <PageFrame trail={[{ name: "How we get paid" }]} title={<>How we get paid</>} lead={<>We may earn a commission from a provider when a reader signs up with it through a link
+    <PageFrame
+      schema={{ path: "/how-we-get-paid/", name: TITLE, description: DESCRIPTION }} trail={[{ name: "How we get paid" }]} title={<>How we get paid</>} lead={<>We may earn a commission from a provider when a reader signs up with it through a link
         on this site. Right now, no link on this site earns us anything.</>}>
-      <JsonLd data={webPage("/how-we-get-paid/", "How we get paid")} />
-
+      
       <H2>The rules</H2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
         <li>Listing in the directory is free. Every provider we can verify is listed.</li>

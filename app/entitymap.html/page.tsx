@@ -1,17 +1,44 @@
 import type { Metadata } from "next";
 import { entityMap } from "@/lib/entitymap";
 import { H2, P, PageFrame } from "@/components/Page";
+import { SITE, ID } from "@/lib/site";
+import { abs, LANG } from "@/lib/schema";
+
+const DESCRIPTION = "The entities this site describes, the claims it makes about them, and where each claim appears.";
 
 export const metadata: Metadata = {
   title: "Entity map",
-  description: "The entities this site describes, the claims it makes about them, and where each claim appears.",
+  description: DESCRIPTION,
   alternates: { canonical: "/entitymap.html" },
 };
 
 export default function Page() {
   const map = entityMap();
   return (
-    <PageFrame trail={[{ name: "Entity map" }]} title={<>Entity map</>}>
+    <PageFrame
+      trail={[{ name: "Entity map" }]}
+      title={<>Entity map</>}
+      schema={{
+        path: "/entitymap.html",
+        name: "Entity map",
+        description: DESCRIPTION,
+        // The machine-readable version of this page.
+        nodes: [
+          {
+            "@type": "Dataset",
+            "@id": `${abs("/entitymap.json")}#dataset`,
+            name: `${SITE.name} entity map`,
+            description: DESCRIPTION,
+            url: abs("/entitymap.html"),
+            inLanguage: LANG,
+            creator: { "@id": ID.organization },
+            publisher: { "@id": ID.organization },
+            isAccessibleForFree: true,
+            distribution: { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: abs("/entitymap.json") },
+          },
+        ],
+      }}
+    >
       <P>
         {"A human-readable view of our "}
         <a href="/entitymap.json" className="underline">machine-readable entity map</a>

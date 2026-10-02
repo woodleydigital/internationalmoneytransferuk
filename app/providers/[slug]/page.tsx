@@ -14,7 +14,9 @@ import {
 import { registerSearchUrl } from "@/lib/fca";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
-import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { H2, P, PageFrame } from "@/components/Page";
+import { latest, providerId, providerNode } from "@/lib/schema";
+import { loadLogo } from "@/lib/logo-records";
 import { KindBadge, Monogram } from "@/components/Directory";
 import { loadEntries } from "@/lib/directory-data";
 import { similar } from "@/lib/directory";
@@ -30,12 +32,15 @@ export function generateStaticParams() {
   return PROVIDERS.map((p) => ({ slug: p.slug }));
 }
 
+const describe = (name: string) =>
+  `${name}'s company and regulatory profile: its Companies House record and its own published regulatory statement, each shown with the date it was fetched.`;
+
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const p = getProvider((await params).slug);
   if (!p) return {};
   return {
     title: `${p.name}: company and regulatory profile`,
-    description: `${p.name}'s company and regulatory profile: its Companies House record and its own published regulatory statement, each shown with the date it was fetched.`,
+    description: describe(p.name),
     alternates: { canonical: providerUrl(p) },
     // Unverified profiles exist as entities but are noindex until verified.
     robots: isIndexable(p) ? { index: true, follow: true } : { index: false, follow: true },
@@ -49,6 +54,7 @@ export default async function Page({ params }: { params: Params }) {
   const entries = loadEntries();
   const entry = entries.find((e) => e.provider.slug === p.slug)!;
   const { company, statement, statedFrns } = entry;
+  const logo = loadLogo(p.slug);
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
@@ -63,7 +69,18 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <PageFrame
-      trail={[{ name: "Directory", href: "/" }, { name: p.name }]}
+      schema={{
+        path: providerUrl(p),
+        name: `${p.name}: company and regulatory profile`,
+        description: describe(p.name),
+        type: "ProfilePage",
+        mainEntity: { "@id": providerId(p.slug) },
+        about: { "@id": providerId(p.slug) },
+        dateModified: latest([company?.fetchedAt, statement?.fetchedAt]),
+        ...(logo ? { primaryImage: logo.file } : {}),
+        nodes: [providerNode(entry, logo?.file)],
+      }}
+      trail={[{ name: p.name }]}
       icon={<Monogram name={p.name} kind={p.kind} slug={p.slug} size="lg" />}
       title={<>{p.name}: company and regulatory profile</>}
       meta={
@@ -176,7 +193,6 @@ export default async function Page({ params }: { params: Params }) {
         </div>
       }
     >
-      <JsonLd data={webPage(providerUrl(p), `${p.name} profile`, "ProfilePage")} />
 
       {!verified && (
         <aside className="mt-8 border-l-4 border-line-strong bg-wash p-4 text-sm">

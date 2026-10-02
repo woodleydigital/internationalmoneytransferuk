@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { registerSearchUrl, searchFirms, type FirmSearch } from "@/lib/fca";
-import { SITE } from "@/lib/site";
-import { H2, JsonLd, P, PageFrame } from "@/components/Page";
+import { SITE, ID } from "@/lib/site";
+import { abs, LANG } from "@/lib/schema";
+import { H2, P, PageFrame } from "@/components/Page";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
 const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? "";
+
+const TITLE = "Check a money transfer provider on the FCA Register";
+const DESCRIPTION =
+  "Look up any money transfer firm's status on the FCA Financial Services Register before you send money.";
+const TOOL_ID = `${SITE.url}/check-a-provider/#tool`;
 
 export async function generateMetadata({
   searchParams,
@@ -15,9 +21,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const hasQuery = one((await searchParams).q).trim() !== "";
   return {
-    title: "Check a money transfer provider on the FCA Register",
-    description:
-      "Look up any money transfer firm's status on the FCA Financial Services Register before you send money.",
+    title: TITLE,
+    description: DESCRIPTION,
     alternates: { canonical: "/check-a-provider/" },
     robots: hasQuery ? { index: false, follow: true } : { index: true, follow: true },
   };
@@ -28,20 +33,33 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
   const search: FirmSearch | null = q.length >= 2 ? await searchFirms(q) : null;
 
   return (
-    <PageFrame trail={[{ name: "Check a provider" }]} title={<>Check a money transfer provider on the FCA Register</>}>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebApplication",
-          "@id": `${SITE.url}/check-a-provider/#tool`,
-          name: "FCA provider check",
-          applicationCategory: "FinanceApplication",
-          description: "Looks up a firm's status on the FCA Financial Services Register.",
-          isAccessibleForFree: true,
-          publisher: { "@id": `${SITE.url}/#organization` },
-        }}
-      />
-
+    <PageFrame
+      trail={[{ name: "Check a provider" }]}
+      title={<>{TITLE}</>}
+      schema={{
+        path: "/check-a-provider/",
+        name: TITLE,
+        description: DESCRIPTION,
+        mainEntity: { "@id": TOOL_ID },
+        nodes: [
+          {
+            "@type": "WebApplication",
+            "@id": TOOL_ID,
+            name: "FCA provider check",
+            url: abs("/check-a-provider/"),
+            applicationCategory: "FinanceApplication",
+            operatingSystem: "Any",
+            browserRequirements: "Requires a web browser.",
+            // Accurate while live results are switched off: the tool hands the search to the FCA's own Register.
+            description: "Helps you look up a firm on the FCA Financial Services Register, the FCA's own public record of authorised firms.",
+            isAccessibleForFree: true,
+            offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
+            inLanguage: LANG,
+            publisher: { "@id": ID.organization },
+          },
+        ],
+      }}
+    >
       <section aria-labelledby="lookup" className="mt-6">
         <h2 id="lookup" className="sr-only">
           Look up a firm
