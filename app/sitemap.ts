@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     "/",
     "/compare/",
+    "/compare/providers/",
     "/check-a-provider/",
     "/how-we-calculate/",
     "/methodology/",

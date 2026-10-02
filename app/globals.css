@@ -50,15 +50,18 @@ input[type="checkbox"] {
   accent-color: var(--color-brand-600);
 }
 
-/* Institutional link style: always underlined, thicker on hover. */
-.prose-links a,
-a.link {
-  color: var(--color-brand-600);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-a:hover {
-  text-decoration-thickness: 2px;
+/* Institutional link style: always underlined, thicker on hover. In the base
+   layer so utility classes (buttons, tiles) can override it. */
+@layer base {
+  .prose-links a,
+  a.link {
+    color: var(--color-brand-600);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 /* Skip link: visible only on keyboard focus. */

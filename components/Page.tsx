@@ -72,26 +72,46 @@ export function PageFrame({
   trail,
   title,
   lead,
+  icon,
+  meta,
+  aside,
   children,
 }: {
   trail: Crumb[];
   title: React.ReactNode;
   lead?: React.ReactNode;
+  /** Shown before the title, e.g. a provider's monogram. */
+  icon?: React.ReactNode;
+  /** Badges and actions under the title. */
+  meta?: React.ReactNode;
+  /** A side column (key facts, related links) beside the content on wide screens. */
+  aside?: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
     <main id="main">
       <div className="border-b border-line bg-wash">
-        <div className="mx-auto max-w-5xl px-5 pb-8 pt-5">
+        <div className="mx-auto max-w-6xl px-5 pb-8 pt-5">
           <Breadcrumbs trail={trail} />
-          <h1 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            {title}
-          </h1>
-          {lead && <p className="mt-4 max-w-2xl text-lg text-body sm:text-xl">{lead}</p>}
+          <div className={icon ? "mt-5 flex items-start gap-4" : "mt-5"}>
+            {icon}
+            <div>
+              <h1 className="max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">{title}</h1>
+              {lead && <p className="mt-4 max-w-2xl text-lg text-body sm:text-xl">{lead}</p>}
+              {meta && <div className="mt-4 flex flex-wrap items-center gap-3">{meta}</div>}
+            </div>
+          </div>
         </div>
       </div>
-      <div className="prose-links mx-auto max-w-5xl px-5 pb-12 pt-2">
-        <div className="max-w-3xl">{children}</div>
+      <div className="prose-links mx-auto max-w-6xl px-5 pb-12 pt-2">
+        {aside ? (
+          <div className="grid gap-10 lg:grid-cols-[1fr_20rem]">
+            <div className="min-w-0 max-w-3xl">{children}</div>
+            <aside className="lg:pt-8">{aside}</aside>
+          </div>
+        ) : (
+          <div className="max-w-3xl">{children}</div>
+        )}
       </div>
     </main>
   );

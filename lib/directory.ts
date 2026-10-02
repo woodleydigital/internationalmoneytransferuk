@@ -1,0 +1,139 @@
+/**
+ * The directory view of each provider: the provider entry joined with the
+ * public-record data we hold for it. Filtering and sorting are pure functions so
+ * the server-rendered pages (and tests) share one implementation.
+ *
+ * Sorting is alphabetical or by a recorded date. There is no ranking, rating or
+ * "best" order anywhere in the directory.
+ */
+import type { CompanyRecord } from "./companies-house";
+import type { DisclosureRecord } from "./disclosures";
+import { PROVIDERS, initialOf, type Provider, type ProviderKind } from "./providers.ts";
+
+export interface Entry {
+  provider: Provider;
+  company: CompanyRecord | null;
+  statement: DisclosureRecord | null;
+  /** FRNs the provider states on its own site (unverified). */
+  statedFrns: string[];
+}
+
+export function makeEntry(
+  provider: Provider,
+  company: CompanyRecord | null,
+  statement: DisclosureRecord | null,
+): Entry {
+  const statedFrns = [...new Set((statement?.statements ?? []).flatMap((s) => s.frns))];
+  return { provider, company, statement, statedFrns };
+}
+
+export type Sort = "az" | "za" | "oldest" | "newest";
+
+export interface Filters {
+  q: string;
+  kinds: ProviderKind[];
+  hasCompany: boolean;
+  hasStatement: boolean;
+  sort: Sort;
+}
+
+type Params = Record<string, string | string[] | undefined>;
+const all = (v: string | string[] | undefined) => (Array.isArray(v) ? v : v ? [v] : []);
+const first = (v: string | string[] | undefined) => all(v)[0] ?? "";
+
+const KINDS: ProviderKind[] = ["bank", "transfer", "broker"];
+const SORTS: Sort[] = ["az", "za", "oldest", "newest"];
+
+export function parseFilters(params: Params): Filters {
+  const sort = first(params.sort) as Sort;
+  return {
+    q: first(params.q).trim().slice(0, 80),
+    kinds: all(params.kind).filter((k): k is ProviderKind => KINDS.includes(k as ProviderKind)),
+    hasCompany: first(params.company) === "1",
+    hasStatement: first(params.statement) === "1",
+    sort: SORTS.includes(sort) ? sort : "az",
+  };
+}
+
+export function isFiltered(f: Filters): boolean {
+  return Boolean(f.q || f.kinds.length || f.hasCompany || f.hasStatement || f.sort !== "az");
+}
+
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "");
+
+/** Match the search box against the brand, its slug and its registered company name. */
+function matchesQuery(e: Entry, q: string): boolean {
+  if (!q) return true;
+  const n = norm(q);
+  return [e.provider.name, e.provider.slug, e.company?.company?.name ?? ""].some((s) => norm(s).includes(n));
+}
+
+export function applyFilters(entries: Entry[], f: Filters, ignore?: keyof Filters): Entry[] {
+  const out = entries.filter(
+    (e) =>
+      (ignore === "q" || matchesQuery(e, f.q)) &&
+      (ignore === "kinds" || !f.kinds.length || f.kinds.includes(e.provider.kind)) &&
+      (ignore === "hasCompany" || !f.hasCompany || Boolean(e.company?.company)) &&
+      (ignore === "hasStatement" || !f.hasStatement || Boolean(e.statement)),
+  );
+  const byName = (a: Entry, b: Entry) =>
+    a.provider.name.localeCompare(b.provider.name, "en-GB", { sensitivity: "base" });
+  const inc = (e: Entry) => e.company?.company?.incorporated ?? "";
+  switch (f.sort) {
+    case "za":
+      return out.sort((a, b) => byName(b, a));
+    case "oldest":
+    case "newest": {
+      // Providers without a recorded incorporation date go last, A–Z.
+      const dir = f.sort === "oldest" ? 1 : -1;
+      return out.sort((a, b) => {
+        const x = inc(a), y = inc(b);
+        if (!x || !y) return x ? -1 : y ? 1 : byName(a, b);
+        return x === y ? byName(a, b) : x < y ? -dir : dir;
+      });
+    }
+    default:
+      return out.sort(byName);
+  }
+}
+
+/** How many entries each facet option would show, given the other filters. */
+export function facetCounts(entries: Entry[], f: Filters) {
+  const kindBase = applyFilters(entries, f, "kinds");
+  return {
+    kinds: Object.fromEntries(KINDS.map((k) => [k, kindBase.filter((e) => e.provider.kind === k).length])) as Record<ProviderKind, number>,
+    hasCompany: applyFilters(entries, f, "hasCompany").filter((e) => e.company?.company).length,
+    hasStatement: applyFilters(entries, f, "hasStatement").filter((e) => e.statement).length,
+  };
+}
+
+/** Group an A–Z (or Z–A) list under its initial letters, keeping order. */
+export function groupByLetter(entries: Entry[]): [string, Entry[]][] {
+  const groups = new Map<string, Entry[]>();
+  for (const e of entries) {
+    const k = initialOf(e.provider.name);
+    groups.set(k, [...(groups.get(k) ?? []), e]);
+  }
+  return [...groups.entries()];
+}
+
+/** Two-letter monogram for a brand, used instead of logos we have no right to show. */
+export function monogram(name: string): string {
+  const words = name
+    .replace(/[^A-Za-z0-9& ]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w && !/^(of|the|and)$/i.test(w));
+  if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
+  return words[0].slice(0, 2).toUpperCase();
+}
+
+export function similar(entries: Entry[], e: Entry, n = 6): Entry[] {
+  return entries
+    .filter((x) => x.provider.kind === e.provider.kind && x.provider.slug !== e.provider.slug)
+    .sort((a, b) => a.provider.name.localeCompare(b.provider.name, "en-GB"))
+    .slice(0, n);
+}
+
+export function allProviders(): Provider[] {
+  return PROVIDERS;
+}

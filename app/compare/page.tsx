@@ -92,6 +92,13 @@ export default async function Page({
   return (
     <PageFrame trail={[{ name: "Compare" }]} title={<>Compare the cost of an international money transfer</>}>
       <JsonLd data={checkerSchema} />
+      <p className="mt-6 border-l-4 border-brand-600 bg-brand-50 p-4">
+        {"Looking to compare the providers themselves? "}
+        <Link href="/compare/providers/" className="font-semibold">
+          Compare money transfer providers side by side
+        </Link>
+        .
+      </p>
 
       <section aria-labelledby="checker" className="mt-6">
         <h2 id="checker" className="sr-only">

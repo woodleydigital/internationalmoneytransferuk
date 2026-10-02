@@ -101,14 +101,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Stated plainly on every page: an independent site, not an official one. */}
         <div className="bg-brand-900 text-brand-100">
-          <p className="mx-auto max-w-5xl px-5 py-1.5 text-xs sm:text-sm">
+          <p className="mx-auto max-w-6xl px-5 py-1.5 text-xs sm:text-sm">
             An independent consumer information service. Not a government website, and not
             part of the FCA.
           </p>
         </div>
 
         <header className="bg-white">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-5">
             <Link href="/" className="block max-w-full no-underline">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -140,7 +140,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </form>
           </div>
           <nav aria-label="Main" className="border-b-4 border-accent-500 bg-brand-700">
-            <ul className="mx-auto flex max-w-5xl flex-wrap px-2 sm:px-3">
+            <ul className="mx-auto flex max-w-6xl flex-wrap px-2 sm:px-3">
               {NAV.map((n) => (
                 <li key={n.href}>
                   <Link
@@ -158,7 +158,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         <footer className="bg-brand-900 text-brand-100">
-          <div className="mx-auto max-w-5xl px-5 py-12">
+          <div className="mx-auto max-w-6xl px-5 py-12">
             <div className="grid gap-8 sm:grid-cols-4">
               {FOOTER.map((col) => (
                 <nav key={col.heading} aria-label={col.heading}>

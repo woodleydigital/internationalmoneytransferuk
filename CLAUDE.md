@@ -106,6 +106,13 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 - Sober, institutional, accessibility-first: utility strip, white header with logo and
   tagline, dark-teal nav band with gold rule, tinted page-header bands, square controls,
   Source Sans 3, the IMT UK palette in `app/globals.css`. Every page uses `PageFrame`.
+- Directory features borrowed from Capterra/Clutch, minus anything that ranks: category
+  browsing (`kind`: bank / transfer / broker, assigned from how each provider describes
+  itself), faceted filters with counts, provider cards with monogram tiles (never logos),
+  side-by-side comparison at `/compare/providers/` (facts only, each row names its source),
+  profile pages with a key-facts panel, "On this page" and similar providers. Sorts are
+  alphabetical or by a recorded date only. **No stars, reviews, "top"/"best"/"leader"
+  badges, scores or paid placement.** Filtered views are `noindex`.
 - It may look like a public-interest body; it must **never** pass for an official one.
   No crowns, crests or coats of arms, no GOV.UK or FCA styling, fonts or colours, no
   "official" wording. Keep the "Not a government website, and not part of the FCA"

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  KIND_LABEL,
+  KIND_PLURAL,
   PROFILE_SCHEMA,
   PROVIDERS,
   getProvider,
@@ -10,11 +12,13 @@ import {
   isVerified,
 } from "@/lib/providers";
 import { registerSearchUrl } from "@/lib/fca";
-import { loadCompanyRecord } from "@/lib/company-records";
 import { CompaniesHouseBlock } from "@/components/CompanyHouseBlock";
-import { loadDisclosure } from "@/lib/disclosure-records";
 import { ProviderStatementBlock } from "@/components/ProviderStatementBlock";
 import { H2, JsonLd, P, PageFrame, webPage } from "@/components/Page";
+import { KindBadge, Monogram } from "@/components/Directory";
+import { loadEntries } from "@/lib/directory-data";
+import { similar } from "@/lib/directory";
+import { longDate } from "@/lib/site";
 
 type Params = Promise<{ slug: string }>;
 
@@ -42,86 +46,205 @@ export default async function Page({ params }: { params: Params }) {
   const p = getProvider((await params).slug);
   if (!p) notFound();
   const verified = isVerified(p);
-  const company = loadCompanyRecord(p.slug);
-  const statement = loadDisclosure(p.slug);
+  const entries = loadEntries();
+  const entry = entries.find((e) => e.provider.slug === p.slug)!;
+  const { company, statement, statedFrns } = entry;
+  const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
+  const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
+    Boolean(c) && f.source.startsWith("Companies House") && !f.field.startsWith("Revenue");
+  const sections: [string, string][] = [
+    ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
+    ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
+    ["coverage", "Data coverage"],
+    ["about-profile", "About this profile"],
+  ];
+  const others = similar(entries, entry);
 
   return (
-    <PageFrame trail={[{ name: p.name }]} title={<>{p.name} international money transfer profile</>}>
-      <JsonLd data={webPage(providerUrl(p), `${p.name} profile`, "ProfilePage")} />
-
-      <section aria-labelledby="status" className="mt-6 rounded-lg border border-line bg-wash p-5">
-        <h2 id="status" className="font-semibold text-ink">
-          {verified ? "Verified" : "Register data pending"}
-        </h2>
-        <p className="mt-2 max-w-prose">
-          {`We have not yet fetched ${p.name}'s record from the FCA Register${company ? "" : " or Companies House"}, ` +
-            `so this profile does not state its FCA reference number, permissions or status. ` +
-            `We do not fill these in from memory or from the provider's own website.`}
-        </p>
-        <p className="mt-2 text-sm">
-          {"Until then, you can check the firm yourself on the "}
-          <a href={registerSearchUrl(p.name)} className="underline" rel="noopener">
-            FCA Register
-          </a>
-          {" or with our "}
-          <Link href={`/check-a-provider/?q=${encodeURIComponent(p.name)}`} className="underline">
-            provider check
+    <PageFrame
+      trail={[{ name: "Directory", href: "/" }, { name: p.name }]}
+      icon={<Monogram name={p.name} kind={p.kind} size="lg" />}
+      title={<>{p.name} international money transfer profile</>}
+      meta={
+        <>
+          <KindBadge kind={p.kind} />
+          <span className="text-sm text-muted">{verified ? "Verified" : "Register data pending"}</span>
+          {p.website && (
+            <a href={p.website} rel="noopener nofollow" className="border-2 border-ink bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:bg-brand-50">
+              Visit website ↗
+            </a>
+          )}
+          <Link href={`/compare/providers/?p=${p.slug}`} className="bg-brand-700 px-3 py-1.5 text-sm font-semibold text-white no-underline hover:bg-brand-800">
+            Compare
           </Link>
-          .
-        </p>
-      </section>
-
-
-      {statement && <ProviderStatementBlock name={p.name} record={statement} />}
-      {company && <CompaniesHouseBlock record={company} />}
-
-      <H2 id="blocks">What this profile will show</H2>
-      <P>
-        This profile is compiled automatically. Each block below appears only once it has been
-        collected from the stated source, and carries the date it was last fetched.
-      </P>
-
-      {blocks.map((block) => (
-        <section key={block} aria-label={block} className="mt-6">
-          <h3 className="font-semibold text-ink">{block}</h3>
-          <dl className="mt-2 divide-y divide-line border-y border-line text-sm">
-            {PROFILE_SCHEMA.filter((f) => f.block === block).map((f) => (
-              <div key={f.field} className="grid gap-1 py-2 sm:grid-cols-[1fr_auto]">
-                <dt className="text-ink">{f.field}</dt>
-                <dd className="text-muted sm:text-right">
-                  Not yet collected · {f.source}
-                  <span className="block text-xs">{f.method}</span>
+        </>
+      }
+      aside={
+        <div className="space-y-6 lg:sticky lg:top-4">
+          <section aria-labelledby="key-facts" className="border-t-4 border-brand-600 bg-wash p-5">
+            <h2 id="key-facts" className="text-lg font-bold text-ink">
+              Key facts
+            </h2>
+            <dl className="mt-3 space-y-3 text-sm">
+              <div>
+                <dt className="text-muted">Category</dt>
+                <dd className="font-semibold text-ink">{KIND_LABEL[p.kind]}</dd>
+              </div>
+              <div>
+                <dt className="text-muted">Registered company</dt>
+                <dd className="font-semibold text-ink">{c ? `${c.name} (${c.number})` : "Not yet identified"}</dd>
+              </div>
+              {c && (
+                <div>
+                  <dt className="text-muted">Status and incorporated</dt>
+                  <dd className="font-semibold text-ink">
+                    {`${c.status ?? "—"}${c.incorporated ? ` · ${longDate(c.incorporated)}` : ""}`}
+                  </dd>
+                </div>
+              )}
+              <div>
+                <dt className="text-muted">FCA number, as stated by the provider</dt>
+                <dd className="font-semibold text-ink">{statedFrns.length ? statedFrns.join(", ") : "—"}</dd>
+              </div>
+              <div>
+                <dt className="text-muted">Last fetched</dt>
+                <dd className="font-semibold text-ink">
+                  {[company?.fetchedAt, statement?.fetchedAt].filter(Boolean).sort().pop()?.slice(0, 10)
+                    ? longDate([company?.fetchedAt, statement?.fetchedAt].filter(Boolean).sort().pop()!.slice(0, 10))
+                    : "—"}
                 </dd>
               </div>
+            </dl>
+          </section>
+
+          <nav aria-labelledby="on-this-page" className="text-sm">
+            <h2 id="on-this-page" className="font-bold uppercase tracking-wide text-muted">
+              On this page
+            </h2>
+            <ul className="mt-2 space-y-1">
+              {sections.map(([id, label]) => (
+                <li key={id}>
+                  <a href={`#${id}`}>{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <form method="get" action="/compare/providers/" className="text-sm">
+            <input type="hidden" name="p" value={p.slug} />
+            <label htmlFor="compare-with" className="font-bold uppercase tracking-wide text-muted">
+              {`Compare ${p.name} with`}
+            </label>
+            <div className="mt-2 flex">
+              <select id="compare-with" name="p" className="w-full min-w-0 border-2 border-ink bg-white px-2 py-2">
+                {entries
+                  .filter((e) => e.provider.slug !== p.slug)
+                  .sort((a, b) => a.provider.name.localeCompare(b.provider.name, "en-GB"))
+                  .map((e) => (
+                    <option key={e.provider.slug} value={e.provider.slug}>
+                      {e.provider.name}
+                    </option>
+                  ))}
+              </select>
+              <button type="submit" className="bg-ink px-3 font-semibold text-white">
+                Go
+              </button>
+            </div>
+          </form>
+
+          {others.length > 0 && (
+            <section aria-labelledby="similar">
+              <h2 id="similar" className="text-sm font-bold uppercase tracking-wide text-muted">
+                {`Other ${KIND_PLURAL[p.kind].toLowerCase()}`}
+              </h2>
+              <ul className="mt-2 space-y-2">
+                {others.map((o) => (
+                  <li key={o.provider.slug} className="flex items-center gap-3">
+                    <Monogram name={o.provider.name} kind={o.provider.kind} />
+                    <Link href={providerUrl(o.provider)} className="font-semibold">
+                      {o.provider.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-sm">
+                <Link href={`/?kind=${p.kind}`}>{`All ${KIND_PLURAL[p.kind].toLowerCase()} →`}</Link>
+              </p>
+            </section>
+          )}
+        </div>
+      }
+    >
+      <JsonLd data={webPage(providerUrl(p), `${p.name} profile`, "ProfilePage")} />
+
+      {!verified && (
+        <aside className="mt-8 border-l-4 border-line-strong bg-wash p-4 text-sm">
+          <p>
+            {`We have not yet fetched ${p.name}'s record from the FCA Register, so this profile does not state its FCA status or permissions. Check the firm yourself on the `}
+            <a href={registerSearchUrl(p.name)} rel="noopener">
+              FCA Register
+            </a>
+            {" or with our "}
+            <Link href={`/check-a-provider/?q=${encodeURIComponent(p.name)}`}>provider check</Link>.
+          </p>
+        </aside>
+      )}
+
+      {statement && (
+        <div id="regulation">
+          <ProviderStatementBlock name={p.name} record={statement} />
+        </div>
+      )}
+      {company && <CompaniesHouseBlock record={company} />}
+
+      <section aria-labelledby="coverage" className="mt-10">
+        <H2 id="coverage">Data coverage</H2>
+        <P>
+          This profile is compiled automatically. Each item appears only once it has been
+          collected from the stated source, and carries the date it was fetched.
+        </P>
+        <details className="mt-4 border border-line">
+          <summary className="cursor-pointer bg-wash px-4 py-3 font-semibold text-ink">
+            {`Show every item and its source (${PROFILE_SCHEMA.filter(collected).length} of ${PROFILE_SCHEMA.length} collected)`}
+          </summary>
+          <div className="px-4 pb-4">
+            {blocks.map((block) => (
+              <section key={block} aria-label={block} className="mt-4">
+                <h3 className="font-semibold text-ink">{block}</h3>
+                <dl className="mt-2 divide-y divide-line border-y border-line text-sm">
+                  {PROFILE_SCHEMA.filter((f) => f.block === block).map((f) => (
+                    <div key={f.field} className="grid gap-1 py-2 sm:grid-cols-[1fr_auto]">
+                      <dt className="text-ink">{f.field}</dt>
+                      <dd className="text-muted sm:text-right">
+                        {collected(f) ? "Collected" : "Not yet collected"} · {f.source}
+                        <span className="block text-xs">{f.method}</span>
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
             ))}
-          </dl>
-        </section>
-      ))}
+          </div>
+        </details>
+        <P>
+          {`We do not test providers or rate them. This profile shows no exchange rates, and says nothing about ${p.name} that its public records and its own website do not.`}
+        </P>
+      </section>
 
-      <P>
-        {`We do not test providers or rate them. This profile shows no exchange rates, and says nothing about ${p.name} that its public records and its own website do not.`}
-      </P>
-
-      <H2>About this profile</H2>
-      <P>
-        {"Listing is free and no provider can pay for its data fields or position. "}
-        <Link href="/methodology/" className="underline">
-          Methodology
-        </Link>
-        {" · "}
-        <Link href="/how-we-get-paid/" className="underline">
-          How we get paid
-        </Link>
-        {" · "}
-        <Link href="/corrections/" className="underline">
-          Report an error
-        </Link>
-        {" · "}
-        <Link href="/for-providers/" className="underline">
-          {`Are you ${p.name}?`}
-        </Link>
-      </P>
+      <section aria-labelledby="about-profile" className="mt-10">
+        <H2 id="about-profile">About this profile</H2>
+        <P>
+          {"Listing is free and no provider can pay for its data fields or position. "}
+          <Link href="/methodology/">Methodology</Link>
+          {" · "}
+          <Link href="/how-we-get-paid/">How we get paid</Link>
+          {" · "}
+          <Link href="/corrections/">Report an error</Link>
+          {" · "}
+          <Link href="/for-providers/">{`Are you ${p.name}?`}</Link>
+        </P>
+      </section>
     </PageFrame>
   );
 }
