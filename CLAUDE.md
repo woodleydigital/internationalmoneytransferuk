@@ -45,7 +45,9 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 - `/` — homepage = searchable A–Z directory
 - `/providers/{slug}/` — entity profiles
 - `/compare/`, `/apps/` (phase 1); `/business/`, `/banks/`, `/cash-pickup/`, `/send-to/nigeria/`, `/guides/how-it-works/`, `/guides/track-a-transfer/` (phase 2)
-- `/check-a-provider/` (FCA status tool), `/register-changes/` (`/tracker/` removed; it 301s to `/methodology/`)
+- `/check-a-provider/` (FCA status tool). `/register-changes/` is shelved (it would be the
+  FCA data feed their terms forbid) and 307s to `/check-a-provider/`; `/tracker/` removed
+  (301 to `/methodology/`).
 - Trust: `/methodology/`, `/how-we-get-paid/`, `/code-of-ethics/`, `/corrections/`, `/about/`, `/for-providers/`, `/entitymap.html` + `/entitymap.json` (EntityMap v1.0)
 
 ## Profile status
@@ -189,6 +191,19 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 - Never mark up ratings, reviews, rankings, `dateModified` we do not genuinely know, or
   anything the page does not visibly show. The 404 carries no structured data.
   `lib/schema.test.ts` checks that every `@id` reference resolves.
+
+## Helpful content (Google's people-first guidance)
+- Every page must exist for visitors, not search engines: no placeholder or "coming soon"
+  page in navigation or the sitemap; thin pages stay `noindex` (see Profile status).
+- Say who, how and why: `/about/` (owner, why the site exists), `/methodology/` (how every
+  block is collected; where AI was and was not used), "About this profile" on each profile.
+  AI helped build the software and draft explanatory pages; it never produces provider data.
+- Copy must match what the site actually does. When a data source is added or dropped,
+  update methodology, about, code of ethics, FAQ, entity map and meta descriptions together.
+- No scaled pages: one profile per provider, no templated variants per keyword, country or
+  fee; filtered and search views `noindex`.
+- Contact: a working contact route is needed for trust (postal address now; add an email
+  once the owner supplies one).
 
 ## Editorial
 - British English, plain English, data-driven claims, no jargon without explanation.

@@ -80,8 +80,9 @@ export default function Page() {
       </dl>
 
       <P className="text-sm text-muted">
-        These are general explanations, not legal or financial advice, and they say nothing about
-        any particular provider.
+        These are general explanations, written with the help of AI, with a link to an official
+        source for each where one exists. They are not legal or financial advice and say nothing
+        about any particular provider.
       </P>
     </PageFrame>
   );

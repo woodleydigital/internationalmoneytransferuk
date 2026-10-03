@@ -227,7 +227,7 @@ export default async function Page({ params }: { params: Params }) {
       {!verified && (
         <aside className="mt-8 border-l-4 border-line-strong bg-wash p-4 text-sm">
           <p>
-            {`We have not yet fetched ${p.name}'s record from the FCA Register, so this profile does not state its FCA status or permissions. Check the firm yourself on the `}
+            {`This profile does not include FCA Register data, so it does not state ${p.name}'s FCA status or permissions. Check the firm yourself on the `}
             <a href={registerSearchUrl(p.name)} rel="noopener">
               FCA Register
             </a>

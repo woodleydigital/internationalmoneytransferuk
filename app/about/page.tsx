@@ -25,13 +25,21 @@ export default function Page() {
       trail={[{ name: "About" }]} title={<>About {SITE.name}</>} lead={<>{`${SITE.name} (${SITE.alternateName}) is a directory of the firms that send money abroad from the UK, built from the public record.`}</>}>
       <H2>What we do</H2>
       <P>
-        {"For each provider we collect what the FCA Register, Companies House and the Financial Ombudsman Service say about it, and show when each fact was last checked. "}
+        {"For each provider we collect what Companies House and the Financial Ombudsman Service record about the company behind it, and what the provider says on its own website, and show when each was last fetched. "}
         <Link href="/methodology/" className="underline">How we build each profile</Link>.
+      </P>
+
+      <H2>Why this site exists</H2>
+      <P>
+        Before you send money abroad, it helps to know who you are really dealing with: the
+        company behind the brand, what the public record says about it, and what it promises on
+        its own website. This directory puts those in one place, shows where each came from,
+        and leaves the decision to you.
       </P>
 
       <H2>How this site is made</H2>
       <P>
-        {"The directory is compiled entirely by software, including AI that reads providers’ own websites. Nobody tests providers or reviews profiles by hand, so we never claim that anyone has. "}
+        {"The directory is compiled entirely by software that copies public records and quotes providers’ own websites word for word. AI helped write the software and the explanatory pages, but it does not produce any provider data. Nobody tests providers or reviews profiles by hand, so we never claim that anyone has. "}
         <Link href="/methodology/" className="underline">The rules the software follows</Link>.
       </P>
 

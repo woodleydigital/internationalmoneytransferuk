@@ -45,7 +45,6 @@ const NAV = [
   { href: "/", label: "Provider directory" },
   { href: "/check-a-provider/", label: "Check a provider" },
   { href: "/compare/", label: "Compare costs" },
-  { href: "/register-changes/", label: "Register changes" },
   { href: "/methodology/", label: "Methodology" },
   { href: "/about/", label: "About us" },
 ];

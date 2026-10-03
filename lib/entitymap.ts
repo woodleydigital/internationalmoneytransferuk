@@ -28,7 +28,7 @@ export function entityMap() {
         "@type": "Organization",
         name: SITE.name,
         description:
-          "A directory of the firms that send money abroad from the UK, built from the FCA Register, Companies House and Financial Ombudsman Service data.",
+          "A directory of the firms that send money abroad from the UK, built from Companies House and Financial Ombudsman Service records and providers' own published statements.",
         audienceType: "general",
         hasChunks: [
           chunk(

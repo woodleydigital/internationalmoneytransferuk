@@ -4,7 +4,7 @@ import { H2, P, PageFrame } from "@/components/Page";
 
 const TITLE = "Methodology: how the directory is built";
 const DESCRIPTION =
-  "How the IMTUK directory is compiled automatically from the FCA Register, Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.";
+  "How the IMTUK directory is compiled automatically from Companies House, the Financial Ombudsman Service and providers' own websites, and the rules that keep it accurate.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -26,9 +26,11 @@ export default function Page() {
       }
     >
             <P>
-        Our import from the FCA Register and Companies House is being set up. Until it has run
-        for a provider, that provider’s profile says “register data pending” and is hidden from
-        search engines.
+        Profiles do not include FCA Register data: the FCA’s terms do not allow its Register to
+        feed another website’s tables, so every profile says “register data pending” and links to
+        the Register instead. A profile is shown to search engines only once it holds at least
+        two of: a Companies House record, the provider’s own regulatory statement, and what it
+        says about its service.
       </P>
 
       <H2>Built by software, not by reviewers</H2>
@@ -119,13 +121,12 @@ export default function Page() {
       <H2>The rules the software follows</H2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
         <li>
-          Register and company facts are copied from the official source by ordinary code. AI is
-          never used to produce or recall them.
+          Company, complaint and register facts are copied from the official source by ordinary
+          code. AI is never used to produce, recall or summarise them.
         </li>
         <li>
-          AI is used only to find details on providers’ own websites. It must return the exact
-          wording it relied on; if that wording cannot be found on the page, the result is
-          thrown away rather than saved.
+          Details from providers’ own websites are found by plain pattern matching, not AI, and
+          kept word for word with the page they came from.
         </li>
         <li>
           Anything that could reflect badly on a firm — a cancelled or restricted permission, a
@@ -137,6 +138,11 @@ export default function Page() {
         <li>
           If a source cannot be reached or a check fails, the site shows nothing for that block
           rather than an older or estimated value.
+        </li>
+        <li>
+          AI was used to build the site’s software and to draft its explanatory pages (this page,
+          the glossary and the questions and answers). It does not write or edit any provider’s
+          profile data.
         </li>
       </ul>
 

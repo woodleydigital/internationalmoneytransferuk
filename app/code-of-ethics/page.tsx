@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const RULES: [string, string][] = [
-  ["Facts come from source.", "Regulatory and company facts are taken from the FCA Register, Companies House and the Financial Ombudsman Service, and each shows when it was last verified."],
+  ["Facts come from source.", "Company and complaint facts are taken from Companies House and the Financial Ombudsman Service, providers’ claims are quoted from their own websites, and each shows when it was fetched."],
   ["We say what we don't know.", "Where data has not been collected, the page says so. We do not estimate, round up or fill gaps."],
   ["Bad news is quoted, not described.", "Anything that reflects badly on a firm is shown exactly as the official source records it, with a link and a date. We add no comment of our own."],
   ["Automation is disclosed.", "This site is compiled by software. We never imply that a person has tested a provider or reviewed a page."],
