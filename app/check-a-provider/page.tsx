@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { registerSearchUrl, searchFirms, type FirmSearch } from "@/lib/fca";
+import { headers } from "next/headers";
+import { registerEntryUrl, registerSearchUrl, searchFirms, type FirmSearch } from "@/lib/fca";
 import { SITE, ID } from "@/lib/site";
 import { abs, LANG } from "@/lib/schema";
 import { H2, P, PageFrame } from "@/components/Page";
@@ -29,8 +30,10 @@ export async function generateMetadata({
 }
 
 export default async function Page({ searchParams }: { searchParams: Promise<SearchParams> }) {
-  const q = one((await searchParams).q).trim().slice(0, 80);
-  const search: FirmSearch | null = q.length >= 2 ? await searchFirms(q) : null;
+  const q = one((await searchParams).q).replace(/[\u0000-\u001f]/g, "").trim().slice(0, 80);
+  const h = await headers();
+  const visitor = (h.get("x-forwarded-for") ?? "").split(",")[0].trim() || "anon";
+  const search: FirmSearch | null = q.length >= 2 ? await searchFirms(q, visitor) : null;
 
   return (
     <PageFrame
@@ -106,8 +109,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
 function Intro() {
   return (
     <p className="max-w-prose text-sm">
-      Enter the name of the firm you are thinking of using. We search the FCA’s Financial
-      Services Register and show each match exactly as the Register returns it.
+      Enter the name of the firm you are thinking of using. We look it up on the FCA’s
+      Financial Services Register for you, then and there, and show each match exactly as the
+      Register returns it. Results are not stored.
     </p>
   );
 }
@@ -119,13 +123,15 @@ function Results({ q, search }: { q: string; search: FirmSearch }) {
     </a>
   );
 
-  if (search.kind === "unconfigured" || search.kind === "error") {
+  if (search.kind === "unconfigured" || search.kind === "error" || search.kind === "busy") {
     return (
       <div className="rounded-lg border border-line p-5">
         <p>
           {search.kind === "error"
             ? `${search.message} `
-            : "Our live connection to the FCA Register is not switched on yet. "}
+            : search.kind === "busy"
+              ? "Too many searches in the last minute, so we have paused look-ups briefly. "
+              : "Our live connection to the FCA Register is not switched on yet. "}
           You can {official} directly on the FCA’s own site.
         </p>
       </div>
@@ -153,22 +159,32 @@ function Results({ q, search }: { q: string; search: FirmSearch }) {
           <tr className="border-b border-line">
             <th className="py-1 pr-3 font-medium text-ink">Firm</th>
             <th className="py-1 pr-3 font-medium text-ink">FRN</th>
-            <th className="py-1 font-medium text-ink">Status</th>
+            <th className="py-1 pr-3 font-medium text-ink">Status</th>
+            <th className="py-1 font-medium text-ink">Type</th>
           </tr>
         </thead>
         <tbody>
           {search.results.map((r) => (
             <tr key={`${r.frn}-${r.name}`} className="border-b border-line">
               <td className="py-1 pr-3">{r.name}</td>
-              <td className="py-1 pr-3 tabular-nums">{r.frn}</td>
-              <td className="py-1">{r.status}</td>
+              <td className="py-1 pr-3 tabular-nums">
+                {r.frn ? (
+                  <a href={registerEntryUrl(r.frn)} className="underline" rel="noopener">
+                    {r.frn}
+                  </a>
+                ) : (
+                  "—"
+                )}
+              </td>
+              <td className="py-1 pr-3">{r.status}</td>
+              <td className="py-1">{r.type}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <p className="mt-3 text-sm">
-        Source: FCA Financial Services Register. Confirm the details on the {official} before
-        you send money. <Link href="/methodology/" className="underline">Methodology</Link>.
+        {"Shown exactly as the FCA’s Financial Services Register returned it for this search. The FCA does not endorse this site or these results. Each reference number links to the Register itself: confirm the firm’s details there, and on the "}
+        {official}, before you send money. <Link href="/methodology/" className="underline">Methodology</Link>.
       </p>
     </div>
   );

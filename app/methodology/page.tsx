@@ -68,6 +68,12 @@ export default function Page() {
           statement gives a company number, that is how we find the company at Companies House.
         </li>
         <li>
+          <strong className="text-ink">FCA Register look-ups.</strong> The “Check a provider” page
+          searches the FCA’s Financial Services Register when you ask it to and shows the matches
+          exactly as the Register returns them. Results are not stored, and Register data is not
+          copied into provider profiles. The FCA does not endorse this site.
+        </li>
+        <li>
           <strong className="text-ink">Ownership, accounts and filings.</strong> For each matched
           company: its corporate owners, followed up the chain only while there is a single owner
           registered at Companies House; previous names; registered charges; recent filings; and

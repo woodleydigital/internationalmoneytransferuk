@@ -127,13 +127,22 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   table, 7/30-day change, `Dataset` markup) and as one line on the homepage. A currency
   needs ≥3 contributing central banks; the table is withdrawn if the latest publication is
   over 5 days old or the API fails. No currency-pair or corridor pages (CBUK owns those).
-- **FCA Register: BLOCKED pending written permission.** The FCA's website terms say data
-  must not be used "to provide a data feed to any comparison table or any other website
-  without our written permission", and the Register API is "designed for individual
-  look-ups rather than bulk data access". The paid Register Extract Service
-  (£6,012–£9,445 a year plus SDM fees, ex VAT) prohibits sharing on its own-business
-  licence. Do not build FCA ingestion or switch on `/check-a-provider/` live results until
-  the FCA has confirmed in writing what may be displayed. Never imply FCA endorsement.
+- **FCA Register.** The FCA replied (2026-10-03): commercial use is permitted subject to
+  the Register Terms of Use; no marketing use; never imply FCA endorsement (credit optional);
+  the API is a rate-limited beta for "controlled, user level access", "not intended for high
+  volume usage or full dataset ingestion"; and the email "should not be taken as approval,
+  authorisation or written consent for any particular use". The terms still bar using Register
+  data "to provide a data feed to any comparison table or any other website without written
+  permission". So:
+  - **Allowed (live since 2026-10-03):** `/check-a-provider/` look-ups — one API search per
+    visitor search, results shown verbatim to that visitor, cached ≤1 hour, never stored or
+    copied into profiles. Limits in `lib/fca.ts`: 10 calls/10 s per instance (FCA limit 50),
+    6 searches/minute per visitor; robots.txt disallows `/check-a-provider/?`; results pages
+    are `noindex`. Needs `FCA_API_EMAIL` and `FCA_API_KEY` in Vercel.
+  - **Still not allowed:** importing Register data into profiles, the directory, comparison
+    tables or the sitemap, or any bulk/scheduled pulls. That needs explicit written permission
+    or a display licence (the Register Extract Service's standard licence forbids sharing).
+    Revisit when the FCA's supported API arrives (promised for 2027).
 
 ## Data pipeline rules (critical — YMYL and defamation risk)
 - Facts (FRN, status, permissions, company number, dates) flow from the **FCA Register API** and **Companies House API** into the database via plain code. The LLM never generates or "remembers" these values.

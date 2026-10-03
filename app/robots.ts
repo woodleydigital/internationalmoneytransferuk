@@ -5,7 +5,8 @@ import { SITE } from "@/lib/site";
 // Nothing that is needed to render the page is blocked.
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
+    // Search results call the FCA Register live: crawlers must not trigger look-ups.
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/check-a-provider/?"] }],
     sitemap: `${SITE.url}/sitemap.xml`,
   };
 }
