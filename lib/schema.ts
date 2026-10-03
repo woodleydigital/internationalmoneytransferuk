@@ -52,6 +52,14 @@ export function organizationNode() {
     },
     image: ref(LOGO_ID),
     address: { "@type": "PostalAddress", ...SITE.address },
+    email: SITE.email,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: SITE.email,
+      areaServed: "GB",
+      availableLanguage: "en-GB",
+    },
     areaServed: { "@type": "Country", name: "United Kingdom" },
     founder: {
       "@type": "Person",

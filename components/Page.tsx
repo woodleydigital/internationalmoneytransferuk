@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { pageGraph, type Crumb, type PageSchema } from "@/lib/schema";
 import { glossaryUrl } from "@/lib/glossary";
-import { longDate } from "@/lib/site";
+import { longDate, SITE } from "@/lib/site";
 
 export type { Crumb };
 
@@ -171,5 +171,25 @@ export function Term({ slug, children }: { slug: string; children: React.ReactNo
     <Link href={glossaryUrl(slug)} className="text-inherit underline decoration-dotted underline-offset-4">
       {children}
     </Link>
+  );
+}
+
+/** Our postal address and email, the same wherever they appear. */
+export function ContactAddress({ subject, footer = false }: { subject?: string; footer?: boolean }) {
+  const href = `mailto:${SITE.email}${subject ? `?subject=${encodeURIComponent(subject)}` : ""}`;
+  return (
+    <address className={`mt-3 not-italic ${footer ? "text-sm" : ""}`}>
+      {SITE.name}
+      <br />
+      {SITE.address.streetAddress}
+      <br />
+      {`${SITE.address.addressLocality} ${SITE.address.postalCode}`}
+      <br />
+      United Kingdom
+      <br />
+      <a href={href} className={footer ? "text-white underline" : "link"}>
+        {SITE.email}
+      </a>
+    </address>
   );
 }

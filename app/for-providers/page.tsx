@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { H2, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame, ContactAddress } from "@/components/Page";
 
 const TITLE = "For providers: claim or correct your profile";
 const DESCRIPTION =
@@ -39,15 +39,7 @@ export default function Page() {
       </P>
 
       <H2>Contact</H2>
-      <address className="mt-3 not-italic">
-        {SITE.name}
-        <br />
-        {SITE.address.streetAddress}
-        <br />
-        {SITE.address.addressLocality}, {SITE.address.postalCode}
-        <br />
-        United Kingdom
-      </address>
+      <ContactAddress subject="Provider profile" />
       <P>
         <Link href="/methodology/" className="underline">Methodology</Link>
         {" · "}

@@ -13,6 +13,8 @@ export const SITE = {
   /** Short brand used in page titles and copy everywhere except the homepage title. */
   alternateName: "IMTUK",
   url: "https://internationalmoneytransfer.uk",
+  /** Public contact address for visitors, providers, corrections and privacy requests. */
+  email: "team@internationalmoneytransfer.uk",
   address: {
     streetAddress: "Harley House, 29 Cambray Pl",
     addressLocality: "Cheltenham",

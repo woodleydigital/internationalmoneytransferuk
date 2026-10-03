@@ -202,8 +202,9 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   update methodology, about, code of ethics, FAQ, entity map and meta descriptions together.
 - No scaled pages: one profile per provider, no templated variants per keyword, country or
   fee; filtered and search views `noindex`.
-- Contact: a working contact route is needed for trust (postal address now; add an email
-  once the owner supplies one).
+- Contact: `SITE.email` (team@internationalmoneytransfer.uk) and the postal address render
+  through `ContactAddress` on About, Corrections, For providers, Privacy and the footer, and
+  in the Organization schema. The mailbox must keep working.
 
 ## Editorial
 - British English, plain English, data-driven claims, no jargon without explanation.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MATT_WOODLEY, personUrl } from "@/lib/people";
 import { SITE, ID } from "@/lib/site";
-import { H2, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame, ContactAddress } from "@/components/Page";
 
 const DESCRIPTION = "Who runs IMTUK, how the directory is built, and who owns it.";
 
@@ -74,15 +74,7 @@ export default function Page() {
       </P>
 
       <H2>Where to find us</H2>
-      <address className="mt-3 not-italic">
-        {SITE.name}
-        <br />
-        {SITE.address.streetAddress}
-        <br />
-        {SITE.address.addressLocality}, {SITE.address.postalCode}
-        <br />
-        United Kingdom
-      </address>
+      <ContactAddress />
     </PageFrame>
   );
 }

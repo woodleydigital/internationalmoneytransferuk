@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
-import { H2, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame, ContactAddress } from "@/components/Page";
 
 const TITLE = "Corrections";
 const DESCRIPTION =
@@ -22,7 +22,7 @@ export default function Page() {
       
       <H2>Report an error</H2>
       <P>
-        Tell us the page, what is wrong, and where the correct information can be found. Each
+        Email us with the page, what is wrong, and where the correct information can be found. Each
         report is checked against the original source record; if the site was wrong, the page
         is corrected and the correction is recorded below.
       </P>
@@ -31,15 +31,7 @@ export default function Page() {
         of those records is itself wrong, it needs correcting there; this site updates at its
         next weekly refresh.
       </P>
-      <address className="mt-3 not-italic">
-        {SITE.name}
-        <br />
-        {SITE.address.streetAddress}
-        <br />
-        {SITE.address.addressLocality}, {SITE.address.postalCode}
-        <br />
-        United Kingdom
-      </address>
+      <ContactAddress subject="Correction request" />
 
       <H2>Corrections log</H2>
       {LOG.length === 0 ? (

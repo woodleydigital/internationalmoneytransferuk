@@ -4,6 +4,7 @@ import { Source_Sans_3 } from "next/font/google";
 import { SITE } from "@/lib/site";
 import { siteGraph } from "@/lib/schema";
 import "./globals.css";
+import { ContactAddress } from "@/components/Page";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin"],
@@ -174,15 +175,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ))}
               <div>
                 <h2 className="text-sm font-bold uppercase tracking-wider text-white">Contact</h2>
-                <address className="mt-3 text-sm not-italic">
-                  {SITE.name}
-                  <br />
-                  {SITE.address.streetAddress}
-                  <br />
-                  {SITE.address.addressLocality} {SITE.address.postalCode}
-                  <br />
-                  United Kingdom
-                </address>
+                <ContactAddress footer />
               </div>
             </div>
 

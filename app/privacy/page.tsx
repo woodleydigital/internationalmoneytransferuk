@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
-import { H2, P, PageFrame } from "@/components/Page";
+import { H2, P, PageFrame, ContactAddress } from "@/components/Page";
 
 const TITLE = "Privacy notice";
 const DESCRIPTION =
@@ -24,17 +24,9 @@ export default function Page() {
       
       <H2>Who is responsible</H2>
       <P>
-        {`${SITE.name} is responsible for the personal data described here. You can contact us at the address below.`}
+        {`${SITE.name} is responsible for the personal data described here. You can contact us by email or post at the address below.`}
       </P>
-      <address className="mt-3 not-italic">
-        {SITE.name}
-        <br />
-        {SITE.address.streetAddress}
-        <br />
-        {SITE.address.addressLocality}, {SITE.address.postalCode}
-        <br />
-        United Kingdom
-      </address>
+      <ContactAddress subject="Privacy request" />
 
       <H2>Personal data from public registers</H2>
       <P>
