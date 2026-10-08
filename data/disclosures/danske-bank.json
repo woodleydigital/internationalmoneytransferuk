@@ -1,7 +1,7 @@
 {
   "slug": "danske-bank",
-  "url": "https://danskebank.co.uk/personal",
-  "fetchedAt": "2026-10-05T12:32:29.011Z",
+  "url": "https://danskebank.co.uk/",
+  "fetchedAt": "2026-10-08T02:05:31.087Z",
   "status": "found",
   "statements": [
     {
@@ -11,7 +11,8 @@
       ],
       "companyNumbers": [
         "R0000568"
-      ]
+      ],
+      "url": "https://danskebank.co.uk/personal/help/payments/foreign-payments"
     }
   ]
 }

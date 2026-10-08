@@ -1,36 +1,76 @@
 {
   "slug": "worldremit",
-  "fetchedAt": "2026-10-05T12:41:03.957Z",
+  "fetchedAt": "2026-10-08T02:02:21.511Z",
   "status": "found",
   "pages": [
+    "https://www.worldremit.com/en/faq/bank-transfers",
     "https://www.worldremit.com/en-gb",
-    "https://www.worldremit.com/en-gb/download-our-app",
-    "https://www.worldremit.com/en-gb/zimbabwe",
-    "https://www.worldremit.com/en-gb/ghana",
-    "https://www.worldremit.com/en-gb/kenya",
-    "https://www.worldremit.com/en-gb/philippines",
-    "https://www.worldremit.com/en-gb/uganda"
+    "https://www.worldremit.com/en/faq/send-from",
+    "https://www.worldremit.com/en/nigeria",
+    "https://www.worldremit.com/en/philippines",
+    "https://www.worldremit.com/en/india",
+    "https://www.worldremit.com/en/zimbabwe",
+    "https://www.worldremit.com/en/ghana",
+    "https://www.worldremit.com/en/colombia",
+    "https://www.worldremit.com/en/morocco",
+    "https://www.worldremit.com/en/ethiopia",
+    "https://www.worldremit.com/en/kenya"
   ],
   "quotes": [
     {
       "topic": "payout",
-      "text": "Instant transfer to your receiver's registered mobile money account number.",
-      "url": "https://www.worldremit.com/en-gb"
+      "text": "A bank transfer is an electronic payment, which enables you to send money directly from your bank account to another bank account.",
+      "url": "https://www.worldremit.com/en/faq/bank-transfers",
+      "context": "What is a bank transfer?"
     },
     {
       "topic": "payout",
-      "text": "Choose how you’d like to pay for your transfer: bank deposit, credit or debit card.",
-      "url": "https://www.worldremit.com/en-gb"
+      "text": "With WorldRemit you can send money from your bank account to your family or friends’ bank accounts all over the world.",
+      "url": "https://www.worldremit.com/en/faq/bank-transfers",
+      "context": "What is a bank transfer?"
     },
     {
       "topic": "speed",
-      "text": "In most cases, money transfers sent using WorldRemit will arrive within minutes.",
-      "url": "https://www.worldremit.com/en-gb"
+      "text": "It could be instant or it could take 1 - 2 working days.",
+      "url": "https://www.worldremit.com/en/faq/bank-transfers",
+      "context": "How long do international bank transfers take?"
     },
     {
-      "topic": "payout",
-      "text": "At which time, these funds are either ready for collection by the recipient (Cash Pickup) or to be added into their bank account or mobile money account.",
-      "url": "https://www.worldremit.com/en-gb/zimbabwe"
+      "topic": "fees",
+      "text": "The fees for sending a bank transfer to your loved ones will depend on the country you’re sending to.",
+      "url": "https://www.worldremit.com/en/faq/bank-transfers",
+      "context": "How much does an international bank transfer cost?"
+    },
+    {
+      "topic": "speed",
+      "text": "Bank transfer delivery timescales vary per country but are usually credited within one working day.",
+      "url": "https://www.worldremit.com/en/faq/bank-transfers",
+      "context": "When will my recipient receive the bank transfer?"
+    },
+    {
+      "topic": "fees",
+      "text": "Our fees and exchange rates are shown upfront.",
+      "url": "https://www.worldremit.com/en-gb",
+      "context": "How to transfer money internationally?"
+    },
+    {
+      "topic": "fees",
+      "text": "There are no hidden fees.",
+      "url": "https://www.worldremit.com/en-gb",
+      "context": "How much does it cost to send money internationally?"
+    },
+    {
+      "topic": "speed",
+      "text": "Identity verification takes up to 4 minutes at least 90% of the time.",
+      "url": "https://www.worldremit.com/en-gb",
+      "context": "What verification do I need to send an international transfer?"
+    },
+    {
+      "topic": "countries",
+      "text": "With WorldRemit you can send money from over 50 countries around the world.",
+      "url": "https://www.worldremit.com/en/faq/send-from",
+      "context": "Countries you can send money from with WorldRemit"
     }
-  ]
+  ],
+  "attempts": []
 }

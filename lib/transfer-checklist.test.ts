@@ -14,7 +14,7 @@ const company = (number: string): CompanyRecord => ({
 test("every provider has topic-specific questions without asserting collected evidence", () => {
   for (const provider of PROVIDERS) {
     const questions = transferQuestions(makeEntry(provider, null, null));
-    assert.equal(new Set(questions.map((q) => q.topic)).size, 6);
+    assert.equal(new Set(questions.map((q) => q.topic)).size, 7);
     assert.ok(questions.every((q) => !q.hasQuotation));
   }
 });

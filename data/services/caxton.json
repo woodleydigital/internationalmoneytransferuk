@@ -1,53 +1,49 @@
 {
   "slug": "caxton",
-  "fetchedAt": "2026-10-05T12:46:18.382Z",
+  "fetchedAt": "2026-10-08T02:05:05.142Z",
   "status": "found",
   "pages": [
+    "https://resources.caxton.io/help/personal-international-payments",
+    "https://resources.caxton.io/help/personal/does-caxton-have-handling-transferring-fee",
+    "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
     "https://caxton.io/",
-    "https://caxton.io/services/international-payments",
-    "https://caxton.io/solutions/personal-money-transfer",
-    "https://caxton.io/personal/international-payments"
+    "https://resources.caxton.io/help/personal/what-are-caxton-international-payments-opening-hours",
+    "https://resources.caxton.io/help/personal/how-to-send-money-from-international-balance",
+    "https://resources.caxton.io/help/personal/i-want-to-use-the-funds-on-my-caxton-card-to-make-an-international-payment-how-do-i-do-this",
+    "https://resources.caxton.io/help/personal/can-i-send-multiple-payments-to-recipients",
+    "https://resources.caxton.io/help/personal/how-to-buy-and-hold-currency-on-my-account",
+    "https://resources.caxton.io/help/personal/how-can-i-email-any-queries-or-issues-related-to-my-caxton-card-or-international-payments",
+    "https://resources.caxton.io/help/personal/can-i-get-better-exchange-rates-on-bigger-money-transfer-volumes",
+    "https://resources.caxton.io/help/business-international-payments"
   ],
   "quotes": [
     {
       "topic": "safeguarding",
+      "text": "4.2 Caxton holds all client money in accordance with the Financial Conduct Authority's (FCA) Client Money rules and the Payment Services rules for safeguarding.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"
+    },
+    {
+      "topic": "fees",
+      "text": "9.2 In the event that We make any charges, You authorise Us to deduct those charges from the Payment Transaction before sending it.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "9. Fees and Charges"
+    },
+    {
+      "topic": "fees",
+      "text": "£25 – SWIFT payment detail amendment £25 – To trace a payment sent £25 – To attempt to recall a payment already sent £50 – Administration fee for late settlement of a payment instruction, plus £20 per day.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "9. Fees and Charges"
+    },
+    {
+      "topic": "speed",
+      "text": "10.3 We will execute Payment Transactions so that the amount to be transferred reaches the Recipient's payment service provider no later than the end of the next business day if the payment is within the EEA or by the third business day for payments outside of the EEA after settlement date of the Order.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"
+    },
+    {
+      "topic": "safeguarding",
       "text": "Funds held in safeguarded accounts whether it's your working capital or client money .",
       "url": "https://caxton.io/"
-    },
-    {
-      "topic": "countries",
-      "text": "Pay suppliers, receive third-party currencies and move funds between entities in 28+ currencies.",
-      "url": "https://caxton.io/services/international-payments"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Funds safeguarded in segregated accounts",
-      "url": "https://caxton.io/services/international-payments"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Your money and data are protected with robust safeguards and strict compliance standards at every step.",
-      "url": "https://caxton.io/solutions/personal-money-transfer"
-    },
-    {
-      "topic": "countries",
-      "text": "Buy, hold and pay with over 30 currencies.",
-      "url": "https://caxton.io/personal/international-payments"
-    },
-    {
-      "topic": "countries",
-      "text": "Send from as little as £100 across 195 countries and territories across 30+ currencies.",
-      "url": "https://caxton.io/personal/international-payments"
-    },
-    {
-      "topic": "fees",
-      "text": "Enjoy competitive exchange rates and no fees.",
-      "url": "https://caxton.io/personal/international-payments"
-    },
-    {
-      "topic": "fees",
-      "text": "Pay a small, flat fee and percentage: When you send money abroad, you'll pay a small, flat fee of the amount converted, depending on the currency.",
-      "url": "https://caxton.io/personal/international-payments"
     }
-  ]
+  ],
+  "attempts": []
 }

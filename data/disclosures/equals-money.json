@@ -1,7 +1,7 @@
 {
   "slug": "equals-money",
-  "url": "https://equalsmoney.com/en-us/coming-soon",
-  "fetchedAt": "2026-10-05T12:27:38.320Z",
+  "url": "https://equalsmoney.com/",
+  "fetchedAt": "2026-10-08T02:03:27.002Z",
   "status": "found",
   "statements": [
     {
@@ -11,7 +11,7 @@
         "05539698",
         "08922461"
       ],
-      "url": "https://equalsmoney.com/terms-and-conditions"
+      "url": "https://equalsmoney.com/faqs/what-currencies-do-you-offer-for-international-payments"
     }
   ]
 }

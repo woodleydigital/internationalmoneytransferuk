@@ -1,22 +1,26 @@
 {
   "slug": "virgin-money",
-  "fetchedAt": "2026-10-05T12:32:51.420Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T01:57:36.148Z",
+  "status": "found",
   "pages": [
+    "https://uk.virginmoney.com/current-accounts/making-payments/",
     "https://uk.virginmoney.com/",
+    "https://uk.virginmoney.com/current-accounts/fees-and-charges/",
     "https://uk.virginmoney.com/vmforms/feedback-form/",
     "https://uk.virginmoney.com/service/support-hub/",
     "https://uk.virginmoney.com/current-accounts/existing-customers/",
     "https://uk.virginmoney.com/savings/helpful-information/",
     "https://uk.virginmoney.com/redi/",
     "https://uk.virginmoney.com/current-accounts/pca/app-features/",
-    "https://uk.virginmoney.com/",
-    "https://uk.virginmoney.com/vmforms/feedback-form/",
-    "https://uk.virginmoney.com/service/support-hub/",
-    "https://uk.virginmoney.com/current-accounts/existing-customers/",
-    "https://uk.virginmoney.com/savings/helpful-information/",
-    "https://uk.virginmoney.com/redi/",
-    "https://uk.virginmoney.com/current-accounts/pca/app-features/"
+    "https://uk.virginmoney.com/savings/helpful-information/financial-difficulty/",
+    "https://uk.virginmoney.com/savings/helpful-information/useful-downloads/"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "availability",
+      "text": "If your sort code starts 08, you can’t receive international payments to your account.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/"
+    }
+  ],
+  "attempts": []
 }

@@ -1,22 +1,27 @@
 {
   "slug": "danske-bank",
-  "fetchedAt": "2026-10-05T12:47:27.588Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:05:31.087Z",
+  "status": "found",
   "pages": [
+    "https://danskebank.co.uk/personal/help/payments/foreign-payments",
     "https://danskebank.co.uk/personal",
-    "https://danskebank.co.uk/personal/help/going-abroad",
     "https://danskebank.co.uk/personal/help/feedback",
     "https://danskebank.co.uk/personal/products/current-accounts/overdrafts/cost-calculator",
     "https://danskebank.co.uk/business/help/rising-cost-of-doing-business",
     "https://danskebank.co.uk/personal/help/money-worries/managing-repayments/support-with-your-mortgage-repayments",
     "https://danskebank.co.uk/personal/help/glossary-terms",
-    "https://danskebank.co.uk/personal",
-    "https://danskebank.co.uk/personal/help/going-abroad",
-    "https://danskebank.co.uk/personal/help/feedback",
-    "https://danskebank.co.uk/business/help/rising-cost-of-doing-business",
-    "https://danskebank.co.uk/personal/products/current-accounts/overdrafts/cost-calculator",
-    "https://danskebank.co.uk/personal/help/money-worries/managing-repayments/support-with-your-mortgage-repayments",
-    "https://danskebank.co.uk/personal/help/glossary-terms"
+    "https://danskebank.co.uk/personal/help",
+    "https://danskebank.co.uk/personal/help/upload-your-documents",
+    "https://danskebank.co.uk/personal/help/useful-numbers",
+    "https://danskebank.co.uk/personal/help/cards/cards-faq",
+    "https://danskebank.co.uk/personal/help/money-worries"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "If you hold a Danske account abroad, you can transfer funds into it, free of charge, using eBanking.",
+      "url": "https://danskebank.co.uk/personal/help/payments/foreign-payments"
+    }
+  ],
+  "attempts": []
 }

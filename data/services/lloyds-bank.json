@@ -1,10 +1,64 @@
 {
   "slug": "lloyds-bank",
-  "fetchedAt": "2026-10-05T12:34:54.538Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T01:58:05.696Z",
+  "status": "found",
   "pages": [
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
     "https://www.lloydsbank.com/",
-    "https://www.lloydsbank.com/"
+    "https://www.lloydsbank.com/international.html",
+    "https://www.lloydsbank.com/help-guidance/how-to-complain.html",
+    "https://www.lloydsbank.com/wealth-management/pricing.html",
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/payment-limits.html",
+    "https://www.lloydsbank.com/media-centre/house-price-index.html",
+    "https://www.lloydsbank.com/help-guidance/accessibility.html",
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/mobile-banking-app.html",
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/mobile-banking-app/app-download.html",
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/mobile-banking-app/biometrics.html",
+    "https://www.lloydsbank.com/help-guidance/everyday-banking/mobile-banking-app/mobile-app-notifications.html"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "limits",
+      "text": "Send up to £100,000 per day in the app or online banking.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "Limits"
+    },
+    {
+      "topic": "limits",
+      "text": "Send up to £10,000 through Telephone Banking.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "Limits"
+    },
+    {
+      "topic": "speed",
+      "text": "No later than the next working day.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "When the money will reach the recipient"
+    },
+    {
+      "topic": "speed",
+      "text": "In that case, this will be on the next working day.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "When the money will reach the recipient"
+    },
+    {
+      "topic": "fees",
+      "text": "This means you’ll only pay our £9.50 fee and the person you’re sending money to will pay any other fees.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "Other fees"
+    },
+    {
+      "topic": "fees",
+      "text": "The recipient’s bank may still charge a fee before they pay the money into the recipient’s account.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "Other fees"
+    },
+    {
+      "topic": "fees",
+      "text": "To send a payment this way in a branch or over the phone, you’d pay our £9.50 fee and the Correspondent Bank fee in the following section.",
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/payments-and-transfers/send-international-payment.html",
+      "context": "Other fees"
+    }
+  ],
+  "attempts": []
 }

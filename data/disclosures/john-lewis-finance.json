@@ -1,8 +1,26 @@
 {
   "slug": "john-lewis-finance",
   "url": "https://www.johnlewisfinance.com/",
-  "fetchedAt": "2026-10-05T12:17:05.634Z",
-  "status": "error",
-  "statements": [],
-  "error": "The operation was aborted due to timeout"
+  "fetchedAt": "2026-10-08T02:15:46.081Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "For UK clients: International Payments are provided by HiFX Europe Limited. HiFX is authorised by the Financial Conduct Authority under the Payment Services Regulations 2017 (firm reference number: 462444), for the provision of payment services. HiFX is a limited company registered in England and Wales (company number: 3517451). Registered office: 1 Arlington Square, Downshire Way, Bracknell, RG12 1WA, United Kingdom.",
+      "frns": [
+        "462444"
+      ],
+      "companyNumbers": [
+        "03517451"
+      ],
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb"
+    },
+    {
+      "text": "For EEA clients: International Payments are provided by XE Europe B.V.. XE Europe B.V. is authorised by the Dutch Central Bank (De Nederlandsche Bank) under the Payment Services Directive II (licence number R149006) for the provision of payment services. XE Europe B.V. is a limited company registered in The Netherlands (company number: 72587873). Registered office: Rozengracht 12,1, 1016NB Amsterdam, The Netherlands.",
+      "frns": [],
+      "companyNumbers": [
+        "72587873"
+      ],
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb"
+    }
+  ]
 }

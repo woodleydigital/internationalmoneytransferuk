@@ -33,7 +33,7 @@ const QUESTIONS: Record<ProviderKind, TransferQuestion[]> = {
 
 /** Questions are prompts, not claims that a product or feature exists. */
 export function transferQuestions(entry: Entry) {
-  return QUESTIONS[entry.provider.kind].map((q) => ({
+  return [...QUESTIONS[entry.provider.kind], { topic: "identity" as Topic, question: "Which identity, address and source-of-funds documents will you need for this transfer?" }].map((q) => ({
     ...q,
     hasQuotation: Boolean(entry.service?.quotes.some((quote) => quote.topic === q.topic)),
   }));

@@ -1,8 +1,83 @@
 {
   "slug": "mukuru",
-  "fetchedAt": "2026-10-05T12:38:40.502Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
-  "error": "HTTP 403"
+  "fetchedAt": "2026-10-08T02:00:30.497Z",
+  "status": "found",
+  "pages": [
+    "https://www.mukuru.com/en-uk/services/send-money/",
+    "https://www.mukuru.com/en-uk/help-support/faqs/",
+    "https://www.mukuru.com/en-uk/legal/mukuru-money-transfer-service/",
+    "https://www.mukuru.com/en-uk/",
+    "https://www.mukuru.com/en-uk/send-money/",
+    "https://www.mukuru.com/en-uk/send-money/angola/",
+    "https://www.mukuru.com/en-uk/send-money/botswana/",
+    "https://www.mukuru.com/en-uk/send-money/cameroon/",
+    "https://www.mukuru.com/en-uk/send-money/china/",
+    "https://www.mukuru.com/en-uk/send-money/european-union/",
+    "https://www.mukuru.com/en-uk/send-money/cote-divoire/",
+    "https://www.mukuru.com/en-uk/send-money/drc/"
+  ],
+  "quotes": [
+    {
+      "topic": "payout",
+      "text": "Whether you are sending cash for instant collection or topping up a bank account or mobile wallet, it has never been easier.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money"
+    },
+    {
+      "topic": "limits",
+      "text": "LITE users can send up to £600 per month.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/"
+    },
+    {
+      "topic": "limits",
+      "text": "Send up to £120,000 per calendar year on a MAX level by uploading your proof of income and proof of address documents.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Safeguarding means that we have to keep all of your money in accounts that are completely separate from the ones we use to run our business.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
+      "context": "What does Safeguarding mean?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Not only are your funds held in dedicated safeguarding accounts which Remitix Limited holds with banks in the UK, but we also use rigorous internal safeguarding measures and procedures designed to ensure that our customers, other counterparties, and the wider market are protected in the event of financial stress.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
+      "context": "What does Safeguarding mean?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "This ensures your funds are protected and can be returned to you in the unlikely event Remitix Limited stops providing its services.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
+      "context": "What does Safeguarding mean?"
+    },
+    {
+      "topic": "payout",
+      "text": "Whether you are sending cash for instant collection or topping up a bank account or mobile wallet, it has never been easier.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/"
+    },
+    {
+      "topic": "limits",
+      "text": "LITE users can send up to £600 per month.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
+      "context": "How much money can I send?"
+    },
+    {
+      "topic": "payout",
+      "text": "Digital Remittance is a Remittance which is paid to a Recipient by (i) money being deposited into their bank account; (ii) mobile money being credited to their mobile wallet; or (iii) digital money being credited to their digital wallet.",
+      "url": "https://www.mukuru.com/en-uk/legal/mukuru-money-transfer-service/"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to over 30 countries across Africa, Asia and Europe.",
+      "url": "https://www.mukuru.com/en-uk/",
+      "context": " Multiple Currencies "
+    },
+    {
+      "topic": "countries",
+      "text": "Send to over 60+ countries with the Mukuru App",
+      "url": "https://www.mukuru.com/en-uk/"
+    }
+  ],
+  "attempts": []
 }

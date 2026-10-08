@@ -1,18 +1,26 @@
 {
   "slug": "xoom-paypal",
-  "fetchedAt": "2026-10-05T12:39:34.251Z",
+  "fetchedAt": "2026-10-08T02:01:01.824Z",
   "status": "found",
   "pages": [
     "https://www.xoom.com/",
     "https://www.xoom.com/money-transfer",
-    "https://www.xoom.com/en-us/usd/send-money/transfer/select-country",
-    "https://www.xoom.com/protect-your-money"
+    "https://www.xoom.com/protect-your-money",
+    "https://help.xoom.com/s/contactsupport?language=en_US"
   ],
   "quotes": [
     {
-      "topic": "payout",
-      "text": "Send to mobile wallets, UPI, and PIX Send to Wallets",
-      "url": "https://www.xoom.com/"
+      "topic": "fees",
+      "text": "We’ll show you the exact fee and the amount they'll receive before you hit send.",
+      "url": "https://www.xoom.com/money-transfer",
+      "context": "Up front fees and rates"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://help.xoom.com/s/",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
     }
   ]
 }

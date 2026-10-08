@@ -1,6 +1,6 @@
 {
   "slug": "clear-currency",
-  "fetchedAt": "2026-10-05T12:41:35.474Z",
+  "fetchedAt": "2026-10-08T02:02:55.043Z",
   "status": "found",
   "pages": [
     "https://www.clearcurrency.co.uk/",
@@ -9,13 +9,48 @@
     "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/medical-treatment",
     "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/moving-abroad",
     "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/overseas-inheritance",
-    "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/overseas-pensions"
+    "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/overseas-pensions",
+    "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/retiring-overseas",
+    "https://www.clearcurrency.co.uk/send-money-abroad",
+    "https://www.clearcurrency.co.uk/send-money-abroad/australia",
+    "https://www.clearcurrency.co.uk/send-money-abroad/portugal",
+    "https://www.clearcurrency.co.uk/send-money-abroad/spain"
   ],
   "quotes": [
     {
       "topic": "countries",
       "text": "Make quick and secure currency transfers in 35 currencies that can be sent to 130+ countries.",
-      "url": "https://www.clearcurrency.co.uk/"
+      "url": "https://www.clearcurrency.co.uk/",
+      "context": "Send Money Abroad"
+    },
+    {
+      "topic": "countries",
+      "text": "If you’re looking for how to send money abroad, we support currency transfers in 35 currencies that can be sent to 130+ countries.",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad",
+      "context": "Send money to countries all over the world"
+    },
+    {
+      "topic": "payout",
+      "text": "All the steps from getting the rate to committing the funds and transfer payment to get released into the UK bank account in a simple and hassle free manner. \"",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We safeguard your funds and update you every step of an international money transfer, so you can keep track of your currency.",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad"
+    },
+    {
+      "topic": "payout",
+      "text": "Your transfer will then take between 2 to 3 working days to the Australian bank account.",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad/australia",
+      "context": "3. Transfer funds"
+    },
+    {
+      "topic": "payout",
+      "text": "Your transfer will then take up to 1 working day to or from the Italian bank account.",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad/portugal",
+      "context": "3. Transfer funds"
     }
-  ]
+  ],
+  "attempts": []
 }

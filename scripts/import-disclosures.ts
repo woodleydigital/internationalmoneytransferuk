@@ -13,9 +13,10 @@
  *
  *   CHROMIUM_PATH — optional path to a Chromium binary for the renderer
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { PROVIDERS } from "../lib/providers.ts";
+import { SERVICE_PAGES, isProviderSource } from "../lib/provider-sources.ts";
 import {
   findLegalLinks,
   findStatements,
@@ -28,6 +29,7 @@ import {
 
 const UA = "IMTUKDirectoryBot/1.0 (+https://internationalmoneytransfer.uk/methodology/)";
 const OUT = join(process.cwd(), "data", "disclosures");
+const SNAPSHOTS = process.env.IMT_SOURCE_CACHE_DIR;
 mkdirSync(OUT, { recursive: true });
 
 const pause = () => new Promise((r) => setTimeout(r, 500));
@@ -44,10 +46,9 @@ const robotsCache = new Map<string, string>();
 async function allowed(url: string): Promise<boolean> {
   const u = new URL(url);
   if (!robotsCache.has(u.origin)) {
-    robotsCache.set(
-      u.origin,
-      await get(`${u.origin}/robots.txt`).then((r) => (r.ok ? r.text() : ""), () => ""),
-    );
+    const r = await get(`${u.origin}/robots.txt`);
+    if (!r.ok && (r.status < 400 || r.status >= 500 || r.status === 429)) throw new Error(`robots.txt HTTP ${r.status}`);
+    robotsCache.set(u.origin, r.ok ? await r.text() : "");
   }
   return robotsAllows(robotsCache.get(u.origin)!, u.pathname);
 }
@@ -86,16 +87,16 @@ async function rendered(url: string): Promise<{ html: string; text: string; url:
 }
 
 /** Read a page and its legal links through the renderer. */
-async function renderedStatements(start: string): Promise<Statement[]> {
+async function renderedStatements(start: string, slug: string): Promise<Statement[]> {
   const out: Statement[] = [];
   const home = await rendered(start);
-  if (!home) return out;
+  if (!home || !isProviderSource(home.url, start, slug)) return out;
   merge(out, findStatements(home.text));
   if (!out.some((s) => s.companyNumbers.length)) {
     for (const link of findLegalLinks(home.html, home.url)) {
-      if (!(await allowed(link))) continue;
+      if (!(await allowed(link).catch(() => false))) continue;
       const sub = await rendered(link);
-      if (sub) merge(out, findStatements(sub.text), sub.url);
+      if (sub && isProviderSource(sub.url, start, slug)) merge(out, findStatements(sub.text), sub.url);
       if (out.some((s) => s.companyNumbers.length)) break;
     }
   }
@@ -128,13 +129,32 @@ for (const p of PROVIDERS) {
   };
   const hasNumber = () => rec.statements.some((s) => s.companyNumbers.length);
   let homeHtml = "";
+  // The service import has already read these allowed official pages. Reuse
+  // their complete HTML and actual fetch dates, including regulatory footers.
+  const snapshots: { html: string; url: string; fetchedAt: string }[] = [];
+  if (SNAPSHOTS && existsSync(SNAPSHOTS)) {
+    for (const file of readdirSync(SNAPSHOTS).filter((f) => f.startsWith(`${p.slug}-`) && f.endsWith(".json"))) {
+      try {
+        const page = JSON.parse(readFileSync(join(SNAPSHOTS, file), "utf8"));
+        const age = Date.now() - Date.parse(page.fetchedAt);
+        if (age >= 0 && age < 86_400_000 && isProviderSource(page.url, p.website, p.slug)) snapshots.push(page);
+      } catch { /* Invalid snapshot is not a source. */ }
+    }
+  }
+  const home = snapshots.find((s) => new URL(s.url).pathname === new URL(p.website!).pathname);
   try {
-    if (!(await allowed(p.website))) {
+    if (home) {
+      rec.url = home.url;
+      homeHtml = home.html;
+      rec.fetchedAt = home.fetchedAt;
+      merge(rec.statements, findStatements(htmlToText(homeHtml)));
+    } else if (!(await allowed(p.website))) {
       rec.status = "blocked";
       rec.error = "robots.txt disallows this page";
     } else {
       const res = await get(p.website);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!isProviderSource(res.url || p.website, p.website, p.slug)) throw new Error("Homepage redirected to another provider domain");
       rec.url = res.url || p.website;
       homeHtml = await res.text();
       merge(rec.statements, findStatements(htmlToText(homeHtml)));
@@ -143,6 +163,14 @@ for (const p of PROVIDERS) {
     rec.status = "error";
     rec.error = e instanceof Error ? e.message : String(e);
   }
+  for (const page of snapshots) {
+    merge(rec.statements, findStatements(htmlToText(page.html)), home?.url === page.url ? undefined : page.url);
+  }
+  if (rec.statements.length) {
+    rec.status = "found";
+    delete rec.error;
+    if (snapshots.length) rec.fetchedAt = snapshots.map((s) => s.fetchedAt).concat(rec.fetchedAt).sort()[0];
+  }
 
   // No company number yet: try configured statement pages, the homepage's own
   // legal links, then the usual legal paths on the same site.
@@ -150,15 +178,17 @@ for (const p of PROVIDERS) {
     const origin = new URL(rec.url).origin;
     const candidates = [
       ...(p.statementPages ?? []),
+      ...(SERVICE_PAGES[p.slug] ?? []),
       ...(homeHtml ? findLegalLinks(homeHtml, rec.url) : []),
       ...COMMON_LEGAL_PATHS.map((path) => origin + path),
-    ].filter((u, i, all) => all.indexOf(u) === i && new URL(u).hostname.endsWith(new URL(p.website!).hostname.replace(/^www\./, "")));
+    ].filter((u, i, all) => all.indexOf(u) === i && isProviderSource(u, p.website!, p.slug));
     for (const link of candidates.slice(0, 10)) {
       await pause();
-      if (!(await allowed(link))) continue;
       try {
+        if (!(await allowed(link))) continue;
         const sub = await get(link);
         if (!sub.ok || !(sub.headers.get("content-type") ?? "").includes("html")) continue;
+        if (!isProviderSource(sub.url || link, p.website, p.slug)) continue;
         merge(rec.statements, findStatements(htmlToText(await sub.text())), sub.url || link);
       } catch {
         // One unreachable page does not invalidate the others.
@@ -185,7 +215,7 @@ for (const p of PROVIDERS) {
   }
   // Nothing in the plain HTML (or it could not be fetched): try the rendered page.
   if ((rec.status === "none" || rec.status === "error") && (await allowed(p.website).catch(() => false))) {
-    const found = await renderedStatements(p.website);
+    const found = await renderedStatements(p.website, p.slug);
     if (found.length) {
       rec.statements = found;
       rec.status = "found";

@@ -1,26 +1,39 @@
 {
   "slug": "ofx",
-  "fetchedAt": "2026-10-05T12:35:20.365Z",
+  "fetchedAt": "2026-10-08T01:58:43.404Z",
   "status": "found",
   "pages": [
+    "https://www.ofx.com/en-gb/faqs/",
+    "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
     "https://www.ofx.com/en-gb/",
-    "https://www.ofx.com/en-gb/business/international-payments/",
-    "https://www.ofx.com/en-gb/swift-codes/",
-    "https://www.ofx.com/en-gb/blog/currency-corridors-international-payment-costs/",
     "https://www.ofx.com/en-gb/send-money/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/forward-contracts/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/limit-orders/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/regular-payments/",
     "https://www.ofx.com/en-gb/personal/reasons-for-transfer/family/",
-    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/emigration/"
+    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/emigration/",
+    "https://www.ofx.com/en-gb/blog/guide-to-paying-taxes-abroad/"
   ],
   "quotes": [
     {
-      "topic": "countries",
-      "text": "Global Business Account Receive, hold and spend in 30+ currencies",
-      "url": "https://www.ofx.com/en-gb/"
+      "topic": "payout",
+      "text": "How to Transfer Money from One Bank Account to Another",
+      "url": "https://www.ofx.com/en-gb/faqs/",
+      "context": "What are my transfer options with OFX?"
     },
     {
-      "topic": "countries",
-      "text": "Payments & Transfer Manage global payments to 180+ countries",
-      "url": "https://www.ofx.com/en-gb/"
+      "topic": "fees",
+      "text": "When transferring with OFX United Kingdom, there are no transfer fees.",
+      "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
+      "context": "Are there any transfer fees?"
+    },
+    {
+      "topic": "fees",
+      "text": "Third-party banks may deduct a fee from your transfer before paying your recipient.",
+      "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
+      "context": "Are there any transfer fees?"
     },
     {
       "topic": "countries",
@@ -28,14 +41,46 @@
       "url": "https://www.ofx.com/en-gb/"
     },
     {
-      "topic": "fees",
-      "text": "They also come with low or no transfer fees .",
+      "topic": "countries",
+      "text": "Send money to 180+ countries",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "International money transfers."
+    },
+    {
+      "topic": "countries",
+      "text": "Take advantage of a great introductory rate across these 7 currencies on your first personal transfer when booked online.",
       "url": "https://www.ofx.com/en-gb/send-money/"
     },
     {
       "topic": "fees",
-      "text": "With our global network of about 115 bank accounts, you can send money back home quickly, with great rates and minimal or zero fees.",
-      "url": "https://www.ofx.com/en-gb/send-money/"
+      "text": "They also come with low or no transfer fees .",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How do I send my money at a good rate?"
+    },
+    {
+      "topic": "speed",
+      "text": "The time it takes for us to transfer the funds to your recipient depends on the country, but in most cases, it takes 1-2 business days.",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How long does it take to send money internationally?"
+    },
+    {
+      "topic": "payout",
+      "text": "Whether it’s a gift or a lifeline, OFX can send money directly to your friend’s bank account.",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How can I send money to a friend?"
+    },
+    {
+      "topic": "payout",
+      "text": "Whether it’s a gift or a lifeline, send it straight to their bank accounts.",
+      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+      "context": "Send money to friends and family overseas"
+    },
+    {
+      "topic": "speed",
+      "text": "Once we’ve received your funds, most transfers to major currencies, like euros or US dollars, are made within 1 to 2 business days.",
+      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+      "context": "How long will it take for the funds to get to my recipient?"
     }
-  ]
+  ],
+  "attempts": []
 }

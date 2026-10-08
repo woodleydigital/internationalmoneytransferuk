@@ -1,22 +1,58 @@
 {
   "slug": "santander",
-  "fetchedAt": "2026-10-05T12:35:26.723Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T01:58:54.544Z",
+  "status": "found",
   "pages": [
+    "https://www.santander.co.uk/personal/support/ways-to-bank/payments-and-transfers",
     "https://www.santander.co.uk/",
     "https://www.santander.co.uk/personal/current-accounts/santander-edge-student-current-account/international-student",
     "https://www.santander.co.uk/personal/support/helping-you-when-travelling-abroad",
+    "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
     "https://www.santander.co.uk/personal/savings-and-investments/savings/limited-access-saver",
-    "https://www.santander.co.uk/personal/credit-cards/everyday-credit-card",
     "https://www.santander.co.uk/personal/savings-and-investments/investments/fees-charges-and-key-documents",
-    "https://www.santander.co.uk/landing/insurance/home-insurance",
-    "https://www.santander.co.uk/",
-    "https://www.santander.co.uk/personal/current-accounts/santander-edge-student-current-account/international-student",
-    "https://www.santander.co.uk/personal/support/helping-you-when-travelling-abroad",
-    "https://www.santander.co.uk/personal/savings-and-investments/savings/limited-access-saver",
-    "https://www.santander.co.uk/personal/credit-cards/everyday-credit-card",
-    "https://www.santander.co.uk/personal/savings-and-investments/investments/fees-charges-and-key-documents",
-    "https://www.santander.co.uk/landing/insurance/home-insurance"
+    "https://www.santander.co.uk/mobiledemo/manage-payment-limit",
+    "https://www.santander.co.uk/personal/support/rising-energy-costs-what-you-can-do",
+    "https://www.santander.co.uk/personal/support/help-with-managing-my-money/my-money-manager",
+    "https://www.santander.co.uk/personal/support/insurance",
+    "https://www.santander.co.uk/personal/support/customer-support/help-with-emergencies"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "speed",
+      "text": "For payments in EUR and USD, funds can arrive on the same day if sent before our cut-off time.",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": " Santander customers can make 3 types of international payments: "
+    },
+    {
+      "topic": "fees",
+      "text": "You can send money to friends and family abroad from your Santander Edge® current account, Santander Edge® Up current account or Santander Edge® Explorer current account with no extra fees from us for the international payment.",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": " Santander customers can make 3 types of international payments: "
+    },
+    {
+      "topic": "speed",
+      "text": "Money arrives next working day subject to cut-off times.",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": " Santander customers can make 3 types of international payments: "
+    },
+    {
+      "topic": "fees",
+      "text": "For more information on cut-off times see the Electronic transfers and electronic European transfers section No fee charged",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": " Santander customers can make 3 types of international payments: "
+    },
+    {
+      "topic": "speed",
+      "text": "For payments in EUR and USD, funds can arrive on the same day if sent before our cut-off time.",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": "Electronic transfers and electronic euro transfers"
+    },
+    {
+      "topic": "fees",
+      "text": "When you ask for a foreign-currency draft we charge you £10.",
+      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
+      "context": "How do I ask for a foreign-currency cheque or draft?"
+    }
+  ],
+  "attempts": []
 }

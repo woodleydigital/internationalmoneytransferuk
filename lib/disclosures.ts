@@ -77,6 +77,7 @@ const ENTITIES: Record<string, string> = {
 /** Visible text of an HTML page: scripts, styles and tags removed, entities decoded. */
 export function htmlToText(html: string): string {
   return html
+    .replace(/[\r\n\t]+/g, " ")
     .replace(/<(script|style|noscript|template|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, " ")
     .replace(/<!--[\s\S]*?-->/g, " ")
     .replace(/<(br|p|div|li|tr|h[1-6]|footer|section|address)\b[^>]*>/gi, "\n")
@@ -211,28 +212,27 @@ export function statedCompanyNumbers(rec: DisclosureRecord | null): string[] {
 
 /** Minimal robots.txt check for our user agent against a path. */
 export function robotsAllows(robotsTxt: string, path: string, agent = "IMTUKDirectoryBot"): boolean {
-  let applies = false;
-  let anyMatched = false;
-  const rules: { allow: boolean; path: string }[] = [];
-  const specific: { allow: boolean; path: string }[] = [];
-  let current: "star" | "us" | null = null;
+  type Rule = { allow: boolean; path: string };
+  const groups: { agents: string[]; rules: Rule[] }[] = [];
+  let current = { agents: [] as string[], rules: [] as Rule[] };
   for (const raw of robotsTxt.split(/\r?\n/)) {
     const line = raw.replace(/#.*/, "").trim();
     const m = line.match(/^(user-agent|allow|disallow)\s*:\s*(.*)$/i);
     if (!m) continue;
     const [, key, value] = m;
     if (key.toLowerCase() === "user-agent") {
-      const v = value.toLowerCase();
-      current = v === "*" ? "star" : agent.toLowerCase().includes(v) ? "us" : null;
-      if (current === "us") anyMatched = true;
-      applies = current !== null;
+      if (current.rules.length) { groups.push(current); current = { agents: [], rules: [] }; }
+      current.agents.push(value.toLowerCase());
       continue;
     }
-    if (!applies || value === "") continue;
-    const rule = { allow: key.toLowerCase() === "allow", path: value };
-    (current === "us" ? specific : rules).push(rule);
+    if (!current.agents.length) continue;
+    // Even an empty Disallow ends the user-agent list for this group.
+    current.rules.push({ allow: key.toLowerCase() === "allow", path: value });
   }
-  const set = anyMatched ? specific : rules;
+  groups.push(current);
+  const matched = groups.map((g) => ({ ...g, score: Math.max(-1, ...g.agents.map((a) => a === "*" ? 0 : a && agent.toLowerCase().includes(a) ? a.length : -1)) }));
+  const specificity = Math.max(-1, ...matched.map((g) => g.score));
+  const set = matched.filter((g) => specificity >= 0 && g.score === specificity).flatMap((g) => g.rules).filter((r) => r.path);
   // Robots paths are prefixes with "*" wildcards and an optional "$" end anchor.
   const toRe = (p: string) =>
     new RegExp(
@@ -244,6 +244,7 @@ export function robotsAllows(robotsTxt: string, path: string, agent = "IMTUKDire
     );
   const hits = set.filter((r) => toRe(r.path).test(path));
   if (!hits.length) return true;
-  const longest = hits.reduce((a, b) => (b.path.length > a.path.length ? b : a));
+  const length = (r: Rule) => r.path.replace(/[*$]/g, "").length;
+  const longest = hits.reduce((a, b) => length(b) > length(a) || (length(b) === length(a) && b.allow) ? b : a);
   return longest.allow;
 }

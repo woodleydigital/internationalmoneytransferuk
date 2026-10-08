@@ -1,10 +1,64 @@
 {
   "slug": "halifax",
-  "fetchedAt": "2026-10-05T12:37:50.218Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:00:08.341Z",
+  "status": "found",
   "pages": [
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
     "https://www.halifax.co.uk/",
-    "https://www.halifax.co.uk/"
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/receiving-a-payment.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/payment-limits.html",
+    "https://www.halifax.co.uk/helpcentre/complaints.html",
+    "https://www.halifax.co.uk/bankaccounts/help-guidance/interest-rates-fees.html",
+    "https://www.halifax.co.uk/isas/isas-explained/isa-allowance.html",
+    "https://www.halifax.co.uk/wealth-management/pricing.html",
+    "https://www.halifax.co.uk/helpcentre/accessibility.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/mobile-banking-app.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/mobile-banking-app/biometrics.html"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "limits",
+      "text": "Send up to £100,000 a day through Online Banking.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": " How much you can send expandable section "
+    },
+    {
+      "topic": "limits",
+      "text": "There is no maximum limit.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": " How much you can send expandable section "
+    },
+    {
+      "topic": "limits",
+      "text": "Send up to £10,000 through Telephone Banking.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": " How much you can send expandable section "
+    },
+    {
+      "topic": "fees",
+      "text": "This means you’ll only pay our £9.50 fee and the person you’re sending money to will pay any other fees.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Other fees"
+    },
+    {
+      "topic": "fees",
+      "text": "Please note, the recipient’s bank may still charge a fee before they pay the money into the recipient’s account.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Other fees"
+    },
+    {
+      "topic": "fees",
+      "text": "To send a payment this way in branch or over the phone, you’d pay our £9.50 fee and the Correspondent Bank fee shown below.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Other fees"
+    },
+    {
+      "topic": "speed",
+      "text": "No later than the next working day",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "When the money will reach the recipient"
+    }
+  ],
+  "attempts": []
 }

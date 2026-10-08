@@ -1,17 +1,39 @@
 {
   "slug": "coutts",
-  "fetchedAt": "2026-10-05T12:48:23.282Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:05:43.004Z",
+  "status": "found",
   "pages": [
+    "https://www.coutts.com/help-centre/my-coutts/payments/international-payments.html",
+    "https://www.coutts.com/help-centre/my-coutts/payments/international-payments/What-are-the-cut-off-times-and-credit-value-dates-for-international-payments.html",
     "https://www.coutts.com/",
     "https://www.coutts.com/why-coutts/who-we-serve/international.html",
     "https://www.coutts.com/rates-and-prices.html",
     "https://www.coutts.com/help-centre.html",
-    "https://www.coutts.com/",
-    "https://www.coutts.com/why-coutts/who-we-serve/international.html",
-    "https://www.coutts.com/insights/personal-finance/structuring-overseas-assets-for-long-term-success.html",
-    "https://www.coutts.com/rates-and-prices.html",
-    "https://www.coutts.com/help-centre.html"
+    "https://www.coutts.com/help-centre/my-coutts.html",
+    "https://www.coutts.com/wealth-management/investing/funds/coutts-managed-funds.html",
+    "https://www.coutts.com/wealth-management/investing/funds/personal-portfolio-funds.html",
+    "https://www.coutts.com/help-centre/coutts-online.html",
+    "https://www.coutts.com/help-centre/investment-faqs.html"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "speed",
+      "text": "The payment should reach the recipient in one to three days however, some payments may take up to five days to arrive with the recipients depending on currency type and destination.",
+      "url": "https://www.coutts.com/help-centre/my-coutts/payments/international-payments.html",
+      "context": "What are the cut off times and credit value dates for international payments?"
+    },
+    {
+      "topic": "fees",
+      "text": "The margin will be shown as a separate fee in the review screen, before you complete the payment.",
+      "url": "https://www.coutts.com/rates-and-prices.html",
+      "context": "Making international payments"
+    },
+    {
+      "topic": "fees",
+      "text": "Coutts charge a maximum of 1% commission on all FX transactions.",
+      "url": "https://www.coutts.com/rates-and-prices.html",
+      "context": "Making international payments"
+    }
+  ],
+  "attempts": []
 }

@@ -1,66 +1,109 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-10-05T12:36:04.422Z",
+  "fetchedAt": "2026-10-08T01:59:13.057Z",
   "status": "found",
   "pages": [
-    "https://wise.com/gb/",
-    "https://wise.com/gb/account/",
-    "https://wise.com/gb/send-money/",
-    "https://wise.com/gb/business/",
-    "https://wise.com/gb/business/send-payments",
     "https://wise.com/register",
+    "https://wise.com/gb/send-money/send-money-to-germany",
+    "https://wise.com/gb/send-money/send-money-to-europe",
+    "https://wise.com/gb/send-money/send-money-to-brazil",
+    "https://wise.com/gb/send-money/send-money-to-canada",
+    "https://wise.com/gb/send-money/send-money-to-australia",
+    "https://wise.com/gb/send-money/send-money-to-india",
+    "https://wise.com/gb/send-money/send-money-to-france",
+    "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
+    "https://wise.com/gb/",
+    "https://wise.com/help/",
+    "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
+    "https://wise.com/help/articles/2524078/how-long-will-my-transfer-take",
+    "https://wise.com/help/articles/2932149/guide-to-eur-transfers",
+    "https://wise.com/help/articles/2932338/guide-to-chf-transfers",
+    "https://wise.com/help/articles/2932154/guide-to-aud-transfers",
+    "https://wise.com/help/articles/2932342/guide-to-sek-transfers",
+    "https://wise.com/help/articles/2932343/guide-to-pln-transfers",
+    "https://wise.com/gb/account/",
     "https://wise.com/gb/send-money/"
   ],
   "quotes": [
+    {
+      "topic": "fees",
+      "text": "Pay less when you send over 20,000 GBP or equivalent — fees from 0.1% .",
+      "url": "https://wise.com/gb/send-money/send-money-to-germany",
+      "context": "Larger transfers. Lower fees. Premium support."
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
+      "url": "https://wise.com/gb/send-money/send-money-to-germany",
+      "context": "Secure money transfers to Germany"
+    },
+    {
+      "topic": "payout",
+      "text": "When you transfer with Wise, you can receive to local bank accounts — no need for a Wise account.",
+      "url": "https://wise.com/gb/send-money/send-money-to-germany"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
+      "url": "https://wise.com/gb/send-money/send-money-to-europe",
+      "context": "Secure money transfers to Europe"
+    },
+    {
+      "topic": "fees",
+      "text": "Pay less when you send over 20,000 GBP or equivalent.",
+      "url": "https://wise.com/gb/send-money/send-money-to-brazil",
+      "context": "Larger transfers. Lower fees. Premium support."
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
+      "url": "https://wise.com/gb/send-money/send-money-to-brazil",
+      "context": "Secure money transfers to Brazil"
+    },
+    {
+      "topic": "speed",
+      "text": "Once Wise receives and converts your money, it usually arrives in your recipient’s bank account on the same working day.",
+      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers"
+    },
+    {
+      "topic": "speed",
+      "text": "It usually takes seconds, but rarely it can take up to 1 working day, for your money to get to Wise, depending on how you pay for your transfer.",
+      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers"
+    },
+    {
+      "topic": "speed",
+      "text": "Bank transfers take up to 1 working day",
+      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers"
+    },
     {
       "topic": "countries",
       "text": "Get everything you need to pay, get paid, and manage your money in 40+ currencies — all in one place.",
       "url": "https://wise.com/gb/"
     },
     {
-      "topic": "safeguarding",
-      "text": "Your money is held in a safeguarded, separate account.",
-      "url": "https://wise.com/gb/"
+      "topic": "payout",
+      "text": "With Wise, you can send British pounds (GBP) to bank accounts in countries outside of the UK.",
+      "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
+      "context": "Sending GBP to countries outside of the UK"
     },
     {
-      "topic": "countries",
-      "text": "Send, spend and manage your money across 150+ countries and earn a game-changing return.",
-      "url": "https://wise.com/gb/account/"
-    },
-    {
-      "topic": "speed",
-      "text": "74% of transfers arrive in under 20 seconds, 95% in a day.",
-      "url": "https://wise.com/gb/account/"
+      "topic": "payout",
+      "text": "You can also now send GBP to bank accounts in the UK that Wise otherwise can’t support.",
+      "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
+      "context": "Sending GBP to countries outside of the UK"
     },
     {
       "topic": "fees",
       "text": "Join over 18.9 million people sending money abroad — with fees as low as 0.1% .",
-      "url": "https://wise.com/gb/send-money/"
-    },
+      "url": "https://wise.com/gb/send-money/",
+      "context": "International money transfers"
+    }
+  ],
+  "attempts": [
     {
-      "topic": "fees",
-      "text": "Pay less when you send over 20,000 GBP or equivalent — fees from 0.1% .",
-      "url": "https://wise.com/gb/send-money/"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
-      "url": "https://wise.com/gb/send-money/"
-    },
-    {
-      "topic": "speed",
-      "text": "Sending money with Wise is super fast: 74% of transfers arrive in under 20 seconds, and 95% in less than a day.",
-      "url": "https://wise.com/gb/send-money/"
-    },
-    {
-      "topic": "fees",
-      "text": "Accept payments — in USD, EUR, GBP and other major currencies with no hidden fees.",
-      "url": "https://wise.com/gb/business/"
-    },
-    {
-      "topic": "countries",
-      "text": "Pay teams and suppliers in 160+ countries with fast, scalable payments at the mid-market exchange rate.",
-      "url": "https://wise.com/gb/business/send-payments"
+      "url": "https://www.wise.com/pricing",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
     }
   ]
 }

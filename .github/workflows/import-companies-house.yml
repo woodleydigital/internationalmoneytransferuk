@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: "17 5 * * 1" # Mondays 05:17 UTC
   workflow_dispatch:
+  push:
+    branches: ["claude/imt-uk-website-mtiy91"]
+    paths:
+      - "lib/providers.ts"
+      - "lib/provider-sources.ts"
 
 permissions:
   contents: write
@@ -30,10 +35,16 @@ jobs:
       - run: npm test
       - name: Install Chromium for JavaScript-rendered provider pages
         run: npx playwright install --with-deps chromium
-      - name: Read provider regulatory statements
-        run: npm run import:disclosures
       - name: Read provider service details
+        env:
+          IMT_SOURCE_CACHE_DIR: ${{ runner.temp }}/imt-provider-sources
         run: npm run import:services
+      - name: Read provider regulatory statements
+        env:
+          IMT_SOURCE_CACHE_DIR: ${{ runner.temp }}/imt-provider-sources
+        run: npm run import:disclosures
+      - name: Read explicit brand notices
+        run: npm run import:notices
       - name: Refresh provider logos
         run: npm run import:logos
       - name: Import Companies House
@@ -53,7 +64,7 @@ jobs:
         run: |
           git config user.name "imt-uk-data-bot"
           git config user.email "imt-uk-data-bot@users.noreply.github.com"
-          git add data/disclosures data/companies-house data/company-extras data/changes data/services data/fos data/logos.json public/logos
+          git add data/disclosures data/companies-house data/company-extras data/changes data/services data/notices data/fos data/logos.json public/logos
           if git diff --cached --quiet; then
             echo "No changes."
           else

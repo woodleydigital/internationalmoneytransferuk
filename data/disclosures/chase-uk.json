@@ -1,7 +1,7 @@
 {
   "slug": "chase-uk",
-  "url": "https://www.chase.co.uk/gb/en/",
-  "fetchedAt": "2026-10-05T12:27:57.981Z",
+  "url": "https://www.chase.co.uk/",
+  "fetchedAt": "2026-10-08T02:06:21.428Z",
   "status": "found",
   "statements": [
     {
@@ -11,14 +11,8 @@
       ],
       "companyNumbers": [
         "00938937"
-      ]
-    },
-    {
-      "text": "J.P. Morgan Personal Investing is a J.P. Morgan company which offers investment products. Investments not guaranteed by Chase or JPMorgan Chase Bank, N.A. J.P. Morgan Personal Investing is a trading name of J.P. Morgan Personal Investing Limited, authorised and regulated by the Financial Conduct Authority in relation to certain investment services and restricted advice only. Financial Services Register: 552016. Registered in England & Wales with company number 07503666. Registered office: 25 Bank St, Canary Wharf, London E14 5JP.",
-      "frns": [],
-      "companyNumbers": [
-        "07503666"
-      ]
+      ],
+      "url": "https://www.chase.co.uk/gb/en/support/international-payments/"
     }
   ]
 }

@@ -1,16 +1,26 @@
 {
   "slug": "chase-uk",
-  "fetchedAt": "2026-10-05T12:44:48.719Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:06:21.428Z",
+  "status": "found",
   "pages": [
+    "https://www.chase.co.uk/gb/en/support/international-payments/",
     "https://www.chase.co.uk/gb/en/",
-    "https://www.chase.co.uk/gb/en/support/travel-with-chase/",
+    "https://www.chase.co.uk/gb/en/support/moving-abroad/",
     "https://www.chase.co.uk/gb/en/support/",
     "https://www.chase.co.uk/gb/en/how-we-help/",
-    "https://www.chase.co.uk/gb/en/",
     "https://www.chase.co.uk/gb/en/support/travel-with-chase/",
-    "https://www.chase.co.uk/gb/en/support/",
-    "https://www.chase.co.uk/gb/en/how-we-help/"
+    "https://www.chase.co.uk/gb/en/support/moving-money/",
+    "https://www.chase.co.uk/gb/en/support/cashback-general-faq/",
+    "https://www.chase.co.uk/gb/en/support/proving-your-identity/",
+    "https://www.chase.co.uk/gb/en/fraud-and-security/"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "availability",
+      "text": "Sorry, Chase accounts can’t be used to send or receive money internationally yet.",
+      "url": "https://www.chase.co.uk/gb/en/support/international-payments/",
+      "context": "International payments"
+    }
+  ],
+  "attempts": []
 }

@@ -104,9 +104,10 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   Chromium (installed in the workflow). Building societies have no Companies House record.
   Plain pattern matching — no AI.
 - **Provider service details:** `scripts/import-service-facts.ts` (weekly, same workflow)
-  reads each provider's homepage and up to six of its own fees/limits/safeguarding/payout/help
-  pages and keeps whole sentences on six topics (countries, payout, speed, fees, limits,
-  safeguarding), verbatim, with the page URL, in `data/services/`. Rules in
+  reads up to twelve of its official product/help pages, using `lib/provider-sources.ts`
+  plus focused discovered links, including help subdomains. It keeps sentences on eight
+  topics (availability, countries, payout, speed, fees, limits, safeguarding, identity),
+  verbatim, with the page URL and nearby source heading when needed, in `data/services/`. Rules in
   `lib/service-facts.ts`: must be about transfers; drops superlatives, promotions, other
   products (cards, loans, savings), claims about other firms, US-only terms, fragments and
   near-duplicates; `REJECTED_QUOTES` for context-wrong rows. Shown as "What {provider} says
@@ -212,6 +213,8 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   disclosure linked from every profile. Matt Woodley appears as owner only.
 - Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
 - No links to CBUK. Common ownership is disclosed on `/about/` only.
+
+- **Brand notices:** `scripts/import-provider-notices.ts` reads configured primary company pages for explicit statements naming a listed brand and an acquisition/rebrand. It writes `data/notices/`, with verbatim wording, publisher and actual fetch date. Never copy a successor's product facts onto an old brand.
 
 ## Automated information gain (2026-10-08)
 - Every profile includes category-specific transfer questions. Links to service-topic evidence

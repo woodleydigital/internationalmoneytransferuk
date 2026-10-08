@@ -1,25 +1,49 @@
 {
   "slug": "xe",
-  "fetchedAt": "2026-10-05T12:41:10.561Z",
+  "fetchedAt": "2026-10-08T02:02:19.546Z",
   "status": "found",
   "pages": [
+    "https://help.xe.com/hc/en-gb/articles/360019847837-What-are-the-limits-on-how-much-I-can-send",
+    "https://help.xe.com/hc/en-gb/articles/360019791837-Sending-British-Pounds-GBP",
+    "https://help.xe.com/hc/en-gb/articles/11368585652497-How-to-send-money-to-a-mobile-wallet-with-Xe",
+    "https://help.xe.com/hc/en-gb/articles/360019613418-What-rate-will-I-get-when-sending-money",
     "https://www.xe.com/",
-    "https://www.xe.com/send-money/",
-    "https://www.xe.com/large-money-transfer/",
-    "https://www.xe.com/send-money/send-money-to-albania/",
-    "https://www.xe.com/send-money/send-money-to-algeria/",
-    "https://www.xe.com/send-money/send-money-to-antigua-and-barbuda/",
-    "https://www.xe.com/send-money/send-money-to-argentina/"
+    "https://help.xe.com/hc/en-gb/articles/360019472097-Can-I-wait-and-send-money-at-a-better-rate",
+    "https://help.xe.com/hc/en-gb/articles/360019613498-Can-I-send-money-later-at-the-current-rate",
+    "https://help.xe.com/hc/en-gb/sections/360005573837-Fees-rates-and-sending-limits",
+    "https://help.xe.com/hc/en-gb/articles/41785275824657-What-are-the-fees-for-adding-or-converting-between-my-currency-accounts",
+    "https://help.xe.com/hc/en-gb/articles/360019472317-What-are-the-fees-for-sending-money",
+    "https://help.xe.com/hc/en-gb/articles/360019472397-Why-did-less-money-arrive-than-I-sent-was-a-fee-taken",
+    "https://help.xe.com/hc/en-gb"
   ],
   "quotes": [
     {
       "topic": "countries",
-      "text": "With just a few clicks, you can send money to over 190 countries worldwide.",
-      "url": "https://www.xe.com/"
+      "text": "You can now send money straight to your friends and family's mobile devices in over 35 countries with Xe.",
+      "url": "https://help.xe.com/hc/en-gb/articles/11368585652497-How-to-send-money-to-a-mobile-wallet-with-Xe",
+      "context": " How to send money to a mobile wallet with Xe "
+    },
+    {
+      "topic": "payout",
+      "text": "Mobile wallets are a quick and secure way to send, store and receive money.",
+      "url": "https://help.xe.com/hc/en-gb/articles/11368585652497-How-to-send-money-to-a-mobile-wallet-with-Xe",
+      "context": " How to send money to a mobile wallet with Xe "
+    },
+    {
+      "topic": "payout",
+      "text": "Once we've received payment for your mobile wallet money transfer, we'll send it to your recipient and it should be available in their wallet app minutes later.",
+      "url": "https://help.xe.com/hc/en-gb/articles/11368585652497-How-to-send-money-to-a-mobile-wallet-with-Xe",
+      "context": " How to send money to a mobile wallet with Xe "
+    },
+    {
+      "topic": "payout",
+      "text": "Mobile wallets are a delivery option available to customers in the Australia, Canada, Europe, New Zealand, the UK and the USA.",
+      "url": "https://help.xe.com/hc/en-gb/articles/11368585652497-How-to-send-money-to-a-mobile-wallet-with-Xe",
+      "context": " How to send money to a mobile wallet with Xe "
     },
     {
       "topic": "countries",
-      "text": "Compare 100+ currencies in real time & find the right moment to transfer funds",
+      "text": "With just a few clicks, you can send money to over 190 countries worldwide.",
       "url": "https://www.xe.com/"
     },
     {
@@ -31,41 +55,13 @@
       "topic": "countries",
       "text": "Send money to 190 countries across 130 currencies.",
       "url": "https://www.xe.com/"
-    },
+    }
+  ],
+  "attempts": [
     {
-      "topic": "speed",
-      "text": "Fast, reliable delivery — most transfers arrive in minutes",
-      "url": "https://www.xe.com/send-money/"
-    },
-    {
-      "topic": "payout",
-      "text": "Send to recipient's bank account, or if available, arrange cash pickup or send to a mobile wallet.",
-      "url": "https://www.xe.com/send-money/"
-    },
-    {
-      "topic": "speed",
-      "text": "Most transfers will arrive on the same day, but occasionally some recipient banks can take between 1-4 days to deposit the money in your account.",
-      "url": "https://www.xe.com/send-money/"
-    },
-    {
-      "topic": "payout",
-      "text": "Cash pickup lets Xe users in Canada, New Zealand, Europe, the UK, and the USA send money quickly in physical form.",
-      "url": "https://www.xe.com/send-money/"
-    },
-    {
-      "topic": "speed",
-      "text": "90% of transfers arrive in minutes, so your money reaches its destination on time.",
-      "url": "https://www.xe.com/large-money-transfer/"
-    },
-    {
-      "topic": "limits",
-      "text": "You can send up to $535,000 USD (or the currency equivalent) to Albania online.",
-      "url": "https://www.xe.com/send-money/send-money-to-albania/"
-    },
-    {
-      "topic": "payout",
-      "text": "Mobile wallets provide a fast, secure way to send, store, and receive money.",
-      "url": "https://www.xe.com/send-money/send-money-to-albania/"
+      "url": "https://help.xe.com/hc/en-gb/related/click",
+      "status": "error",
+      "reason": "HTTP 400"
     }
   ]
 }

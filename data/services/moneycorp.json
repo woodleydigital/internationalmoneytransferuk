@@ -1,12 +1,25 @@
 {
   "slug": "moneycorp",
-  "fetchedAt": "2026-10-05T12:41:25.536Z",
-  "status": "none",
-  "pages": [
-    "https://www.moneycorp.com/en-gb/about-us",
-    "https://www.moneycorp.com/en-gb/about-us/help-and-support",
-    "https://www.moneycorp.com/en-gb/about-us",
-    "https://www.moneycorp.com/en-gb/about-us/help-and-support"
+  "fetchedAt": "2026-10-08T02:06:02.592Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
+    {
+      "url": "https://www.moneycorp.com/en-gb/help-support/personal-faq/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.moneycorp.com/en-gb/personal/moneycorp-online/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.moneycorp.com/en-gb/",
+      "status": "error",
+      "reason": "HTTP 403"
+    }
   ],
-  "quotes": []
+  "error": "HTTP 403"
 }

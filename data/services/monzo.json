@@ -1,22 +1,57 @@
 {
   "slug": "monzo",
-  "fetchedAt": "2026-10-05T12:36:30.404Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T01:59:47.753Z",
+  "status": "found",
   "pages": [
+    "https://monzo.com/help/payments-getting-started/sending-int-payments-web",
+    "https://monzo.com/help/payments-getting-started/international-transfers-local-currency",
+    "https://monzo.com/help/payments-getting-started/1-percent-euro-fee-breakdown",
     "https://monzo.com/",
+    "https://monzo.com/help/payments-getting-started/add-money-from-outside-uk",
+    "https://monzo.com/help/payments-getting-started/monzo-iban",
+    "https://monzo.com/help/payments-getting-started/unsupported-currencies",
     "https://monzo.com/features/travel",
-    "https://monzo.com/current-account/under-16s",
-    "https://monzo.com/credit-cards/aura",
-    "https://monzo.com/business-banking",
     "https://monzo.com/help",
     "https://monzo.com/help/monzo-plus",
-    "https://monzo.com/",
-    "https://monzo.com/features/travel",
-    "https://monzo.com/current-account/under-16s",
-    "https://monzo.com/credit-cards/aura",
-    "https://monzo.com/business-banking",
-    "https://monzo.com/help",
-    "https://monzo.com/help/monzo-plus"
+    "https://monzo.com/help/monzo-premium",
+    "https://monzo.com/help/payments-getting-started"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "availability",
+      "text": "You can't send GBP (Great British Pounds) internationally from your Monzo account.",
+      "url": "https://monzo.com/help/payments-getting-started/sending-int-payments-web",
+      "context": "Sending international payments"
+    },
+    {
+      "topic": "fees",
+      "text": "We don’t charge any fees for receiving international payments that have already been converted to British pounds.",
+      "url": "https://monzo.com/help/payments-getting-started/international-transfers-local-currency",
+      "context": "What fees are charged for receiving international transfers?"
+    },
+    {
+      "topic": "fees",
+      "text": "We also charge a 1% conversion fee.",
+      "url": "https://monzo.com/help/payments-getting-started/international-transfers-local-currency",
+      "context": "What fees are charged for receiving international transfers?"
+    },
+    {
+      "topic": "fees",
+      "text": "The maximum fee for each transaction is £1,000.",
+      "url": "https://monzo.com/help/payments-getting-started/international-transfers-local-currency",
+      "context": "What fees are charged for receiving international transfers?"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money in 38 currencies",
+      "url": "https://monzo.com/features/travel"
+    },
+    {
+      "topic": "countries",
+      "text": "From London to Lagos, Manila to Madrid, support your loved ones from anywhere in the world.",
+      "url": "https://monzo.com/features/travel",
+      "context": "Send money in 38 currencies"
+    }
+  ],
+  "attempts": []
 }

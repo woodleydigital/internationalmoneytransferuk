@@ -1,31 +1,57 @@
 {
   "slug": "ulster-bank",
-  "fetchedAt": "2026-10-05T12:45:27.431Z",
+  "fetchedAt": "2026-10-08T02:04:46.164Z",
   "status": "found",
   "pages": [
+    "https://www.ulsterbank.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
     "https://www.ulsterbank.co.uk/",
     "https://www.ulsterbank.co.uk/travel/spending-abroad/travel-account.html",
     "https://www.ulsterbank.co.uk/travel/spending-abroad.html",
     "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
-    "https://www.ulsterbank.co.uk/travel/travel-money.html",
     "https://www.ulsterbank.co.uk/current-accounts/overdrafts/overdraft-calculator.html",
-    "https://www.ulsterbank.co.uk/managing-your-money/cost-of-living.html"
+    "https://www.ulsterbank.co.uk/managing-your-money/cost-of-living.html",
+    "https://www.ulsterbank.co.uk/support-centre/banking-from-home/make-payments/do-you-have-a-list-of-iban-compliant-countries.html",
+    "https://www.ulsterbank.co.uk/support-centre/general-banking-information/general/purpose-of-payment-code-requirement-for-specific-countries.html",
+    "https://www.ulsterbank.co.uk/support-centre/general-banking-information/general/what-countries-are-part-of-sepa.html",
+    "https://www.ulsterbank.co.uk/help-and-support/interest-rates-changes.html",
+    "https://www.ulsterbank.co.uk/fraud-and-security.html"
   ],
   "quotes": [
+    {
+      "topic": "payout",
+      "text": "Anytime Banking available to customers aged 11+ with a Ulster Bank account.",
+      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
+      "context": "How do I send money abroad?"
+    },
     {
       "topic": "fees",
       "text": "There is no fee for sending an international payment online, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
       "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html"
     },
     {
-      "topic": "limits",
-      "text": "If you have registered your biometrics with the Bank, you can use the mobile app or Anytime Banking to make an international payment to new and saved payees up to the daily limit of £20,000.00 GBP.",
-      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html"
+      "topic": "fees",
+      "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
+      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
+      "context": "Fee options when sending a payment"
     },
     {
-      "topic": "countries",
-      "text": "Choose from over 70 currencies including Euros, US Dollars and Turkish Lira",
-      "url": "https://www.ulsterbank.co.uk/travel/travel-money.html"
+      "topic": "limits",
+      "text": "If you have registered your biometrics with the Bank, you can use the mobile app or Anytime Banking to make an international payment to new and saved payees up to the daily limit of £20,000.00 GBP.",
+      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
+    },
+    {
+      "topic": "limits",
+      "text": "A saved payee via the mobile app up to £20,000.",
+      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
+    },
+    {
+      "topic": "limits",
+      "text": "A new payee via our mobile app up to £750 (a maximum of 5 payments totalling 750 per day).",
+      "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
     }
-  ]
+  ],
+  "attempts": []
 }

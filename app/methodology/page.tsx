@@ -89,15 +89,24 @@ export default function Page() {
         </li>
         <li>
           <strong className="text-ink">What providers say about their service.</strong> Software
-          reads each provider’s homepage and up to six of its own pages about fees, limits,
-          safeguarding and payout methods, and keeps whole sentences on six topics (where it sends
-          money, how recipients are paid, how long transfers take, fees, limits, and how customer
-          money is protected), word for word, with the page each came from. It drops marketing
+          reads up to twelve official product and help pages per provider, using configured
+          source links and links discovered on the provider’s own pages and help subdomains.
+          It keeps sentences on eight topics (service availability, where it sends money,
+          how recipients are paid, delivery times, fees, limits, customer-money protection,
+          and identity documents), word for word, with the page each came from. It drops marketing
           superlatives, promotions, other products (cards, loans, savings) and claims about other
           firms. Stored quotations are filtered again when displayed, so improved extraction rules
-          also apply to earlier imports. Context notes identify business pages, destination-specific
-          pages and starting prices without rewriting the quotation. Nobody checks the sentences
+          also apply to earlier imports. Nearby headings and questions are retained when they
+          explain a quotation. Context notes identify business pages, receiving payments,
+          destination-specific pages and starting prices without rewriting the quotation. Nobody checks the sentences
           by hand, and they are always shown as the provider’s own words.
+        </li>
+        <li>
+          <strong className="text-ink">Published brand notices.</strong> Explicit statements about
+          an acquisition or rebrand are copied from a configured primary company source and labelled
+          with its publisher, link and fetch date. A successor’s prices and capabilities are not
+          assigned to the former brand. Missing quotations mean the collection has a gap, rather
+          than that a provider does not offer a service.
         </li>
         <li>
           <strong className="text-ink">Logos.</strong> The icon each provider’s own website

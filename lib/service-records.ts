@@ -1,7 +1,7 @@
 /** Reads provider service quotes written by scripts/import-service-facts.ts; fresh ones only. */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { findServiceQuotes, mergeQuotes, type ServiceRecord } from "./service-facts";
+import { findPageServiceQuotes, mergeQuotes, type ServiceRecord } from "./service-facts";
 import { isFresh } from "./company-records";
 
 export function loadServiceRecord(slug: string, now = new Date()): ServiceRecord | null {
@@ -15,7 +15,8 @@ export function loadServiceRecord(slug: string, now = new Date()): ServiceRecord
     const quotes = mergeQuotes([], rec.quotes.flatMap((q) => {
       const url = new URL(q.url);
       if (!/^https?:$/.test(url.protocol)) return [];
-      return findServiceQuotes(q.text, q.url).filter((candidate) => candidate.topic === q.topic);
+      const text = q.context ? `[IMT-H]${q.context}[/IMT-H]\n${q.text}` : q.text;
+      return findPageServiceQuotes(text, q.url).filter((candidate) => candidate.topic === q.topic);
     }));
     return quotes.length ? { ...rec, quotes } : null;
   } catch {

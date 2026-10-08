@@ -9,7 +9,7 @@
  * we cannot check them and will not amplify them.
  */
 
-export type Topic = "countries" | "payout" | "speed" | "fees" | "limits" | "safeguarding";
+export type Topic = "countries" | "payout" | "speed" | "fees" | "limits" | "safeguarding" | "identity" | "availability";
 
 export const TOPIC_LABEL: Record<Topic, string> = {
   countries: "Where it sends money",
@@ -18,15 +18,19 @@ export const TOPIC_LABEL: Record<Topic, string> = {
   fees: "Fees",
   limits: "Limits",
   safeguarding: "How customer money is protected",
+  identity: "Documents and verification",
+  availability: "Service availability",
 };
 
-export const TOPICS: Topic[] = ["countries", "payout", "speed", "fees", "limits", "safeguarding"];
+export const TOPICS: Topic[] = ["availability", "countries", "payout", "speed", "fees", "limits", "safeguarding", "identity"];
 
 export interface ServiceQuote {
   topic: Topic;
   text: string;
   /** The page the sentence was read from. */
   url: string;
+  /** Nearby source heading/question, copied exactly when an answer needs it. */
+  context?: string;
 }
 
 /** Context labels describe the quotation, not independently verified product facts. */
@@ -34,7 +38,7 @@ export function quoteContext(q: ServiceQuote): string[] {
   const notes: string[] = [];
   let path = "";
   try { path = new URL(q.url).pathname; } catch { /* malformed source is rejected by the loader */ }
-  if (/\/business(?:\/|$)|\/teams(?:\/|$)/i.test(path) || /\b(?:business|teams|suppliers|payroll)\b/i.test(q.text)) {
+  if (/\/business(?:\/|$)|\/corporate(?:\/|$)|\/teams(?:\/|$)/i.test(path) || /\b(?:business|teams|suppliers|payroll)\b/i.test(`${q.context ?? ""} ${q.text}`)) {
     notes.push("Business service: confirm that this product applies to your transfer.");
   }
   if (/\/(?:send|transfer)-money-to-[a-z-]+/i.test(path)) {
@@ -49,6 +53,9 @@ export function quoteContext(q: ServiceQuote): string[] {
   if (q.topic === "countries") {
     notes.push("Headline coverage: country and currency counts do not confirm a particular UK-origin route.");
   }
+  if (/\b(?:receiv(?:e|ing)|incoming|inbound)\b/i.test(q.context ?? "")) {
+    notes.push("Receiving payments: this statement may not describe sending money from the UK.");
+  }
   return notes;
 }
 
@@ -60,29 +67,38 @@ export interface ServiceRecord {
   pages: string[];
   quotes: ServiceQuote[];
   error?: string;
+  /** Failed or excluded page reads, separate from successfully fetched pages. */
+  attempts?: { url: string; status: "error" | "blocked" | "redirected"; reason: string }[];
 }
 
 const MONEY = /(?:[£$€]\s?\d[\d,.]*(?:\s?(?:k|m|million|bn))?|\b\d[\d,.]*\s?(?:GBP|USD|EUR|pounds?)\b)/i;
 const PERCENT = /\b\d+(?:\.\d+)?\s?%/;
 
 const RULES: Record<Topic, (s: string) => boolean> = {
-  countries: (s) => /\b\d{2,3}\s?\+?\s?(?:countries|currencies|territories|destinations)\b/i.test(s),
+  countries: (s) => /\b\d{1,3}\s?\+?\s?(?:countries|currencies|territories|destinations)\b/i.test(s),
   payout: (s) =>
     /\b(?:cash (?:pick[- ]?up|collection)|mobile (?:wallet|money)|home delivery|airtime top[- ]?up|bank deposit)s?\b/i.test(s) ||
+    (/\b(?:send|transfer|pay|sent|paid)\b[^.]{0,100}\b(?:to|into)\b[^.]{0,40}\bbank accounts?\b/i.test(s)) ||
     (/\b(?:straight|directly) (?:in)?to (?:their|a|your recipient'?s?) (?:bank account|mobile wallet|card)\b/i.test(s)),
   speed: (s) =>
-    /\b(?:arrive|arrives|delivered|deliver|reach|reaches|receive|received|land|lands|credited)\b/i.test(s) &&
-    /\b(?:in|within|under|same|next)\s(?:\d+|a few|seconds?|minutes?|hours?|one|two|three|day|working|business)\b/i.test(s) &&
+    /\b(?:arriv\w*|deliver\w*|reach\w*|receiv\w*|land\w*|credited|completed|processed|take|takes)\b/i.test(s) &&
+    /\b(?:in|within|under|same|next|up to|take|takes)\s(?:\d+|a few|seconds?|minutes?|hours?|one|two|three|day|working|business)\b/i.test(s) &&
     /\b(?:seconds?|minutes?|hours?|days?)\b/i.test(s) &&
     !/\b(?:card|post|PIN|letter|statement|copy|returned|refund\w*|notice)\b/i.test(s),
   fees: (s) =>
-    /\bfees?\b/i.test(s) &&
-    (MONEY.test(s) || PERCENT.test(s) || /\b(?:no|zero|fixed|flat|free of|fee[- ]free|without)\b[^.]{0,20}\bfees?\b/i.test(s)),
+    /\b(?:fees?|charges?)\b/i.test(s) &&
+    (MONEY.test(s) || PERCENT.test(s) || /\b(?:no|zero|fixed|flat|free of|fee[- ]free|without|don['’]t charge|do not charge)\b[^.]{0,30}\b(?:fees?|charges?)\b/i.test(s) ||
+      /\b(?:fees?|charges?)\b[^.]{0,60}\b(?:depend|var(?:y|ies)|shown|displayed|before|confirm)\b/i.test(s)),
   limits: (s) =>
-    /\b(?:limit|limits|maximum|minimum|up to|as little as|at least|no more than)\b/i.test(s) && MONEY.test(s) &&
+    /\b(?:limit|limits|maximum|minimum|up to|as little as|at least|no more than)\b/i.test(s) &&
+    (MONEY.test(s) || /\b(?:no|don['’]t have a|do not have a)\b[^.]{0,30}\b(?:maximum|minimum|limits?)\b/i.test(s)) &&
     /\b(?:send|transfer|payment|transaction|day|daily|month|year|per)\b/i.test(s),
   safeguarding: (s) =>
     /\bsafeguard(?:s|ed|ing)?\b/i.test(s) && /\b(?:money|funds)\b/i.test(s) && !/\b(?:fraud|crime|scams?|security tools|assets)\b/i.test(s),
+  identity: (s) => /\b(?:passport|driving licen[cs]e|proof of (?:identity|address|funds)|source of funds|identity documents?|photo(?:graphic)? ID)\b/i.test(s) && /\b(?:require|need|ask|provide|upload|verify|verification|accept)\w*\b/i.test(s),
+  availability: (s) => /\b(?:can['’]t|cannot)\b[^.]{0,70}\b(?:send|receive|used)\b[^.]{0,70}\binternational(?:ly)?\b/i.test(s) ||
+    /\b(?:do not offer|don['’]t offer|not (?:currently )?(?:available|supported)|no longer (?:offer|support))\b[^.]{0,70}\binternational\b/i.test(s) ||
+    /\b(?:change its name to|brand will operate under|acquired and rebranded)\b/i.test(s),
 };
 
 /** The sentence must be about sending money, not another product. */
@@ -116,12 +132,15 @@ export function sentences(text: string): string[] {
     .split(/\n+/)
     .flatMap((line) => line.split(/(?<=[.!?])\s+(?=[A-Z£$€0-9])/))
     .map((s) => s.replace(/\[@[^\]]*\]/g, "").replace(/^[\s•·\-–—*]+/, "").replace(/\s+/g, " ").trim())
-    .filter((s) => s.length >= 40 && s.length <= 320 && /[a-z]/.test(s) && /\s/.test(s));
+    .filter((s) => s.length >= 25 && s.length <= 420 && /[a-z]/.test(s) && /\s/.test(s));
 }
 
 /** Sentences on each topic, word for word; a sentence counts once, under its first topic. */
-export function findServiceQuotes(text: string, url: string): ServiceQuote[] {
+export function findServiceQuotes(text: string, url: string, context?: string): ServiceQuote[] {
   const out: ServiceQuote[] = [];
+  const path = new URL(url).pathname;
+  // /hc/en-us is a help-centre language label, not a US product locale.
+  if (/^\/(?:en-(?:us|nz|au|ca|de|be|pl)|us|nz|au|ca|terms_usa)(?:\/|$)/i.test(path)) return out;
   const seen = new Set<string>();
   for (const s of sentences(text)) {
     if (SUPERLATIVE.test(s) || JUNK.test(s) || PROMO.test(s) || ABOUT_OTHERS.test(s)) continue;
@@ -130,18 +149,27 @@ export function findServiceQuotes(text: string, url: string): ServiceQuote[] {
     if (/^(?:Of|And|Or|But)\s/.test(s)) continue;
     if ((s.match(/\(/g) ?? []).length !== (s.match(/\)/g) ?? []).length) continue;
     if (US_ONLY.test(s)) continue;
+    if (/\b(?:complaints?|holding reply|cancelled|debit(?:ed)?|CHAPS|Faster Payments|domestic payments?|within the UK|(?:another|other|a) UK bank account|UK bank transfers?|current account switch|open an? (?:overseas )?bank account|store \d+ currencies|hold (?:and exchange money in |up to )?\d+ currencies|Confirmation of Payee|right place)\b/i.test(s)) continue;
+    if (/\b(?:you want to|for example|this is because|handing over cash|cheques?)\b/i.test(s)) continue;
+    if (/\b(?:save up to|could save|illustration only|lightning fast|super fast)\b/i.test(s) || /^\(/.test(s)) continue;
+    if (/^(?:Wise|Remitly|Revolut|PayPal|Western Union|MoneyGram|OFX|Xe)\s*[: ]+\s*[£$€\d]/i.test(s)) continue;
+    if (/\b(?:mark[- ]?up|conversion charge)\b/i.test(s) && /\bup to\b/i.test(s)) continue;
     const key = s.toLowerCase();
     if (seen.has(key)) continue;
-    const topic = TOPICS.find((t) => RULES[t](s));
+    const scoped = context ? `${context} ${s}` : s;
+    const topic = TOPICS.find((t) => RULES[t](t === "availability" ? s : scoped));
     if (!topic) continue;
     // Safeguarding sentences stand alone; every other topic must be about transfers.
-    if (topic !== "safeguarding" && (!TRANSFER.test(s) || OTHER_PRODUCT.test(s))) continue;
+    if (topic !== "safeguarding" && (!TRANSFER.test(scoped) || OTHER_PRODUCT.test(scoped))) continue;
     if ((topic === "fees" || topic === "limits") && CARD_SPENDING.test(s)) continue;
+    if ((topic === "fees" || topic === "countries") && /\bcards?\b/i.test(scoped)) continue;
     if (topic === "countries" && (CARD_SPENDING.test(s) || /\b(?:compare|track|monitor)\b.*\bcurrenc/i.test(s))) continue;
     if (topic === "fees" && OTHER_FEES.test(s)) continue;
+    if (topic === "countries" && !/\b(?:send|sending|transfers?|payments?|pay)\b/i.test(scoped)) continue;
+    if (topic === "identity" && !/\b(?:transfers?|payments?|send money|sending money|transaction order form|receive money form|recipient|sender)\b/i.test(scoped) && !/international|money-transfer|send-money|\/sending-money\//i.test(path)) continue;
     if (REJECTED_QUOTES.some((r) => s.startsWith(r))) continue;
     seen.add(key);
-    out.push({ topic, text: s, url });
+    out.push({ topic, text: s, url, ...(context ? { context } : {}) });
   }
   return out;
 }
@@ -166,7 +194,7 @@ export function nearDuplicate(a: string, b: string): boolean {
 export function mergeQuotes(into: ServiceQuote[], found: ServiceQuote[], perTopic = 3): ServiceQuote[] {
   const out = [...into];
   for (const q of found) {
-    if (out.some((o) => nearDuplicate(o.text, q.text))) continue;
+    if (out.some((o) => o.topic === q.topic && o.context === q.context && nearDuplicate(o.text, q.text))) continue;
     if (out.filter((o) => o.topic === q.topic).length >= perTopic) continue;
     out.push(q);
   }
@@ -187,11 +215,12 @@ export function findServiceLinks(html: string, base: string, max = 6): string[] 
     } catch {
       continue;
     }
-    if (!/^https?:$/.test(u.protocol) || u.hostname.replace(/^www\./, "") !== host) continue;
+    if (!/^https?:$/.test(u.protocol) || !(u.hostname.replace(/^www\./, "") === host || u.hostname.endsWith(`.${host}`))) continue;
     if (/\.(pdf|jpg|png|zip)$/i.test(u.pathname)) continue;
     const label = m[2].replace(/<[^>]+>/g, " ");
     const hay = `${u.pathname} ${label}`;
     if (!LINK_HINT.test(hay)) continue;
+    if (/\/en-(?:us|nz|au|ca|de|be|pl)\b|\/business\/|\/corporate\/|travel|using-your-card|credit-card|overseas-account|account-opening|\/news\/|\/blog\/|\bcurrency (?:converter|calculator)\b/i.test(hay)) continue;
     // Pricing, limits and safeguarding pages first; general help last.
     const score = /international|abroad|overseas|send[- ]?money|money[- ]?transfer/i.test(hay)
       ? 4
@@ -205,4 +234,27 @@ export function findServiceLinks(html: string, base: string, max = 6): string[] 
     scored.set(key, Math.max(scored.get(key) ?? 0, score));
   }
   return [...scored.entries()].sort((a, b) => b[1] - a[1]).slice(0, max).map(([u]) => u);
+}
+
+/** Keep the local heading with short answers; never borrow context across sections. */
+export function findPageServiceQuotes(text: string, url: string): ServiceQuote[] {
+  let context: string | undefined;
+  const out: ServiceQuote[] = [];
+  for (const line of text.split(/\n+/).map((s) => s.trim()).filter(Boolean)) {
+    const question = /\?$/.test(line) && line.length <= 180;
+    const heading = /^\[IMT-H\]/.test(line);
+    const content = line.replace(/^\[IMT-H\]|\[\/IMT-H\]$/g, "");
+    if (question || heading) {
+      context = content.length <= 180 && (TRANSFER.test(content) || /\bfees?|limits?|safeguard|protected|currencies|countries\b/i.test(content)) ? content : undefined;
+      // A heading can also be a complete factual sentence without a final stop.
+    }
+    const own = findServiceQuotes(content, url);
+    const found = own.length ? own.filter((q) => !heading || q.topic === "countries").map((q) => context && !heading ? { ...q, context } : q) : context && !question && !heading ? findServiceQuotes(content, url, context) : [];
+    // General bank payments hubs mix UK payments and card spending with the
+    // international section. Require explicit international context there.
+    const source = new URL(url);
+    const transferPage = /international|overseas|abroad|money-transfer|send-money|\/sending-money\/|\/receiving-money\/|foreign-payments|swift|sepa|sending-int-payments|\/faqs?\b|\/faq\b|\/help\/articles\//i.test(source.pathname) || /internationalpayments|moneytransfer/i.test(source.hostname);
+    out.push(...found.filter((q) => transferPage || /\b(?:international(?:ly)?|overseas|abroad|remittance|foreign currency|outside (?:the )?UK)\b/i.test(`${q.context ?? ""} ${q.text}`) || ["safeguarding", "countries", "identity", "availability"].includes(q.topic)));
+  }
+  return mergeQuotes([], out);
 }

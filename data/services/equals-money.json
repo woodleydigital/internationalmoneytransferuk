@@ -1,10 +1,43 @@
 {
   "slug": "equals-money",
-  "fetchedAt": "2026-10-05T12:43:44.823Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:03:27.002Z",
+  "status": "found",
   "pages": [
+    "https://equalsmoney.com/faqs/what-currencies-do-you-offer-for-international-payments",
+    "https://equalsmoney.com/business-payments/mass-payments",
     "https://equalsmoney.com/en-us/coming-soon",
-    "https://equalsmoney.com/en-us/coming-soon"
+    "https://equalsmoney.com/pricing",
+    "https://equalsmoney.com/faq",
+    "https://equalsmoney.com/forms/pricing-business",
+    "https://equalsmoney.com/forms/pricing-business-plus",
+    "https://equalsmoney.com/forms/pricing-enterprise",
+    "https://equalsmoney.com/faqs/how-can-i-contact-the-international-payments-team",
+    "https://equalsmoney.com/faqs/is-there-a-fee-for-charities-and-non-profits",
+    "https://equalsmoney.com/faqs/can-i-use-funds-requests-to-ask-for-my-card-spending-limit-to-be-increased",
+    "https://equalsmoney.com/faqs/is-there-a-limit-on-how-many-open-funds-requests-a-requester-can-have"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Make mass payments in 35 currencies simultaneously",
+      "url": "https://equalsmoney.com/business-payments/mass-payments"
+    },
+    {
+      "topic": "countries",
+      "text": "With GBP and EUR options, you can make bulk payments to foreign suppliers quickly and confidently.",
+      "url": "https://equalsmoney.com/business-payments/mass-payments",
+      "context": "Make mass payments in 35 currencies simultaneously"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Instead, your money is protected via a safeguarding method in accordance with the Payment Services Regulations / E-money Regulations.",
+      "url": "https://equalsmoney.com/business-payments/mass-payments"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is held in specially designated, safeguarded bank accounts with Tier 1 banks, and is kept separate from our own funds.",
+      "url": "https://equalsmoney.com/business-payments/mass-payments"
+    }
+  ],
+  "attempts": []
 }

@@ -1,10 +1,9 @@
 {
   "slug": "pure-fx",
-  "fetchedAt": "2026-10-05T12:47:23.262Z",
+  "fetchedAt": "2026-10-08T02:05:22.460Z",
   "status": "none",
-  "pages": [
-    "https://www.purefx.co.uk/",
-    "https://www.purefx.co.uk/"
-  ],
-  "quotes": []
+  "pages": [],
+  "quotes": [],
+  "attempts": [],
+  "error": "A current official money-transfer website has not been confirmed."
 }

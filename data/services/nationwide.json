@@ -1,22 +1,79 @@
 {
   "slug": "nationwide",
-  "fetchedAt": "2026-10-05T12:38:40.687Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:00:53.608Z",
+  "status": "found",
   "pages": [
+    "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+    "https://www.nationwide.co.uk/help/payments/transfer-limits-and-timescales",
     "https://www.nationwide.co.uk/",
     "https://www.nationwide.co.uk/help/travel/help-when-travelling",
+    "https://www.nationwide.co.uk/help/payments/send-money-to-another-account",
     "https://www.nationwide.co.uk/nationwide-and-virgin-money-transfer",
     "https://www.nationwide.co.uk/savings/limited-access-savings-accounts",
     "https://www.nationwide.co.uk/house-price-index",
-    "https://www.nationwide.co.uk/credit-cards/help/fees-charges",
-    "https://www.nationwide.co.uk/credit-cards/help/change-limit-on-card",
-    "https://www.nationwide.co.uk/",
-    "https://www.nationwide.co.uk/nationwide-and-virgin-money-transfer",
+    "https://www.nationwide.co.uk/news-and-stories/cost-of-living-how-we-are-here-for-you",
     "https://www.nationwide.co.uk/help",
-    "https://www.nationwide.co.uk/help/online-banking-help",
-    "https://www.nationwide.co.uk/insurance/help-and-claims/manage-home-insurance-policy",
-    "https://www.nationwide.co.uk/savings/help/check-savings-interest-rate",
-    "https://www.nationwide.co.uk/help/fraud-and-security"
+    "https://www.nationwide.co.uk/current-accounts/help/get-joint-current-account",
+    "https://www.nationwide.co.uk/current-accounts/help/change-current-account"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "limits",
+      "text": "There’s no limit to how much you can send.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
+    },
+    {
+      "topic": "fees",
+      "text": "The fee to send an international payment varies depending on the type of payment and the account you hold.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "Sending international payments"
+    },
+    {
+      "topic": "fees",
+      "text": "So, we're refunding our £15 charge for payments to Ukraine.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "Sending SWIFT payments to Ukraine"
+    },
+    {
+      "topic": "fees",
+      "text": "We will display the total charge of the 2.2% currency conversion mark-up when you request to make a payment with us.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
+    },
+    {
+      "topic": "payout",
+      "text": "You send $100 to a foreign bank account.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
+    },
+    {
+      "topic": "speed",
+      "text": "If you’re sending euros in the SEPA Zone, your payment will arrive by the end of the next working day.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How long does it take to send money internationally?"
+    },
+    {
+      "topic": "speed",
+      "text": "If you’re sending a currency other than euros within the EEA (opens in a new window) or the UK, your payment will normally arrive within 4 working days.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How long does it take to send money internationally?"
+    },
+    {
+      "topic": "limits",
+      "text": "There’s no limit to how much you can send internationally.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How much money can you send internationally?"
+    },
+    {
+      "topic": "limits",
+      "text": "There are no limits on how much you can send internationally.",
+      "url": "https://www.nationwide.co.uk/help/payments/transfer-limits-and-timescales",
+      "context": "Which payments are limited?"
+    },
+    {
+      "topic": "speed",
+      "text": "Once the payment leaves your account, the money normally arrives within 2 hours.",
+      "url": "https://www.nationwide.co.uk/help/payments/send-money-to-another-account",
+      "context": "What to do if a bank transfer was not received"
+    }
+  ],
+  "attempts": []
 }

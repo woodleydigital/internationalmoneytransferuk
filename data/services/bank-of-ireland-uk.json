@@ -1,8 +1,9 @@
 {
   "slug": "bank-of-ireland-uk",
-  "fetchedAt": "2026-10-05T12:37:07.939Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:00:09.915Z",
+  "status": "found",
   "pages": [
+    "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
     "https://www.bankofirelanduk.com/personal/",
     "https://www.bankofirelanduk.com/personal/travel-banking/",
     "https://www.bankofirelanduk.com/personal/savings/limited-edition-fixed-term-deposits/",
@@ -10,13 +11,23 @@
     "https://www.bankofirelanduk.com/rates-and-fees/ni-rates-and-fees/personal-savings-and-deposit-rates/",
     "https://www.bankofirelanduk.com/rates-and-fees/",
     "https://www.bankofirelanduk.com/help-and-support/faqs/general-queries/",
-    "https://www.bankofirelanduk.com/personal/",
-    "https://www.bankofirelanduk.com/personal/travel-banking/",
-    "https://www.bankofirelanduk.com/personal/savings/limited-edition-fixed-term-deposits/",
-    "https://www.bankofirelanduk.com/rates-and-fees/gb-rates-and-fees/savings-and-deposit-rates/",
-    "https://www.bankofirelanduk.com/rates-and-fees/ni-rates-and-fees/personal-savings-and-deposit-rates/",
-    "https://www.bankofirelanduk.com/rates-and-fees/",
-    "https://www.bankofirelanduk.com/help-and-support/"
+    "https://www.bankofirelanduk.com/help-and-support/faqs/confirmation-of-payee/",
+    "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/",
+    "https://www.bankofirelanduk.com/help-and-support/security-and-fraud/",
+    "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/managing-your-money/staying-on-top-of-your-finances/"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "1 The £15 charge for GBP to Ireland will not apply when the transfer is to a Bank of Ireland account.",
+      "url": "https://www.bankofirelanduk.com/rates-and-fees/international-payments/"
+    },
+    {
+      "topic": "payout",
+      "text": "They contact you to tell you that their bank account details have changed and to ask you to send all payments to a new account.",
+      "url": "https://www.bankofirelanduk.com/help-and-support/faqs/general-queries/",
+      "context": "Feeling that you’re being pressured to pay for something at a highly inflated price?"
+    }
+  ],
+  "attempts": []
 }

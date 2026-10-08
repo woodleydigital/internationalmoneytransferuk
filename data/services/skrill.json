@@ -1,36 +1,80 @@
 {
   "slug": "skrill",
-  "fetchedAt": "2026-10-05T12:36:23.971Z",
+  "fetchedAt": "2026-10-08T01:59:17.647Z",
   "status": "found",
   "pages": [
+    "https://www.skrill.com/en/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+    "https://www.skrill.com/en/support/question/56/what-is-the-skrill-money-transfer-verification/",
     "https://www.skrill.com/en/",
     "https://www.skrill.com/en/transfer-money/",
     "https://www.skrill.com/en/transfer-money/international-money-transfers/",
     "https://www.skrill.com/en/how-to-send-money/",
+    "https://www.skrill.com/gr/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+    "https://www.skrill.com/cn/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+    "https://www.skrill.com/cz/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
     "https://www.skrill.com/en/siteinformation/fees/",
     "https://www.skrill.com/en/crypto/live-cryptocurrency-prices/",
-    "https://www.skrill.com/en/skrill-news/crypto/what-is-cryptocurrency/"
+    "https://www.skrill.com/en/support/category/4/account/verifications-and-limits/"
   ],
   "quotes": [
     {
-      "topic": "payout",
-      "text": "We are constantly expanding our payout choices and depending on the recipient’s country, you can direct your transfer to a bank account, Visa® card, Mastercard® or mobile wallet.",
-      "url": "https://www.skrill.com/en/transfer-money/"
-    },
-    {
-      "topic": "payout",
-      "text": "Choose from 40 different currencies and send money to a bank account, mobile wallet, email address or phone number.",
-      "url": "https://www.skrill.com/en/how-to-send-money/"
+      "topic": "fees",
+      "text": "Transfer fees, if any, and approximate processing timeframe will also be displayed.",
+      "url": "https://www.skrill.com/en/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+      "context": "How do I send money using Skrill Money Transfer?"
     },
     {
       "topic": "fees",
-      "text": "We will also charge you a foreign exchange fee of up to 3.99%.",
-      "url": "https://www.skrill.com/en/siteinformation/fees/"
+      "text": "The fees we charge (if any) depend on your payment method, send/receive currency, and send/receive country.",
+      "url": "https://www.skrill.com/en/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+      "context": "What fees do you charge?"
+    },
+    {
+      "topic": "speed",
+      "text": "After receiving your money, we aim to transfer them instantly where possible, or within 24-72 hours, depending on the destination option and funding methods you have chosen.",
+      "url": "https://www.skrill.com/en/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/"
+    },
+    {
+      "topic": "payout",
+      "text": "Skrill Money Transfer is an easy, safe and fast way of sending money to a bank account overseas.",
+      "url": "https://www.skrill.com/en/transfer-money/",
+      "context": " What is Skrill Money Transfer? "
+    },
+    {
+      "topic": "payout",
+      "text": "Yes, Skrill Money Transfer lets you send money to a bank account abroad.",
+      "url": "https://www.skrill.com/en/transfer-money/",
+      "context": " Can I transfer my money to a bank? "
+    },
+    {
+      "topic": "payout",
+      "text": "Enjoy great rates when you make an international money transfer to a bank account.",
+      "url": "https://www.skrill.com/en/transfer-money/international-money-transfers/"
+    },
+    {
+      "topic": "speed",
+      "text": "After receiving your funds, we aim to deliver your money within 24 – 72 hours.",
+      "url": "https://www.skrill.com/en/transfer-money/international-money-transfers/",
+      "context": " When will the money arrive in my recipient’s account? "
     },
     {
       "topic": "fees",
-      "text": "In this case, we will apply foreign exchange fees of 1.5%.",
-      "url": "https://www.skrill.com/en/siteinformation/fees/"
+      "text": "We don’t charge any money transfer fees when you pay for your transaction by bank transfer.",
+      "url": "https://www.skrill.com/en/transfer-money/international-money-transfers/",
+      "context": " What are the fees for using Skrill Money Transfer? "
+    },
+    {
+      "topic": "speed",
+      "text": "When using Skrill Money Transfer, delivery times can vary from a few minutes to up to two working days.",
+      "url": "https://www.skrill.com/en/transfer-money/international-money-transfers/",
+      "context": " Does Skrill transfer money instantly? "
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.skrill.com/en/support/category/33/international-money-transfer/how-to/",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
     }
   ]
 }

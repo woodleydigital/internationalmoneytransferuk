@@ -1,6 +1,6 @@
 {
   "slug": "cambridge-currencies",
-  "fetchedAt": "2026-10-05T12:41:45.205Z",
+  "fetchedAt": "2026-10-08T02:06:28.567Z",
   "status": "found",
   "pages": [
     "https://cambridgecurrencies.com/",
@@ -9,28 +9,25 @@
     "https://cambridgecurrencies.com/send-money-to-usa-from-uk/",
     "https://cambridgecurrencies.com/send-money-to-australia-from-uk/",
     "https://cambridgecurrencies.com/send-money-to-uk/",
-    "https://cambridgecurrencies.com/sectors-property-buyers/"
+    "https://cambridgecurrencies.com/sectors-property-buyers/",
+    "https://cambridgecurrencies.com/international-money-transfer/",
+    "https://cambridgecurrencies.com/international-business-account-payments/",
+    "https://cambridgecurrencies.com/large-international-money-transfers/",
+    "https://cambridgecurrencies.com/retirement-planning-with-currency-exchange/",
+    "https://cambridgecurrencies.com/business-foreign-exchange-uk/"
   ],
   "quotes": [
     {
       "topic": "countries",
-      "text": "Send Money to the UK Transfer guides from 40+ countries",
-      "url": "https://cambridgecurrencies.com/"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Safeguarding & Security Client funds safeguarded via FCA-authorised partners",
-      "url": "https://cambridgecurrencies.com/"
-    },
-    {
-      "topic": "countries",
       "text": "Cambridge Currencies is a UK specialist currency broker handling international money transfers in 50+ currencies to 190+ countries.",
-      "url": "https://cambridgecurrencies.com/"
+      "url": "https://cambridgecurrencies.com/",
+      "context": "Specialist international money transfers "
     },
     {
       "topic": "countries",
       "text": "We handle international payments to over 190 countries in 50+ currencies , processed through the regulated infrastructure of established global payment networks.",
-      "url": "https://cambridgecurrencies.com/"
+      "url": "https://cambridgecurrencies.com/",
+      "context": "190 countries, 50+ currencies"
     },
     {
       "topic": "safeguarding",
@@ -40,17 +37,109 @@
     {
       "topic": "safeguarding",
       "text": "All transfers are processed through their regulated infrastructure, with client funds safeguarded under UK regulations.",
-      "url": "https://cambridgecurrencies.com/"
+      "url": "https://cambridgecurrencies.com/",
+      "context": "How is Cambridge Currencies regulated?"
+    },
+    {
+      "topic": "countries",
+      "text": "We support property buyers purchasing in Spain , Portugal , France , Italy , the US, Australia, and over 190 countries worldwide.",
+      "url": "https://cambridgecurrencies.com/",
+      "context": "All transfers are completed by phone with a dedicated specialist — there is no online transaction platform. Do I need to register an account before getting a quote?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "All transfers completed by phone with a dedicated specialist · FCA-authorised payment partners (Currencycloud FRN 900199, ScioPay FRN 927951) · Funds safeguarded",
+      "url": "https://cambridgecurrencies.com/",
+      "context": "See how Cambridge Currencies compares"
+    },
+    {
+      "topic": "fees",
+      "text": "FCA-authorised partners Client funds safeguarded No transfer fees Dedicated specialist",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "GBP to EUR Exchange Rate History"
+    },
+    {
+      "topic": "limits",
+      "text": "Large payments Online caps common Caps often below €100,000 No practical upper limit",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "What is the cheapest way to send money to Spain from the UK?"
+    },
+    {
+      "topic": "speed",
+      "text": "Typical arrival 1–3 working days Same day for small sums Same or next working day",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "What is the cheapest way to send money to Spain from the UK?"
     },
     {
       "topic": "speed",
       "text": "Spot transfer — A spot transfer is an immediate currency conversion at the prevailing exchange rate, with funds usually delivered within one to two working days.",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/"
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "Key transfer types explained"
     },
     {
       "topic": "fees",
       "text": "No transfer fees, and no rate that changes between the quote and the booking.",
       "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/"
+    },
+    {
+      "topic": "speed",
+      "text": "Euros normally reach a Spanish bank account within one working day, and frequently the same day.",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "How long does a transfer from the UK to Spain take?"
+    },
+    {
+      "topic": "payout",
+      "text": "You need the beneficiary's full name exactly as their bank holds it, the Spanish IBAN — 24 characters, beginning ES — and the reason for the payment, such as a property deposit or family support.",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "What details do I need to send money to a Spanish bank account?"
+    },
+    {
+      "topic": "payout",
+      "text": "A BIC/SWIFT code is not required for a standard SEPA Euro payment.",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "What details do I need to send money to a Spanish bank account?"
+    },
+    {
+      "topic": "payout",
+      "text": "Since payee verification became standard in the euro area, the name must match the IBAN or the payment can be stopped.",
+      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
+      "context": "What details do I need to send money to a Spanish bank account?"
+    },
+    {
+      "topic": "limits",
+      "text": "Large payments Online caps common Caps often below €100,000 No practical upper limit",
+      "url": "https://cambridgecurrencies.com/send-money-to-france-from-uk/",
+      "context": "What is the cheapest way to send money to France from the UK?"
+    },
+    {
+      "topic": "fees",
+      "text": "FCA-authorised partners Client funds safeguarded No transfer fees Dedicated specialist",
+      "url": "https://cambridgecurrencies.com/send-money-to-usa-from-uk/",
+      "context": "GBP to USD Exchange Rate History"
+    },
+    {
+      "topic": "limits",
+      "text": "Large payments Online caps common Caps often below $100,000 No practical upper limit",
+      "url": "https://cambridgecurrencies.com/send-money-to-usa-from-uk/",
+      "context": "What is the cheapest way to send money to the USA from the UK?"
+    },
+    {
+      "topic": "identity",
+      "text": "We need passport or driving licence, proof of UK address, and a brief outline of the transfer purpose.",
+      "url": "https://cambridgecurrencies.com/large-international-money-transfers/",
+      "context": "How a large transfer works with Cambridge Currencies"
+    },
+    {
+      "topic": "identity",
+      "text": "UK FCA-authorised payment institutions are required to verify source of funds on higher-value transfers.",
+      "url": "https://cambridgecurrencies.com/large-international-money-transfers/"
+    },
+    {
+      "topic": "identity",
+      "text": "For transfers above £100,000, expect to provide proof of identity (passport or driving licence), proof of address (utility bill, bank statement), and proof of source of funds.",
+      "url": "https://cambridgecurrencies.com/large-international-money-transfers/",
+      "context": "What documents are required for large money transfers?"
     }
-  ]
+  ],
+  "attempts": []
 }

@@ -19,6 +19,8 @@ import { FosBlock } from "@/components/FosBlock";
 import { CompanyExtrasBlock } from "@/components/CompanyExtrasBlock";
 import { ChangesBlock } from "@/components/ChangesBlock";
 import { TransferChecklist } from "@/components/TransferChecklist";
+import { ProviderNoticeBlock } from "@/components/ProviderNoticeBlock";
+import { loadProviderNotice } from "@/lib/provider-notice-records";
 import { loadChanges, loadCompanyExtras } from "@/lib/extras-records";
 import { loadFosRecord } from "@/lib/fos-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
@@ -67,6 +69,7 @@ export default async function Page({ params }: { params: Params }) {
   const c = company?.company;
   const blocks = [...new Set(PROFILE_SCHEMA.map((f) => f.block))];
   const service = entry.service;
+  const notice = loadProviderNotice(p.slug);
   const fos = loadFosRecord(p.slug);
   const extras = loadCompanyExtras(p.slug, c?.number);
   const changes = loadChanges(p.slug);
@@ -81,6 +84,7 @@ export default async function Page({ params }: { params: Params }) {
     "Countries and currencies served": ["countries"],
     "Payout methods (bank, cash pickup, mobile wallet)": ["payout"],
     "Fees, limits, minimums": ["fees", "limits"],
+    "ID documents required": ["identity"],
   };
   const FOS_FIELD = "Complaint volumes and uphold rate (where published)";
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
@@ -90,6 +94,7 @@ export default async function Page({ params }: { params: Params }) {
     (f.field.startsWith("Revenue") && Boolean(extras?.accounts?.figures.length));
   const sections: [string, string][] = [
     ["transfer-checklist", "Questions for your transfer"],
+    ...(notice ? ([["provider-notice", "Published brand notice"]] as [string, string][]) : []),
     ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
     ...(service ? ([["service", "What it says about its service"]] as [string, string][]) : []),
     ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
@@ -225,6 +230,7 @@ export default async function Page({ params }: { params: Params }) {
       }
     >
 
+      {notice && <ProviderNoticeBlock name={p.name} notice={notice} />}
       {!verified && (
         <aside className="mt-8 border-l-4 border-line-strong bg-wash p-4 text-sm">
           <p>

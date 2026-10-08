@@ -1,7 +1,7 @@
 {
   "slug": "ofx",
   "url": "https://www.ofx.com/en-gb/",
-  "fetchedAt": "2026-10-05T12:16:23.536Z",
+  "fetchedAt": "2026-10-08T01:58:43.404Z",
   "status": "found",
   "statements": [
     {
@@ -12,6 +12,14 @@
       "companyNumbers": [
         "04631395"
       ]
+    },
+    {
+      "text": "Our 25+ year business was built on secure global payments. We are authorised by the Financial Conduct Authority as an Electronic Money Institution (Firm Ref. No. 902028).",
+      "frns": [
+        "902028"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/"
     }
   ]
 }

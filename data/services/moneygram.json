@@ -1,6 +1,6 @@
 {
   "slug": "moneygram",
-  "fetchedAt": "2026-10-05T12:35:05.951Z",
+  "fetchedAt": "2026-10-08T01:58:26.541Z",
   "status": "found",
   "pages": [
     "https://www.moneygram.com/gb/en",
@@ -8,8 +8,13 @@
     "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
     "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person",
     "https://www.moneygram.com/gb/en/corridor",
-    "https://www.moneygram.com/gb/en/help-center/track-a-transfer",
-    "https://www.moneygram.com/gb/en/help-center"
+    "https://www.moneygram.com/gb/en/help-center",
+    "https://www.moneygram.com/us/en/help-center/contact-us",
+    "https://www.moneygram.com/gb/en/help-center/terms-and-conditions",
+    "https://www.moneygram.com/gb/en/help-center/terms-of-use",
+    "https://www.moneygram.com/gb/en/help-center/complaints",
+    "https://www.moneygram.com/us/en/how-much-does-it-cost-to-send-money-internationally",
+    "https://www.moneygram.com/us/en/how-exchange-rates-affect-your-international-money-transfer"
   ],
   "quotes": [
     {
@@ -18,9 +23,43 @@
       "url": "https://www.moneygram.com/gb/en"
     },
     {
+      "topic": "fees",
+      "text": "See the real exchange rate and fee before you tap send.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-app",
+      "context": " See your cost before you send "
+    },
+    {
+      "topic": "fees",
+      "text": "See your rate and fee before you confirm, pay your way, and send money home in minutes, right from your phone or computer.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to 200+ countries",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online"
+    },
+    {
+      "topic": "fees",
+      "text": "Fees vary based on transaction details such as transfer amount, payment type, delivery method, and pickup location.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
+      "context": "How do I track a transfer?"
+    },
+    {
+      "topic": "identity",
+      "text": "All you need is a valid photo ID and your recipient's name and country.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person"
+    },
+    {
       "topic": "payout",
       "text": "Your recipient can pick up cash at an agent location or receive funds straight to a bank account or mobile wallet.",
       "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person"
+    }
+  ],
+  "attempts": [
+    {
+      "url": "https://www.moneygram.com/gb/en/help-center/track-a-transfer",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
     }
   ]
 }

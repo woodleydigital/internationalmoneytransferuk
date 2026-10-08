@@ -1,22 +1,21 @@
 {
   "slug": "tesco-bank",
-  "fetchedAt": "2026-10-05T12:40:18.552Z",
+  "fetchedAt": "2026-10-08T02:02:04.468Z",
   "status": "none",
   "pages": [
     "https://www.tescobank.com/",
-    "https://www.tescobank.com/credit-cards/money-transfers-credit-cards/",
-    "https://www.tescobank.com/credit-cards/charges-fees-interest/",
-    "https://www.tescobank.com/credit-cards/low-fee-balance-transfer-credit-card/",
     "https://www.tescobank.com/guides/cost-of-living/",
-    "https://www.tescobank.com/credit-cards/customer-help/",
     "https://www.tescobank.com/loans/customer-help/",
-    "https://www.tescobank.com/",
-    "https://www.tescobank.com/credit-cards/money-transfers-credit-cards/",
-    "https://www.tescobank.com/credit-cards/charges-fees-interest/",
-    "https://www.tescobank.com/credit-cards/low-fee-balance-transfer-credit-card/",
-    "https://www.tescobank.com/guides/cost-of-living/",
-    "https://www.tescobank.com/credit-cards/customer-help/",
-    "https://www.tescobank.com/loans/customer-help/"
+    "https://www.tescobank.com/help/faqs/general-information/",
+    "https://www.tescobank.com/help/financial-difficulty/",
+    "https://www.tescobank.com/help/faqs/loans/",
+    "https://www.tescobank.com/savings/existing-customers/",
+    "https://www.tescobank.com/help/",
+    "https://www.tescobank.com/mobile-banking-app/",
+    "https://www.tescobank.com/online-banking/",
+    "https://www.tescobank.com/help/accessibility/",
+    "https://www.tescobank.com/help/contact-us/"
   ],
-  "quotes": []
+  "quotes": [],
+  "attempts": []
 }

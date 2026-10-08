@@ -1,26 +1,57 @@
 {
   "slug": "smart-currency-exchange",
-  "fetchedAt": "2026-10-05T12:42:45.714Z",
+  "fetchedAt": "2026-10-08T02:03:13.632Z",
   "status": "found",
   "pages": [
+    "https://www.smartcurrencyexchange.com/money-transfer-faq/",
+    "https://www.smartcurrencyexchange.com/smart-currency-online-faq/",
     "https://www.smartcurrencyexchange.com/",
     "https://www.smartcurrencyexchange.com/reasons-for-transfer/",
     "https://www.smartcurrencyexchange.com/reasons-for-transfer/buying-property-abroad/",
     "https://www.smartcurrencyexchange.com/reasons-for-transfer/selling-property-abroad/",
     "https://www.smartcurrencyexchange.com/reasons-for-transfer/emigration/",
     "https://www.smartcurrencyexchange.com/reasons-for-transfer/regular-payments/",
-    "https://www.smartcurrencyexchange.com/reasons-for-transfer/large-transfers/"
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/large-transfers/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/overseas-weddings/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/renting-property-abroad/",
+    "https://www.smartcurrencyexchange.com/reasons-for-transfer/medical-treatment/"
   ],
   "quotes": [
     {
       "topic": "speed",
+      "text": "Most transfers arrive within 1–2 working days depending on the currency and destination.",
+      "url": "https://www.smartcurrencyexchange.com/money-transfer-faq/",
+      "context": "How long does an international transfer take?"
+    },
+    {
+      "topic": "fees",
+      "text": "We don’t charge any transfer fees.",
+      "url": "https://www.smartcurrencyexchange.com/money-transfer-faq/",
+      "context": "Do you charge any fees?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Read more about safeguarding funds .",
+      "url": "https://www.smartcurrencyexchange.com/money-transfer-faq/"
+    },
+    {
+      "topic": "speed",
       "text": "We aim to transfer your money onward the same day it is received to our account.",
-      "url": "https://www.smartcurrencyexchange.com/"
+      "url": "https://www.smartcurrencyexchange.com/",
+      "context": "How quickly can I transfer money overseas?"
     },
     {
       "topic": "speed",
       "text": "In many cases the money reaches your recipient same-day or within 1-2 business days depending on the currencies and destinations involved.",
-      "url": "https://www.smartcurrencyexchange.com/"
+      "url": "https://www.smartcurrencyexchange.com/",
+      "context": "How quickly can I transfer money overseas?"
+    },
+    {
+      "topic": "identity",
+      "text": "For large emigration transfers (like house sale proceeds), you may also be asked for a “Source of Funds” document, such as a completion statement from your solicitor or a bank statement showing the funds.",
+      "url": "https://www.smartcurrencyexchange.com/reasons-for-transfer/emigration/",
+      "context": "What documentation will I need to move a large sum of money abroad?"
     }
-  ]
+  ],
+  "attempts": []
 }

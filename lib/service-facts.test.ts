@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { findServiceLinks, findServiceQuotes, mergeQuotes, sentences, quoteContext } from "./service-facts.ts";
+import { findServiceLinks, findServiceQuotes, findPageServiceQuotes, mergeQuotes, sentences, quoteContext } from "./service-facts.ts";
 
 const page = `
 Send money to over 80 countries with a low, upfront fee.
@@ -76,4 +76,23 @@ test("business, starting-price and destination context stays attached to the quo
   assert.match(quoteContext({ topic: "countries", text: "Pay teams in 160 countries.", url: "https://example.com/business/payments/" }).join(" "), /Business service/);
   assert.match(quoteContext({ topic: "limits", text: "You can send up to $535,000 USD to Albania online.", url: "https://example.com/send-money/send-money-to-albania/" }).join(" "), /Destination-specific/);
   assert.match(quoteContext({ topic: "fees", text: "Transfer fees from 0.1% apply.", url: "https://example.com/pricing/" }).join(" "), /Starting price/);
+});
+
+test("short FAQ answers retain the source question", () => {
+  const q = findPageServiceQuotes("Do you charge international transfer fees?\nWe don't charge a transfer fee.\n[IMT-H]Credit cards[/IMT-H]\nThere is a £5 charge for using your card overseas.", "https://example.com/faqs/");
+  assert.equal(q.length, 1);
+  assert.equal(q[0].topic, "fees");
+  assert.equal(q[0].text, "We don't charge a transfer fee.");
+});
+
+test("domestic payments, hypothetical examples and complaints are not delivery evidence", () => {
+  const text = "CHAPS payments let you send and receive sterling payments on the same day.\nYou want to send £100 to a bank account abroad, in dollars.\nWe will reply to your complaint within 15 business days of receiving the transfer request.\nStore 18 currencies in your Global Money Account.\nUp to £10,000 – 3% mark-up";
+  assert.deepEqual(findPageServiceQuotes(text, "https://example.com/international-payments/"), []);
+  assert.deepEqual(findPageServiceQuotes("You can send up to £25,000 per day.\nPayments usually arrive the next working day.", "https://example.com/payments/"), []);
+});
+
+test("availability, verification and non-numeric limits are captured verbatim", () => {
+  assert.equal(findServiceQuotes("Sorry, Chase accounts can’t be used to send or receive money internationally yet.", "https://example.com/international-payments/")[0].topic, "availability");
+  assert.equal(findServiceQuotes("We don't have a maximum transfer limit for international payments.", "https://example.com/faqs/")[0].topic, "limits");
+  assert.equal(findServiceQuotes("To send money you need to provide proof of identity and proof of address.", "https://example.com/faqs/")[0].topic, "identity");
 });

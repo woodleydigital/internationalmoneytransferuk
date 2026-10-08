@@ -1,21 +1,64 @@
 {
   "slug": "metro-bank",
-  "fetchedAt": "2026-10-05T12:40:03.383Z",
+  "fetchedAt": "2026-10-08T02:01:43.795Z",
   "status": "found",
   "pages": [
+    "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
     "https://www.metrobankonline.co.uk/",
     "https://www.metrobankonline.co.uk/bank-accounts/i-want-some-information-about/using-my-card-abroad/",
-    "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
     "https://www.metrobankonline.co.uk/mortgages/i-want-some-information-about/fee-assist/",
     "https://www.metrobankonline.co.uk/cost-of-living/",
     "https://www.metrobankonline.co.uk/borrowing/i-want-information-about/help-with-my-debt/",
-    "https://www.metrobankonline.co.uk/help-and-support/"
+    "https://www.metrobankonline.co.uk/help-and-support/",
+    "https://www.metrobankonline.co.uk/help-and-support/get-in-touch/",
+    "https://www.metrobankonline.co.uk/help-and-support/internet-banking/how-do-i-log-into-internet-banking/",
+    "https://www.metrobankonline.co.uk/help-and-support/what-is-sca/",
+    "https://www.metrobankonline.co.uk/help-and-support/payments/looking-to-make-a-payment/",
+    "https://www.metrobankonline.co.uk/help-and-support/card-questions/how-do-i-report-a-lost-or-stolen-card/"
   ],
   "quotes": [
     {
+      "topic": "payout",
+      "text": "An international payment is a secure way to send money from your account to a bank account in another country or to receive money.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": " Make international payments from your account and receive money from outside the UK "
+    },
+    {
+      "topic": "speed",
+      "text": "Payments usually arrive within 1 to 2 working days",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments that are submitted by 2pm in store and via our call center will be processed the same day.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments received after 2pm in store and via our call center will be processed on the next working day",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+    },
+    {
       "topic": "fees",
-      "text": "The person or business sending the payment can select the 'pay all fees' option, which means they will pay a flat upfront fee for their bank charges for sending the payment and intermediatory bank fees and taxes.",
-      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/"
+      "text": "This exchange rate will include a 3% margin.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "What are the fees for receiving an international payment?"
+    },
+    {
+      "topic": "fees",
+      "text": "An intermediary bank may deduct fees from the amount before you receive it.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "What are the fees for receiving an international payment?"
+    },
+    {
+      "topic": "fees",
+      "text": "When the payment reaches your account our exchange rate will be applied, which will include a 3% margin*.",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "What are the fees for receiving an international payment?"
     }
-  ]
+  ],
+  "attempts": []
 }

@@ -11,6 +11,7 @@
     "test": "node --test --experimental-strip-types lib/*.test.ts",
     "import:disclosures": "node --experimental-strip-types scripts/import-disclosures.ts",
     "import:services": "node --experimental-strip-types scripts/import-service-facts.ts",
+    "import:notices": "node --experimental-strip-types scripts/import-provider-notices.ts",
     "indexnow": "node --experimental-strip-types scripts/indexnow.ts",
     "import:extras": "node --experimental-strip-types scripts/import-company-extras.ts",
     "record:changes": "node --experimental-strip-types scripts/record-changes.ts",

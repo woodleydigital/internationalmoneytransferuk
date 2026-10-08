@@ -87,6 +87,13 @@ test("robots.txt wildcards and anchors are honoured", () => {
   assert.ok(robotsAllows("User-agent: Googlebot\nDisallow: /\n", "/"));
 });
 
+test("robots groups share rules across listed agents and allow wins equal specificity", () => {
+  assert.equal(robotsAllows("User-agent: *\nUser-agent: AnotherBot\nDisallow: /private", "/private/data"), false);
+  assert.equal(robotsAllows("User-agent: *\nDisallow: /\nUser-agent: IMTUKDirectoryBot\nAllow: /help", "/help/fees"), true);
+  assert.equal(robotsAllows("User-agent: *\nDisallow: /help\nAllow: /help", "/help"), true);
+  assert.equal(robotsAllows("User-agent: *\nDisallow:\nUser-agent: OtherBot\nDisallow: /", "/"), true);
+});
+
 test("follows only same-site links that look legal or regulatory", async () => {
   const { findLegalLinks } = await import("./disclosures.ts");
   const html = `

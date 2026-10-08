@@ -1,24 +1,24 @@
 {
   "slug": "taptap-send",
-  "url": "https://www.taptapsend.com/en-gb",
-  "fetchedAt": "2026-10-05T12:27:55.357Z",
+  "url": "https://www.taptapsend.com/",
+  "fetchedAt": "2026-10-08T02:03:40.273Z",
   "status": "found",
   "statements": [
     {
-      "text": "© Taptap Send UK Limited, Registered in England and Wales, Company Number 10416468, Registered Office Epworth House, 25 City Road, Shoreditch, London, EC1Y 1AA.",
-      "frns": [],
-      "companyNumbers": [
-        "10416468"
-      ],
-      "url": "https://www.taptapsend.com/en/licenses"
-    },
-    {
-      "text": "Taptap Send UK Limited is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011, Firm Reference Number 900842, for the issuing of electronic money.",
+      "text": "Our FCA firm reference number is 900842. Our company number is 10416468.",
       "frns": [
         "900842"
       ],
       "companyNumbers": [],
-      "url": "https://www.taptapsend.com/en/licenses"
+      "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk"
+    },
+    {
+      "text": "We are a UK company which is authorised and regulated by the Financial Conduct Authority under the Electronic Money Regulations 2011 to issue electronic money and provide payment services. Our firm reference number is 900842 and our Company number is 10416468.",
+      "frns": [
+        "900842"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk"
     }
   ]
 }

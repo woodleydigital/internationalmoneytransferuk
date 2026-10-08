@@ -1,15 +1,20 @@
 {
   "slug": "natwest",
-  "fetchedAt": "2026-10-05T12:36:16.180Z",
+  "fetchedAt": "2026-10-08T01:59:14.894Z",
   "status": "found",
   "pages": [
+    "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+    "https://www.natwest.com/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
     "https://www.natwest.com/",
     "https://www.natwest.com/life-moments/travel/spending-abroad/travel-account.html",
-    "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
     "https://www.natwest.com/life-moments/travel/spending-abroad.html",
-    "https://www.natwest.com/support-centre/help-with-your-card/going-abroad.html",
     "https://www.natwest.com/investments/investment-fees.html",
-    "https://www.natwest.com/credit-cards/existing-customers/fees-and-charges.html"
+    "https://www.natwest.com/current-accounts/overdrafts/olb/overdraft-calculator.html",
+    "https://www.natwest.com/support-centre/general-banking-information/general/purpose-of-payment-code-requirement-for-specific-countries.html",
+    "https://www.natwest.com/support-centre/banking-from-home/make-payments/do-you-have-a-list-of-iban-compliant-countries.html",
+    "https://www.natwest.com/support-centre.html",
+    "https://www.natwest.com/fraud-and-security/report-fraud.html",
+    "https://www.natwest.com/banking-with-natwest/natwest-app.html"
   ],
   "quotes": [
     {
@@ -18,9 +23,35 @@
       "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html"
     },
     {
+      "topic": "fees",
+      "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+      "context": "Fee options when sending a payment"
+    },
+    {
+      "topic": "fees",
+      "text": "We'll charge £10 to cover any foreign bank handling fees.",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+      "context": "Fee options when sending a payment"
+    },
+    {
       "topic": "limits",
       "text": "If you have registered your biometrics with the Bank, you can use the mobile app or Online Banking to make an international payment to new and saved payees up to the daily limit of £20,000.00 GBP.",
-      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html"
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
+    },
+    {
+      "topic": "limits",
+      "text": "A saved payee via the mobile app up to £20,000.",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
+    },
+    {
+      "topic": "limits",
+      "text": "A new payee via our mobile app up to £750 (a maximum of 5 payments totalling £750 per day).",
+      "url": "https://www.natwest.com/banking-with-natwest/how-to/send-money-abroad.html",
+      "context": "How much can I send?"
     }
-  ]
+  ],
+  "attempts": []
 }

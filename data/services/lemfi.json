@@ -1,37 +1,20 @@
 {
   "slug": "lemfi",
-  "fetchedAt": "2026-10-05T12:39:59.822Z",
-  "status": "found",
-  "pages": [
-    "https://lemfi.com/en-us/",
-    "https://lemfi.com/en-us/international-money-transfer",
-    "https://lemfi.com/en-us/request-money"
-  ],
-  "quotes": [
+  "fetchedAt": "2026-10-08T02:05:48.502Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
     {
-      "topic": "countries",
-      "text": "International money transfer Send money internationally to more than 30+ countries.",
-      "url": "https://lemfi.com/en-us/"
+      "url": "https://www.lemfi.com/en-gb/legal/terms",
+      "status": "error",
+      "reason": "HTTP 403"
     },
     {
-      "topic": "fees",
-      "text": "Send more money to anyone at a low cost or zero transfer fees.",
-      "url": "https://lemfi.com/en-us/"
-    },
-    {
-      "topic": "payout",
-      "text": "Choose how you want to send and receive: direct to bank accounts, mobile money, and more.",
-      "url": "https://lemfi.com/en-us/"
-    },
-    {
-      "topic": "speed",
-      "text": "Enjoy quick transfers, usually delivered in minutes, at competitive rates you can trust.",
-      "url": "https://lemfi.com/en-us/"
-    },
-    {
-      "topic": "countries",
-      "text": "Transfer to friends and family in over 30 countries",
-      "url": "https://lemfi.com/en-us/international-money-transfer"
+      "url": "https://lemfi.com/",
+      "status": "error",
+      "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "HTTP 403"
 }

@@ -1,9 +1,14 @@
 {
   "slug": "taptap-send",
-  "fetchedAt": "2026-10-05T12:44:12.719Z",
+  "fetchedAt": "2026-10-08T02:03:40.273Z",
   "status": "found",
   "pages": [
+    "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+    "https://www.taptapsend.com/en/legal/uk/user-agreement-uk",
     "https://www.taptapsend.com/en-gb",
+    "https://help.taptapsend.com/en/fees-and-pricing/what-are-my-sending-limits-at-taptap-send",
+    "https://help.taptapsend.com/en/sending-countries",
+    "https://help.taptapsend.com/en",
     "https://www.taptapsend.com/en-gb/send-money-to/bangladesh",
     "https://www.taptapsend.com/en-gb/send-money-to/brazil",
     "https://www.taptapsend.com/en-gb/send-money-to/colombia",
@@ -14,8 +19,75 @@
   "quotes": [
     {
       "topic": "payout",
+      "text": "With Taptap Send, you can send money from the United Kingdom directly to bank accounts, mobile wallets, and cash pick-up locations abroad.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "How do I send money from the UK?"
+    },
+    {
+      "topic": "countries",
+      "text": "Taptap Send covers transfers to 80+ countries in Africa, the Americas, Asia, Europe, and the Middle East.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "How do I send money from the UK?"
+    },
+    {
+      "topic": "fees",
+      "text": "Fees depend on where you're sending.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "How much does it cost to send money?"
+    },
+    {
+      "topic": "fees",
+      "text": "For some destinations, a transfer fee applies, you'll see the exact amount before you confirm.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "How much does it cost to send money?"
+    },
+    {
+      "topic": "fees",
+      "text": "For others, there's no transfer fee, but we make a small margin on the exchange rate.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "How much does it cost to send money?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Instead, we protect your funds through a process called safeguarding.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "Your money is protected"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Safeguarding means that we keep your money in a safe bank account while we process your transfer.",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "Your money is protected"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "You can read more about safeguarding on the FCA website .",
+      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
+      "context": "Your money is protected"
+    },
+    {
+      "topic": "identity",
+      "text": "3.3.1. to provide us with accurate and truthful information about your and the designated recipient’s identity and any identity documents we ask for;",
+      "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk",
+      "context": "[New] Taptap Send User Agreement"
+    },
+    {
+      "topic": "identity",
+      "text": "3.2.1. to provide us with accurate and truthful information about your and the Recipient’s identity and any identity documents we ask for;",
+      "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk",
+      "context": "[OLD] Taptap Send User Agreement"
+    },
+    {
+      "topic": "identity",
+      "text": "We'll ask you to upload a source of funds document before the transfer can go through.",
+      "url": "https://help.taptapsend.com/en/fees-and-pricing/what-are-my-sending-limits-at-taptap-send",
+      "context": "How do the fixed limits work?"
+    },
+    {
+      "topic": "payout",
       "text": "Transfer to bKash, Nagad or Rocket mobile wallets, any Bangladeshi bank, or cash pickup at BRAC Bank, Islami Bank and others.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh",
+      "context": "Send money to Bangladesh — fast transfers to BKash, Nagad, Rocket and any bank"
     },
     {
       "topic": "speed",
@@ -23,44 +95,22 @@
       "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
     },
     {
-      "topic": "payout",
-      "text": "You can send money via Taptap Send to any bank in Bangladesh, or to cash pickup services using BRAC Bank, Bank Islami, Mutual Trust Bank, Sonali Bank, Dutch Bangla Bank or you can also send to bKash, Nagad or Rocket mobile money wallet.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
+      "topic": "speed",
+      "text": "Over 90% of transactions are processed in seconds.",
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/brazil",
+      "context": "How long does it take for the transfer to arrive in Brazil?"
     },
     {
       "topic": "payout",
-      "text": "Sending to BKash or Nagad mobile wallets From the UK: £0.99 per transfer",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
-    },
-    {
-      "topic": "fees",
-      "text": "From all other supported countries: Taptap Send charges no transfer fees.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
-    },
-    {
-      "topic": "limits",
-      "text": "Sending limits (per transfer) by country: UK: £99,000",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
+      "text": "You can send money via Taptap Send to bank accounts at Bancolombia, Davivienda, Nu Bank, and Grupo Aval banks in Colombia.",
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/colombia",
+      "context": "How can I send money to Colombia?"
     },
     {
       "topic": "speed",
-      "text": "While most bank transfers are delivered any day of the week, your transfer may pend until the next working day if sent after 3:00 PM Dhaka time (6:00 AM GMT)",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
-    },
-    {
-      "topic": "fees",
-      "text": "Send money to Colombia with no fee to Bre-B.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/colombia"
-    },
-    {
-      "topic": "speed",
-      "text": "Bank transfers and wallets arrive within 1-2 business days.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/egypt"
-    },
-    {
-      "topic": "fees",
-      "text": "Taptap Send only charges a small percentage on the exchange rate, with no additional fees on EGP transfers",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/egypt"
+      "text": "If the recipient's name is misspelled, a first or last name is missing, or the account number is incorrect, this will trigger a manual review by the bank, which may take up to 4 days. +",
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/colombia",
+      "context": "Incorrect information in the recipient's details:"
     },
     {
       "topic": "countries",
@@ -70,7 +120,21 @@
     {
       "topic": "countries",
       "text": "Taptap Send is a mobile app that lets you send money quickly, securely, and affordably to more than 80 countries in Latin America, Africa, and Asia.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala"
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
+      "context": "What is Taptap Send?"
+    },
+    {
+      "topic": "limits",
+      "text": "Transaction limit: up to $2,500 USD",
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
+      "context": "How much money can I send to Guatemala?"
+    },
+    {
+      "topic": "limits",
+      "text": "Monthly limit: up to $10,000 USD",
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
+      "context": "How much money can I send to Guatemala?"
     }
-  ]
+  ],
+  "attempts": []
 }

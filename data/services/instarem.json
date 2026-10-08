@@ -1,6 +1,6 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-10-05T12:39:50.183Z",
+  "fetchedAt": "2026-10-08T02:01:34.178Z",
   "status": "found",
   "pages": [
     "https://www.instarem.com/en-gb/",
@@ -9,28 +9,79 @@
     "https://www.instarem.com/en-gb/send-money-to-kenya/",
     "https://www.instarem.com/en-gb/send-money-to-nigeria/",
     "https://www.instarem.com/en-gb/send-money-to-uganda/",
-    "https://www.instarem.com/en-gb/send-money-to-australia/"
+    "https://www.instarem.com/en-gb/send-money-to-australia/",
+    "https://www.instarem.com/en-gb/send-money-to-bangladesh/",
+    "https://www.instarem.com/en-gb/send-money-to-bhutan/",
+    "https://www.instarem.com/en-gb/send-money-to-china/",
+    "https://www.instarem.com/en-gb/send-money-to-hong-kong/",
+    "https://www.instarem.com/en-gb/send-money-to-india/"
   ],
   "quotes": [
     {
+      "topic": "fees",
+      "text": "Fees Fees and exchange rates vary by sending amount, currency, payment method, and receiving country.",
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "International money transfers"
+    },
+    {
       "topic": "countries",
       "text": "Send money confidently to 60+ countries in minutes.",
-      "url": "https://www.instarem.com/en-gb/"
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "Fast and secure international transfers"
     },
     {
       "topic": "countries",
       "text": "Send money to over 60 countries hassle-free and stay in the know with real-time tracking.",
-      "url": "https://www.instarem.com/en-gb/"
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "Money transfers at your fingertips"
     },
     {
       "topic": "countries",
-      "text": "You can send money online to your loved ones, pay for education fees, or transfer funds to your own account in over 60 countries.",
+      "text": "Send money from UK to 60+ countries",
       "url": "https://www.instarem.com/en-gb/"
     },
     {
       "topic": "fees",
       "text": "Sending money abroad with Instarem is simple and affordable, with no hidden fees or unfair FX margins.",
-      "url": "https://www.instarem.com/en-gb/"
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "What are the benefits of sending money online with Instarem? "
+    },
+    {
+      "topic": "fees",
+      "text": "You’ll see exchange rates and fees upfront , with no hidden charges .",
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "How can I send money abroad using Instarem? "
+    },
+    {
+      "topic": "safeguarding",
+      "text": "As a licensed and regulated service, Instarem requires certain details to verify your identity and safeguard your transactions.",
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "What information do I need to provide to make an international money transfer with Instarem? "
+    },
+    {
+      "topic": "identity",
+      "text": "Your personal details: Name, email, phone number, identity proof (like a National ID or passport), and address documents.",
+      "url": "https://www.instarem.com/en-gb/",
+      "context": "What information do I need to provide to make an international money transfer with Instarem? "
+    },
+    {
+      "topic": "speed",
+      "text": "In general, transferring money to Ghana from UK is usually instant but can also take one to two business days.",
+      "url": "https://www.instarem.com/en-gb/send-money-to-ghana/",
+      "context": "How long does it take to transfer money to Ghana from UK?"
+    },
+    {
+      "topic": "speed",
+      "text": "In general, transferring money to Kenya from UK is usually instant but can also take one to two business days.",
+      "url": "https://www.instarem.com/en-gb/send-money-to-kenya/",
+      "context": "How long does it take to transfer money to Kenya from UK?"
+    },
+    {
+      "topic": "speed",
+      "text": "In general, transferring money to Nigeria from UK is usually instant but can also take one to two business days.",
+      "url": "https://www.instarem.com/en-gb/send-money-to-nigeria/",
+      "context": "How long does it take to transfer money to Nigeria from UK?"
     }
-  ]
+  ],
+  "attempts": []
 }

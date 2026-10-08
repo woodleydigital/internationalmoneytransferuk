@@ -1,18 +1,51 @@
 {
   "slug": "starling-bank",
-  "fetchedAt": "2026-10-05T12:44:19.253Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T02:04:13.769Z",
+  "status": "found",
   "pages": [
+    "https://www.starlingbank.com/send-money-abroad/",
+    "https://www.starlingbank.com/send-money-abroad/country-fees/",
+    "https://help.starlingbank.com/personal/topics/international-payments/how-much-does-it-cost-to-make-an-international-payment/",
     "https://www.starlingbank.com/",
+    "https://help.starlingbank.com/personal/topics/international-payments/when-will-my-international-transfer-arrive/",
+    "https://www.starlingbank.com/send-money-abroad/send-money-to-europe/",
+    "https://www.starlingbank.com/send-money-abroad/send-money-to-usa/",
+    "https://www.starlingbank.com/send-money-abroad/send-money-to-south-africa/",
+    "https://www.starlingbank.com/send-money-abroad/send-money-to-poland/",
+    "https://help.starlingbank.com/personal/topics/international-payments/",
     "https://www.starlingbank.com/legal/",
-    "https://www.starlingbank.com/resources/tools/cost-of-living/",
-    "https://www.starlingbank.com/help/",
-    "https://www.starlingbank.com/faq/customer-support/money-worries/",
-    "https://www.starlingbank.com/",
-    "https://www.starlingbank.com/legal/",
-    "https://www.starlingbank.com/resources/tools/cost-of-living/",
-    "https://www.starlingbank.com/help/",
-    "https://www.starlingbank.com/faq/customer-support/money-worries/"
+    "https://www.starlingbank.com/resources/tools/cost-of-living/"
   ],
-  "quotes": []
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Fast and secure money transfers to bank accounts in 34 countries worldwide, with no hidden fees.",
+      "url": "https://www.starlingbank.com/send-money-abroad/",
+      "context": " Send money abroad "
+    },
+    {
+      "topic": "fees",
+      "text": "0.4% conversion fee £4.00",
+      "url": "https://www.starlingbank.com/send-money-abroad/",
+      "context": " Send money abroad "
+    },
+    {
+      "topic": "countries",
+      "text": "Plus, you can send money to 34 countries , in 17 currencies worldwide, including euro , US dollar , rand and zloty .",
+      "url": "https://www.starlingbank.com/send-money-abroad/",
+      "context": " Why should I send money abroad with Starling? "
+    },
+    {
+      "topic": "fees",
+      "text": "You can hold, send and receive euros, all completely free of charge.",
+      "url": "https://www.starlingbank.com/send-money-abroad/"
+    },
+    {
+      "topic": "fees",
+      "text": "We apply a 0.4% fee to the currency conversion and a small delivery fee to cover our costs.",
+      "url": "https://www.starlingbank.com/send-money-abroad/",
+      "context": " About our fees "
+    }
+  ],
+  "attempts": []
 }

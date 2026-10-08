@@ -1,8 +1,18 @@
 {
   "slug": "ria",
   "url": "https://www.riamoneytransfer.com/en-gb/",
-  "fetchedAt": "2026-10-05T12:21:56.575Z",
-  "status": "error",
-  "statements": [],
-  "error": "HTTP 403"
+  "fetchedAt": "2026-10-08T02:01:46.763Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Euronet Payment Services Limited, a company incorporated in England with registered number 06975932 whose registered address is at 7th Floor, North Block, 55 Baker Street, London, W1U 7EU, authorised by the Financial Conduct Authority (“ FCA ”) under the Payment Services Regulations 2017 (the “ Regulations ”) for the provision of payment services with FCA register number 504630 and who trades under the name 'Ria' (hereinafter \" we ”, “ our ” or “ us ”).",
+      "frns": [
+        "504630"
+      ],
+      "companyNumbers": [
+        "06975932"
+      ],
+      "url": "https://www.riamoneytransfer.com/en-gb/terms/"
+    }
+  ]
 }
