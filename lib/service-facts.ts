@@ -85,7 +85,7 @@ export interface ServiceRecord {
   attempts?: { url: string; status: "error" | "blocked" | "redirected"; reason: string }[];
 }
 
-const MONEY = /(?:[£$€]\s?\d[\d,.]*(?:\s?(?:k|m|million|bn))?|\b\d[\d,.]*\s?(?:GBP|USD|EUR|pounds?)\b)/i;
+const MONEY = /(?:[£$€]\s?\d[\d,.]*(?:\s?(?:k|m|million|bn))?|\b(?:GBP|USD|EUR)\s?\d[\d,.]*|\b\d[\d,.]*\s?(?:GBP|USD|EUR|pounds?)\b)/i;
 const PERCENT = /\b\d+(?:\.\d+)?\s?%/;
 
 const RULES: Record<Topic, (s: string) => boolean> = {
@@ -145,16 +145,21 @@ const JUNK = /^FX:|cookie|javascript|\{|\}|©|copyright|all rights reserved|clic
 /** A heading can qualify an answer, but cannot supply the fact itself. */
 function matchesTopic(topic: Topic, sentence: string, context?: string): boolean {
   const scoped = context ? `${context} ${sentence}` : sentence;
-  if (["countries", "payout", "safeguarding", "availability"].includes(topic)) return RULES[topic](sentence);
+  if (topic === "countries") return RULES.countries(sentence) && !/\b(?:accounts?|clients?|customers?|residents?) (?:in|of|from|across)\b|\bat least \d+ countries\b/i.test(sentence);
+  if (["payout", "safeguarding", "availability"].includes(topic)) return RULES[topic](sentence);
   if (topic === "identity") {
     return /\b(?:passport|driving licen[cs]e|proof of (?:identity|address|funds)|source of funds|identity documents?|photo(?:graphic)? ID)\b/i.test(sentence) && RULES.identity(scoped);
   }
   if (topic === "speed") {
-    if (/\b(?:documents?|verification|identity checks|didn['’]t|did not|cancelled)\b/i.test(sentence)) return false;
+    if (/\b(?:documents?|verification|identity checks|didn['’]t|did not|cancelled)\b/i.test(sentence) || /\bplease send\b[^.]{0,90}\byour (?:money|payment)\b/i.test(sentence)) return false;
     return RULES.speed(sentence) || (/\b(?:delivery times|timeline|how long|how fast)\b/i.test(context ?? "") &&
       /\b(?:same|next|\d+|one|two|three)[ -](?:(?:working|business) )?days?\b/i.test(sentence));
   }
-  if (topic === "fees") return RULES.fees(sentence) || (/\b(?:fees?|charges?|cost)\b/i.test(context ?? "") && (MONEY.test(sentence) || PERCENT.test(sentence)));
+  if (topic === "fees") {
+    if (RULES.fees(sentence)) return true;
+    if (RULES.limits(sentence) && (sentence.match(new RegExp(MONEY.source, "gi")) ?? []).length < 2) return false;
+    return /\b(?:fees?|charges?|cost)\b/i.test(context ?? "") && (MONEY.test(sentence) || PERCENT.test(sentence));
+  }
   return RULES.limits(sentence);
 }
 
@@ -181,6 +186,7 @@ export function findServiceQuotes(text: string, url: string, context?: string, t
   });
   for (const s of candidates) {
     if (SUPERLATIVE.test(s) || JUNK.test(s) || PROMO.test(s) || ABOUT_OTHERS.test(s) || /\[\/?IMT-|Footnote link/i.test(s)) continue;
+    if (/^(?:They|These|This (?:fee|charge|amount))\b|[–—-]$/i.test(s)) continue;
     if (/\bRead (?:article|more)\b|…|\b(?:US|U\.S\.|American) banks?\b|\b(?:firms|companies) are required to\b/i.test(s)) continue;
     if (/^(?:How|What|Where|When|Why)\b/i.test(s)) continue;
     if (s.includes(" | ") || /[?:]$/.test(s)) continue; // page titles, FAQ questions, list lead-ins
@@ -302,7 +308,7 @@ export function findPageServiceQuotes(text: string, url: string): ServiceQuote[]
     // Parent headings retain the payment product when a child says only
     // "Online" or "By post". Never carry the stack into a sibling section.
     const context = [...meaningful.map((h) => h.text), ...(table ? [table] : [])].slice(-3).join(" — ") || undefined;
-    if (headings.some((h) => /\b(?:credit cards?|savings|mortgages?|investments?|Faster Payments?|CHAPS|domestic payments?|worked examples?|example transaction|illustration)\b/i.test(h.text))) continue;
+    if (headings.some((h) => /\b(?:credit cards?|savings|mortgages?|investments?|Faster Payments?|CHAPS|domestic payments?|worked examples?|example transaction|illustration|spending|refunds?|cancelled|unsuccessful)\b/i.test(h.text))) continue;
     // Price brackets inherit the cost question before classification. Otherwise
     // "payments up to £5,000: £10" looks like a transfer limit in isolation.
     const found = question ? [] : findServiceQuotes(content, url, heading ? undefined : context, Boolean(table))

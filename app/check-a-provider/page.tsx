@@ -111,7 +111,7 @@ function Intro() {
     <p className="max-w-prose text-sm">
       Enter the name of the firm you are thinking of using. We look it up on the FCA’s
       Financial Services Register for you, then and there, and show each match exactly as the
-      Register returns it. Results are not stored.
+      Register returns it. Results may be cached for up to one hour and are not copied into profiles.
     </p>
   );
 }
@@ -143,7 +143,7 @@ function Results({ q, search }: { q: string; search: FirmSearch }) {
       <div className="rounded-lg border border-line p-5">
         <p>
           {`The FCA Register returned no firms matching “${q}”. Check the spelling, or `}
-          {official}. A firm that does not appear may not be authorised.
+          {official}. An empty search does not establish a firm's regulatory status. Try its legal name or firm reference number and check directly with the Register.
         </p>
       </div>
     );
@@ -152,7 +152,7 @@ function Results({ q, search }: { q: string; search: FirmSearch }) {
   return (
     <div className="rounded-lg border border-line p-5">
       <p className="text-sm">
-        {`${search.results.length} ${search.results.length === 1 ? "match" : "matches"} on the FCA Register, checked ${new Date(search.checkedAt).toUTCString()}.`}
+        {`${search.results.length} ${search.results.length === 1 ? "match" : "matches"} returned for this search at ${new Date(search.checkedAt).toUTCString()}. Results may be cached for up to one hour; confirm current status on the Register.`}
       </p>
       <table className="mt-3 w-full text-left text-sm">
         <thead>

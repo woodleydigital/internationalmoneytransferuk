@@ -44,6 +44,20 @@ export default function Page() {
         rate, rank or recommend providers.
       </P>
 
+      <H2>What the comparison adds</H2>
+      <P>
+        The <Link href="/compare/providers/">provider comparison</Link> brings quoted
+        service terms and matched public records together for the providers you select.
+        Source headings, conditions and dates stay with each statement. Receiving-payment
+        statements are excluded from the sending-service comparison. It does not turn
+        different routes, products or funding methods into equivalent prices.
+      </P>
+      <P>
+        The <Link href="/compare/">quote cost checker</Link> uses the figures you enter
+        and a dated reference rate to calculate a comparison. Neither tool tests a provider,
+        verifies a marketing claim, recommends a firm or supplies a live transfer quote.
+      </P>
+
       <H2>Where the facts come from</H2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
         <li>
@@ -71,7 +85,7 @@ export default function Page() {
         <li>
           <strong className="text-ink">FCA Register look-ups.</strong> The “Check a provider” page
           searches the FCA’s Financial Services Register when you ask it to and shows the matches
-          exactly as the Register returns them. Results are not stored, and Register data is not
+          exactly as the Register returns them. Results may be cached for up to one hour, and Register data is not
           copied into provider profiles. The FCA does not endorse this site.
         </li>
         <li>

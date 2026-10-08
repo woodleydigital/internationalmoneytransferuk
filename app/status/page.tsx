@@ -115,7 +115,7 @@ export default function Page() {
       </div>
 
       <P className="text-sm text-muted">
-        {"The FCA Register is not imported yet, so no profile states FCA status. "}
+        {"Profiles do not import FCA Register data. Use the live lookup or the Register itself to check current FCA status and permissions. "}
         <Link href="/methodology/">How the directory is built</Link>.
       </P>
     </PageFrame>

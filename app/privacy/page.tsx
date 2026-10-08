@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE } from "@/lib/site";
+import { SITE, PRIVACY_NOTICE_COMPLETE } from "@/lib/site";
 import { H2, P, PageFrame, ContactAddress } from "@/components/Page";
 
 const TITLE = "Privacy notice";
@@ -30,10 +30,14 @@ export default function Page() {
 
       <H2>Personal data from public registers</H2>
       <P>
-        Provider profiles show the names of people registered at Companies House as persons
-        with significant control of a provider — usually its owners — together with the nature
-        of their control and the date it was notified. This information is already public on
-        the Companies House register, and we copy it from there automatically.
+        The Companies House import collects a limited record of persons with significant
+        control: their published name, type of owner, nature of control, notification date
+        and any cessation date. This information comes from the public Companies House register.
+      </P>
+      <P>
+        {PRIVACY_NOTICE_COMPLETE
+          ? "Profiles show the published names and control details of current owners, including individuals."
+          : "Profiles currently show corporate owners and the number of individual owners, with a link to the original record. Individual owners' names are withheld from profile pages."}
       </P>
       <P>
         We do not store or show dates of birth, home or service addresses, or nationality, even
@@ -49,9 +53,11 @@ export default function Page() {
 
       <H2>How long we keep it</H2>
       <P>
-        Each record is refreshed weekly from Companies House. If a record has not been refreshed
-        for 14 days it is no longer shown, and when a person stops being listed at Companies
-        House they are removed at the next refresh.
+        Imports run weekly. Records older than 14 days are hidden from profiles, and owners
+        marked as having ceased control are excluded from the displayed list. Hiding a record
+        does not delete it: historical versions are retained in the project's data audit
+        history. Contact us about correction, objection or deletion requests so the stored
+        record and its history can also be considered.
       </P>
 
       <H2>Your rights</H2>
@@ -67,10 +73,19 @@ export default function Page() {
 
       <H2>Visitors to this site</H2>
       <P>
-        This site does not set cookies or use analytics. Our hosting provider keeps standard
-        server logs, such as IP addresses and the pages requested, to run and protect the
-        service. Searches you make on the site are not stored by us. When you use the provider
-        check, the firm name you enter is sent to the FCA Register to run the search.
+        The site does not use analytics or set tracking cookies. Our hosting provider keeps
+        standard server logs, including IP addresses and requested URLs, to run and protect
+        the service. A search term can appear in the URL, browser history and those logs, so
+        do not enter personal or confidential information into a provider search.
+      </P>
+      <P>
+        When you use the provider check, the firm name is sent to the FCA Register. Results
+        may be cached for up to one hour and are not copied into provider profiles. The
+        visitor's IP address is temporarily held in server-instance memory to limit request
+        frequency. The quote cost calculator submits its inputs to our server as URL
+        parameters for the calculation and reference-rate lookup. Those inputs can therefore
+        appear in browser history and server logs. The calculator does not ask for bank
+        account numbers, payment credentials or other identifying information.
       </P>
 
       <P>

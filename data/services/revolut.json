@@ -19,12 +19,6 @@
   "quotes": [
     {
       "topic": "fees",
-      "text": "This fee will be calculated in real time and shown to you in the app before you make the payment.",
-      "url": "https://www.revolut.com/en-GB/legal/standard-fees/",
-      "context": "Personal Fees (Standard) — Send — All other international payments"
-    },
-    {
-      "topic": "fees",
       "text": "The exact fee will depend on what currency you are sending and where you are sending it to but our maximum fees are capped.",
       "url": "https://www.revolut.com/en-GB/legal/standard-fees/",
       "context": "Personal Fees (Standard) — Send — All other international payments"
@@ -53,6 +47,12 @@
       "url": "https://www.revolut.com/money-transfer/",
       "context": "International money transfer — Clear fees and competitive rates. — Provider Your total",
       "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "Exchange rates and transfer fees displayed are illustrative and only refreshed every minute.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Clear fees and competitive rates."
     },
     {
       "topic": "countries",

@@ -30,9 +30,9 @@
     },
     {
       "topic": "speed",
-      "text": "Bank transfers take up to 1 working day",
-      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
-      "context": "Sending from GBP — I’ve cancelled my payment, how long will my refund take?"
+      "text": "Over 70% arrive in under 20 seconds.",
+      "url": "https://wise.com/gb/",
+      "context": "The current account for home and abroad — Express international transfers"
     },
     {
       "topic": "safeguarding",
@@ -75,12 +75,6 @@
       "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
       "url": "https://wise.com/gb/send-money/",
       "context": "International money transfers"
-    },
-    {
-      "topic": "countries",
-      "text": "231 countries and territories",
-      "url": "https://wise.com/gb/send-money/",
-      "context": "International money transfers — Save on spending abroad"
     }
   ],
   "attempts": [

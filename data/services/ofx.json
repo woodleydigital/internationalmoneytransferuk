@@ -24,22 +24,10 @@
       "context": "Are there any transfer fees?"
     },
     {
-      "topic": "fees",
-      "text": "This fee may vary and OFX receives no portion of it.",
-      "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
-      "context": "Are there any transfer fees?"
-    },
-    {
       "topic": "countries",
       "text": "Send money to 180+ countries",
       "url": "https://www.ofx.com/en-gb/send-money/",
       "context": "International money transfers."
-    },
-    {
-      "topic": "fees",
-      "text": "They also come with low or no transfer fees .",
-      "url": "https://www.ofx.com/en-gb/send-money/",
-      "context": "How do I send my money at a good rate?"
     },
     {
       "topic": "speed",
@@ -52,6 +40,12 @@
       "text": "We may ask you to upload documents including proof of identity and proof of address.",
       "url": "https://www.ofx.com/en-gb/send-money/",
       "context": "How do I send my money at a good rate? — How to make a international money transfer with OFX. — 2. Verify your identity"
+    },
+    {
+      "topic": "fees",
+      "text": "With our global network of about 115 bank accounts, you can send money back home quickly, with great rates and minimal or zero fees.",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How do I send my money at a good rate? — Send money home."
     },
     {
       "topic": "payout",
@@ -76,16 +70,16 @@
       "url": "https://www.ofx.com/en-gb/send-money/"
     },
     {
+      "topic": "fees",
+      "text": "We provide competitive rates plus no hidden fees.",
+      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+      "context": "Spot Transfer — The benefits of a Spot Transfer with OFX"
+    },
+    {
       "topic": "payout",
       "text": "Whether it’s a gift or a lifeline, send it straight to their bank accounts.",
       "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
       "context": "Send money to friends and family overseas"
-    },
-    {
-      "topic": "speed",
-      "text": "Please send OFX your money within 2 business days of booking your transfer so we can complete your transfer quickly.",
-      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
-      "context": "Spot Transfer FAQs — How long do I have to send OFX my payment?"
     },
     {
       "topic": "speed",

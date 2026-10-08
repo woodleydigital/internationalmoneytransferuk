@@ -35,14 +35,14 @@
       "context": "International payments"
     },
     {
-      "topic": "speed",
-      "text": "If the date you chose is a weekend or a bank holiday, the payment will not be processed until the next business day.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/money-transfer/",
-      "context": "Money transfers — How to check if your transfer has been successful — If your transfer is unsuccessful"
-    },
-    {
       "topic": "limits",
       "text": "There is no limit on the amount you can send, subject to the funds being available in your account.",
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/",
+      "context": "US structured payment"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments will usually arrive within 4 business days.",
       "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/",
       "context": "US structured payment"
     },

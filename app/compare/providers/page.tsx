@@ -9,6 +9,9 @@ import { longDate } from "@/lib/site";
 import { registerSearchUrl } from "@/lib/fca";
 import { P, PageFrame } from "@/components/Page";
 import { Monogram } from "@/components/Directory";
+import { ServiceEvidenceCell } from "@/components/ServiceEvidenceCell";
+import { complaintCount } from "@/lib/comparison-evidence";
+import { TOPICS, TOPIC_LABEL } from "@/lib/service-facts";
 
 type SearchParams = Record<string, string | string[] | undefined>;
 const MAX = 3;
@@ -21,7 +24,7 @@ const pick = (params: SearchParams): string[] => {
 
 const TITLE = "Compare money transfer providers side by side";
 const DESCRIPTION =
-  "Put up to three money transfer providers side by side: the company behind each brand, its Companies House record and its own regulatory statement.";
+  "Compare up to three providers' quoted fees, limits, payout methods and delivery terms alongside company records, with source dates and conditions.";
 
 export async function generateMetadata({
   searchParams,
@@ -50,6 +53,11 @@ type Row = { label: string; source: string; value: (e: Entry) => React.ReactNode
 
 const ROWS: Row[] = [
   { label: "Category", source: "IMTUK", value: (e) => KIND_LABEL[e.provider.kind] },
+  ...TOPICS.map((topic): Row => ({
+    label: TOPIC_LABEL[topic],
+    source: "Provider's website — its own claims",
+    value: (entry) => <ServiceEvidenceCell entry={entry} topic={topic} />,
+  })),
   { label: "Registered company", source: "Companies House", value: (e) => e.company?.company?.name ?? "Not yet identified" },
   { label: "Company number", source: "Companies House", value: (e) => e.company?.company?.number ?? "—" },
   { label: "Company status", source: "Companies House", value: (e) => e.company?.company?.status ?? "—" },
@@ -93,7 +101,7 @@ const ROWS: Row[] = [
   {
     label: "Ombudsman: total new cases (latest half-year)",
     source: "Financial Ombudsman Service",
-    value: (e) => fosCell(e, (f) => new Intl.NumberFormat("en-GB").format(f.newCases ?? 0)),
+    value: (e) => fosCell(e, (f) => complaintCount(f.newCases)),
   },
   {
     label: "Ombudsman: total % of cases upheld (latest half-year)",
@@ -101,7 +109,7 @@ const ROWS: Row[] = [
     value: (e) => fosCell(e, (f) => percent(f.upheld)),
   },
   {
-    label: "Records last checked",
+    label: "Sources last fetched",
     source: "IMTUK",
     value: (e) => {
       const d = checkedAt(e);
@@ -111,7 +119,7 @@ const ROWS: Row[] = [
   {
     label: "Regulatory statement",
     source: "Provider's website",
-    value: (e) => (e.statement ? "Published (quoted on the profile)" : "Not found"),
+    value: (e) => (e.statement ? "Collected (quoted on the profile)" : "No statement collected"),
   },
 ];
 
@@ -126,7 +134,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
       schema={{ path: "/compare/providers/", name: TITLE, description: DESCRIPTION }}
       trail={[{ name: "Compare costs", href: "/compare/" }, { name: "Compare providers" }]}
       title={<>Compare money transfer providers side by side</>}
-      lead={<>Choose up to three providers. Every row shows where the fact comes from; nothing here is a rating or a ranking.</>}
+      lead={<>Choose up to three providers to compare their own published transfer terms and the company records behind them.</>}
     >
       
       <form method="get" action="/compare/providers/" className="mt-6 grid gap-3 border border-line bg-wash p-5 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
@@ -150,6 +158,13 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
         </button>
       </form>
 
+      <aside className="mt-6 border-l-4 border-accent-500 bg-wash p-4 text-sm">
+        <h2 className="font-semibold text-ink">Compare the same transfer</h2>
+        <p className="mt-2">Check the sending country, destination, currency, amount, account type, funding method and delivery option in each source. A statement about one product or route does not establish the terms of another.</p>
+        <p className="mt-2">These are source quotations, not live quotes, independent verification or recommendations. Gaps describe our collection. For a price comparison, obtain quotes for the same transfer and use the <Link href="/compare/">quote cost checker</Link>.</p>
+        <p className="mt-2"><Link href="/methodology/">How this comparison is compiled</Link>{" · "}<Link href="/about/matt-woodley/">Site owner: Matt Woodley</Link>{" · "}<Link href="/corrections/">Report a correction</Link></p>
+      </aside>
+
       {cols.length === 0 ? (
         <P>
           {"Pick providers above, or tick “Compare” beside them in the "}
@@ -157,7 +172,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
         </P>
       ) : (
         <div className="mt-8 overflow-x-auto">
-          <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
+          <table className="w-full border-collapse text-left text-sm" style={{ minWidth: `${14 + 18 * cols.length}rem` }}>
+            <caption className="pb-3 text-left text-sm text-muted">Quoted service evidence and matched company records. Scroll across to compare all selected providers.</caption>
             <thead>
               <tr>
                 <th scope="col" className="w-56 border-b-2 border-ink py-3 pr-4 align-bottom font-semibold text-muted">

@@ -19,12 +19,6 @@
   "quotes": [
     {
       "topic": "fees",
-      "text": "Exchange rates apply. Fees and rates are subject to change without notice; see terms for details. 1 GBP -",
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "context": "Exchange rate"
-    },
-    {
-      "topic": "fees",
       "text": "Online rates are indicative; final transfer fees and exchange rates are shown before you confirm your transfer",
       "url": "https://www.postoffice.co.uk/international-money-transfer",
       "context": "Send money online — Prefer to send money in branch?"

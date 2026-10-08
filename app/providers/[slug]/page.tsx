@@ -29,6 +29,7 @@ import { KindBadge, Monogram } from "@/components/Directory";
 import { loadEntries, loadEntry } from "@/lib/directory-data";
 import { checkedAt, isIndexableEntry, similar } from "@/lib/directory";
 import { longDate } from "@/lib/site";
+import { MATT_WOODLEY, personUrl } from "@/lib/people";
 
 type Params = Promise<{ slug: string }>;
 
@@ -304,6 +305,12 @@ export default async function Page({ params }: { params: Params }) {
 
       <section aria-labelledby="about-profile" className="mt-10">
         <H2 id="about-profile">About this profile</H2>
+        <P>
+          Compiled automatically by IMTUK from the sources shown on this page. Site owner:
+          {" "}<Link href={personUrl(MATT_WOODLEY)}>{MATT_WOODLEY.name}</Link>.
+          Provider quotations are their own claims; collection and classification are not
+          independent verification of the service.
+        </P>
         <P>
           {"Listing is free and no provider can pay for its data fields or position. "}
           <Link href="/methodology/">Methodology</Link>

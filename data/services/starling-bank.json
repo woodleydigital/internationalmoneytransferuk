@@ -18,7 +18,7 @@
   ],
   "quotes": [
     {
-      "topic": "countries",
+      "topic": "fees",
       "text": "Fast and secure money transfers to bank accounts in 34 countries worldwide, with no hidden fees.",
       "url": "https://www.starlingbank.com/send-money-abroad/",
       "context": "Send money abroad"
@@ -40,12 +40,6 @@
       "text": "You can hold, send and receive euros, all completely free of charge.",
       "url": "https://www.starlingbank.com/send-money-abroad/",
       "context": "Send money abroad — How to send money abroad, the easy way"
-    },
-    {
-      "topic": "fees",
-      "text": "We apply a 0.4% fee to the currency conversion and a small delivery fee to cover our costs.",
-      "url": "https://www.starlingbank.com/send-money-abroad/",
-      "context": "Send money abroad — How to send money abroad, the easy way — About our fees"
     }
   ],
   "attempts": []

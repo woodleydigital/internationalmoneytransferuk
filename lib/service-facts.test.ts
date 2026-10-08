@@ -153,3 +153,12 @@ test("article previews and another bank's fees are not provider product evidence
   assert.deepEqual(findPageServiceQuotes("The US banks charge their customers a flat fee every time they do an international transfer.\nI’ll explain the steps involved, the costs, how long it takes and mistakes… Read article How to Transfer Euros to Pounds in 2026 (without high charges)", "https://example.com/international-transfers"), []);
   assert.match(quoteContext({ topic: "speed", text: "Transfers usually take one working day.", url: "https://example.com/transfer-money-from-us-to-uk/" }).join(" "), /Route-specific/);
 });
+test("refunds, spending reach and funding deadlines are not sending-service coverage or delivery", () => {
+  assert.deepEqual(findPageServiceQuotes("[IMT-H:1]Sending from GBP[/IMT-H]\n[IMT-H:2]I've cancelled my payment, how long will my refund take?[/IMT-H]\nBank transfers take up to 1 working day\n[IMT-H:1]International money transfers[/IMT-H]\n[IMT-H:2]Save on spending abroad[/IMT-H]\n231 countries and territories", "https://example.com/international-transfers"), []);
+  assert.deepEqual(findServiceQuotes("Please send OFX your money within 2 business days of booking your transfer so we can complete your transfer quickly.", "https://example.com/faqs"), []);
+});
+test("accounts in two countries are not a transfer-country count; a lone limit is not a fee", () => {
+  const q = findServiceQuotes("As a Premier customer with accounts in at least 2 countries or regions, you can send up to USD200,000 each day via Global Transfers for free.", "https://example.com/international-transfers", "How much do Global Transfers cost?");
+  assert.equal(q[0].topic, "limits");
+  assert.deepEqual(findServiceQuotes("This fee may vary and OFX receives no portion of it.", "https://example.com/faqs"), []);
+});

@@ -49,7 +49,7 @@ export const OUTCOME: Record<string, string> = {
   error: "Could not be read",
   saved: "Logo saved",
   listed: "In published data",
-  "not-listed": "Below publication threshold",
+  "not-listed": "No exact match in published data",
   "no-company": "No company identified",
   "saved-extras": "Collected",
 };

@@ -53,7 +53,7 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 ## Profile status
 - **Verified:** FCA Register + Companies House + FOS data complete, product data extracted
   with source quotes. Indexable if the topical map says so.
-- **Register data pending:** anything less. Shown with that label. Indexable only when the
+- **FCA status: use live lookup:** anything less. Shown with that label. Indexable only when the
   topical map marks the profile for indexing **and** it holds a fresh Companies House
   identity or provider regulatory statement, plus sending-service quotations spanning at
   least three of countries, payout, fees, limits and speed — `isIndexableEntry` in
@@ -246,3 +246,11 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 - Keep complete table rows and adjacent timing conditions; classify cost brackets as fees, not limits. A heading cannot supply a fact missing from a quotation.
 - FCA coverage rows say live lookup only; provider-stated FRNs are sourced to the provider, never asserted as FCA-verified.
 - Both profile robots metadata and the sitemap must use the same substantive-evidence gate, with no legacy verification bypass.
+
+## Quality assessment (2026-10-08)
+- Google does not provide a pre-launch quality certificate or a published numeric quality threshold. Our publishing checks are our own safeguards; never label them Google approval.
+- Provider comparisons must show exact source quotations, their context, route/product qualifications and fetch dates. Keep receiving-only evidence out of sending comparisons. No inferred cheapest or fastest rankings.
+- A missing complaint count is missing, never zero. Absence from a published dataset does not establish a business's complaint volume or why it is absent.
+- Record substantive extraction and display corrections publicly at `/corrections/`.
+- Privacy copy must describe actual collection, profile suppression, audit-history retention, request logging and temporary lookup caching accurately.
+- The registered operator's name and company number still need confirmation from the owner. Do not copy a company identity from another website just because it has common ownership.

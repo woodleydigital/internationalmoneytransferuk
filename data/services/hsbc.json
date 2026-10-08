@@ -96,10 +96,16 @@
       "context": "How much money can I send abroad from the UK?"
     },
     {
-      "topic": "countries",
+      "topic": "limits",
       "text": "As an HSBC Private Bank client, Premier or Advance customer with HSBC accounts in at least 2 countries or regions, you can send up to USD200,000 each day via Global Transfers for free.",
       "url": "https://www.hsbc.co.uk/international/global-view-and-global-transfers/",
       "context": "Global transfers — Using Global View and Global Transfers — How much do HSBC Global Transfers cost?"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money from the UK to over 150 destinations in just a few minutes and with simple fees.",
+      "url": "https://www.hsbc.co.uk/international/global-view-and-global-transfers/",
+      "context": "Global transfers — International money transfers"
     }
   ],
   "attempts": []
