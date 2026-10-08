@@ -14,7 +14,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
       </h2>
       <SourceLine
         source={
-          <a href={`https://find-and-update.company-information.service.gov.uk/company/${extras.number}`} rel="noopener">
+          <a href={`https://find-and-update.company-information.service.gov.uk/company/${extras.number}`} rel="noopener nofollow">
             Companies House
           </a>
         }
@@ -26,7 +26,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
       {extras.owners.length === 0 ? (
         <p className="mt-2">
           {"No current corporate owner was returned from the company’s persons with significant control. "}
-          <a href={`https://find-and-update.company-information.service.gov.uk/company/${extras.number}/persons-with-significant-control`} rel="noopener">
+          <a href={`https://find-and-update.company-information.service.gov.uk/company/${extras.number}/persons-with-significant-control`} rel="noopener nofollow">
             Check the register at Companies House
           </a>
           .
@@ -38,7 +38,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
               <span className="text-sm text-muted">{i === 0 ? `Owner of the company behind ${name}` : "Which is owned by"}</span>
               <span className="block font-semibold text-ink">
                 {o.url ? (
-                  <a href={o.url} rel="noopener">
+                  <a href={o.url} rel="noopener nofollow">
                     {o.name}
                   </a>
                 ) : (
@@ -49,7 +49,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
               {o.control.length > 0 && <span className="block text-sm text-muted">{o.control.join("; ")}</span>}
               <a
                 href={`https://find-and-update.company-information.service.gov.uk/company/${i === 0 ? extras.number : extras.owners[i - 1].number}/persons-with-significant-control`}
-                rel="noopener"
+                rel="noopener nofollow"
                 className="text-xs"
               >
                 As recorded at Companies House
@@ -84,7 +84,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
               </dl>
               <p className="mt-2 text-xs text-muted">
                 {`Read from the tagged accounts filed on ${day(extras.accounts.filedOn)}${extras.accounts.madeUpTo ? `, made up to ${day(extras.accounts.madeUpTo)}` : ""}. A negative figure is a loss. `}
-                <a href={extras.accounts.url} rel="noopener">
+                <a href={extras.accounts.url} rel="noopener nofollow">
                   See the filing
                 </a>
                 .
@@ -93,7 +93,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
           ) : (
             <p className="mt-2">
               {`The latest accounts${extras.accounts.madeUpTo ? `, made up to ${day(extras.accounts.madeUpTo)},` : ""} were not filed in a machine-readable form, so no figures are copied here. `}
-              <a href={extras.accounts.url} rel="noopener">
+              <a href={extras.accounts.url} rel="noopener nofollow">
                 See the filing at Companies House
               </a>
               .
@@ -110,7 +110,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
               ? "No charges are registered against the company."
               : `${extras.charges.total} registered, of which ${extras.charges.satisfied} satisfied and ${extras.charges.outstanding} not recorded as satisfied. `}
             {extras.charges.total > 0 && (
-              <a href={extras.charges.url} rel="noopener">
+              <a href={extras.charges.url} rel="noopener nofollow">
                 See the charges
               </a>
             )}
@@ -140,7 +140,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
             {extras.timeline.map((t, i) => (
               <li key={`${t.date}-${i}`} className="grid gap-1 py-2 text-sm sm:grid-cols-[10rem_1fr]">
                 <span className="text-muted">{day(t.date)}</span>
-                <a href={t.url} rel="noopener">
+                <a href={t.url} rel="noopener nofollow">
                   {t.label}
                 </a>
               </li>
@@ -150,7 +150,7 @@ export function CompanyExtrasBlock({ name, extras }: { name: string; extras: Com
       )}
       <p className="mt-4 text-xs text-muted">
         {"Contains public sector information licensed under the "}
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">
+        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener nofollow">
           Open Government Licence v3.0
         </a>
         {", source Companies House."}

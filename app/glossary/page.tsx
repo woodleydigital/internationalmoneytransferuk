@@ -69,7 +69,7 @@ export default function Page() {
               {t.source && (
                 <span className="mt-1 block text-sm">
                   {"More: "}
-                  <a href={t.source.url} rel="noopener">
+                  <a href={t.source.url} rel="noopener nofollow">
                     {t.source.label}
                   </a>
                 </span>

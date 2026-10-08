@@ -20,7 +20,7 @@ export function FosBlock({ name, record, sharedWith }: { name: string; record: F
       </h2>
       <SourceLine
         source={
-          <a href={latest.period.pageUrl} rel="noopener">
+          <a href={latest.period.pageUrl} rel="noopener nofollow">
             Financial Ombudsman Service, half-yearly business complaints data
           </a>
         }
@@ -108,11 +108,11 @@ export function FosBlock({ name, record, sharedWith }: { name: string; record: F
       <p className="mt-4 text-xs text-muted">
         {"“Upheld” means the Ombudsman decided in the consumer’s favour. A business is linked to a provider only when the Ombudsman publishes it under exactly the registered company name we hold from Companies House. "}
         {"Contains public sector information licensed under the "}
-        <a href={OGL} rel="noopener">
+        <a href={OGL} rel="noopener nofollow">
           Open Government Licence v3.0
         </a>
         {`. Source: Financial Ombudsman Service, `}
-        <a href={latest.period.fileUrl} rel="noopener">
+        <a href={latest.period.fileUrl} rel="noopener nofollow">
           {`business complaints data ${latest.period.label}`}
         </a>
         .

@@ -118,7 +118,7 @@ function Intro() {
 
 function Results({ q, search }: { q: string; search: FirmSearch }) {
   const official = (
-    <a href={registerSearchUrl(q)} className="underline" rel="noopener">
+    <a href={registerSearchUrl(q)} className="underline" rel="noopener nofollow">
       {`search the FCA Register for “${q}”`}
     </a>
   );
@@ -169,7 +169,7 @@ function Results({ q, search }: { q: string; search: FirmSearch }) {
               <td className="py-1 pr-3">{r.name}</td>
               <td className="py-1 pr-3 tabular-nums">
                 {r.frn ? (
-                  <a href={registerEntryUrl(r.frn)} className="underline" rel="noopener">
+                  <a href={registerEntryUrl(r.frn)} className="underline" rel="noopener nofollow">
                     {r.frn}
                   </a>
                 ) : (

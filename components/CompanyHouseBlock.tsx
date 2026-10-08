@@ -32,7 +32,7 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
       </h2>
       <SourceLine
         source={
-          <a href={c.url} rel="noopener">
+          <a href={c.url} rel="noopener nofollow">
             Companies House
           </a>
         }
@@ -54,7 +54,7 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
       {hiddenPeople > 0 && (
         <p className="mt-2 text-sm">
           {`${hiddenPeople} ${hiddenPeople === 1 ? "individual is" : "individuals are"} listed at Companies House. We do not show individuals' names yet; see the company's `}
-          <a href={`${c.url}/persons-with-significant-control`} rel="noopener">
+          <a href={`${c.url}/persons-with-significant-control`} rel="noopener nofollow">
             Companies House record
           </a>
           .
@@ -80,7 +80,7 @@ export function CompaniesHouseBlock({ record }: { record: CompanyRecord }) {
         {"How this company was identified: "}
         {record.match.rule}{" "}
         {"Contains public sector information licensed under the "}
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">
+        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener nofollow">
           Open Government Licence v3.0
         </a>
         {". Source: Companies House. Names are shown as published on the public register; see our "}

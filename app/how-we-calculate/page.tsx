@@ -59,7 +59,7 @@ export default function Page() {
       </h2>
       <p className="mt-3 max-w-prose">
         Mid-market rates come from the{" "}
-        <a href="https://frankfurter.dev" className="underline" rel="noopener">
+        <a href="https://frankfurter.dev" className="underline" rel="noopener nofollow">
           Frankfurter API
         </a>
         , an open-source service that publishes foreign exchange rates from central banks. We

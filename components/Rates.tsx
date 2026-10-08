@@ -48,7 +48,7 @@ export function RateTableBlock({ table }: { table: RateTable | null }) {
       </div>
       <SourceLine
         source={
-          <a href="https://frankfurter.dev/" rel="noopener">
+          <a href="https://frankfurter.dev/" rel="noopener nofollow">
             Frankfurter
           </a>
         }

@@ -53,7 +53,7 @@ export function ProviderStatementBlock({ name, record }: { name: string; record:
           {frns.map((f, i) => (
             <span key={f}>
               {i > 0 && ", "}
-              <a href={registerSearchUrl(f)} rel="noopener">
+              <a href={registerSearchUrl(f)} rel="noopener nofollow">
                 {`search the Register for ${f}`}
               </a>
             </span>

@@ -42,10 +42,10 @@ export function TransferChecklist({ entry, entries }: { entry: Entry; entries: E
           <ul className="mt-2 list-disc pl-5 text-sm">
             {shared.map((e) => <li key={e.provider.slug}><Link href={providerUrl(e.provider)}>{e.provider.name}</Link></li>)}
           </ul>
-          <SourceLine source={<a href={company.url} rel="noopener">Companies House</a>} fetchedAt={entry.company!.fetchedAt} note="matched company numbers, grouped by software" />
+          <SourceLine source={<a href={company.url} rel="noopener nofollow">Companies House</a>} fetchedAt={entry.company!.fetchedAt} note="matched company numbers, grouped by software" />
           <p className="mt-2 text-xs text-muted">
             A shared legal entity does not establish identical products, fees or customer-money protection.
-            Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">Open Government Licence v3.0</a>.
+            Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener nofollow">Open Government Licence v3.0</a>.
           </p>
         </div>
       )}

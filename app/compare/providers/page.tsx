@@ -85,7 +85,7 @@ const ROWS: Row[] = [
         ? e.statedFrns.map((f, i) => (
             <span key={f}>
               {i > 0 && ", "}
-              <a href={registerSearchUrl(f)} rel="noopener">{f}</a>
+              <a href={registerSearchUrl(f)} rel="noopener nofollow">{f}</a>
             </span>
           ))
         : "—",
@@ -193,7 +193,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           </table>
           <p className="mt-4 text-xs text-muted">
             {"Companies House data: contains public sector information licensed under the "}
-            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener">
+            <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noopener nofollow">
               Open Government Licence v3.0
             </a>
             {". Ombudsman figures: contains public sector information licensed under the same licence, source Financial Ombudsman Service, and cover the whole company named. FCA numbers are as the providers state them on their own websites and have not been checked against the FCA Register."}

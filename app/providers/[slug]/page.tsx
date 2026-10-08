@@ -235,7 +235,7 @@ export default async function Page({ params }: { params: Params }) {
         <aside className="mt-8 border-l-4 border-line-strong bg-wash p-4 text-sm">
           <p>
             {`This profile does not include FCA Register data, so it does not state ${p.name}'s FCA status or permissions. Check the firm yourself on the `}
-            <a href={registerSearchUrl(p.name)} rel="noopener">
+            <a href={registerSearchUrl(p.name)} rel="noopener nofollow">
               FCA Register
             </a>
             {" or with our "}

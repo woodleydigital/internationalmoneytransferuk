@@ -59,7 +59,7 @@ export default function Page() {
         You can ask us for a copy of the personal data we hold about you, ask us to correct it,
         or object to it being shown. Write to us at the address above. If you are not satisfied
         with our response, you can complain to the{" "}
-        <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">
+        <a href="https://ico.org.uk/make-a-complaint/" rel="noopener nofollow">
           Information Commissioner’s Office
         </a>
         .

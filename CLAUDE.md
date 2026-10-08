@@ -213,6 +213,7 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   disclosure linked from every profile. Matt Woodley appears as owner only.
 - Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
 - No links to CBUK. Common ownership is disclosed on `/about/` only.
+- All external HTTP(S) anchor links must include `rel="noopener nofollow"`, including provider, regulator, source and licence links. Internal navigation and same-site source links remain followable.
 
 - **Brand notices:** `scripts/import-provider-notices.ts` reads configured primary company pages for explicit statements naming a listed brand and an acquisition/rebrand. It writes `data/notices/`, with verbatim wording, publisher and actual fetch date. Never copy a successor's product facts onto an old brand.
 
