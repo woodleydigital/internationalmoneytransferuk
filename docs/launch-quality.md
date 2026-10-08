@@ -36,6 +36,10 @@ live prices for transfer services. It does not give personalised financial advic
 - The operator must confirm that the displayed contact mailbox and postal address
   accept correspondence. Code and DNS checks cannot establish a handled corrections
   or privacy process.
+- Live testing found that the on-site FCA API connection is not enabled. The tool
+  transparently offers a direct search on the FCA's own Register. This is a working
+  hand-off, not an on-site live status service; enabling the latter requires its
+  authorised API credentials in the deployment environment.
 - Eleven profiles currently lack retained transfer-service quotations. They stay
   noindex; no launch requirement justifies inventing unavailable terms or importing
   a successor's products into a legacy brand.

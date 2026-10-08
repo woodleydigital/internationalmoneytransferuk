@@ -79,10 +79,12 @@ export default function Page() {
         do not enter personal or confidential information into a provider search.
       </P>
       <P>
-        When you use the provider check, the firm name is sent to the FCA Register. Results
-        may be cached for up to one hour and are not copied into provider profiles. The
-        visitor's IP address is temporarily held in server-instance memory to limit request
-        frequency. The quote cost calculator submits its inputs to our server as URL
+        If our API connection is enabled, a provider-check search sends the firm name to the
+        FCA Register. Results may be cached for up to one hour and are not copied into
+        provider profiles; the visitor's IP address is temporarily held in server-instance
+        memory to limit request frequency. When the connection is not enabled, we provide a
+        link carrying your search to the FCA's website when you open it. The quote cost
+        calculator submits its inputs to our server as URL
         parameters for the calculation and reference-rate lookup. Those inputs can therefore
         appear in browser history and server logs. The calculator does not ask for bank
         account numbers, payment credentials or other identifying information.

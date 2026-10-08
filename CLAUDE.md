@@ -139,11 +139,14 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   authorisation or written consent for any particular use". The terms still bar using Register
   data "to provide a data feed to any comparison table or any other website without written
   permission". So:
-  - **Allowed (live since 2026-10-03):** `/check-a-provider/` look-ups — one API search per
+  - **Allowed:** `/check-a-provider/` look-ups — one API search per
     visitor search, results shown verbatim to that visitor, cached ≤1 hour, never stored or
     copied into profiles. Limits in `lib/fca.ts`: 10 calls/10 s per instance (FCA limit 50),
     6 searches/minute per visitor; robots.txt disallows `/check-a-provider/?`; results pages
     are `noindex`. Needs `FCA_API_EMAIL` and `FCA_API_KEY` in Vercel.
+    Live testing on 2026-10-08 found the API connection disabled; the deployed tool
+    transparently hands the search to the Register. Do not claim on-site live results
+    until configuration and a real visitor search have been verified.
   - **Still not allowed:** importing Register data into profiles, the directory, comparison
     tables or the sitemap, or any bulk/scheduled pulls. That needs explicit written permission
     or a display licence (the Register Extract Service's standard licence forbids sharing).

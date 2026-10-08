@@ -92,10 +92,12 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
 
       <H2>What the FCA Register tells you</H2>
       <P>
-        Any firm that sends money abroad for UK customers must be authorised or registered by
-        the Financial Conduct Authority — usually as a bank, an electronic money institution
-        or a payment institution. The Register shows whether a firm is authorised, what it is
-        permitted to do, and whether that has been restricted or cancelled.
+        Check the company operating the payment service, its current status and its
+        permission for the service you intend to use. A brand name may differ from the
+        registered company name. Some firms act as payment-services or e-money agents;
+        check their principal and the capacity in which they provide the service.
+        See the FCA's guidance on <a href="https://www.fca.org.uk/consumers/using-payment-service-providers" rel="noopener nofollow">using payment service providers</a>
+        {" and "}<a href="https://www.fca.org.uk/consumers/how-check-firm-individual-authorised" rel="noopener nofollow">checking firms and agents</a>.
       </P>
       <P>
         Check the exact firm you are paying. Scam sites often copy the name of a real

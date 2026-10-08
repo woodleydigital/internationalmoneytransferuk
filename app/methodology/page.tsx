@@ -84,9 +84,10 @@ export default function Page() {
         </li>
         <li>
           <strong className="text-ink">FCA Register look-ups.</strong> The “Check a provider” page
-          searches the FCA’s Financial Services Register when you ask it to and shows the matches
-          exactly as the Register returns them. Results may be cached for up to one hour, and Register data is not
-          copied into provider profiles. The FCA does not endorse this site.
+          hands your search to the FCA’s own Register when our API connection is not enabled.
+          If that connection is enabled, a visitor's search returns matches exactly as the
+          Register returns them; results may be cached for up to one hour. Register data is
+          not copied into provider profiles. The FCA does not endorse this site.
         </li>
         <li>
           <strong className="text-ink">Ownership, accounts and filings.</strong> For each matched
