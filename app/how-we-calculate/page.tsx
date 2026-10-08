@@ -50,7 +50,7 @@ export default function Page() {
 
       <p className="mt-5 max-w-prose">
         The checker compares a transfer you were quoted against a published mid-market
-        reference rate, then reports the difference as a cost. It does not quote rates, and it
+        reference rate, then reports the difference as an estimated cost. It does not quote rates, and it
         does not compare providers. Every figure it uses about your transfer comes from you.
       </p>
 
@@ -69,11 +69,11 @@ export default function Page() {
       <p className="mt-3 max-w-prose">
         These are reference, spot and mid rates published by monetary authorities.{" "}
         <strong className="text-ink">
-          They are not rates available to consumers, and no provider will give you one.
+          They are dated benchmarks, not personalised provider quotes.
         </strong>{" "}
-        They are the benchmark against which a provider&rsquo;s margin is measured — which is
-        exactly why they are the right comparison, and why we never present one as a rate you
-        could obtain.
+        Some providers use a mid-market rate and charge a separate fee. Their source and pricing
+        time can differ from this daily publication, so the checker estimates a rate difference
+        rather than proving the provider&rsquo;s exact margin.
       </p>
       <p className="mt-3 max-w-prose">
         Central banks publish once per working day, so no rate is available for weekends or
@@ -83,17 +83,19 @@ export default function Page() {
 
       <h2 className="mt-10 text-xl font-semibold text-ink">The formulas</h2>
       <p className="mt-3 max-w-prose">
-        Where <em>S</em> is the amount you send, <em>T</em> is what your recipient receives,{" "}
-        <em>R</em> is the mid-market reference rate and <em>F</em> is any fee you were told
-        about:
+        Where <em>S</em> is the transfer amount entered, <em>T</em> is what your recipient
+        receives, <em>R</em> is the daily reference rate and <em>F</em> is the stated fee.
+        Total customer spend (<em>C</em>) is <em>S</em> for a deducted fee, or <em>S + F</em>
+        for a fee charged on top:
       </p>
       <pre className="mt-4 overflow-x-auto rounded-md bg-brand-900 p-4 text-sm text-white">
-        <code>{`mid-market payout   = S × R
-shortfall           = (S × R) − T          in the receiving currency
-total cost          = shortfall ÷ R        in the sending currency
-total cost %        = shortfall ÷ (S × R) × 100
-
-exchange rate margin = total cost − F      the part not itemised`}</code>
+        <code>{`total spend C       = S (deducted fee), or S + F (added fee)
+reference payout    = C × R
+shortfall           = (C × R) − T          in the receiving currency
+estimated cost      = shortfall ÷ R        in the sending currency
+estimated cost %    = estimated cost ÷ C × 100
+estimated rate gap  = estimated cost − F
+all-in rate         = T ÷ C`}</code>
       </pre>
       <p className="mt-4 max-w-prose">
         If you know the rate you were quoted rather than the payout, we derive the payout
@@ -108,8 +110,15 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
       <p className="mt-3 max-w-prose">
         A £50,000 transfer quoted at 1.1200 when the mid-market rate is 1.1500 delivers
         €56,000 rather than €57,500. The shortfall of €1,500 divided by 1.1500 is £1,304.35 —
-        2.61% of the amount transferred. If no fee was stated, the whole of that £1,304.35 is
-        margin built into the rate.
+        2.61% of the amount transferred. With no separately stated fee, that £1,304.35 is
+        the estimated exchange rate difference against the reference.
+      </p>
+
+      <p className="mt-3 max-w-prose">
+        If a £1,000 transfer has a £10 fee charged on top, total spend is £1,010.
+        At a reference rate of 1.20 and a quoted rate of 1.20, the recipient gets €1,200:
+        the estimated cost is £10, entirely the stated fee, with no rate difference.
+        These are illustrative figures, not a provider quote.
       </p>
 
       <h2 className="mt-10 text-xl font-semibold text-ink">Limitations</h2>
@@ -133,8 +142,9 @@ exchange rate margin = total cost − F      the part not itemised`}</code>
           expected, that is a common reason.
         </li>
         <li>
-          A margin is a normal and legitimate way for a provider to charge. This tool reports
-          what yours amounted to; it does not judge whether it was reasonable.
+          A rate difference against this benchmark is not proof of a hidden fee or an exact
+          provider margin. Compare quotes taken at similar times for the same route, total
+          spend, funding method and payout method.
         </li>
       </ul>
 

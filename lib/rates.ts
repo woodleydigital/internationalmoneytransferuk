@@ -2,8 +2,8 @@
  * Mid-market reference rates from the Frankfurter API.
  *
  * These are central bank reference, spot and
- * mid rates. No consumer receives them. Nothing here may be presented as a rate
- * anyone will be given.
+ * mid rates. They are dated benchmarks, not personalised quotes. A provider may
+ * use a mid-market rate plus a fee, with a different source or pricing time.
  *
  * We use the blended rate rather than a single provider: verified 2026-09-02,
  * Bank of England lagged the blend by five days and covers only 27 currencies,

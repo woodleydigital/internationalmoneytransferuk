@@ -1,6 +1,6 @@
 # International Money Transfer UK (internationalmoneytransfer.uk)
 
-IMT UK is a **directory of every FCA-authorised money transfer provider**, with an
+IMT UK is a **directory of UK money transfer providers**, with an
 information-gain-heavy entity profile for each. It is presented as an **independent
 site in its own right**: its own brand, no cross-links to Currency Brokers UK
 (https://www.currencybrokers.uk, "CBUK"), and no "sister site" framing. Common ownership
@@ -148,14 +148,14 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 
 ## Data pipeline rules (critical — YMYL and defamation risk)
 - Facts (FRN, status, permissions, company number, dates) flow from the **FCA Register API** and **Companies House API** into the database via plain code. The LLM never generates or "remembers" these values.
-- LLM extraction from provider websites returns JSON against a fixed schema **plus the exact source snippet**; validate before saving, reject on failure.
+- Provider statements and service quotations are extracted by plain pattern matching, not an LLM. Preserve the exact source wording, URL and fetch date; reapply current filters when loading saved quotations.
 - Anything negative or status-related (cancellation, restriction, requirement, complaints) is
   published only as the source's own wording, verbatim, with a link and date. The AI never
   describes, summarises, characterises or draws conclusions from it.
 - If a source is unreachable or a validation fails, show nothing for that block — never a
   stale or estimated value.
-- Every data block shows a "last verified" date; changes are logged to the profile timeline.
-- Model tiers: Haiku for bulk classification/extraction, Sonnet for drafting, Opus for review of sensitive changes and methodology. Use batch processing for bulk jobs.
+- Every data block shows a source fetch date, not a claim of verification. A fetch date alone is never a profile/homepage `dateModified` or sitemap `lastmod`; omit those unless a substantive change date is known.
+- No model produces provider facts, scores or commentary. Software-generated transfer questions and shared-company-number joins are allowed when clearly identified as prompts and sourced arithmetic/joins, rather than tests or recommendations.
 
 ## Design — independent public-interest agency
 - Sober, institutional, accessibility-first: utility strip, white header with logo and
@@ -213,9 +213,24 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 - Listing is free; no provider can pay for data fields or ranking. Commercial elements are clearly labelled and kept separate from factual fields.
 - No links to CBUK. Common ownership is disclosed on `/about/` only.
 
-## First tasks
-1. Scaffold the Next.js project and page routes above (phase 1 only).
-2. Define the database schema from the "Profile schema" tab of the workbook.
-3. Build the FCA Register ingestion job: filter to firms offering consumer money remittance; store raw responses.
-4. Build the Companies House enrichment job keyed on company number.
-5. Generate Tier 3 entity pages (noindex) for all ingested firms, then upgrade the 14 phase-1 profiles.
+## Automated information gain (2026-10-08)
+- Every profile includes category-specific transfer questions. Links to service-topic evidence
+  appear only when a fresh quotation exists. Missing evidence describes our import, not the firm.
+- Group brands only by the same fresh, matched Companies House company number. Do not infer
+  identical products, rates or protections from that relationship.
+- Keep business, destination-specific and starting-price context attached to quotations.
+  Different amounts, percentages and named destinations are not duplicate facts.
+- Remove regulation statements about unrelated insurance, investment, prepaid or credit-card
+  products; keep the remaining wording exact and never assert FCA verification.
+- The calculator estimates a difference against a dated reference. Include a fee charged on
+  top in total customer spend, and never call a daily reference gap a proven hidden fee.
+  A provider can use a mid-market rate with a separate fee; the reference is not a quote.
+- Preserve the topical-map indexing verdict and minimum evidence gate. A generic checklist
+  does not make a sparse profile indexable. No bulk FCA imports, test transfers or ratings.
+
+## Current maintenance priorities
+1. Improve robots-respecting extraction and correct failed imports without guessing identities.
+2. Keep methodology, terminology, entity-map text and calculations consistent with actual code.
+3. Resolve provider/source conditions before treating headline statements as comparable data.
+4. Collect fresh public records through the existing authorised workflow; retain its audit trail.
+5. Expand indexing only when the publishing plan and evidence requirements are met.

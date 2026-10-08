@@ -73,12 +73,12 @@ export function entityMap() {
         "@type": "Concept",
         name: "Mid-Market Rate",
         description:
-          "The published reference exchange rate we measure transfer costs against. It is a reference, not a rate anyone is offered.",
+          "The published daily reference exchange rate used to estimate transfer costs. It is a benchmark, not a personalised provider quote.",
         audienceType: "general",
         hasChunks: [
           chunk(
             "c_mid_market_rate_01",
-            "The cost of a transfer is the difference between what the recipient received and what the same amount would have bought at the published mid-market reference rate on the day. The mid-market rate is a reference, not a rate anyone is offered.",
+            "The checker estimates a transfer's cost by comparing the recipient payout with what the customer's total spend would have bought at the published daily reference rate. Total spend includes any fee charged on top. A daily reference is a benchmark, not a personalised quote or proof of a provider's exact margin.",
             "/methodology/",
             "Methodology: how we build and verify provider profiles",
             "definition",

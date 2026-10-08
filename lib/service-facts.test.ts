@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { findServiceLinks, findServiceQuotes, mergeQuotes, sentences } from "./service-facts.ts";
+import { findServiceLinks, findServiceQuotes, mergeQuotes, sentences, quoteContext } from "./service-facts.ts";
 
 const page = `
 Send money to over 80 countries with a low, upfront fee.
@@ -58,7 +58,22 @@ test("service links stay on the provider's own site, pricing first", () => {
 
 test("near-duplicates are recognised", async () => {
   const { nearDuplicate } = await import("./service-facts.ts");
-  assert.ok(nearDuplicate("You can send up to $535,000 USD to Albania online.", "You can send up to $535,000 USD to Algeria online."));
+  assert.ok(!nearDuplicate("You can send up to $535,000 USD to Albania online.", "You can send up to $535,000 USD to Algeria online."));
   assert.ok(nearDuplicate("It typically finalizes within the same day.", "I t typically finalizes within the same day."));
   assert.ok(!nearDuplicate("Our fee is £1 for transfers to Europe.", "Money usually arrives within minutes to most countries."));
+});
+
+test("different prices and limits survive merging", () => {
+  const quotes = findServiceQuotes("Our fee is £10 for international money transfers.\nOur fee is £20 for international money transfers.", "https://example.com/");
+  assert.equal(mergeQuotes([], quotes).length, 2);
+});
+
+test("currency comparison and spending headlines are not transfer coverage", () => {
+  assert.deepEqual(findServiceQuotes("Compare 100+ currencies in real time and find the right moment to transfer funds.\nSend, spend and manage your money across 150+ countries.", "https://example.com/"), []);
+});
+
+test("business, starting-price and destination context stays attached to the quote", () => {
+  assert.match(quoteContext({ topic: "countries", text: "Pay teams in 160 countries.", url: "https://example.com/business/payments/" }).join(" "), /Business service/);
+  assert.match(quoteContext({ topic: "limits", text: "You can send up to $535,000 USD to Albania online.", url: "https://example.com/send-money/send-money-to-albania/" }).join(" "), /Destination-specific/);
+  assert.match(quoteContext({ topic: "fees", text: "Transfer fees from 0.1% apply.", url: "https://example.com/pricing/" }).join(" "), /Starting price/);
 });

@@ -13,7 +13,7 @@ export type FeeTreatment = "deducted" | "added";
 export type Mode = "payout" | "rate";
 
 export interface MarginInput {
-  /** S — what leaves the account, in the send currency. */
+  /** S — transfer amount before an added fee, or including a deducted fee. */
   sendAmount: number;
   /** R_m — mid-market reference, target units per 1 send unit. */
   midRate: number;
@@ -41,6 +41,8 @@ export interface MarginResult {
   /** Present for every non-"ok" status; explains what to tell the user. */
   note?: string;
   sendAmount: number;
+  /** Transfer amount plus a fee charged on top; the customer's total outlay. */
+  totalSpend: number;
   midRate: number;
   /** T — supplied in payout mode, derived in rate mode. */
   receiveAmount: number;
@@ -55,7 +57,7 @@ export interface MarginResult {
   /** The part of the cost that was not disclosed as a fee. */
   fxMargin: number;
   fxMarginPct: number;
-  /** T / S — the rate the customer actually got, all-in. */
+  /** Payout divided by total customer spend — the all-in effective rate. */
   effectiveRate: number;
   /** Only meaningful when a rate was quoted; otherwise derived from effectiveRate. */
   rateSpreadPct: number;
@@ -72,6 +74,7 @@ function empty(status: MarginStatus, note: string): MarginResult {
     status,
     note,
     sendAmount: 0,
+    totalSpend: 0,
     midRate: 0,
     receiveAmount: 0,
     midMarketReceive: 0,
@@ -103,7 +106,10 @@ export function derivePayout(
 
 export function computeMargin(input: MarginInput): MarginResult {
   const { sendAmount, midRate, quotedRate, receiveAmount } = input;
-  const fee = isNonNegative(input.fee) ? input.fee : 0;
+  if (input.fee !== undefined && !isNonNegative(input.fee)) {
+    return empty("invalid", "Enter a fee of zero or more.");
+  }
+  const fee = input.fee ?? 0;
   const feeTreatment: FeeTreatment = input.feeTreatment ?? "deducted";
 
   if (input.sameCurrency) {
@@ -131,17 +137,19 @@ export function computeMargin(input: MarginInput): MarginResult {
     );
   }
 
-  const midMarketReceive = sendAmount * midRate;
+  const totalSpend = sendAmount + (feeTreatment === "added" ? fee : 0);
+  const midMarketReceive = totalSpend * midRate;
   const shortfall = midMarketReceive - payout;
   const totalCost = shortfall / midRate;
   const totalPct = (shortfall / midMarketReceive) * 100;
   const fxMargin = totalCost - fee;
-  const effectiveRate = payout / sendAmount;
+  const effectiveRate = payout / totalSpend;
   const rateSpreadPct = ((midRate - effectiveRate) / midRate) * 100;
 
   const result: MarginResult = {
     status: "ok",
     sendAmount,
+    totalSpend,
     midRate,
     receiveAmount: payout,
     midMarketReceive,
@@ -150,27 +158,27 @@ export function computeMargin(input: MarginInput): MarginResult {
     totalPct,
     statedFee: fee,
     fxMargin,
-    fxMarginPct: (fxMargin / sendAmount) * 100,
+    fxMarginPct: (fxMargin / totalSpend) * 100,
     effectiveRate,
     rateSpreadPct,
   };
-
-  // A quote can legitimately beat the daily reference — timing, or a different
-  // reference source. Never present this as a profit.
-  if (shortfall < 0) {
-    return {
-      ...result,
-      status: "beats-reference",
-      note:
-        "This quote is better than the reference rate published for that date. That can happen because the reference rate is a once-daily figure and your provider priced at a different moment, or used a different source.",
-    };
-  }
 
   if (Math.abs(totalPct) > IMPLAUSIBLE_TOTAL_PCT) {
     return {
       ...result,
       status: "implausible",
       note: "Those figures give an unusually large difference. Please check the amounts and the currencies.",
+    };
+  }
+
+  // A quoted conversion rate can beat the daily reference even if fees make
+  // the total cost positive. Never label a negative estimated margin as profit.
+  if (fxMargin < -1e-8) {
+    return {
+      ...result,
+      status: "beats-reference",
+      note:
+        "The exchange-rate portion of this quote is better than the reference rate published for that date. That can happen because the reference rate is a once-daily figure and your provider priced at a different moment, or used a different source. Any stated fee still contributes to your total spend.",
     };
   }
 

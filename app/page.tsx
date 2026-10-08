@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { KIND_LABEL, KIND_PLURAL, type ProviderKind } from "@/lib/providers";
 import { SITE } from "@/lib/site";
-import { faqNode, latest, pageGraph, pageId, providerList } from "@/lib/schema";
+import { faqNode, pageGraph, pageId, providerList } from "@/lib/schema";
 import { HOME_FAQ } from "@/lib/faq";
 import {
   applyFilters,
@@ -77,7 +77,6 @@ export default async function Page({ searchParams }: { searchParams: Promise<Sea
           about: { "@type": "Thing", name: "International money transfer" },
           mainEntity: { "@id": LIST_ID },
           hasPart: { "@id": `${SITE.url}/#faq` },
-          dateModified: latest(entries.flatMap((e) => [e.company?.fetchedAt, e.statement?.fetchedAt])),
           nodes: [
             providerList(
               results,

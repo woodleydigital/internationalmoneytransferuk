@@ -1,7 +1,7 @@
 /** Reads provider statements written by scripts/import-disclosures.ts; fresh ones only. */
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { DisclosureRecord } from "./disclosures";
+import { transferStatements, type DisclosureRecord } from "./disclosures";
 import { isFresh } from "./company-records";
 
 export function loadDisclosure(slug: string, now = new Date()): DisclosureRecord | null {
@@ -9,7 +9,9 @@ export function loadDisclosure(slug: string, now = new Date()): DisclosureRecord
   if (!existsSync(file)) return null;
   try {
     const rec = JSON.parse(readFileSync(file, "utf8")) as DisclosureRecord;
-    return rec.status === "found" && rec.statements.length && isFresh(rec.fetchedAt, now) ? rec : null;
+    if (rec.slug !== slug || rec.status !== "found" || !isFresh(rec.fetchedAt, now)) return null;
+    const statements = transferStatements(rec.statements);
+    return statements.length ? { ...rec, statements } : null;
   } catch {
     return null;
   }

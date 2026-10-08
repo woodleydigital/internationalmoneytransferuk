@@ -16,7 +16,7 @@ export function RateTableBlock({ table }: { table: RateTable | null }) {
         Today’s <Term slug="mid-market-rate">mid-market reference rates</Term> against the pound
       </h2>
       <p className="mt-3 max-w-prose">
-        {`What one pound buys at the mid-market rate published on ${longDate(table.date)}. These are reference rates from central banks, updated once each working day. No provider will give you one: use them to see how much a quote costs you.`}
+        {`What one pound buys at the mid-market rate published on ${longDate(table.date)}. These are reference rates from central banks, updated once each working day. Use them as a dated benchmark when comparing quotes; a provider may use a different rate source or pricing time.`}
       </p>
       <div className="mt-4 overflow-x-auto">
         <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
@@ -57,7 +57,7 @@ export function RateTableBlock({ table }: { table: RateTable | null }) {
         note="a blend of central bank reference rates; change is in units per pound"
       />
       <p className="mt-2 text-sm text-muted">
-        Not a quote, an offer or a rate any provider will give you, and not financial advice.
+        Reference data, not a personalised quote or offer, and not financial advice.
       </p>
     </section>
   );

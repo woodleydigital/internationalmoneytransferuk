@@ -6,6 +6,7 @@ import {
   normaliseCompanyNumber,
   robotsAllows,
   statedCompanyNumbers,
+  transferStatements,
   type DisclosureRecord,
 } from "./disclosures.ts";
 
@@ -16,6 +17,16 @@ test("html becomes visible text, including markup escaped inside data", () => {
   assert.ok(!t.includes("123456"));
   assert.ok(t.includes("Acme & Co is regulated."));
   assert.ok(!t.includes("<br"));
+});
+
+test("other-product and other-firm statements do not become transfer regulation", () => {
+  const statements = [
+    { text: "Payments Limited is an electronic money institution authorised by the FCA.", frns: ["111111"], companyNumbers: [] },
+    { text: "Assets Limited provides investment services and is authorised by the FCA.", frns: [], companyNumbers: ["01234567"], url: "https://example.com/stocks/" },
+    { text: "Home insurance is provided by Insurance Limited, regulated by the FCA.", frns: ["222222"], companyNumbers: [], url: "https://example.com/legal/" },
+    { text: "Other Limited is authorised by the FCA.", frns: ["333333"], companyNumbers: [], url: "https://example.com/legal/" },
+  ];
+  assert.deepEqual(transferStatements(statements), [statements[0]]);
 });
 
 test("quotes the regulatory paragraph with its FRN and company number", () => {

@@ -103,7 +103,7 @@ export const GLOSSARY: Term[] = [
     term: "Mid-market rate",
     also: "Interbank or reference rate",
     definition:
-      "The midpoint between the prices at which banks buy and sell a currency on the wholesale market. Consumers are not normally offered it; it is the benchmark for measuring how much a provider’s rate costs you.",
+      "The midpoint between the prices at which banks buy and sell a currency on the wholesale market. Some providers use a mid-market rate and charge a separate fee; others include a margin in their rate. A published daily reference can differ from the rate at the moment of a quote.",
   },
   {
     slug: "money-remittance",

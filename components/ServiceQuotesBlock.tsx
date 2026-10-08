@@ -1,4 +1,4 @@
-import { TOPICS, TOPIC_LABEL, type ServiceRecord } from "@/lib/service-facts";
+import { TOPICS, TOPIC_LABEL, quoteContext, type ServiceRecord } from "@/lib/service-facts";
 import { SourceLine, Term } from "@/components/Page";
 
 const host = (u: string) => new URL(u).hostname.replace(/^www\./, "");
@@ -25,7 +25,7 @@ export function ServiceQuotesBlock({ name, record }: { name: string; record: Ser
         note="sentences quoted word for word"
       />
       {topics.map((t) => (
-        <div key={t} className="mt-5">
+        <div key={t} id={`service-${t}`} className="mt-5 scroll-mt-4">
           <h3 className="font-semibold text-ink">
             {t === "safeguarding" ? <Term slug="safeguarding">{TOPIC_LABEL[t]}</Term> : TOPIC_LABEL[t]}
           </h3>
@@ -33,7 +33,7 @@ export function ServiceQuotesBlock({ name, record }: { name: string; record: Ser
             {record.quotes
               .filter((q) => q.topic === t)
               .map((q) => (
-                <li key={q.text}>
+                <li key={`${q.url}:${q.text}`}>
                   <blockquote cite={q.url} className="border-l-4 border-line-strong bg-wash px-4 py-2">
                     <p>{q.text}</p>
                     <p className="mt-1 text-xs text-muted">
@@ -43,6 +43,11 @@ export function ServiceQuotesBlock({ name, record }: { name: string; record: Ser
                       </a>
                     </p>
                   </blockquote>
+                  {quoteContext(q).length > 0 && (
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-xs text-muted">
+                      {quoteContext(q).map((note) => <li key={note}>{note}</li>)}
+                    </ul>
+                  )}
                 </li>
               ))}
           </ul>

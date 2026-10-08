@@ -59,6 +59,16 @@ export interface DisclosureRecord {
   error?: string;
 }
 
+/** Exclude statements specifically about other products, preserving exact text. */
+export function transferStatements(statements: Statement[]): Statement[] {
+  const relevant = statements.filter((s) =>
+    !/\b(?:insurance|investment services|stocks|prepaid|credit cards?|cash ISAs?)\b/i.test(s.text) ||
+    /\b(?:money transfers?|remittance|international payments?|payment services|electronic money institution)\b/i.test(s.text),
+  );
+  const homeFrns = new Set(relevant.filter((s) => !s.url).flatMap((s) => s.frns));
+  return relevant.filter((s) => !s.url || !s.frns.length || !homeFrns.size || s.frns.some((f) => homeFrns.has(f)));
+}
+
 const ENTITIES: Record<string, string> = {
   amp: "&", nbsp: " ", quot: '"', apos: "'", lt: "<", gt: ">", copy: "©", reg: "®",
   rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", ndash: "–", mdash: "—", pound: "£",

@@ -29,6 +29,29 @@ export interface ServiceQuote {
   url: string;
 }
 
+/** Context labels describe the quotation, not independently verified product facts. */
+export function quoteContext(q: ServiceQuote): string[] {
+  const notes: string[] = [];
+  let path = "";
+  try { path = new URL(q.url).pathname; } catch { /* malformed source is rejected by the loader */ }
+  if (/\/business(?:\/|$)|\/teams(?:\/|$)/i.test(path) || /\b(?:business|teams|suppliers|payroll)\b/i.test(q.text)) {
+    notes.push("Business service: confirm that this product applies to your transfer.");
+  }
+  if (/\/(?:send|transfer)-money-to-[a-z-]+/i.test(path)) {
+    notes.push("Destination-specific page: this statement is not a limit or promise for every route.");
+  }
+  if (q.topic === "fees" && /\b(?:from|as low as|starting at)\s*[£$€]?\s*\d/i.test(q.text)) {
+    notes.push("Starting price: request a quote for your amount, route and payment method.");
+  }
+  if (/\b(?:over|above|under|at least|once|verified|eligible|depending|subject to)\b/i.test(q.text)) {
+    notes.push("Conditions apply in this sentence: check the linked page for the full terms.");
+  }
+  if (q.topic === "countries") {
+    notes.push("Headline coverage: country and currency counts do not confirm a particular UK-origin route.");
+  }
+  return notes;
+}
+
 export interface ServiceRecord {
   slug: string;
   fetchedAt: string;
@@ -114,6 +137,7 @@ export function findServiceQuotes(text: string, url: string): ServiceQuote[] {
     // Safeguarding sentences stand alone; every other topic must be about transfers.
     if (topic !== "safeguarding" && (!TRANSFER.test(s) || OTHER_PRODUCT.test(s))) continue;
     if ((topic === "fees" || topic === "limits") && CARD_SPENDING.test(s)) continue;
+    if (topic === "countries" && (CARD_SPENDING.test(s) || /\b(?:compare|track|monitor)\b.*\bcurrenc/i.test(s))) continue;
     if (topic === "fees" && OTHER_FEES.test(s)) continue;
     if (REJECTED_QUOTES.some((r) => s.startsWith(r))) continue;
     seen.add(key);
@@ -127,6 +151,11 @@ const words = (t: string) => new Set(t.toLowerCase().replace(/[^a-z ]+/g, " ").s
 
 /** True when two sentences say nearly the same thing (one contains the other, or 75% shared words). */
 export function nearDuplicate(a: string, b: string): boolean {
+  // Different prices, limits and destinations are distinct claims, even when
+  // the surrounding template has almost identical wording.
+  const numbers = (s: string) => (s.match(/\d+(?:[,.]\d+)*(?:\s*%)?/g) ?? []).map((n) => n.replace(/[,\s]/g, ""));
+  const routes = (s: string) => [...s.matchAll(/\b(?:to|from) ([A-Z][a-z]+(?: [A-Z][a-z]+){0,2})\b/g)].map((m) => m[0]);
+  if (JSON.stringify(numbers(a)) !== JSON.stringify(numbers(b)) || JSON.stringify(routes(a)) !== JSON.stringify(routes(b))) return false;
   const x = a.toLowerCase().replace(/\s+/g, ""), y = b.toLowerCase().replace(/\s+/g, "");
   if (x.includes(y) || y.includes(x)) return true;
   const A = words(a), B = words(b);

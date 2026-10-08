@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 import { isIndexable, providerUrl } from "@/lib/providers";
 import { loadEntries } from "@/lib/directory-data";
-import { checkedAt, isIndexableEntry } from "@/lib/directory";
+import { isIndexableEntry } from "@/lib/directory";
 
 // Re-read daily so new and refreshed profiles appear with their record dates.
 export const revalidate = 86_400;
@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const profiles = loadEntries()
     .filter((e) => isIndexable(e.provider) || isIndexableEntry(e))
-    .map((e) => ({ url: `${SITE.url}${providerUrl(e.provider)}`, lastModified: checkedAt(e) }));
+    // A fetch time does not establish a substantive page modification.
+    .map((e) => ({ url: `${SITE.url}${providerUrl(e.provider)}` }));
   return [...pages.map((path) => ({ url: `${SITE.url}${path}` })), ...profiles];
 }

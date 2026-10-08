@@ -20,6 +20,7 @@ import {
   findLegalLinks,
   findStatements,
   htmlToText,
+  transferStatements,
   robotsAllows,
   type DisclosureRecord,
   type Statement,
@@ -191,6 +192,8 @@ for (const p of PROVIDERS) {
       delete rec.error;
     }
   }
+  rec.statements = transferStatements(rec.statements);
+  if (rec.status === "found" && !rec.statements.length) rec.status = "none";
   writeFileSync(join(OUT, `${p.slug}.json`), JSON.stringify(rec, null, 2) + "\n");
   const nums = rec.statements.flatMap((s) => [...s.frns.map((f) => `FRN ${f}`), ...s.companyNumbers.map((c) => `Co ${c}`)]);
   summary.push(`${rec.status.padEnd(8)} ${p.slug.padEnd(22)} ${[...new Set(nums)].join(", ") || rec.error || ""}`);

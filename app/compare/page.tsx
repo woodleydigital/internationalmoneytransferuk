@@ -10,7 +10,7 @@ import { RateTableBlock } from "@/components/Rates";
 
 const TITLE = "Compare the cost of an international money transfer";
 const DESCRIPTION =
-  "Enter what a provider quoted you and see the total cost of the transfer against the mid-market reference rate, split into the stated fee and the exchange rate margin.";
+  "Enter what a provider quoted you and see the total cost of the transfer against the mid-market reference rate, split into the stated fee and an estimated exchange rate difference.";
 
 /** The calculator itself, as the page's main entity. */
 const checkerSchema = {
@@ -22,7 +22,7 @@ const checkerSchema = {
   operatingSystem: "Any",
   browserRequirements: "Requires a web browser.",
   description:
-    "Compares a quoted international transfer against the mid-market reference rate and shows the exchange rate margin applied.",
+    "Compares a quoted international transfer against the mid-market reference rate and estimates the exchange rate difference, with stated fees included in total spend.",
   isAccessibleForFree: true,
   offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" },
   inLanguage: LANG,
@@ -128,10 +128,10 @@ export default async function Page({
         </h2>
 
         <p className="max-w-prose text-base">
-          Enter what you were quoted. This shows the{" "}
-          <Term slug="exchange-rate-margin">margin built into the exchange rate</Term>, separately
-          from any fee — the cost most providers never itemise. It is measured against the{" "}
-          <Term slug="mid-market-rate">mid-market rate</Term>.
+          Enter what you were quoted. This estimates the total cost against a dated{" "}
+          <Term slug="mid-market-rate">mid-market reference rate</Term>, separating any stated
+          fee from the <Term slug="exchange-rate-margin">exchange rate difference</Term>.
+          The daily benchmark can differ from the rate at the moment of your quote.
         </p>
 
         {mid ? (
@@ -151,7 +151,7 @@ export default async function Page({
 
         <form method="get" action="/compare/" className="mt-6 rounded-lg border border-line bg-wash p-5">
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="You send" name="send" defaultValue={String(sendAmount)} inputMode="decimal" />
+            <Field label="Transfer amount" name="send" defaultValue={String(sendAmount)} inputMode="decimal" hint="Include a fee deducted from this amount. Exclude a fee charged on top; the checker adds it to total spend." />
             <Select label="From" name="from" value={base} />
             <Select label="To" name="to" value={quote} />
             <Field
@@ -223,15 +223,14 @@ export default async function Page({
 
       <section aria-labelledby="why" className="mt-14 border-t border-line pt-8">
         <h2 id="why" className="text-xl font-semibold text-ink">
-          International money transfer costs more than the fee you were quoted
+          Compare the fee and the exchange rate together
         </h2>
         <p className="mt-3 max-w-prose">
-          {`On a large transfer the exchange rate margin is almost always the larger cost, and ` +
-            `it is the one that is not itemised. A transfer advertised as fee-free is not ` +
-            `free: the provider’s revenue is the difference between the rate they give you ` +
-            `and the rate at which currency actually trades. On a ${money(250_000, "GBP")} ` +
-            `transfer, a margin of one and a half percent is ${money(3_750, "GBP")} — a ` +
-            `figure that never appears on the confirmation.`}
+          {`A zero transfer fee does not tell you whether an exchange rate margin applies. ` +
+            `Some providers use a mid-market rate with a separate fee; others include a margin ` +
+            `in the rate. For illustration, a 1.5% rate difference on a ${money(250_000, "GBP")} ` +
+            `transfer represents ${money(3_750, "GBP")}. Compare the total you pay and the ` +
+            `amount your recipient receives for the same route and payout method.`}
         </p>
         <p className="mt-3 max-w-prose">
           This tool does not quote you a rate. It takes the numbers a provider gave you and
@@ -257,7 +256,7 @@ function WorkedExample() {
         {`A ${money(50_000, "GBP")} transfer quoted at a rate of 1.1200, when the mid-market ` +
           `rate is 1.1500, gives the recipient ${money(56_000, "EUR")} instead of ` +
           `${money(57_500, "EUR")}. That difference is ${money(1_304.35, "GBP")} of exchange ` +
-          `rate margin, on top of any fee you were told about — ${percent(2.61)} of the ` +
+          `rate difference, with no separately stated fee — ${percent(2.61)} of the ` +
           `amount transferred.`}
       </p>
       <p className="mt-2 text-sm">
@@ -289,35 +288,28 @@ function Result({
 
   return (
     <div className="rounded-lg border border-line p-5">
-      {beats ? (
-        <>
-          <h3 className="font-semibold text-ink">
-            That quote beats the reference rate
-          </h3>
-          <p className="mt-2 max-w-prose">{result.note}</p>
-        </>
-      ) : (
-        <>
+      {beats && <p className="mb-4 max-w-prose text-sm">{result.note}</p>}
           <h3 className="text-4xl font-bold tracking-tight text-ink">
             {money(result.totalCost, base)}
           </h3>
           <p className="mt-1">
-            {`is the total cost of this transfer — ${percent(result.totalPct)} of the amount you send.`}
+            {`is the ${result.totalCost < 0 ? "difference" : "estimated total cost"} against the daily reference — ${percent(result.totalPct)} of your total spend.`}
           </p>
 
           <dl className="mt-4 grid gap-3 sm:grid-cols-2">
             <Stat label="Stated fee" value={money(result.statedFee, base)} />
             <Stat
-              label="Exchange rate margin"
+              label="Estimated exchange rate difference"
               value={money(result.fxMargin, base)}
               accent
               note={
                 result.statedFee === 0
-                  ? "No fee was stated, so the whole cost is in the rate."
-                  : "Not itemised on your quote."
+                  ? "No fee was stated; this is the difference against the daily reference."
+                  : "Difference after separating the stated fee; timing can affect it."
               }
             />
-            <Stat label="Rate you were given" value={fmtRate(result.effectiveRate)} />
+            <Stat label="All-in effective rate" value={fmtRate(result.effectiveRate)} />
+            <Stat label="Total customer spend" value={money(result.totalSpend, base)} />
             <Stat label="Mid-market reference" value={fmtRate(result.midRate)} />
           </dl>
 
@@ -327,11 +319,10 @@ function Result({
               `${money(result.receiveAmount, quote)}, a difference of ` +
               `${money(result.shortfall, quote)}.`}
           </p>
-        </>
-      )}
       <p className="mt-4 text-sm">
-        A margin is a normal part of how providers charge. This is a statement of what yours
-        came to, not a judgement about the provider.
+        This is an estimate against a daily reference, not a measurement of the provider’s
+        exact margin. Quote timing, rate sources and charges not included in your inputs can
+        affect the result.
       </p>
     </div>
   );

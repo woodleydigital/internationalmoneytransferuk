@@ -18,6 +18,7 @@ import { ServiceQuotesBlock } from "@/components/ServiceQuotesBlock";
 import { FosBlock } from "@/components/FosBlock";
 import { CompanyExtrasBlock } from "@/components/CompanyExtrasBlock";
 import { ChangesBlock } from "@/components/ChangesBlock";
+import { TransferChecklist } from "@/components/TransferChecklist";
 import { loadChanges, loadCompanyExtras } from "@/lib/extras-records";
 import { loadFosRecord } from "@/lib/fos-records";
 import { H2, P, PageFrame, Term } from "@/components/Page";
@@ -88,6 +89,7 @@ export default async function Page({ params }: { params: Params }) {
     (f.field === FOS_FIELD && Boolean(fos)) ||
     (f.field.startsWith("Revenue") && Boolean(extras?.accounts?.figures.length));
   const sections: [string, string][] = [
+    ["transfer-checklist", "Questions for your transfer"],
     ...(statement ? ([["regulation", "Regulatory statement"]] as [string, string][]) : []),
     ...(service ? ([["service", "What it says about its service"]] as [string, string][]) : []),
     ...(company ? ([["companies-house", "Companies House record"]] as [string, string][]) : []),
@@ -108,7 +110,6 @@ export default async function Page({ params }: { params: Params }) {
         type: "ProfilePage",
         mainEntity: { "@id": providerId(p.slug) },
         about: { "@id": providerId(p.slug) },
-        dateModified: checkedAt(entry),
         ...(logo ? { primaryImage: logo.file } : {}),
         nodes: [providerNode(entry, logo?.file)],
       }}
@@ -236,6 +237,8 @@ export default async function Page({ params }: { params: Params }) {
           </p>
         </aside>
       )}
+
+      <TransferChecklist entry={entry} entries={entries} />
 
       {statement && (
         <div id="regulation">

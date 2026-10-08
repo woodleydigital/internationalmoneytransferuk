@@ -50,6 +50,41 @@ test("fee treatment changes the payout, so it is never assumed", () => {
   assert.notEqual(deducted, added);
 });
 
+test("an added fee is included in total spend, cost and the effective rate", () => {
+  const r = computeMargin({ sendAmount: 1_000, midRate: 1.2, quotedRate: 1.2, fee: 10, feeTreatment: "added" });
+  assert.equal(r.status, "ok");
+  close(r.totalSpend, 1_010);
+  close(r.receiveAmount, 1_200);
+  close(r.totalCost, 10);
+  close(r.fxMargin, 0);
+  close(r.totalPct, 10 / 1_010 * 100);
+  close(r.effectiveRate, 1_200 / 1_010);
+  const payout = computeMargin({ sendAmount: 1_000, midRate: 1.2, receiveAmount: 1_200, fee: 10, feeTreatment: "added" });
+  close(payout.totalCost, r.totalCost);
+});
+
+test("deducted and added fees remain distinct with an exchange rate spread", () => {
+  const added = computeMargin({ sendAmount: 1_000, midRate: 1.2, quotedRate: 1.18, fee: 10, feeTreatment: "added" });
+  const deducted = computeMargin({ sendAmount: 1_000, midRate: 1.2, quotedRate: 1.18, fee: 10, feeTreatment: "deducted" });
+  close(added.totalCost, 1_010 - 1_180 / 1.2);
+  close(deducted.totalCost, 1_000 - 990 * 1.18 / 1.2);
+  close(added.totalCost, added.statedFee + added.fxMargin);
+  close(deducted.totalSpend, 1_000);
+});
+
+test("negative and non-finite fees are rejected", () => {
+  for (const fee of [-1, NaN, Infinity]) {
+    assert.equal(computeMargin({ sendAmount: 1_000, midRate: 1.2, quotedRate: 1.2, fee }).status, "invalid");
+  }
+});
+
+test("a favourable rate difference can coexist with a positive stated fee", () => {
+  const r = computeMargin({ sendAmount: 1_000, midRate: 1.2, quotedRate: 1.205, fee: 10, feeTreatment: "added" });
+  assert.equal(r.status, "beats-reference");
+  assert.ok(r.totalCost > 0);
+  assert.ok(r.fxMargin < 0);
+});
+
 test("a quote better than the reference is reported, never called a profit", () => {
   const r = computeMargin({ sendAmount: 50_000, midRate: 1.15, receiveAmount: 58_000 });
   assert.equal(r.status, "beats-reference");
