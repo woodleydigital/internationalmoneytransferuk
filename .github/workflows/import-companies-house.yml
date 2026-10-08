@@ -27,6 +27,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -62,6 +64,14 @@ jobs:
         run: npm run import:fos
       - name: Record this week's changes
         run: npm run record:changes
+      - name: Preserve generated records before publication
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-records-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            data/
+            public/logos/
+          retention-days: 14
       - name: Commit changes
         run: |
           git config user.name "imt-uk-data-bot"
@@ -71,6 +81,11 @@ jobs:
             echo "No changes."
           else
             git commit -m "Public records import $(date -u +%Y-%m-%d)"
+            # Keep code published during the import. Conflicting data edits fail
+            # for review rather than overwriting them; the artifact preserves this run.
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            npm test
+            npm run build
             git push
           fi
       - name: Notify IndexNow search engines
