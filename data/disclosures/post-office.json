@@ -1,8 +1,7 @@
 {
   "slug": "post-office",
   "url": "https://www.postoffice.co.uk/",
-  "fetchedAt": "2026-10-08T02:27:40.371Z",
-  "status": "error",
-  "statements": [],
-  "error": "HTTP 403"
+  "fetchedAt": "2026-10-08T08:03:32.420Z",
+  "status": "none",
+  "statements": []
 }

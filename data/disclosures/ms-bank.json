@@ -1,18 +1,7 @@
 {
   "slug": "ms-bank",
   "url": "https://bank.marksandspencer.com/",
-  "fetchedAt": "2026-10-08T02:26:39.490Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "M&S Bank is a division of HSBC UK Bank plc. M&S is a registered trademark of Marks and Spencer plc and is used under licence. HSBC UK Bank plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Financial Services Register number: 765112). HSBC UK Bank plc is a company incorporated under the laws of England and Wales with company registration number 9928412 and its registered office at 1 Centenary Square, Birmingham, B1 1HQ. © HSBC Group 2026. All rights reserved.",
-      "frns": [
-        "765112"
-      ],
-      "companyNumbers": [
-        "09928412"
-      ],
-      "url": "https://bank.marksandspencer.com/legal-information/"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:11:54.645Z",
+  "status": "none",
+  "statements": []
 }

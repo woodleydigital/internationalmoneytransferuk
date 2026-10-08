@@ -1,6 +1,6 @@
 {
   "slug": "worldremit",
-  "fetchedAt": "2026-10-08T02:25:21.673Z",
+  "fetchedAt": "2026-10-08T08:08:39.347Z",
   "status": "found",
   "pages": [
     "https://www.worldremit.com/en/faq/bank-transfers",
@@ -31,7 +31,7 @@
     },
     {
       "topic": "speed",
-      "text": "It could be instant or it could take 1 - 2 working days.",
+      "text": "The time it takes varies depending on where you’re sending money to. It could be instant or it could take 1 - 2 working days. Check how long your bank transfer will take by selecting the country here.",
       "url": "https://www.worldremit.com/en/faq/bank-transfers",
       "context": "How long do international bank transfers take?"
     },
@@ -49,21 +49,27 @@
     },
     {
       "topic": "fees",
-      "text": "Our fees and exchange rates are shown upfront.",
+      "text": "Top up credit for a pre-paid mobile phone number with no extra fees.",
       "url": "https://www.worldremit.com/en-gb",
-      "context": "How to transfer money internationally?"
+      "context": "International money transfer — Ways to send money internationally"
+    },
+    {
+      "topic": "payout",
+      "text": "Send money directly to a bank account.",
+      "url": "https://www.worldremit.com/en-gb",
+      "context": "International money transfer — Ways to send money internationally — Bank transfer"
     },
     {
       "topic": "fees",
-      "text": "There are no hidden fees.",
+      "text": "Our fees and exchange rates are shown upfront.",
       "url": "https://www.worldremit.com/en-gb",
-      "context": "How much does it cost to send money internationally?"
+      "context": "International money transfer — How to transfer money internationally?"
     },
     {
       "topic": "speed",
-      "text": "Identity verification takes up to 4 minutes at least 90% of the time.",
+      "text": "In most cases, money transfers sent using WorldRemit will arrive within minutes. You will see the expected delivery time before you make a payment. We aim to complete transfers within the suggested time, but some transfers may take longer depending on the receive method.",
       "url": "https://www.worldremit.com/en-gb",
-      "context": "What verification do I need to send an international transfer?"
+      "context": "International money transfer — How long does an online money transfer take?"
     },
     {
       "topic": "countries",

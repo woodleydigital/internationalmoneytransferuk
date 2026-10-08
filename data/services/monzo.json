@@ -1,6 +1,6 @@
 {
   "slug": "monzo",
-  "fetchedAt": "2026-10-08T02:23:57.926Z",
+  "fetchedAt": "2026-10-08T08:05:48.213Z",
   "status": "found",
   "pages": [
     "https://monzo.com/help/payments-getting-started/sending-int-payments-web",
@@ -40,6 +40,12 @@
       "text": "The maximum fee for each transaction is £1,000.",
       "url": "https://monzo.com/help/payments-getting-started/international-transfers-local-currency",
       "context": "What fees are charged for receiving international transfers?"
+    },
+    {
+      "topic": "availability",
+      "text": "You can't send GBP (Great British Pounds) internationally from your Monzo account.",
+      "url": "https://monzo.com/help/payments-getting-started/accepted-currencies-web",
+      "context": "Where can I find a list of supported currencies? — Sending international payments"
     }
   ],
   "attempts": []

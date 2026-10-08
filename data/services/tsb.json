@@ -1,6 +1,6 @@
 {
   "slug": "tsb",
-  "fetchedAt": "2026-10-08T02:23:26.956Z",
+  "fetchedAt": "2026-10-08T08:04:30.120Z",
   "status": "found",
   "pages": [
     "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
@@ -21,42 +21,51 @@
       "topic": "limits",
       "text": "You can send up to £75,000.",
       "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": " How much money can I send? "
+      "context": "International Payments — Sending a payment — How much money can I send?"
     },
     {
       "topic": "speed",
-      "text": "Any Online International Payments requested after this time will be processed the next working day.",
-      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html"
+      "text": "The cut-off time for Online International Payments to be sent the same day is 4:30pm for all foreign currencies.",
+      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
+      "context": "International Payments — Sending a payment — How long will it take for your payment to reach the person you’re paying?"
     },
     {
-      "topic": "limits",
+      "topic": "speed",
+      "text": "Euros to the EU (European Union), EEA (European Economic Area), Monaco or Switzerland Next working day",
+      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
+      "context": "Sending a payment — How long will it take for your payment to reach the person you’re paying? — Currency and destination Maximum delivery times",
+      "table": true
+    },
+    {
+      "topic": "speed",
+      "text": "Any other currency to EU (European Union) and EEA (European Economic Area) European countries, North America, Canada, South Africa, Australia, New Zealand, Middle East and the Far East 4 working days",
+      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
+      "context": "Sending a payment — How long will it take for your payment to reach the person you’re paying? — Currency and destination Maximum delivery times",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "If the payment is in euros to an EEA country: £0",
+      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
+      "context": "International Payments — Sending a payment — How much will it cost to send an international payment from my account?"
+    },
+    {
+      "topic": "fees",
       "text": "All other payments up to £5,000: £10",
       "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": " How much will it cost to send an international payment from my account? "
+      "context": "International Payments — Sending a payment — How much will it cost to send an international payment from my account?"
     },
     {
       "topic": "fees",
-      "text": "If we use an agent bank when making the payment, their charge (if any) will be taken from the amount you are paying before it reaches the person you are paying.",
+      "text": "All other payments over £5,000: £17.50",
       "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": "Type of international payment Who’ll pay the charges?"
-    },
-    {
-      "topic": "fees",
-      "text": "Transfer Fee: £0 (TSB does not charge for euro payments to EEA countries when made via the TSB Mobile Banking App or online)&nbsp;",
-      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": " Sending a payment "
-    },
-    {
-      "topic": "fees",
-      "text": "Recipient would receive around €1,131.39, minus any fees charged by the recipient’s bank or intermediary banks",
-      "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": " Sending a payment "
+      "context": "International Payments — Sending a payment — How much will it cost to send an international payment from my account?"
     },
     {
       "topic": "limits",
-      "text": "All other payments where the payment is up to £100: £2",
+      "text": "You can make as many payments as you want as long as you don't go over your daily payment transaction limit of £75,000 and you have enough money in your account to make payments.",
       "url": "https://www.tsb.co.uk/help-and-support/online-banking/international-payments.html",
-      "context": " How much will it cost to receive an international payment into my account? "
+      "context": "Can I make more than one payment to the same recipient each day?"
     }
   ],
   "attempts": []

@@ -54,10 +54,12 @@ best-uk-banks post; `/guides/how-it-works/` vs homepage.
 - **Verified:** FCA Register + Companies House + FOS data complete, product data extracted
   with source quotes. Indexable if the topical map says so.
 - **Register data pending:** anything less. Shown with that label. Indexable only when the
-  topical map marks the profile for indexing **and** it holds at least two of three fresh
-  public-record blocks (Companies House record, provider's regulatory statement, service
-  quotes) — `isIndexableEntry` in `lib/directory.ts`. Everything else stays `noindex`.
-  (Changed 2026-10-02 to launch without FCA data.)
+  topical map marks the profile for indexing **and** it holds a fresh Companies House
+  identity or provider regulatory statement, plus sending-service quotations spanning at
+  least three of countries, payout, fees, limits and speed — `isIndexableEntry` in
+  `lib/directory.ts`. Incoming-only terms, a generic checklist or an availability sentence
+  cannot satisfy this gate. Everything else stays `noindex`. This is our publishing rule,
+  not a Google quality score. (Strengthened 2026-10-08.)
 - Indexing aids: sitemap with record dates; `GOOGLE_SITE_VERIFICATION` /
   `BING_SITE_VERIFICATION` env vars render the ownership meta tags; IndexNow key file in
   `public/`, `npm run indexnow` (also run by the weekly workflow after deploy).
@@ -104,10 +106,10 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
   Chromium (installed in the workflow). Building societies have no Companies House record.
   Plain pattern matching — no AI.
 - **Provider service details:** `scripts/import-service-facts.ts` (weekly, same workflow)
-  reads up to twelve of its official product/help pages, using `lib/provider-sources.ts`
+  reads up to twelve of its official product/help sources (HTML and selectable-text PDF terms), using `lib/provider-sources.ts`
   plus focused discovered links, including help subdomains. It keeps sentences on eight
   topics (availability, countries, payout, speed, fees, limits, safeguarding, identity),
-  verbatim, with the page URL and nearby source heading when needed, in `data/services/`. Rules in
+  verbatim, with the source URL, parent headings and table columns when needed, in `data/services/`. Rules in
   `lib/service-facts.ts`: must be about transfers; drops superlatives, promotions, other
   products (cards, loans, savings), claims about other firms, US-only terms, fragments and
   near-duplicates; `REJECTED_QUOTES` for context-wrong rows. Shown as "What {provider} says
@@ -238,3 +240,9 @@ The workbook's "Testing" rows and the "Human review?" column no longer apply.
 3. Resolve provider/source conditions before treating headline statements as comparable data.
 4. Collect fresh public records through the existing authorised workflow; retain its audit trail.
 5. Expand indexing only when the publishing plan and evidence requirements are met.
+
+## Profile completion safeguards (2026-10-08)
+- Read official HTML and PDF sources with robots checks and actual fetch dates. Do not use a successor’s product data to fill a former brand.
+- Keep complete table rows and adjacent timing conditions; classify cost brackets as fees, not limits. A heading cannot supply a fact missing from a quotation.
+- FCA coverage rows say live lookup only; provider-stated FRNs are sourced to the provider, never asserted as FCA-verified.
+- Both profile robots metadata and the sitemap must use the same substantive-evidence gate, with no legacy verification bypass.

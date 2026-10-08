@@ -9,6 +9,7 @@
 import type { CompanyRecord } from "./companies-house";
 import type { DisclosureRecord } from "./disclosures";
 import type { ServiceRecord } from "./service-facts";
+import { isReceivingQuote } from "./service-facts.ts";
 import { PROVIDERS, initialOf, type Provider, type ProviderKind } from "./providers.ts";
 
 export interface Entry {
@@ -32,14 +33,19 @@ export function makeEntry(
 }
 
 /**
- * A profile is indexable when the topical map marks it for indexing and it
- * holds at least two of the three fresh public-record blocks: a Companies
- * House record, the provider's regulatory statement, and what it says about
- * its service. Anything thinner stays noindex until it has more.
+ * A profile needs an indexing verdict, an identity/regulatory source and
+ * substantive sending-service evidence across at least three useful topics.
+ * Source-block counts alone do not establish a useful transfer profile.
  */
 export function isIndexableEntry(e: Entry): boolean {
-  const blocks = [Boolean(e.company?.company), Boolean(e.statement), Boolean(e.service?.quotes.length)];
-  return e.provider.indexWhenVerified && blocks.filter(Boolean).length >= 2;
+  if (!e.provider.indexWhenVerified || !(e.company?.company || e.statement?.statements.length)) return false;
+  if (e.service?.quotes.some((q) => q.topic === "availability" && /\bno longer available\b/i.test(q.text))) return false;
+  const sending = (e.service?.quotes ?? []).filter((q) =>
+    ["countries", "payout", "fees", "limits", "speed"].includes(q.topic) &&
+    !isReceivingQuote(q) &&
+    !/\b(?:can['’]t|cannot|do not offer|no longer)\b/i.test(q.text),
+  );
+  return sending.length >= 3 && new Set(sending.map((q) => q.topic)).size >= 3;
 }
 
 export type Sort = "az" | "za" | "oldest" | "newest";

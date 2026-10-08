@@ -1,18 +1,12 @@
 {
   "slug": "handelsbanken",
-  "fetchedAt": "2026-10-08T02:27:07.625Z",
+  "fetchedAt": "2026-10-08T08:19:58.290Z",
   "status": "none",
   "pages": [
     "https://www.handelsbanken.co.uk/en/about-us/important-information/international-payments-restricted-countries",
+    "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-270372",
     "https://www.handelsbanken.co.uk/en/"
   ],
   "quotes": [],
-  "attempts": [
-    {
-      "url": "https://www.handelsbanken.co.uk/tron/gbpu/info/contents/v1/document/52-270372",
-      "status": "error",
-      "reason": "Not an HTML page"
-    }
-  ],
-  "error": "Not an HTML page"
+  "attempts": []
 }

@@ -1,6 +1,6 @@
 {
   "slug": "global-reach",
-  "fetchedAt": "2026-10-08T02:25:47.071Z",
+  "fetchedAt": "2026-10-08T08:18:54.429Z",
   "status": "error",
   "pages": [],
   "quotes": [],
@@ -8,8 +8,8 @@
     {
       "url": "https://www.globalreachpartners.com/",
       "status": "error",
-      "reason": "fetch failed"
+      "reason": "robots.txt HTTP 502"
     }
   ],
-  "error": "fetch failed"
+  "error": "robots.txt HTTP 502"
 }

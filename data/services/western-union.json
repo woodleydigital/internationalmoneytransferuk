@@ -1,6 +1,6 @@
 {
   "slug": "western-union",
-  "fetchedAt": "2026-10-08T02:23:21.882Z",
+  "fetchedAt": "2026-10-08T08:04:10.836Z",
   "status": "found",
   "pages": [
     "https://www.westernunion.com/gb/en/kyc/faq.html",
@@ -18,34 +18,34 @@
   ],
   "quotes": [
     {
-      "topic": "identity",
-      "text": "Requirements are different for online and in-person transactions.",
-      "url": "https://www.westernunion.com/gb/en/kyc/faq.html",
-      "context": "If I provided identity documents for an online transfer, will I need to provide them again for an in-person transfer?"
-    },
-    {
-      "topic": "payout",
-      "text": "Bank Account or IBAN (International Bank Account Number)",
-      "url": "https://www.westernunion.com/gb/en/bank-transfer.html",
-      "context": "What do you need to transfer money to a bank account?"
-    },
-    {
       "topic": "payout",
       "text": "Your loved ones can send money directly to your bank account in the UK.",
       "url": "https://www.westernunion.com/gb/en/receive-money.html",
-      "context": "Receive money from overseas to your bank account"
-    },
-    {
-      "topic": "speed",
-      "text": "Pick up your money in minutes 1 at any of thousands of agent locations around the UK.",
-      "url": "https://www.westernunion.com/gb/en/receive-money.html",
-      "context": "Receive money from abroad in cash at an agent location"
+      "context": "Receive money from abroad or from the UK — How do I receive money from abroad? — Receive money from overseas to your bank account"
     },
     {
       "topic": "payout",
       "text": "In many countries, you can receive money from abroad directly to your mobile wallet 2 .",
       "url": "https://www.westernunion.com/gb/en/receive-money.html",
-      "context": "Receive money transfers directly to your mobile wallet 2 "
+      "context": "Receive money from abroad or from the UK — How do I receive money from abroad? — Receive money transfers directly to your mobile wallet 2"
+    },
+    {
+      "topic": "payout",
+      "text": "UK senders should tell their loved ones to ensure their mobile wallet is activated and to provide their phone number for any delivery updates.",
+      "url": "https://www.westernunion.com/gb/en/receive-money.html",
+      "context": "Receive money from abroad or from the UK — How do I receive money from abroad? — Receive money transfers directly to your mobile wallet 2"
+    },
+    {
+      "topic": "speed",
+      "text": "In many cases, money can be sent for cash pickup in minutes 1 , while if the money is sent directly to your bank account, it could take several business days 1 .",
+      "url": "https://www.westernunion.com/gb/en/receive-money.html",
+      "context": "Receive money from abroad or from the UK — How long does it take to receive a money transfer from abroad?"
+    },
+    {
+      "topic": "speed",
+      "text": "It may seem easier to select a method where the money will arrive within minutes 1 , but if it is difficult for you to get to an agent location in the subsequent days for cash pickup, then it may be easier to receive the money directly to your bank account even if that method takes several business days 1 .",
+      "url": "https://www.westernunion.com/gb/en/receive-money.html",
+      "context": "Receive money from abroad or from the UK — What is the easiest way to receive money from abroad?"
     },
     {
       "topic": "countries",
@@ -54,30 +54,16 @@
       "context": "Relied on for money transfers around the world"
     },
     {
-      "topic": "speed",
-      "text": "Funds will arrive within minutes for transfers under 500,000 INR to banks with IMPS services, including State Bank of India, ICICI Bank Limited, HDFC Bank, Axis Bank, Punjab National Bank, and Bank of Baroda.",
-      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
-    },
-    {
-      "topic": "speed",
-      "text": "UPI money transfers up to 200,000 INR will also arrive within minutes.",
-      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
-    },
-    {
-      "topic": "fees",
-      "text": "Fees, foreign exchange rates and taxes may vary by brand, channel, and location based on a number of factors.",
-      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
-    },
-    {
-      "topic": "fees",
-      "text": "0.00 GBP on transfer fees",
-      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
-    },
-    {
       "topic": "fees",
       "text": "Check transfer fees 1 and exchange rates on the go, before you send money with the app.",
       "url": "https://www.westernunion.com/gb/en/money-transfer-app.html",
-      "context": "Easily view transfer fees 1 and exchange rates"
+      "context": "Money transfer app — Money transfers at your fingertips — Easily view transfer fees 1 and exchange rates"
+    },
+    {
+      "topic": "speed",
+      "text": "Find a convenient agent location today so your receiver can collect their cash in minutes 3 .",
+      "url": "https://www.westernunion.com/gb/en/money-transfer-app.html",
+      "context": "Money transfer app — Easy to send, simple to receive"
     },
     {
       "topic": "countries",
@@ -89,18 +75,49 @@
       "topic": "countries",
       "text": "Send money abroad quickly and reliably 24/7 to more than 200 countries and territories with the support of our app.",
       "url": "https://www.westernunion.com/gb/en/send-money-abroad.html",
-      "context": "Use our app to send money overseas on the go"
+      "context": "Send money abroad from the UK — More ways to send money abroad with Western Union — Use our app to send money overseas on the go"
+    },
+    {
+      "topic": "fees",
+      "text": "Transfer fees for sending money in person depend on the country, the amount, and how your receiver wants their money.",
+      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html",
+      "context": "Frequently asked questions about how to send money in person — How much does it cost to send money abroad with Western Union?"
     },
     {
       "topic": "identity",
       "text": "Certain money transfers may require you to provide proof of source of funds.",
-      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html"
+      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html",
+      "context": "Frequently asked questions about how to send money in person"
+    },
+    {
+      "topic": "identity",
+      "text": "Any other document proving source of funds",
+      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html",
+      "context": "Frequently asked questions about how to send money in person"
+    },
+    {
+      "topic": "availability",
+      "text": "To send money to India, you’ll need your receiver’s account number, or Unified Payments Interface ID (UPI ID) and details of the purpose of the transaction.",
+      "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
+      "context": "Send money to India — What information do I need from my receiver to send money online to India from the UK?"
     },
     {
       "topic": "identity",
       "text": "Before transferring money to India, you may need to provide proof regarding your source of funds.",
       "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
-      "context": "How do I send money to India from a Western Union location?"
+      "context": "Send money to India — How do I send money to India from a Western Union location?"
+    },
+    {
+      "topic": "fees",
+      "text": "The amount you pay in fees 3 to send money to India can depend on the exchange rate between the pound and rupee, your method of payment and how you want your receiver to collect the funds.",
+      "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
+      "context": "Send money to India — How much is the rate to transfer money to India?"
+    },
+    {
+      "topic": "availability",
+      "text": "To send money to a bank account, you’ll need to have the recipient’s name and bank account details ready.",
+      "url": "https://www.westernunion.com/gb/en/send-money-to-philippines.html",
+      "context": "Send money to the Philippines — Prepare the details of the recipient in advance"
     }
   ],
   "attempts": []

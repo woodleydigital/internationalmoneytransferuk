@@ -1,6 +1,6 @@
 {
   "slug": "starling-bank",
-  "fetchedAt": "2026-10-08T02:26:20.028Z",
+  "fetchedAt": "2026-10-08T08:10:44.514Z",
   "status": "found",
   "pages": [
     "https://www.starlingbank.com/send-money-abroad/",
@@ -21,36 +21,31 @@
       "topic": "countries",
       "text": "Fast and secure money transfers to bank accounts in 34 countries worldwide, with no hidden fees.",
       "url": "https://www.starlingbank.com/send-money-abroad/",
-      "context": " Send money abroad "
+      "context": "Send money abroad"
     },
     {
       "topic": "fees",
       "text": "0.4% conversion fee £4.00",
       "url": "https://www.starlingbank.com/send-money-abroad/",
-      "context": " Send money abroad "
+      "context": "Send money abroad"
     },
     {
       "topic": "countries",
       "text": "Plus, you can send money to 34 countries , in 17 currencies worldwide, including euro , US dollar , rand and zloty .",
       "url": "https://www.starlingbank.com/send-money-abroad/",
-      "context": " Why should I send money abroad with Starling? "
+      "context": "Send money abroad — How to send money abroad, the easy way — Why should I send money abroad with Starling?"
     },
     {
       "topic": "fees",
       "text": "You can hold, send and receive euros, all completely free of charge.",
-      "url": "https://www.starlingbank.com/send-money-abroad/"
+      "url": "https://www.starlingbank.com/send-money-abroad/",
+      "context": "Send money abroad — How to send money abroad, the easy way"
     },
     {
       "topic": "fees",
       "text": "We apply a 0.4% fee to the currency conversion and a small delivery fee to cover our costs.",
       "url": "https://www.starlingbank.com/send-money-abroad/",
-      "context": " About our fees "
-    },
-    {
-      "topic": "speed",
-      "text": "These payments can take anywhere up to three working days, depending on the country you're sending to and the currency you're sending.",
-      "url": "https://help.starlingbank.com/personal/topics/international-payments/when-will-my-international-transfer-arrive/",
-      "context": "When will my international transfer arrive?"
+      "context": "Send money abroad — How to send money abroad, the easy way — About our fees"
     }
   ],
   "attempts": []

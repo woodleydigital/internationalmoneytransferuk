@@ -1,7 +1,7 @@
 {
   "slug": "co-op-bank",
   "url": "https://www.co-operativebank.co.uk/",
-  "fetchedAt": "2026-10-08T02:23:23.958Z",
+  "fetchedAt": "2026-10-08T08:04:18.131Z",
   "status": "found",
   "statements": [
     {
@@ -11,7 +11,8 @@
       ],
       "companyNumbers": [
         "00990937"
-      ]
+      ],
+      "url": "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/"
     }
   ]
 }

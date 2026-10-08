@@ -1,6 +1,6 @@
 {
   "slug": "taptap-send",
-  "fetchedAt": "2026-10-08T02:26:05.283Z",
+  "fetchedAt": "2026-10-08T08:10:30.456Z",
   "status": "found",
   "pages": [
     "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
@@ -60,14 +60,14 @@
       "context": "Your money is protected"
     },
     {
-      "topic": "safeguarding",
-      "text": "You can read more about safeguarding on the FCA website .",
-      "url": "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
-      "context": "Your money is protected"
-    },
-    {
       "topic": "identity",
       "text": "3.3.1. to provide us with accurate and truthful information about your and the designated recipient’s identity and any identity documents we ask for;",
+      "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk",
+      "context": "[New] Taptap Send User Agreement"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We safeguard any money we hold for you until you pay it out to a recipient or we refund it to you.",
       "url": "https://www.taptapsend.com/en/legal/uk/user-agreement-uk",
       "context": "[New] Taptap Send User Agreement"
     },
@@ -81,7 +81,7 @@
       "topic": "identity",
       "text": "We'll ask you to upload a source of funds document before the transfer can go through.",
       "url": "https://help.taptapsend.com/en/fees-and-pricing/what-are-my-sending-limits-at-taptap-send",
-      "context": "How do the fixed limits work?"
+      "context": "What are my sending limits at Taptap Send? — How do the fixed limits work?"
     },
     {
       "topic": "payout",
@@ -92,7 +92,8 @@
     {
       "topic": "speed",
       "text": "95% of our transfers are received in under 5 minutes!*",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh"
+      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh",
+      "context": "Your fast, secure and low-cost way to send money to Bangladesh"
     },
     {
       "topic": "speed",
@@ -126,12 +127,6 @@
     {
       "topic": "limits",
       "text": "Transaction limit: up to $2,500 USD",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
-      "context": "How much money can I send to Guatemala?"
-    },
-    {
-      "topic": "limits",
-      "text": "Monthly limit: up to $10,000 USD",
       "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
       "context": "How much money can I send to Guatemala?"
     }

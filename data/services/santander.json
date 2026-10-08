@@ -1,6 +1,6 @@
 {
   "slug": "santander",
-  "fetchedAt": "2026-10-08T02:23:40.888Z",
+  "fetchedAt": "2026-10-08T08:05:03.454Z",
   "status": "found",
   "pages": [
     "https://www.santander.co.uk/personal/support/ways-to-bank/payments-and-transfers",
@@ -21,37 +21,34 @@
       "topic": "speed",
       "text": "For payments in EUR and USD, funds can arrive on the same day if sent before our cut-off time.",
       "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": " Santander customers can make 3 types of international payments: "
+      "context": "International payment types and charges — Santander customers can make 3 types of international payments: — Payment Description Fee[/IMT-T] Electronic transfer (standard)*",
+      "table": true
     },
     {
       "topic": "fees",
-      "text": "You can send money to friends and family abroad from your Santander Edge® current account, Santander Edge® Up current account or Santander Edge® Explorer current account with no extra fees from us for the international payment.",
+      "text": "You can send money to friends and family abroad from your Santander Edge® current account, Santander Edge® Up current account or Santander Edge® Explorer current account with no extra fees from us for the international payment. The bank receiving the payment may still apply charges. £25",
       "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": " Santander customers can make 3 types of international payments: "
+      "context": "International payment types and charges — Santander customers can make 3 types of international payments: — Payment Description Fee[/IMT-T] Electronic transfer (standard)*",
+      "table": true
     },
     {
       "topic": "speed",
-      "text": "Money arrives next working day subject to cut-off times.",
+      "text": "Electronic euro transfer (non-urgent: SEPA)* This method of transferring euros takes a little longer and can only be used if the bank you’re sending the money to takes SEPA transfers. Money arrives next working day subject to cut-off times. For more information on cut-off times see the Electronic transfers and electronic European transfers section No fee charged",
       "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": " Santander customers can make 3 types of international payments: "
-    },
-    {
-      "topic": "fees",
-      "text": "For more information on cut-off times see the Electronic transfers and electronic European transfers section No fee charged",
-      "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": " Santander customers can make 3 types of international payments: "
+      "context": "International payment types and charges — Santander customers can make 3 types of international payments: — Payment Description Fee",
+      "table": true
     },
     {
       "topic": "speed",
       "text": "For payments in EUR and USD, funds can arrive on the same day if sent before our cut-off time.",
       "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": "Electronic transfers and electronic euro transfers"
+      "context": "International payments — Electronic transfers and electronic euro transfers"
     },
     {
       "topic": "fees",
-      "text": "When you ask for a foreign-currency draft we charge you £10.",
+      "text": "If we do this, we'll charge you £25.",
       "url": "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
-      "context": "How do I ask for a foreign-currency cheque or draft?"
+      "context": "International payments — How do I ask for a foreign-currency cheque or draft?"
     }
   ],
   "attempts": []

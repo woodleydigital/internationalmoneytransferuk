@@ -1,11 +1,10 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-10-08T02:23:40.975Z",
+  "fetchedAt": "2026-10-08T08:05:22.186Z",
   "status": "found",
   "pages": [
     "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
     "https://wise.com/gb/",
-    "https://wise.com/us/pricing/",
     "https://wise.com/help/",
     "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
     "https://wise.com/help/articles/2524078/how-long-will-my-transfer-take",
@@ -14,7 +13,8 @@
     "https://wise.com/help/articles/2932154/guide-to-aud-transfers",
     "https://wise.com/help/articles/2932342/guide-to-sek-transfers",
     "https://wise.com/help/articles/2932343/guide-to-pln-transfers",
-    "https://wise.com/gb/account/"
+    "https://wise.com/gb/account/",
+    "https://wise.com/gb/send-money/"
   ],
   "quotes": [
     {
@@ -24,24 +24,21 @@
     },
     {
       "topic": "speed",
-      "text": "It usually takes seconds, but rarely it can take up to 1 working day, for your money to get to Wise, depending on how you pay for your transfer.",
-      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers"
+      "text": "It usually takes seconds, but rarely it can take up to 1 working day, for your money to get to Wise, depending on how you pay for your transfer. Then, we convert it and send it out. Conversion can take up to 2 working days.",
+      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
+      "context": "Sending from GBP"
     },
     {
       "topic": "speed",
       "text": "Bank transfers take up to 1 working day",
-      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers"
-    },
-    {
-      "topic": "countries",
-      "text": "Get everything you need to pay, get paid, and manage your money in 40+ currencies — all in one place.",
-      "url": "https://wise.com/gb/"
+      "url": "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
+      "context": "Sending from GBP — I’ve cancelled my payment, how long will my refund take?"
     },
     {
       "topic": "safeguarding",
       "text": "Your money is held in a safeguarded, separate account.",
       "url": "https://wise.com/gb/",
-      "context": "Safeguarded funds"
+      "context": "The current account for home and abroad — Safeguarded funds"
     },
     {
       "topic": "payout",
@@ -58,8 +55,39 @@
     {
       "topic": "payout",
       "text": "We send GBP to bank accounts outside of the UK using the Swift payment network .",
-      "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk"
+      "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
+      "context": "Sending GBP to countries outside of the UK"
+    },
+    {
+      "topic": "fees",
+      "text": "Join over 18.9 million people sending money abroad — with fees as low as 0.1% .",
+      "url": "https://wise.com/gb/send-money/",
+      "context": "International money transfers"
+    },
+    {
+      "topic": "fees",
+      "text": "Pay less when you send over 20,000 GBP or equivalent — fees from 0.1% .",
+      "url": "https://wise.com/gb/send-money/",
+      "context": "International money transfers — Larger transfers. Lower fees. Premium support."
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
+      "url": "https://wise.com/gb/send-money/",
+      "context": "International money transfers"
+    },
+    {
+      "topic": "countries",
+      "text": "231 countries and territories",
+      "url": "https://wise.com/gb/send-money/",
+      "context": "International money transfers — Save on spending abroad"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.wise.com/pricing",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
+    }
+  ]
 }

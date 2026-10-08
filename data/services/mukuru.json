@@ -1,30 +1,111 @@
 {
   "slug": "mukuru",
-  "fetchedAt": "2026-10-08T02:24:18.614Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
-  "attempts": [
+  "fetchedAt": "2026-10-08T08:06:47.525Z",
+  "status": "found",
+  "pages": [
+    "https://www.mukuru.com/en-uk/services/send-money/",
+    "https://www.mukuru.com/en-uk/help-support/faqs/",
+    "https://www.mukuru.com/en-uk/legal/mukuru-money-transfer-service/",
+    "https://www.mukuru.com/en-uk/",
+    "https://www.mukuru.com/en-uk/send-money/",
+    "https://www.mukuru.com/en-uk/send-money/angola/",
+    "https://www.mukuru.com/en-uk/send-money/botswana/",
+    "https://www.mukuru.com/en-uk/send-money/cameroon/",
+    "https://www.mukuru.com/en-uk/send-money/china/",
+    "https://www.mukuru.com/en-uk/send-money/european-union/",
+    "https://www.mukuru.com/en-uk/send-money/cote-divoire/",
+    "https://www.mukuru.com/en-uk/send-money/drc/"
+  ],
+  "quotes": [
     {
+      "topic": "payout",
+      "text": "Whether you are sending cash for instant collection or topping up a bank account or mobile wallet, it has never been easier.",
       "url": "https://www.mukuru.com/en-uk/services/send-money/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "Send Money"
     },
     {
+      "topic": "limits",
+      "text": "LITE users can send up to £600 per month.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "identity",
+      "text": "If your identity verification is unsuccessful, submit an identity document and selfie to be verified as a CORE user.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "limits",
+      "text": "To increase your limits to £4,000 per month on CORE level, select Upload Documents on your dashboard.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "identity",
+      "text": "Upload one of the following forms of identity documents: International Passport or UK Driving Licence",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "limits",
+      "text": "Send up to £120,000 per calendar year on a MAX level by uploading your proof of income and proof of address documents.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "payout",
+      "text": "The sender can select Bank or Wallet Top-up, or Cash collection (where available) when they create the order.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — How our Remittance Process Works"
+    },
+    {
+      "topic": "identity",
+      "text": "If we are unable to validate your address you will also be required to upload a proof of address.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — Choose Your Send Limit"
+    },
+    {
+      "topic": "speed",
+      "text": "It can take up to 24 hours .",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — Choose Your Send Limit"
+    },
+    {
+      "topic": "payout",
+      "text": "Instant cash collection at our Mukuru Orange Booths, Branches , trusted Payout Partners or Mobile Wallets.",
+      "url": "https://www.mukuru.com/en-uk/services/send-money/",
+      "context": "Send Money — Ways to Send Money — Choose Your Send Limit"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Safeguarding means that we have to keep all of your money in accounts that are completely separate from the ones we use to run our business.",
       "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "What does Safeguarding mean?"
     },
     {
+      "topic": "safeguarding",
+      "text": "Not only are your funds held in dedicated safeguarding accounts which Remitix Limited holds with banks in the UK, but we also use rigorous internal safeguarding measures and procedures designed to ensure that our customers, other counterparties, and the wider market are protected in the event of financial stress.",
+      "url": "https://www.mukuru.com/en-uk/help-support/faqs/",
+      "context": "What does Safeguarding mean?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Remitix must safeguard relevant customer funds relating to remittance services by holding them separately from its own money in designated safeguarding accounts with authorised and reputable credit institutions or approved banks.",
       "url": "https://www.mukuru.com/en-uk/legal/mukuru-money-transfer-service/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "Terms of Use of Mukuru Money Transfer Service — 10. Safeguarding your funds"
     },
     {
+      "topic": "countries",
+      "text": "Send money to over 30 countries across Africa, Asia and Europe.",
       "url": "https://www.mukuru.com/en-uk/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "Send Money Instantly with Mukuru — Sending Money Home Has Never Been Easier — Multiple Currencies"
+    },
+    {
+      "topic": "countries",
+      "text": "Send to over 60+ countries with the Mukuru App",
+      "url": "https://www.mukuru.com/en-uk/"
     }
   ],
-  "error": "HTTP 403"
+  "attempts": []
 }

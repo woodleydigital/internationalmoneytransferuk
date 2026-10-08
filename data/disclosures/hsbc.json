@@ -1,18 +1,7 @@
 {
   "slug": "hsbc",
   "url": "https://www.hsbc.co.uk/",
-  "fetchedAt": "2026-10-08T02:23:07.172Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "HSBC UK Bank plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Financial Services Register number: 765112). HSBC UK Bank plc is a company incorporated under the laws of England and Wales with company registration number 9928412 and its registered office at 1 Centenary Square, Birmingham, B1 1HQ. HSBC UK Bank plc's registered VAT Number is GB 365684514.",
-      "frns": [
-        "765112"
-      ],
-      "companyNumbers": [
-        "09928412"
-      ],
-      "url": "https://www.hsbc.co.uk/legal/"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:03:32.824Z",
+  "status": "none",
+  "statements": []
 }

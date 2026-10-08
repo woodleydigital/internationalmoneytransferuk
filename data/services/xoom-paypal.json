@@ -1,31 +1,20 @@
 {
   "slug": "xoom-paypal",
-  "fetchedAt": "2026-10-08T02:24:31.069Z",
+  "fetchedAt": "2026-10-08T08:07:28.490Z",
   "status": "found",
   "pages": [
     "https://www.xoom.com/",
     "https://www.xoom.com/money-transfer",
     "https://www.xoom.com/protect-your-money",
     "https://help.xoom.com/s/contactsupport?language=en_US",
-    "https://help.xoom.com/s/?language=en_US",
-    "https://help.xoom.com/s/article/how-much-money-can-i-send?language=en_US",
-    "https://help.xoom.com/s/article/how-much-does-it-cost-to-send-with-xoom?language=en_US",
-    "https://help.xoom.com/s/article/tips-to-safeguard-your-xoom-password?language=en_US",
-    "https://help.xoom.com/s/article/from-which-countries-can-i-send-with-xoom?language=en_US",
-    "https://help.xoom.com/s/article/how-to-pay-bills?language=en_US"
+    "https://help.xoom.com/s/?language=en_US"
   ],
   "quotes": [
     {
       "topic": "fees",
       "text": "We’ll show you the exact fee and the amount they'll receive before you hit send.",
       "url": "https://www.xoom.com/money-transfer",
-      "context": "Up front fees and rates"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Tips to safeguard your Xoom password",
-      "url": "https://help.xoom.com/s/?language=en_US",
-      "context": " Sending money securely "
+      "context": "Fast, secure money transfers — Up front fees and rates"
     }
   ],
   "attempts": []

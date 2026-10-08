@@ -1,64 +1,69 @@
 {
   "slug": "co-op-bank",
-  "fetchedAt": "2026-10-08T02:23:21.819Z",
+  "fetchedAt": "2026-10-08T08:04:10.292Z",
   "status": "found",
   "pages": [
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
     "https://www.co-operativebank.co.uk/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/money-transfer/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/",
-    "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/iban-swift-bic-codes/",
+    "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/",
     "https://www.co-operativebank.co.uk/products/savings/limited-access/",
     "https://www.co-operativebank.co.uk/help-and-support/your-details/privacy-cookie-policies/cookie-policy/",
-    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/register/"
+    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/register/",
+    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/"
   ],
   "quotes": [
     {
       "topic": "fees",
-      "text": "Depending on the transaction type we’ll also charge a fixed or variable processing fee.",
+      "text": "Payments sent outside of the EEA and USA require the use of an agent or correspondent bank to forward money to the recipient's bank. The charge for this can vary depending on the destination, currency and complexity of the transfer.",
       "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
-      "context": "Example transfer costs"
-    },
-    {
-      "topic": "fees",
-      "text": "Our fee for this is 0.25% of the value of the transaction – with a minimum of £13 or maximum of £35.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
-      "context": "SWIFT payment in another currency"
-    },
-    {
-      "topic": "fees",
-      "text": "The charge for this can vary depending on the destination, currency and complexity of the transfer.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/"
+      "context": "International payments — Methods of payment"
     },
     {
       "topic": "speed",
       "text": "Euro payment to a recipient within the EU/EEA will reach the recipient by the end of the next working day",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/"
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
+      "context": "International payments"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments to non-EU/EEA countries may take up to 4 business days",
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
+      "context": "International payments"
     },
     {
       "topic": "speed",
       "text": "If the date you chose is a weekend or a bank holiday, the payment will not be processed until the next business day.",
       "url": "https://www.co-operativebank.co.uk/help-and-support/payments/money-transfer/",
-      "context": " If your transfer is unsuccessful"
-    },
-    {
-      "topic": "payout",
-      "text": "You can use the Faster Payment Service (FPS) to send money quickly from your Co-operative Bank account to other UK bank accounts.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/money-transfer/"
+      "context": "Money transfers — How to check if your transfer has been successful — If your transfer is unsuccessful"
     },
     {
       "topic": "limits",
       "text": "There is no limit on the amount you can send, subject to the funds being available in your account.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/"
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/",
+      "context": "US structured payment"
     },
     {
-      "topic": "speed",
-      "text": "For urgent payments please request a Real Time Euro Payment as these will be completed on the same day, but for a higher tariff.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/",
-      "context": "Sending euros outside the UK"
+      "topic": "fees",
+      "text": "Charges for sending money outside the UK depend on the different payment methods and agent charges where applicable.",
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
+      "context": "Exchange rates — Charges for sending money outside the UK"
+    },
+    {
+      "topic": "fees",
+      "text": "Charge is 0.25% - with a minimum charge of £13 and a maximum charge of £35 plus postage, transmission and agent's charges where applicable.",
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
+      "context": "Exchange rates — Charges for sending money outside the UK — SWIFT payment"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
+    }
+  ]
 }

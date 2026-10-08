@@ -1,6 +1,6 @@
 {
   "slug": "caxton",
-  "fetchedAt": "2026-10-08T02:26:41.201Z",
+  "fetchedAt": "2026-10-08T08:11:49.434Z",
   "status": "found",
   "pages": [
     "https://resources.caxton.io/help/personal-international-payments",
@@ -20,24 +20,50 @@
     {
       "topic": "safeguarding",
       "text": "4.2 Caxton holds all client money in accordance with the Financial Conduct Authority's (FCA) Client Money rules and the Payment Services rules for safeguarding.",
-      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "Caxton International Payments"
     },
     {
       "topic": "fees",
       "text": "9.2 In the event that We make any charges, You authorise Us to deduct those charges from the Payment Transaction before sending it.",
       "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
-      "context": "9. Fees and Charges"
+      "context": "Caxton International Payments — 9. Fees and Charges"
     },
     {
       "topic": "fees",
-      "text": "£25 – SWIFT payment detail amendment £25 – To trace a payment sent £25 – To attempt to recall a payment already sent £50 – Administration fee for late settlement of a payment instruction, plus £20 per day.",
+      "text": "If We deduct any charges, We will notify You before We accept a Payment Order from You and additionally give You details in the contract note We issue after a Payment Order is accepted.",
       "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
-      "context": "9. Fees and Charges"
+      "context": "Caxton International Payments — 9. Fees and Charges"
+    },
+    {
+      "topic": "fees",
+      "text": "9.4 We do not apply charges of Our own, however charges may occasionally be applied by third party banks before We receive Your funds.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "Caxton International Payments — 9. Fees and Charges"
     },
     {
       "topic": "speed",
       "text": "10.3 We will execute Payment Transactions so that the amount to be transferred reaches the Recipient's payment service provider no later than the end of the next business day if the payment is within the EEA or by the third business day for payments outside of the EEA after settlement date of the Order.",
-      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments"
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "Caxton International Payments — 10. Payment transactions"
+    },
+    {
+      "topic": "speed",
+      "text": "Payment Orders received on days which are not business days for Us will also be deemed to have been received on the next business day.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "Caxton International Payments — 10. Payment transactions"
+    },
+    {
+      "topic": "speed",
+      "text": "Occasionally, for reasons beyond Our control, We may take 35 working days to issue a final response.",
+      "url": "https://caxton.io/legal-hub/terms-and-conditions/caxton-international-payments",
+      "context": "Caxton International Payments"
+    },
+    {
+      "topic": "countries",
+      "text": "Move money to 196 countries with our fully managed service",
+      "url": "https://caxton.io/",
+      "context": "For all your business payment needs"
     },
     {
       "topic": "safeguarding",

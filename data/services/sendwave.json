@@ -1,6 +1,6 @@
 {
   "slug": "sendwave",
-  "fetchedAt": "2026-10-08T02:25:08.810Z",
+  "fetchedAt": "2026-10-08T08:08:33.105Z",
   "status": "found",
   "pages": [
     "https://www.sendwave.com/en/support",
@@ -21,6 +21,18 @@
       "topic": "safeguarding",
       "text": "We always safeguard your funds while they're in transit to your recipients.",
       "url": "https://www.sendwave.com/en/support"
+    },
+    {
+      "topic": "identity",
+      "text": "Your recipients need proof of ID and their transaction reference number Proof of ID can be one of the following: Passport, Driver's license, professional regulatory certificate license Or two of the following: NBI Clearance, Barangay Clearance, Police Clearance",
+      "url": "https://www.sendwave.com/en/support",
+      "context": "What does my recipient need to collect a cash pickup transaction?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We always safeguard your funds while they're in transit to your recipients.",
+      "url": "https://www.sendwave.com/en/countries/bangladesh",
+      "context": "Send money to Bangladesh from the United States"
     }
   ],
   "attempts": []

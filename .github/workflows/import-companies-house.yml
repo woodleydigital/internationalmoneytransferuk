@@ -35,6 +35,8 @@ jobs:
       - run: npm test
       - name: Install Chromium for JavaScript-rendered provider pages
         run: npx playwright install --with-deps chromium
+      - name: Install selectable PDF text reader
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Read provider service details
         env:
           IMT_SOURCE_CACHE_DIR: ${{ runner.temp }}/imt-provider-sources

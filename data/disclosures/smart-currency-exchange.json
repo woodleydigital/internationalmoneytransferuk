@@ -1,7 +1,7 @@
 {
   "slug": "smart-currency-exchange",
   "url": "https://www.smartcurrencyexchange.com/",
-  "fetchedAt": "2026-10-08T02:25:51.756Z",
+  "fetchedAt": "2026-10-08T08:19:08.808Z",
   "status": "found",
   "statements": [
     {
@@ -9,14 +9,16 @@
       "frns": [
         "504509"
       ],
-      "companyNumbers": []
+      "companyNumbers": [],
+      "url": "https://www.smartcurrencyexchange.com/reasons-for-transfer/overseas-weddings/"
     },
     {
       "text": "Registered in England No. 5282305. Smart® is a registered trademark of Smart Currency Exchange Limited.",
       "frns": [],
       "companyNumbers": [
         "05282305"
-      ]
+      ],
+      "url": "https://www.smartcurrencyexchange.com/reasons-for-transfer/overseas-weddings/"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "transfergo",
   "url": "https://www.transfergo.com/",
-  "fetchedAt": "2026-10-08T02:26:01.289Z",
+  "fetchedAt": "2026-10-08T08:10:21.214Z",
   "status": "found",
   "statements": [
     {
@@ -11,7 +11,8 @@
       ],
       "companyNumbers": [
         "07914165"
-      ]
+      ],
+      "url": "https://www.transfergo.com/send-money-to-albania"
     }
   ]
 }

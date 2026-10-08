@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
-import { isIndexable, providerUrl } from "@/lib/providers";
+import { providerUrl } from "@/lib/providers";
 import { loadEntries } from "@/lib/directory-data";
 import { isIndexableEntry } from "@/lib/directory";
 
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/status/",
   ];
   const profiles = loadEntries()
-    .filter((e) => isIndexable(e.provider) || isIndexableEntry(e))
+    .filter(isIndexableEntry)
     // A fetch time does not establish a substantive page modification.
     .map((e) => ({ url: `${SITE.url}${providerUrl(e.provider)}` }));
   return [...pages.map((path) => ({ url: `${SITE.url}${path}` })), ...profiles];

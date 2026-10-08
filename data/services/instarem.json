@@ -1,6 +1,6 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-10-08T02:24:48.014Z",
+  "fetchedAt": "2026-10-08T08:07:52.956Z",
   "status": "found",
   "pages": [
     "https://www.instarem.com/en-gb/",
@@ -44,43 +44,49 @@
       "topic": "fees",
       "text": "Sending money abroad with Instarem is simple and affordable, with no hidden fees or unfair FX margins.",
       "url": "https://www.instarem.com/en-gb/",
-      "context": "What are the benefits of sending money online with Instarem? "
+      "context": "What are the benefits of sending money online with Instarem?"
     },
     {
       "topic": "fees",
       "text": "You’ll see exchange rates and fees upfront , with no hidden charges .",
       "url": "https://www.instarem.com/en-gb/",
-      "context": "How can I send money abroad using Instarem? "
-    },
-    {
-      "topic": "safeguarding",
-      "text": "As a licensed and regulated service, Instarem requires certain details to verify your identity and safeguard your transactions.",
-      "url": "https://www.instarem.com/en-gb/",
-      "context": "What information do I need to provide to make an international money transfer with Instarem? "
+      "context": "How can I send money abroad using Instarem?"
     },
     {
       "topic": "identity",
       "text": "Your personal details: Name, email, phone number, identity proof (like a National ID or passport), and address documents.",
       "url": "https://www.instarem.com/en-gb/",
-      "context": "What information do I need to provide to make an international money transfer with Instarem? "
+      "context": "What information do I need to provide to make an international money transfer with Instarem?"
     },
     {
-      "topic": "speed",
-      "text": "In general, transferring money to Ghana from UK is usually instant but can also take one to two business days.",
+      "topic": "identity",
+      "text": "Upload proof of address in UK and your identification documents.",
       "url": "https://www.instarem.com/en-gb/send-money-to-ghana/",
-      "context": "How long does it take to transfer money to Ghana from UK?"
+      "context": "How to send money to Ghana from UK: 4 easy steps"
     },
     {
       "topic": "speed",
-      "text": "In general, transferring money to Kenya from UK is usually instant but can also take one to two business days.",
+      "text": "Most transfers are instant or same day​",
+      "url": "https://www.instarem.com/en-gb/send-money-to-ghana/",
+      "context": "Send money to Ghana with our international money transfer app"
+    },
+    {
+      "topic": "identity",
+      "text": "Upload proof of address in UK and your identification documents.",
       "url": "https://www.instarem.com/en-gb/send-money-to-kenya/",
-      "context": "How long does it take to transfer money to Kenya from UK?"
+      "context": "How to send money to Kenya from UK: 4 easy steps"
     },
     {
       "topic": "speed",
-      "text": "In general, transferring money to Nigeria from UK is usually instant but can also take one to two business days.",
+      "text": "Most transfers are instant or same day​",
+      "url": "https://www.instarem.com/en-gb/send-money-to-kenya/",
+      "context": "Send money to Kenya with our international money transfer app"
+    },
+    {
+      "topic": "speed",
+      "text": "Most transfers are instant or same day​",
       "url": "https://www.instarem.com/en-gb/send-money-to-nigeria/",
-      "context": "How long does it take to transfer money to Nigeria from UK?"
+      "context": "Send money to Nigeria with our international money transfer app"
     }
   ],
   "attempts": []

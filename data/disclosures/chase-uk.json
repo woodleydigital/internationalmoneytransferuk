@@ -1,7 +1,7 @@
 {
   "slug": "chase-uk",
-  "url": "https://www.chase.co.uk/gb/en/",
-  "fetchedAt": "2026-10-08T02:26:23.200Z",
+  "url": "https://www.chase.co.uk/gb/en/support/moving-money/",
+  "fetchedAt": "2026-10-08T08:11:12.811Z",
   "status": "found",
   "statements": [
     {
@@ -11,7 +11,8 @@
       ],
       "companyNumbers": [
         "00938937"
-      ]
+      ],
+      "url": "https://www.chase.co.uk/gb/en/support/moving-money/"
     }
   ]
 }

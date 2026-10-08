@@ -193,11 +193,11 @@ const QUOTED = "Quoted word for word, with a link to the source";
 const EXTRACTED = "Extracted by software, shown with the exact wording it came from";
 
 export const PROFILE_SCHEMA: ProfileField[] = [
-  { block: "Identity", field: "Legal name, trading names", source: "FCA Register", method: COPIED },
-  { block: "Identity", field: "FCA firm reference number (FRN)", source: "FCA Register", method: COPIED },
+  { block: "Identity", field: "Registered company name", source: "Companies House", method: COPIED },
+  { block: "Identity", field: "FCA number, as stated by the provider", source: "Provider website", method: QUOTED },
   { block: "Identity", field: "Company number, incorporation date, registered office", source: "Companies House", method: COPIED },
   { block: "Identity", field: "Persons with significant control", source: "Companies House", method: COPIED },
-  { block: "Regulation", field: "Permission type (API / EMI / small PI / bank)", source: "FCA Register", method: COPIED },
+  { block: "Regulation", field: "Provider's regulatory statement", source: "Provider website", method: QUOTED },
   { block: "Regulation", field: "Status, restrictions and requirements", source: "FCA Register", method: QUOTED },
   { block: "Regulation", field: "Registered agents (count)", source: "FCA Register", method: COPIED },
   { block: "Regulation", field: "How customer money is safeguarded", source: "Provider terms and conditions", method: QUOTED },
@@ -205,6 +205,8 @@ export const PROFILE_SCHEMA: ProfileField[] = [
   { block: "Financial health", field: "Revenue and profit (where filed)", source: "Filed accounts at Companies House", method: COPIED },
   { block: "Complaints", field: "Complaint volumes and uphold rate (where published)", source: "Financial Ombudsman Service", method: COPIED },
   { block: "Product", field: "Countries and currencies served", source: "Provider website", method: EXTRACTED },
+  { block: "Product", field: "Service availability", source: "Provider website", method: EXTRACTED },
+  { block: "Product", field: "Delivery times and payment cut-offs", source: "Provider website", method: EXTRACTED },
   { block: "Product", field: "Payout methods (bank, cash pickup, mobile wallet)", source: "Provider website", method: EXTRACTED },
   { block: "Product", field: "Fees, limits, minimums", source: "Provider website", method: EXTRACTED },
   { block: "Product", field: "ID documents required", source: "Provider website", method: EXTRACTED },

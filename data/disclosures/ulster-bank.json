@@ -1,28 +1,7 @@
 {
   "slug": "ulster-bank",
   "url": "https://www.ulsterbank.co.uk/",
-  "fetchedAt": "2026-10-08T02:26:36.679Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "25. Ulster Bank, a business name of National Westminster Bank Plc. Registered in England and Wales (Registered Number 00929027). Registered Office: 250 Bishopsgate, London, EC2M 4AA. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority, and entered on the Financial Services Register (Registration Number 121878). The Financial Services Register can be accessed at www.fca.org.uk/register .",
-      "frns": [
-        "121878"
-      ],
-      "companyNumbers": [
-        "00929027"
-      ],
-      "url": "https://www.ulsterbank.co.uk/globals/website-terms-and-conditions.html"
-    },
-    {
-      "text": "© 2026. Ulster Bank, a business name of National Westminster Bank Plc (“NatWest”), registered in England and Wales (Registered Number 929027). Registered Office: 250 Bishopsgate, London, EC2M 4AA. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. NatWest is entered on the Financial Services Register (Registration number 121878).",
-      "frns": [
-        "121878"
-      ],
-      "companyNumbers": [
-        "00929027"
-      ],
-      "url": "https://www.ulsterbank.co.uk/globals/website-terms-and-conditions.html"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:11:53.739Z",
+  "status": "none",
+  "statements": []
 }

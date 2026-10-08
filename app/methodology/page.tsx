@@ -27,10 +27,12 @@ export default function Page() {
     >
             <P>
         Profiles do not include FCA Register data: the FCA’s terms do not allow its Register to
-        feed another website’s tables, so every profile says “register data pending” and links to
-        the Register instead. A profile is shown to search engines only once it holds at least
-        two of: a Companies House record, the provider’s own regulatory statement, and what it
-        says about its service, and is included in our current publishing plan. Other profiles
+        feed another website’s tables. Profiles link to the Register and our live lookup instead.
+        A profile is eligible for search indexing only when it is in our
+        publishing plan, has a Companies House identity or a provider regulatory statement,
+        and has sending-service quotations across at least three of countries, payout methods,
+        fees, limits and delivery times. This is our publishing safeguard, not a Google quality
+        score. Incoming-only terms and a single availability quotation do not meet it. Other profiles
         remain available in the directory but are not submitted for search indexing.
       </P>
 
@@ -89,15 +91,19 @@ export default function Page() {
         </li>
         <li>
           <strong className="text-ink">What providers say about their service.</strong> Software
-          reads up to twelve official product and help pages per provider, using configured
+          reads up to twelve official product and help sources per provider, including selectable
+          text in official PDF terms, using configured
           source links and links discovered on the provider’s own pages and help subdomains.
           It keeps sentences on eight topics (service availability, where it sends money,
           how recipients are paid, delivery times, fees, limits, customer-money protection,
           and identity documents), word for word, with the page each came from. It drops marketing
           superlatives, promotions, other products (cards, loans, savings) and claims about other
           firms. Stored quotations are filtered again when displayed, so improved extraction rules
-          also apply to earlier imports. Nearby headings and questions are retained when they
-          explain a quotation. Context notes identify business pages, receiving payments,
+          also apply to earlier imports, including corrected topic classifications. Nearby headings,
+          questions and table columns are retained when they explain a quotation. A table row keeps
+          its route beside its price or time; privacy safeguards, document-processing times,
+          domestic payments, first-transfer promotions and incomplete examples are excluded.
+          Context notes identify business pages, receiving payments,
           destination-specific pages and starting prices without rewriting the quotation. Nobody checks the sentences
           by hand, and they are always shown as the provider’s own words.
         </li>

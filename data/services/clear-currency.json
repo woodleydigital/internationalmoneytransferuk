@@ -1,6 +1,6 @@
 {
   "slug": "clear-currency",
-  "fetchedAt": "2026-10-08T02:25:35.540Z",
+  "fetchedAt": "2026-10-08T08:09:25.371Z",
   "status": "found",
   "pages": [
     "https://www.clearcurrency.co.uk/",
@@ -21,35 +21,49 @@
       "topic": "countries",
       "text": "Make quick and secure currency transfers in 35 currencies that can be sent to 130+ countries.",
       "url": "https://www.clearcurrency.co.uk/",
-      "context": "Send Money Abroad"
+      "context": "Hassle-Free International Money Transfer with Clear Currency — Send Money Abroad"
     },
     {
       "topic": "countries",
       "text": "If you’re looking for how to send money abroad, we support currency transfers in 35 currencies that can be sent to 130+ countries.",
       "url": "https://www.clearcurrency.co.uk/send-money-abroad",
-      "context": "Send money to countries all over the world"
+      "context": "Send Money Abroad in Minutes — Send money to countries all over the world"
     },
     {
       "topic": "payout",
       "text": "All the steps from getting the rate to committing the funds and transfer payment to get released into the UK bank account in a simple and hassle free manner. \"",
-      "url": "https://www.clearcurrency.co.uk/send-money-abroad"
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad",
+      "context": "Send Money Abroad in Minutes"
     },
     {
       "topic": "safeguarding",
       "text": "We safeguard your funds and update you every step of an international money transfer, so you can keep track of your currency.",
-      "url": "https://www.clearcurrency.co.uk/send-money-abroad"
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad",
+      "context": "Send Money Abroad in Minutes"
     },
     {
       "topic": "payout",
       "text": "Your transfer will then take between 2 to 3 working days to the Australian bank account.",
       "url": "https://www.clearcurrency.co.uk/send-money-abroad/australia",
-      "context": "3. Transfer funds"
+      "context": "Send money to/from Australia — How to send money to or from Australia in 3 easy steps? — 3. Transfer funds"
     },
     {
       "topic": "payout",
+      "text": "All the steps from getting the rate to committing the funds and transfer payment to get released into the UK bank account in a simple and hassle free manner. \"",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad/australia",
+      "context": "Send money to/from Australia"
+    },
+    {
+      "topic": "speed",
       "text": "Your transfer will then take up to 1 working day to or from the Italian bank account.",
       "url": "https://www.clearcurrency.co.uk/send-money-abroad/portugal",
-      "context": "3. Transfer funds"
+      "context": "Send money to/from Portugal — How to send money to or from Portugal in 3 easy steps? — 3. Transfer funds"
+    },
+    {
+      "topic": "speed",
+      "text": "Your transfer will then take up to 1 working day to or from the Spanish bank account.",
+      "url": "https://www.clearcurrency.co.uk/send-money-abroad/spain",
+      "context": "Send money to/from Spain — How to send money to or from Spain in 3 easy steps? — 3. Transfer funds"
     }
   ],
   "attempts": []

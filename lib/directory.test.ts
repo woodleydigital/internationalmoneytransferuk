@@ -62,12 +62,21 @@ test("checked date is the latest record fetch", () => {
   assert.equal(checkedAt(makeEntry(prov("a", "A", "bank"), null, null)), undefined);
 });
 
-test("a profile is indexable with two of three record blocks and a map verdict to index", () => {
+test("indexing requires substantive sending topics and an identity source", () => {
   const p = { ...prov("wise", "Wise", "transfer"), indexWhenVerified: true };
   const st = { slug: "wise", url: "", fetchedAt: "", status: "found", statements: [{ text: "x", frns: [], companyNumbers: [] }] } as unknown as DisclosureRecord;
-  const sv = { slug: "wise", fetchedAt: "", status: "found", pages: [], quotes: [{ topic: "fees", text: "x", url: "" }] } as never;
-  assert.equal(isIndexableEntry(makeEntry(p, co("2010-01-01"), null)), false);
-  assert.equal(isIndexableEntry(makeEntry(p, co("2010-01-01"), st)), true);
+  const quotes = [
+    { topic: "countries", text: "Send money to 80 countries.", url: "https://example.com/" },
+    { topic: "fees", text: "We charge a £5 transfer fee.", url: "https://example.com/" },
+    { topic: "speed", text: "Transfers arrive within one working day.", url: "https://example.com/" },
+  ];
+  const sv = { slug: "wise", fetchedAt: "", status: "found", pages: [], quotes } as never;
+  assert.equal(isIndexableEntry(makeEntry(p, co("2010-01-01"), st)), false);
   assert.equal(isIndexableEntry(makeEntry(p, null, st, sv)), true);
+  assert.equal(isIndexableEntry(makeEntry(p, null, null, sv)), false);
   assert.equal(isIndexableEntry(makeEntry({ ...p, indexWhenVerified: false }, co("2010-01-01"), st, sv)), false);
+  const thin = { ...sv as object, quotes: quotes.slice(0, 1) } as never;
+  assert.equal(isIndexableEntry(makeEntry(p, null, st, thin)), false);
+  const incoming = { ...sv as object, quotes: quotes.map((q) => ({ ...q, context: "Receiving a payment" })) } as never;
+  assert.equal(isIndexableEntry(makeEntry(p, null, st, incoming)), false);
 });

@@ -1,6 +1,6 @@
 {
   "slug": "remitly",
-  "fetchedAt": "2026-10-08T02:24:30.321Z",
+  "fetchedAt": "2026-10-08T08:18:04.433Z",
   "status": "found",
   "pages": [
     "https://www.remitly.com/gb/en/landing/send-limits",
@@ -18,76 +18,82 @@
   ],
   "quotes": [
     {
-      "topic": "fees",
-      "text": "Sending limits vary by country, delivery method, and FX rates.",
+      "topic": "payout",
+      "text": "Bank accounts and mobile wallets served by our global network",
       "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " No hidden fees, dedicated large transfer support, and guaranteed on-time delivery or we’ll refund your fees "
-    },
-    {
-      "topic": "fees",
-      "text": "Banking partner requirements and additional documentation may apply.",
-      "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " No hidden fees, dedicated large transfer support, and guaranteed on-time delivery or we’ll refund your fees "
+      "context": "Send large amounts of money internationally from the United Kingdom"
     },
     {
       "topic": "identity",
       "text": "To keep your money safe, we ask about the purpose of your transfer or source of funds.",
       "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " Purpose of transfer "
+      "context": "Send large amounts of money internationally from the United Kingdom — What to prepare for your large money transfer — Purpose of transfer"
+    },
+    {
+      "topic": "identity",
+      "text": "To verify your identity, we ask for a government-issued photo ID with your full name and date of birth, such as a driver’s license, passport, or visa.",
+      "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
+      "context": "Send large amounts of money internationally from the United Kingdom — What to prepare for your large money transfer"
+    },
+    {
+      "topic": "countries",
+      "text": "Our customers and their recipients are located in over 175+ countries across the globe.",
+      "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
+      "context": "Send large amounts of money internationally from the United Kingdom — Questions about large international money transfers — Where can I send money with Remitly?"
     },
     {
       "topic": "payout",
       "text": "Remitly supports transfers through a wide network of banks, mobile wallets, and cash pickup partners.",
       "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " Where can I send money with Remitly? "
+      "context": "Send large amounts of money internationally from the United Kingdom — Questions about large international money transfers — Where can I send money with Remitly?"
     },
     {
       "topic": "fees",
       "text": "Use our calculator to see your exchange rate and our fees before you send.",
       "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " How much does it cost to send a large amount internationally? "
+      "context": "Send large amounts of money internationally from the United Kingdom — Questions about large international money transfers — How much does it cost to send a large amount internationally?"
     },
     {
       "topic": "identity",
       "text": "Most transfers require a valid photo ID such as a passport, driver's license, or other government-issued ID with your picture, full name, and date of birth.",
       "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " What documents do I need to send a large amount internationally? "
-    },
-    {
-      "topic": "identity",
-      "text": "For larger amounts, we may also ask for proof of address (like a utility bill or bank statement) or information about the purpose of your transfer.",
-      "url": "https://www.remitly.com/gb/en/money-transfer/large-amounts",
-      "context": " What documents do I need to send a large amount internationally? "
+      "context": "Send large amounts of money internationally from the United Kingdom — Questions about large international money transfers — What documents do I need to send a large amount internationally?"
     },
     {
       "topic": "payout",
       "text": "Get fast, secure transfers to your bank account, mobile wallet or a cash pickup location.",
       "url": "https://www.remitly.com/gb/en",
-      "context": " It's easy to receive money from abroad "
+      "context": "It's easy to receive money from abroad"
     },
     {
       "topic": "countries",
       "text": "Support for business customers and recipients located in 170+ countries",
       "url": "https://www.remitly.com/gb/en",
-      "context": " Pay professionals with Remitly Business "
+      "context": "Pay professionals with Remitly Business"
     },
     {
       "topic": "countries",
       "text": "Remitly serves 175+ countries around the world.",
       "url": "https://www.remitly.com/gb/en/money-transfer",
-      "context": " Send international money transfers from the United Kingdom "
+      "context": "Send international money transfers from the United Kingdom"
     },
     {
-      "topic": "payout",
-      "text": "Simply create your account on the Remitly app or at Remitly.com ⁠ (opens in new window) , enter the amount you'd like to send, and choose your recipient's preferred delivery method — whether that's a bank deposit, cash pickup, or others, depending on availability in the receiving country you’ve selected.",
+      "topic": "fees",
+      "text": "Simply create your account on the Remitly app or at Remitly.com ⁠ (opens in new window) , enter the amount you'd like to send, and choose your recipient's preferred delivery method — whether that's a bank deposit, cash pickup, or others, depending on availability in the receiving country you’ve selected. You'll see the full cost of your transfer, including the exchange rate and any fees, before you send.",
       "url": "https://www.remitly.com/gb/en/money-transfer",
-      "context": " How to send money internationally from the United Kingdom? "
+      "context": "Send international money transfers from the United Kingdom — Get help with sending money from the United Kingdom — How to send money internationally from the United Kingdom?"
+    },
+    {
+      "topic": "fees",
+      "text": "With Remitly, you can send money online from the United Kingdom directly to a bank account, with great rates and no hidden fees — and you'll see the full cost before you send.",
+      "url": "https://www.remitly.com/gb/en/money-transfer",
+      "context": "Send international money transfers from the United Kingdom — Get help with sending money from the United Kingdom — Can I send a wire transfer with Remitly from the United Kingdom?"
     },
     {
       "topic": "speed",
       "text": "Some eligible transfers may arrive within minutes, while others can take a few business days.",
       "url": "https://www.remitly.com/gb/en/money-transfer",
-      "context": " How fast are online money transfers from the United Kingdom? "
+      "context": "Send international money transfers from the United Kingdom — Get help with sending money from the United Kingdom — How fast are online money transfers from the United Kingdom?"
     }
   ],
   "attempts": []

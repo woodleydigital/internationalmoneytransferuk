@@ -8,6 +8,7 @@ import { join } from "node:path";
 import { PROVIDERS, type Provider } from "../lib/providers.ts";
 import { robotsAllows } from "../lib/disclosures.ts";
 import { servicePageText } from "../lib/service-page.ts";
+import { servicePdfText } from "../lib/service-pdf.ts";
 import { findServiceLinks, findPageServiceQuotes, mergeQuotes, TOPICS, type ServiceRecord } from "../lib/service-facts.ts";
 import { SERVICE_PAGES, isProviderSource } from "../lib/provider-sources.ts";
 
@@ -18,7 +19,20 @@ mkdirSync(OUT, { recursive: true });
 if (SNAPSHOTS) mkdirSync(SNAPSHOTS, { recursive: true });
 const pause = () => new Promise((r) => setTimeout(r, 1_000));
 async function get(url: string): Promise<Response> {
-  return fetch(url, { headers: { "User-Agent": UA, Accept: "text/html,*/*;q=0.8", "Accept-Language": "en-GB" }, redirect: "follow", signal: AbortSignal.timeout(15_000) });
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "text/html,*/*;q=0.8", "Accept-Language": "en-GB" }, redirect: "follow", signal: AbortSignal.timeout(15_000) });
+      if (attempt < 2 && [408, 429, 502, 503, 504].includes(res.status)) {
+        await res.body?.cancel();
+        await new Promise((resolve) => setTimeout(resolve, 1_000 * (attempt + 1)));
+        continue;
+      }
+      return res;
+    } catch (error) {
+      if (attempt >= 2) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 1_000 * (attempt + 1)));
+    }
+  }
 }
 const robotsCache = new Map<string, Promise<string>>();
 async function allowed(url: string): Promise<boolean> {
@@ -37,6 +51,9 @@ type Page = { html: string; text: string; url: string; fetchedAt: string };
 async function plain(url: string): Promise<Page> {
   const res = await get(url);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if ((res.headers.get("content-type") ?? "").includes("application/pdf")) {
+    return { html: "", text: servicePdfText(new Uint8Array(await res.arrayBuffer())), url: res.url || url, fetchedAt: new Date().toISOString() };
+  }
   if (!(res.headers.get("content-type") ?? "").includes("html")) throw new Error("Not an HTML page");
   const html = await res.text();
   if (/just a moment|verify you are human|access denied|enable javascript and cookies to continue/i.test(html.slice(0, 8_000))) throw new Error("Source returned an access challenge");
@@ -59,6 +76,7 @@ async function rendered(url: string): Promise<Page | null> {
       if (!res || !res.ok()) return null;
       await page.waitForTimeout(1_500);
       const html = await page.content();
+      if (/just a moment|verify you are human|access denied|enable javascript and cookies to continue/i.test(html.slice(0, 8_000))) return null;
       return { html, text: servicePageText(html), url: page.url(), fetchedAt: new Date().toISOString() };
     } finally { await page.close(); }
   } catch { return null; }
@@ -77,11 +95,19 @@ async function collect(p: Provider) {
       try {
         if (!(await allowed(url))) { rec.attempts!.push({ url, status: "blocked", reason: "robots.txt disallows collection" }); continue; }
         await pause();
-        let page = await plain(url);
+        let page: Page;
+        try { page = await plain(url); }
+        catch (error) {
+          // A normal browser can read an ordinary JavaScript page where the
+          // HTML request failed. Never bypass robots or accept access challenges.
+          const dynamic = await rendered(url);
+          if (!dynamic) throw error;
+          page = dynamic;
+        }
         if (!isProviderSource(page.url, p.website, p.slug)) { rec.attempts!.push({ url, status: "redirected", reason: `Redirected to ${new URL(page.url).hostname}` }); continue; }
         if (!(await allowed(page.url))) { rec.attempts!.push({ url: page.url, status: "blocked", reason: "robots.txt disallows the redirected page" }); continue; }
         let found = findPageServiceQuotes(page.text, page.url);
-        if (!found.length && page.text.length < 1_000) {
+        if (!found.length && (page.text.length < 1_000 || /__next_data__|__nuxt|id=["'](?:root|app)["']/i.test(page.html))) {
           const dynamic = await rendered(page.url);
           if (dynamic && isProviderSource(dynamic.url, p.website, p.slug)) { page = dynamic; found = findPageServiceQuotes(page.text, page.url); }
         }

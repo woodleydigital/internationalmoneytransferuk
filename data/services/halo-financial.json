@@ -1,15 +1,25 @@
 {
   "slug": "halo-financial",
-  "fetchedAt": "2026-10-08T02:25:52.891Z",
+  "fetchedAt": "2026-10-08T08:21:07.525Z",
   "status": "error",
   "pages": [],
   "quotes": [],
   "attempts": [
     {
+      "url": "https://www.halofinancial.com/money-transfer-services/currency-volatility-management",
+      "status": "error",
+      "reason": "robots.txt HTTP 502"
+    },
+    {
+      "url": "https://www.halofinancial.com/money-transfer-services/regular-currency-trade",
+      "status": "error",
+      "reason": "robots.txt HTTP 502"
+    },
+    {
       "url": "https://www.halofinancial.com/",
       "status": "error",
-      "reason": "fetch failed"
+      "reason": "robots.txt HTTP 502"
     }
   ],
-  "error": "fetch failed"
+  "error": "robots.txt HTTP 502"
 }

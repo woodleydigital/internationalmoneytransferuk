@@ -1,42 +1,8 @@
 {
   "slug": "barclays",
   "url": "https://www.barclays.co.uk/",
-  "fetchedAt": "2026-10-08T02:23:06.937Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Barclays Bank PLC is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority and is a member of the London Stock Exchange and Aquis. Registered in England. Registered No. 1026167. Registered Office: 1 Churchill Place, London E14 5HP.",
-      "frns": [],
-      "companyNumbers": [
-        "01026167"
-      ],
-      "url": "https://www.barclays.co.uk/planning-and-advice/costs/"
-    },
-    {
-      "text": "Barclays Investment Solutions Limited is authorised and regulated by the Financial Conduct Authority and is a member of the London Stock Exchange and Aquis. Registered in England. Registered No. 02752982. Registered Office: 1 Churchill Place, London E14 5HP.",
-      "frns": [],
-      "companyNumbers": [
-        "02752982"
-      ],
-      "url": "https://www.barclays.co.uk/planning-and-advice/costs/"
-    },
-    {
-      "text": "Barclays offers banking and credit products to its clients through Barclays Bank UK PLC. Barclays Bank UK PLC is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Registered in England. Registered No. 9740322. Registered Office: 1 Churchill Place, London E14 5HP",
-      "frns": [],
-      "companyNumbers": [
-        "09740322"
-      ],
-      "url": "https://www.barclays.co.uk/planning-and-advice/costs/"
-    },
-    {
-      "text": "Barclays Bank UK PLC provides banking services to its customers and is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (Financial Services Register No. 759676). Registered in England. Registered No. 9740322. Registered Office: 1 Churchill Place, London E14 5HP.",
-      "frns": [
-        "759676"
-      ],
-      "companyNumbers": [
-        "09740322"
-      ],
-      "url": "https://www.barclays.co.uk/smart-investor/investments/investment-costs/"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:23:29.273Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

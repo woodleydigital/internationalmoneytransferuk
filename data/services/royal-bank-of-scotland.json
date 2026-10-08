@@ -1,6 +1,6 @@
 {
   "slug": "royal-bank-of-scotland",
-  "fetchedAt": "2026-10-08T02:26:21.519Z",
+  "fetchedAt": "2026-10-08T08:11:12.532Z",
   "status": "found",
   "pages": [
     "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
@@ -18,37 +18,56 @@
   ],
   "quotes": [
     {
+      "topic": "limits",
+      "text": "Up to £20,000 per day for Personal and Premier customers.",
+      "url": "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "context": "How can I make an international payment? — Payment Limits — Payment Limits"
+    },
+    {
+      "topic": "limits",
+      "text": "New payee: Up to £750 per day (a maximum of 5 payments totalling £750 per day).",
+      "url": "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "context": "How can I make an international payment? — Payment Limits — Payment Limits"
+    },
+    {
+      "topic": "speed",
+      "text": "Euro payment to *SEPA country Same business day 14:00 UK time",
+      "url": "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "context": "How can I make an international payment? — How long will the payment take to arrive? — How long will the payment arrive?"
+    },
+    {
+      "topic": "speed",
+      "text": "Euro payment to non-SEPA country 1-3 business days 14:00 UK time",
+      "url": "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "context": "How can I make an international payment? — How long will the payment take to arrive? — How long will the payment arrive?"
+    },
+    {
+      "topic": "speed",
+      "text": "Non-Euro payment 1-3 business days 16:00 UK time",
+      "url": "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
+      "context": "How can I make an international payment? — How long will the payment take to arrive? — How long will the payment arrive?"
+    },
+    {
       "topic": "fees",
       "text": "There is no fee for sending an international payment online, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
-      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html"
+      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
+      "context": "Sending money abroad"
     },
     {
       "topic": "fees",
-      "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
+      "text": "There is no fee for all euro payments received.",
       "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "Fee options when sending a payment"
+      "context": "Sending money abroad"
     },
     {
       "topic": "fees",
-      "text": "We'll charge £10 to cover any foreign bank handling fees.",
+      "text": "For non-euro payments received that are under £100, the fee is £1.",
       "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "Fee options when sending a payment"
+      "context": "Sending money abroad"
     },
     {
       "topic": "limits",
       "text": "If you have registered your biometrics with the Bank, you can use the mobile app or Digital Banking to make an international payment to new and saved payees up to the daily limit of £20,000.00 GBP.",
-      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "How much can I send?"
-    },
-    {
-      "topic": "limits",
-      "text": "A saved payee via the mobile app up to £20,000.",
-      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "How much can I send?"
-    },
-    {
-      "topic": "limits",
-      "text": "A new payee via our mobile app up to £750 (a maximum of 5 payments totalling £750 per day).",
       "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
       "context": "How much can I send?"
     }

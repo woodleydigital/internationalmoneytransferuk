@@ -1,6 +1,6 @@
 {
   "slug": "ofx",
-  "fetchedAt": "2026-10-08T02:23:38.863Z",
+  "fetchedAt": "2026-10-08T08:04:54.578Z",
   "status": "found",
   "pages": [
     "https://www.ofx.com/en-gb/faqs/",
@@ -18,38 +18,22 @@
   ],
   "quotes": [
     {
-      "topic": "payout",
-      "text": "How to Transfer Money from One Bank Account to Another",
-      "url": "https://www.ofx.com/en-gb/faqs/",
-      "context": "What are my transfer options with OFX?"
-    },
-    {
-      "topic": "fees",
-      "text": "When transferring with OFX United Kingdom, there are no transfer fees.",
-      "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
-      "context": "Are there any transfer fees?"
-    },
-    {
       "topic": "fees",
       "text": "Third-party banks may deduct a fee from your transfer before paying your recipient.",
       "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
       "context": "Are there any transfer fees?"
     },
     {
-      "topic": "countries",
-      "text": "Pay in 30+ currencies with total visibility and automated receipt capture.",
-      "url": "https://www.ofx.com/en-gb/"
+      "topic": "fees",
+      "text": "This fee may vary and OFX receives no portion of it.",
+      "url": "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
+      "context": "Are there any transfer fees?"
     },
     {
       "topic": "countries",
       "text": "Send money to 180+ countries",
       "url": "https://www.ofx.com/en-gb/send-money/",
       "context": "International money transfers."
-    },
-    {
-      "topic": "countries",
-      "text": "Take advantage of a great introductory rate across these 7 currencies on your first personal transfer when booked online.",
-      "url": "https://www.ofx.com/en-gb/send-money/"
     },
     {
       "topic": "fees",
@@ -61,13 +45,35 @@
       "topic": "speed",
       "text": "The time it takes for us to transfer the funds to your recipient depends on the country, but in most cases, it takes 1-2 business days.",
       "url": "https://www.ofx.com/en-gb/send-money/",
-      "context": "How long does it take to send money internationally?"
+      "context": "How do I send my money at a good rate? — How long does it take to send money internationally?"
+    },
+    {
+      "topic": "identity",
+      "text": "We may ask you to upload documents including proof of identity and proof of address.",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How do I send my money at a good rate? — How to make a international money transfer with OFX. — 2. Verify your identity"
     },
     {
       "topic": "payout",
       "text": "Whether it’s a gift or a lifeline, OFX can send money directly to your friend’s bank account.",
       "url": "https://www.ofx.com/en-gb/send-money/",
-      "context": "How can I send money to a friend?"
+      "context": "How do I send my money at a good rate? — International money transfer FAQs. — How can I send money to a friend?"
+    },
+    {
+      "topic": "identity",
+      "text": "To keep our platform secure, we verify the identity of every customer. You’ll need to provide contact details, and possibly a photo ID and proof of address. Business users may also be asked for a company number and additional documents depending on business type.",
+      "url": "https://www.ofx.com/en-gb/send-money/",
+      "context": "How do I send my money at a good rate? — International money transfer FAQs. — What verification details do I need to provide?"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money from the UK to over 180 countries (and counting)",
+      "url": "https://www.ofx.com/en-gb/send-money/"
+    },
+    {
+      "topic": "countries",
+      "text": "Quick, secure, global payments in 50+ currencies from the UK",
+      "url": "https://www.ofx.com/en-gb/send-money/"
     },
     {
       "topic": "payout",
@@ -77,9 +83,15 @@
     },
     {
       "topic": "speed",
+      "text": "Please send OFX your money within 2 business days of booking your transfer so we can complete your transfer quickly.",
+      "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+      "context": "Spot Transfer FAQs — How long do I have to send OFX my payment?"
+    },
+    {
+      "topic": "speed",
       "text": "Once we’ve received your funds, most transfers to major currencies, like euros or US dollars, are made within 1 to 2 business days.",
       "url": "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
-      "context": "How long will it take for the funds to get to my recipient?"
+      "context": "Spot Transfer FAQs — How long will it take for the funds to get to my recipient?"
     }
   ],
   "attempts": []

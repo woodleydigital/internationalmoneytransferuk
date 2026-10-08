@@ -1,6 +1,6 @@
 {
   "slug": "hsbc",
-  "fetchedAt": "2026-10-08T02:23:02.323Z",
+  "fetchedAt": "2026-10-08T08:03:20.861Z",
   "status": "found",
   "pages": [
     "https://www.hsbc.co.uk/international/money-transfer/",
@@ -21,83 +21,85 @@
       "topic": "payout",
       "text": "An international money transfer is a safe, secure way to send money to a bank account in another country or region.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " An easy, quick way to send and receive money worldwide "
+      "context": "International payments — An easy, quick way to send and receive money worldwide"
     },
     {
       "topic": "fees",
       "text": "Alternatively, if you hold a Global Money Account, you can receive currency directly into one of the 18 supported Global Money currencies free of charge.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " An easy, quick way to send and receive money worldwide "
+      "context": "International payments — An easy, quick way to send and receive money worldwide"
     },
     {
       "topic": "countries",
       "text": "Make international payments 24/7 in online banking to 150+ destinations.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " International payments in online and mobile banking "
-    },
-    {
-      "topic": "limits",
-      "text": "Send up to £50,000 (or currency equivalent) online, and up to £10,000 (or currency equivalent) by phone (Premier customers have a higher phone limit)",
-      "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " International payments in online and mobile banking "
+      "context": "International payments — International payments in online and mobile banking"
     },
     {
       "topic": "fees",
       "text": "Pay no HSBC fees for international bank transfers to another HSBC account or euro payments in the European Economic Area (EEA)",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " International payments in online and mobile banking "
+      "context": "International payments — International payments in online and mobile banking"
     },
     {
       "topic": "fees",
       "text": "If you're sending money in any currency outside the EEA, or to somewhere in the EEA in a currency other than euros, pay a £5 HSBC fee.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": " International payments in online and mobile banking "
-    },
-    {
-      "topic": "countries",
-      "text": "Send up to £50,000 per day (or currency equivalent) in 50+ currencies to 200+ countries",
-      "url": "https://www.hsbc.co.uk/international/money-transfer/"
+      "context": "International payments — International payments in online and mobile banking"
     },
     {
       "topic": "speed",
       "text": "If you're sending money to the EEA 2 in euros or sterling, it should reach the account the next working day.",
-      "url": "https://www.hsbc.co.uk/international/money-transfer/"
+      "url": "https://www.hsbc.co.uk/international/money-transfer/",
+      "context": "How do international payments work? — How to send money outside the UK — Make a payment in branch"
+    },
+    {
+      "topic": "speed",
+      "text": "Payments outside the EEA can take up to 4 working days. They may take longer, depending on the destination and if the payment falls on a bank holiday.",
+      "url": "https://www.hsbc.co.uk/international/money-transfer/",
+      "context": "How do international payments work? — How to send money outside the UK — Make a payment in branch"
+    },
+    {
+      "topic": "availability",
+      "text": "To make an international payment you will need to hold any account with HSBC (except a standalone ISA account) and be registered for online banking.",
+      "url": "https://www.hsbc.co.uk/international/money-transfer/",
+      "context": "International payments — Make international payments online — International Payments through Online Banking"
     },
     {
       "topic": "limits",
       "text": "With HSBC UK, you can transfer up to £50,000 online or through your mobile, and up to £10,000 (£10 million for Premier customers) if you transfer by phone.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": "How much money can I send abroad from the UK? "
+      "context": "International payments — How much money can I send abroad from the UK?"
     },
     {
       "topic": "payout",
       "text": "An international money transfer is a safe, secure way to send money to a bank account in other country or region.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": "What is an international money transfer? "
+      "context": "International payments — What is an international money transfer?"
     },
     {
       "topic": "speed",
       "text": "An international money transfer can take a few days, depending on the currency and destination.",
       "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": "How long does an international money transfer take? "
-    },
-    {
-      "topic": "speed",
-      "text": "Payments in euros or pounds sterling in the EEA should reach the account the next working day.",
-      "url": "https://www.hsbc.co.uk/international/money-transfer/",
-      "context": "How long does an international money transfer take? "
+      "context": "International payments — How long does an international money transfer take?"
     },
     {
       "topic": "countries",
       "text": "Send money from the UK to over 150 destinations worldwide, with live exchange rates during market opening hours.",
       "url": "https://www.hsbc.co.uk/international/",
-      "context": " Send money outside the UK "
+      "context": "Send money outside the UK"
     },
     {
       "topic": "limits",
       "text": "With HSBC UK, you can transfer up to £50,000 online or through your mobile, and up to £10,000 (£10 million for Premier customers) if you transfer by phone.",
       "url": "https://www.hsbc.co.uk/international/",
-      "context": " How much money can I send abroad from the UK? "
+      "context": "How much money can I send abroad from the UK?"
+    },
+    {
+      "topic": "countries",
+      "text": "As an HSBC Private Bank client, Premier or Advance customer with HSBC accounts in at least 2 countries or regions, you can send up to USD200,000 each day via Global Transfers for free.",
+      "url": "https://www.hsbc.co.uk/international/global-view-and-global-transfers/",
+      "context": "Global transfers — Using Global View and Global Transfers — How much do HSBC Global Transfers cost?"
     }
   ],
   "attempts": []

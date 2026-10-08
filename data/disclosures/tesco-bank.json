@@ -1,16 +1,7 @@
 {
   "slug": "tesco-bank",
   "url": "https://www.tescobank.com/",
-  "fetchedAt": "2026-10-08T02:25:14.461Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Tesco Bank is a trading name of Barclays Bank UK PLC. Barclays Bank UK PLC is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Barclays Bank UK PLC is entered in the Financial Services Register and its Register number is 759676.",
-      "frns": [
-        "759676"
-      ],
-      "companyNumbers": [],
-      "url": "https://www.tescobank.com/help/site-terms/"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:18:41.353Z",
+  "status": "none",
+  "statements": []
 }

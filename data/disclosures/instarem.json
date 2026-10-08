@@ -1,7 +1,7 @@
 {
   "slug": "instarem",
   "url": "https://www.instarem.com/en-gb/",
-  "fetchedAt": "2026-10-08T02:24:50.931Z",
+  "fetchedAt": "2026-10-08T08:08:04.278Z",
   "status": "found",
   "statements": [
     {
@@ -9,7 +9,8 @@
       "frns": [
         "901024"
       ],
-      "companyNumbers": []
+      "companyNumbers": [],
+      "url": "https://www.instarem.com/en-gb/send-money-to-hong-kong/"
     }
   ]
 }

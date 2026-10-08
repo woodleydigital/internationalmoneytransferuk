@@ -1,9 +1,114 @@
 {
   "slug": "revolut",
-  "fetchedAt": "2026-10-08T02:23:59.759Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
+  "fetchedAt": "2026-10-08T08:06:15.510Z",
+  "status": "found",
+  "pages": [
+    "https://www.revolut.com/en-GB/legal/standard-fees/",
+    "https://www.revolut.com/en-GB/",
+    "https://www.revolut.com/legal/international-payment-fees/",
+    "https://www.revolut.com/legal/fees/",
+    "https://www.revolut.com/legal/standard-fees/history/",
+    "https://www.revolut.com/legal/exchangingcryptocurrenciespersonalfees/",
+    "https://www.revolut.com/legal/fee-information-document/",
+    "https://www.revolut.com/a-radically-better-account/",
+    "https://www.revolut.com/revolut-plus/",
+    "https://www.revolut.com/money-transfer/",
+    "https://www.revolut.com/money-transfer/send-money-to-india/",
+    "https://www.revolut.com/money-transfer/send-money-to-nigeria/"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "This fee will be calculated in real time and shown to you in the app before you make the payment.",
+      "url": "https://www.revolut.com/en-GB/legal/standard-fees/",
+      "context": "Personal Fees (Standard) — Send — All other international payments"
+    },
+    {
+      "topic": "fees",
+      "text": "The exact fee will depend on what currency you are sending and where you are sending it to but our maximum fees are capped.",
+      "url": "https://www.revolut.com/en-GB/legal/standard-fees/",
+      "context": "Personal Fees (Standard) — Send — All other international payments"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money to 160+ countries with competitive exchange rates and low fees, all in one app.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "speed",
+      "text": "Usually arrives in seconds",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money across 160+ countries.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "fees",
+      "text": "NatWest £1,025.63 -£25.63",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Clear fees and competitive rates. — Provider Your total",
+      "table": true
+    },
+    {
+      "topic": "countries",
+      "text": "Send money quickly to over 160+ countries with great exchange rates and low fees, and get real-time notifications to track every transfer.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Get your free Revolut app for international money transfers"
+    },
+    {
+      "topic": "payout",
+      "text": "Transfer money to a bank account in 160+ supported countries.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Bank transfer"
+    },
+    {
+      "topic": "speed",
+      "text": "International bank transfers from the UK generally arrive within 3–5 business days.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — International bank transfers"
+    },
+    {
+      "topic": "speed",
+      "text": "If you're sending EUR to a country in the SEPA region, your money could arrive within 2 working days or even in seconds.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — International bank transfers"
+    },
+    {
+      "topic": "limits",
+      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer FAQs — How much money can I send abroad from the UK?"
+    },
+    {
+      "topic": "payout",
+      "text": "Transfer money to a bank account in India.",
+      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
+      "context": "Send money to India — Bank transfer"
+    },
+    {
+      "topic": "payout",
+      "text": "Coming soon: transfer money to a mobile wallet through their phone number.",
+      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
+      "context": "Send money to India — Mobile wallet transfer"
+    },
+    {
+      "topic": "limits",
+      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
+      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
+      "context": "Money transfer to India FAQs — How much money can I transfer online to India from the UK?"
+    },
+    {
+      "topic": "limits",
+      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
+      "url": "https://www.revolut.com/money-transfer/send-money-to-nigeria/",
+      "context": "Money transfer to Nigeria FAQs — How much money can I transfer online to Nigeria from the UK?"
+    }
+  ],
   "attempts": [
     {
       "url": "https://www.revolut.com/en-GB/international-transfers/",
@@ -11,15 +116,14 @@
       "reason": "robots.txt disallows collection"
     },
     {
-      "url": "https://www.revolut.com/en-GB/legal/standard-fees/",
+      "url": "https://revolut.com/legal/Card-Transfer-Fees",
       "status": "error",
-      "reason": "HTTP 403"
+      "reason": "The operation was aborted due to timeout"
     },
     {
-      "url": "https://www.revolut.com/en-GB/",
+      "url": "https://www.revolut.com/legal/pay-all-fees",
       "status": "error",
-      "reason": "HTTP 403"
+      "reason": "The operation was aborted due to timeout"
     }
-  ],
-  "error": "robots.txt disallows collection"
+  ]
 }

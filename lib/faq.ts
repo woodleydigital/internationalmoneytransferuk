@@ -18,8 +18,8 @@ export const HOME_FAQ: Faq[] = [
     link: { href: "/check-a-provider/", label: "Check a provider" },
   },
   {
-    q: "Why does a profile say “Register data pending”?",
-    a: "We do not yet republish data from the FCA Register. Until we do, each profile shows the provider’s Companies House record and its own published regulatory statement, and is marked “Register data pending” so it never looks more complete than it is.",
+    q: "Why does a profile link to a live FCA lookup?",
+    a: "We do not republish FCA Register data in profiles. Use our live lookup or the FCA Register to check a firm’s current status and permissions. Profiles show available Companies House records and the provider’s own published regulatory statements; those statements are not independent confirmation of FCA status.",
     link: { href: "/methodology/", label: "Our methodology" },
   },
   {

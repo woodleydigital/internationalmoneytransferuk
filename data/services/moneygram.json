@@ -1,6 +1,6 @@
 {
   "slug": "moneygram",
-  "fetchedAt": "2026-10-08T02:23:30.001Z",
+  "fetchedAt": "2026-10-08T08:04:41.191Z",
   "status": "found",
   "pages": [
     "https://www.moneygram.com/gb/en",
@@ -26,7 +26,7 @@
       "topic": "fees",
       "text": "See the real exchange rate and fee before you tap send.",
       "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-app",
-      "context": " See your cost before you send "
+      "context": "Send money with the MoneyGram money transfer app — See your cost before you send"
     },
     {
       "topic": "fees",

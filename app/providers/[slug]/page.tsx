@@ -7,7 +7,6 @@ import {
   PROFILE_SCHEMA,
   PROVIDERS,
   getProvider,
-  isIndexable,
   providerUrl,
   isVerified,
 } from "@/lib/providers";
@@ -53,7 +52,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     description: describe(p.name),
     alternates: { canonical: providerUrl(p) },
     // Thin profiles exist as entities but stay noindex until they hold enough public-record data.
-    robots: entry && (isIndexable(p) || isIndexableEntry(entry)) ? { index: true, follow: true } : { index: false, follow: true },
+    robots: entry && isIndexableEntry(entry) ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 
@@ -85,13 +84,20 @@ export default async function Page({ params }: { params: Params }) {
     "Payout methods (bank, cash pickup, mobile wallet)": ["payout"],
     "Fees, limits, minimums": ["fees", "limits"],
     "ID documents required": ["identity"],
+    "Service availability": ["availability"],
+    "Delivery times and payment cut-offs": ["speed"],
   };
   const FOS_FIELD = "Complaint volumes and uphold rate (where published)";
   const collected = (f: (typeof PROFILE_SCHEMA)[number]) =>
-    (Boolean(c) && f.source === "Companies House") ||
+    (Boolean(c) && f.source === "Companies House" &&
+      (f.field !== "Persons with significant control" || Boolean(company?.psc)) &&
+      (!f.field.startsWith("Latest accounts") || Boolean(c?.lastAccountsMadeUpTo || c?.accountsNextDue))) ||
+    (f.field === "FCA number, as stated by the provider" && statedFrns.length > 0) ||
+    (f.field === "Provider's regulatory statement" && Boolean(statement)) ||
     (f.field in SERVICE_FIELDS && hasTopic(...SERVICE_FIELDS[f.field])) ||
     (f.field === FOS_FIELD && Boolean(fos)) ||
     (f.field.startsWith("Revenue") && Boolean(extras?.accounts?.figures.length));
+  const profileFields = PROFILE_SCHEMA.filter((f) => f.source !== "FCA Register");
   const sections: [string, string][] = [
     ["transfer-checklist", "Questions for your transfer"],
     ...(notice ? ([["provider-notice", "Published brand notice"]] as [string, string][]) : []),
@@ -124,7 +130,7 @@ export default async function Page({ params }: { params: Params }) {
       meta={
         <>
           <KindBadge kind={p.kind} />
-          <span className="text-sm text-muted">{verified ? "Verified" : "Register data pending"}</span>
+          <span className="text-sm text-muted">{verified ? "Verified" : "FCA status: use live lookup"}</span>
           {p.website && (
             <a href={p.website} rel="noopener nofollow" className="border-2 border-ink bg-white px-3 py-1.5 text-sm font-semibold text-ink no-underline hover:bg-brand-50">
               Visit website ↗
@@ -165,7 +171,7 @@ export default async function Page({ params }: { params: Params }) {
                 <dd className="font-semibold text-ink">{statedFrns.length ? statedFrns.join(", ") : "—"}</dd>
               </div>
               <div>
-                <dt className="text-muted">Records last checked</dt>
+                <dt className="text-muted">Sources last fetched</dt>
                 <dd className="font-semibold text-ink">{checked ? longDate(checked.slice(0, 10)) : "—"}</dd>
               </div>
             </dl>
@@ -266,10 +272,11 @@ export default async function Page({ params }: { params: Params }) {
         <P>
           This profile is compiled automatically. Each item appears only once it has been
           collected from the stated source, and carries the date it was fetched.
+          {" FCA status, restrictions and agents are available through the live register lookup; they are not imported into profiles. Missing service information describes a gap in our collection."}
         </P>
         <details className="mt-4 border border-line">
           <summary className="cursor-pointer bg-wash px-4 py-3 font-semibold text-ink">
-            {`Show every item and its source (${PROFILE_SCHEMA.filter(collected).length} of ${PROFILE_SCHEMA.length} collected)`}
+            {`Show every item and its source (${profileFields.filter(collected).length} of ${profileFields.length} profile fields have source material)`}
           </summary>
           <div className="px-4 pb-4">
             {blocks.map((block) => (
@@ -280,7 +287,7 @@ export default async function Page({ params }: { params: Params }) {
                     <div key={f.field} className="grid gap-1 py-2 sm:grid-cols-[1fr_auto]">
                       <dt className="text-ink">{f.field}</dt>
                       <dd className="text-muted sm:text-right">
-                        {collected(f) ? "Collected" : "Not yet collected"} · {f.source}
+                        {f.source === "FCA Register" ? "Live lookup only" : collected(f) ? "Source material collected" : "No source material collected"} · {f.source}
                         <span className="block text-xs">{f.method}</span>
                       </dd>
                     </div>

@@ -1,35 +1,123 @@
 {
   "slug": "torfx",
-  "fetchedAt": "2026-10-08T02:25:24.273Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
-  "attempts": [
+  "fetchedAt": "2026-10-08T08:08:56.180Z",
+  "status": "found",
+  "pages": [
+    "https://www.torfx.com/faqs",
+    "https://www.torfx.com/everyday-transfers",
+    "https://www.torfx.com/our-app",
+    "https://www.torfx.com/help",
+    "https://www.torfx.com/",
+    "https://www.torfx.com/regular-transfers",
+    "https://www.torfx.com/emigrating",
+    "https://www.torfx.com/repatriation-of-funds",
+    "https://www.torfx.com/buy-property-abroad",
+    "https://www.torfx.com/international-business-payments",
+    "https://www.torfx.com/large-transfers",
+    "https://www.torfx.com/case-studies"
+  ],
+  "quotes": [
     {
+      "topic": "safeguarding",
+      "text": "Our bank providers do not monitor the funds we place on safeguarding accounts or how we operate these accounts.",
+      "url": "https://www.torfx.com/faqs"
+    },
+    {
+      "topic": "speed",
+      "text": "While the amount of time a transfer takes can depend on the currency, destination and receiving bank, the funds should be in your account on the same day or within no more than two working days for more exotic destinations.",
       "url": "https://www.torfx.com/faqs",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "How long will my transfer take?"
     },
     {
+      "topic": "limits",
+      "text": "We don’t have a maximum transfer limit and our range of services mean you can save money whatever the size of your transfer.",
+      "url": "https://www.torfx.com/faqs",
+      "context": "Is there a minimum or maximum transfer amount?"
+    },
+    {
+      "topic": "fees",
+      "text": "Our Regular Overseas Payments service is designed for recurrent transfers of between £500 and £10,000 but with our online platform you can also move as little as £100 on a fee-free basis.",
+      "url": "https://www.torfx.com/faqs",
+      "context": "Is there a minimum or maximum transfer amount?"
+    },
+    {
+      "topic": "fees",
+      "text": "While we don’t charge any transfer fees for our services, some fees may be applied to your transfer by other parties depending on the banks, countries or currencies involved.",
+      "url": "https://www.torfx.com/faqs",
+      "context": "What are receiving and intermediary fees?"
+    },
+    {
+      "topic": "fees",
+      "text": "Torfx do not charge a Fee.",
+      "url": "https://www.torfx.com/faqs",
+      "context": "Do you have different fees for different transfer amounts?"
+    },
+    {
+      "topic": "limits",
+      "text": "Use your online account or the TorFX app to send up to £50,000 24/7 – perfect for covering one-off payments, unexpected expenses, or transfers where speed and reliability are key.",
       "url": "https://www.torfx.com/everyday-transfers",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "Send money abroad swiftly and safely — Everyday currency transfers made easy"
     },
     {
+      "topic": "safeguarding",
+      "text": "Your funds are protected by robust safeguarding systems and strict regulatory standards.",
+      "url": "https://www.torfx.com/everyday-transfers",
+      "context": "Send money abroad swiftly and safely — Why choose TorFX when sending money overseas?"
+    },
+    {
+      "topic": "speed",
+      "text": "Most payments are processed quickly, and in many cases the funds arrive the same day.",
+      "url": "https://www.torfx.com/everyday-transfers",
+      "context": "How quickly will my international transfer arrive?"
+    },
+    {
+      "topic": "speed",
+      "text": "While the amount of time a transfer takes can depend on the currency, destination and receiving bank, the funds should be in your account on the same day or within no more than two working days for more exotic destinations.",
+      "url": "https://www.torfx.com/everyday-transfers",
+      "context": "How long does an international money transfer take?"
+    },
+    {
+      "topic": "limits",
+      "text": "Enjoy round-the-clock currency transfers up to £50,000, so you’re able to send money overseas whenever you need to.",
       "url": "https://www.torfx.com/our-app",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "24/7 transfers with the TorFX app — Secure currency transfers on the go — 24/7 currency transfers"
     },
     {
+      "topic": "countries",
+      "text": "We support transfer to 120+ countries in 40+ currencies, including EUR, USD, AUD, NZD, ZAR and more.",
       "url": "https://www.torfx.com/help",
-      "status": "error",
-      "reason": "HTTP 403"
+      "context": "What currencies can I transfer with TorFX?"
     },
     {
-      "url": "https://www.torfx.com/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "topic": "countries",
+      "text": "Transfers to 120+ countries",
+      "url": "https://www.torfx.com/emigrating",
+      "context": "Emigrating? Save on currency transfers with TorFX — Why use TorFX for currency transfers when you’re emigrating? — 40+ currencies"
+    },
+    {
+      "topic": "countries",
+      "text": "Transfers to 120+ countries",
+      "url": "https://www.torfx.com/repatriation-of-funds",
+      "context": "40+ currencies"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "We safeguard funds in segregated client accounts*, follow strict compliance procedures, and hold the highest credit rating with Dun & Bradstreet.",
+      "url": "https://www.torfx.com/international-business-payments",
+      "context": "International business payments"
+    },
+    {
+      "topic": "identity",
+      "text": "For high-value transfers, you may need to provide additional ID or proof of funds.",
+      "url": "https://www.torfx.com/large-transfers",
+      "context": "Transfer large sums of money overseas — How to transfer large amounts of money abroad — Check any limits or documentation requirements"
+    },
+    {
+      "topic": "identity",
+      "text": "You’ll need photo ID to open an account, and large transfers often require proof of the source of funds, such as a bank statement.",
+      "url": "https://www.torfx.com/large-transfers",
+      "context": "Transfer large sums of money overseas — Things to think about when sending large sums of money overseas"
     }
   ],
-  "error": "HTTP 403"
+  "attempts": []
 }

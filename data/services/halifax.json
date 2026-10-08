@@ -1,23 +1,93 @@
 {
   "slug": "halifax",
-  "fetchedAt": "2026-10-08T02:24:09.764Z",
-  "status": "none",
+  "fetchedAt": "2026-10-08T08:18:04.432Z",
+  "status": "found",
   "pages": [
     "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
-    "https://www.halifax.co.uk/"
+    "https://www.halifax.co.uk/",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/receiving-a-payment.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/payment-limits.html",
+    "https://www.halifax.co.uk/helpcentre/complaints.html",
+    "https://www.halifax.co.uk/bankaccounts/help-guidance/interest-rates-fees.html",
+    "https://www.halifax.co.uk/isas/isas-explained/isa-allowance.html",
+    "https://www.halifax.co.uk/wealth-management/pricing.html",
+    "https://www.halifax.co.uk/helpcentre/accessibility.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/mobile-banking-app.html",
+    "https://www.halifax.co.uk/helpcentre/everyday-banking/mobile-banking-app/biometrics.html"
   ],
-  "quotes": [],
-  "attempts": [
+  "quotes": [
     {
-      "url": "http://www.halifax.co.uk/bankaccounts/rates-rewards-fees/",
-      "status": "error",
-      "reason": "fetch failed"
+      "topic": "countries",
+      "text": "Over 30 currencies to choose from.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency"
     },
     {
-      "url": "http://www.halifax.co.uk/bankaccounts/help-guidance/important-information/",
-      "status": "error",
-      "reason": "fetch failed"
+      "topic": "limits",
+      "text": "Channel Online Limit Send up to £100,000 a day through Online Banking.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — How much you can send expandable section — Channel Limit",
+      "table": true
+    },
+    {
+      "topic": "limits",
+      "text": "Channel Telephone Banking Limit Send up to £10,000 through Telephone Banking.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — How much you can send expandable section — Channel Limit",
+      "table": true
+    },
+    {
+      "topic": "limits",
+      "text": "The minimum payment amount is £1.01, no matter how you make the payment.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — How much you can send expandable section"
+    },
+    {
+      "topic": "fees",
+      "text": "Type of payment Payments in euros from your account Fee No fee",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — Our fees — Type of payment Fee",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "Type of payment All other Payments from your account Fee £9.50**",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — Our fees — Type of payment Fee",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "Please note, the recipient’s bank may still charge a fee before they pay the money into the recipient’s account.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — Other fees"
+    },
+    {
+      "topic": "speed",
+      "text": "Requests made before 3pm* on a working day are processed and taken the same day.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency"
+    },
+    {
+      "topic": "speed",
+      "text": "Requests made after 3pm, or on a weekend or bank holiday, are processed on the next working day.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency"
+    },
+    {
+      "topic": "speed",
+      "text": "Currency and destination Payments in euros to the UK, an EEA country, Monaco, Switzerland or San Marino Delivery times No later than the next working day",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments/send-money-guide.html",
+      "context": "Send money outside the UK or in a foreign currency — When the money will reach the recipient — Currency and destination Delivery times",
+      "table": true
+    },
+    {
+      "topic": "payout",
+      "text": "If you pay directly to a bank account and it’s a scam, it’s very hard for you to get your money back.",
+      "url": "https://www.halifax.co.uk/helpcentre/everyday-banking/payments-and-transfers/international-payments.html",
+      "context": "Send and receive money outside the UK and in foreign currencies"
     }
   ],
-  "error": "fetch failed"
+  "attempts": []
 }

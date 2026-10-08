@@ -1,37 +1,25 @@
 {
   "slug": "moneycorp",
-  "fetchedAt": "2026-10-08T02:25:30.313Z",
-  "status": "found",
-  "pages": [
-    "https://www.moneycorp.com/en-gb/about-us/help-and-support",
-    "https://www.moneycorp.com/en-gb/personal/online-platform-access",
-    "https://www.moneycorp.com/en-gb/about-us",
-    "https://www.moneycorp.com/en-gb/about-us/help-and-support/personal-FAQs",
-    "https://www.moneycorp.com/en-gb/help-support/business-security-zone",
-    "https://www.moneycorp.com/en-gb/help-support",
-    "https://www.moneycorp.com/en-gb/help-support/security"
-  ],
-  "quotes": [
+  "fetchedAt": "2026-10-08T08:18:46.116Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
     {
-      "topic": "fees",
-      "text": "However, they can charge very high fees, with some banks requesting up to £40 per international payment.",
-      "url": "https://www.moneycorp.com/en-gb/about-us/help-and-support/personal-FAQs"
+      "url": "https://www.moneycorp.com/en-gb/help-support/personal-faq/",
+      "status": "error",
+      "reason": "HTTP 403"
     },
     {
-      "topic": "safeguarding",
-      "text": "Funds we hold for settlement of FX contracts, variation margin, initial margin and the proceeds of FX contracts awaiting delivery are safeguarded in segregated client bank accounts with highly rated UK banks.",
-      "url": "https://www.moneycorp.com/en-gb/about-us/help-and-support/personal-FAQs"
+      "url": "https://www.moneycorp.com/en-gb/personal/moneycorp-online/",
+      "status": "error",
+      "reason": "HTTP 403"
     },
     {
-      "topic": "safeguarding",
-      "text": "One further point to note is that we are not able to use safeguarded funds for any other purpose.",
-      "url": "https://www.moneycorp.com/en-gb/about-us/help-and-support/personal-FAQs"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "As an Authorised Payment Institution, we are required to safeguard customer funds held overnight (or longer) into segregated client accounts provided such funds are held in respect of a payment service.",
-      "url": "https://www.moneycorp.com/en-gb/help-support/business-security-zone"
+      "url": "https://www.moneycorp.com/en-gb/",
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ],
-  "attempts": []
+  "error": "HTTP 403"
 }

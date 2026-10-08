@@ -1,6 +1,6 @@
 {
   "slug": "first-direct",
-  "fetchedAt": "2026-10-08T02:24:47.073Z",
+  "fetchedAt": "2026-10-08T08:07:30.208Z",
   "status": "found",
   "pages": [
     "https://www.firstdirect.com/travel-and-international/international-payments/",
@@ -18,28 +18,34 @@
   ],
   "quotes": [
     {
-      "topic": "limits",
-      "text": "Online : up to £50,000 (or currency equivalent) per day.",
+      "topic": "fees",
+      "text": "Payment to an HSBC account anywhere in the world - No fee .",
       "url": "https://www.firstdirect.com/travel-and-international/international-payments/",
-      "context": "How much money can I send outside the UK?"
+      "context": "International payments — Our fees explained — Sending money outside the UK"
     },
     {
-      "topic": "limits",
-      "text": "Phone : up to 5,000,000 USD (or currency equivalent) per day.",
+      "topic": "fees",
+      "text": "Euro payment within the EEA (European Economic Area) - No fee .",
       "url": "https://www.firstdirect.com/travel-and-international/international-payments/",
-      "context": "How much money can I send outside the UK?"
+      "context": "International payments — Our fees explained — Sending money outside the UK"
+    },
+    {
+      "topic": "fees",
+      "text": "Euro payment outside EEA - £5 fee .",
+      "url": "https://www.firstdirect.com/travel-and-international/international-payments/",
+      "context": "International payments — Our fees explained — Sending money outside the UK"
     },
     {
       "topic": "speed",
       "text": "International payments will normally be received by the next working day for accounts in the EEA (European Economic Area).",
       "url": "https://www.firstdirect.com/travel-and-international/international-payments/",
-      "context": "How long will it take to send money outside the UK?"
+      "context": "International payments — How long will it take to send money outside the UK?"
     },
     {
-      "topic": "fees",
-      "text": "With fees from as little as £5.",
-      "url": "https://www.firstdirect.com/help/bank-accounts/payments-and-transfers/",
-      "context": "Sending money outside the UK"
+      "topic": "speed",
+      "text": "For countries outside of the EEA, this normally takes up to 4 working days but can sometimes be longer.",
+      "url": "https://www.firstdirect.com/travel-and-international/international-payments/",
+      "context": "International payments — How long will it take to send money outside the UK?"
     }
   ],
   "attempts": []

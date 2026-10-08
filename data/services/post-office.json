@@ -1,25 +1,94 @@
 {
   "slug": "post-office",
-  "fetchedAt": "2026-10-08T02:23:02.351Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
+  "fetchedAt": "2026-10-08T08:03:20.871Z",
+  "status": "found",
+  "pages": [
+    "https://www.postoffice.co.uk/international-money-transfer",
+    "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+    "https://www.postoffice.co.uk/",
+    "https://www.postoffice.co.uk/help-support/money-transfer",
+    "https://www.postoffice.co.uk/help-support",
+    "https://www.postoffice.co.uk/help-support/national-lottery",
+    "https://www.postoffice.co.uk/help-support/moneygram",
+    "https://www.postoffice.co.uk/help-support/international-driving-permits",
+    "https://www.postoffice.co.uk/help-support/international-phonecards",
+    "https://www.postoffice.co.uk/help-support/posting",
+    "https://www.postoffice.co.uk/help-support/drop-and-go",
+    "https://www.postoffice.co.uk/help-support/atm-faqs"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "Exchange rates apply. Fees and rates are subject to change without notice; see terms for details. 1 GBP -",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "Exchange rate"
+    },
+    {
+      "topic": "fees",
+      "text": "Online rates are indicative; final transfer fees and exchange rates are shown before you confirm your transfer",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "Send money online — Prefer to send money in branch?"
+    },
+    {
+      "topic": "payout",
+      "text": "Send money to bank accounts or for cash pick-up in minutes 1 from hundreds of thousands of agent locations worldwide 3",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "Fast, flexible, transparent money transfers"
+    },
+    {
+      "topic": "payout",
+      "text": "You can send money to any Western Union location for cash pickup or directly to your recipient’s bank account or mobile phone.",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "How do I send money online?"
+    },
+    {
+      "topic": "speed",
+      "text": "If you're sending money for someone to pick up in cash, it can be ready in as little as 15 to 30 minutes, later the same day or the next day.",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "How long does it take to send money online?"
+    },
+    {
+      "topic": "speed",
+      "text": "If you're sending to a bank account, it usually takes up to two working days, depending on the receiving country. Delivery times shown on the ‘send money’ page are estimates of the time to deliver the money once funds are received. They don’t include the payment processing time. And they vary by destination, payment method and the payout method used.",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "context": "How long does it take to send money online?"
+    },
+    {
+      "topic": "payout",
+      "text": "Make sure your receiver has activated a mobile wallet with one of our partner mobile operators in their country.",
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "context": "Common International Money Transfer questions — Know before you send — How long does it take to send money online?"
+    },
+    {
+      "topic": "speed",
+      "text": "If you send money to a bank account, your money is generally available in up two days, depending on your receiver’s country.",
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "context": "Common International Money Transfer questions — Know before you send — How long does it take to send money online?"
+    },
+    {
+      "topic": "limits",
+      "text": "You can send up to 799.99 GBP per transfer from the United Kingdom if your identity hasn’t been verified.",
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "context": "Sending money — Sending limits and methods — How much can I send online?"
+    },
+    {
+      "topic": "limits",
+      "text": "You can transfer up to 50,000 GBP when sending from your bank account directly to the receiver’s bank account. The limit may not be available for all receiver countries and is subject to restrictions based on various factors.",
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "context": "Sending large transfers — About larger money transfers — What is the limit of the amount I can transfer through Western Union?"
+    },
+    {
+      "topic": "identity",
+      "text": "To meet our regulatory and compliance obligations, we may sometimes collect additional information and/or documents, which will include documents to validate your occupation and the source of funds.",
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "context": "Sending large transfers — About larger money transfers — How do I send a large amount money transfer, and do I need to provide any additional documents?"
+    }
+  ],
   "attempts": [
     {
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.postoffice.co.uk/",
+      "url": "https://www.postoffice.co.uk/mail/international-services",
       "status": "error",
       "reason": "HTTP 403"
     }
-  ],
-  "error": "HTTP 403"
+  ]
 }

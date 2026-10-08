@@ -20,7 +20,7 @@ export default function Page() {
       
       <H2>The rules</H2>
       <ul className="mt-3 max-w-prose list-disc space-y-2 pl-5">
-        <li>Listing in the directory is free. Every provider we can verify is listed.</li>
+        <li>Listing in the directory is free. Inclusion is not verification or endorsement.</li>
         <li>
           No provider can pay to be listed, to change its position, or to change any fact on
           its profile.
@@ -30,8 +30,9 @@ export default function Page() {
           profile.
         </li>
         <li>
-          Whether we are paid by a provider never affects its FCA, Companies House or
-          complaints data, which come straight from those sources.
+          Whether we are paid by a provider never affects its Companies House record,
+          complaints data or the quotations we collect. FCA Register results are shown only
+          in the live lookup tool and are not copied into profiles.
         </li>
       </ul>
 

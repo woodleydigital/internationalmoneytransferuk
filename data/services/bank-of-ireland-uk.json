@@ -1,6 +1,6 @@
 {
   "slug": "bank-of-ireland-uk",
-  "fetchedAt": "2026-10-08T02:24:02.338Z",
+  "fetchedAt": "2026-10-08T08:06:20.921Z",
   "status": "found",
   "pages": [
     "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
@@ -19,14 +19,24 @@
   "quotes": [
     {
       "topic": "fees",
-      "text": "1 The £15 charge for GBP to Ireland will not apply when the transfer is to a Bank of Ireland account.",
-      "url": "https://www.bankofirelanduk.com/rates-and-fees/international-payments/"
+      "text": "Czech Republic CZK/GBP £15 £15",
+      "url": "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
+      "context": "International Payee Countries Available Currency Charge",
+      "table": true
     },
     {
-      "topic": "payout",
-      "text": "They contact you to tell you that their bank account details have changed and to ask you to send all payments to a new account.",
-      "url": "https://www.bankofirelanduk.com/help-and-support/faqs/general-queries/",
-      "context": "Feeling that you’re being pressured to pay for something at a highly inflated price?"
+      "topic": "fees",
+      "text": "Liechtenstein GBP N/A £15",
+      "url": "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
+      "context": "International Payee Countries Available Currency Charge",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "Slovak Republic GBP N/A £15",
+      "url": "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
+      "context": "International Payee Countries Available Currency Charge",
+      "table": true
     }
   ],
   "attempts": []

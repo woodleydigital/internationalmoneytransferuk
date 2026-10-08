@@ -15,8 +15,10 @@ export function loadServiceRecord(slug: string, now = new Date()): ServiceRecord
     const quotes = mergeQuotes([], rec.quotes.flatMap((q) => {
       const url = new URL(q.url);
       if (!/^https?:$/.test(url.protocol)) return [];
-      const text = q.context ? `[IMT-H]${q.context}[/IMT-H]\n${q.text}` : q.text;
-      return findPageServiceQuotes(text, q.url).filter((candidate) => candidate.topic === q.topic);
+      const text = q.table ? `[IMT-T]${q.context ?? ""}[/IMT-T]\n${q.text}\n[IMT-T-END]` : q.context ? `[IMT-H]${q.context}[/IMT-H]\n${q.text}` : q.text;
+      // Apply corrected classification too: old fee rows labelled "limits"
+      // must move to fees rather than silently disappear or retain that label.
+      return findPageServiceQuotes(text, q.url);
     }));
     return quotes.length ? { ...rec, quotes } : null;
   } catch {

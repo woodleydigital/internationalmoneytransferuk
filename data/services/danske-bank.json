@@ -1,11 +1,9 @@
 {
   "slug": "danske-bank",
-  "fetchedAt": "2026-10-08T02:26:53.995Z",
+  "fetchedAt": "2026-10-08T08:12:17.314Z",
   "status": "found",
   "pages": [
     "https://danskebank.co.uk/personal/help/payments/foreign-payments",
-    "https://danskebank.co.uk/personal",
-    "https://danskebank.co.uk/personal/help/feedback",
     "https://danskebank.co.uk/personal/products/current-accounts/overdrafts/cost-calculator",
     "https://danskebank.co.uk/business/help/rising-cost-of-doing-business",
     "https://danskebank.co.uk/personal/help/money-worries/managing-repayments/support-with-your-mortgage-repayments",
@@ -14,14 +12,28 @@
     "https://danskebank.co.uk/personal/help/upload-your-documents",
     "https://danskebank.co.uk/personal/help/useful-numbers",
     "https://danskebank.co.uk/personal/help/cards/cards-faq",
-    "https://danskebank.co.uk/personal/help/money-worries"
+    "https://danskebank.co.uk/personal/help/money-worries",
+    "https://danskebank.co.uk/personal/help/additional-customer-support",
+    "https://danskebank.co.uk/personal/help/bereavement-guide"
   ],
   "quotes": [
     {
       "topic": "fees",
       "text": "If you hold a Danske account abroad, you can transfer funds into it, free of charge, using eBanking.",
-      "url": "https://danskebank.co.uk/personal/help/payments/foreign-payments"
+      "url": "https://danskebank.co.uk/personal/help/payments/foreign-payments",
+      "context": "Transferring money abroad"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://danskebank.co.uk/",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://danskebank.co.uk/personal/help/feedback",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
+    }
+  ]
 }

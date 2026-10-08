@@ -1,6 +1,6 @@
 {
   "slug": "virgin-money",
-  "fetchedAt": "2026-10-08T02:23:02.352Z",
+  "fetchedAt": "2026-10-08T08:03:20.873Z",
   "status": "found",
   "pages": [
     "https://uk.virginmoney.com/current-accounts/making-payments/",
@@ -17,9 +17,67 @@
   ],
   "quotes": [
     {
+      "topic": "speed",
+      "text": "International payment (SWIFT) n/a n/a Same day £25",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "Compare payment options — Payment type Daily limit Transaction limit Timeline Cost to customers",
+      "table": true
+    },
+    {
+      "topic": "speed",
+      "text": "International payment (SEPA) n/a n/a Next day Free",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "Compare payment options — Payment type Daily limit Transaction limit Timeline Cost to customers",
+      "table": true
+    },
+    {
+      "topic": "availability",
+      "text": "To make a payment, you need a Virgin Money current account with a sort code starting 82 or 05 or a linked foreign currency account.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SWIFT"
+    },
+    {
+      "topic": "speed",
+      "text": "For a SWIFT payment to be sent on the same day we receive it, we must receive the form and the required ID Link opens in a new window before 10.30am.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SWIFT — Ways to make SWIFT payments"
+    },
+    {
+      "topic": "identity",
+      "text": "You'll then need to upload your ID Link opens in a new window , such as your driving licence or passport.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SWIFT — Ways to make SWIFT payments"
+    },
+    {
+      "topic": "fees",
+      "text": "Swift Transaction Fee £25",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SWIFT — Channel Fee",
+      "table": true
+    },
+    {
+      "topic": "payout",
+      "text": "If you send pounds to an Australian bank account, the receiving bank has to change the payment into Australian dollars to pay it into your payee’s account.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SWIFT — SWIFT payments sent in pounds"
+    },
+    {
+      "topic": "availability",
+      "text": "To make a payment, you need a Virgin Money current account with a sort code starting 82 or 05 (or a linked foreign currency account).",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SEPA"
+    },
+    {
+      "topic": "identity",
+      "text": "You'll then need to upload your ID Link opens in a new window , such as your driving licence or passport.",
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "International payments using SEPA — Ways to make SEPA payments"
+    },
+    {
       "topic": "availability",
       "text": "If your sort code starts 08, you can’t receive international payments to your account.",
-      "url": "https://uk.virginmoney.com/current-accounts/making-payments/"
+      "url": "https://uk.virginmoney.com/current-accounts/making-payments/",
+      "context": "Receiving international payments"
     }
   ],
   "attempts": []

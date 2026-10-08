@@ -1,26 +1,7 @@
 {
   "slug": "natwest",
   "url": "https://www.natwest.com/",
-  "fetchedAt": "2026-10-08T02:23:55.581Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "27. National Westminster Bank Plc. Registered in England and Wales (Registered Number 929027), Registered Office: 250 Bishopsgate, London EC2M 4AA. Authorised by the PRA and regulated by the FCA and the PRA. NatWest is entered on the Financial Services Register and its Register number is 121878. The Financial Services Register can be accessed at www.fca.org.uk/register. NatWest’s registered VAT number is GB 243852752.",
-      "frns": [
-        "121878"
-      ],
-      "companyNumbers": [
-        "00929027"
-      ],
-      "url": "https://www.natwest.com/website-terms-and-conditions.html"
-    },
-    {
-      "text": "28. NatWest Markets Plc. Registered in Scotland No 90312 with limited liability. Registered Office: 36 St Andrew Square, Edinburgh EH2 2YB. Authorised by the PRA and regulated by the FCA and PRA. NatWest Markets Plc is entered in the FCA's Register and its Register number is 121882. The FCA's Register can be accessed at www.fca.org.uk/register/. NatWest Markets Plc's registered VAT number is GB 243852752. NatWest Markets Plc is also registered as a swap dealer with the Commodity Futures Trading Commission.",
-      "frns": [
-        "121882"
-      ],
-      "companyNumbers": [],
-      "url": "https://www.natwest.com/website-terms-and-conditions.html"
-    }
-  ]
+  "fetchedAt": "2026-10-08T08:05:32.680Z",
+  "status": "none",
+  "statements": []
 }

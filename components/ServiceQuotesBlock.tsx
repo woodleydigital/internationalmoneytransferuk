@@ -35,7 +35,7 @@ export function ServiceQuotesBlock({ name, record }: { name: string; record: Ser
               .map((q) => (
                 <li key={`${q.url}:${q.text}`}>
                   <blockquote cite={q.url} className="border-l-4 border-line-strong bg-wash px-4 py-2">
-                    {q.context && <p className="mb-1 text-xs text-muted">Source heading: {q.context}</p>}
+                    {q.context && <p className="mb-1 text-xs text-muted">Source context: {q.context}</p>}
                     <p>{q.text}</p>
                     <p className="mt-1 text-xs text-muted">
                       {"From "}

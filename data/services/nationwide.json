@@ -1,6 +1,6 @@
 {
   "slug": "nationwide",
-  "fetchedAt": "2026-10-08T02:24:22.943Z",
+  "fetchedAt": "2026-10-08T08:07:10.944Z",
   "status": "found",
   "pages": [
     "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
@@ -20,59 +20,56 @@
     {
       "topic": "limits",
       "text": "There’s no limit to how much you can send.",
-      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How to send and receive international payments — What is a SWIFT payment?"
     },
     {
       "topic": "fees",
       "text": "The fee to send an international payment varies depending on the type of payment and the account you hold.",
       "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
-      "context": "Sending international payments"
+      "context": "How to send and receive international payments — How much do international payments cost? — Sending international payments"
     },
     {
       "topic": "fees",
-      "text": "So, we're refunding our £15 charge for payments to Ukraine.",
+      "text": "We charge a £15 transaction fee for SWIFT payments .",
       "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
-      "context": "Sending SWIFT payments to Ukraine"
+      "context": "How to send and receive international payments — How much do international payments cost? — Transaction fee for SWIFT payments"
     },
     {
       "topic": "fees",
-      "text": "We will display the total charge of the 2.2% currency conversion mark-up when you request to make a payment with us.",
-      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
-    },
-    {
-      "topic": "payout",
-      "text": "You send $100 to a foreign bank account.",
-      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments"
+      "text": "If you have a FlexBasic current account and you’re making a SWIFT payment in pounds to the EEA, the £15 fee will be refunded after the transaction is complete.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How to send and receive international payments — How much do international payments cost? — Transaction fee for SWIFT payments"
     },
     {
       "topic": "speed",
       "text": "If you’re sending euros in the SEPA Zone, your payment will arrive by the end of the next working day.",
       "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
-      "context": "How long does it take to send money internationally?"
+      "context": "How to send and receive international payments — How long does it take to send money internationally?"
     },
     {
       "topic": "speed",
       "text": "If you’re sending a currency other than euros within the EEA (opens in a new window) or the UK, your payment will normally arrive within 4 working days.",
       "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
-      "context": "How long does it take to send money internationally?"
+      "context": "How to send and receive international payments — How long does it take to send money internationally?"
+    },
+    {
+      "topic": "speed",
+      "text": "If you’re sending a payment outside the EEA, your payment will take longer than 4 working days, depending on the country and bank.",
+      "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
+      "context": "How to send and receive international payments — How long does it take to send money internationally?"
     },
     {
       "topic": "limits",
       "text": "There’s no limit to how much you can send internationally.",
       "url": "https://www.nationwide.co.uk/help/payments/swift-sepa-international-payments",
-      "context": "How much money can you send internationally?"
+      "context": "How to send and receive international payments — How much money can you send internationally?"
     },
     {
       "topic": "limits",
       "text": "There are no limits on how much you can send internationally.",
       "url": "https://www.nationwide.co.uk/help/payments/transfer-limits-and-timescales",
-      "context": "Which payments are limited?"
-    },
-    {
-      "topic": "speed",
-      "text": "Once the payment leaves your account, the money normally arrives within 2 hours.",
-      "url": "https://www.nationwide.co.uk/help/payments/send-money-to-another-account",
-      "context": "What to do if a bank transfer was not received"
+      "context": "Payment and transfer limits — Sending money to another person or provider using your current account — Which payments are limited?"
     }
   ],
   "attempts": []

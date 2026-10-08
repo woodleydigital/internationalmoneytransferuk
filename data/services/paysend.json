@@ -1,22 +1,27 @@
 {
   "slug": "paysend",
-  "fetchedAt": "2026-10-08T02:26:02.955Z",
+  "fetchedAt": "2026-10-08T08:10:28.964Z",
   "status": "found",
   "pages": [
+    "https://help.paysend.com/hc/en-gb/articles/29196188595741-Understanding-Paysend-fees",
+    "https://help.paysend.com/hc/en-gb/categories/5092697897501-Sending-money",
     "https://paysend.com/en-gb",
-    "https://paysend.com/send",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-azerbaijan",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-bangladesh",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-brazil",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-china",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-colombia",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-georgia",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-ukraine",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-india",
-    "https://paysend.com/en-gb/send-money/from-united-kingdom-to-kazakhstan"
+    "https://help.paysend.com/hc/en-gb/articles/32061158746269-Why-does-my-money-transfer-show-as-complete-when-the-money-hasn-t-arrived-yet",
+    "https://help.paysend.com/hc/en-gb/categories/28052893947165-Help-More",
+    "https://help.paysend.com/hc/en-gb/articles/21083894675229-Why-does-my-money-transfer-show-as-complete-when-the-money-hasn-t-arrived-yet",
+    "https://help.paysend.com/hc/en-gb/articles/21058933272221-How-to-send-money-via-a-regular-SEPA-bank-transfer",
+    "https://help.paysend.com/hc/en-gb/articles/20452304793629-How-to-check-if-I-can-send-money-to-a-particular-country",
+    "https://help.paysend.com/hc/en-gb/sections/5989355466013-Fees-Exchange-rates",
+    "https://help.paysend.com/hc/en-gb/articles/5989311261341-Understanding-Paysend-fees",
+    "https://help.paysend.com/hc/en-gb/articles/21060875270685-Cash-pickup-in-Latin-America-Mexico-Dominican-Republic-Guatemala-Honduras-El-Salvador",
+    "https://help.paysend.com/hc/en-gb/articles/31425930504221-How-can-I-cancel-a-cash-pickup-transfer"
   ],
   "quotes": [
+    {
+      "topic": "fees",
+      "text": "At Paysend, we believe in transparent pricing. That’s why our international transfer fees are fixed, simple, and shown upfront before you send. The exact amount may vary depending on the country you’re sending from and the delivery method you choose.",
+      "url": "https://help.paysend.com/hc/en-gb/articles/29196188595741-Understanding-Paysend-fees"
+    },
     {
       "topic": "countries",
       "text": "Send to 170+ countries straight from your phone",
@@ -30,67 +35,26 @@
       "context": "International transfer"
     },
     {
+      "topic": "speed",
+      "text": "In most cases, funds arrive instantly, but it can take up to 3 business days for the recipient’s bank to finish processing the transfer.",
+      "url": "https://help.paysend.com/hc/en-gb/articles/32061158746269-Why-does-my-money-transfer-show-as-complete-when-the-money-hasn-t-arrived-yet"
+    },
+    {
+      "topic": "speed",
+      "text": "Delivery times depend on the recipient’s bank and can range from a few minutes to up to 3 working days.",
+      "url": "https://help.paysend.com/hc/en-gb/articles/21058933272221-How-to-send-money-via-a-regular-SEPA-bank-transfer"
+    },
+    {
       "topic": "countries",
-      "text": "Transfer money online to over 100+ countries around the world.",
-      "url": "https://paysend.com/send",
-      "context": "International money transfer from the United States"
-    },
-    {
-      "topic": "fees",
-      "text": "Knowing the exact transfer fee and estimated delivery time upfront gives you confidence before you send.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia",
-      "context": "Fast, secure & low-cost way to send money to Armenia"
-    },
-    {
-      "topic": "speed",
-      "text": "Enter a few details, tap send, and see the money arrive to your recipient in minutes and without them having to set up an account with Paysend.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia",
-      "context": "Enjoy a quick, easy and secure way to send worldwide"
-    },
-    {
-      "topic": "speed",
-      "text": "Enjoy international money transfers certified by Mastercard, Visa, UnionPay where money arrives in minutes in over 95% cases.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia"
-    },
-    {
-      "topic": "fees",
-      "text": "If you’re happy with the exchange rate and low transfer fee, confirm your transaction.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-armenia"
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money online to Mastercard, Visa, UnionPay cards, bank accounts or digital wallets in Bangladesh starting from 0 GBP.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-bangladesh",
-      "context": "Send money to Bangladesh"
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money online to bank accounts* or digital wallets in Brazil starting from 0 GBP.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-brazil",
-      "context": "Send money to Brazil"
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money online to Mastercard, Visa, UnionPay cards, bank accounts or via Alipay and WeChat in China starting from 0 GBP.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-china",
-      "context": "Send money to China"
-    },
-    {
-      "topic": "speed",
-      "text": "Money delivered to recipient’s bank account via UPI in a few minutes.",
-      "url": "https://paysend.com/en-gb/send-money/from-united-kingdom-to-india"
+      "text": "You can send money from 49 countries and receive money in over 170 countries. The countries where you can send and receive money may change depending on where you registered with Paysend.",
+      "url": "https://help.paysend.com/hc/en-gb/articles/20452304793629-How-to-check-if-I-can-send-money-to-a-particular-country"
     }
   ],
   "attempts": [
     {
-      "url": "https://help.paysend.com/hc/en-gb/articles/29196188595741-Understanding-Paysend-fees",
+      "url": "https://help.paysend.com/hc/en-gb/related/click",
       "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://help.paysend.com/hc/en-gb/categories/5092697897501-Sending-money",
-      "status": "error",
-      "reason": "HTTP 403"
+      "reason": "HTTP 400"
     }
   ]
 }

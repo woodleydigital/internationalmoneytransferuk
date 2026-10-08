@@ -1,7 +1,28 @@
 {
   "slug": "bank-of-scotland",
   "url": "https://www.bankofscotland.co.uk/",
-  "fetchedAt": "2026-10-08T02:26:32.604Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-10-08T08:11:32.825Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Bank of Scotland plc. Registered in Scotland No. SC327000. Registered Office: The Mound, Edinburgh EH1 1YZ. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 169628.​",
+      "frns": [
+        "169628"
+      ],
+      "companyNumbers": [
+        "SC327000"
+      ],
+      "url": "https://www.bankofscotland.co.uk/helpcentre/everyday-banking/payments-and-transfers/payment-limits.html"
+    },
+    {
+      "text": "Bank of Scotland plc. Registered in Scotland No. SC327000. Registered Office: The Mound, Edinburgh EH1 1YZ. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 169628.",
+      "frns": [
+        "169628"
+      ],
+      "companyNumbers": [
+        "SC327000"
+      ],
+      "url": "https://www.bankofscotland.co.uk/investing/help-and-guidance/already-investing-with-bos/trading-support/international-trading.html"
+    }
+  ]
 }

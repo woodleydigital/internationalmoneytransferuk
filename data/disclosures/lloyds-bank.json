@@ -1,7 +1,16 @@
 {
   "slug": "lloyds-bank",
   "url": "https://www.lloydsbank.com/",
-  "fetchedAt": "2026-10-08T02:23:30.000Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-10-08T08:04:24.731Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Lloyds and Lloyds Bank are trading names of Lloyds Bank plc. Registered office: 25 Gresham Street, London EC2V 7HN. Registered in England and Wales No. 2065. Lloyds Bank plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 119278.",
+      "frns": [
+        "119278"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.lloydsbank.com/help-guidance/everyday-banking/mobile-banking-app/app-download.html"
+    }
+  ]
 }

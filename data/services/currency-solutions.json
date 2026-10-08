@@ -1,15 +1,42 @@
 {
   "slug": "currency-solutions",
-  "fetchedAt": "2026-10-08T02:25:57.464Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
-  "attempts": [
+  "fetchedAt": "2026-10-08T08:21:07.534Z",
+  "status": "found",
+  "pages": [
+    "https://www.currencysolutions.com/regulatory/",
+    "https://www.currencysolutions.com/",
+    "https://www.currencysolutions.com/personal/",
+    "https://www.currencysolutions.com/help/",
+    "https://www.currencysolutions.com/legal/safeguarding-funds/",
+    "https://www.currencysolutions.com/help/are-there-any-third-party-fees-associated-with-currency-solutions/",
+    "https://www.currencysolutions.com/help/what-are-my-transaction-limits-with-currency-solutions/",
+    "https://www.currencysolutions.com/help/what-fees-does-currency-solutions-charge/",
+    "https://www.currencysolutions.com/help/how-long-does-it-take-to-open-a-multi-currency-account-with-currency/",
+    "https://www.currencysolutions.com/help/what-identification-documents-are-required-by-currency-solutions/",
+    "https://www.currencysolutions.com/help/can-someone-talk-me-through-the-transfer-process/"
+  ],
+  "quotes": [
     {
-      "url": "https://www.currencysolutions.co.uk/",
-      "status": "redirected",
-      "reason": "Redirected to www.currencysolutions.com"
+      "topic": "safeguarding",
+      "text": "Currency Solutions Limited segregates and safeguards customers money as per regulation 23 of the Payments Services Regulations 2017.",
+      "url": "https://www.currencysolutions.com/regulatory/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Your funds are safeguarded by our FCA-regulated e-money partners at a credit institution.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "In the unlikely event of insolvency, safeguarded funds ensure added protection.",
+      "url": "https://www.currencysolutions.com/"
+    },
+    {
+      "topic": "fees",
+      "text": "For instance, if you intend to send £6,000 to an overseas bank account, the full £6,000 will leave our bank account.",
+      "url": "https://www.currencysolutions.com/help/are-there-any-third-party-fees-associated-with-currency-solutions/",
+      "context": "Are there any third-party fees associated with international payments?"
     }
   ],
-  "error": "Redirected to www.currencysolutions.com"
+  "attempts": []
 }

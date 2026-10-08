@@ -1,6 +1,6 @@
 {
   "slug": "metro-bank",
-  "fetchedAt": "2026-10-08T02:25:06.430Z",
+  "fetchedAt": "2026-10-08T08:08:18.664Z",
   "status": "found",
   "pages": [
     "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
@@ -21,43 +21,55 @@
       "topic": "payout",
       "text": "An international payment is a secure way to send money from your account to a bank account in another country or to receive money.",
       "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": " Make international payments from your account and receive money from outside the UK "
+      "context": "International payments – personal accounts — Make international payments from your account and receive money from outside the UK"
+    },
+    {
+      "topic": "fees",
+      "text": "£0.20 for a Current Account or the equivalent from a Foreign Currency Account per transaction*",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SEPA (Single Euro Payment Area) – send a Euro payment to participating countries (take a look at the European Payments Council for a full list of countries)",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "A 3% margin is applied to transactions that include a foreign exchange conversion **",
+      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SEPA (Single Euro Payment Area) – send a Euro payment to participating countries (take a look at the European Payments Council for a full list of countries)",
+      "table": true
     },
     {
       "topic": "speed",
       "text": "Payments usually arrive within 1 to 2 working days",
       "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SEPA (Single Euro Payment Area) – send a Euro payment to participating countries (take a look at the European Payments Council for a full list of countries)",
+      "table": true
     },
     {
       "topic": "speed",
-      "text": "Payments that are submitted by 2pm in store and via our call center will be processed the same day.",
+      "text": "Payments that are submitted by 2pm in store and via our call center will be processed the same day. Payments received after 2pm in store and via our call center will be processed on the next working day",
       "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SEPA (Single Euro Payment Area) – send a Euro payment to participating countries (take a look at the European Payments Council for a full list of countries)",
+      "table": true
     },
     {
       "topic": "speed",
-      "text": "Payments received after 2pm in store and via our call center will be processed on the next working day",
+      "text": "Payments submitted on a weekend, or a Bank Holiday will be processed on the next working day",
       "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment?"
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SEPA (Single Euro Payment Area) – send a Euro payment to participating countries (take a look at the European Payments Council for a full list of countries)",
+      "table": true
     },
     {
       "topic": "fees",
-      "text": "This exchange rate will include a 3% margin.",
+      "text": "£25 from GBP account, $25 from USD account or &euro;20 from a Euro account per transaction*",
       "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "What are the fees for receiving an international payment?"
+      "context": "In store. Find your local store using our store locator . What details will I need to make an international payment? — Type of payment Charge (for all channels) Timescales[/IMT-T] SWIFT - outside of the UK (or within the UK if the payment is not in Pound Sterling)",
+      "table": true
     },
     {
-      "topic": "fees",
-      "text": "An intermediary bank may deduct fees from the amount before you receive it.",
-      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "What are the fees for receiving an international payment?"
-    },
-    {
-      "topic": "fees",
-      "text": "When the payment reaches your account our exchange rate will be applied, which will include a 3% margin*.",
-      "url": "https://www.metrobankonline.co.uk/ways-to-bank/i-want-some-information-about/international-payments-personal-accounts/",
-      "context": "What are the fees for receiving an international payment?"
+      "topic": "identity",
+      "text": "Just come in to one of our stores or apply online - all you’ll need is proof of your identity and up to two documents for proof of address.",
+      "url": "https://www.metrobankonline.co.uk/help-and-support/",
+      "context": "See more in-depth information and step-by-step guides for cancelling your card. I don't recognise a card payment, what can I do?"
     }
   ],
   "attempts": []

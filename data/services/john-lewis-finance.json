@@ -1,40 +1,72 @@
 {
   "slug": "john-lewis-finance",
-  "fetchedAt": "2026-10-08T02:24:10.609Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
+  "fetchedAt": "2026-10-08T08:06:44.753Z",
+  "status": "found",
+  "pages": [
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666685406225-Are-there-fees-for-sending-money",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33373689201553-How-long-do-transfers-take",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33373333692945-How-do-I-cancel-my-money-transfer",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666867368977-How-do-I-send-money-with-International-Payments-at-John-Lewis-Money",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/35264440410129-How-much-money-can-I-send-with-cash-pickup",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203180548881-Sending-money",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203149428241-Tracking-your-transfer",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203131994641-Changes-cancellations-and-refunds",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33203316140305-What-rate-will-I-get-when-I-send-money"
+  ],
+  "quotes": [
+    {
+      "topic": "fees",
+      "text": "There are no fees to send money with us.",
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666685406225-Are-there-fees-for-sending-money"
+    },
+    {
+      "topic": "speed",
+      "text": "You’ll need to allow up to 3 business days for these payments to reach us.",
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33373689201553-How-long-do-transfers-take",
+      "context": "Choosing the fastest payment option"
+    },
+    {
+      "topic": "payout",
+      "text": "You can always send money to your recipient's bank account",
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666867368977-How-do-I-send-money-with-International-Payments-at-John-Lewis-Money"
+    },
+    {
+      "topic": "payout",
+      "text": "If cash pickup shows as a delivery option, your transfer is within the send and recipient limits .",
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/35264440410129-How-much-money-can-I-send-with-cash-pickup"
+    },
+    {
+      "topic": "payout",
+      "text": "If you can't choose cash pickup as a delivery option, it means that cash pickup isn't available for your transfer.",
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/35264440410129-How-much-money-can-I-send-with-cash-pickup"
+    }
+  ],
   "attempts": [
-    {
-      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666685406225-Are-there-fees-for-sending-money",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33373689201553",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
     {
       "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33665806979345",
       "status": "error",
-      "reason": "HTTP 403"
+      "reason": "The operation was aborted due to timeout"
     },
     {
       "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666867368977",
       "status": "error",
-      "reason": "HTTP 403"
+      "reason": "The operation was aborted due to timeout"
     },
     {
       "url": "https://www.johnlewisfinance.com/",
       "status": "error",
       "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666685406225",
+      "status": "error",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/related/click",
+      "status": "error",
+      "reason": "HTTP 400"
     }
-  ],
-  "error": "HTTP 403"
+  ]
 }
