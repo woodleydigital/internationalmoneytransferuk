@@ -18,7 +18,7 @@ live prices for transfer services. It does not give personalised financial advic
 | Area | Evidence and limitation |
 | --- | --- |
 | Original utility | User-selected comparisons combine service terms with matched company and complaint records. The calculator performs documented calculations from user inputs and a dated reference rate. Shared-company links join exact company numbers. |
-| Source fidelity | The source reprocessing check confirmed all 432 retained quotations occur in captured source text. This checks quotation fidelity, not whether a provider's claim is true. |
+| Source fidelity | The source reprocessing check confirmed all 431 retained quotations occur in captured source text. This checks quotation fidelity, not whether a provider's claim is true. |
 | Context | Source headings, complete table rows, route/product notes and adjacent timing conditions stay attached. Receiving-only terms are excluded from sending comparisons. Refunds, spending reach, funding deadlines and orphaned examples cannot establish transfer delivery or coverage. |
 | Missing data | Missing complaint counts are not zero. No dataset match does not establish why a business is absent. Missing service data describes the collection, not the provider's capabilities. |
 | Accountability | Matt Woodley is identified as site owner, with his existing background page linked. No fabricated author, expertise, test transfer or human-review claim is used. A public corrections log records substantive fixes. |

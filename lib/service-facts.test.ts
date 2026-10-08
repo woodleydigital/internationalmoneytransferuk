@@ -115,6 +115,12 @@ test("receiving-account context does not label recipient payouts as incoming tra
   assert.equal(quoteContext({topic: "speed",text: "Your recipient receives the money within one working day.",url: "https://example.com/"}).some((s) => s.includes("Receiving payments")), false);
 });
 
+test("a domestic payout sentence cannot borrow international scope from its heading", () => {
+  const q = findPageServiceQuotes("[IMT-H]Sending GBP to countries outside of the UK[/IMT-H]\nYou can also now send GBP to bank accounts in the UK that Wise otherwise can’t support.\nWith Wise, you can send British pounds (GBP) to bank accounts in countries outside of the UK.", "https://example.com/help/articles/sending-gbp/");
+  assert.equal(q.length, 1);
+  assert.match(q[0].text, /countries outside of the UK/);
+});
+
 test("HTML headings stop fee context leaking into an unrelated product section", () => {
   const text = servicePageText('<main><h2>International transfer fees</h2><p>We charge a £5 transfer fee.</p><h2>Credit cards</h2><p>All other payments up to £5,000: £10</p></main>');
   const q = findPageServiceQuotes(text, "https://example.com/international-payments/");

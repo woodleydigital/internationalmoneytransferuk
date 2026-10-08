@@ -48,12 +48,6 @@
     },
     {
       "topic": "payout",
-      "text": "You can also now send GBP to bank accounts in the UK that Wise otherwise can’t support.",
-      "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
-      "context": "Sending GBP to countries outside of the UK"
-    },
-    {
-      "topic": "payout",
       "text": "We send GBP to bank accounts outside of the UK using the Swift payment network .",
       "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
       "context": "Sending GBP to countries outside of the UK"

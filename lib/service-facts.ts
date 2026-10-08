@@ -194,6 +194,7 @@ export function findServiceQuotes(text: string, url: string, context?: string, t
     if (/^(?:Of|And|Or|But)\s/.test(s)) continue;
     if ((s.match(/\(/g) ?? []).length !== (s.match(/\)/g) ?? []).length) continue;
     if (US_ONLY.test(s)) continue;
+    if (/\bto (?:bank )?accounts? in (?:the )?UK\b/i.test(s) && !/\b(?:abroad|overseas|outside (?:of )?(?:the )?UK|international)\b/i.test(s)) continue;
     if (/\b(?:complaints?|holding reply|cancelled|debit(?:ed)?|CHAPS|Faster Payments?|Faster Payment Service|domestic payments?|within the UK|(?:another|other|a) UK bank accounts?|other UK bank accounts?|UK bank transfers?|current account switch|open an? (?:overseas )?bank account|store \d+ currencies|hold (?:and exchange money in |up to )?\d+ currencies|Confirmation of Payee|right place)\b/i.test(s)) continue;
     if (/\b(?:you want to|for example|this is because|handing over cash|cheques?)\b/i.test(s)) continue;
     if (/\b(?:save up to|could save|illustration only|lightning fast|super fast)\b/i.test(s) || /^\(/.test(s)) continue;
