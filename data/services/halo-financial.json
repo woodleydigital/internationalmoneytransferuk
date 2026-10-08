@@ -1,6 +1,6 @@
 {
   "slug": "halo-financial",
-  "fetchedAt": "2026-10-08T02:11:24.755Z",
+  "fetchedAt": "2026-10-08T02:25:52.891Z",
   "status": "error",
   "pages": [],
   "quotes": [],
@@ -8,8 +8,8 @@
     {
       "url": "https://www.halofinancial.com/",
       "status": "error",
-      "reason": "robots.txt HTTP 502"
+      "reason": "fetch failed"
     }
   ],
-  "error": "robots.txt HTTP 502"
+  "error": "fetch failed"
 }

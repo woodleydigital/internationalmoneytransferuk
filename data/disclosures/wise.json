@@ -1,7 +1,7 @@
 {
   "slug": "wise",
   "url": "https://wise.com/gb/",
-  "fetchedAt": "2026-10-08T01:59:13.057Z",
+  "fetchedAt": "2026-10-08T02:23:42.442Z",
   "status": "found",
   "statements": [
     {
@@ -10,6 +10,14 @@
         "900507"
       ],
       "companyNumbers": []
+    },
+    {
+      "text": "Wise Payments Limited is authorised as an Electronic Money Institution (EMI) by the UK Financial Conduct Authority (FCA) with registration number 900507.",
+      "frns": [
+        "900507"
+      ],
+      "companyNumbers": [],
+      "url": "https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country-and-region"
     }
   ]
 }

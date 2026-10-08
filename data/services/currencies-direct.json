@@ -1,52 +1,40 @@
 {
   "slug": "currencies-direct",
-  "fetchedAt": "2026-10-08T02:02:25.504Z",
-  "status": "found",
-  "pages": [
-    "https://help.currenciesdirect.com/en/sending-money/do-i-pay-any-fees-for-sending-money-needs-check",
-    "https://help.currenciesdirect.com/en/sending-money/do-you-limit-how-much-i-can-send",
-    "https://help.currenciesdirect.com/en/sending-money/how-long-does-a-transfer-take",
-    "https://help.currenciesdirect.com/en/privacy-and-security/how-is-my-money-protected",
-    "https://help.currenciesdirect.com/en/money-in-your-account/what-currencies-can-i-add-keep-or-receive-in-my-currencies-direct-wallets",
-    "https://www.currenciesdirect.com/en-us",
-    "https://help.currenciesdirect.com/pt/enviando-dinheiro/voce-limita-quanto-eu-posso-enviar",
-    "https://help.currenciesdirect.com/en/privacy-and-security/safeguarding-the-legal-details",
-    "https://help.currenciesdirect.com/en",
-    "https://help.currenciesdirect.com/en/faq-for-brazil",
-    "https://help.currenciesdirect.com/en/faq-for-brazil/who-can-send-money-to-brazil",
-    "https://help.currenciesdirect.com/en/faq-for-brazil/are-there-any-transaction-limits-for-brazil-based-customers"
-  ],
-  "quotes": [
+  "fetchedAt": "2026-10-08T02:25:29.250Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
     {
-      "topic": "fees",
-      "text": "We don’t charge transfer fees at Currencies Direct.",
       "url": "https://help.currenciesdirect.com/en/sending-money/do-i-pay-any-fees-for-sending-money-needs-check",
-      "context": "Do I pay any fees for sending money?"
+      "status": "error",
+      "reason": "HTTP 403"
     },
     {
-      "topic": "safeguarding",
-      "text": "As an Electronic Money Institution (EMI) we’re covered by a system called safeguarding which has no upper limit, so it’s designed to protect all the money you hold with us.",
+      "url": "https://help.currenciesdirect.com/en/sending-money/do-you-limit-how-much-i-can-send",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://help.currenciesdirect.com/en/sending-money/how-long-does-a-transfer-take",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
       "url": "https://help.currenciesdirect.com/en/privacy-and-security/how-is-my-money-protected",
-      "context": "How is my money protected? "
+      "status": "error",
+      "reason": "HTTP 403"
     },
     {
-      "topic": "safeguarding",
-      "text": "With safeguarding, your money is kept in separate bank accounts to the money we use to run our business.",
-      "url": "https://help.currenciesdirect.com/en/privacy-and-security/how-is-my-money-protected",
-      "context": "How we safeguard your money"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "We have the highest credit rating from Dun and Bradstreet (level 1).",
-      "url": "https://help.currenciesdirect.com/en/privacy-and-security/how-is-my-money-protected",
-      "context": "How we safeguard your money"
-    },
-    {
-      "topic": "countries",
-      "text": "You can send and receive 49 currencies with Currencies Direct.",
       "url": "https://help.currenciesdirect.com/en/money-in-your-account/what-currencies-can-i-add-keep-or-receive-in-my-currencies-direct-wallets",
-      "context": "Which currencies can I add, keep or receive in my Currencies Direct wallets?"
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.currenciesdirect.com/",
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ],
-  "attempts": []
+  "error": "HTTP 403"
 }

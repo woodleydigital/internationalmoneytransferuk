@@ -1,16 +1,43 @@
 {
   "slug": "sendwave",
-  "fetchedAt": "2026-10-05T12:53:47.705Z",
-  "status": "unmatched",
+  "fetchedAt": "2026-10-08T02:49:11.686Z",
+  "status": "matched",
   "match": {
     "query": "https://www.sendwave.com/en-gb",
-    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
+    "rule": "Company number taken from the regulatory statement on the provider's own website, where it was the only stated company and the statement names it.",
     "candidates": [
       {
         "company_number": "07110878",
         "title": "WORLDREMIT LTD."
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
-  }
+    "outcome": "Matched 07110878 from the provider's website"
+  },
+  "company": {
+    "name": "WORLDREMIT LTD.",
+    "number": "07110878",
+    "status": "active",
+    "type": "ltd",
+    "incorporated": "2009-12-22",
+    "sicCodes": [
+      "64999"
+    ],
+    "registeredOffice": "167-169 Great Portland Street, 5th Floor, London, W1W 5PF, United Kingdom",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
+    "accountsOverdue": false,
+    "confirmationStatementOverdue": false,
+    "hasInsolvencyHistory": false,
+    "url": "https://find-and-update.company-information.service.gov.uk/company/07110878"
+  },
+  "psc": [
+    {
+      "name": "Worldremit Holding Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2020-06-02"
+    }
+  ]
 }

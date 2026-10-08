@@ -1,22 +1,8 @@
 {
   "slug": "key-currency",
   "url": "https://www.keycurrency.co.uk/",
-  "fetchedAt": "2026-10-08T02:02:51.180Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Key Currency Limited, Suite 1, CMA House, Newham Road, Truro, TR1 2SU, United Kingdom. Registered in England and Wales (registered no. 09603083)",
-      "frns": [],
-      "companyNumbers": [
-        "09603083"
-      ]
-    },
-    {
-      "text": "Key Currency Limited is authorised and regulated by the Financial Conduct Authority as an Authorised Payment Institution (Financial Services Register no. 753989).",
-      "frns": [
-        "753989"
-      ],
-      "companyNumbers": []
-    }
-  ]
+  "fetchedAt": "2026-10-08T02:34:38.286Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

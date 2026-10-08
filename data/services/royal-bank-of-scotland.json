@@ -1,38 +1,38 @@
 {
   "slug": "royal-bank-of-scotland",
-  "fetchedAt": "2026-10-08T02:04:12.424Z",
+  "fetchedAt": "2026-10-08T02:26:21.519Z",
   "status": "found",
   "pages": [
     "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
     "https://www.rbs.co.uk/",
-    "https://www.rbs.co.uk/life-moments/travel/spending-abroad/travel-account.html",
     "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-    "https://www.rbs.co.uk/life-moments/travel/spending-abroad.html",
     "https://www.rbs.co.uk/support-centre/help-with-your-card/going-abroad.html",
     "https://www.rbs.co.uk/investments/investment-fees.html",
     "https://www.rbs.co.uk/current-accounts/overdrafts/overdraft-calculator.html",
     "https://www.rbs.co.uk/mortgages/existing-customers/mortgage-cost-of-living-support.html",
     "https://www.rbs.co.uk/support-centre.html",
     "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/do-you-have-a-list-of-iban-compliant-countries.html",
-    "https://www.rbs.co.uk/support-centre/general-banking-information/general/purpose-of-payment-code-requirement-for-specific-countries.html"
+    "https://www.rbs.co.uk/support-centre/general-banking-information/general/purpose-of-payment-code-requirement-for-specific-countries.html",
+    "https://www.rbs.co.uk/support-centre/general-banking-information/general/what-countries-are-part-of-sepa.html",
+    "https://www.rbs.co.uk/fraud-and-security/report-fraud.html"
   ],
   "quotes": [
     {
       "topic": "fees",
-      "text": "Monthly account fees and eligibility criteria apply.",
-      "url": "https://www.rbs.co.uk/life-moments/travel/spending-abroad/travel-account.html",
-      "context": "Already enjoy no foreign transaction fees on purchases abroad with your current account?"
-    },
-    {
-      "topic": "fees",
-      "text": "Explore account options Open in new window",
-      "url": "https://www.rbs.co.uk/life-moments/travel/spending-abroad/travel-account.html",
-      "context": "Already enjoy no foreign transaction fees on purchases abroad with your current account?"
-    },
-    {
-      "topic": "fees",
       "text": "There is no fee for sending an international payment online, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
       "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html"
+    },
+    {
+      "topic": "fees",
+      "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
+      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
+      "context": "Fee options when sending a payment"
+    },
+    {
+      "topic": "fees",
+      "text": "We'll charge £10 to cover any foreign bank handling fees.",
+      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
+      "context": "Fee options when sending a payment"
     },
     {
       "topic": "limits",

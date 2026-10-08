@@ -1,7 +1,7 @@
 {
   "slug": "sendwave",
   "url": "https://www.sendwave.com/en-gb",
-  "fetchedAt": "2026-10-08T02:01:58.033Z",
+  "fetchedAt": "2026-10-08T02:25:10.147Z",
   "status": "found",
   "statements": [
     {
@@ -17,7 +17,7 @@
       "companyNumbers": [
         "07110878"
       ],
-      "url": "https://www.sendwave.com/en/support"
+      "url": "https://www.sendwave.com/en-gb/support"
     }
   ]
 }

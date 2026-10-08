@@ -1,22 +1,7 @@
 {
   "slug": "halifax",
   "url": "https://www.halifax.co.uk/",
-  "fetchedAt": "2026-10-08T02:00:08.341Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Halifax is a division of Bank of Scotland plc. Registered in Scotland No. SC327000.",
-      "frns": [],
-      "companyNumbers": [
-        "SC327000"
-      ]
-    },
-    {
-      "text": "Registered Office: The Mound, Edinburgh EH1 1YZ. Bank of Scotland plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority under registration number 169628.",
-      "frns": [
-        "169628"
-      ],
-      "companyNumbers": []
-    }
-  ]
+  "fetchedAt": "2026-10-08T02:24:17.478Z",
+  "status": "none",
+  "statements": []
 }

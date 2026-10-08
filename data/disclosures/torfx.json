@@ -1,17 +1,8 @@
 {
   "slug": "torfx",
   "url": "https://www.torfx.com/",
-  "fetchedAt": "2026-10-08T02:02:24.041Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Tor Currency Exchange Ltd, PZ360, Penzance, Cornwall, TR18 4DZ, United Kingdom. Registered in England & Wales, number: 5193147. Tor Currency Exchange Ltd is authorised by the Financial Conduct Authority as an Electronic Money Institution under the Electronic Money Regulations 2011. Our FCA Firm Reference Number is 900706.",
-      "frns": [
-        "900706"
-      ],
-      "companyNumbers": [
-        "05193147"
-      ]
-    }
-  ]
+  "fetchedAt": "2026-10-08T02:34:21.658Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

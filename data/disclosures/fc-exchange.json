@@ -1,8 +1,8 @@
 {
   "slug": "fc-exchange",
   "url": "https://www.fcexchange.co.uk/",
-  "fetchedAt": "2026-10-05T12:28:37.394Z",
+  "fetchedAt": "2026-10-08T02:39:23.910Z",
   "status": "error",
   "statements": [],
-  "error": "HTTP 522"
+  "error": "robots.txt HTTP 522"
 }

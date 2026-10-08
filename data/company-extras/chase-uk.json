@@ -1,7 +1,7 @@
 {
   "slug": "chase-uk",
   "number": "00938937",
-  "fetchedAt": "2026-10-05T12:56:40.011Z",
+  "fetchedAt": "2026-10-08T02:52:20.582Z",
   "previousNames": [
     {
       "name": "CHASE MANHATTAN INTERNATIONAL LIMITED",
@@ -162,7 +162,13 @@
       "date": "2019-03-25",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTg0N2FkaXF6a2N4/document?format=pdf&download=0"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTI3MWFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-03-25",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTcxMGFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2019-03-25",
@@ -180,25 +186,19 @@
       "date": "2019-03-25",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTcxMGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2019-03-25",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTI3MWFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2019-03-25",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTk2M2FkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2019-03-25",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
       "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTE3M2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-03-25",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NTE0MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2019-03-25",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00938937/filing-history/MzIzMTE4NDgxNWFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {

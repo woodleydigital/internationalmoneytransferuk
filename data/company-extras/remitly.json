@@ -1,7 +1,7 @@
 {
   "slug": "remitly",
   "number": "09896841",
-  "fetchedAt": "2026-10-05T12:55:38.296Z",
+  "fetchedAt": "2026-10-08T02:51:11.772Z",
   "previousNames": [],
   "timeline": [
     {
@@ -203,8 +203,8 @@
     }
   ],
   "accounts": {
-    "madeUpTo": "2024-12-31",
-    "filedOn": "2025-09-26",
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-10-01",
     "url": "https://find-and-update.company-information.service.gov.uk/company/09896841/filing-history",
     "figures": []
   }

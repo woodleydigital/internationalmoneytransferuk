@@ -1,7 +1,7 @@
 {
   "slug": "chase-uk",
-  "url": "https://www.chase.co.uk/",
-  "fetchedAt": "2026-10-08T02:06:21.428Z",
+  "url": "https://www.chase.co.uk/gb/en/",
+  "fetchedAt": "2026-10-08T02:26:23.200Z",
   "status": "found",
   "statements": [
     {
@@ -11,8 +11,7 @@
       ],
       "companyNumbers": [
         "00938937"
-      ],
-      "url": "https://www.chase.co.uk/gb/en/support/international-payments/"
+      ]
     }
   ]
 }

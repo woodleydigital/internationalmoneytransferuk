@@ -1,10 +1,15 @@
 {
   "slug": "ramsdens",
-  "fetchedAt": "2026-10-08T01:59:47.609Z",
-  "status": "none",
-  "pages": [
-    "https://www.ramsdensforcash.co.uk/"
-  ],
+  "fetchedAt": "2026-10-08T02:23:58.626Z",
+  "status": "error",
+  "pages": [],
   "quotes": [],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.ramsdensforcash.co.uk/",
+      "status": "error",
+      "reason": "HTTP 403"
+    }
+  ],
+  "error": "HTTP 403"
 }

@@ -1,12 +1,10 @@
 {
   "slug": "ulster-bank",
-  "fetchedAt": "2026-10-08T02:04:46.164Z",
+  "fetchedAt": "2026-10-08T02:26:33.265Z",
   "status": "found",
   "pages": [
     "https://www.ulsterbank.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
     "https://www.ulsterbank.co.uk/",
-    "https://www.ulsterbank.co.uk/travel/spending-abroad/travel-account.html",
-    "https://www.ulsterbank.co.uk/travel/spending-abroad.html",
     "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
     "https://www.ulsterbank.co.uk/current-accounts/overdrafts/overdraft-calculator.html",
     "https://www.ulsterbank.co.uk/managing-your-money/cost-of-living.html",
@@ -14,7 +12,9 @@
     "https://www.ulsterbank.co.uk/support-centre/general-banking-information/general/purpose-of-payment-code-requirement-for-specific-countries.html",
     "https://www.ulsterbank.co.uk/support-centre/general-banking-information/general/what-countries-are-part-of-sepa.html",
     "https://www.ulsterbank.co.uk/help-and-support/interest-rates-changes.html",
-    "https://www.ulsterbank.co.uk/fraud-and-security.html"
+    "https://www.ulsterbank.co.uk/fraud-and-security.html",
+    "https://www.ulsterbank.co.uk/support-centre.html",
+    "https://www.ulsterbank.co.uk/fraud-and-security/reporting-fraud.html"
   ],
   "quotes": [
     {

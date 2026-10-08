@@ -1,21 +1,17 @@
 {
   "slug": "currency-solutions",
-  "fetchedAt": "2026-10-05T12:54:14.198Z",
+  "fetchedAt": "2026-10-08T02:49:40.365Z",
   "status": "matched",
   "match": {
-    "query": "https://www.currencysolutions.com/",
-    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "query": "Currency Solutions",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
         "company_number": "04864491",
         "title": "CURRENCY SOLUTIONS LIMITED"
-      },
-      {
-        "company_number": "06323311",
-        "title": "THE CURRENCY CLOUD LIMITED"
       }
     ],
-    "outcome": "Matched 04864491 from the provider's website"
+    "outcome": "Matched 04864491"
   },
   "company": {
     "name": "CURRENCY SOLUTIONS LIMITED",

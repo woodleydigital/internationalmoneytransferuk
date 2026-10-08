@@ -1,15 +1,11 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-10-05T12:53:12.832Z",
+  "fetchedAt": "2026-10-08T02:48:37.571Z",
   "status": "matched",
   "match": {
     "query": "https://wise.com/gb/",
     "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
     "candidates": [
-      {
-        "company_number": "11905382",
-        "title": "WISE ASSETS UK LTD"
-      },
       {
         "company_number": "07209813",
         "title": "WISE PAYMENTS LIMITED"

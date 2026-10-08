@@ -1,90 +1,15 @@
 {
   "slug": "key-currency",
-  "fetchedAt": "2026-10-08T02:02:51.180Z",
-  "status": "found",
-  "pages": [
-    "https://www.keycurrency.co.uk/",
-    "https://www.keycurrency.co.uk/transfer-money-from-us-to-uk/",
-    "https://www.keycurrency.co.uk/transfer-money/",
-    "https://www.keycurrency.co.uk/how-it-works/",
-    "https://www.keycurrency.co.uk/transfer-money-from-spain/",
-    "https://www.keycurrency.co.uk/transferring-money/",
-    "https://www.keycurrency.co.uk/money-transfer-companies/",
-    "https://www.keycurrency.co.uk/money-transfer-faqs/",
-    "https://www.keycurrency.co.uk/property-sales-abroad/",
-    "https://www.keycurrency.co.uk/moving-abroad/"
-  ],
-  "quotes": [
+  "fetchedAt": "2026-10-08T02:25:34.480Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
     {
-      "topic": "safeguarding",
-      "text": "Key Currency is an FCA regulated Authorised Payment Institution and as such, all international money transfers are conducted through safeguarded client accounts.",
       "url": "https://www.keycurrency.co.uk/",
-      "context": "Fast, efficient transfers"
-    },
-    {
-      "topic": "fees",
-      "text": "I’ll explain the steps involved, the costs, how long it takes and mistakes… Read article How to Transfer Euros to Pounds in 2026 (without high charges)",
-      "url": "https://www.keycurrency.co.uk/",
-      "context": "International Money Transfer Guides"
-    },
-    {
-      "topic": "fees",
-      "text": "Below is a step-by-step guide on how to transfer money from Spain to the UK – without paying high charges.",
-      "url": "https://www.keycurrency.co.uk/",
-      "context": "International Money Transfer Guides"
-    },
-    {
-      "topic": "fees",
-      "text": "The US banks charge their customers a flat fee every time they do an international transfer.",
-      "url": "https://www.keycurrency.co.uk/transfer-money-from-us-to-uk/",
-      "context": " Transfer Fees "
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Security systems are vital and UK Authorised firms are required to keep client money in a separate, safeguarded bank account.",
-      "url": "https://www.keycurrency.co.uk/transfer-money-from-us-to-uk/",
-      "context": " How to Keep Your Money Safe When You Send Money to the UK from the USA "
-    },
-    {
-      "topic": "safeguarding",
-      "text": "All money transfers are conducted through fully safeguarded client accounts.",
-      "url": "https://www.keycurrency.co.uk/transfer-money-from-us-to-uk/"
-    },
-    {
-      "topic": "payout",
-      "text": "The SWIFT/BIC code is like the bank’s international ID, usually 8 to 11 characters.",
-      "url": "https://www.keycurrency.co.uk/transfer-money-from-us-to-uk/",
-      "context": "What Bank Details Will I Need to Transfer Money from a US to UK Bank account?"
-    },
-    {
-      "topic": "countries",
-      "text": "We can send money abroad to more than 160 countries in 50 different currencies.",
-      "url": "https://www.keycurrency.co.uk/transfer-money/",
-      "context": "International Money Transfers"
-    },
-    {
-      "topic": "countries",
-      "text": "Transfer money to 50+ countries",
-      "url": "https://www.keycurrency.co.uk/transfer-money/"
-    },
-    {
-      "topic": "speed",
-      "text": "Sending money overseas usually takes 1 - 3 working days.",
-      "url": "https://www.keycurrency.co.uk/transfer-money/",
-      "context": "How long does an international money transfer take?"
-    },
-    {
-      "topic": "payout",
-      "text": "How to send pounds to a Spanish bank account, what UK banks take on the Pound to Euro rate, and how to avoid a 3% to 4% hit.",
-      "url": "https://www.keycurrency.co.uk/transferring-money/",
-      "context": "How to send pounds to Cyprus, what banks charge on the rate, how long SEPA takes, and how to keep the transfer safe. Read article How Much Does it Cost to Transfer Money Abroad?"
-    },
-    {
-      "topic": "payout",
-      "text": "You can find out how to make your money transfer t… Read article How to Transfer Money to a Foreign Bank Account (Clear Advice)",
-      "url": "https://www.keycurrency.co.uk/transferring-money/",
-      "context": "How to send pounds to Cyprus, what banks charge on the rate, how long SEPA takes, and how to keep the transfer safe. Read article How Much Does it Cost to Transfer Money Abroad?"
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ],
-  "attempts": []
+  "error": "HTTP 403"
 }

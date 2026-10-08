@@ -1,6 +1,6 @@
 {
   "slug": "paypal",
-  "fetchedAt": "2026-10-08T01:57:34.845Z",
+  "fetchedAt": "2026-10-08T02:23:02.353Z",
   "status": "found",
   "pages": [
     "https://www.paypal.com/uk/digital-wallet/paypal-consumer-fees",
@@ -10,9 +10,10 @@
     "https://www.paypal.com/uk/enterprise/paypal-braintree-fees",
     "https://www.paypal.com/uk/cshelp/personal",
     "https://www.paypal.com/ua/cshelp/article/expansion-of-services-%7C-paypal-ukraine-help1003",
+    "https://www.paypal.com/uk/cshelp/contact-us",
     "https://www.paypal.com/uk/cshelp/complaints",
-    "https://www.paypal.com/fr/digital-wallet/paypal-consumer-fees",
-    "https://www.paypal.com/uk/webapps/mpp/country-worldwide"
+    "https://www.paypal.com/us/digital-wallet/paypal-consumer-fees",
+    "https://www.paypal.com/uk/business/paypal-business-fees"
   ],
   "quotes": [
     {
@@ -60,31 +61,5 @@
       "context": " Is there a fee to send money with PayPal? "
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.paypal.com/uk/smarthelp/contact-us",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/webapps/mpp/merchant-fees",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/webapps/mpp/paypal-fees",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/smarthelp/home",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/smarthelp/article/how-do-i-close-my-paypal-account-faq1215",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

@@ -1,6 +1,6 @@
 {
   "slug": "western-union",
-  "fetchedAt": "2026-10-08T01:58:03.457Z",
+  "fetchedAt": "2026-10-08T02:23:21.882Z",
   "status": "found",
   "pages": [
     "https://www.westernunion.com/gb/en/kyc/faq.html",
@@ -54,6 +54,26 @@
       "context": "Relied on for money transfers around the world"
     },
     {
+      "topic": "speed",
+      "text": "Funds will arrive within minutes for transfers under 500,000 INR to banks with IMPS services, including State Bank of India, ICICI Bank Limited, HDFC Bank, Axis Bank, Punjab National Bank, and Bank of Baroda.",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
+      "topic": "speed",
+      "text": "UPI money transfers up to 200,000 INR will also arrive within minutes.",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
+      "topic": "fees",
+      "text": "Fees, foreign exchange rates and taxes may vary by brand, channel, and location based on a number of factors.",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
+      "topic": "fees",
+      "text": "0.00 GBP on transfer fees",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
       "topic": "fees",
       "text": "Check transfer fees 1 and exchange rates on the go, before you send money with the app.",
       "url": "https://www.westernunion.com/gb/en/money-transfer-app.html",
@@ -72,12 +92,6 @@
       "context": "Use our app to send money overseas on the go"
     },
     {
-      "topic": "fees",
-      "text": "Transfer fees for sending money in person depend on the country, the amount, and how your receiver wants their money.",
-      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html",
-      "context": "How much does it cost to send money abroad with Western Union?"
-    },
-    {
       "topic": "identity",
       "text": "Certain money transfers may require you to provide proof of source of funds.",
       "url": "https://www.westernunion.com/gb/en/send-money-in-person.html"
@@ -87,22 +101,6 @@
       "text": "Before transferring money to India, you may need to provide proof regarding your source of funds.",
       "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
       "context": "How do I send money to India from a Western Union location?"
-    },
-    {
-      "topic": "speed",
-      "text": "For some transfers, it can take up to one bank day 2 .",
-      "url": "https://www.westernunion.com/gb/en/send-money-to-india.html"
-    },
-    {
-      "topic": "fees",
-      "text": "The amount you pay in fees 3 to send money to India can depend on the exchange rate between the pound and rupee, your method of payment and how you want your receiver to collect the funds.",
-      "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
-      "context": "How much is the rate to transfer money to India?"
-    },
-    {
-      "topic": "speed",
-      "text": "We’ll send your transfer straight away and it can arrive within minutes 3 .",
-      "url": "https://www.westernunion.com/gb/en/send-money-to-pakistan.html"
     }
   ],
   "attempts": []

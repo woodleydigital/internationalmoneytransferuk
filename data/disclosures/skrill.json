@@ -1,9 +1,18 @@
 {
   "slug": "skrill",
   "url": "https://www.skrill.com/en/",
-  "fetchedAt": "2026-10-08T01:59:17.647Z",
+  "fetchedAt": "2026-10-08T02:24:00.851Z",
   "status": "found",
   "statements": [
+    {
+      "text": "Copyright © 2026 Paysafe Holdings UK Limited. All rights reserved. Skrill Limited (FRN: 900001) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money and payment instruments. Skrill is a registered trademark of Skrill Limited. Paysafe Financial Services Limited (FRN: 900015) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money and payment instruments.",
+      "frns": [
+        "900001",
+        "900015"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.skrill.com/en/crypto/live-cryptocurrency-prices/"
+    },
     {
       "text": "Copyright © 2026 Paysafe Holdings UK Limited. Všechna práva vyhrazena. Společnost Skrill Limited (FRN: 900001) je autorizována Úřadem pro finanční etiku (Financial Conduct Authority) na základě nařízení o elektronických penězích (Electronic Money Regulations) z roku 2011 k vydávání elektronických peněz a platebních nástrojů. Skrill je registrovaná ochranná známka společnosti Skrill Limited. Společnost Paysafe Financial Services Limited (FRN: 900015) je autorizována Úřadem pro finanční etiku(Financial Conduct Authority) na základě nařízení o elektronických penězích (Electronic Money Regulations) z roku 2011 k vydávání elektronických peněz a platebních nástrojů .",
       "frns": [
@@ -14,13 +23,12 @@
       "url": "https://www.skrill.com/cz/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/"
     },
     {
-      "text": "Copyright © 2026 Paysafe Holdings UK Limited. All rights reserved. Skrill Limited (FRN: 900001) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money and payment instruments. Skrill is a registered trademark of Skrill Limited. Paysafe Financial Services Limited (FRN: 900015) is authorised by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money and payment instruments.",
+      "text": "1.1. Skrill® is a trading name of Paysafe Financial Services Limited, a company incorporated under the laws of England and Wales with registration number 04478861. We are authorised by the Financial Conduct Authority (FCA) under the Electronic Money Regulations 2011 for the issuance of electronic money. Our FCA e-money register number is 900015.",
       "frns": [
-        "900001",
         "900015"
       ],
       "companyNumbers": [],
-      "url": "https://www.skrill.com/en/siteinformation/fees/"
+      "url": "https://www.skrill.com/en/footer/terms-conditions/skrillaccounttermsofuse/pfsl-feb2027/"
     }
   ]
 }

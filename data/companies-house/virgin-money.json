@@ -1,20 +1,20 @@
 {
   "slug": "virgin-money",
-  "fetchedAt": "2026-10-05T12:52:52.926Z",
+  "fetchedAt": "2026-10-08T02:48:14.948Z",
   "status": "unmatched",
   "match": {
-    "query": "https://uk.virginmoney.com/",
+    "query": "Virgin Money",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
-        "company_number": "04056283",
-        "title": "CYB INTERMEDIARIES LIMITED"
+        "company_number": "06952311",
+        "title": "VIRGIN MONEY LIMITED"
       },
       {
-        "company_number": "06046870",
-        "title": "UINSURE LIMITED"
+        "company_number": "09595911",
+        "title": "VIRGIN MONEY UK LIMITED"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
+    "outcome": "No candidate with a payments SIC code"
   }
 }

@@ -1,6 +1,6 @@
 {
   "slug": "handelsbanken",
-  "fetchedAt": "2026-10-08T02:05:41.930Z",
+  "fetchedAt": "2026-10-08T02:27:07.625Z",
   "status": "none",
   "pages": [
     "https://www.handelsbanken.co.uk/en/about-us/important-information/international-payments-restricted-countries",
@@ -13,5 +13,6 @@
       "status": "error",
       "reason": "Not an HTML page"
     }
-  ]
+  ],
+  "error": "Not an HTML page"
 }

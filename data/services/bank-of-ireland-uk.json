@@ -1,11 +1,10 @@
 {
   "slug": "bank-of-ireland-uk",
-  "fetchedAt": "2026-10-08T02:00:09.915Z",
+  "fetchedAt": "2026-10-08T02:24:02.338Z",
   "status": "found",
   "pages": [
     "https://www.bankofirelanduk.com/rates-and-fees/international-payments/",
     "https://www.bankofirelanduk.com/personal/",
-    "https://www.bankofirelanduk.com/personal/travel-banking/",
     "https://www.bankofirelanduk.com/personal/savings/limited-edition-fixed-term-deposits/",
     "https://www.bankofirelanduk.com/rates-and-fees/gb-rates-and-fees/savings-and-deposit-rates/",
     "https://www.bankofirelanduk.com/rates-and-fees/ni-rates-and-fees/personal-savings-and-deposit-rates/",
@@ -14,7 +13,8 @@
     "https://www.bankofirelanduk.com/help-and-support/faqs/confirmation-of-payee/",
     "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/",
     "https://www.bankofirelanduk.com/help-and-support/security-and-fraud/",
-    "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/managing-your-money/staying-on-top-of-your-finances/"
+    "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/managing-your-money/staying-on-top-of-your-finances/",
+    "https://www.bankofirelanduk.com/help-and-support/extra-help-centre/accessibility-supports/"
   ],
   "quotes": [
     {

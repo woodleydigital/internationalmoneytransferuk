@@ -1,7 +1,7 @@
 {
   "slug": "lloyds-bank",
   "number": "00002065",
-  "fetchedAt": "2026-10-05T12:55:02.568Z",
+  "fetchedAt": "2026-10-08T02:50:31.288Z",
   "previousNames": [
     {
       "name": "LLOYDS TSB BANK PLC",
@@ -82,12 +82,6 @@
       "date": "2025-03-17",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00002065/filing-history/MzQ1ODg2ODE3NGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2025-03-17",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
       "url": "https://find-and-update.company-information.service.gov.uk/company/00002065/filing-history/MzQ1ODg2ODgxNmFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
@@ -101,6 +95,12 @@
       "category": "mortgage",
       "label": "Charge registered or updated",
       "url": "https://find-and-update.company-information.service.gov.uk/company/00002065/filing-history/MzQ1ODg2NjMyN2FkaXF6a2N4/document?format=pdf&download=0"
+    },
+    {
+      "date": "2025-03-17",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00002065/filing-history/MzQ1ODg2ODE3NGFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2024-05-31",

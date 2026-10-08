@@ -1,16 +1,10 @@
 {
   "slug": "hamilton-court-fx",
-  "fetchedAt": "2026-10-08T02:05:30.483Z",
-  "status": "found",
+  "fetchedAt": "2026-10-08T02:26:49.596Z",
+  "status": "none",
   "pages": [
-    "https://hamiltoncourtfx.com/marex-migration/?destination=https://www.marex.com/markets/capital-markets/foreign-exchange/"
+    "https://hamiltoncourtfx.com/.well-known/sgcaptcha/?r=%2F&y=ipc:20.169.99.136:1791426410.998"
   ],
-  "quotes": [
-    {
-      "topic": "availability",
-      "text": "From 1 April 2026, Hamilton Court Foreign Exchange Limited (“HCFX”) will change its name to Marex FX Limited.",
-      "url": "https://hamiltoncourtfx.com/marex-migration/?destination=https://www.marex.com/markets/capital-markets/foreign-exchange/"
-    }
-  ],
+  "quotes": [],
   "attempts": []
 }

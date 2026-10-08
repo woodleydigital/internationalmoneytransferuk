@@ -1,34 +1,25 @@
 {
   "slug": "aib-ni",
-  "fetchedAt": "2026-10-08T02:05:41.682Z",
-  "status": "found",
-  "pages": [
-    "https://www.aibni.co.uk/ways-to-bank/making-and-receiving-payments/international-payments",
-    "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions/international-payments-faqs",
-    "https://www.aibni.co.uk/Fees-and-Charges",
-    "https://www.aibni.co.uk/help-centre",
-    "https://www.aibni.co.uk/help-and-guidance/customer-complaints-homepage",
-    "https://www.aibni.co.uk/help-and-guidance/additional-support",
-    "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions/mortgage-faqs",
-    "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions",
-    "https://www.aibni.co.uk/help-and-guidance/dormant-accounts",
-    "https://www.aibni.co.uk/help-and-guidance/customer-service",
-    "https://www.aibni.co.uk/help-and-guidance/important-information",
-    "https://www.aibni.co.uk/ways-to-bank/making-and-receiving-payments/country-specific-receiver-bank"
-  ],
-  "quotes": [
-    {
-      "topic": "payout",
-      "text": "Account Transfer FX allows you to transfer funds between your own Currency Accounts and to or from your own AIB (NI) Bank Accounts located or administered in Northern Ireland.",
-      "url": "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions/international-payments-faqs",
-      "context": "What are the International Payment products available from AIB (NI)?"
-    }
-  ],
+  "fetchedAt": "2026-10-08T02:27:03.863Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
   "attempts": [
+    {
+      "url": "https://www.aibni.co.uk/ways-to-bank/making-and-receiving-payments/international-payments",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions/international-payments-faqs",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
     {
       "url": "https://aibni.co.uk/",
       "status": "error",
-      "reason": "The operation was aborted due to timeout"
+      "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "HTTP 403"
 }

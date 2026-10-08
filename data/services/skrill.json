@@ -1,6 +1,6 @@
 {
   "slug": "skrill",
-  "fetchedAt": "2026-10-08T01:59:17.647Z",
+  "fetchedAt": "2026-10-08T02:23:56.813Z",
   "status": "found",
   "pages": [
     "https://www.skrill.com/en/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
@@ -12,9 +12,9 @@
     "https://www.skrill.com/gr/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
     "https://www.skrill.com/cn/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
     "https://www.skrill.com/cz/support/question/59/what-is-skrill-money-transfer-and-how-do-i-use-it/",
+    "https://www.skrill.com/en/support/",
     "https://www.skrill.com/en/siteinformation/fees/",
-    "https://www.skrill.com/en/crypto/live-cryptocurrency-prices/",
-    "https://www.skrill.com/en/support/category/4/account/verifications-and-limits/"
+    "https://www.skrill.com/en/crypto/live-cryptocurrency-prices/"
   ],
   "quotes": [
     {
@@ -70,11 +70,5 @@
       "context": " Does Skrill transfer money instantly? "
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.skrill.com/en/support/category/33/international-money-transfer/how-to/",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

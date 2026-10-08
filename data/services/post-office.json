@@ -1,99 +1,25 @@
 {
   "slug": "post-office",
-  "fetchedAt": "2026-10-08T02:05:57.819Z",
-  "status": "found",
-  "pages": [
-    "https://www.postoffice.co.uk/international-money-transfer",
-    "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-    "https://www.postoffice.co.uk/",
-    "https://www.postoffice.co.uk/help-support/money-transfer",
-    "https://www.postoffice.co.uk/help-support",
-    "https://www.postoffice.co.uk/help-support/national-lottery",
-    "https://www.postoffice.co.uk/help-support/moneygram",
-    "https://www.postoffice.co.uk/help-support/international-driving-permits",
-    "https://www.postoffice.co.uk/help-support/international-phonecards",
-    "https://www.postoffice.co.uk/help-support/posting",
-    "https://www.postoffice.co.uk/help-support/drop-and-go",
-    "https://www.postoffice.co.uk/help-support/atm-faqs"
-  ],
-  "quotes": [
-    {
-      "topic": "fees",
-      "text": "Online rates are indicative; final transfer fees and exchange rates are shown before you confirm your transfer",
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "context": "Prefer to send money in branch?"
-    },
-    {
-      "topic": "payout",
-      "text": "Send money to bank accounts or for cash pick-up in minutes 1 from hundreds of thousands of agent locations worldwide 3",
-      "url": "https://www.postoffice.co.uk/international-money-transfer"
-    },
-    {
-      "topic": "payout",
-      "text": "You can send money to any Western Union location for cash pickup or directly to your recipient’s bank account or mobile phone.",
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "context": " How do I send money online? "
-    },
-    {
-      "topic": "speed",
-      "text": "If you're sending money for someone to pick up in cash, it can be ready in as little as 15 to 30 minutes, later the same day or the next day.",
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "context": " How long does it take to send money online? "
-    },
-    {
-      "topic": "speed",
-      "text": "If you're sending to a bank account, it usually takes up to two working days, depending on the receiving country.",
-      "url": "https://www.postoffice.co.uk/international-money-transfer",
-      "context": " How long does it take to send money online? "
-    },
-    {
-      "topic": "payout",
-      "text": "Make sure your receiver has activated a mobile wallet with one of our partner mobile operators in their country.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " How long does it take to send money online? "
-    },
-    {
-      "topic": "limits",
-      "text": "You can send up to 799.99 GBP per transfer from the United Kingdom if your identity hasn’t been verified.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " How much can I send online? "
-    },
-    {
-      "topic": "identity",
-      "text": "To meet our regulatory and compliance obligations, we may sometimes collect additional information and/or documents, which will include documents to validate your occupation and the source of funds.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " How do I send a large amount money transfer, and do I need to provide any additional documents? "
-    },
-    {
-      "topic": "limits",
-      "text": "There are no limits to sending multiple large amount money transfers over any time frame.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " Are there any additional checks if I send multiple large money transfers in a short period of time? "
-    },
-    {
-      "topic": "identity",
-      "text": "At certain threshold, before you can send a large amount of money transfer, we need to request additional documentation to verify the source of your funds.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " Why do I have to send my source of funds documentation? "
-    },
-    {
-      "topic": "identity",
-      "text": "It is required to meet our regulatory obligations and internal policies, which allow us to serve you better, speed up the transfer process and protect your money.",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " Why do I have to send my source of funds documentation? "
-    },
-    {
-      "topic": "speed",
-      "text": "Your receiver didn’t pick up the money within 42 days",
-      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
-      "context": " Why was my transfer cancelled? "
-    }
-  ],
+  "fetchedAt": "2026-10-08T02:23:02.351Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
   "attempts": [
     {
-      "url": "https://www.postoffice.co.uk/mail/international-services",
+      "url": "https://www.postoffice.co.uk/international-money-transfer",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.postoffice.co.uk/help-support/money-transfer/faqs",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.postoffice.co.uk/",
       "status": "error",
       "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "HTTP 403"
 }

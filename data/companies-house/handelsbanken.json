@@ -1,17 +1,17 @@
 {
   "slug": "handelsbanken",
-  "fetchedAt": "2026-10-05T12:54:41.172Z",
+  "fetchedAt": "2026-10-08T02:50:09.236Z",
   "status": "matched",
   "match": {
-    "query": "https://www.handelsbanken.co.uk/en/",
-    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "query": "Handelsbanken",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
         "company_number": "11305395",
         "title": "HANDELSBANKEN PLC"
       }
     ],
-    "outcome": "Matched 11305395 from the provider's website"
+    "outcome": "Matched 11305395"
   },
   "company": {
     "name": "HANDELSBANKEN PLC",

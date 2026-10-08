@@ -1,6 +1,6 @@
 {
   "slug": "coutts",
-  "fetchedAt": "2026-10-08T02:05:43.004Z",
+  "fetchedAt": "2026-10-08T02:27:07.768Z",
   "status": "found",
   "pages": [
     "https://www.coutts.com/help-centre/my-coutts/payments/international-payments.html",
@@ -13,7 +13,8 @@
     "https://www.coutts.com/wealth-management/investing/funds/coutts-managed-funds.html",
     "https://www.coutts.com/wealth-management/investing/funds/personal-portfolio-funds.html",
     "https://www.coutts.com/help-centre/coutts-online.html",
-    "https://www.coutts.com/help-centre/investment-faqs.html"
+    "https://www.coutts.com/help-centre/investment-faqs.html",
+    "https://www.coutts.com/help-centre/440-app.html"
   ],
   "quotes": [
     {
@@ -35,5 +36,11 @@
       "context": "Making international payments"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.coutts.com/help-centre/my-coutts/payments.html",
+      "status": "error",
+      "reason": "fetch failed"
+    }
+  ]
 }

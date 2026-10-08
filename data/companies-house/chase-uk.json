@@ -1,6 +1,6 @@
 {
   "slug": "chase-uk",
-  "fetchedAt": "2026-10-05T12:54:21.964Z",
+  "fetchedAt": "2026-10-08T02:49:49.427Z",
   "status": "matched",
   "match": {
     "query": "https://www.chase.co.uk/gb/en/",
@@ -9,10 +9,6 @@
       {
         "company_number": "00938937",
         "title": "J.P. MORGAN EUROPE LIMITED"
-      },
-      {
-        "company_number": "07503666",
-        "title": "J.P. MORGAN PERSONAL INVESTING LIMITED"
       }
     ],
     "outcome": "Matched 00938937 from the provider's website"

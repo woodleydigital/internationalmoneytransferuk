@@ -1,12 +1,11 @@
 {
   "slug": "santander",
-  "fetchedAt": "2026-10-08T01:58:54.544Z",
+  "fetchedAt": "2026-10-08T02:23:40.888Z",
   "status": "found",
   "pages": [
     "https://www.santander.co.uk/personal/support/ways-to-bank/payments-and-transfers",
     "https://www.santander.co.uk/",
     "https://www.santander.co.uk/personal/current-accounts/santander-edge-student-current-account/international-student",
-    "https://www.santander.co.uk/personal/support/helping-you-when-travelling-abroad",
     "https://www.santander.co.uk/personal/support/current-accounts/making-international-payments",
     "https://www.santander.co.uk/personal/savings-and-investments/savings/limited-access-saver",
     "https://www.santander.co.uk/personal/savings-and-investments/investments/fees-charges-and-key-documents",
@@ -14,7 +13,8 @@
     "https://www.santander.co.uk/personal/support/rising-energy-costs-what-you-can-do",
     "https://www.santander.co.uk/personal/support/help-with-managing-my-money/my-money-manager",
     "https://www.santander.co.uk/personal/support/insurance",
-    "https://www.santander.co.uk/personal/support/customer-support/help-with-emergencies"
+    "https://www.santander.co.uk/personal/support/customer-support/help-with-emergencies",
+    "https://www.santander.co.uk/personal/support/loans-and-mortgages"
   ],
   "quotes": [
     {

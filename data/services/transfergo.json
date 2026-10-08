@@ -1,20 +1,20 @@
 {
   "slug": "transfergo",
-  "fetchedAt": "2026-10-08T02:03:27.561Z",
+  "fetchedAt": "2026-10-08T02:25:58.995Z",
   "status": "found",
   "pages": [
-    "https://support.transfergo.com/hc/en-gb/articles/4408088383892-Sending-limits",
     "https://www.transfergo.com/",
-    "https://support.transfergo.com/hc/en-gb/articles/32178006051218-To-which-countries-can-I-send-money",
-    "https://support.transfergo.com/hc/en-gb/articles/15407270860564-How-our-pricing-works",
-    "https://support.transfergo.com/hc/en-gb/articles/206284305-Pricing",
-    "https://support.transfergo.com/hc/en-gb/articles/205621959-How-it-Works",
-    "https://support.transfergo.com/hc/en-gb",
     "https://www.transfergo.com/send-money-abroad",
     "https://www.transfergo.com/gb/send-money-abroad",
     "https://www.transfergo.com/send-money-to-albania",
     "https://www.transfergo.com/send-money-to-algeria",
-    "https://www.transfergo.com/send-money-to-andorra"
+    "https://www.transfergo.com/send-money-to-andorra",
+    "https://www.transfergo.com/send-money-to-angola",
+    "https://www.transfergo.com/send-money-to-anguilla",
+    "https://www.transfergo.com/send-money-to-armenia",
+    "https://www.transfergo.com/send-money-to-aruba",
+    "https://www.transfergo.com/send-money-to-australia",
+    "https://www.transfergo.com/send-money-to-austria"
   ],
   "quotes": [
     {
@@ -79,9 +79,9 @@
   ],
   "attempts": [
     {
-      "url": "https://support.transfergo.com/hc/en-gb/related/click",
+      "url": "https://support.transfergo.com/hc/en-gb/articles/4408088383892-Sending-limits",
       "status": "error",
-      "reason": "HTTP 400"
+      "reason": "HTTP 403"
     }
   ]
 }

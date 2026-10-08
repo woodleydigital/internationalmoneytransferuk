@@ -1,12 +1,10 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-10-08T02:01:46.763Z",
+  "fetchedAt": "2026-10-08T02:25:08.000Z",
   "status": "found",
   "pages": [
-    "https://www.riamoneytransfer.com/en-gb/send-money-online/",
     "https://www.riamoneytransfer.com/en-gb/send-money/",
     "https://www.riamoneytransfer.com/en-gb/terms/",
-    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
     "https://www.riamoneytransfer.com/en-gb/",
     "https://www.riamoneytransfer.com/en-gb/mobile-app/",
     "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
@@ -14,78 +12,27 @@
     "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
     "https://www.riamoneytransfer.com/en-gb/send-money-to-europe/",
     "https://www.riamoneytransfer.com/en-gb/send-money-to-latin-america/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/"
+    "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/",
+    "https://www.riamoneytransfer.com/en-gb/send-money-to-oceania/",
+    "https://www.riamoneytransfer.com/en-gb/international-money-transfer/"
   ],
   "quotes": [
     {
       "topic": "countries",
-      "text": "Send money in a few taps to 190+ countries with Ria.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
+      "text": "With 100+ currencies, better rates, and stress-free transfers, we make sure you get the most out of your money.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
+      "context": "More ways to send money worldwide from the U.K."
     },
     {
       "topic": "payout",
-      "text": "For bank deposit, add their bank and account number.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Online money transfers in four easy steps"
-    },
-    {
-      "topic": "payout",
-      "text": "Send money directly to a bank account, for cash pickup at a nearby location, or a mobile wallet (available in many countries).",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Online money transfers in four easy steps"
+      "text": "A bank deposit lets recipients receive funds directly into their bank accounts.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/"
     },
     {
       "topic": "countries",
-      "text": "Send money to 190+ countries",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "countries",
-      "text": "Send money to Afghanistan",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Send money to 190+ countries"
-    },
-    {
-      "topic": "payout",
-      "text": "If you're transferring to a bank account, you'll also need the account number and the name of the bank.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What information do I need to send money online?"
-    },
-    {
-      "topic": "speed",
-      "text": "Bank transfer: up to 4 business days.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "How long does it take to send money online?"
-    },
-    {
-      "topic": "fees",
-      "text": "You’ll always see the total cost—including fees and exchange rate—before you send, so there are no surprises.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Are there any fees for sending money?"
-    },
-    {
-      "topic": "limits",
-      "text": "UK : £4,999 a day per month",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "limits",
-      "text": "Spain : €5,000 per transfer, up to maximum of €25,000 every 365 days",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "limits",
-      "text": "Rest of Europe* : €10,000 per transfer, up to a maximum of €25,000 every 365 days",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "speed",
-      "text": "While this payment option usually has a slightly higher fee, the recipient will typically receive the money often within minutes.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Can I send money online with a credit card?"
+      "text": "With the Ria app, you can send money to 190+ countries and territories.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
+      "context": "Send money on the go with the Ria app"
     },
     {
       "topic": "fees",
@@ -97,6 +44,12 @@
       "text": "Fees vary depending on the destination.",
       "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
       "context": "The latest exchange rates in your pocket"
+    },
+    {
+      "topic": "fees",
+      "text": "12.2 In accordance with the Regulations and before execution of a Payment Order, we shall provide information to you regarding the fee and any applicable exchange rates, which will be displayed in the order preview section of the Ria Money Transfer App.",
+      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
+      "context": " 12. FEES "
     },
     {
       "topic": "safeguarding",
@@ -111,11 +64,57 @@
       "context": " 18. SAFEGUARDING "
     },
     {
+      "topic": "countries",
+      "text": "Send money in a few taps to 190+ countries with Ria.",
+      "url": "https://www.riamoneytransfer.com/en-gb/",
+      "context": "Send money."
+    },
+    {
+      "topic": "payout",
+      "text": "Send a direct bank deposit or choose from other available delivery options, like cash pickup or digital wallet , depending on the destination.",
+      "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/"
+    },
+    {
+      "topic": "payout",
+      "text": "Additional payout details, like the bank account number or location for cash pickup",
+      "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/",
+      "context": "What information do I need to provide to send money through the Ria app?"
+    },
+    {
       "topic": "speed",
       "text": "It typically finalizes within the same day— usually within minutes —so your recipient could receive money almost immediately.",
       "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
       "context": "How long does it take to send money to Africa from the U.S.?"
+    },
+    {
+      "topic": "speed",
+      "text": "This method usually takes 3-5 business days with smaller fees.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
+      "context": "How long does it take to send money to Africa from the U.S.?"
+    },
+    {
+      "topic": "speed",
+      "text": "I t typically finalizes within the same day—usually within minutes —so your recipient could receive money almost immediately.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
+      "context": "How long does it take to send money to Asia?"
+    },
+    {
+      "topic": "identity",
+      "text": "The recipient's name (exactly as it appears on their government-issued photo ID)",
+      "url": "https://www.riamoneytransfer.com/en-gb/international-money-transfer/",
+      "context": "What information do I need to make an international money transfer?"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
+      "status": "error",
+      "reason": "HTTP 403"
+    }
+  ]
 }

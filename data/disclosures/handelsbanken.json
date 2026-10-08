@@ -1,24 +1,7 @@
 {
   "slug": "handelsbanken",
   "url": "https://www.handelsbanken.co.uk/en/",
-  "fetchedAt": "2026-10-05T12:32:36.603Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "Handelsbanken is the trading name of Handelsbanken plc, which is incorporated in England and Wales with company number 11305395. Our registered office is 25 Basinghall Street, London, EC2V 5HA, UK. Our VAT Registration Number is GB524 9824 25.",
-      "frns": [],
-      "companyNumbers": [
-        "11305395"
-      ],
-      "url": "https://www.handelsbanken.co.uk/en/about-us/important-information"
-    },
-    {
-      "text": "Handelsbanken plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Our Financial Services Register number is 806852.",
-      "frns": [
-        "806852"
-      ],
-      "companyNumbers": [],
-      "url": "https://www.handelsbanken.co.uk/en/about-us/important-information"
-    }
-  ]
+  "fetchedAt": "2026-10-08T02:42:52.818Z",
+  "status": "none",
+  "statements": []
 }

@@ -1,16 +1,8 @@
 {
   "slug": "aib-ni",
   "url": "https://aibni.co.uk/",
-  "fetchedAt": "2026-10-08T02:05:41.682Z",
-  "status": "found",
-  "statements": [
-    {
-      "text": "The AIB logo and AIB (NI) are trade marks used under licence by AIB Group (UK) p.l.c. incorporated in Northern Ireland. Registered Office 92 Ann Street, Belfast BT1 3HH. Registered Number NI018800. Authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.",
-      "frns": [],
-      "companyNumbers": [
-        "NI018800"
-      ],
-      "url": "https://www.aibni.co.uk/ways-to-bank/making-and-receiving-payments/international-payments"
-    }
-  ]
+  "fetchedAt": "2026-10-08T02:42:46.392Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

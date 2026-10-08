@@ -1,20 +1,45 @@
 {
   "slug": "lemfi",
-  "fetchedAt": "2026-10-08T02:05:48.502Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
-  "attempts": [
+  "fetchedAt": "2026-10-08T02:24:57.867Z",
+  "status": "found",
+  "pages": [
+    "https://www.lemfi.com/en-gb/legal/terms",
+    "https://lemfi.com/en-us/",
+    "https://www.lemfi.com/en-gb/international-money-transfer",
+    "https://www.lemfi.com/en-gb/request-money"
+  ],
+  "quotes": [
     {
-      "url": "https://www.lemfi.com/en-gb/legal/terms",
-      "status": "error",
-      "reason": "HTTP 403"
+      "topic": "countries",
+      "text": "International money transfer Send money internationally to more than 30+ countries.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
     },
     {
-      "url": "https://lemfi.com/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "topic": "safeguarding",
+      "text": "Information on how money in your wallet is safeguarded",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "The balance of your wallet(s) will be backed by an equivalent amount of money which LemFi holds in its safeguarded accounts.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "When LemFi receives money for your wallet, LemFi will add electronic money to your wallet and place the equivalent amount of money in segregated bank accounts.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms",
+      "context": " 5. Information on how money in your wallet is safeguarded "
+    },
+    {
+      "topic": "countries",
+      "text": "Transfer to friends and family in over 30 countries",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer"
+    },
+    {
+      "topic": "fees",
+      "text": "Save On Fees Send more money to anyone at low cost or zero fees.",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer"
     }
   ],
-  "error": "HTTP 403"
+  "attempts": []
 }

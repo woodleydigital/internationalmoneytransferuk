@@ -1,44 +1,16 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-10-05T12:53:44.854Z",
-  "status": "matched",
+  "fetchedAt": "2026-10-08T02:49:10.951Z",
+  "status": "unmatched",
   "match": {
-    "query": "Ria",
+    "query": "https://www.riamoneytransfer.com/en-gb/",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
-        "company_number": "04263192",
-        "title": "RIA FINANCIAL SERVICES LIMITED"
+        "company_number": "06975932",
+        "title": "EURONET PAYMENT SERVICES LIMITED"
       }
     ],
-    "outcome": "Matched 04263192"
-  },
-  "company": {
-    "name": "RIA FINANCIAL SERVICES LIMITED",
-    "number": "04263192",
-    "status": "active",
-    "type": "ltd",
-    "incorporated": "2001-08-01",
-    "sicCodes": [
-      "64999"
-    ],
-    "registeredOffice": "Part 7th Floor, North Block, 55 Baker Street, London, W1U 7EU, United Kingdom",
-    "lastAccountsMadeUpTo": "2025-12-31",
-    "accountsNextDue": "2027-09-30",
-    "accountsOverdue": false,
-    "confirmationStatementOverdue": false,
-    "hasInsolvencyHistory": false,
-    "url": "https://find-and-update.company-information.service.gov.uk/company/04263192"
-  },
-  "psc": [
-    {
-      "name": "Euronet Worldwide, Inc.",
-      "kind": "corporate-entity-person-with-significant-control",
-      "natures_of_control": [
-        "ownership-of-shares-75-to-100-percent",
-        "voting-rights-75-to-100-percent"
-      ],
-      "notified_on": "2016-04-06"
-    }
-  ]
+    "outcome": "Provider's website states other companies; no name fallback"
+  }
 }

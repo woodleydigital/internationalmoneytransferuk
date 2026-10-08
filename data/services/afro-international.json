@@ -1,20 +1,15 @@
 {
   "slug": "afro-international",
-  "fetchedAt": "2026-10-08T01:57:47.430Z",
-  "status": "found",
-  "pages": [
-    "https://www.afroint.com/",
-    "https://www.afroint.com/Calculation.aspx",
-    "https://www.afroint.com/AccountRegistrationstep1.aspx",
-    "https://www.afroint.com/How-it-works.aspx"
-  ],
-  "quotes": [
+  "fetchedAt": "2026-10-08T02:23:20.388Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
+  "attempts": [
     {
-      "topic": "identity",
-      "text": "Fill out a \"Transaction Order Form\" (available in our offices), please ensure you have your ID ready for verification, regardless of the amount (Government Issued ID cards such as Driving license, Passports, etc are acceptable).",
-      "url": "https://www.afroint.com/How-it-works.aspx",
-      "context": "Sending Money"
+      "url": "https://www.afroint.com/",
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ],
-  "attempts": []
+  "error": "HTTP 403"
 }
