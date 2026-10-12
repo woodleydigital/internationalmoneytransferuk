@@ -1,20 +1,20 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-10-08T08:05:22.186Z",
+  "fetchedAt": "2026-10-12T13:08:52.085Z",
   "status": "found",
   "pages": [
     "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
     "https://wise.com/gb/",
+    "https://wise.com/us/pricing/",
     "https://wise.com/help/",
     "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
     "https://wise.com/help/articles/2524078/how-long-will-my-transfer-take",
     "https://wise.com/help/articles/2932149/guide-to-eur-transfers",
     "https://wise.com/help/articles/2932338/guide-to-chf-transfers",
     "https://wise.com/help/articles/2932154/guide-to-aud-transfers",
-    "https://wise.com/help/articles/2932342/guide-to-sek-transfers",
     "https://wise.com/help/articles/2932343/guide-to-pln-transfers",
-    "https://wise.com/gb/account/",
-    "https://wise.com/gb/send-money/"
+    "https://wise.com/help/articles/2932342/guide-to-sek-transfers",
+    "https://wise.com/gb/account/"
   ],
   "quotes": [
     {
@@ -53,29 +53,11 @@
       "context": "Sending GBP to countries outside of the UK"
     },
     {
-      "topic": "fees",
-      "text": "Join over 18.9 million people sending money abroad — with fees as low as 0.1% .",
-      "url": "https://wise.com/gb/send-money/",
-      "context": "International money transfers"
-    },
-    {
-      "topic": "fees",
-      "text": "Pay less when you send over 20,000 GBP or equivalent — fees from 0.1% .",
-      "url": "https://wise.com/gb/send-money/",
-      "context": "International money transfers — Larger transfers. Lower fees. Premium support."
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Your money is safeguarded, and held completely separate from ours, so it's available to you all the time.",
-      "url": "https://wise.com/gb/send-money/",
-      "context": "International money transfers"
+      "topic": "payout",
+      "text": "You can send CHF to any CHF bank account in Switzerland or Liechtenstein.",
+      "url": "https://wise.com/help/articles/2932338/guide-to-chf-transfers",
+      "context": "Guide to CHF transfers — Sending to CHF — Who can I send CHF to?"
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.wise.com/pricing",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

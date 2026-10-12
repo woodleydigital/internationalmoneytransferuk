@@ -1,13 +1,17 @@
 {
   "slug": "xoom-paypal",
-  "fetchedAt": "2026-10-08T08:07:28.490Z",
+  "fetchedAt": "2026-10-12T13:09:40.530Z",
   "status": "found",
   "pages": [
     "https://www.xoom.com/",
     "https://www.xoom.com/money-transfer",
     "https://www.xoom.com/protect-your-money",
     "https://help.xoom.com/s/contactsupport?language=en_US",
-    "https://help.xoom.com/s/?language=en_US"
+    "https://help.xoom.com/s/?language=en_US",
+    "https://help.xoom.com/s/article/how-much-money-can-i-send?language=en_US",
+    "https://help.xoom.com/s/article/how-much-does-it-cost-to-send-with-xoom?language=en_US",
+    "https://help.xoom.com/s/article/tips-to-safeguard-your-xoom-password?language=en_US",
+    "https://help.xoom.com/s/article/from-which-countries-can-i-send-with-xoom?language=en_US"
   ],
   "quotes": [
     {

@@ -1,116 +1,43 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-10-08T08:08:27.362Z",
+  "fetchedAt": "2026-10-12T13:10:30.923Z",
   "status": "found",
   "pages": [
-    "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-    "https://www.riamoneytransfer.com/en-gb/send-money/",
-    "https://www.riamoneytransfer.com/en-gb/terms/",
-    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
-    "https://www.riamoneytransfer.com/en-gb/",
-    "https://www.riamoneytransfer.com/en-gb/mobile-app/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-europe/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-latin-america/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/"
+    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
   ],
   "quotes": [
     {
-      "topic": "countries",
-      "text": "Send money in a few taps to 190+ countries with Ria.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "payout",
-      "text": "For bank deposit, add their bank and account number.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Online money transfers in four easy steps"
-    },
-    {
-      "topic": "payout",
-      "text": "Send money directly to a bank account, for cash pickup at a nearby location, or a mobile wallet (available in many countries).",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Online money transfers in four easy steps"
-    },
-    {
-      "topic": "countries",
-      "text": "Send money to 190+ countries",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/"
-    },
-    {
-      "topic": "speed",
-      "text": "Bank transfer: up to 4 business days.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "How long does it take to send money online?"
+      "topic": "fees",
+      "text": "Be aware that \"No fee\" may not mean \"no cost\" as cost may be built into the exchange rate margin",
+      "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
     },
     {
       "topic": "fees",
-      "text": "You’ll always see the total cost—including fees and exchange rate—before you send, so there are no surprises.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "Are there any fees for sending money?"
-    },
-    {
-      "topic": "limits",
-      "text": "Spain : €5,000 per transfer, up to maximum of €25,000 every 365 days",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "limits",
-      "text": "Rest of Europe* : €10,000 per transfer, up to a maximum of €25,000 every 365 days",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "limits",
-      "text": "Chile : 3,500,000 CLP per transfer, up to 10,000 USD per month",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-      "context": "What are the online money transfer limits?"
-    },
-    {
-      "topic": "countries",
-      "text": "With 100+ currencies, better rates, and stress-free transfers, we make sure you get the most out of your money.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the U.K."
-    },
-    {
-      "topic": "payout",
-      "text": "A bank deposit lets recipients receive funds directly into their bank accounts.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the U.K."
-    },
-    {
-      "topic": "fees",
-      "text": "You can use the in-app calculator to check current rates and fees before making a transfer.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the U.K."
-    },
-    {
-      "topic": "fees",
-      "text": "12.2 In accordance with the Regulations and before execution of a Payment Order, we shall provide information to you regarding the fee and any applicable exchange rates, which will be displayed in the order preview section of the Ria Money Transfer App.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
-      "context": "12. FEES"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Relevant Funds will be safeguarded for as long as they are held by RIA, i.e. until funds are collected by the Beneficiary at destination or are paid out to the Recipient’s payment service provider.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
-      "context": "18. SAFEGUARDING"
-    },
-    {
-      "topic": "speed",
-      "text": "It typically finalizes within the same day— usually within minutes —so your recipient could receive money almost immediately.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-      "context": "How long does it take to send money to Africa from the U.S.?"
-    },
-    {
-      "topic": "speed",
-      "text": "This method usually takes 3-5 business days with smaller fees.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-      "context": "How long does it take to send money to Africa from the U.S.?"
+      "text": "In some countries, fees vary by payment method.",
+      "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
+      "context": "Do payment methods have different fees?"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-online/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/",
+      "status": "error",
+      "reason": "HTTP 403"
+    }
+  ]
 }

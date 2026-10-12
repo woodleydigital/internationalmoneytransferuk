@@ -1,7 +1,7 @@
 {
   "slug": "currency-solutions",
   "url": "https://www.currencysolutions.com/",
-  "fetchedAt": "2026-10-08T08:21:17.568Z",
+  "fetchedAt": "2026-10-12T13:11:52.693Z",
   "status": "found",
   "statements": [
     {
@@ -12,8 +12,7 @@
       ],
       "companyNumbers": [
         "04864491"
-      ],
-      "url": "https://www.currencysolutions.com/help/what-fees-does-currency-solutions-charge/"
+      ]
     },
     {
       "text": "For clients based in the United Kingdom, payment and e-money services (Non MIFID related products) are provided by The Currency Cloud Limited. Registered in England No. 06323311. Registered Office: Registered Office: 1 Sheldon Square, London, W2 6TT, United Kingdom. The Currency Cloud Limited is authorized by the Financial Conduct Authority under the Electronic Money Regulations 2011 for the issuing of electronic money (FRN: 900199)",
@@ -22,8 +21,7 @@
       ],
       "companyNumbers": [
         "06323311"
-      ],
-      "url": "https://www.currencysolutions.com/help/what-fees-does-currency-solutions-charge/"
+      ]
     }
   ]
 }

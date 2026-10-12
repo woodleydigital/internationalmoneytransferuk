@@ -1,7 +1,7 @@
 {
   "slug": "clear-currency",
   "url": "https://www.clearcurrency.co.uk/",
-  "fetchedAt": "2026-10-08T08:09:40.036Z",
+  "fetchedAt": "2026-10-12T13:11:21.365Z",
   "status": "found",
   "statements": [
     {
@@ -9,15 +9,21 @@
       "frns": [],
       "companyNumbers": [
         "09549792"
-      ],
-      "url": "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/medical-treatment"
+      ]
     },
     {
       "text": "Clear Treasury (UK Trading) Ltd is authorised by the Financial Conduct Authority (Firm Reference Number 708529) under the Payment Service Regulations 2009 for the provision of payment services.",
       "frns": [
         "708529"
       ],
-      "companyNumbers": [],
+      "companyNumbers": []
+    },
+    {
+      "text": "© 2026 © 2026 Clear Treasury (Clear Treasury (UK Trading) Ltd) is a limited company registered in England and Wales under number 09549792 with registered office: 8 Devonshire Square, London EC2M 4YJ.",
+      "frns": [],
+      "companyNumbers": [
+        "09549792"
+      ],
       "url": "https://www.clearcurrency.co.uk/reasons-for-international-money-transfer/medical-treatment"
     }
   ]

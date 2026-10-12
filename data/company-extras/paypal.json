@@ -1,9 +1,15 @@
 {
   "slug": "paypal",
   "number": "14741686",
-  "fetchedAt": "2026-10-08T02:50:23.939Z",
+  "fetchedAt": "2026-10-12T13:33:13.209Z",
   "previousNames": [],
   "timeline": [
+    {
+      "date": "2026-10-12",
+      "category": "address",
+      "label": "Registered office address changed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/14741686/filing-history/MzU1MDM5MDI1NmFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-09-08",
       "category": "accounts",

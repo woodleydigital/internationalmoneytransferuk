@@ -1,7 +1,24 @@
 {
   "slug": "handelsbanken",
-  "url": "https://www.handelsbanken.co.uk/en/about-us/important-information/international-payments-restricted-countries",
-  "fetchedAt": "2026-10-08T08:20:05.113Z",
-  "status": "none",
-  "statements": []
+  "url": "https://www.handelsbanken.co.uk/en/",
+  "fetchedAt": "2026-10-12T13:26:54.676Z",
+  "status": "found",
+  "statements": [
+    {
+      "text": "Handelsbanken is the trading name of Handelsbanken plc, which is incorporated in England and Wales with company number 11305395. Our registered office is 25 Basinghall Street, London, EC2V 5HA, UK. Our VAT Registration Number is GB524 9824 25.",
+      "frns": [],
+      "companyNumbers": [
+        "11305395"
+      ],
+      "url": "https://www.handelsbanken.co.uk/en/about-us/important-information"
+    },
+    {
+      "text": "Handelsbanken plc is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority. Our Financial Services Register number is 806852.",
+      "frns": [
+        "806852"
+      ],
+      "companyNumbers": [],
+      "url": "https://www.handelsbanken.co.uk/en/about-us/important-information"
+    }
+  ]
 }

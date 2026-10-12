@@ -1,6 +1,6 @@
 {
   "slug": "ulster-bank",
-  "fetchedAt": "2026-10-08T08:11:41.836Z",
+  "fetchedAt": "2026-10-12T13:12:48.990Z",
   "status": "found",
   "pages": [
     "https://www.ulsterbank.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
@@ -13,8 +13,8 @@
     "https://www.ulsterbank.co.uk/support-centre/general-banking-information/general/what-countries-are-part-of-sepa.html",
     "https://www.ulsterbank.co.uk/help-and-support/interest-rates-changes.html",
     "https://www.ulsterbank.co.uk/fraud-and-security.html",
-    "https://www.ulsterbank.co.uk/fraud-and-security/reporting-fraud.html",
-    "https://www.ulsterbank.co.uk/help-and-support/service-status.html"
+    "https://www.ulsterbank.co.uk/support-centre.html",
+    "https://www.ulsterbank.co.uk/fraud-and-security/reporting-fraud.html"
   ],
   "quotes": [
     {
@@ -72,11 +72,5 @@
       "context": "How much can I send?"
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.ulsterbank.co.uk/help-and-support.html",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

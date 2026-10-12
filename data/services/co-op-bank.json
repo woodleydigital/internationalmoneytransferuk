@@ -1,19 +1,18 @@
 {
   "slug": "co-op-bank",
-  "fetchedAt": "2026-10-08T08:04:10.292Z",
+  "fetchedAt": "2026-10-12T13:08:22.363Z",
   "status": "found",
   "pages": [
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/",
     "https://www.co-operativebank.co.uk/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/money-transfer/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/us-structured-payments/",
+    "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
     "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/iban-swift-bic-codes/",
-    "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/",
     "https://www.co-operativebank.co.uk/products/savings/limited-access/",
     "https://www.co-operativebank.co.uk/help-and-support/your-details/privacy-cookie-policies/cookie-policy/",
-    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/register/",
-    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/"
+    "https://www.co-operativebank.co.uk/help-and-support/ways-to-bank/online-banking/register/"
   ],
   "quotes": [
     {
@@ -48,22 +47,15 @@
     },
     {
       "topic": "fees",
-      "text": "Charges for sending money outside the UK depend on the different payment methods and agent charges where applicable.",
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
-      "context": "Exchange rates — Charges for sending money outside the UK"
+      "text": "There is no charge for SEPA payments.",
+      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa/"
     },
     {
       "topic": "fees",
-      "text": "Charge is 0.25% - with a minimum charge of £13 and a maximum charge of £35 plus postage, transmission and agent's charges where applicable.",
+      "text": "Charges for sending money outside the UK depend on the different payment methods and agent charges where applicable.",
       "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/exchange-rates/",
-      "context": "Exchange rates — Charges for sending money outside the UK — SWIFT payment"
+      "context": "Exchange rates — Charges for sending money outside the UK"
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.co-operativebank.co.uk/help-and-support/payments/international-payments/sepa",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

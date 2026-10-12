@@ -1,6 +1,6 @@
 {
   "slug": "paypal",
-  "fetchedAt": "2026-10-08T08:03:20.874Z",
+  "fetchedAt": "2026-10-12T13:08:02.161Z",
   "status": "found",
   "pages": [
     "https://www.paypal.com/uk/digital-wallet/paypal-consumer-fees",
@@ -10,8 +10,10 @@
     "https://www.paypal.com/uk/enterprise/paypal-braintree-fees",
     "https://www.paypal.com/uk/cshelp/personal",
     "https://www.paypal.com/ua/cshelp/article/expansion-of-services-%7C-paypal-ukraine-help1003",
+    "https://www.paypal.com/uk/cshelp/contact-us",
     "https://www.paypal.com/uk/cshelp/complaints",
-    "https://www.paypal.com/uk/webapps/mpp/country-worldwide"
+    "https://www.paypal.com/us/digital-wallet/paypal-consumer-fees",
+    "https://www.paypal.com/uk/business/paypal-business-fees"
   ],
   "quotes": [
     {
@@ -53,43 +55,14 @@
       "text": "We don’t charge you fees when you pay for goods or services in the UK or in GBP.",
       "url": "https://www.paypal.com/uk/digital-wallet/send-receive-money/send-money",
       "context": "Send money — Is there a fee to send money with PayPal?"
+    },
+    {
+      "topic": "fees",
+      "text": "Other International PayPal Payouts 2% of total transaction amount (not to exceed the international maximum fee cap below )",
+      "url": "https://www.paypal.com/uk/business/paypal-business-fees",
+      "context": "PayPal Merchant Fees — Sending PayPal Payouts — Transaction Rate",
+      "table": true
     }
   ],
-  "attempts": [
-    {
-      "url": "https://www.paypal.com/uk/smarthelp/contact-us",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/webapps/mpp/paypal-fees",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/webapps/mpp/merchant-fees",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/webapps/mpp/paypal-fees",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/smarthelp/home",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/smarthelp/article/how-do-i-close-my-paypal-account-faq1215",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://www.paypal.com/uk/selfhelp/home",
-      "status": "error",
-      "reason": "The operation was aborted due to timeout"
-    }
-  ]
+  "attempts": []
 }

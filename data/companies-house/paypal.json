@@ -1,6 +1,6 @@
 {
   "slug": "paypal",
-  "fetchedAt": "2026-10-08T02:48:17.969Z",
+  "fetchedAt": "2026-10-12T13:31:15.590Z",
   "status": "matched",
   "match": {
     "query": "PayPal",
@@ -26,7 +26,7 @@
     "sicCodes": [
       "64999"
     ],
-    "registeredOffice": "5 Fleet Place, London, EC4M 7RD, United Kingdom",
+    "registeredOffice": "76 Upper Ground,, London, SE1 9PZ",
     "lastAccountsMadeUpTo": "2025-12-31",
     "accountsNextDue": "2027-09-30",
     "accountsOverdue": false,

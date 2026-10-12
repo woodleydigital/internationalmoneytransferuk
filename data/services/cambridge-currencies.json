@@ -1,8 +1,10 @@
 {
   "slug": "cambridge-currencies",
-  "fetchedAt": "2026-10-08T08:18:52.449Z",
+  "fetchedAt": "2026-10-12T13:11:18.256Z",
   "status": "found",
   "pages": [
+    "https://cambridgecurrencies.com/fees/",
+    "https://cambridgecurrencies.com/international-money-transfer/",
     "https://cambridgecurrencies.com/",
     "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
     "https://cambridgecurrencies.com/send-money-to-france-from-uk/",
@@ -10,24 +12,83 @@
     "https://cambridgecurrencies.com/send-money-to-australia-from-uk/",
     "https://cambridgecurrencies.com/send-money-to-uk/",
     "https://cambridgecurrencies.com/sectors-property-buyers/",
-    "https://cambridgecurrencies.com/international-money-transfer/",
     "https://cambridgecurrencies.com/international-business-account-payments/",
-    "https://cambridgecurrencies.com/large-international-money-transfers/",
-    "https://cambridgecurrencies.com/retirement-planning-with-currency-exchange/",
-    "https://cambridgecurrencies.com/business-foreign-exchange-uk/"
+    "https://cambridgecurrencies.com/limit-orders/",
+    "https://cambridgecurrencies.com/business-fx-faqs/"
   ],
   "quotes": [
+    {
+      "topic": "fees",
+      "text": "Cambridge Currencies quotes the rate by phone before anything is booked, charges no transfer fee, and processes payments through FCA-authorised partners Currencycloud (FRN 900199) and ScioPay (FRN 927951).",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK"
+    },
+    {
+      "topic": "countries",
+      "text": "FCA-authorised partners Client funds safeguarded No transfer fees 30+ currencies Dedicated specialist",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — GBP to EUR Exchange Rate History"
+    },
+    {
+      "topic": "fees",
+      "text": "In its September 2025 issue, the World Bank's Remittance Prices Worldwide put the global average total cost of sending the equivalent of $200 at 6.36%, with banks the most expensive channel at 14.99%, money transfer operators at 4.72% and digital services at 4.59%.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — How much does an international money transfer cost?"
+    },
+    {
+      "topic": "fees",
+      "text": "The average cost of sending from the United Kingdom fell to 4.61% in the same quarter.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — How much does an international money transfer cost?"
+    },
+    {
+      "topic": "limits",
+      "text": "Upper transfer limits Online caps common Caps common No practical upper limit",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — Bank, transfer app or specialist broker — which should you use? — Feature High-street bank Transfer app Specialist broker",
+      "table": true
+    },
+    {
+      "topic": "speed",
+      "text": "A euro payment routed through SEPA typically arrives the same or next working day.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — How long does an international money transfer take?"
+    },
+    {
+      "topic": "speed",
+      "text": "A SWIFT wire through a correspondent chain generally takes one to three working days.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — How long does an international money transfer take?"
+    },
+    {
+      "topic": "speed",
+      "text": "A payment made from a local account inside the destination country can arrive within hours.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — How long does an international money transfer take?"
+    },
+    {
+      "topic": "limits",
+      "text": "Mandatory reimbursement for authorised push payment scams began on 7 October 2024, with a maximum of £85,000 per claim.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK"
+    },
+    {
+      "topic": "limits",
+      "text": "There is no regulatory maximum on the amount you can send.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — What documents do you need for a large international transfer?"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Payments are arranged through FCA-authorised partners — Currencycloud (FRN 900199) and ScioPay (FRN 927951) — and client funds are safeguarded by those partners.",
+      "url": "https://cambridgecurrencies.com/international-money-transfer/",
+      "context": "International Money Transfer from the UK — Is your money protected?"
+    },
     {
       "topic": "countries",
       "text": "Cambridge Currencies is a UK specialist currency broker handling international money transfers in 50+ currencies to 190+ countries.",
       "url": "https://cambridgecurrencies.com/",
       "context": "Specialist international money transfers"
-    },
-    {
-      "topic": "speed",
-      "text": "Money arrives via our safeguarded payment network — usually same or next business day.",
-      "url": "https://cambridgecurrencies.com/",
-      "context": "Specialist international money transfers — Four simple steps for international transfers"
     },
     {
       "topic": "countries",
@@ -46,86 +107,6 @@
       "text": "All transfers are processed through their regulated infrastructure, with client funds safeguarded under UK regulations.",
       "url": "https://cambridgecurrencies.com/",
       "context": "How is Cambridge Currencies regulated?"
-    },
-    {
-      "topic": "countries",
-      "text": "We support property buyers purchasing in Spain , Portugal , France , Italy , the US, Australia, and over 190 countries worldwide.",
-      "url": "https://cambridgecurrencies.com/",
-      "context": "All transfers are completed by phone with a dedicated specialist — there is no online transaction platform. Do I need to register an account before getting a quote?"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "All transfers completed by phone with a dedicated specialist · FCA-authorised payment partners (Currencycloud FRN 900199, ScioPay FRN 927951) · Funds safeguarded",
-      "url": "https://cambridgecurrencies.com/",
-      "context": "See how Cambridge Currencies compares"
-    },
-    {
-      "topic": "speed",
-      "text": "Euros normally reach a Spanish account within one working day, and often the same day.",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
-      "context": "Send Money to Spain from the UK"
-    },
-    {
-      "topic": "fees",
-      "text": "FCA-authorised partners Client funds safeguarded No transfer fees Dedicated specialist",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
-      "context": "Send Money to Spain from the UK — GBP to EUR Exchange Rate History"
-    },
-    {
-      "topic": "speed",
-      "text": "Typical arrival 1–3 working days Same day for small sums Same or next working day",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
-      "context": "Send Money to Spain from the UK — What is the cheapest way to send money to Spain from the UK? — Feature UK high-street bank Transfer app Specialist broker",
-      "table": true
-    },
-    {
-      "topic": "fees",
-      "text": "A £15 fee is visible; a 3.5% margin on €300,000 is roughly £8,000 and is not itemised anywhere on the statement.",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
-      "context": "Send Money to Spain from the UK"
-    },
-    {
-      "topic": "fees",
-      "text": "Spanish acquisition taxes, notary and registry fees and legal costs are payable on top of the price, and they vary by comunidad autónoma and by whether the property is a resale or a new build.",
-      "url": "https://cambridgecurrencies.com/send-money-to-spain-from-uk/",
-      "context": "Send Money to Spain from the UK"
-    },
-    {
-      "topic": "limits",
-      "text": "Upper transfer limits Online caps common Caps common No practical upper limit",
-      "url": "https://cambridgecurrencies.com/international-money-transfer/",
-      "context": "International Money Transfer from the UK — Bank, transfer app or specialist broker — which should you use? — Feature High-street bank Transfer app Specialist broker",
-      "table": true
-    },
-    {
-      "topic": "limits",
-      "text": "Mandatory reimbursement for authorised push payment scams began on 7 October 2024, with a maximum of £85,000 per claim.",
-      "url": "https://cambridgecurrencies.com/international-money-transfer/",
-      "context": "International Money Transfer from the UK"
-    },
-    {
-      "topic": "limits",
-      "text": "There is no regulatory maximum on the amount you can send.",
-      "url": "https://cambridgecurrencies.com/international-money-transfer/",
-      "context": "International Money Transfer from the UK — What documents do you need for a large international transfer?"
-    },
-    {
-      "topic": "identity",
-      "text": "We need passport or driving licence, proof of UK address, and a brief outline of the transfer purpose.",
-      "url": "https://cambridgecurrencies.com/large-international-money-transfers/",
-      "context": "Best Way to Exchange Large Amounts of Currency — How a large transfer works with Cambridge Currencies"
-    },
-    {
-      "topic": "identity",
-      "text": "UK FCA-authorised payment institutions are required to verify source of funds on higher-value transfers.",
-      "url": "https://cambridgecurrencies.com/large-international-money-transfers/",
-      "context": "Best Way to Exchange Large Amounts of Currency"
-    },
-    {
-      "topic": "identity",
-      "text": "For transfers above £100,000, expect to provide proof of identity (passport or driving licence), proof of address (utility bill, bank statement), and proof of source of funds.",
-      "url": "https://cambridgecurrencies.com/large-international-money-transfers/",
-      "context": "Best Way to Exchange Large Amounts of Currency — Frequently asked questions about large international transfers — What documents are required for large money transfers?"
     }
   ],
   "attempts": []

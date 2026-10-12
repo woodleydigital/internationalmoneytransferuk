@@ -1,24 +1,20 @@
 {
   "slug": "ramsdens",
-  "fetchedAt": "2026-10-08T08:18:04.430Z",
-  "status": "found",
-  "pages": [
-    "https://www.ramsdenscurrency.co.uk/international-money-transfers",
-    "https://www.ramsdensforcash.co.uk/",
-    "https://www.ramsdenscurrency.co.uk/faqs"
-  ],
-  "quotes": [
-    {
-      "topic": "availability",
-      "text": "Thank you for your interest in and past use of the Ramsdens International Money Transfer service but this service is no longer available directly from Ramsdens.",
-      "url": "https://www.ramsdenscurrency.co.uk/international-money-transfers"
-    }
-  ],
+  "fetchedAt": "2026-10-12T13:09:13.065Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
   "attempts": [
     {
-      "url": "https://www.ramsdenscurrency.co.uk/imt-faqs",
+      "url": "https://www.ramsdenscurrency.co.uk/international-money-transfers",
       "status": "error",
-      "reason": "HTTP 404"
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.ramsdensforcash.co.uk/",
+      "status": "error",
+      "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "HTTP 403"
 }

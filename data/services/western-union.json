@@ -1,6 +1,6 @@
 {
   "slug": "western-union",
-  "fetchedAt": "2026-10-08T08:04:10.836Z",
+  "fetchedAt": "2026-10-12T13:08:28.557Z",
   "status": "found",
   "pages": [
     "https://www.westernunion.com/gb/en/kyc/faq.html",
@@ -54,16 +54,25 @@
       "context": "Relied on for money transfers around the world"
     },
     {
+      "topic": "speed",
+      "text": "Funds will arrive within minutes for transfers under 500,000 INR to banks with IMPS services, including State Bank of India, ICICI Bank Limited, HDFC Bank, Axis Bank, Punjab National Bank, and Bank of Baroda. NEFT transactions will be credited the same day in batches, subject to the country of origin’s limit. UPI money transfers up to 200,000 INR will also arrive within minutes.",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
+      "topic": "fees",
+      "text": "2 Western Union also makes money from currency exchange. When choosing a money transmitter, carefully compare both transfer fees and exchange rates. Fees, foreign exchange rates and taxes may vary by brand, channel, and location based on a number of factors. Fees and rates subject to change without notice.",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
+      "topic": "fees",
+      "text": "0.00 GBP on transfer fees",
+      "url": "https://www.westernunion.com/gb/en/web/send-money/start"
+    },
+    {
       "topic": "fees",
       "text": "Check transfer fees 1 and exchange rates on the go, before you send money with the app.",
       "url": "https://www.westernunion.com/gb/en/money-transfer-app.html",
       "context": "Money transfer app — Money transfers at your fingertips — Easily view transfer fees 1 and exchange rates"
-    },
-    {
-      "topic": "speed",
-      "text": "Find a convenient agent location today so your receiver can collect their cash in minutes 3 .",
-      "url": "https://www.westernunion.com/gb/en/money-transfer-app.html",
-      "context": "Money transfer app — Easy to send, simple to receive"
     },
     {
       "topic": "countries",
@@ -76,12 +85,6 @@
       "text": "Send money abroad quickly and reliably 24/7 to more than 200 countries and territories with the support of our app.",
       "url": "https://www.westernunion.com/gb/en/send-money-abroad.html",
       "context": "Send money abroad from the UK — More ways to send money abroad with Western Union — Use our app to send money overseas on the go"
-    },
-    {
-      "topic": "fees",
-      "text": "Transfer fees for sending money in person depend on the country, the amount, and how your receiver wants their money.",
-      "url": "https://www.westernunion.com/gb/en/send-money-in-person.html",
-      "context": "Frequently asked questions about how to send money in person — How much does it cost to send money abroad with Western Union?"
     },
     {
       "topic": "identity",
@@ -106,12 +109,6 @@
       "text": "Before transferring money to India, you may need to provide proof regarding your source of funds.",
       "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
       "context": "Send money to India — How do I send money to India from a Western Union location?"
-    },
-    {
-      "topic": "fees",
-      "text": "The amount you pay in fees 3 to send money to India can depend on the exchange rate between the pound and rupee, your method of payment and how you want your receiver to collect the funds.",
-      "url": "https://www.westernunion.com/gb/en/send-money-to-india.html",
-      "context": "Send money to India — How much is the rate to transfer money to India?"
     },
     {
       "topic": "availability",

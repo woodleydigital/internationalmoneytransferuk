@@ -1,6 +1,6 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-10-08T08:07:52.956Z",
+  "fetchedAt": "2026-10-12T13:10:12.123Z",
   "status": "found",
   "pages": [
     "https://www.instarem.com/en-gb/",
@@ -36,11 +36,6 @@
       "context": "Money transfers at your fingertips"
     },
     {
-      "topic": "countries",
-      "text": "Send money from UK to 60+ countries",
-      "url": "https://www.instarem.com/en-gb/"
-    },
-    {
       "topic": "fees",
       "text": "Sending money abroad with Instarem is simple and affordable, with no hidden fees or unfair FX margins.",
       "url": "https://www.instarem.com/en-gb/",
@@ -48,7 +43,7 @@
     },
     {
       "topic": "fees",
-      "text": "You’ll see exchange rates and fees upfront , with no hidden charges .",
+      "text": "You’ll see exchange rates and fees upfront, with no hidden charges.",
       "url": "https://www.instarem.com/en-gb/",
       "context": "How can I send money abroad using Instarem?"
     },
@@ -57,6 +52,11 @@
       "text": "Your personal details: Name, email, phone number, identity proof (like a National ID or passport), and address documents.",
       "url": "https://www.instarem.com/en-gb/",
       "context": "What information do I need to provide to make an international money transfer with Instarem?"
+    },
+    {
+      "topic": "countries",
+      "text": "Small and medium enterprises can easily pay their overseas suppliers and employees in 160+ countries while enjoying competitive exchange rates, low fees, and dedicated support.",
+      "url": "https://www.instarem.com/en-gb/"
     },
     {
       "topic": "identity",

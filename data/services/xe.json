@@ -1,6 +1,6 @@
 {
   "slug": "xe",
-  "fetchedAt": "2026-10-08T08:08:55.147Z",
+  "fetchedAt": "2026-10-12T13:10:55.449Z",
   "status": "found",
   "pages": [
     "https://help.xe.com/hc/en-gb/articles/360019847837-What-are-the-limits-on-how-much-I-can-send",
@@ -14,7 +14,7 @@
     "https://help.xe.com/hc/en-gb/articles/41785275824657-What-are-the-fees-for-adding-or-converting-between-my-currency-accounts",
     "https://help.xe.com/hc/en-gb/articles/360019472317-What-are-the-fees-for-sending-money",
     "https://help.xe.com/hc/en-gb/articles/360019472397-Why-did-less-money-arrive-than-I-sent-was-a-fee-taken",
-    "https://help.xe.com/hc/en-gb"
+    "https://help.xe.com/hc/en-gb/articles/360019845777-Which-payment-methods-can-I-use"
   ],
   "quotes": [
     {
@@ -54,7 +54,7 @@
       "topic": "fees",
       "text": "It has everything you need for international money transfers — easy, secure, and low fees starting at $0.",
       "url": "https://www.xe.com/",
-      "context": "International money transfers and global currency conversions — How to send money online with Xe — Manage your currencies on the go with the Xe app"
+      "context": "International money transfers and global currency conversions — Manage your currencies on the go with the Xe app"
     },
     {
       "topic": "countries",
@@ -67,7 +67,12 @@
     {
       "url": "https://help.xe.com/hc/en-gb/related/click",
       "status": "error",
-      "reason": "HTTP 400"
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://help.xe.com/hc/en-gb",
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ]
 }

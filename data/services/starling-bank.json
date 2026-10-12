@@ -1,6 +1,6 @@
 {
   "slug": "starling-bank",
-  "fetchedAt": "2026-10-08T08:10:44.514Z",
+  "fetchedAt": "2026-10-12T13:12:16.210Z",
   "status": "found",
   "pages": [
     "https://www.starlingbank.com/send-money-abroad/",
@@ -40,6 +40,12 @@
       "text": "You can hold, send and receive euros, all completely free of charge.",
       "url": "https://www.starlingbank.com/send-money-abroad/",
       "context": "Send money abroad — How to send money abroad, the easy way"
+    },
+    {
+      "topic": "speed",
+      "text": "Priority delivery via SWIFT. This is usually the quickest option. These payments can take anywhere up to three working days, depending on the country you're sending to and the currency you're sending.",
+      "url": "https://help.starlingbank.com/personal/topics/international-payments/when-will-my-international-transfer-arrive/",
+      "context": "When will my international transfer arrive?"
     }
   ],
   "attempts": []

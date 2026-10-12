@@ -1,7 +1,8 @@
 {
   "slug": "afro-international",
   "url": "https://www.afroint.com/",
-  "fetchedAt": "2026-10-08T08:04:01.772Z",
-  "status": "none",
-  "statements": []
+  "fetchedAt": "2026-10-12T13:14:21.974Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

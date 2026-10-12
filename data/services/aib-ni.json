@@ -1,6 +1,6 @@
 {
   "slug": "aib-ni",
-  "fetchedAt": "2026-10-08T08:21:07.536Z",
+  "fetchedAt": "2026-10-12T13:13:18.171Z",
   "status": "error",
   "pages": [],
   "quotes": [],
@@ -8,23 +8,23 @@
     {
       "url": "https://www.aibni.co.uk/ways-to-bank/making-and-receiving-payments/international-payments",
       "status": "error",
-      "reason": "The operation was aborted due to timeout"
+      "reason": "HTTP 403"
     },
     {
       "url": "https://www.aibni.co.uk/content/dam/aibni/personal/personal-docs/ways-to-bank/international-payments/international-payments-terms.pdf",
       "status": "error",
-      "reason": "The operation was aborted due to timeout"
+      "reason": "HTTP 403"
     },
     {
       "url": "https://www.aibni.co.uk/help-and-guidance/frequently-asked-questions/international-payments-faqs",
       "status": "error",
-      "reason": "The operation was aborted due to timeout"
+      "reason": "HTTP 403"
     },
     {
       "url": "https://aibni.co.uk/",
       "status": "error",
-      "reason": "The operation was aborted due to timeout"
+      "reason": "HTTP 403"
     }
   ],
-  "error": "The operation was aborted due to timeout"
+  "error": "HTTP 403"
 }

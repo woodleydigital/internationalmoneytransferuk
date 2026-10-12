@@ -1,23 +1,55 @@
 {
   "slug": "lemfi",
-  "fetchedAt": "2026-10-08T08:22:42.426Z",
-  "status": "none",
+  "fetchedAt": "2026-10-12T13:10:15.283Z",
+  "status": "found",
   "pages": [
     "https://support.lemfi.com/hc/en-us/articles/45780629399185-Are-there-country-specific-rules-or-limits",
-    "https://support.lemfi.com/hc/en-us/sections/45803934965649-Limits-settings"
+    "https://support.lemfi.com/hc/en-us/sections/45803934965649-Limits-settings",
+    "https://www.lemfi.com/en-gb/legal/terms",
+    "https://lemfi.com/en-us/",
+    "https://www.lemfi.com/en-gb/international-money-transfer",
+    "https://www.lemfi.com/en-gb/request-money"
   ],
-  "quotes": [],
-  "attempts": [
+  "quotes": [
     {
-      "url": "https://www.lemfi.com/en-gb/legal/terms",
-      "status": "error",
-      "reason": "HTTP 403"
+      "topic": "countries",
+      "text": "International money transfer Send money internationally to more than 30+ countries.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
     },
     {
-      "url": "https://lemfi.com/",
-      "status": "error",
-      "reason": "HTTP 403"
+      "topic": "safeguarding",
+      "text": "Information on how money in your wallet is safeguarded",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "The balance of your wallet(s) will be backed by an equivalent amount of money which LemFi holds in its safeguarded accounts.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms"
+    },
+    {
+      "topic": "safeguarding",
+      "text": "Please note that the money in your NGN account is held by your NGN account provider in Nigeria, not by LemFi, and is not safeguarded under UK requirements.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms",
+      "context": "5. Information on how money in your wallet is safeguarded"
+    },
+    {
+      "topic": "speed",
+      "text": "Estimated arrival Usually within minutes",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
+      "context": "Easily send money directly to loved ones across the globe"
+    },
+    {
+      "topic": "countries",
+      "text": "Transfer to friends and family in over 30 countries",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
+      "context": "Easily send money directly to loved ones across the globe"
+    },
+    {
+      "topic": "fees",
+      "text": "Save On Fees Send more money to anyone at low cost or zero fees.",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
+      "context": "Easily send money directly to loved ones across the globe"
     }
   ],
-  "error": "HTTP 403"
+  "attempts": []
 }

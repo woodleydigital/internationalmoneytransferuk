@@ -1,7 +1,8 @@
 {
   "slug": "currencies-direct",
-  "url": "https://help.currenciesdirect.com/en/privacy-and-security/how-is-my-money-protected",
-  "fetchedAt": "2026-10-08T08:09:13.346Z",
-  "status": "none",
-  "statements": []
+  "url": "https://www.currenciesdirect.com/",
+  "fetchedAt": "2026-10-12T13:18:20.919Z",
+  "status": "error",
+  "statements": [],
+  "error": "HTTP 403"
 }

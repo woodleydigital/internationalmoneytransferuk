@@ -1,7 +1,7 @@
 {
   "slug": "remitly",
   "url": "https://www.remitly.com/gb/en",
-  "fetchedAt": "2026-10-08T08:18:37.434Z",
+  "fetchedAt": "2026-10-12T13:09:38.797Z",
   "status": "found",
   "statements": [
     {
@@ -11,8 +11,7 @@
       ],
       "companyNumbers": [
         "09896841"
-      ],
-      "url": "https://www.remitly.com/gb/en/landing/fee-refunds-gbr"
+      ]
     }
   ]
 }

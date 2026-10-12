@@ -1,6 +1,6 @@
 {
   "slug": "xoom-paypal",
-  "fetchedAt": "2026-10-08T02:49:01.070Z",
+  "fetchedAt": "2026-10-12T13:31:54.944Z",
   "status": "matched",
   "match": {
     "query": "https://www.xoom.com/",
@@ -22,7 +22,7 @@
     "sicCodes": [
       "64999"
     ],
-    "registeredOffice": "5 Fleet Place, London, EC4M 7RD, United Kingdom",
+    "registeredOffice": "76 Upper Ground,, London, SE1 9PZ",
     "lastAccountsMadeUpTo": "2025-12-31",
     "accountsNextDue": "2027-09-30",
     "accountsOverdue": false,

@@ -1,24 +1,23 @@
 {
   "slug": "sendwave",
   "url": "https://www.sendwave.com/en-gb",
-  "fetchedAt": "2026-10-08T08:08:41.365Z",
+  "fetchedAt": "2026-10-12T13:10:34.208Z",
   "status": "found",
   "statements": [
+    {
+      "text": "© WorldRemit Ltd. Company registration number: 07110878 WorldRemit Ltd is Authorised and Regulated by the Financial Conduct Authority (FCA) under the Payment Service Regulations 2017 and Electronic Money Regulations 2011.",
+      "frns": [],
+      "companyNumbers": [
+        "07110878"
+      ]
+    },
     {
       "text": "Company registration number: 07110878",
       "frns": [],
       "companyNumbers": [
         "07110878"
       ],
-      "url": "https://www.sendwave.com/en-gb/support"
-    },
-    {
-      "text": "© WorldRemit Ltd. Company registration number: 07110878 WorldRemit Ltd is Authorised and Regulated by the Financial Conduct Authority (FCA) under the Payment Service Regulations 2017 and Electronic Money Regulations 2011.",
-      "frns": [],
-      "companyNumbers": [
-        "07110878"
-      ],
-      "url": "https://www.sendwave.com/en-gb/support"
+      "url": "https://www.sendwave.com/en/support"
     }
   ]
 }

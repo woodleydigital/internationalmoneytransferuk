@@ -1,20 +1,20 @@
 {
   "slug": "transfergo",
-  "fetchedAt": "2026-10-08T08:10:05.700Z",
+  "fetchedAt": "2026-10-12T13:12:01.655Z",
   "status": "found",
   "pages": [
     "https://support.transfergo.com/hc/en-gb/articles/4408088383892-Sending-limits",
     "https://www.transfergo.com/",
     "https://support.transfergo.com/hc/en-gb/articles/32178006051218-To-which-countries-can-I-send-money",
-    "https://support.transfergo.com/hc/en-gb/articles/15407270860564-How-our-pricing-works",
-    "https://support.transfergo.com/hc/en-gb/articles/206284305-Pricing",
     "https://support.transfergo.com/hc/en-gb/articles/205621959-How-it-Works",
     "https://support.transfergo.com/hc/en-gb",
     "https://www.transfergo.com/send-money-abroad",
     "https://www.transfergo.com/gb/send-money-abroad",
     "https://www.transfergo.com/send-money-to-albania",
     "https://www.transfergo.com/send-money-to-algeria",
-    "https://www.transfergo.com/send-money-to-andorra"
+    "https://www.transfergo.com/send-money-to-andorra",
+    "https://www.transfergo.com/send-money-to-angola",
+    "https://www.transfergo.com/send-money-to-anguilla"
   ],
   "quotes": [
     {
@@ -86,7 +86,17 @@
     {
       "url": "https://support.transfergo.com/hc/en-gb/related/click",
       "status": "error",
-      "reason": "HTTP 400"
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://support.transfergo.com/hc/en-gb/articles/15407270860564-How-our-pricing-works",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://support.transfergo.com/hc/en-gb/articles/206284305-Pricing",
+      "status": "error",
+      "reason": "HTTP 403"
     }
   ]
 }
