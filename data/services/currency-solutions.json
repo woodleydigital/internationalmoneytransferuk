@@ -1,19 +1,19 @@
 {
   "slug": "currency-solutions",
-  "fetchedAt": "2026-10-12T13:11:51.179Z",
+  "fetchedAt": "2026-10-19T10:48:03.259Z",
   "status": "found",
   "pages": [
     "https://www.currencysolutions.com/regulatory/",
     "https://www.currencysolutions.com/",
+    "https://www.currencysolutions.com/insights/what-affects-the-gbp-to-eur-exchange-rate-why-does-it-change-and-how-it-can-affect-international-transfers/",
     "https://www.currencysolutions.com/personal/",
+    "https://www.currencysolutions.com/insights/sterling-gains-while-boes-bailey-says-wider-inflation-effects-remain-limited-so-far/",
     "https://www.currencysolutions.com/insights/us-consumer-sentiment-declines-inflation-expectations-rise-oil-prices-fall/",
     "https://www.currencysolutions.com/help/",
     "https://www.currencysolutions.com/legal/safeguarding-funds/",
-    "https://www.currencysolutions.com/help/are-there-any-third-party-fees-associated-with-currency-solutions/",
-    "https://www.currencysolutions.com/help/what-are-my-transaction-limits-with-currency-solutions/",
-    "https://www.currencysolutions.com/help/what-fees-does-currency-solutions-charge/",
-    "https://www.currencysolutions.com/help/how-long-does-it-take-to-open-a-multi-currency-account-with-currency/",
-    "https://www.currencysolutions.com/help/what-identification-documents-are-required-by-currency-solutions/"
+    "https://www.currencysolutions.com/international-currency-transfers/",
+    "https://www.currencysolutions.com/personal/regular-payments/",
+    "https://www.currencysolutions.com/insights/sending-money-to-south-africa-a-complete-guide-to-fees-exchange-rates-transfer-methods-and-getting-the-best-value/"
   ],
   "quotes": [
     {
@@ -33,9 +33,32 @@
     },
     {
       "topic": "fees",
-      "text": "For instance, if you intend to send £6,000 to an overseas bank account, the full £6,000 will leave our bank account.",
-      "url": "https://www.currencysolutions.com/help/are-there-any-third-party-fees-associated-with-currency-solutions/",
-      "context": "Are there any third-party fees associated with international payments?"
+      "text": "If the rate is 1.17, £1 converts to around €1.17, before any transfer fees or provider margin come into it.",
+      "url": "https://www.currencysolutions.com/insights/what-affects-the-gbp-to-eur-exchange-rate-why-does-it-change-and-how-it-can-affect-international-transfers/",
+      "context": "What Affects the GBP to EUR Exchange Rate, Why Does It Change and How It Can Affect International Transfers? — How Does the GBP to EUR Exchange Rate Work?"
+    },
+    {
+      "topic": "fees",
+      "text": "No Transfer Fees, Competitive Rates—Get a Free Quote Today",
+      "url": "https://www.currencysolutions.com/international-currency-transfers/",
+      "context": "Fair Exchange Rates for Transfers Above £10K+"
+    },
+    {
+      "topic": "fees",
+      "text": "Fair exchange rates and no fees on transfers over £10,000",
+      "url": "https://www.currencysolutions.com/international-currency-transfers/"
+    },
+    {
+      "topic": "limits",
+      "text": "Transfer any amount, no upper limit",
+      "url": "https://www.currencysolutions.com/international-currency-transfers/",
+      "context": "What are your transaction limits?"
+    },
+    {
+      "topic": "speed",
+      "text": "Most international bank transfers arrive within one to five working days, although the exact timeframe depends on the provider, payment method and any compliance checks that may be required.",
+      "url": "https://www.currencysolutions.com/insights/sending-money-to-south-africa-a-complete-guide-to-fees-exchange-rates-transfer-methods-and-getting-the-best-value/",
+      "context": "How long does it take to send money to South Africa?"
     }
   ],
   "attempts": []

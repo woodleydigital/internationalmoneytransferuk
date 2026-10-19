@@ -1,6 +1,6 @@
 {
   "slug": "john-lewis-finance",
-  "fetchedAt": "2026-10-12T13:09:29.434Z",
+  "fetchedAt": "2026-10-19T10:45:28.921Z",
   "status": "found",
   "pages": [
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb",
@@ -9,11 +9,11 @@
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33665806979345-How-do-I-complete-verification",
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33666867368977-How-do-I-send-money-with-International-Payments-at-John-Lewis-Money",
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/articles/33373333692945-How-do-I-cancel-my-money-transfer",
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203180548881",
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203149428241",
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203178252817",
     "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203159134481",
-    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203131994641",
-    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33132640061585"
+    "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203131994641"
   ],
   "quotes": [
     {
@@ -44,11 +44,6 @@
       "url": "https://www.johnlewisfinance.com/",
       "status": "error",
       "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "url": "https://help.internationalpayments.johnlewismoney.com/hc/en-gb/sections/33203180548881",
-      "status": "error",
-      "reason": "HTTP 403"
     }
   ]
 }

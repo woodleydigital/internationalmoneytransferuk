@@ -1,6 +1,6 @@
 {
   "slug": "xe",
-  "fetchedAt": "2026-10-12T13:10:55.449Z",
+  "fetchedAt": "2026-10-19T10:47:07.678Z",
   "status": "found",
   "pages": [
     "https://help.xe.com/hc/en-gb/articles/360019847837-What-are-the-limits-on-how-much-I-can-send",
@@ -14,7 +14,7 @@
     "https://help.xe.com/hc/en-gb/articles/41785275824657-What-are-the-fees-for-adding-or-converting-between-my-currency-accounts",
     "https://help.xe.com/hc/en-gb/articles/360019472317-What-are-the-fees-for-sending-money",
     "https://help.xe.com/hc/en-gb/articles/360019472397-Why-did-less-money-arrive-than-I-sent-was-a-fee-taken",
-    "https://help.xe.com/hc/en-gb/articles/360019845777-Which-payment-methods-can-I-use"
+    "https://help.xe.com/hc/en-gb"
   ],
   "quotes": [
     {
@@ -39,16 +39,16 @@
       "context": "How to send money to a mobile wallet"
     },
     {
+      "topic": "speed",
+      "text": "Fast, reliable delivery — most transfers arrive in minutes",
+      "url": "https://www.xe.com/",
+      "context": "International money transfers and global currency conversions"
+    },
+    {
       "topic": "countries",
       "text": "With just a few clicks, you can send money to over 190 countries worldwide.",
       "url": "https://www.xe.com/",
       "context": "International money transfers and global currency conversions — International money transfers made easy"
-    },
-    {
-      "topic": "speed",
-      "text": "It only takes a few minutes—all you need is an email address, and you're ready to get started!",
-      "url": "https://www.xe.com/",
-      "context": "International money transfers and global currency conversions — How to send money online with Xe"
     },
     {
       "topic": "fees",
@@ -66,11 +66,6 @@
   "attempts": [
     {
       "url": "https://help.xe.com/hc/en-gb/related/click",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://help.xe.com/hc/en-gb",
       "status": "error",
       "reason": "HTTP 403"
     }
