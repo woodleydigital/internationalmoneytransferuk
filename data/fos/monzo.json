@@ -1,8 +1,47 @@
 {
   "slug": "monzo",
-  "fetchedAt": "2026-10-19T11:12:07.820Z",
+  "fetchedAt": "2026-10-26T11:31:06.362Z",
   "status": "listed",
   "periods": [
+    {
+      "period": {
+        "label": "H1 2026",
+        "span": "1 January to 30 June 2026",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2026",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324897/Business-complaints-data-H1-2026.xlsx",
+        "averageUpheld": "Average % of cases upheld = 26%"
+      },
+      "figures": {
+        "business": "MONZO BANK LIMITED",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            3146
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            1
+          ],
+          [
+            "Investments",
+            1
+          ],
+          [
+            "Decumulation Life & Pensions",
+            8
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.23736600306278713
+          ]
+        ],
+        "newCases": 3156,
+        "proactiveSettled": 260,
+        "upheld": 0.2376767290790982
+      }
+    },
     {
       "period": {
         "label": "H2 2025",
@@ -40,41 +79,6 @@
         "newCases": 5314,
         "proactiveSettled": 593,
         "upheld": 0.26
-      }
-    },
-    {
-      "period": {
-        "label": "H1 2025",
-        "span": "1 January to 30 June 2025",
-        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
-        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
-        "averageUpheld": "0.5151515151515151"
-      },
-      "figures": {
-        "business": "Monzo Bank Ltd",
-        "newByProduct": [
-          [
-            "Banking & Credit",
-            2996
-          ],
-          [
-            "General Insurance / Pure Protection (Includes PPI)",
-            1
-          ],
-          [
-            "Investments",
-            7
-          ]
-        ],
-        "upheldByProduct": [
-          [
-            "",
-            0.34759358288770054
-          ]
-        ],
-        "newCases": 3004,
-        "proactiveSettled": 214,
-        "upheld": 0.3484646194926569
       }
     }
   ],

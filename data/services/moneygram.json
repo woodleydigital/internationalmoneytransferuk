@@ -1,6 +1,6 @@
 {
   "slug": "moneygram",
-  "fetchedAt": "2026-10-19T10:44:40.221Z",
+  "fetchedAt": "2026-10-26T11:04:18.182Z",
   "status": "found",
   "pages": [
     "https://www.moneygram.com/gb/en",
@@ -19,8 +19,15 @@
   "quotes": [
     {
       "topic": "countries",
-      "text": "Send internationally to 200+ countries and territories",
-      "url": "https://www.moneygram.com/gb/en"
+      "text": "Presence in over 200 countries and territories",
+      "url": "https://www.moneygram.com/gb/en",
+      "context": "Send or receive money your way"
+    },
+    {
+      "topic": "countries",
+      "text": "Send internationally to 200+ countries Send money abroad from the United Kingdom Send money abroad from the United Kingdom",
+      "url": "https://www.moneygram.com/gb/en",
+      "context": "Send or receive money your way"
     },
     {
       "topic": "fees",
@@ -31,18 +38,20 @@
     {
       "topic": "fees",
       "text": "See your rate and fee before you confirm, pay your way, and send money home in minutes, right from your phone or computer.",
-      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online"
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
+      "context": "Send money online with MoneyGram"
+    },
+    {
+      "topic": "payout",
+      "text": "470,000+ locations worldwide for cash pickup",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
+      "context": "Send money online with MoneyGram"
     },
     {
       "topic": "countries",
-      "text": "Send money to 200+ countries",
-      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online"
-    },
-    {
-      "topic": "fees",
-      "text": "Fees vary based on transaction details such as transfer amount, payment type, delivery method, and pickup location.",
+      "text": "Send money to 200+ countries From the United Kingdom to anywhere From the United Kingdom to anywhere",
       "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
-      "context": "How do I track a transfer?"
+      "context": "Send money online with MoneyGram"
     },
     {
       "topic": "identity",
@@ -53,9 +62,20 @@
       "topic": "payout",
       "text": "Your recipient can pick up cash at an agent location or receive funds straight to a bank account or mobile wallet.",
       "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person"
+    },
+    {
+      "topic": "fees",
+      "text": "The fee depends on the amount and destination, and you'll see it before you confirm.",
+      "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person",
+      "context": "What do I need to send money in person?"
     }
   ],
   "attempts": [
+    {
+      "url": "https://go.moneygram.com/preferences?country=gb&language=en&fromLegacy=true",
+      "status": "blocked",
+      "reason": "robots.txt disallows the redirected page"
+    },
     {
       "url": "https://www.moneygram.com/gb/en/help-center/track-a-transfer",
       "status": "error",

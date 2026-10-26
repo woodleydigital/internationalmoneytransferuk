@@ -1,9 +1,15 @@
 {
   "slug": "ulster-bank",
   "number": "00929027",
-  "fetchedAt": "2026-10-19T11:11:24.483Z",
+  "fetchedAt": "2026-10-26T11:30:12.656Z",
   "previousNames": [],
   "timeline": [
+    {
+      "date": "2026-10-20",
+      "category": "mortgage",
+      "label": "Charge registered or updated",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/00929027/filing-history/MzU1MjAyMjU0MmFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-06-03",
       "category": "accounts",
@@ -177,18 +183,12 @@
       "category": "resolution",
       "label": "Resolution filed",
       "url": "https://find-and-update.company-information.service.gov.uk/company/00929027/filing-history/QTg4S1RQRkVhZGlxemtjeA/document?format=pdf&download=0"
-    },
-    {
-      "date": "2019-06-19",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/00929027/filing-history/MzIzNzc0MTc4OGFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {
-    "total": 56,
+    "total": 57,
     "satisfied": 10,
-    "outstanding": 46,
+    "outstanding": 47,
     "url": "https://find-and-update.company-information.service.gov.uk/company/00929027/charges"
   },
   "owners": [

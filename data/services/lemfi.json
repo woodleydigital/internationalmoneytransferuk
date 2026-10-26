@@ -1,26 +1,16 @@
 {
   "slug": "lemfi",
-  "fetchedAt": "2026-10-19T10:46:26.166Z",
+  "fetchedAt": "2026-10-26T11:06:13.044Z",
   "status": "found",
   "pages": [
     "https://support.lemfi.com/hc/en-us/articles/45780629399185-Are-there-country-specific-rules-or-limits",
     "https://support.lemfi.com/hc/en-us/sections/45803934965649-Limits-settings",
     "https://www.lemfi.com/en-gb/legal/terms",
-    "https://lemfi.com/en-us/",
+    "https://lemfi.com/en-gb/",
     "https://www.lemfi.com/en-gb/international-money-transfer",
-    "https://www.lemfi.com/en-gb/request-money"
+    "https://lemfi.com/en-gb/international-money-transfer"
   ],
   "quotes": [
-    {
-      "topic": "countries",
-      "text": "International money transfer Send money internationally to more than 30+ countries.",
-      "url": "https://www.lemfi.com/en-gb/legal/terms"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Information on how money in your wallet is safeguarded",
-      "url": "https://www.lemfi.com/en-gb/legal/terms"
-    },
     {
       "topic": "safeguarding",
       "text": "The balance of your wallet(s) will be backed by an equivalent amount of money which LemFi holds in its safeguarded accounts.",
@@ -33,22 +23,34 @@
       "context": "5. Information on how money in your wallet is safeguarded"
     },
     {
-      "topic": "speed",
-      "text": "Estimated arrival Usually within minutes",
-      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
-      "context": "Easily send money directly to loved ones across the globe"
+      "topic": "safeguarding",
+      "text": "Safeguarding your money means that in the unlikely event that LemFi gets into financial difficulties, the money which LemFi safeguards on your behalf will be protected from the claims of LemFi's creditors and should be returned to you in full.",
+      "url": "https://www.lemfi.com/en-gb/legal/terms",
+      "context": "5. Information on how money in your wallet is safeguarded"
     },
     {
       "topic": "countries",
-      "text": "Transfer to friends and family in over 30 countries",
+      "text": "Send money worldwide to 100+ countries",
       "url": "https://www.lemfi.com/en-gb/international-money-transfer",
-      "context": "Easily send money directly to loved ones across the globe"
+      "context": "Send at great value"
     },
     {
       "topic": "fees",
-      "text": "Save On Fees Send more money to anyone at low cost or zero fees.",
+      "text": "Transfer fee £0.00 Send at this rate",
       "url": "https://www.lemfi.com/en-gb/international-money-transfer",
-      "context": "Easily send money directly to loved ones across the globe"
+      "context": "Send at great value"
+    },
+    {
+      "topic": "payout",
+      "text": "Move money your way Bank transfer, mobile money and plenty more.",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
+      "context": "Send at great value — Make sending easy"
+    },
+    {
+      "topic": "speed",
+      "text": "Most transfers land in minutes.",
+      "url": "https://www.lemfi.com/en-gb/international-money-transfer",
+      "context": "Send at great value — Make sending easy"
     }
   ],
   "attempts": []

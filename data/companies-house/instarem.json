@@ -1,6 +1,6 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-10-19T11:08:20.857Z",
+  "fetchedAt": "2026-10-26T11:26:36.458Z",
   "status": "matched",
   "match": {
     "query": "https://www.instarem.com/en-gb/",
@@ -26,7 +26,7 @@
     "lastAccountsMadeUpTo": "2024-12-31",
     "accountsNextDue": "2026-12-31",
     "accountsOverdue": false,
-    "confirmationStatementOverdue": true,
+    "confirmationStatementOverdue": false,
     "hasInsolvencyHistory": false,
     "url": "https://find-and-update.company-information.service.gov.uk/company/09039850"
   },

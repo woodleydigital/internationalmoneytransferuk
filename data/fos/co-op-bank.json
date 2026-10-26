@@ -1,8 +1,51 @@
 {
   "slug": "co-op-bank",
-  "fetchedAt": "2026-10-19T11:12:07.817Z",
+  "fetchedAt": "2026-10-26T11:31:06.359Z",
   "status": "listed",
   "periods": [
+    {
+      "period": {
+        "label": "H1 2026",
+        "span": "1 January to 30 June 2026",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2026",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324897/Business-complaints-data-H1-2026.xlsx",
+        "averageUpheld": "Average % of cases upheld = 26%"
+      },
+      "figures": {
+        "business": "THE CO-OPERATIVE BANK P.L.C.",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            325
+          ],
+          [
+            "Mortgages & Home Finance",
+            25
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            1
+          ],
+          [
+            "Investments",
+            1
+          ],
+          [
+            "Decumulation Life & Pensions",
+            1
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.29949238578680204
+          ]
+        ],
+        "newCases": 353,
+        "proactiveSettled": 59,
+        "upheld": 0.2995391705069124
+      }
+    },
     {
       "period": {
         "label": "H2 2025",
@@ -40,49 +83,6 @@
         "newCases": 487,
         "proactiveSettled": 51,
         "upheld": 0.3110599078341014
-      }
-    },
-    {
-      "period": {
-        "label": "H1 2025",
-        "span": "1 January to 30 June 2025",
-        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
-        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
-        "averageUpheld": "0.5151515151515151"
-      },
-      "figures": {
-        "business": "The Co-Operative Bank Plc",
-        "newByProduct": [
-          [
-            "Banking & Credit",
-            302
-          ],
-          [
-            "Mortgages & Home Finance",
-            46
-          ],
-          [
-            "General Insurance / Pure Protection (Includes PPI)",
-            2
-          ],
-          [
-            "Investments",
-            3
-          ]
-        ],
-        "upheldByProduct": [
-          [
-            "",
-            0.3986013986013986
-          ],
-          [
-            "",
-            0.4125
-          ]
-        ],
-        "newCases": 353,
-        "proactiveSettled": 39,
-        "upheld": 0.3972972972972973
       }
     }
   ],

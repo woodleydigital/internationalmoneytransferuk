@@ -1,8 +1,56 @@
 {
   "slug": "ulster-bank",
-  "fetchedAt": "2026-10-19T11:12:07.826Z",
+  "fetchedAt": "2026-10-26T11:31:06.370Z",
   "status": "listed",
   "periods": [
+    {
+      "period": {
+        "label": "H1 2026",
+        "span": "1 January to 30 June 2026",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2026",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324897/Business-complaints-data-H1-2026.xlsx",
+        "averageUpheld": "Average % of cases upheld = 26%"
+      },
+      "figures": {
+        "business": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            4615
+          ],
+          [
+            "Mortgages & Home Finance",
+            221
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            6
+          ],
+          [
+            "Investments",
+            16
+          ],
+          [
+            "Decumulation Life & Pensions",
+            11
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.3449037551278006
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.368
+          ]
+        ],
+        "group": "NATWEST GROUP PLC",
+        "newCases": 4869,
+        "proactiveSettled": 241,
+        "upheld": 0.3457125603864734
+      }
+    },
     {
       "period": {
         "label": "H2 2025",
@@ -49,54 +97,6 @@
         "newCases": 5935,
         "proactiveSettled": 446,
         "upheld": 0.3
-      }
-    },
-    {
-      "period": {
-        "label": "H1 2025",
-        "span": "1 January to 30 June 2025",
-        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
-        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
-        "averageUpheld": "0.5151515151515151"
-      },
-      "figures": {
-        "business": "NATIONAL WESTMINSTER BANK PUBLIC LIMITED COMPANY",
-        "newByProduct": [
-          [
-            "Banking & Credit",
-            2833
-          ],
-          [
-            "Mortgages & Home Finance",
-            194
-          ],
-          [
-            "General Insurance / Pure Protection (Includes PPI)",
-            5
-          ],
-          [
-            "Investments",
-            12
-          ],
-          [
-            "Decumulation Life & Pensions",
-            7
-          ]
-        ],
-        "upheldByProduct": [
-          [
-            "",
-            0.32
-          ],
-          [
-            "",
-            0.33
-          ]
-        ],
-        "group": "NATWEST GROUP PLC",
-        "newCases": 3051,
-        "proactiveSettled": 189,
-        "upheld": 0.31
       }
     }
   ],

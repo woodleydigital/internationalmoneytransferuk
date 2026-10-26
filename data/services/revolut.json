@@ -1,9 +1,80 @@
 {
   "slug": "revolut",
-  "fetchedAt": "2026-10-19T10:45:15.874Z",
-  "status": "error",
-  "pages": [],
-  "quotes": [],
+  "fetchedAt": "2026-10-26T11:05:01.263Z",
+  "status": "found",
+  "pages": [
+    "https://www.revolut.com/",
+    "https://www.revolut.com/money-transfer/"
+  ],
+  "quotes": [
+    {
+      "topic": "countries",
+      "text": "Send money to 160+ countries with competitive exchange rates and low fees, all in one app.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "speed",
+      "text": "Usually arrives in seconds",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "countries",
+      "text": "Send money across 160+ countries.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer"
+    },
+    {
+      "topic": "fees",
+      "text": "NatWest £1,024.45 -£24.45",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Clear fees and competitive rates. — Provider Your total",
+      "table": true
+    },
+    {
+      "topic": "fees",
+      "text": "Exchange rates and transfer fees displayed are illustrative and only refreshed every minute.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Clear fees and competitive rates."
+    },
+    {
+      "topic": "fees",
+      "text": "Always check the applicable rate and transfer fees in-app before carrying out your transfer.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Clear fees and competitive rates."
+    },
+    {
+      "topic": "countries",
+      "text": "Send money quickly to over 160+ countries with great exchange rates and low fees, and get real-time notifications to track every transfer.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Get your free Revolut app for international money transfers"
+    },
+    {
+      "topic": "payout",
+      "text": "Transfer money to a bank account in 160+ supported countries.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — Bank transfer"
+    },
+    {
+      "topic": "speed",
+      "text": "International bank transfers from the UK generally arrive within 3–5 business days.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — International bank transfers"
+    },
+    {
+      "topic": "speed",
+      "text": "If you're sending EUR to a country in the SEPA region, your money could arrive within 2 working days or even in seconds.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer — International bank transfers"
+    },
+    {
+      "topic": "limits",
+      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
+      "url": "https://www.revolut.com/money-transfer/",
+      "context": "International money transfer FAQs — How much money can I send abroad from the UK?"
+    }
+  ],
   "attempts": [
     {
       "url": "https://www.revolut.com/en-GB/international-transfers/",
@@ -16,10 +87,64 @@
       "reason": "HTTP 403"
     },
     {
-      "url": "https://www.revolut.com/en-GB/",
+      "url": "https://www.revolut.com/international-transfers/",
+      "status": "blocked",
+      "reason": "robots.txt disallows collection"
+    },
+    {
+      "url": "https://www.revolut.com/a-radically-better-account/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/revolut-plus/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-nigeria/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-poland/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-ghana/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-dubai/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-the-uk-from-india/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-saudi-arabia/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-north-macedonia/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.revolut.com/money-transfer/send-money-to-the-uk/",
       "status": "error",
       "reason": "HTTP 403"
     }
-  ],
-  "error": "robots.txt disallows collection"
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "xe",
-  "fetchedAt": "2026-10-19T10:47:07.678Z",
+  "fetchedAt": "2026-10-26T11:06:52.658Z",
   "status": "found",
   "pages": [
     "https://help.xe.com/hc/en-gb/articles/360019847837-What-are-the-limits-on-how-much-I-can-send",
@@ -61,6 +61,12 @@
       "text": "Send money to 190 countries across 130 currencies.",
       "url": "https://www.xe.com/",
       "context": "International money transfers and global currency conversions — Xe currency tools — International transfers"
+    },
+    {
+      "topic": "fees",
+      "text": "Hold and manage multi-currency accounts with no setup or monthly fees.",
+      "url": "https://www.xe.com/",
+      "context": "International money transfers and global currency conversions — Multi-currency accounts"
     }
   ],
   "attempts": [

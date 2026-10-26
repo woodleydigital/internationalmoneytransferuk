@@ -1,101 +1,21 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-10-19T10:46:42.089Z",
+  "fetchedAt": "2026-10-26T11:06:28.639Z",
   "status": "found",
   "pages": [
-    "https://www.riamoneytransfer.com/en-gb/send-money/",
-    "https://www.riamoneytransfer.com/en-gb/terms/",
-    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
-    "https://www.riamoneytransfer.com/en-gb/mobile-app/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-europe/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-latin-america/",
-    "https://help.riamoneytransfer.com/hc/en-us"
+    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
   ],
   "quotes": [
-    {
-      "topic": "countries",
-      "text": "With 100+ currencies, better rates, and stress-free transfers, we make sure you get the most out of your money.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "payout",
-      "text": "A bank deposit lets recipients receive funds directly into their bank accounts.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "payout",
-      "text": "Your loved ones can easily receive money into their mobile wallet for quick, direct access.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "countries",
-      "text": "With the Ria app, you can send money to 190+ countries and territories.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK — Send money on the go with the Ria app"
-    },
-    {
-      "topic": "fees",
-      "text": "You can use the in-app calculator to check current rates and fees before making a transfer.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "payout",
-      "text": "9.1 Our Service provides various options by which a Payment Transaction is received, including cash at a Paying Agent, direct to a bank account or via our home delivery service, where available.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
-      "context": "9. PAYMENT TRANSACTION EXECUTION"
-    },
-    {
-      "topic": "fees",
-      "text": "12.2 In accordance with the Regulations and before execution of a Payment Order, we shall provide information to you regarding the fee and any applicable exchange rates, which will be displayed in the order preview section of the Ria Money Transfer App.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
-      "context": "12. FEES"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Relevant Funds will be safeguarded for as long as they are held by RIA, i.e. until funds are collected by the Beneficiary at destination or are paid out to the Recipient’s payment service provider.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
-      "context": "18. SAFEGUARDING"
-    },
-    {
-      "topic": "limits",
-      "text": "That transfer must have a minimum principal amount of fifty pounds sterling (GBP 50) and must be fully disbursed to the designated recipient.",
-      "url": "https://www.riamoneytransfer.com/en-gb/terms/"
-    },
     {
       "topic": "fees",
       "text": "Be aware that \"No fee\" may not mean \"no cost\" as cost may be built into the exchange rate margin",
       "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
     },
     {
-      "topic": "countries",
-      "text": "Send money to 190+ countries in just a few taps.",
-      "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/",
-      "context": "Send money with the Ria app in the UK"
-    },
-    {
-      "topic": "speed",
-      "text": "It typically finalizes within the same day— usually within minutes —so your recipient could receive money almost immediately.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-      "context": "How long does it take to send money to Africa from the U.S.?"
-    },
-    {
-      "topic": "speed",
-      "text": "This method usually takes 3-5 business days with smaller fees.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-africa/",
-      "context": "How long does it take to send money to Africa from the U.S.?"
-    },
-    {
-      "topic": "speed",
-      "text": "I t typically finalizes within the same day—usually within minutes —so your recipient could receive money almost immediately.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-      "context": "How long does it take to send money to Asia?"
+      "topic": "fees",
+      "text": "In some countries, fees vary by payment method.",
+      "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
+      "context": "Do payment methods have different fees?"
     }
   ],
   "attempts": [
@@ -105,27 +25,17 @@
       "reason": "HTTP 403"
     },
     {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/terms/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
       "url": "https://www.riamoneytransfer.com/en-gb/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-oceania/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.riamoneytransfer.com/en-gb/international-money-transfer/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-burkina-faso/",
       "status": "error",
       "reason": "HTTP 403"
     }

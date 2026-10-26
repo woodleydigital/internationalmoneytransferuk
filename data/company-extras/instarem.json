@@ -1,7 +1,7 @@
 {
   "slug": "instarem",
   "number": "09039850",
-  "fetchedAt": "2026-10-19T11:10:19.523Z",
+  "fetchedAt": "2026-10-26T11:28:53.140Z",
   "previousNames": [
     {
       "name": "INSTAREM LIMITED",
@@ -10,6 +10,12 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-19",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzU1MTczOTg4OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-10-13",
       "category": "capital",
@@ -183,12 +189,6 @@
       "category": "capital",
       "label": "Share capital filing",
       "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzQyNTY5ODgxOGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2024-06-18",
-      "category": "capital",
-      "label": "Share capital filing",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzQyNTY5ODgyMGFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {

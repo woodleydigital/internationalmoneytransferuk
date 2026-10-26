@@ -1,7 +1,7 @@
 {
   "slug": "skrill",
   "number": "04260907",
-  "fetchedAt": "2026-10-19T11:10:01.469Z",
+  "fetchedAt": "2026-10-26T11:28:31.507Z",
   "previousNames": [
     {
       "name": "MONEYBOOKERS LIMITED",
@@ -10,6 +10,12 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-22",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/04260907/filing-history/MzU1MjAyOTY2OWFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-08-17",
       "category": "accounts",
@@ -183,12 +189,6 @@
       "category": "accounts",
       "label": "Accounts filed, made up to 2016-12-31",
       "url": "https://find-and-update.company-information.service.gov.uk/company/04260907/filing-history/MzE4MTAyODIxNGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2016-10-26",
-      "category": "confirmation-statement",
-      "label": "Confirmation statement filed",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/04260907/filing-history/MzE2MDUzMDgyOWFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {

@@ -1,8 +1,60 @@
 {
   "slug": "ms-bank",
-  "fetchedAt": "2026-10-19T11:12:07.827Z",
+  "fetchedAt": "2026-10-26T11:31:06.370Z",
   "status": "listed",
   "periods": [
+    {
+      "period": {
+        "label": "H1 2026",
+        "span": "1 January to 30 June 2026",
+        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2026",
+        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324897/Business-complaints-data-H1-2026.xlsx",
+        "averageUpheld": "Average % of cases upheld = 26%"
+      },
+      "figures": {
+        "business": "HSBC UK Bank Plc",
+        "newByProduct": [
+          [
+            "Banking & Credit",
+            4246
+          ],
+          [
+            "Mortgages & Home Finance",
+            148
+          ],
+          [
+            "General Insurance / Pure Protection (Includes PPI)",
+            14
+          ],
+          [
+            "Investments",
+            47
+          ],
+          [
+            "Decumulation Life & Pensions",
+            11
+          ]
+        ],
+        "upheldByProduct": [
+          [
+            "Banking & Credit",
+            0.31506377111340916
+          ],
+          [
+            "Mortgages & Home Finance",
+            0.25225225225225223
+          ],
+          [
+            "Investments",
+            0.3055555555555556
+          ]
+        ],
+        "group": "HSBC (GS)",
+        "newCases": 4467,
+        "proactiveSettled": 264,
+        "upheld": 0.31229561805101375
+      }
+    },
     {
       "period": {
         "label": "H2 2025",
@@ -53,54 +105,6 @@
         "newCases": 5630,
         "proactiveSettled": 328,
         "upheld": 0.2702822849522116
-      }
-    },
-    {
-      "period": {
-        "label": "H1 2025",
-        "span": "1 January to 30 June 2025",
-        "pageUrl": "https://www.financial-ombudsman.org.uk/businesses/resolving-complaint/our-insight/half-yearly-complaints-data-h1-2025",
-        "fileUrl": "https://www.financial-ombudsman.org.uk/files/324668/Business-complaints-data-H1-2025.xlsx",
-        "averageUpheld": "0.5151515151515151"
-      },
-      "figures": {
-        "business": "HSBC UK Bank Plc",
-        "newByProduct": [
-          [
-            "Banking & Credit",
-            3020
-          ],
-          [
-            "Mortgages & Home Finance",
-            157
-          ],
-          [
-            "General Insurance / Pure Protection (Includes PPI)",
-            6
-          ],
-          [
-            "Investments",
-            34
-          ],
-          [
-            "Decumulation Life & Pensions",
-            5
-          ]
-        ],
-        "upheldByProduct": [
-          [
-            "",
-            0.28720626631853785
-          ],
-          [
-            "",
-            0.25203252032520324
-          ]
-        ],
-        "group": "HSBC (GS)",
-        "newCases": 3222,
-        "proactiveSettled": 245,
-        "upheld": 0.28440689897923266
       }
     }
   ],
