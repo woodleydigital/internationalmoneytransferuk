@@ -1,6 +1,6 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-10-26T11:04:26.965Z",
+  "fetchedAt": "2026-11-02T13:28:35.767Z",
   "status": "found",
   "pages": [
     "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
@@ -29,16 +29,16 @@
       "context": "Sending from GBP"
     },
     {
-      "topic": "fees",
-      "text": "Lightning-fast global transfers with zero hidden fees, unlike many banks who charge more.",
+      "topic": "speed",
+      "text": "Over 70% arrive in under 20 seconds.",
       "url": "https://wise.com/gb/",
-      "context": "Send money home or abroad, for less"
+      "context": "The current account for home and abroad — Express international transfers"
     },
     {
       "topic": "safeguarding",
       "text": "Your money is held in a safeguarded, separate account.",
       "url": "https://wise.com/gb/",
-      "context": "Safeguarded funds"
+      "context": "The current account for home and abroad — Safeguarded funds"
     },
     {
       "topic": "payout",
@@ -53,16 +53,22 @@
       "context": "Sending GBP to countries outside of the UK"
     },
     {
-      "topic": "speed",
-      "text": "If instant payout isn't available it can take 1–2 working days for the money to arrive in your recipient’s bank account.",
-      "url": "https://wise.com/help/articles/2932149/guide-to-eur-transfers",
-      "context": "Guide to EUR transfers — Sending to EUR"
-    },
-    {
       "topic": "payout",
       "text": "You can send CHF to any CHF bank account in Switzerland or Liechtenstein.",
       "url": "https://wise.com/help/articles/2932338/guide-to-chf-transfers",
       "context": "Guide to CHF transfers — Sending to CHF — Who can I send CHF to?"
+    },
+    {
+      "topic": "countries",
+      "text": "You can receive money in 51 currencies from anyone else on Wise.",
+      "url": "https://wise.com/gb/account/",
+      "context": "What payments can I receive in each currency?"
+    },
+    {
+      "topic": "countries",
+      "text": "You can receive money from others not on Wise in 23 currencies.",
+      "url": "https://wise.com/gb/account/",
+      "context": "What payments can I receive in each currency?"
     }
   ],
   "attempts": []

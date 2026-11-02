@@ -1,7 +1,7 @@
 {
   "slug": "instarem",
   "number": "09039850",
-  "fetchedAt": "2026-10-26T11:28:53.140Z",
+  "fetchedAt": "2026-11-02T13:53:19.644Z",
   "previousNames": [
     {
       "name": "INSTAREM LIMITED",
@@ -10,6 +10,12 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-11-02",
+      "category": "accounts",
+      "label": "Accounts filed, made up to 2025-12-31",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzU1Mzk0ODg4N2FkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-10-19",
       "category": "confirmation-statement",
@@ -183,12 +189,6 @@
       "category": "capital",
       "label": "Share capital filing",
       "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzQyNTY5ODg4OGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2024-06-18",
-      "category": "capital",
-      "label": "Share capital filing",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history/MzQyNTY5ODgxOGFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {
@@ -199,37 +199,37 @@
   },
   "owners": [],
   "accounts": {
-    "madeUpTo": "2024-12-31",
-    "filedOn": "2025-10-30",
+    "madeUpTo": "2025-12-31",
+    "filedOn": "2026-11-02",
     "url": "https://find-and-update.company-information.service.gov.uk/company/09039850/filing-history",
     "figures": [
       {
         "concept": "ProfitLoss",
         "label": "Profit or loss for the year",
-        "value": -5664149,
+        "value": -4420704,
         "unit": "GBP",
-        "periodEnd": "2024-12-31"
+        "periodEnd": "2025-12-31"
+      },
+      {
+        "concept": "ProfitLossOnOrdinaryActivitiesBeforeTax",
+        "label": "Profit or loss before tax",
+        "value": -4420704,
+        "unit": "GBP",
+        "periodEnd": "2025-12-31"
       },
       {
         "concept": "NetAssetsLiabilities",
         "label": "Net assets",
-        "value": 5827945,
+        "value": 5165630,
         "unit": "GBP",
-        "periodEnd": "2024-12-31"
+        "periodEnd": "2025-12-31"
       },
       {
         "concept": "CashBankOnHand",
         "label": "Cash at bank and in hand",
-        "value": 12954501,
+        "value": 14071707,
         "unit": "GBP",
-        "periodEnd": "2024-12-31"
-      },
-      {
-        "concept": "AverageNumberEmployeesDuringPeriod",
-        "label": "Average number of employees",
-        "value": 36,
-        "unit": "pure",
-        "periodEnd": "2024-12-31"
+        "periodEnd": "2025-12-31"
       }
     ]
   }

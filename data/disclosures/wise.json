@@ -1,7 +1,7 @@
 {
   "slug": "wise",
   "url": "https://wise.com/gb/",
-  "fetchedAt": "2026-10-26T11:04:28.670Z",
+  "fetchedAt": "2026-11-02T13:28:37.279Z",
   "status": "found",
   "statements": [
     {
@@ -17,7 +17,7 @@
         "900507"
       ],
       "companyNumbers": [],
-      "url": "https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country-and-region"
+      "url": "https://wise.com/gb/account/"
     }
   ]
 }

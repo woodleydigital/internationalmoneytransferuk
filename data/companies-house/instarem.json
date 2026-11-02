@@ -1,6 +1,6 @@
 {
   "slug": "instarem",
-  "fetchedAt": "2026-10-26T11:26:36.458Z",
+  "fetchedAt": "2026-11-02T13:51:09.709Z",
   "status": "matched",
   "match": {
     "query": "https://www.instarem.com/en-gb/",
@@ -23,8 +23,8 @@
       "64999"
     ],
     "registeredOffice": "Ground Floor, 52-54 Gracechurch Street, London, EC3V 0EH, United Kingdom",
-    "lastAccountsMadeUpTo": "2024-12-31",
-    "accountsNextDue": "2026-12-31",
+    "lastAccountsMadeUpTo": "2025-12-31",
+    "accountsNextDue": "2027-09-30",
     "accountsOverdue": false,
     "confirmationStatementOverdue": false,
     "hasInsolvencyHistory": false,

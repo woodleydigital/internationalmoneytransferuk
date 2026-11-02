@@ -1,7 +1,7 @@
 {
   "slug": "post-office",
   "number": "02154540",
-  "fetchedAt": "2026-10-26T11:27:56.318Z",
+  "fetchedAt": "2026-11-02T13:52:26.675Z",
   "previousNames": [
     {
       "name": "POST OFFICE COUNTERS LTD",
@@ -10,6 +10,12 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-10-30",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzU1MzY0MzAyMGFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2025-12-30",
       "category": "accounts",
@@ -20,7 +26,7 @@
       "date": "2025-12-18",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMmFkaXF6a2N4/document?format=pdf&download=0"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMWFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2025-12-18",
@@ -32,7 +38,7 @@
       "date": "2025-12-18",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMWFkaXF6a2N4/document?format=pdf&download=0"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMmFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2025-10-28",
@@ -183,12 +189,6 @@
       "category": "confirmation-statement",
       "label": "Confirmation statement filed",
       "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzIzNzU5Njg5OWFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2018-10-16",
-      "category": "accounts",
-      "label": "Accounts filed, made up to 2018-03-31",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzIxNzA2NjQ5MGFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {

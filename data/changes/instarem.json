@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-11-02",
+    "source": "Companies House",
+    "field": "Latest accounts made up to",
+    "from": "2024-12-31",
+    "to": "2025-12-31"
+  },
+  {
+    "date": "2026-11-02",
+    "source": "Companies House",
+    "field": "Next accounts due",
+    "from": "2026-12-31",
+    "to": "2027-09-30"
+  }
+]

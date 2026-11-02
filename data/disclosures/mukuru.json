@@ -1,8 +1,7 @@
 {
   "slug": "mukuru",
   "url": "https://www.mukuru.com/en-uk/",
-  "fetchedAt": "2026-10-26T11:12:13.156Z",
-  "status": "error",
-  "statements": [],
-  "error": "HTTP 403"
+  "fetchedAt": "2026-11-02T13:29:45.196Z",
+  "status": "none",
+  "statements": []
 }

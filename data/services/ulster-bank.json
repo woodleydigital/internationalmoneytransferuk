@@ -1,6 +1,6 @@
 {
   "slug": "ulster-bank",
-  "fetchedAt": "2026-10-26T11:08:47.002Z",
+  "fetchedAt": "2026-11-02T13:33:22.781Z",
   "status": "found",
   "pages": [
     "https://www.ulsterbank.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
@@ -49,21 +49,21 @@
     },
     {
       "topic": "fees",
-      "text": "There is no fee for sending an international payment online, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
+      "text": "There is no fee for sending an international payment, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
       "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
       "context": "Sending money abroad"
     },
     {
       "topic": "fees",
-      "text": "There is no fee for all euro payments received.",
+      "text": "There is no fee for receiving payments from abroad.",
       "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
       "context": "Sending money abroad"
     },
     {
       "topic": "fees",
-      "text": "For non-euro payments, there’s a £6 fee.",
+      "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
       "url": "https://www.ulsterbank.co.uk/banking-with-ulster-bank/how-to/send-money-abroad.html",
-      "context": "Sending money abroad"
+      "context": "Sending money abroad — Fee options when sending a payment"
     },
     {
       "topic": "limits",
