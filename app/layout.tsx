@@ -12,6 +12,9 @@ const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
 });
 
+/** Google Search Console property verification for internationalmoneytransfer.uk. */
+const GOOGLE_VERIFICATION = "euHDuz_tQveSOXFJ--H9va07K0fkAhaSxGZvGNNWUEg";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
@@ -21,9 +24,11 @@ export const metadata: Metadata = {
   },
   description:
     "A directory of UK international money transfer providers, built from Companies House records and each provider's own published regulatory statement.",
-  // Search engine ownership checks, set in the hosting environment (no code change needed).
+  // Search engine ownership checks. These tokens are public (they render as meta
+  // tags in the page source), so the Google one ships as a default and needs no
+  // hosting config; either can still be overridden per environment.
   verification: {
-    ...(process.env.GOOGLE_SITE_VERIFICATION ? { google: process.env.GOOGLE_SITE_VERIFICATION } : {}),
+    google: process.env.GOOGLE_SITE_VERIFICATION ?? GOOGLE_VERIFICATION,
     ...(process.env.BING_SITE_VERIFICATION ? { other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION } } : {}),
   },
   openGraph: {
