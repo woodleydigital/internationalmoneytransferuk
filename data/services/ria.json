@@ -1,18 +1,12 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-11-02T13:30:44.826Z",
+  "fetchedAt": "2026-11-09T13:54:28.017Z",
   "status": "found",
   "pages": [
     "https://www.riamoneytransfer.com/en-gb/send-money-online/",
     "https://www.riamoneytransfer.com/en-gb/send-money/",
     "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
-    "https://www.riamoneytransfer.com/en-gb/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-latin-america/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-oceania/",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-albania/"
+    "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/"
   ],
   "quotes": [
     {
@@ -92,15 +86,15 @@
     },
     {
       "topic": "speed",
-      "text": "I t typically finalizes within the same day—usually within minutes —so your recipient could receive money almost immediately.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-      "context": "How long does it take to send money to Asia?"
+      "text": "Many transfers arrive within minutes.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
+      "context": "What’s the best way to send money to Argentina?"
     },
     {
       "topic": "speed",
-      "text": "This method usually takes 3-5 business days with smaller fees.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
-      "context": "How long does it take to send money to Asia?"
+      "text": "A standard bank transfer with Ria (either to a recipient bank account or as a cash pickup) can take 3-5 business days.",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
+      "context": "How long does it take to send money to Argentina?"
     }
   ],
   "attempts": [
@@ -110,7 +104,17 @@
       "reason": "HTTP 403"
     },
     {
+      "url": "https://www.riamoneytransfer.com/en-gb/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
       "url": "https://www.riamoneytransfer.com/en-gb/mobile-app/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-in-person/",
       "status": "error",
       "reason": "HTTP 403"
     },
@@ -120,7 +124,27 @@
       "reason": "HTTP 403"
     },
     {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-asia/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
       "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-europe/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-latin-america/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-north-america/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-oceania/",
       "status": "error",
       "reason": "HTTP 403"
     },
@@ -130,7 +154,7 @@
       "reason": "HTTP 403"
     },
     {
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-albania/",
       "status": "error",
       "reason": "HTTP 403"
     }

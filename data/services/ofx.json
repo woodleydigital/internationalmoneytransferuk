@@ -1,20 +1,20 @@
 {
   "slug": "ofx",
-  "fetchedAt": "2026-11-02T13:28:31.387Z",
+  "fetchedAt": "2026-11-09T13:52:19.229Z",
   "status": "found",
   "pages": [
     "https://www.ofx.com/en-gb/faqs/",
     "https://www.ofx.com/en-gb/faqs/are-there-any-transfer-fees/",
     "https://www.ofx.com/en-gb/",
     "https://www.ofx.com/en-gb/send-money/",
-    "https://www.ofx.com/en-gb/personal/money-transfer-types/",
-    "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
-    "https://www.ofx.com/en-gb/personal/money-transfer-types/forward-contracts/",
-    "https://www.ofx.com/en-gb/personal/money-transfer-types/limit-orders/",
-    "https://www.ofx.com/en-gb/personal/money-transfer-types/regular-payments/",
     "https://www.ofx.com/en-gb/personal/reasons-for-transfer/family/",
     "https://www.ofx.com/en-gb/personal/reasons-for-transfer/emigration/",
-    "https://www.ofx.com/en-gb/blog/guide-to-paying-taxes-abroad/"
+    "https://www.ofx.com/en-gb/blog/guide-to-paying-taxes-abroad/",
+    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/luxury-import/",
+    "https://www.ofx.com/en-gb/personal/reasons-for-transfer/selling-international-shares/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/spot-transfers/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/forward-contracts/",
+    "https://www.ofx.com/en-gb/personal/money-transfer-types/limit-orders/"
   ],
   "quotes": [
     {
@@ -68,6 +68,11 @@
       "topic": "countries",
       "text": "Quick, secure, global payments in 50+ currencies from the UK",
       "url": "https://www.ofx.com/en-gb/send-money/"
+    },
+    {
+      "topic": "payout",
+      "text": "Convert the proceeds into your preferred currency and transfer them directly to your bank account.",
+      "url": "https://www.ofx.com/en-gb/personal/reasons-for-transfer/selling-international-shares/"
     },
     {
       "topic": "fees",

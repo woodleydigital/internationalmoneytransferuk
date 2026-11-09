@@ -1,6 +1,6 @@
 {
   "slug": "taptap-send",
-  "fetchedAt": "2026-11-02T13:32:46.611Z",
+  "fetchedAt": "2026-11-09T13:56:21.084Z",
   "status": "found",
   "pages": [
     "https://help.taptapsend.com/en/sending-countries/how-do-i-send-money-from-the-uk",
@@ -87,19 +87,7 @@
       "topic": "payout",
       "text": "Transfer to bKash, Nagad or Rocket mobile wallets, any Bangladeshi bank, or cash pickup at BRAC Bank, Islami Bank and others.",
       "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh",
-      "context": "Send money to Bangladesh — fast transfers to BKash, Nagad, Rocket and any bank"
-    },
-    {
-      "topic": "speed",
-      "text": "95% of our transfers are received in under 5 minutes!*",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/bangladesh",
-      "context": "Your fast, secure and low-cost way to send money to Bangladesh"
-    },
-    {
-      "topic": "speed",
-      "text": "Over 90% of transactions are processed in seconds.",
-      "url": "https://www.taptapsend.com/en-gb/send-money-to/brazil",
-      "context": "How long does it take for the transfer to arrive in Brazil?"
+      "context": "Send money to Bangladesh — transfers to BKash, Nagad, Rocket and any bank"
     },
     {
       "topic": "payout",
@@ -120,7 +108,7 @@
     },
     {
       "topic": "countries",
-      "text": "Taptap Send is a mobile app that lets you send money quickly, securely, and affordably to more than 80 countries in Latin America, Africa, and Asia.",
+      "text": "Taptap Send is a mobile app that lets you send money securely and affordably to more than 80 countries in Latin America, Africa, and Asia.",
       "url": "https://www.taptapsend.com/en-gb/send-money-to/guatemala",
       "context": "What is Taptap Send?"
     },

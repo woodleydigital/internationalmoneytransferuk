@@ -1,25 +1,25 @@
 {
   "slug": "halo-financial",
-  "fetchedAt": "2026-11-02T13:32:13.288Z",
+  "fetchedAt": "2026-11-09T13:55:41.919Z",
   "status": "error",
   "pages": [],
   "quotes": [],
   "attempts": [
     {
       "url": "https://www.halofinancial.com/money-transfer-services/currency-volatility-management",
-      "status": "error",
-      "reason": "fetch failed"
+      "status": "redirected",
+      "reason": "Redirected to www.currencyindex.co.uk"
     },
     {
       "url": "https://www.halofinancial.com/money-transfer-services/regular-currency-trade",
-      "status": "error",
-      "reason": "fetch failed"
+      "status": "redirected",
+      "reason": "Redirected to www.currencyindex.co.uk"
     },
     {
       "url": "https://www.halofinancial.com/",
-      "status": "error",
-      "reason": "fetch failed"
+      "status": "redirected",
+      "reason": "Redirected to www.currencyindex.co.uk"
     }
   ],
-  "error": "fetch failed"
+  "error": "Redirected to www.currencyindex.co.uk"
 }

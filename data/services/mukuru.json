@@ -1,15 +1,15 @@
 {
   "slug": "mukuru",
-  "fetchedAt": "2026-11-02T13:29:36.847Z",
+  "fetchedAt": "2026-11-09T13:53:17.938Z",
   "status": "found",
   "pages": [
     "https://www.mukuru.com/en-uk/services/send-money/",
     "https://www.mukuru.com/en-uk/",
-    "https://www.mukuru.com/en-uk/send-money/cote-divoire/",
+    "https://www.mukuru.com/en-uk/send-money/botswana/",
+    "https://www.mukuru.com/en-uk/send-money/cameroon/",
+    "https://www.mukuru.com/en-uk/send-money/china/",
     "https://www.mukuru.com/en-uk/send-money/drc/",
-    "https://www.mukuru.com/en-uk/send-money/bangladesh/",
-    "https://www.mukuru.com/en-uk/send-money/ethiopia/",
-    "https://www.mukuru.com/en-uk/send-money/india/"
+    "https://www.mukuru.com/en-uk/send-money/bangladesh/"
   ],
   "quotes": [
     {
@@ -106,27 +106,27 @@
       "reason": "HTTP 403"
     },
     {
-      "url": "https://www.mukuru.com/en-uk/send-money/botswana/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.mukuru.com/en-uk/send-money/cameroon/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.mukuru.com/en-uk/send-money/china/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
       "url": "https://www.mukuru.com/en-uk/send-money/european-union/",
       "status": "error",
       "reason": "HTTP 403"
     },
     {
+      "url": "https://www.mukuru.com/en-uk/send-money/cote-divoire/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.mukuru.com/en-uk/send-money/ethiopia/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
       "url": "https://www.mukuru.com/en-uk/send-money/ghana/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.mukuru.com/en-uk/send-money/india/",
       "status": "error",
       "reason": "HTTP 403"
     }

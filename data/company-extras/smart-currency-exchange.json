@@ -1,9 +1,15 @@
 {
   "slug": "smart-currency-exchange",
   "number": "05282305",
-  "fetchedAt": "2026-11-02T13:53:59.191Z",
+  "fetchedAt": "2026-11-09T14:18:00.224Z",
   "previousNames": [],
   "timeline": [
+    {
+      "date": "2026-11-03",
+      "category": "confirmation-statement",
+      "label": "Confirmation statement filed",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/05282305/filing-history/MzU1NDEyNzMwOGFkaXF6a2N4/document?format=pdf&download=0"
+    },
     {
       "date": "2026-06-10",
       "category": "accounts",
@@ -177,12 +183,6 @@
       "category": "accounts",
       "label": "Accounts filed, made up to 2010-09-30",
       "url": "https://find-and-update.company-information.service.gov.uk/company/05282305/filing-history/MzAzODg5Mjg2NGFkaXF6a2N4/document?format=pdf&download=0"
-    },
-    {
-      "date": "2010-11-20",
-      "category": "mortgage",
-      "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/05282305/filing-history/MzAyNzM1MTk2NmFkaXF6a2N4/document?format=pdf&download=0"
     }
   ],
   "charges": {

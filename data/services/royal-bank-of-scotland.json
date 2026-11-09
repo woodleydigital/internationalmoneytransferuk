@@ -1,6 +1,6 @@
 {
   "slug": "royal-bank-of-scotland",
-  "fetchedAt": "2026-11-02T13:33:03.091Z",
+  "fetchedAt": "2026-11-09T13:56:40.874Z",
   "status": "found",
   "pages": [
     "https://www.rbs.co.uk/support-centre/banking-from-home/make-payments/how-can-i-make-an-international-payment.html",
@@ -50,20 +50,18 @@
     {
       "topic": "fees",
       "text": "There is no fee for sending an international payment, however the receiving bank may charge for processing the payment and crediting the account of the recipient.",
-      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "Sending money abroad"
+      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html"
     },
     {
       "topic": "fees",
       "text": "There is no fee for receiving payments from abroad.",
-      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "Sending money abroad"
+      "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html"
     },
     {
       "topic": "fees",
       "text": "There are options to pay the fee, and these will be displayed when you send a payment.",
       "url": "https://www.rbs.co.uk/banking-with-royal-bank-of-scotland/how-to/send-money-abroad.html",
-      "context": "Sending money abroad — Fee options when sending a payment"
+      "context": "Fee options when sending a payment"
     },
     {
       "topic": "limits",

@@ -1,6 +1,6 @@
 {
   "slug": "wise",
-  "fetchedAt": "2026-11-02T13:28:35.767Z",
+  "fetchedAt": "2026-11-09T13:52:22.612Z",
   "status": "found",
   "pages": [
     "https://wise.com/help/articles/2932148/guide-to-gbp-transfers",
@@ -29,16 +29,16 @@
       "context": "Sending from GBP"
     },
     {
-      "topic": "speed",
-      "text": "Over 70% arrive in under 20 seconds.",
+      "topic": "fees",
+      "text": "Lightning-fast global transfers with zero hidden fees, unlike many banks who charge more.",
       "url": "https://wise.com/gb/",
-      "context": "The current account for home and abroad — Express international transfers"
+      "context": "Send money home or abroad, for less"
     },
     {
       "topic": "safeguarding",
       "text": "Your money is held in a safeguarded, separate account.",
       "url": "https://wise.com/gb/",
-      "context": "The current account for home and abroad — Safeguarded funds"
+      "context": "Safeguarded funds"
     },
     {
       "topic": "payout",
@@ -51,6 +51,12 @@
       "text": "We send GBP to bank accounts outside of the UK using the Swift payment network .",
       "url": "https://wise.com/help/articles/2977936/sending-gbp-to-countries-outside-of-the-uk",
       "context": "Sending GBP to countries outside of the UK"
+    },
+    {
+      "topic": "speed",
+      "text": "If instant payout isn't available it can take 1–2 working days for the money to arrive in your recipient’s bank account.",
+      "url": "https://wise.com/help/articles/2932149/guide-to-eur-transfers",
+      "context": "Guide to EUR transfers — Sending to EUR"
     },
     {
       "topic": "payout",

@@ -1,6 +1,6 @@
 {
   "slug": "moneygram",
-  "fetchedAt": "2026-11-02T13:28:30.392Z",
+  "fetchedAt": "2026-11-09T13:52:13.550Z",
   "status": "found",
   "pages": [
     "https://www.moneygram.com/gb/en",
@@ -8,13 +8,13 @@
     "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-online",
     "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-person",
     "https://www.moneygram.com/gb/en/corridor",
-    "https://www.moneygram.com/gb/en/help-center/track-a-transfer",
     "https://www.moneygram.com/gb/en/help-center",
     "https://www.moneygram.com/us/en/help-center/contact-us",
     "https://www.moneygram.com/gb/en/help-center/terms-and-conditions",
     "https://www.moneygram.com/gb/en/help-center/terms-of-use",
     "https://www.moneygram.com/gb/en/help-center/complaints",
-    "https://www.moneygram.com/us/en/how-much-does-it-cost-to-send-money-internationally"
+    "https://www.moneygram.com/gb/en/corridor/costa-rica",
+    "https://www.moneygram.com/gb/en/help-center/faq/send-receive/send-money-online/how-much-money-can-i-send-online-through-moneygram-are-there-limits-to-how"
   ],
   "quotes": [
     {
@@ -33,7 +33,7 @@
       "topic": "fees",
       "text": "See the real exchange rate and fee before you tap send.",
       "url": "https://www.moneygram.com/gb/en/send-and-receive/money-transfers-in-app",
-      "context": "Send money with the MoneyGram money transfer app — See your cost before you send"
+      "context": "Why millions send with the MoneyGram app — See your cost before you send"
     },
     {
       "topic": "fees",
@@ -77,6 +77,11 @@
       "url": "https://go.moneygram.com/preferences?country=gb&language=en&fromLegacy=true",
       "status": "blocked",
       "reason": "robots.txt disallows the redirected page"
+    },
+    {
+      "url": "https://www.moneygram.com/gb/en/help-center/track-a-transfer",
+      "status": "error",
+      "reason": "fetch failed"
     }
   ]
 }

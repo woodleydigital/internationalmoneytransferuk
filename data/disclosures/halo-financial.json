@@ -1,8 +1,8 @@
 {
   "slug": "halo-financial",
   "url": "https://www.halofinancial.com/",
-  "fetchedAt": "2026-11-02T13:41:02.616Z",
+  "fetchedAt": "2026-11-09T14:04:53.302Z",
   "status": "error",
   "statements": [],
-  "error": "fetch failed"
+  "error": "Homepage redirected to another provider domain"
 }

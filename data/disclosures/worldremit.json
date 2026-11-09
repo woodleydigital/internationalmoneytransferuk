@@ -1,7 +1,7 @@
 {
   "slug": "worldremit",
   "url": "https://www.worldremit.com/en-gb",
-  "fetchedAt": "2026-11-02T13:31:13.605Z",
+  "fetchedAt": "2026-11-09T13:54:52.295Z",
   "status": "found",
   "statements": [
     {
@@ -24,7 +24,7 @@
         "900891"
       ],
       "companyNumbers": [],
-      "url": "https://www.worldremit.com/en/faq/send-from"
+      "url": "https://www.worldremit.com/en/india"
     }
   ]
 }

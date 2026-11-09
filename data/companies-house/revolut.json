@@ -1,57 +1,16 @@
 {
   "slug": "revolut",
-  "fetchedAt": "2026-11-02T13:50:52.796Z",
-  "status": "matched",
+  "fetchedAt": "2026-11-09T14:14:55.972Z",
+  "status": "unmatched",
   "match": {
-    "query": "https://www.revolut.com/en-GB/",
-    "rule": "Company number taken from the regulatory statement on the provider's own website. It was the only stated company whose registered name is the trading name plus a legal-form suffix, or whose statement carries the FCA reference number the provider's homepage gives.",
+    "query": "Revolut",
+    "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
-      {
-        "company_number": "12871051",
-        "title": "REVOLUT BANK UK LTD"
-      },
       {
         "company_number": "08804411",
         "title": "REVOLUT LTD"
       }
     ],
-    "outcome": "Matched 08804411 from the provider's website"
-  },
-  "company": {
-    "name": "REVOLUT LTD",
-    "number": "08804411",
-    "status": "active",
-    "type": "ltd",
-    "incorporated": "2013-12-06",
-    "sicCodes": [
-      "62090"
-    ],
-    "registeredOffice": "30 South Colonnade, London, E14 5HX, United Kingdom",
-    "lastAccountsMadeUpTo": "2025-12-31",
-    "accountsNextDue": "2027-09-30",
-    "accountsOverdue": false,
-    "confirmationStatementOverdue": true,
-    "hasInsolvencyHistory": false,
-    "url": "https://find-and-update.company-information.service.gov.uk/company/08804411"
-  },
-  "psc": [
-    {
-      "name": "Revolut Group Holdings Ltd",
-      "kind": "corporate-entity-person-with-significant-control",
-      "natures_of_control": [
-        "ownership-of-shares-75-to-100-percent",
-        "voting-rights-75-to-100-percent"
-      ],
-      "notified_on": "2022-04-29"
-    },
-    {
-      "name": "Mr Nikolay Storonsky",
-      "kind": "individual-person-with-significant-control",
-      "natures_of_control": [
-        "ownership-of-shares-25-to-50-percent"
-      ],
-      "notified_on": "2016-04-08",
-      "ceased_on": "2022-04-29"
-    }
-  ]
+    "outcome": "No candidate with a payments SIC code"
+  }
 }

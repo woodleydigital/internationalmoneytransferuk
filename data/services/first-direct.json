@@ -1,12 +1,11 @@
 {
   "slug": "first-direct",
-  "fetchedAt": "2026-11-02T13:30:16.523Z",
+  "fetchedAt": "2026-11-09T13:53:53.773Z",
   "status": "found",
   "pages": [
     "https://www.firstdirect.com/travel-and-international/international-payments/",
     "https://www.firstdirect.com/rates-and-charges/charges/",
     "https://www.firstdirect.com/",
-    "https://mortgages.firstdirect.com/mortgage-rates",
     "https://www.firstdirect.com/mortgages/mortgage-fees/",
     "https://www.firstdirect.com/mortgages/cost-of-living-support/",
     "https://www.firstdirect.com/help/bank-accounts/payments-and-transfers/",
@@ -14,7 +13,8 @@
     "https://www.firstdirect.com/help/bank-accounts/",
     "https://www.firstdirect.com/help/bank-accounts/general/",
     "https://www.firstdirect.com/help/bank-accounts/card-services/",
-    "https://www.firstdirect.com/help/banking-with-us/unrecognised-transactions/"
+    "https://www.firstdirect.com/help/banking-with-us/unrecognised-transactions/",
+    "https://www.firstdirect.com/help/bank-accounts/card-services/view-pin-and-card-details/"
   ],
   "quotes": [
     {
@@ -48,5 +48,11 @@
       "context": "International payments — How long will it take to send money outside the UK?"
     }
   ],
-  "attempts": []
+  "attempts": [
+    {
+      "url": "https://mortgages.firstdirect.com/mortgage-rates",
+      "status": "error",
+      "reason": "fetch failed"
+    }
+  ]
 }

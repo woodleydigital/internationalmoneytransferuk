@@ -1,112 +1,9 @@
 {
   "slug": "revolut",
-  "fetchedAt": "2026-11-02T13:29:05.879Z",
-  "status": "found",
-  "pages": [
-    "https://www.revolut.com/",
-    "https://www.revolut.com/a-radically-better-account/",
-    "https://www.revolut.com/revolut-plus/",
-    "https://www.revolut.com/money-transfer/send-money-to-india/",
-    "https://www.revolut.com/money-transfer/send-money-to-nigeria/",
-    "https://www.revolut.com/money-transfer/send-money-to-poland/",
-    "https://www.revolut.com/money-transfer/send-money-to-dubai/",
-    "https://www.revolut.com/money-transfer/send-money-to-saudi-arabia/",
-    "https://www.revolut.com/money-transfer/send-money-to-kazakhstan/"
-  ],
-  "quotes": [
-    {
-      "topic": "fees",
-      "text": "Revolut Standard £1,000.00 -£0.35",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Clear fees and competitive rates. — Provider Your total",
-      "table": true
-    },
-    {
-      "topic": "fees",
-      "text": "NatWest £1,024.78 -£25.13",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Clear fees and competitive rates. — Provider Your total",
-      "table": true
-    },
-    {
-      "topic": "fees",
-      "text": "Exchange rates and transfer fees displayed are illustrative and only refreshed every minute.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Clear fees and competitive rates."
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money to a bank account in India.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Bank transfer"
-    },
-    {
-      "topic": "payout",
-      "text": "Coming soon: transfer money to a mobile wallet through their phone number.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Mobile wallet transfer"
-    },
-    {
-      "topic": "countries",
-      "text": "This feature lets you make transfers in 36 currencies to other Revolut contacts — instantly and without transfer fees.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — Revolut-to-Revolut transfer"
-    },
-    {
-      "topic": "countries",
-      "text": "Send money online to your Revolut friends in 36 currencies without any transfer fees.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — No Revolut-to-Revolut transfer fees"
-    },
-    {
-      "topic": "speed",
-      "text": "If you're sending GBP from the UK to a INR account in India, your bank transfer will generally arrive within minutes.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — International bank transfers"
-    },
-    {
-      "topic": "countries",
-      "text": "Check out our routes and send money to 160+ countries worldwide.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Send money to India — International money transfers"
-    },
-    {
-      "topic": "limits",
-      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Money transfer to India FAQs — How much money can I transfer online to India from the UK?"
-    },
-    {
-      "topic": "speed",
-      "text": "Bank transfers to India from abroad generally arrive within minutes.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Money transfer to India FAQs — How long does a money transfer to India take? — How long do international bank transfers take?"
-    },
-    {
-      "topic": "speed",
-      "text": "Transfers to cards usually arrive in seconds, but they can take up to 30 minutes.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-india/",
-      "context": "Money transfer to India FAQs — How long does a money transfer to India take? — How long does a card transfer take?"
-    },
-    {
-      "topic": "payout",
-      "text": "Transfer money to a bank account in Nigeria.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-nigeria/",
-      "context": "Send money to Nigeria — Bank transfer"
-    },
-    {
-      "topic": "limits",
-      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-nigeria/",
-      "context": "Money transfer to Nigeria FAQs — How much money can I transfer online to Nigeria from the UK?"
-    },
-    {
-      "topic": "limits",
-      "text": "There are no transfer limits for most currencies and destination countries, but our payment partners may have set limits on certain currencies.",
-      "url": "https://www.revolut.com/money-transfer/send-money-to-poland/",
-      "context": "Money transfer to Poland FAQs — How much money can I transfer online to Poland from the UK?"
-    }
-  ],
+  "fetchedAt": "2026-11-09T13:52:56.905Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
   "attempts": [
     {
       "url": "https://www.revolut.com/en-GB/international-transfers/",
@@ -119,29 +16,10 @@
       "reason": "HTTP 403"
     },
     {
-      "url": "https://www.revolut.com/international-transfers/",
-      "status": "blocked",
-      "reason": "robots.txt disallows collection"
-    },
-    {
-      "url": "https://www.revolut.com/money-transfer/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.revolut.com/money-transfer/send-money-to-ghana/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.revolut.com/money-transfer/send-money-to-the-uk-from-india/",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.revolut.com/money-transfer/send-money-to-north-macedonia/",
+      "url": "https://www.revolut.com/en-GB/",
       "status": "error",
       "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "robots.txt disallows collection"
 }
