@@ -1,7 +1,7 @@
 {
   "slug": "worldremit",
   "url": "https://www.worldremit.com/en-gb",
-  "fetchedAt": "2026-11-09T13:54:52.295Z",
+  "fetchedAt": "2026-11-16T13:39:11.958Z",
   "status": "found",
   "statements": [
     {
@@ -17,14 +17,6 @@
       "companyNumbers": [
         "07110878"
       ]
-    },
-    {
-      "text": "WorldRemit Ltd is Authorised and Regulated by the Financial Conduct Authority (FCA) under the Payment Service Regulations 2017 and Electronic Money Regulations 2011. Registration number: 900891",
-      "frns": [
-        "900891"
-      ],
-      "companyNumbers": [],
-      "url": "https://www.worldremit.com/en/india"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "slug": "remitly",
-  "fetchedAt": "2026-11-09T13:53:25.410Z",
+  "fetchedAt": "2026-11-16T13:37:52.096Z",
   "status": "found",
   "pages": [
     "https://www.remitly.com/gb/en/landing/send-limits",
@@ -79,15 +79,15 @@
     },
     {
       "topic": "countries",
-      "text": "Support for business customers and recipients located in 170+ countries",
+      "text": "Available in 130+ countries.",
       "url": "https://www.remitly.com/gb/en",
-      "context": "Pay professionals with Remitly Business"
+      "context": "Send money. Make progress."
     },
     {
       "topic": "countries",
-      "text": "Remitly serves 175+ countries around the world.",
-      "url": "https://www.remitly.com/gb/en/money-transfer",
-      "context": "Send international money transfers from the United Kingdom"
+      "text": "Every day, people keep life moving by sending money to their loved ones around the world, across 175+ countries in over 100 currencies.",
+      "url": "https://www.remitly.com/gb/en",
+      "context": "Send money. Make progress."
     },
     {
       "topic": "speed",

@@ -1,16 +1,16 @@
 {
   "slug": "torfx",
-  "fetchedAt": "2026-11-09T14:15:28.573Z",
+  "fetchedAt": "2026-11-16T13:58:27.396Z",
   "status": "unmatched",
   "match": {
-    "query": "https://www.torfx.com/",
+    "query": "TorFX",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
       {
-        "company_number": "05193147",
-        "title": "TOR CURRENCY EXCHANGE LIMITED"
+        "company_number": "08502656",
+        "title": "TORFX LTD"
       }
     ],
-    "outcome": "Provider's website states other companies; no name fallback"
+    "outcome": "No candidate with a payments SIC code"
   }
 }

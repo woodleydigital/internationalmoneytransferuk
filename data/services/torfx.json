@@ -1,88 +1,17 @@
 {
   "slug": "torfx",
-  "fetchedAt": "2026-11-09T13:54:58.193Z",
-  "status": "found",
-  "pages": [
-    "https://www.torfx.com/everyday-transfers",
-    "https://www.torfx.com/regular-transfers",
-    "https://www.torfx.com/international-business-payments"
-  ],
-  "quotes": [
-    {
-      "topic": "limits",
-      "text": "Use your online account or the TorFX app to send up to £50,000 24/7 – perfect for covering one-off payments, unexpected expenses, or transfers where speed and reliability are key.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "Send money abroad swiftly and safely — Everyday currency transfers made easy"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "Your funds are protected by robust safeguarding systems and strict regulatory standards.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "Send money abroad swiftly and safely — Why choose TorFX when sending money overseas?"
-    },
-    {
-      "topic": "speed",
-      "text": "Most payments are processed quickly, and in many cases the funds arrive the same day.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "How quickly will my international transfer arrive?"
-    },
-    {
-      "topic": "fees",
-      "text": "No, we don’t charge transfer fees on top of the agreed exchange rate.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "Does TorFX charge transfer fees for international transfers?"
-    },
-    {
-      "topic": "fees",
-      "text": "Our exchange rates include a small margin above the wholesale rate, which is how we cover our costs, but the rate you agree is the rate you get with no additional charges.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "Does TorFX charge transfer fees for international transfers?"
-    },
-    {
-      "topic": "speed",
-      "text": "While the amount of time a transfer takes can depend on the currency, destination and receiving bank, the funds should be in your account on the same day or within no more than two working days for more exotic destinations.",
-      "url": "https://www.torfx.com/everyday-transfers",
-      "context": "How long does an international money transfer take?"
-    },
-    {
-      "topic": "fees",
-      "text": "We don’t charge transfer fees outside of your agreed exchange rate.",
-      "url": "https://www.torfx.com/regular-transfers",
-      "context": "Regular overseas payments — Why choose TorFX for your regular overseas payments? — No transfer fees"
-    },
-    {
-      "topic": "countries",
-      "text": "Send 40+ currencies to 120+ countries",
-      "url": "https://www.torfx.com/international-business-payments"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "We safeguard funds in segregated client accounts*, follow strict compliance procedures, and hold the highest credit rating with Dun & Bradstreet.",
-      "url": "https://www.torfx.com/international-business-payments",
-      "context": "International business payments"
-    },
-    {
-      "topic": "safeguarding",
-      "text": "We take full responsibility for operating our safeguarding accounts and keeping client funds securely segregated.",
-      "url": "https://www.torfx.com/international-business-payments",
-      "context": "International business payments"
-    },
-    {
-      "topic": "speed",
-      "text": "Most major currency transfers are completed within 1-2 working days, depending on the destination and currency involved.",
-      "url": "https://www.torfx.com/international-business-payments",
-      "context": "How long do payments take to arrive?"
-    },
-    {
-      "topic": "limits",
-      "text": "There’s no minimum or maximum transfer amount.",
-      "url": "https://www.torfx.com/international-business-payments",
-      "context": "Is there a minimum or maximum transfer amount?"
-    }
-  ],
+  "fetchedAt": "2026-11-16T13:39:20.199Z",
+  "status": "error",
+  "pages": [],
+  "quotes": [],
   "attempts": [
     {
       "url": "https://www.torfx.com/faqs",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.torfx.com/everyday-transfers",
       "status": "error",
       "reason": "HTTP 403"
     },
@@ -100,31 +29,7 @@
       "url": "https://www.torfx.com/",
       "status": "error",
       "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.torfx.com/emigrating",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.torfx.com/repatriation-of-funds",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.torfx.com/buy-property-abroad",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.torfx.com/large-transfers",
-      "status": "error",
-      "reason": "HTTP 403"
-    },
-    {
-      "url": "https://www.torfx.com/case-studies",
-      "status": "error",
-      "reason": "HTTP 403"
     }
-  ]
+  ],
+  "error": "HTTP 403"
 }

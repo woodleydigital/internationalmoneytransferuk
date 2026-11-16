@@ -1,11 +1,15 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-11-09T14:15:18.391Z",
+  "fetchedAt": "2026-11-16T13:58:17.450Z",
   "status": "matched",
   "match": {
     "query": "Ria",
     "rule": "Searched for the trading name and its UK variant; accepted only because exactly one active company has the trading name plus a legal-form suffix and a banking or payments SIC code.",
     "candidates": [
+      {
+        "company_number": "17574858",
+        "title": "RIA LTD"
+      },
       {
         "company_number": "04263192",
         "title": "RIA FINANCIAL SERVICES LIMITED"

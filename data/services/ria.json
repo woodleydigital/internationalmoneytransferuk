@@ -1,12 +1,10 @@
 {
   "slug": "ria",
-  "fetchedAt": "2026-11-09T13:54:28.017Z",
+  "fetchedAt": "2026-11-16T13:38:47.824Z",
   "status": "found",
   "pages": [
     "https://www.riamoneytransfer.com/en-gb/send-money-online/",
-    "https://www.riamoneytransfer.com/en-gb/send-money/",
-    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
-    "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/"
+    "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
   ],
   "quotes": [
     {
@@ -62,42 +60,23 @@
       "context": "What are the online money transfer limits?"
     },
     {
-      "topic": "countries",
-      "text": "With 100+ currencies, better rates, and stress-free transfers, we make sure you get the most out of your money.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "payout",
-      "text": "A bank deposit lets recipients receive funds directly into their bank accounts.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
-      "topic": "fees",
-      "text": "You can use the in-app calculator to check current rates and fees before making a transfer.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
-      "context": "More ways to send money worldwide from the UK"
-    },
-    {
       "topic": "fees",
       "text": "Be aware that \"No fee\" may not mean \"no cost\" as cost may be built into the exchange rate margin",
       "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work"
     },
     {
-      "topic": "speed",
-      "text": "Many transfers arrive within minutes.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
-      "context": "What’s the best way to send money to Argentina?"
-    },
-    {
-      "topic": "speed",
-      "text": "A standard bank transfer with Ria (either to a recipient bank account or as a cash pickup) can take 3-5 business days.",
-      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
-      "context": "How long does it take to send money to Argentina?"
+      "topic": "fees",
+      "text": "In some countries, fees vary by payment method.",
+      "url": "https://help.riamoneytransfer.com/hc/en-us/articles/4407752015249-How-our-fees-and-exchange-rates-work",
+      "context": "Do payment methods have different fees?"
     }
   ],
   "attempts": [
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
     {
       "url": "https://www.riamoneytransfer.com/en-gb/terms/",
       "status": "error",
@@ -155,6 +134,11 @@
     },
     {
       "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-albania/",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://www.riamoneytransfer.com/en-gb/send-money-to-argentina/",
       "status": "error",
       "reason": "HTTP 403"
     }

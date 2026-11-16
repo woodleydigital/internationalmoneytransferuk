@@ -1,7 +1,7 @@
 {
   "slug": "post-office",
   "number": "02154540",
-  "fetchedAt": "2026-11-09T14:16:30.633Z",
+  "fetchedAt": "2026-11-16T13:59:25.568Z",
   "previousNames": [
     {
       "name": "POST OFFICE COUNTERS LTD",
@@ -26,7 +26,7 @@
       "date": "2025-12-18",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMWFkaXF6a2N4/document?format=pdf&download=0"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMmFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2025-12-18",
@@ -38,7 +38,7 @@
       "date": "2025-12-18",
       "category": "mortgage",
       "label": "Charge registered or updated",
-      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMmFkaXF6a2N4/document?format=pdf&download=0"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/02154540/filing-history/MzQ5NjAwMjYzMWFkaXF6a2N4/document?format=pdf&download=0"
     },
     {
       "date": "2025-10-28",
@@ -199,7 +199,7 @@
   },
   "owners": [
     {
-      "name": "Secretary Of State For Business And Trade",
+      "name": "Secretary Of State For Business, Innovation, Science & Trade",
       "control": [
         "ownership of shares 75 to 100 percent",
         "right to appoint and remove directors"

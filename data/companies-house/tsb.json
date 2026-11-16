@@ -1,6 +1,6 @@
 {
   "slug": "tsb",
-  "fetchedAt": "2026-11-09T14:14:40.022Z",
+  "fetchedAt": "2026-11-16T13:57:41.923Z",
   "status": "matched",
   "match": {
     "query": "https://www.tsb.co.uk/",
@@ -49,7 +49,8 @@
         "voting-rights-75-to-100-percent",
         "right-to-appoint-and-remove-directors"
       ],
-      "notified_on": "2016-04-06"
+      "notified_on": "2016-04-06",
+      "ceased_on": "2026-06-25"
     }
   ]
 }

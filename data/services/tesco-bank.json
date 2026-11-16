@@ -1,10 +1,11 @@
 {
   "slug": "tesco-bank",
-  "fetchedAt": "2026-11-09T13:54:41.554Z",
+  "fetchedAt": "2026-11-16T13:39:02.172Z",
   "status": "none",
   "pages": [
     "https://www.tescobank.com/",
     "https://www.tescobank.com/guides/cost-of-living/",
+    "https://www.tescobank.com/guides/budgeting/indoor-activities-on-a-budget/",
     "https://www.tescobank.com/loans/customer-help/",
     "https://www.tescobank.com/help/faqs/general-information/",
     "https://www.tescobank.com/help/financial-difficulty/",
@@ -13,8 +14,7 @@
     "https://www.tescobank.com/help/",
     "https://www.tescobank.com/mobile-banking-app/",
     "https://www.tescobank.com/online-banking/",
-    "https://www.tescobank.com/help/accessibility/",
-    "https://www.tescobank.com/help/contact-us/"
+    "https://www.tescobank.com/help/accessibility/"
   ],
   "quotes": [],
   "attempts": []

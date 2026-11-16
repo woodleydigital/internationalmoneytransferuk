@@ -1,6 +1,6 @@
 {
   "slug": "ofx",
-  "fetchedAt": "2026-11-09T14:14:43.027Z",
+  "fetchedAt": "2026-11-16T13:57:44.720Z",
   "status": "matched",
   "match": {
     "query": "https://www.ofx.com/en-gb/",
@@ -24,7 +24,7 @@
     ],
     "registeredOffice": "The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, England",
     "lastAccountsMadeUpTo": "2025-03-31",
-    "accountsNextDue": "2026-12-31",
+    "accountsNextDue": "2027-03-31",
     "accountsOverdue": false,
     "confirmationStatementOverdue": false,
     "hasInsolvencyHistory": false,

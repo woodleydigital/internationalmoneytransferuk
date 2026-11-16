@@ -1,7 +1,7 @@
 {
   "slug": "tsb",
   "number": "SC095237",
-  "fetchedAt": "2026-11-09T14:16:44.383Z",
+  "fetchedAt": "2026-11-16T13:59:37.615Z",
   "previousNames": [
     {
       "name": "LLOYDS TSB SCOTLAND PLC",
@@ -158,15 +158,24 @@
       "url": "https://find-and-update.company-information.service.gov.uk/company/02294747"
     },
     {
-      "name": "Tsb Banking Group Plc",
-      "number": "08871766",
-      "registeredIn": "England",
+      "name": "Santander Uk Group Holdings Plc",
+      "number": "08700698",
+      "registeredIn": "United Kingdom (England & Wales)",
       "control": [
         "ownership of shares 75 to 100 percent",
         "voting rights 75 to 100 percent",
         "right to appoint and remove directors"
       ],
-      "url": "https://find-and-update.company-information.service.gov.uk/company/08871766"
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08700698"
+    },
+    {
+      "name": "Banco Santander, S.A",
+      "registeredIn": "Spain",
+      "control": [
+        "ownership of shares 75 to 100 percent",
+        "voting rights 75 to 100 percent",
+        "right to appoint and remove directors"
+      ]
     }
   ],
   "accounts": {

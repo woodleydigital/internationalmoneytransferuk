@@ -1,6 +1,6 @@
 {
   "slug": "post-office",
-  "fetchedAt": "2026-11-09T14:14:19.722Z",
+  "fetchedAt": "2026-11-16T13:57:23.255Z",
   "status": "matched",
   "match": {
     "query": "Post Office",
@@ -35,13 +35,13 @@
   },
   "psc": [
     {
-      "name": "Postal Services Holding Company Limited",
-      "kind": "corporate-entity-person-with-significant-control",
+      "name": "Secretary Of State For Business, Innovation, Science & Trade",
+      "kind": "legal-person-person-with-significant-control",
       "natures_of_control": [
-        "ownership-of-shares-75-to-100-percent"
+        "ownership-of-shares-75-to-100-percent",
+        "right-to-appoint-and-remove-directors"
       ],
-      "notified_on": "2016-04-06",
-      "ceased_on": "2017-06-12"
+      "notified_on": "2026-11-12"
     },
     {
       "name": "Secretary Of State For Business And Trade",
@@ -50,7 +50,17 @@
         "ownership-of-shares-75-to-100-percent",
         "right-to-appoint-and-remove-directors"
       ],
-      "notified_on": "2016-04-06"
+      "notified_on": "2016-04-06",
+      "ceased_on": "2026-11-12"
+    },
+    {
+      "name": "Postal Services Holding Company Limited",
+      "kind": "corporate-entity-person-with-significant-control",
+      "natures_of_control": [
+        "ownership-of-shares-75-to-100-percent"
+      ],
+      "notified_on": "2016-04-06",
+      "ceased_on": "2017-06-12"
     }
   ]
 }

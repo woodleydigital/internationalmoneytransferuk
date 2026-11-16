@@ -1,10 +1,8 @@
 {
   "slug": "currencies-direct",
-  "fetchedAt": "2026-11-09T13:55:06.866Z",
-  "status": "none",
-  "pages": [
-    "https://help.currenciesdirect.com/en/sending-money/how-long-does-a-transfer-take"
-  ],
+  "fetchedAt": "2026-11-16T13:39:22.435Z",
+  "status": "error",
+  "pages": [],
   "quotes": [],
   "attempts": [
     {
@@ -14,6 +12,11 @@
     },
     {
       "url": "https://help.currenciesdirect.com/en/sending-money/do-you-limit-how-much-i-can-send",
+      "status": "error",
+      "reason": "HTTP 403"
+    },
+    {
+      "url": "https://help.currenciesdirect.com/en/sending-money/how-long-does-a-transfer-take",
       "status": "error",
       "reason": "HTTP 403"
     },
